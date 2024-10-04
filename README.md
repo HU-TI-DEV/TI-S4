@@ -35,7 +35,7 @@ De student realiseert en test het systeem volgens een zelf op te stellen plannin
 
 ## Context
 
-In dit semester van Technische Informatica is het project **probleemgestuurd**. 
+In dit semester van Technische Informatica is het project **probleemgestuurd** <Needs work>. 
 
 ## Leeruitkomsten
 
@@ -49,7 +49,7 @@ In semester 4 van de richting Technische Informatica zijn de volgende leeruitkom
 
 Shortcuts naar onderliggende links:
 - [Portfolio Items en Feedback maken](./organisatorisch/portfolio_items_en_feedback.md)
-  - [Leerdoelenkaart s3](./leerdoelen/interactieve-leerdoelen-kaart/LeerdoelenKaart_S3.svg)
+  - [Leerdoelenkaart S4](./leerdoelen/interactieve-leerdoelen-kaart/LeerdoelenKaart_S4.svg)
 - [Verantwoordingsdocument](./Verantwoordingsdocument_TI_S4.md)
 - [Portfolio items - algemeen](./Portfolio-items.md)
 - [Documenteren](./organisatorisch/documenteren.md)

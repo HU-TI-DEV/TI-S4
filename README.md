@@ -35,7 +35,7 @@ De student realiseert en test het systeem volgens een zelf op te stellen plannin
 
 ## Context
 
-In dit semester van Technische Informatica is het project **probleemgestuurd** <Needs work>. 
+In dit semester van Technische Informatica is het project situatie gericht.
 
 ## Leeruitkomsten
 

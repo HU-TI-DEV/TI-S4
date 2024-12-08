@@ -227,12 +227,9 @@ Then we start the subscriber<sup>2</sup>:
 ~~~
 ./subscriber
 ~~~
-You should now receive the hello message!
+You should now receive the hello message:
 
-
-
-
-
+![alt text](image-1.png)
 
 
 

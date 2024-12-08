@@ -3,13 +3,14 @@ Gazebo is a modelling/simulation framework with which we can simulate reality. I
 
 Below the following environments are used:<br>
 <sup>1</sup> The prompt of the power shell environment<br>
-<sup>2</sup> The prompt of the docker container
+<sup>2</sup> The prompt of the docker container<br>
+<sup>3</sup> Inside the docker container, inside the vi editor
 
 
 ## Installing gazebo in a docker container
 Allthough you can install Gazebo on native windows the version is broken, it does not work correctly. We will install it in a docker container. 
 
-#### Install Docker Desktop on Windows:
+### Install Docker Desktop on Windows:
 *Source: https://www.docker.com/products/docker-desktop/<br>*
 First, you need to install Docker Desktop for Windows. You can download it from Docker's official site.
 Follow the installation steps to set it up.
@@ -30,7 +31,7 @@ apt-get install -y wget
 ~~~
 Please note, on my setup I could paste one sentence at a time. I would copy a sentence and with rightclick I could paste it in the docker container.
 
-#### Install Gazebo inside the container:
+### Install Gazebo inside the container:
 *Source: https://gazebosim.org/docs/latest/install_ubuntu/<br>*
 To install type the following<sup>2</sup>:
 ~~~
@@ -59,7 +60,9 @@ docker commit <container_id> gazebo
 ~~~
 This may take some time. Patience is virtue.
 
-#### Installing WSL & X server
+### Installing WSL & X server
+*Source: https://learn.microsoft.com/en-us/windows/wsl/install & https://vcxsrv.com/*
+
 We will also have to install WSL<sup>1</sup>:
 ~~~
 wsl --install
@@ -81,7 +84,7 @@ Set the environment display variable<sup>1</sup>:
 $env:DISPLAY="host.docker.internal:0"
 ~~~
 
-#### First time running
+### First time running
 
 Run our previously commited docker container<sup>1</sup>:
 ~~~
@@ -94,7 +97,9 @@ gz sim
 ~~~
 Select the robot and press run. You should see the robot in a new window (some errors/warnings could be present in the container window).
 
-#### Running after a reboot or exiting the powershell:
+If you want to take a break with this manual this would be a nice time to do so. You've committed the container so everything is nicely saved! 
+
+### Running after a reboot or exiting the powershell:
 
 - start dockers for desktop in your windows environment.
 - run vcxsrv in your windows environement.
@@ -105,17 +110,147 @@ In the powershell type<sup>1</sup>:
 docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
 ~~~
 
+You could now start gz sim or do other stuff. For the next step we do not need to start gz sim!
+
 ## Connect with c++
-we will first try c++.
-https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/02_installation.md
+*Source: https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md*
 
-sudo apt-get install libgz-transport13-dev
+We would like to be able to interact with gazebo via c++. The next steps enable this.
 
-Check if the library is correct:
-apt-cache search libgz
+if you did not open your container yet, type in the powershell<sup>1</sup>:
+~~~ 
+docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+~~~
 
-sudo apt update
+We will first install the tooling we need<sup>2</sup>:
+~~~
 sudo apt install cmake g++ -y
+apt-get install vim
+~~~
+Next step: we are going to make a directory<sup>2<sup>:
+~~~
+mkdir ~/gz_transport_tutorial
+cd ~/gz_transport_tutorial
+~~~
+
+Download 
+- publisher.cc 
+- subscriber.cc 
+- CMakeLists.txt
+
+from https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md
+
+Study the manual of the VI editor: 
+https://www.redhat.com/en/blog/introduction-vi-editor
+
+Make a new file with the vi editor with<sup>2</sup>:
+~~~
+vi publisher.cc
+~~~
+Copy the text from publisher.cc (the one you have downloaded earlier) and paste it in the vi editor. 
+Type the following commands in the vi editor<sup>3</sup>:
+~~~
+:w
+:q
+~~~
+This will save the file and exit the vi editor. 
+
+Do the same for the **subscriber.cc** and **CMakeLists.txt**
+
+Next we will make a new dir<sup>2</sup>:
+~~~
+mkdir build
+cd build
+~~~
+
+
+
+Type the following commands<sup>2</sup>:
+~~~
+cmake ..
+make publisher subscriber
+~~~
+We have now compiled the subscriber.cc and publisher.cc file!
+
+Read the description in *https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md* to understand what happens in the subscriber and publisher code. 
+
+We will now exit the container<sup>2</sup>:
+~~~
+exit
+~~~
+and save it. First we need to  find the id<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (so the last one).<br>
+Copy the id & paste it in the below command<sup>1</sup>:
+~~~
+docker commit <container_id> gazebo
+~~~
+This may take some time. Patience is virtue.
+
+### Running our first test with the transport layer!
+
+First we will start a container again<sup>1</sup>:
+~~~
+docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+~~~
+In this container we will first go to the correct directory<sup>2</sup>:
+~~~
+cd ~/gz_transport_tutorial/build
+~~~
+Then we start the publisher<sup>2</sup>:
+~~~
+./publisher
+~~~
+
+We should see something like this:
+
+![
+](image.png)
+
+We start a new powershell and type in the new window<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+Copy the name of the last docker running and past it in the following<sup>1</sup>:
+~~~
+docker exec -it <name_container> /bin/bash
+~~~ 
+Because we used exec instead of run we will now enter the same container as we opened before. 
+
+Again we will first go to the correct directory<sup>2</sup>:
+~~~
+cd ~/gz_transport_tutorial/build
+~~~
+Then we start the subscriber<sup>2</sup>:
+~~~
+./subscriber
+~~~
+You should now receive the hello message!
+
+
+
+
+
+
+
+
+
+
+
+# TODO
+
+
+
+
+
+
+- a lot
+- really
+- a
+- lot
+
 
 ## Connect with python
 we will first try python.

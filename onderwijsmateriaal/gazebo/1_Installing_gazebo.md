@@ -1,14 +1,12 @@
 # 1. Installing Gazebo
-Gazebo is a modelling/simulation framework with which we can simulate reality. In this guide we will learn how to install it. 
+Gazebo is a modelling/simulation framework. In this guide we will learn how to install it. 
 
 Below the following environments are used:<br>
 <sup>1</sup> The prompt of the power shell environment<br>
 <sup>2</sup> The prompt of the docker container<br>
-<sup>3</sup> Inside the docker container, inside the vi editor
-
 
 ## Installing gazebo in a docker container
-Allthough you can install Gazebo on native windows that specific version is broken, it does not work correctly. We will install it in a docker container on ubuntu. 
+Allthough you can install Gazebo on native windows that specific version is broken, it malfunctions. We will install it in a docker container on ubuntu. 
 
 ### Install Docker Desktop on Windows:
 *Source: https://www.docker.com/products/docker-desktop/<br>*
@@ -96,14 +94,20 @@ We can test it by running<sup>2</sup>:
 ~~~
 gz sim
 ~~~
-Select the robot and press run. You should see the robot in a new window (some errors/warnings could be present in the container window).
+We should see:
+
+![alt text](images/image-4.png)
+
+Select the robot and press run. You should see the robot in a new window (some errors/warnings could be present in the container window):
+
+![alt text](images/image-5.png)
 
 If you want to take a break with this manual this would be a nice time to do so. You've committed the container so everything is nicely saved! 
 
 ### Running after a reboot or exiting the powershell:
 
 - start dockers for desktop in your windows environment.
-- run vcxsrv in your windows environement.
+- run vcxsrv in your windows environment.
 - run the powershell
 
 In the powershell type<sup>1</sup>:

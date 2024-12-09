@@ -53,6 +53,8 @@ Type<sup>2<sup>:
 ~~~
 gz sim robot.sdf
 ~~~
+You should see:
+![alt text](images/image-3.png)
 Are you proud? I hope so!  
 Close the gz sim window.
 We will now exit the container<sup>2</sup>:

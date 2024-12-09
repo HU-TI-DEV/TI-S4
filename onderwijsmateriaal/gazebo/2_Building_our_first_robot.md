@@ -170,7 +170,7 @@ gz topic -e -t /imu
 ~~~
 We now see the logging of the moving robot:
 
-![](images\image-2.png)
+![](images/image-2.png)
 
 How cool is that!!!
 

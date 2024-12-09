@@ -1,4 +1,4 @@
-## Connect with c++
+# 3. Connect with c++
 *Source: https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md*
 
 We would like to be able to interact with gazebo via c++. The next steps enable this.
@@ -11,11 +11,9 @@ docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-uni
 We will first install the tooling we need<sup>2</sup>:
 ~~~
 sudo apt install cmake g++ -y
-apt-get install vim
 ~~~
-Next step: we are going to make a directory<sup>2<sup>:
+Next step: we are going to our directory<sup>2<sup>:
 ~~~
-mkdir ~/gz_transport_tutorial
 cd ~/gz_transport_tutorial
 ~~~
 
@@ -26,8 +24,6 @@ Download
 
 from https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md
 
-Study the manual of the VI editor: 
-https://www.redhat.com/en/blog/introduction-vi-editor
 
 Make a new file with the vi editor with<sup>2</sup>:
 ~~~
@@ -48,8 +44,6 @@ Next we will make a new dir<sup>2</sup>:
 mkdir build
 cd build
 ~~~
-
-
 
 Type the following commands<sup>2</sup>:
 ~~~
@@ -87,6 +81,7 @@ cd ~/gz_transport_tutorial/build
 ~~~
 Then we start the publisher<sup>2</sup>:
 ~~~
+export GZ_PARTITION=test
 ./publisher
 ~~~
 
@@ -96,14 +91,9 @@ We should see something like this:
 ](images/image.png)
 
 We start a new powershell and type in the new window<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-Copy the name of the last docker running and past it in the following<sup>1</sup>:
-~~~
-docker exec -it <name_container> /bin/bash
 ~~~ 
-Because we used exec instead of run we will now enter the same container as we opened before. 
+docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+~~~
 
 Again we will first go to the correct directory<sup>2</sup>:
 ~~~
@@ -111,6 +101,7 @@ cd ~/gz_transport_tutorial/build
 ~~~
 Then we start the subscriber<sup>2</sup>:
 ~~~
+export GZ_PARTITION=test
 ./subscriber
 ~~~
 You should now receive the hello message:

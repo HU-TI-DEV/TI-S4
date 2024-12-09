@@ -4,10 +4,10 @@
 
 De volgende 3 stappen moeten (in volgorde) gezet worden:
 
-[Installatie](./1_Installing_gazebo.md)
+[1_Installing_gazebo](./1_Installing_gazebo.md)
 
-[Robot bouwen](./2_Building_our_first_robot.md)
+[2_Building_our_first_robot](./2_Building_our_first_robot.md)
 
-[Met C++ aansturen](./3_Connect_with_c.md)
+[3_Connect_with_c++](./3_Connect_with_c.md)
 
 Veel succes!

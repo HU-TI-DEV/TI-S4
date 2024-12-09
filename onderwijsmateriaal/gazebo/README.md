@@ -2,7 +2,7 @@
 
 ### Inhoud[](toc-id)
 
-De volgende 3 stappen moeten (in volgorde) gezet worden:
+Gazebo is een modelling/simulation framework. In de volgende markdown files worden de stappen beschreven die jullie moeten nemen:  
 
 [1_Installing_gazebo](./1_Installing_gazebo.md)
 

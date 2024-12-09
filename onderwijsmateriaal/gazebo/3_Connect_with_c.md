@@ -93,7 +93,7 @@ Then we start the publisher<sup>2</sup>:
 We should see something like this:
 
 ![
-](image.png)
+](images\image.png)
 
 We start a new powershell and type in the new window<sup>1</sup>:
 ~~~
@@ -115,7 +115,7 @@ Then we start the subscriber<sup>2</sup>:
 ~~~
 You should now receive the hello message:
 
-![alt text](image-1.png)
+![alt text](images\image-1.png)
 
 
 

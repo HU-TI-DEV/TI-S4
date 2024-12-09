@@ -8,9 +8,9 @@ Below the following environments are used:<br>
 <sup>2</sup> The prompt of the docker container<br>
 <sup>3</sup> Inside the docker container, inside the vi editor
 
-## Build the robot.sdf (Simulation Description Format) 
-Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save the file as robot.sdf in your pc environment. The end result should look something like this: 
-LINK NAAR ROBOT.SDF
+## Build the robot.sdf (simulation description format) 
+Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save the file as robot.sdf in your pc environment. The end result should look something like this [robot.sdf](./robot.sdf). 
+
 
 We will now try to run the robot.sdf with gz sim. First:
 - start dockers for desktop in your windows environment.
@@ -22,11 +22,20 @@ In the powershell type<sup>1</sup>:
 docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
 ~~~
 
+We will first install the tooling we need<sup>2</sup>:
+~~~
+apt-get install vim
+~~~
+
+
 We will make a directory in which we will save our robot.sdf<sup>2</sup>:
 ~~~
 mkdir ~/gz_transport_tutorial
 cd ~/gz_transport_tutorial
 ~~~
+
+Study the manual of the VI editor: 
+https://www.redhat.com/en/blog/introduction-vi-editor
 
 Open vi<sup>2</sup>:
 ~~~
@@ -44,9 +53,8 @@ Type<sup>2<sup>:
 ~~~
 gz sim robot.sdf
 ~~~
-Are you proud? I hope so!
+Are you proud? I hope so!  
 Close the gz sim window.
-
 We will now exit the container<sup>2</sup>:
 ~~~
 exit
@@ -87,7 +95,7 @@ insert it below the following lines:
          <pose relative_to='world'>0 0 0 0 0 0</pose>
 ~~~
 
-Save it under robot_move.sdf on your pc. 
+Save it under robot_move.sdf on your pc. The end result should look something like this [robot_move.sdf](./robot_move.sdf). 
 
 We get back into the container<sup>1</sup>:
 ~~~ 
@@ -157,7 +165,7 @@ tag:
 ~~~
 
 Use vi to save the file also in your docker container under robot_with_imu.sdf.
-
+The end result should look something like this [robot_with_imu.sdf](./robot_with_imu.sdf). 
 Start the robot in gz sim, press also run and use the other container to make it "walk" with the following command<sup>2</sup>
 ~~~
 export GZ_PARTITION=test

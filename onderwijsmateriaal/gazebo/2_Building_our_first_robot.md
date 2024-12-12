@@ -126,6 +126,7 @@ Run the following code in your container<sup>2</sup>:
 export GZ_PARTITION=test
 gz sim robot_move.sdf
 ~~~
+(the export gz_partition is needed to acces the simulation from a different container)   
 Press run in the gz sim (the orange triangle in the bottom left corner)
 
 Open a new powershell and open another instance of the container<sup>1</sup>:
@@ -198,6 +199,9 @@ Copy the id & paste it in the below command<sup>1</sup>:
 docker commit <container_id> gazebo
 ~~~
 This may take some time. Patience is virtue.
+
+For the next step:  
+[3_Connect_wiht_c++](./3_Connect_with_c.md)
 
 
 

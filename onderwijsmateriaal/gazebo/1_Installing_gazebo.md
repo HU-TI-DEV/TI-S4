@@ -120,3 +120,7 @@ Type<sup>2<sup>:
 ~~~
 gz sim
 ~~~
+
+
+For the next step:  
+[2_Building_our_first_robot](./2_Building_our_first_robot.md)

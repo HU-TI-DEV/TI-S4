@@ -10,4 +10,6 @@ Gazebo is een modelling/simulation framework. In de volgende markdown files word
 
 [3_Connect_with_c++](./3_Connect_with_c.md)
 
+[4_Assignment_knowing_your_robot_and_sensors](./4_Assignment_knowing_your_robot_and_sensors.md)
+
 Veel succes!

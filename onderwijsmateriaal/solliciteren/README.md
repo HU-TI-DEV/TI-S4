@@ -46,7 +46,7 @@ Je curriculum vitae (CV) is je visitkaartje. Dit is het eerste waar een werkgeve
 
 Er zijn veel tools die je kunt gebruiken om je CV vorm te geven: [Canva](https://www.canva.com/nl_nl/maken/curriculum-vitae/) is een populaire online editor die veel templates biedt, [Adobe](https://www.adobe.com/express/create/resume/cv) biedt een vergelijkbare tool, maar ook tools die je al gewend bent, zoals [Word](https://create.microsoft.com/en-us/templates/resumes) of Photoshop, kun je gebruiken.
 
-Een (ietwat aangepaste versie) van [mijn CV kun je hier als voorbeeld bekijken.](CV_Nick_HU.pdf) Ik heb er wat notities bij gemaakt ter verduidelijking.
+Een (ietwat aangepaste versie) van [mijn CV kun je hier als voorbeeld bekijken.](CV_Nick_HU_Beschreven.pdf) Ik heb er wat notities bij gemaakt ter verduidelijking.
 
 ### Online
 

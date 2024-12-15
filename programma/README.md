@@ -60,7 +60,7 @@ De studentassistenten zijn:
 
 ## Programma
 
-[(alternatieve view html)](https://hu-ti-dev.github.io/TI-S4/programma/Programma_for_export_html.drawio.html)
+Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-ICT](https://wegwijs.hu.nl/thuis-op-de-campus/over-hu/organisatie/institute-for-ict). Bekijk via deze link het jaarrooster voor het huidige studiejaar.
 
 ### Sprint 0
 

@@ -29,7 +29,7 @@ Er wordt vaak "een goed begin is het halve werk" gezegd en ook bij de sollicitat
 Je curriculum vitae (CV) is je visitkaartje. Dit is het eerste waar een werkgever naar kijkt, maar wel gemiddeld maar zo'n [7 tot 9 seconden.](https://www.tealhq.com/post/how-long-recruiters-spend-reviewing-resume) Om deze reden is het belangrijk dat je je CV zo relevant mogelijk probeert te maken voor een zo sterk mogelijke eerste indruk. Let wel; een voller CV geeft niet altijd een beter beeld. Op [werk.nl](https://www.werk.nl/werkzoekenden/solliciteren/tips/cv/index.aspx) van de overheid kun je een hoop tips vinden voor het maken van een CV, waaronder welke onderdelen er minimaal verwacht worden op een CV:
 
 1. Persoonlijke gegevens;<br>
-    Naam, adres, contactgegevens, eventueel een pasfoto. Let er op dat je een semi-professioneel ogend persoonlijk e-mail adres gebruikt. Je kunt eventueel ook je HU e-mail gebruiken, maar deze verlies je na het afronden van je opleiding. Het is in ieder geval tijd om xX__D4RKN355__Xx@hotmail.c<span>om met pensioen te sturen. 
+    Naam, adres, contactgegevens, eventueel een pasfoto. Let er op dat je een semi-professioneel ogend persoonlijk e-mail adres gebruikt. Je kunt eventueel ook je HU e-mail gebruiken, maar deze verlies je na het afronden van je opleiding. Het is in ieder geval tijd om xX__D4RKN355<span>__Xx@hotmai<span>l.c<span>om met pensioen te sturen. 
 
     Heb je een LinkedIn profiel of goedgevuld GitHub account? Dan link je deze hier ook. Zie ook [Online.](#online)
 2. Persoonlijk profiel;<br>

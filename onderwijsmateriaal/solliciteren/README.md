@@ -1,8 +1,8 @@
 # Solliciteren
 <!-- no toc -->
 
-Geschreven door: Nick Goris<br>
-Eventuele meningen of persoonlijke toevoegingen zijn dan ook vanuit mij, als persoon, toegevoegd. 
+Auteur: Nick Goris<br>
+_Eventuele meningen of persoonlijke toevoegingen zijn dan ook vanuit mij, als persoon, toegevoegd._
 
 Tijdens dit semester zullen jullie, ter voorbereiding op de stage volgend jaar, gaan solliciteren op het project waar jullie graag deel van uit zouden willen maken. Tevens kun je hierbij solliciteren op de rol die je binnen je team zou willen vervullen. 
 
@@ -70,5 +70,11 @@ Dolor
 
 ## Wat verder ter tafel komt
 
-Dolor
+Verdere potentiële interessante vraagstukken rondom de sollicitatie procedure
+
+### Ethisch
+
+Het gaat in het nieuws relatief vaak over problemen rondom solliciteren; of het nu gaat over [stagediscriminatie](https://www.mensenrechten.nl/voorlichting/campagne/stop-stagediscriminatie) of zorgen rond het verstrekken van [persoonsgevens](https://www.autoriteitpersoonsgegevens.nl/themas/werk-en-uitkering/sollicitaties/persoonsgegevens-van-sollicitanten), solliciteren is ([voor nu nog vooral](https://www.indeed.com/career-advice/resumes-cover-letters/automated-screening-resume)) een proces van mensen. Dit betekent dat er soms, hopelijk onverhoopt, oneerlijk geoordeeld wordt tijdens de stageprocedure. Wat kun je doen als je het idee hebt dat dit proces problemen oplevert?
+
+De hierboven gelinkte websites geven je een paar handvatten, <wat doet de hu hier tegen? TBA>
 

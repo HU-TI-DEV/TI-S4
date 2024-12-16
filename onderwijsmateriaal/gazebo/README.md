@@ -1,8 +1,11 @@
-# Gazebo
+# Programma Gazebo
+Gazebo is een modelling/simulation framework. Dit gaan we gebruiken om de robots te modelleren/simuleren in een virtuele omgeving. 
 
-### Inhoud[](toc-id)
+## Voorbereiding
+Bekijk de volgende video:  
+VIDEO TOEVOEGEN OVER HET NUT VAN GAZEBO
 
-Gazebo is een modelling/simulation framework. In de volgende markdown files worden de stappen beschreven die jullie moeten nemen:  
+## Tijdens en na de les
 
 [1_Installing_gazebo](./1_Installing_gazebo.md)
 
@@ -10,6 +13,9 @@ Gazebo is een modelling/simulation framework. In de volgende markdown files word
 
 [3_Connect_with_c++](./3_Connect_with_c.md)
 
+## Inleveren op Canvas
+
 [4_Assignment_knowing_your_robot_and_sensors](./4_Assignment_knowing_your_robot_and_sensors.md)
+
 
 Veel succes!

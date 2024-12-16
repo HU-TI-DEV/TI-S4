@@ -3,15 +3,22 @@ Gazebo is een modelling/simulation framework. Dit gaan we gebruiken om de robots
 
 ## Voorbereiding
 Bekijk de volgende video:  
-VIDEO TOEVOEGEN OVER HET NUT VAN GAZEBO
+<span style="color:red">VIDEO TOEVOEGEN OVER HET NUT VAN GAZEBO
+</span>
 
 ## Tijdens en na de les
 
 [1_Installing_gazebo](./1_Installing_gazebo.md)
 
+<span style="color:red">VIDEO TOEVOEGEN VAN HET INSTALLATIE PROCESS</span>
+
 [2_Building_our_first_robot](./2_Building_our_first_robot.md)
 
+<span style="color:red">VIDEO TOEVOEGEN VAN HET BOUWEN VAN DE ROBOT</span>
+
 [3_Connect_with_c++](./3_Connect_with_c.md)
+
+<span style="color:red">VIDEO TOEVOEGEN</span>
 
 ## Inleveren op Canvas
 

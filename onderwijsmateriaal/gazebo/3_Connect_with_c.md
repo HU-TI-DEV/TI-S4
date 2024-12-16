@@ -215,7 +215,7 @@ int main(int argc, char **argv)
   return 0;
 }
 ```
-What we are doing is subscribing to a differnt topic (/imu iso /foo) and change the callback function so that we can call the public member functions of the IMU class..
+What we are doing is subscribing to a different topic (/imu iso /foo) and change the callback function so that we can call the public member functions of the IMU class..
 
 compile subscriber.cc and run it (see the first section of this manual). 
 

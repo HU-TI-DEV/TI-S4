@@ -201,7 +201,7 @@ docker commit <container_id> gazebo
 This may take some time. Patience is virtue.
 
 For the next step:  
-[3_Connect_wiht_c++](./3_Connect_with_c.md)
+[3_Connect_with_c++](./3_Connect_with_c.md)
 
 
 

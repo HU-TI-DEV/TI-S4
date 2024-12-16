@@ -11,7 +11,7 @@ Allthough you can install Gazebo on native windows that specific version is brok
 ### Install Docker Desktop on Windows:
 *Source: https://www.docker.com/products/docker-desktop/<br>*
 First, you need to install Docker Desktop for Windows. You can download it from Docker's official site.
-Follow the installation steps to set it up. Please note, it could be that you need to enable hardware virtualization in your bios to make it run (https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073)
+Follow the installation steps to set it up. Please note, it could be that you need to enable hardware virtualization in your bios to make it run (https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
 Docker Desktop provides a LinuxKit-based virtual machine (VM) that runs Linux inside Windows. 
 
 Make sure docker desktop is running. 

@@ -5,7 +5,7 @@ Om je CV op GitHub Pages te plaatsen moet je een aantal stappen doorlopen:
 1. Maak eerst een nieuwe repository. Als het goed is is al bekend hoe je dit doet, maar kijk anders nog eens terug op {{link naar guide voor het opzetten van een repo}}.
 2. Upload je CV naar je repository. Het is aan te raden je CV in de root van je repository te plaatsen, maar niet noodzakelijk.
 3. Voeg een bestand toe genaamd `index.html`, en plaats daar de onderstaande code in:
-```jinja
+```html
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en" style="width:100%; height:100%;">
 <head>

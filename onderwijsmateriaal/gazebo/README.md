@@ -8,17 +8,16 @@ https://www.youtube.com/watch?v=cgZElRSVHXY
 
 ## Tijdens en na de les
 
-[1_Installing_gazebo](./1_Installing_gazebo.md)
+bekijk de volgende video:  
+https://www.youtube.com/watch?v=QGR8SJ4w3zA  
+als voorbereiding op de manual. 
 
-<span style="color:red">VIDEO TOEVOEGEN VAN HET INSTALLATIE PROCESS</span>
+[1_Installing_gazebo](./1_Installing_gazebo.md)
 
 [2_Building_our_first_robot](./2_Building_our_first_robot.md)
 
-<span style="color:red">VIDEO TOEVOEGEN VAN HET BOUWEN VAN DE ROBOT</span>
-
 [3_Connect_with_c++](./3_Connect_with_c.md)
 
-<span style="color:red">VIDEO TOEVOEGEN</span>
 
 ## Inleveren op Canvas
 

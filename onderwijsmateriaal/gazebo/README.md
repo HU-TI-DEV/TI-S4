@@ -3,8 +3,8 @@ Gazebo is een modelling/simulation framework. Dit gaan we gebruiken om de robots
 
 ## Voorbereiding
 Bekijk de volgende video:  
-<span style="color:red">VIDEO TOEVOEGEN OVER HET NUT VAN GAZEBO
-</span>
+https://www.youtube.com/watch?v=cgZElRSVHXY
+
 
 ## Tijdens en na de les
 

@@ -48,7 +48,7 @@ We will now exit the container<sup>2</sup>:
 ~~~
 exit
 ~~~
-and save it under a different name. First we need to  find the id<sup>1</sup>:
+and save it as an image. First we need to  find the id<sup>1</sup>:
 ~~~
 docker ps -a
 ~~~

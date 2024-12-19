@@ -97,7 +97,7 @@ insert it below the following lines:
          <pose relative_to='world'>0 0 0 0 0 0</pose>
 ~~~
 
-Save it under robot_move.sdf on your pc. The end result should look something like this [robot_move.sdf](./robot_move.sdf). 
+Save it under robot_move.sdf on your pc. The end result should look something like this [robot_move.sdf](./files/robot_move.sdf). 
 
 We get back into the container<sup>1</sup>:
 ~~~ 

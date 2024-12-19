@@ -9,7 +9,7 @@ Below the following environments are used:<br>
 <sup>3</sup> Inside the docker container, inside the vi editor
 
 ## Build the robot.sdf (simulation description format) 
-Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save the file as robot.sdf in your pc environment. The end result should look something like this [robot.sdf](./robot.sdf). 
+Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save the file as robot.sdf in your pc environment. The end result should look something like this [robot.sdf](./files/robot.sdf). 
 
 
 We will now try to run the robot.sdf with gz sim. First:
@@ -168,7 +168,7 @@ tag:
 ~~~
 
 Use vi to save the file also in your docker container under robot_with_imu.sdf.
-The end result should look something like this [robot_with_imu.sdf](./robot_with_imu.sdf). 
+The end result should look something like this [robot_with_imu.sdf](./files/robot_with_imu.sdf). 
 Start the robot in gz sim, press also run and use the other container to make it "walk" with the following command<sup>2</sup>
 ~~~
 export GZ_PARTITION=test

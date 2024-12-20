@@ -19,7 +19,7 @@ We will now try to run the robot.sdf with gz sim. First:
 
 In the powershell type<sup>1</sup>:
 ~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0  gazebo
 ~~~
 
 We will first install the tooling we need<sup>2</sup>:
@@ -101,7 +101,7 @@ Save it under robot_move.sdf on your pc. The end result should look something li
 
 We get back into the container<sup>1</sup>:
 ~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0 gazebo
 ~~~
 
 We will go to our directory<sup>2</sup>:
@@ -131,7 +131,7 @@ Press run in the gz sim (the orange triangle in the bottom left corner)
 
 Open a new powershell and open another instance of the container<sup>1</sup>:
 ~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0 gazebo
 ~~~
 
 Run the following code in this container<sup>2</sup>:

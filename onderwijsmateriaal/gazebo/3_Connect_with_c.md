@@ -5,7 +5,7 @@ We would like to be able to interact with gazebo via c++. The next steps enable 
 
 if you did not open your container yet, type in the powershell<sup>1</sup>:
 ~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0 gazebo
 ~~~
 
 We will first install the tooling we need<sup>2</sup>:
@@ -73,7 +73,7 @@ This may take some time. Patience is virtue.
 
 First we will start a container again<sup>1</sup>:
 ~~~
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0  gazebo
 ~~~
 In this container we will first go to the correct directory<sup>2</sup>:
 ~~~
@@ -92,7 +92,7 @@ We should see something like this:
 
 We start a new powershell and type in the new window<sup>1</sup>:
 ~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0 gazebo
 ~~~
 
 Again we will first go to the correct directory<sup>2</sup>:

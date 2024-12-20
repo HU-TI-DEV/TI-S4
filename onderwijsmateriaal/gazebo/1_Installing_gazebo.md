@@ -87,7 +87,7 @@ $env:DISPLAY="host.docker.internal:0"
 
 Run our previously commited docker container<sup>1</sup>:
 ~~~
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0  gazebo
 ~~~
 
 We can test it by running<sup>2</sup>:
@@ -112,7 +112,7 @@ If you want to take a break with this manual this would be a nice time to do so.
 
 In the powershell type<sup>1</sup>:
 ~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 -v /tmp/.X11-unix:/tmp/.X11-unix gazebo
+docker run -it -e DISPLAY=host.docker.internal:0 gazebo
 ~~~
 
 

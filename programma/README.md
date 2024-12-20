@@ -78,12 +78,15 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 
 ### Sprint 1
 
-#### Onderwijsweek 2
+#### Onderwijsweek 2 (17-2-2025)
 
 - Ontwikkelomgeving simulatieplatform opzetten
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      | [Introductie Gazebo (BB)](../onderwijsmateriaal/gazebo/README.md)           
+| Do      | Gazebo deel II  [BB]                  
+
 
 #### Onderwijsweek 3
 
@@ -95,6 +98,7 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+
 
 ### Sprint 2
 

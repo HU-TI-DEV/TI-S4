@@ -78,8 +78,8 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 
 ### Sprint 1
 
-#### Onderwijsweek 2 (17-2-2025)
-
+#### Onderwijsweek 2 
+(17-2-2025)
 - Ontwikkelomgeving simulatieplatform opzetten
 
 | **Dag** | **Kennissessie** |

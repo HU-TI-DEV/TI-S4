@@ -75,10 +75,6 @@ Daarnaast is een sollicitatiegesprek veelal het eerste fysieke, of in ieder geva
 > 
 > Ik heb een tijd op een kantoor gewerkt waar één software ontwikkelaar werkte. Deze dev was de enige op het hele kantoor die in pak naar werk kwam. Toen ik hem hier naar vroeg reageerde hij 'zo ben ik op dag één binnen gekomen, en daarmee heb ik de verwachting geschept dat dit is wat ik naar werk draag'. Alle andere collega's droegen gewoon spijkerbroeken en t-shirts - en heel soms een overhemd.
 
-## Tips & Tricks
-
-Dolor
-
 ## Wat verder ter tafel komt
 
 Verdere potentiële interessante vraagstukken rondom de sollicitatie procedure.

@@ -58,7 +58,7 @@ Naast je CV als attachment meesturen bij je sollicitatie kun je je CV ook online
 
 ## Sollicitatiebrief
 
-Of je je sollicitatiebrief nu fysiek of digitaal opstuurt maakt weinig uit, de kern blijft hetzelfde.
+Of je je sollicitatiebrief nu fysiek of digitaal opstuurt maakt weinig uit, de kern blijft hetzelfde. Een sollicitatiebrief kan relatief eenvoudig blijven, aangezien deze bijna altijd uit exact dezelfde onderdelen bestaat. De Nationale Vacaturebank heeft hier [een mooi overzicht voor gepubliceerd](https://www.nationalevacaturebank.nl/carriere/motivatiebrief/motivatiebrief-voorbeeld/opbouw-sollicitatiebrief).
 
 Let op: solliciteer je in het buitenland? Dan wordt dit in het Engels vaak een 'cover letter' genoemd.
 

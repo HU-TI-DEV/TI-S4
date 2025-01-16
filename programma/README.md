@@ -72,9 +72,12 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 - Ontwikkelomgeving opzetten
 
 <!-- Meta dingen -->
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
+| **Dag**   | **Kennissessie** |
+|-----------|------------------|
+| Ma 10 feb |                  |
+| Di 11 feb |                  |
+| Wo 12 feb |                  |
+| Do 13 feb |                  |
 
 ### Sprint 1
 
@@ -82,11 +85,13 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 (17-2-2025)
 - Ontwikkelomgeving simulatieplatform opzetten
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      | [Introductie Gazebo (BB)](../onderwijsmateriaal/gazebo/README.md#Programma-Gazebo-deel-I)      |     
-| Di      | [Hoe werken modellering/simulatie pakketten? (BB)](../onderwijsmateriaal/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx)|
-| Do      | [Gazebo deel II (BB)](../onderwijsmateriaal/gazebo/README.md#Programma-Gazebo-deel-II)  |                 
+| **Dag**   | **Kennissessie**                                                                                                                                   |
+|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Ma 17 feb | [Introductie Gazebo (BB)](../onderwijsmateriaal/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
+| Di 18 feb | [Hoe werken modellering/simulatie pakketten? (BB)](../onderwijsmateriaal/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| Wo 19 feb |                                                                                                                                                    |
+| Do 20 feb | [Gazebo deel II (BB)](../onderwijsmateriaal/gazebo/README.md#Programma-Gazebo-deel-II)                                                             |
+
 
 
 #### Onderwijsweek 3
@@ -97,8 +102,12 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 - Backlog opbouwen
 - Requirements bedenken
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
+| **Dag**  | **Kennissessie** |
+|----------|------------------|
+| Ma 3 mar |                  |
+| Di 4 mar |                  |
+| Wo 5 mar |                  |
+| Do 6 mar |                  |
 
 
 ### Sprint 2
@@ -113,13 +122,22 @@ Nodig:
 
 #### Onderwijsweek 4
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
+| **Dag**   | **Kennissessie** |
+|-----------|------------------|
+| Ma 10 mar |                  |
+| Di 11 mar |                  |
+| Wo 12 mar |                  |
+| Do 13 mar |                  |
+
 
 #### Onderwijsweek 5
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
+| **Dag**   | **Kennissessie** |
+|-----------|------------------|
+| Ma 17 mar |                  |
+| Di 18 mar |                  |
+| Wo 19 mar |                  |
+| Do 20 mar |                  |
 
 ### Sprint 3
 
@@ -134,13 +152,23 @@ Nodig:
 - Python Debugging/Big-Oh -> Werkboek?
 - Intro algoritmiek/Python opstart
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
+| **Dag**   | **Kennissessie** |
+|-----------|------------------|
+| Ma 24 mar |                  |
+| Di 25 mar |                  |
+| Wo 26 mar |                  |
+| Do 27 mar |                  |
+
 
 #### Onderwijsweek 7
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
+| **Dag**   | **Kennissessie** |
+|-----------|------------------|
+| Ma 31 mar |                  |
+| Di 1 apr  |                  |
+| Wo 2 apr  |                  |
+| Do 3 apr  |                  |
+
 
 ### Sprint 4
 
@@ -148,13 +176,22 @@ Opleveren: Slimmer bewegen uitgebreid
 
 #### Onderwijsweek 8
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
+| **Dag**   | **Kennissessie** |
+|-----------|------------------|
+| Ma 7 apr  |                  |
+| Di 8 apr  |                  |
+| Wo 9 apr  |                  |
+| Do 10 apr |                  |
 
 #### Onderwijsweek 9
 
 | **Dag** | **Kennissessie** |
-| ------- | ---------------- |
+|---------|------------------|
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
+
 
 ### Sprint 5
 
@@ -162,11 +199,19 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 #### Onderwijsweek 11
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 ### Sprint 6
 
@@ -174,11 +219,19 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 #### Onderwijsweek 13
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 ### Sprint 7
 
@@ -186,11 +239,19 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 #### Onderwijsweek 15
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 ### Sprint 8
 
@@ -198,6 +259,10 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 #### Onderwijsweek 17 - Oplevering
 
@@ -205,6 +270,10 @@ Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 ### Sprint 9
 
@@ -213,11 +282,11 @@ Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 Evaluaties<br>Op een aparte branch kan alvast gewerkt worden aan eventuele verbeteringen.
 
 | **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| ma      |                  |
-| di      |                  |
-| wo      |                  |
-| do      |                  |
+|---------|------------------|
+| Ma      |                  |
+| Di      |                  |
+| Wo      |                  |
+| Do      |                  |
 
 ### Reparatie Sprint
 
@@ -226,17 +295,17 @@ Reparatieweken 1 en 2 zijn er voor (mogelijke) verbeteringen van het ingeleverde
 #### Reparatieweek 1
 
 | **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| ma      | Verbeterperiode  |
-| di      | Verbeterperiode  |
-| wo      | Verbeterperiode  |
-| do      | Verbeterperiode  |
+|---------|------------------|
+| Ma      | Verbeterperiode  |
+| Di      | Verbeterperiode  |
+| Wo      | Verbeterperiode  |
+| Do      | Verbeterperiode  |
 
 #### Reparatieweek 2
 
 | **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| ma      | Verbeterperiode  |
-| di      | Verbeterperiode  |
-| wo      | Verbeterperiode  |
-| do      | Verbeterperiode  |
+|---------|------------------|
+| Ma      | Verbeterperiode  |
+| Di      | Verbeterperiode  |
+| Wo      | Verbeterperiode  |
+| Do      | Verbeterperiode  |

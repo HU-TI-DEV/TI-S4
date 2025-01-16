@@ -4,7 +4,7 @@
 Auteur: Nick Goris<br>
 _Eventuele meningen of persoonlijke toevoegingen zijn dan ook vanuit mij, als persoon, toegevoegd._
 
-Tijdens dit semester zullen jullie, ter voorbereiding op de stage volgend jaar, gaan solliciteren op het project waar jullie graag deel van uit zouden willen maken. Tevens kun je hierbij solliciteren op de rol die je binnen je team zou willen vervullen. 
+Tijdens dit semester zullen jullie, ter voorbereiding op de stages voor jaar 3 en het afstuderen, gaan solliciteren op het project waar jullie graag deel van uit zouden willen maken. Tevens kun je hierbij solliciteren op de rol die je binnen je team zou willen vervullen. 
 
 Deze pagina biedt je houvast voor, tijdens, en ná de sollicitatieprocedure.
 
@@ -33,9 +33,9 @@ Je curriculum vitae (CV) is je visitkaartje. Dit is het eerste waar een werkgeve
 
     Heb je een LinkedIn profiel of goedgevuld GitHub account? Dan link je deze hier ook. Zie ook [Online.](#online)
 2. Persoonlijk profiel;<br>
-    Korte omschrijving van wie je bent, wat je doet en wat je belangrijk vindt in je werk. Deze pas je vaak aan zodat deze past bij de vacature waar je op reageert.
+    Korte omschrijving van wie je bent, wat je doet en wat je belangrijk vindt in je werk en als persoon. Deze pas je vaak aan zodat deze past bij de vacature waar je op reageert. Zie dit echt als een soort verkooppraatje: 'Dit ben ik, dit wil ik, en deze kwaliteiten bied ik als persoon waardoor jullie mij willen aannemen'.
 3. Werkervaring;<br>
-    Eventuele banen en stages. Normaal gesproken zet je deze in chronologische volgorde, maar met de opkomst van LinkedIn kun je voor een andere strategie kiezen. Zie ook hiervoor [Online.](#online)<br>
+    Eventuele banen en stages, maar vooral ook wat je gedaan hebt in deze functies. Zie het als een manier om te tonen wat voor verantwoordelijkheden je hebt gehad en aan kan. Normaal gesproken zet je deze in chronologische volgorde, maar met de opkomst van LinkedIn kun je voor een andere strategie kiezen. Zie ook hiervoor [Online.](#online)<br>
     Je plaatst hier doorgaans expliciet geen vrijwilligerswerk, dit komt bij de nevenactiviteiten.
 4. Opleidingen en cursussen;<br>
     Vergelijkbaar met 'werkervaring' zet je ook deze in chronologische volgorde. 
@@ -58,23 +58,29 @@ Naast je CV als attachment meesturen bij je sollicitatie kun je je CV ook online
 
 ## Sollicitatiebrief
 
-Dolor
+Of je je sollicitatiebrief nu fysiek of digitaal opstuurt maakt weinig uit, de kern blijft hetzelfde. Een sollicitatiebrief kan relatief eenvoudig blijven, aangezien deze bijna altijd uit exact dezelfde onderdelen bestaat. De Nationale Vacaturebank heeft hier [een mooi overzicht voor gepubliceerd](https://www.nationalevacaturebank.nl/carriere/motivatiebrief/motivatiebrief-voorbeeld/opbouw-sollicitatiebrief).
+
+Let op: solliciteer je in het buitenland? Dan wordt dit in het Engels vaak een 'cover letter' genoemd.
 
 ## Sollicitatiegesprek
 
-Dolor
+Het is belangrijk je te realiseren dat een sollicitatiegesprek tweerichtingsverkeer is. Een veelgemaakte fout is dat sollicitanten een sollicitatiegesprek vaak alleen zien als een manier voor de werkgever om de sollicitant te leren kennen, maar dit is ook bij uitstek het moment waarop jij de werkgever en de werkplaats kan leren kennen. Vergeet geen vragen te stellen als;
+- Hoe ziet een doorsnee dag bij dit bedrijf er uit? 
+- Wat voor activiteiten vinden er plaats ten behoeve van teambuilding?
+- Wat doet dit bedrijf voor [vul in wat jij belangrijk vindt]?
 
-## Tips & Tricks
+Daarnaast is een sollicitatiegesprek veelal het eerste fysieke, of in ieder geval persoonlijke, contactmoment tussen werkgever en sollicitant. Het is dus belangrijk om je van je beste kant te laten zien. Pas echter wel op dat je jezelf niet voorbij gaat. 
 
-Dolor
+> Kleine anecdote: 
+> 
+> Ik heb een tijd op een kantoor gewerkt waar één software ontwikkelaar werkte. Deze dev was de enige op het hele kantoor die in pak naar werk kwam. Toen ik hem hier naar vroeg reageerde hij 'zo ben ik op dag één binnen gekomen, en daarmee heb ik de verwachting geschept dat dit is wat ik naar werk draag'. Alle andere collega's droegen gewoon spijkerbroeken en t-shirts - en heel soms een overhemd.
 
 ## Wat verder ter tafel komt
 
 Verdere potentiële interessante vraagstukken rondom de sollicitatie procedure.
 
-### Ethisch
+### Ethisch en Veiligheid
 
 Het gaat in het nieuws relatief vaak over problemen rondom solliciteren; of het nu gaat over [stagediscriminatie](https://www.mensenrechten.nl/voorlichting/campagne/stop-stagediscriminatie) of zorgen rond het verstrekken van [persoonsgevens](https://www.autoriteitpersoonsgegevens.nl/themas/werk-en-uitkering/sollicitaties/persoonsgegevens-van-sollicitanten), solliciteren is ([voor nu nog vooral](https://www.indeed.com/career-advice/resumes-cover-letters/automated-screening-resume)) een proces van mensen. Dit betekent dat er soms, hopelijk onverhoopt, oneerlijk geoordeeld wordt tijdens de stageprocedure. Wat kun je doen als je het idee hebt dat dit proces problemen oplevert?
 
-De hierboven gelinkte websites geven je een paar handvatten, <wat doet de hu hier tegen? TBA>
-
+De hierboven gelinkte websites geven je een paar handvatten, maar de HU hanteert zelf ook een zero-tolerance policy voor elke vorm van seksuele en verbale intimidatie en discriminatie. Deze policy geldt niet alleen binnen de school, maar ook op stageplaatsen. Stagediscriminatie of een vorm van intimidatie tijdens de stage is dus ook verantwoordelijkheid van de Hogeschool Utrecht. Kom je, onverhoopt, in een situatie waar dit aan de orde is? Schroom dan zeker niet om [aan te kloppen bij een van de onafhankelijke vertrouwenspersonen](https://wegwijs.hu.nl/ondersteuning/begeleiders/vertrouwenspersoon/vertrouwenspersoon). Je kunt ook altijd aankloppen bij de stage/afstudeercoördinator, je docentbegeleider of je SLB-er. 

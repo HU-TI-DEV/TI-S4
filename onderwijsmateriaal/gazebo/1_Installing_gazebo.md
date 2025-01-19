@@ -59,22 +59,10 @@ docker commit <container_id> gazebo
 ~~~
 This may take some time. Patience is virtue.
 
-### Installing WSL & X server
-*Source: https://learn.microsoft.com/en-us/windows/wsl/install & https://vcxsrv.com/*
+### Installing X server
+*Source:  https://vcxsrv.com/*
 
-If you do not We will also have to install WSL<sup>1</sup>:
-~~~
-wsl --install
-wsl --set-default-version 2
-~~~
-Configure Docker to use WSL 2:
-
-Open Docker Desktop and go to Settings.
-Under the General tab, ensure Use the WSL 2 based engine is checked.
-Go to Resources > WSL Integration. Here, you’ll see a list of installed WSL distros.
-Enable the WSL 2 integration for your preferred distros (like Ubuntu). This allows Docker to use those distros as Docker hosts.
-
-We also have to install a X server (to enable a graphical user interface in Ubuntu). Go to https://vcxsrv.com/ and install the server on your windows computer. 
+We have to install a X server (to enable a graphical user interface in Ubuntu). Go to https://vcxsrv.com/ and install the server on your windows computer. 
 
 Run the X server (via the start menu of windows).
 
@@ -85,9 +73,19 @@ $env:DISPLAY="host.docker.internal:0"
 
 ### First time running
 
-Run our previously commited docker container<sup>1</sup>:
+We will now start the container again.  
+First we need to  find the id<sup>1</sup>:
 ~~~
-docker run -it -e DISPLAY=host.docker.internal:0  gazebo
+docker ps -a
+~~~
+You need to find the id of the container you just exited (so the last one).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+~~~
+and execute it<sup>1</sup>:
+~~~
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
 We can test it by running<sup>2</sup>:
@@ -110,15 +108,30 @@ If you want to take a break with this manual this would be a nice time to do so.
 - run vcxsrv in your windows environment.
 - run the powershell
 
-In the powershell type<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 gazebo
+First we need to  find the id<sup>1</sup>:
 ~~~
-
+docker ps -a
+~~~
+You need to find the id of the container you just exited (so the last one).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+~~~
+and execute it<sup>1</sup>:
+~~~
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
+~~~
 
 Type<sup>2<sup>:
 ~~~
 gz sim
+~~~
+
+### Creating a new container from our image:
+We could also create a new container from our image (the disadvantage is that you will accumulate containers very quickly!)
+Run our previously commited docker container<sup>1</sup>:
+~~~
+docker run -it -e DISPLAY=host.docker.internal:0  gazebo
 ~~~
 
 

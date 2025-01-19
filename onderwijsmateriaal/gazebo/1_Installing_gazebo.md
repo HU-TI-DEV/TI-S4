@@ -6,12 +6,12 @@ Below the following environments are used:<br>
 <sup>2</sup> The prompt of the docker container<br>
 
 ## Installing gazebo in a docker container
-Allthough you can install Gazebo on native windows that specific version is broken, it malfunctions. We will install it in a docker container on ubuntu. 
+Although you can install Gazebo on native windows that specific version is broken, it malfunctions. We will install it in a Docker container on ubuntu. 
 
 ### Install Docker Desktop on Windows:
 *Source: https://www.docker.com/products/docker-desktop/<br>*
-First, you need to install Docker Desktop for Windows. You can download it from Docker's official site.
-Follow the installation steps to set it up. Please note, it could be that you need to enable hardware virtualization in your bios to make it run (https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
+First, you need to install Docker Desktop for Windows. Please note, you need approximatly 10Gb to install it. You can download it from Docker's official site.
+Make sure to choose WSL as the default option. Follow the installation steps to set it up. Please note, it could be that you need to enable hardware virtualization in your bios to make it run (https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
 Docker Desktop provides a LinuxKit-based virtual machine (VM) that runs Linux inside Windows. 
 
 Make sure docker desktop is running. 
@@ -62,7 +62,7 @@ This may take some time. Patience is virtue.
 ### Installing WSL & X server
 *Source: https://learn.microsoft.com/en-us/windows/wsl/install & https://vcxsrv.com/*
 
-We will also have to install WSL<sup>1</sup>:
+If you do not We will also have to install WSL<sup>1</sup>:
 ~~~
 wsl --install
 wsl --set-default-version 2

@@ -123,11 +123,10 @@ gz sim
 
 ### Creating a new container from our image:
 We could also create a new container from our image (the disadvantage is that you will accumulate containers very quickly!)
-Run our previously commited docker container<sup>1</sup>:
+Run our previously commited image, this will create a new container<sup>1</sup>:
 ~~~
 docker run -it -e DISPLAY=host.docker.internal:0  gazebo
 ~~~
-
 
 For the next step:  
 [2_Building_our_first_robot](./2_Building_our_first_robot.md)

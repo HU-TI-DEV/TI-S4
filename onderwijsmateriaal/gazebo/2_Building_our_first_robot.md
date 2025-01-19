@@ -11,15 +11,20 @@ Below the following environments are used:<br>
 ## Build the robot.sdf (simulation description format) 
 Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save the file as robot.sdf in your pc environment. The end result should look something like this [robot.sdf](./files/robot.sdf). 
 
-
 We will now try to run the robot.sdf with gz sim. First:
 - start dockers for desktop in your windows environment.
 - run vcxsrv in your windows environement.
 - run the powershell
 
-In the powershell type<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0  gazebo
+First we need to  find the id of our last container<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (probably the first one on the list).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
 We will first install the tooling we need<sup>2</sup>:
@@ -42,7 +47,8 @@ Open vi<sup>2</sup>:
 vi robot.sdf
 ~~~
 
-Paste the content of the robot.sdf (on your dekstop) inside the vi editor.
+Paste the content of the robot.sdf (on your dekstop) inside the vi editor (make sure VI is in INSERT mode, if not press i).  
+To leave the insert mode you have to press Esc.  
 To save and exit<sup>3</sup>:
 ~~~
 :w
@@ -99,9 +105,15 @@ insert it below the following lines:
 
 Save it under robot_move.sdf on your pc. The end result should look something like this [robot_move.sdf](./files/robot_move.sdf). 
 
-We get back into the container<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 gazebo
+We get back into the container, First we need to  find the id of our last container<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (probably the first one on the list).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
 We will go to our directory<sup>2</sup>:

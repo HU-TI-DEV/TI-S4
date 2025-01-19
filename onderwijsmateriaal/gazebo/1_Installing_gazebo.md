@@ -3,19 +3,19 @@ Gazebo is a modelling/simulation framework. In this guide we will learn how to i
 
 Below the following environments are used:<br>
 <sup>1</sup> The prompt of the power shell environment<br>
-<sup>2</sup> The prompt of the docker container<br>
+<sup>2</sup> The prompt of the Docker container<br>
 
-## Installing gazebo in a docker container
-Although you can install Gazebo on native windows that specific version is broken, it malfunctions. We will install it in a Docker container on ubuntu. 
+## Installing gazebo in a Docker container
+Although you can install Gazebo on native Windows that specific version is broken, it malfunctions. Therefore we will install Gazebo in a Docker container on Ubuntu. 
 
 ### Install Docker Desktop on Windows:
-*Source: https://www.docker.com/products/docker-desktop/<br>*
-First, you need to install Docker Desktop for Windows. Please note, you need approximatly 10Gb to install it. You can download it from Docker's official site.
-Make sure to choose WSL as the default option. Follow the installation steps to set it up. Please note, it could be that you need to enable hardware virtualization in your bios to make it run (https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
+If you have not done this already we first install [Docker Desktop](https://www.docker.com/products/docker-desktop/).Please note, you need approximatly 10Gb of diskspace to install it. You can download it from Docker's official site.
+
+Make sure to choose WSL as the default option. Follow the installation steps to set it up. Please note, it could be that you need to [enable hardware virtualization in your bios to make it run](https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
 Docker Desktop provides a LinuxKit-based virtual machine (VM) that runs Linux inside Windows. 
 
-Make sure docker desktop is running. 
-Open the windows powershell prompt and type the following<sup>1</sup>:
+Make sure Docker Desktop is running. 
+Open the Windows Powershell prompt and type the following<sup>1</sup>:
 
 ~~~
 docker pull ubuntu
@@ -129,4 +129,4 @@ docker run -it -e DISPLAY=host.docker.internal:0  gazebo
 ~~~
 
 For the next step:  
-[2_Building_our_first_robot](./2_Building_our_first_robot.md)
+2 [Building our first robot](./2_Building_our_first_robot.md)

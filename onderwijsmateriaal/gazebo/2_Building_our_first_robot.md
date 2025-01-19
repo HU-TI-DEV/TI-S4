@@ -67,7 +67,7 @@ Close the gz sim window.
 ## Moving our robot
 *Source: https://gazebosim.org/docs/latest/moving_robot/*
 
-We will now try to move our robot. We are going to execute the instructions in the chapter Diff_drive pluging form https://gazebosim.org/docs/latest/moving_robot/. Follow the instructions below to implement the code in our robot.sdf in our docker container.
+We will now try to move our robot. We are going to execute the instructions in the chapter Diff_drive pluging from https://gazebosim.org/docs/latest/moving_robot/. Follow the instructions below to implement the code in our robot.sdf in our docker container.
 
 Insert the following code (see Diff_drive plugin chapter) in your robot.sdf on your pc (see below for the exact location):
 ~~~
@@ -112,7 +112,7 @@ gz sim robot_move.sdf
 Press run in the gz sim (the orange triangle in the bottom left corner)  
 Leave gazebo runninng.  
 
-We will now reenter the container in a different window. Open a new powershell.
+We will now re-enter the container in a different window. Open a new powershell.
 Find the id of our last container<sup>1</sup>:
 ~~~
 docker ps -a
@@ -128,8 +128,8 @@ Run the following code in this container<sup>2</sup>:
 export GZ_PARTITION=test
 gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
 ~~~
-Hopefully the robot should start moving!!!
-Exit both containers. 
+Hopefully the robot should start moving!!!  
+Close gazebo.
 
 ## Adding a sensor to the robot
 *Source: https://gazebosim.org/docs/latest/sensors/*
@@ -157,9 +157,8 @@ tag:
 </sensor>
 ~~~
 
-restart & enter the container (see above how you do this). Make sure you are in the ~/gz_transport_tutorial directory (again see above how you do this).
-Use vi to save the file also in your docker container under robot_with_imu.sdf.
-The end result should look something like this [robot_with_imu.sdf](./files/robot_with_imu.sdf). 
+Use vi to save the file also in your docker container under robot_with_imu.sdf.  
+The end result should look something like this [robot_with_imu.sdf](./files/robot_with_imu.sdf).  
 Start the robot in gz sim, press also run and use the other container to make it "walk" with the following command<sup>2</sup>
 ~~~
 export GZ_PARTITION=test

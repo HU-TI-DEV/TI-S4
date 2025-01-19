@@ -82,9 +82,6 @@ You need to find the id of the container you just exited (so the last one).<br>
 Copy the id & paste it in the lines below<sup>1</sup>:
 ~~~
 docker start <container_id>
-~~~
-and execute it<sup>1</sup>:
-~~~
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
@@ -116,9 +113,6 @@ You need to find the id of the container you just exited (so the last one).<br>
 Copy the id & paste it in the lines below<sup>1</sup>:
 ~~~
 docker start <container_id>
-~~~
-and execute it<sup>1</sup>:
-~~~
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 

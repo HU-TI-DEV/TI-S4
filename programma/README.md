@@ -72,7 +72,7 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 - Ontwikkelomgeving opzetten
 
 <!-- Meta dingen -->
-| **Dag**   |-| **Kennissessie** |
+| **Dag**   | | **Kennissessie** |
 |-----------|-|------------------|
 | Ma 10 feb |o|                  |
 | Di 11 feb |m|                  |
@@ -85,7 +85,7 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 (17-2-2025)
 - Ontwikkelomgeving simulatieplatform opzetten
 
-| **Dag**   |-| **Kennissessie**  |
+| **Dag**   | | **Kennissessie**  |
 |-----------|-|-------------|
 | Ma 17 feb |o| [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
 | Di 18 feb |m| [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
@@ -102,8 +102,8 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 - Backlog opbouwen
 - Requirements bedenken
 
-| **Dag**  || **Kennissessie** |
-|----------||------------------|
+| **Dag**  | | **Kennissessie** |
+|----------|-|------------------|
 | Ma 3 mar |o|[Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)|
 | Di 4 mar |m|Testing & Geavanceerde Tooling (JH)|
 | Wo 5 mar |m|                  |
@@ -122,22 +122,22 @@ Nodig:
 
 #### Onderwijsweek 4
 
-| **Dag**   | **Kennissessie** |
-|-----------|------------------|
-| Ma 10 mar |Project demo (JH)|
-| Di 11 mar |Algoritmen & Datastructuren I (C++ / Python) (JH)|
-| Wo 12 mar |Algoritmen & Datastructuren II (C++ Advanced)(JH)|
-| Do 13 mar |                  |
+| **Dag**   | | **Kennissessie** |
+|-----------|-|------------------|
+| Ma 10 mar |o|Project demo (JH)|
+| Di 11 mar |m|Algoritmen & Datastructuren I (C++ / Python) (JH)|
+| Wo 12 mar |m|Algoritmen & Datastructuren II (C++ Advanced)(JH)|
+| Do 13 mar |m|                  |
 
 
 #### Onderwijsweek 5
 
-| **Dag**   | **Kennissessie** |
-|-----------|------------------|
-| Ma 17 mar |Algoritmen & Datastructuren III (Python & C++ Vergelijking)(JH)|
-| Di 18 mar |Koppeling Python ↔ C++ (Interfacing)(JH)|
-| Wo 19 mar |                  |
-| Do 20 mar |Retrospective (NG)|
+| **Dag**   | | **Kennissessie** |
+|-----------|-|------------------|
+| Ma 17 mar |o|Algoritmen & Datastructuren III (Python & C++ Vergelijking)(JH)|
+| Di 18 mar |m|Koppeling Python ↔ C++ (Interfacing)(JH)|
+| Wo 19 mar |m|                  |
+| Do 20 mar |m|Retrospective (NG)|
 
 ### Sprint 3
 

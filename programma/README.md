@@ -87,10 +87,10 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 
 | **Dag**   | **Kennissessie**                                                                                                                                   |
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Ma 17 feb | [Introductie Gazebo (BB)](../onderwijsmateriaal/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
-| Di 18 feb | [Hoe werken modellering/simulatie pakketten? (BB)](../onderwijsmateriaal/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| Ma 17 feb | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
+| Di 18 feb | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
 | Wo 19 feb |                                                                                                                                                    |
-| Do 20 feb | [Gazebo deel II (BB)](../onderwijsmateriaal/gazebo/README.md#Programma-Gazebo-deel-II)                                                             |
+| Do 20 feb | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)                                                             |
 
 
 

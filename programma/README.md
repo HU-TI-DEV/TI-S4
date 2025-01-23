@@ -72,8 +72,8 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 - Ontwikkelomgeving opzetten
 
 <!-- Meta dingen -->
-| **Dag**   || **Kennissessie** |
-|-----------||------------------|
+| **Dag**   |-| **Kennissessie** |
+|-----------|-|------------------|
 | Ma 10 feb |o|                  |
 | Di 11 feb |m|                  |
 | Wo 12 feb |m|                  |
@@ -85,8 +85,8 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 (17-2-2025)
 - Ontwikkelomgeving simulatieplatform opzetten
 
-| **Dag**   || **Kennissessie**  |
-|-----------||-------------|
+| **Dag**   |-| **Kennissessie**  |
+|-----------|-|-------------|
 | Ma 17 feb |o| [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
 | Di 18 feb |m| [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
 | Wo 19 feb |m|Intro & Desktop-Environment (VSCode, CMake, Debugger)|

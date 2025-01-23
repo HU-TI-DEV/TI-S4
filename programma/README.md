@@ -74,10 +74,10 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 <!-- Meta dingen -->
 | **Dag**   | **Kennissessie** |
 |-----------|------------------|
-| Ma 10 feb |                  |
-| Di 11 feb |                  |
-| Wo 12 feb |                  |
-| Do 13 feb | Schrijven van solliciatie brief (NG) |
+| Ma 10 feb -o |                  |
+| Di 11 feb -m|                  |
+| Wo 12 feb -m|                  |
+| Do 13 feb -m| Schrijven van solliciatie brief (NG) |
 
 ### Sprint 1
 
@@ -87,10 +87,10 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 
 | **Dag**   | **Kennissessie**                                                                                                                                   |
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Ma 17 feb | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
-| Di 18 feb | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
-| Wo 19 feb |Intro & Desktop-Environment (VSCode, CMake, Debugger)|
-| Do 20 feb |                                                           |
+| Ma 17 feb -o| [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
+| Di 18 feb -m| [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| Wo 19 feb -m|Intro & Desktop-Environment (VSCode, CMake, Debugger)|
+| Do 20 feb -m|                                                           |
 
 
 
@@ -104,10 +104,10 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 
 | **Dag**  | **Kennissessie** |
 |----------|------------------|
-| Ma 3 mar |[Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)|
-| Di 4 mar |Testing & Geavanceerde Tooling (JH)|
-| Wo 5 mar |                  |
-| Do 6 mar |Teamcoach sessie (NG)|
+| Ma 3 mar -o|[Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)|
+| Di 4 mar -m|Testing & Geavanceerde Tooling (JH)|
+| Wo 5 mar -m|                  |
+| Do 6 mar -m|Teamcoach sessie (NG)|
 
 
 ### Sprint 2

@@ -89,7 +89,7 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 |-----------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | Ma 17 feb | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
 | Di 18 feb | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
-| Wo 19 feb |                                                                                                                                                    |
+| Wo 19 feb |Intro & Desktop-Environment (VSCode, CMake, Debugger)|
 | Do 20 feb | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)                                                             |
 
 
@@ -107,7 +107,7 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 | Ma 3 mar |                  |
 | Di 4 mar |                  |
 | Wo 5 mar |                  |
-| Do 6 mar |                  |
+| Do 6 mar |Teamcoach sessie (NG)|
 
 
 ### Sprint 2
@@ -124,7 +124,7 @@ Nodig:
 
 | **Dag**   | **Kennissessie** |
 |-----------|------------------|
-| Ma 10 mar |                  |
+| Ma 10 mar |Project demo (JH)|
 | Di 11 mar |                  |
 | Wo 12 mar |                  |
 | Do 13 mar |                  |
@@ -137,7 +137,7 @@ Nodig:
 | Ma 17 mar |                  |
 | Di 18 mar |                  |
 | Wo 19 mar |                  |
-| Do 20 mar |                  |
+| Do 20 mar |Retrospective (NG)|
 
 ### Sprint 3
 

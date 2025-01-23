@@ -11,15 +11,20 @@ Below the following environments are used:<br>
 ## Build the robot.sdf (simulation description format) 
 Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save the file as robot.sdf in your pc environment. The end result should look something like this [robot.sdf](./files/robot.sdf). 
 
-
 We will now try to run the robot.sdf with gz sim. First:
 - start dockers for desktop in your windows environment.
 - run vcxsrv in your windows environement.
 - run the powershell
 
-In the powershell type<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0  gazebo
+First we need to find the id of our last container<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (probably the first one on the list).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
 We will first install the tooling we need<sup>2</sup>:
@@ -42,7 +47,8 @@ Open vi<sup>2</sup>:
 vi robot.sdf
 ~~~
 
-Paste the content of the robot.sdf (on your dekstop) inside the vi editor.
+Paste the content of the robot.sdf (on your dekstop) inside the vi editor (make sure VI is in INSERT mode, if not press i).  
+To leave the insert mode you have to press Esc.  
 To save and exit<sup>3</sup>:
 ~~~
 :w
@@ -57,25 +63,11 @@ You should see:
 ![alt text](images/image-3.png)
 Are you proud? I hope so!  
 Close the gz sim window.
-We will now exit the container<sup>2</sup>:
-~~~
-exit
-~~~
-and save it. First we need to  find the id<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-You need to find the id of the container you just exited (so the last one).<br>
-Copy the id & paste it in the below command<sup>1</sup>:
-~~~
-docker commit <container_id> gazebo
-~~~
-This may take some time. Patience is virtue.
 
 ## Moving our robot
 *Source: https://gazebosim.org/docs/latest/moving_robot/*
 
-We will now try to move our robot. We are going to execute the instructions in the chapter Diff_drive pluging form https://gazebosim.org/docs/latest/moving_robot/. Follow the instructions below to implement the code in our robot.sdf in our docker container.
+We will now try to move our robot. We are going to execute the instructions in the chapter Diff_drive pluging from https://gazebosim.org/docs/latest/moving_robot/. Follow the instructions below to implement the code in our robot.sdf in our docker container.
 
 Insert the following code (see Diff_drive plugin chapter) in your robot.sdf on your pc (see below for the exact location):
 ~~~
@@ -99,22 +91,12 @@ insert it below the following lines:
 
 Save it under robot_move.sdf on your pc. The end result should look something like this [robot_move.sdf](./files/robot_move.sdf). 
 
-We get back into the container<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 gazebo
-~~~
-
-We will go to our directory<sup>2</sup>:
-~~~
-cd ~/gz_transport_tutorial
-~~~
-
 We will make a new sdf file<sup>2</sup>:
 ~~~
 vi robot_move.sdf
 ~~~ 
-Copy the code from the robot_move.sdf on your pc to the robot_move.sdf in vi. 
-
+Copy the code from the robot_move.sdf on your pc to the robot_move.sdf in vi (use i to get in INSERT mode).  
+Leave INSERT mode with Esc.  
 To save and exit<sup>3</sup>:
 ~~~
 :w
@@ -127,11 +109,18 @@ export GZ_PARTITION=test
 gz sim robot_move.sdf
 ~~~
 (the export gz_partition is needed to acces the simulation from a different container)   
-Press run in the gz sim (the orange triangle in the bottom left corner)
+Press run in the gz sim (the orange triangle in the bottom left corner)  
+Leave gazebo runninng.  
 
-Open a new powershell and open another instance of the container<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 gazebo
+We will now re-enter the container in a different window. Open a new powershell.
+Find the id of our last container<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (probably the first one on the list).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
 Run the following code in this container<sup>2</sup>:
@@ -139,7 +128,8 @@ Run the following code in this container<sup>2</sup>:
 export GZ_PARTITION=test
 gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
 ~~~
-Hopefully the robot should start moving!!!
+Hopefully the robot should start moving!!!  
+Close gazebo.
 
 ## Adding a sensor to the robot
 *Source: https://gazebosim.org/docs/latest/sensors/*
@@ -167,8 +157,8 @@ tag:
 </sensor>
 ~~~
 
-Use vi to save the file also in your docker container under robot_with_imu.sdf.
-The end result should look something like this [robot_with_imu.sdf](./files/robot_with_imu.sdf). 
+Use vi to save the file also in your docker container under robot_with_imu.sdf.  
+The end result should look something like this [robot_with_imu.sdf](./files/robot_with_imu.sdf).  
 Start the robot in gz sim, press also run and use the other container to make it "walk" with the following command<sup>2</sup>
 ~~~
 export GZ_PARTITION=test

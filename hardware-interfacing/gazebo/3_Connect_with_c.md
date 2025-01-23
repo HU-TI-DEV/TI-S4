@@ -3,9 +3,15 @@
 
 We would like to be able to interact with gazebo via c++. The next steps enable this.
 
-if you did not open your container yet, type in the powershell<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 gazebo
+ if you did not open your container yet<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (probably the first one on the list).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
 We will first install the tooling we need<sup>2</sup>:
@@ -23,7 +29,6 @@ Download
 - CMakeLists.txt
 
 from https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md
-
 
 Make a new file with the vi editor with<sup>2</sup>:
 ~~~
@@ -54,32 +59,9 @@ We have now compiled the subscriber.cc and publisher.cc file!
 
 Read the description in *https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md* to understand what happens in the subscriber and publisher code. 
 
-We will now exit the container<sup>2</sup>:
-~~~
-exit
-~~~
-and save it. First we need to  find the id<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-You need to find the id of the container you just exited (so the last one).<br>
-Copy the id & paste it in the below command<sup>1</sup>:
-~~~
-docker commit <container_id> gazebo
-~~~
-This may take some time. Patience is virtue.
-
 ## Running our first test with the transport layer!
 
-First we will start a container again<sup>1</sup>:
-~~~
-docker run -it -e DISPLAY=host.docker.internal:0  gazebo
-~~~
-In this container we will first go to the correct directory<sup>2</sup>:
-~~~
-cd ~/gz_transport_tutorial/build
-~~~
-Then we start the publisher<sup>2</sup>:
+We will start the publisher<sup>2</sup>:
 ~~~
 export GZ_PARTITION=test
 ./publisher
@@ -90,12 +72,9 @@ We should see something like this:
 ![
 ](images/image.png)
 
-We start a new powershell and type in the new window<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 gazebo
-~~~
+We start a new powershell and re-enter the container.
 
-Again we will first go to the correct directory<sup>2</sup>:
+We will first go to the correct directory<sup>2</sup>:
 ~~~
 cd ~/gz_transport_tutorial/build
 ~~~
@@ -108,25 +87,9 @@ You should now receive the hello message:
 
 ![alt text](images/image-1.png)
 
-We will now exit the container<sup>2</sup>:
-~~~
-exit
-~~~
-and save it. First we need to  find the id<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-You need to find the id of the container you just exited (so the last one).<br>
-Copy the id & paste it in the below command<sup>1</sup>:
-~~~
-docker commit <container_id> gazebo
-~~~
-This may take some time. Patience is virtue.
-
-
 ## Connecting with the robot!
 
-Start a new session of your latest saved container. 
+Start a new session of your container. 
 
 We will start our moving robot with the IMU sensor again!  
 Type<sup>2</sup>:
@@ -135,7 +98,6 @@ export GZ_PARTITION=test
 gz sim robot_with_imu.sdf
 ~~~
 Start the robot in the gz gui.
-
 
 Open a new 
 instance of the container and use it to move the robot<sup>2</sup>.

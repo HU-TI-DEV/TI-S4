@@ -3,19 +3,19 @@ Gazebo is a modelling/simulation framework. In this guide we will learn how to i
 
 Below the following environments are used:<br>
 <sup>1</sup> The prompt of the power shell environment<br>
-<sup>2</sup> The prompt of the docker container<br>
+<sup>2</sup> The prompt of the Docker container<br>
 
-## Installing gazebo in a docker container
-Allthough you can install Gazebo on native windows that specific version is broken, it malfunctions. We will install it in a docker container on ubuntu. 
+## Installing gazebo in a Docker container
+Although you can install Gazebo on native Windows that specific version is broken, it malfunctions. Therefore we will install Gazebo in a Docker container on Ubuntu. 
 
 ### Install Docker Desktop on Windows:
-*Source: https://www.docker.com/products/docker-desktop/<br>*
-First, you need to install Docker Desktop for Windows. You can download it from Docker's official site.
-Follow the installation steps to set it up. Please note, it could be that you need to enable hardware virtualization in your bios to make it run (https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
+If you have not done this already we first install [Docker Desktop](https://www.docker.com/products/docker-desktop/).Please note, you need approximatly 10Gb of diskspace to install it. You can download it from Docker's official site.
+
+Make sure to choose WSL as the default option. Follow the installation steps to set it up. Please note, it could be that you need to [enable hardware virtualization in your bios to make it run](https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
 Docker Desktop provides a LinuxKit-based virtual machine (VM) that runs Linux inside Windows. 
 
-Make sure docker desktop is running. 
-Open the windows powershell prompt and type the following<sup>1</sup>:
+Make sure Docker Desktop is running. 
+Open the Windows Powershell prompt and type the following<sup>1</sup>:
 
 ~~~
 docker pull ubuntu
@@ -59,22 +59,10 @@ docker commit <container_id> gazebo
 ~~~
 This may take some time. Patience is virtue.
 
-### Installing WSL & X server
-*Source: https://learn.microsoft.com/en-us/windows/wsl/install & https://vcxsrv.com/*
+### Installing X server
+*Source:  https://vcxsrv.com/*
 
-We will also have to install WSL<sup>1</sup>:
-~~~
-wsl --install
-wsl --set-default-version 2
-~~~
-Configure Docker to use WSL 2:
-
-Open Docker Desktop and go to Settings.
-Under the General tab, ensure Use the WSL 2 based engine is checked.
-Go to Resources > WSL Integration. Here, you’ll see a list of installed WSL distros.
-Enable the WSL 2 integration for your preferred distros (like Ubuntu). This allows Docker to use those distros as Docker hosts.
-
-We also have to install a X server (to enable a graphical user interface in Ubuntu). Go to https://vcxsrv.com/ and install the server on your windows computer. 
+We have to install a X server (to enable a graphical user interface in Ubuntu). Go to https://vcxsrv.com/ and install the server on your windows computer. 
 
 Run the X server (via the start menu of windows).
 
@@ -85,9 +73,16 @@ $env:DISPLAY="host.docker.internal:0"
 
 ### First time running
 
-Run our previously commited docker container<sup>1</sup>:
+We will now start the container again.  
+First we need to  find the id<sup>1</sup>:
 ~~~
-docker run -it -e DISPLAY=host.docker.internal:0  gazebo
+docker ps -a
+~~~
+You need to find the id of the container you just exited (so the last one).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
 We can test it by running<sup>2</sup>:
@@ -110,17 +105,28 @@ If you want to take a break with this manual this would be a nice time to do so.
 - run vcxsrv in your windows environment.
 - run the powershell
 
-In the powershell type<sup>1</sup>:
-~~~ 
-docker run -it -e DISPLAY=host.docker.internal:0 gazebo
+First we need to  find the id<sup>1</sup>:
 ~~~
-
+docker ps -a
+~~~
+You need to find the id of the container you just exited (so the last one).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
+~~~
 
 Type<sup>2<sup>:
 ~~~
 gz sim
 ~~~
 
+### Creating a new container from our image:
+We could also create a new container from our image (the disadvantage is that you will accumulate containers very quickly!)
+Run our previously commited image, this will create a new container<sup>1</sup>:
+~~~
+docker run -it -e DISPLAY=host.docker.internal:0  gazebo
+~~~
 
 For the next step:  
-[2_Building_our_first_robot](./2_Building_our_first_robot.md)
+2 [Building our first robot](./2_Building_our_first_robot.md)

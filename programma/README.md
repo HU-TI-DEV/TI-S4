@@ -152,22 +152,22 @@ Nodig:
 - Python Debugging/Big-Oh -> Werkboek?
 - Intro algoritmiek/Python opstart
 
-| **Dag**   | **Kennissessie** |
-|-----------|------------------|
-| Ma 24 mar |Project demo (JH)|
-| Di 25 mar |Profiling & Memory/Performance Debugging(JH)|
-| Wo 26 mar |                  |
-| Do 27 mar |                  |
+| **Dag**   | | **Kennissessie** |
+|-----------|-|-----------------|
+| Ma 24 mar |o|Project demo (JH)|
+| Di 25 mar |m|Profiling & Memory/Performance Debugging(JH)|
+| Wo 26 mar |m|                  |
+| Do 27 mar |m|                  |
 
 
 #### Onderwijsweek 7
 
-| **Dag**   | **Kennissessie** |
-|-----------|------------------|
-| Ma 31 mar |Computer Vision I (Basis beeldverwerking)(BB)|
-| Di 1 apr  |                  |
-| Wo 2 apr  |                  |
-| Do 3 apr  |Retrospective (NG)|
+| **Dag**   | | **Kennissessie** |
+|-----------|-|-----------------|
+| Ma 31 mar |o|Computer Vision I (Basis beeldverwerking)(BB)|
+| Di 1 apr  |m|                  |
+| Wo 2 apr  |m|                  |
+| Do 3 apr  |m|Retrospective (NG)|
 
 
 ### Sprint 4
@@ -176,21 +176,21 @@ Opleveren: Slimmer bewegen uitgebreid
 
 #### Onderwijsweek 8
 
-| **Dag**   | **Kennissessie** |
-|-----------|------------------|
-| Ma 7 apr  |Project demo (JH/BB?)|
-| Di 8 apr  |Computer Vision II (Object- en kleurherkenning)(BB)|
-| Wo 9 apr  |                  |
-| Do 10 apr |                  |
+| **Dag**   | | **Kennissessie** |
+|-----------|-|-----------------|
+| Ma 7 apr  |o|Project demo (JH/BB?)|
+| Di 8 apr  |m|Computer Vision II (Object- en kleurherkenning)(BB)|
+| Wo 9 apr  |m|                  |
+| Do 10 apr |m|                  |
 
 #### Onderwijsweek 9
 
-| **Dag** | **Kennissessie** |
-|---------|------------------|
-| Ma      |Computer Vision III (CNN's enzo)(BB)|
-| Di      |                  |
-| Wo      |                  |
-| Do      |Retrospective(NG)|
+| **Dag** | | **Kennissessie** |
+|---------|-|-----------------|
+| Ma      |o|Computer Vision III (CNN's enzo)(BB)|
+| Di      |m|                  |
+| Wo      |m|                  |
+| Do      |m|Retrospective(NG)|
 
 
 ### Sprint 5

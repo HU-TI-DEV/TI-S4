@@ -77,7 +77,7 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 | Ma 10 feb |                  |
 | Di 11 feb |                  |
 | Wo 12 feb |                  |
-| Do 13 feb |                  |
+| Do 13 feb | Schrijven van solliciatie brief (NG) |
 
 ### Sprint 1
 
@@ -90,7 +90,7 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 | Ma 17 feb | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
 | Di 18 feb | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
 | Wo 19 feb |Intro & Desktop-Environment (VSCode, CMake, Debugger)|
-| Do 20 feb | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)                                                             |
+| Do 20 feb |                                                           |
 
 
 
@@ -104,8 +104,8 @@ Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-
 
 | **Dag**  | **Kennissessie** |
 |----------|------------------|
-| Ma 3 mar |                  |
-| Di 4 mar |                  |
+| Ma 3 mar |[Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)|
+| Di 4 mar |Testing & Geavanceerde Tooling (JH)|
 | Wo 5 mar |                  |
 | Do 6 mar |Teamcoach sessie (NG)|
 
@@ -125,8 +125,8 @@ Nodig:
 | **Dag**   | **Kennissessie** |
 |-----------|------------------|
 | Ma 10 mar |Project demo (JH)|
-| Di 11 mar |                  |
-| Wo 12 mar |                  |
+| Di 11 mar |Algoritmen & Datastructuren I (C++ / Python) (JH)|
+| Wo 12 mar |Algoritmen & Datastructuren II (C++ Advanced)(JH)|
 | Do 13 mar |                  |
 
 
@@ -134,8 +134,8 @@ Nodig:
 
 | **Dag**   | **Kennissessie** |
 |-----------|------------------|
-| Ma 17 mar |                  |
-| Di 18 mar |                  |
+| Ma 17 mar |Algoritmen & Datastructuren III (Python & C++ Vergelijking)(JH)|
+| Di 18 mar |Koppeling Python ↔ C++ (Interfacing)(JH)|
 | Wo 19 mar |                  |
 | Do 20 mar |Retrospective (NG)|
 
@@ -154,8 +154,8 @@ Nodig:
 
 | **Dag**   | **Kennissessie** |
 |-----------|------------------|
-| Ma 24 mar |                  |
-| Di 25 mar |                  |
+| Ma 24 mar |Project demo (JH)|
+| Di 25 mar |Profiling & Memory/Performance Debugging(JH)|
 | Wo 26 mar |                  |
 | Do 27 mar |                  |
 
@@ -164,10 +164,10 @@ Nodig:
 
 | **Dag**   | **Kennissessie** |
 |-----------|------------------|
-| Ma 31 mar |                  |
+| Ma 31 mar |Computer Vision I (Basis beeldverwerking)(BB)|
 | Di 1 apr  |                  |
 | Wo 2 apr  |                  |
-| Do 3 apr  |                  |
+| Do 3 apr  |Retrospective (NG)|
 
 
 ### Sprint 4
@@ -178,8 +178,8 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag**   | **Kennissessie** |
 |-----------|------------------|
-| Ma 7 apr  |                  |
-| Di 8 apr  |                  |
+| Ma 7 apr  |Project demo (JH/BB?)|
+| Di 8 apr  |Computer Vision II (Object- en kleurherkenning)(BB)|
 | Wo 9 apr  |                  |
 | Do 10 apr |                  |
 
@@ -187,10 +187,10 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag** | **Kennissessie** |
 |---------|------------------|
-| Ma      |                  |
+| Ma      |Computer Vision III (CNN's enzo)(BB)|
 | Di      |                  |
 | Wo      |                  |
-| Do      |                  |
+| Do      |Retrospective(NG)|
 
 
 ### Sprint 5

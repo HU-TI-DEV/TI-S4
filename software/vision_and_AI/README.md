@@ -35,6 +35,18 @@ BLA
     - *Scope*: Herken een felgekleurde marker in beeld (rood object) en genereer een signaal (in C++ of Python) om iets in Gazebo te triggeren (bijv. plugincommando).
     - *Leeruitkomsten*: Integratie ontwerp (CV) en realisatie (besturing).
 
+## Voorbereiding
+Bekijk de volgende video:  
+BLA
+
+## Tijdens en na de les
+
+    - [Introductie Neural networks](.\files\Neural Networks introduction.pptx)
+
+## Inleveren op Canvas
+
+BLA
+
 # Programma Vision deel III
 BLA
 

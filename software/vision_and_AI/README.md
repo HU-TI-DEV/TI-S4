@@ -41,7 +41,7 @@ Bekijk de volgende video:
 
 ## Tijdens en na de les
 
-    - De powerpoint: [Introductie Neural networks](./files/Neural Networks introduction.pptx)
+    - De powerpoint: [Introductie Neural networks](./files\Neural Networks introduction.pptx)
 
 ## Inleveren op Canvas
 

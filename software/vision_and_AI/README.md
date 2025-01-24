@@ -37,11 +37,11 @@ BLA
 
 ## Voorbereiding
 Bekijk de volgende video:  
-BLA
+- [Neural Network In 5 Minutes](https://youtu.be/bfmFfD2RIcg?si=_PIV4FIMy-iNXb0s)
 
 ## Tijdens en na de les
 
-    - [Introductie Neural networks](.\files\Neural Networks introduction.pptx)
+    - De powerpoint: [Introductie Neural networks](.\files\Neural Networks introduction.pptx)
 
 ## Inleveren op Canvas
 

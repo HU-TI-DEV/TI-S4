@@ -54,7 +54,7 @@ Hoewel de meningen over of het een goed idee is of niet erover verdeeld zijn is 
 
 Het begint met een LinkedIn profiel. Hoewel niet verplicht is LinkedIn een handige tool voor contact met recruiters en voor het opstellen van je professionele identiteit. Ook kun je met een goed opgesteld LinkedIn profiel er voor kiezen om je CV in te korten en specifieker te maken voor de vacature waar je op reageert. Dit zie je ook terug in bijvoorbeeld mijn CV, welke ik eigenlijk als een soort samenvatting voor mijn LinkedIn gebruik.
 
-Naast je CV als attachment meesturen bij je sollicitatie kun je je CV ook online hosten. Dit kan bijvoorbeeld op je eigen website, maar ook GitHub Pages biedt hiervoor mogelijkheden: zie bijvoorbeeld https://druyv.github.io/CV_example/ voor een voorbeeld van mijn CV op GitHub Pages, en [CV op GitHub pages](GitHub_Pages) voor een handleiding om dit zelf op te zetten.
+Naast je CV als attachment meesturen bij je sollicitatie kun je je CV ook online hosten. Dit kan bijvoorbeeld op je eigen website, maar ook GitHub Pages biedt hiervoor mogelijkheden: zie bijvoorbeeld https://druyv.github.io/CV_example/ voor een voorbeeld van mijn CV op GitHub Pages, en [CV op GitHub pages](GitHub_Pages.md) voor een handleiding om dit zelf op te zetten.
 
 ## Sollicitatiebrief
 

@@ -22,4 +22,18 @@ Bekijk de volgende [Installeren van Gazebo in een Docker Container](https://www.
 Veel succes!
 
 # Programma Gazebo deel II
-BLALBLA
+
+## Voorbereiding
+TBD
+
+## Tijdens en na de les
+
+5 [Driving the robot](./5_Driving_the_robot.md)
+
+
+## Inleveren op Canvas
+
+6 Opdracht: [Assignment let's start building the robot for our project!](./6_Assignment_start_with_the_real_one.md)
+
+
+Veel succes!

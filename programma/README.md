@@ -136,7 +136,7 @@ Nodig:
 |-----------|-|------------------|
 | Ma 17 mar |o|Algoritmen & Datastructuren III (Python & C++ Vergelijking)(JH)|
 | Di 18 mar |m|Koppeling Python ↔ C++ (Interfacing)(JH)|
-| Wo 19 mar |m|                  |
+| Wo 19 mar |m|[Peilmoment I](..\Verantwoordingsdocument_TI_S4.md)                  |
 | Do 20 mar |m|Retrospective (NG)|
 
 ### Sprint 3
@@ -179,7 +179,7 @@ Opleveren: Slimmer bewegen uitgebreid
 | **Dag**   | | **Kennissessie** |
 |-----------|-|-----------------|
 | Ma 7 apr  |o|Project demo (JH/BB?)|
-| Di 8 apr  |m|Computer Vision II (Object- en kleurherkenning)(BB)|
+| Di 8 apr  |m||
 | Wo 9 apr  |m|                  |
 | Do 10 apr |m|                  |
 
@@ -187,9 +187,9 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag** | | **Kennissessie** |
 |---------|-|-----------------|
-| Ma      |o|Computer Vision III (CNN's enzo)(BB)|
-| Di      |m|                  |
-| Wo      |m|                  |
+| Ma      |o| HEMELVAART |
+| Di      |m|Computer Vision II (Object- en kleurherkenning)(BB)(BB)                  |
+| Wo 16 ap |m|[Peilmoment II](..\Verantwoordingsdocument_TI_S4.md)                  |
 | Do      |m|Retrospective(NG)|
 
 
@@ -199,7 +199,7 @@ Opleveren: Slimmer bewegen uitgebreid
 
 | **Dag** | **Kennissessie** |
 | ------- | ---------------- |
-| Ma      |                  |
+| Ma      | Computer Vision III (CNN's enzo)                 |
 | Di      |                  |
 | Wo      |                  |
 | Do      |                  |
@@ -230,7 +230,7 @@ Opleveren: Slimmer bewegen uitgebreid
 | ------- | ---------------- |
 | Ma      |                  |
 | Di      |                  |
-| Wo      |                  |
+| Wo      |  [Peilmoment III](..\Verantwoordingsdocument_TI_S4.md) |
 | Do      |                  |
 
 ### Sprint 7

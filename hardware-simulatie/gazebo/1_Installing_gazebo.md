@@ -6,10 +6,10 @@ Below the following environments are used:<br>
 <sup>2</sup> The prompt of the Docker container<br>
 
 ## Installing gazebo in a Docker container
-Although you can install Gazebo on native Windows that specific version is broken, it malfunctions. Therefore we will install Gazebo in a Docker container on Ubuntu. 
+Although you can install Gazebo on native Windows that specific version is broken, it malfunctions. Therefore we will install Gazebo in a Docker container on Ubuntu. If you use a Mac only a native install seems to be possibel. Use the following [logbook-item for installing on Mac OS X](../../infrastructuur/gazebo/Gazebo-Mac-OS-X.md).
 
 ### Install Docker Desktop on Windows:
-If you have not done this already we first install [Docker Desktop](https://www.docker.com/products/docker-desktop/).Please note, you need approximatly 10Gb of diskspace to install it. You can download it from Docker's official site.
+If you have not done this already we first install [Docker Desktop](https://www.docker.com/products/docker-desktop/). Please note, you need approximatly 10Gb of diskspace to install it. You can download it from Docker's official site.
 
 Make sure to choose WSL as the default option. Follow the installation steps to set it up. Please note, it could be that you need to [enable hardware virtualization in your bios to make it run](https://forums.docker.com/t/hardware-assisted-virtualization-and-data-execution-protection-must-be-enabled-in-the-bios/109073).   
 Docker Desktop provides a LinuxKit-based virtual machine (VM) that runs Linux inside Windows. 

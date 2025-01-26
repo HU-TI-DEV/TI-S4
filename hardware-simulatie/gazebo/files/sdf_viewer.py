@@ -50,8 +50,8 @@ class TextEditor:
   
     def open_file(self):    
         file = filedialog.askopenfilename(
-            defaultextension=".sdf",
-            filetypes=[("Text Files", "*.sdf"), ("All Files", "*.*")],
+            defaultextension=".SDF",
+            filetypes=[("Text Files", "*.SDF"), ("All Files", "*.*")],
         )
         line_no=0
         indentation=0

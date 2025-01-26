@@ -11,7 +11,9 @@ BLA
 
 ## Voorbereiding
 Bekijk de volgende video:  
-BLA
+MAAK VIDEO MET ONDERSTAANDE SITE TODO  
+Bestudeer & speel met de volgende site:  
+https://setosa.io/ev/image-kernels/
 
 ## Tijdens en na de les
 

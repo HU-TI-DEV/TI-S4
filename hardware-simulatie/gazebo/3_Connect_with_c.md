@@ -1,7 +1,7 @@
-# 3. Connect with c++
+# 3. Connect with C++
 *Source: https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md*
 
-We would like to be able to interact with gazebo via c++. The next steps enable this.
+We would like to be able to interact with Gazebo via C++. The next steps enable this. [There is also a Mac OS X logbook](./Mac-OS-X/3_Connect_with_c_Mac-OS-X.md).
 
  if you did not open your container yet<sup>1</sup>:
 ~~~

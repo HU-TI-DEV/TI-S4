@@ -1,7 +1,7 @@
 # 2. Building our first robot
 *source: https://gazebosim.org/docs/latest/building_robot/*
 
-In this step we will build our first robot and move it using commands in the command editor window. 
+In this step we will build our first robot and move it using commands in the command editor window. There is also a [logbook for Mac OS X](./Mac-OS-X/2_Building_our_first_robot-Mac-OS-X.md). 
 
 Below the following environments are used:<br>
 <sup>1</sup> The prompt of the power shell environment<br>

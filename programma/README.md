@@ -1,117 +1,128 @@
-![logo](https://www.hu.nl/-/media/hu/afbeeldingen/algemeen/hu-logo.ashx)
+![logo](https://www.hu.nl/-/media/hu/afbeeldingen/algemeen/hu-logo.ashx) [](logo-id)
 
-# Semester 4 van Technische Informatica
+# Semester 2 van Technische Informatica[](title-id)
 
-## Inhoud
+### Inhoud[](toc-id)
 
-- [Semester 4 van Technische Informatica](#semester-4-van-technische-informatica)
-  - [Inhoud](#inhoud)
-  - [Organisatie](#organisatie)
+- [Semester 2 van Technische Informatica](#semester-2-van-technische-informatica)
+    - [Inhoud](#inhoud)
+  - [Een introductie](#een-introductie)
+    - [Organisatie](#organisatie)
   - [Programma](#programma)
-    - [Sprint 0](#sprint-0)
-      - [Onderwijsweek 1](#onderwijsweek-1)
-    - [Sprint 1](#sprint-1)
-      - [Onderwijsweek 2](#onderwijsweek-2)
-      - [Onderwijsweek 3](#onderwijsweek-3)
-    - [Sprint 2](#sprint-2)
-      - [Onderwijsweek 4](#onderwijsweek-4)
-      - [Onderwijsweek 5](#onderwijsweek-5)
-    - [Sprint 3](#sprint-3)
-      - [Onderwijsweek 6](#onderwijsweek-6)
-      - [Onderwijsweek 7](#onderwijsweek-7)
-    - [Sprint 4](#sprint-4)
-      - [Onderwijsweek 8](#onderwijsweek-8)
-      - [Onderwijsweek 9](#onderwijsweek-9)
-    - [Sprint 5](#sprint-5)
-      - [Onderwijsweek 10](#onderwijsweek-10)
-      - [Onderwijsweek 11](#onderwijsweek-11)
-    - [Sprint 6](#sprint-6)
-      - [Onderwijsweek 12](#onderwijsweek-12)
-      - [Onderwijsweek 13](#onderwijsweek-13)
-    - [Sprint 7](#sprint-7)
-      - [Onderwijsweek 14](#onderwijsweek-14)
-      - [Onderwijsweek 15](#onderwijsweek-15)
-    - [Sprint 8](#sprint-8)
-      - [Onderwijsweek 16](#onderwijsweek-16)
-      - [Onderwijsweek 17 - Oplevering](#onderwijsweek-17---oplevering)
-    - [Sprint 9](#sprint-9)
-      - [Afrondondingsweek - Evaluaties](#afrondondingsweek---evaluaties)
-    - [Reparatie Sprint](#reparatie-sprint)
-      - [Reparatieweek 1](#reparatieweek-1)
-      - [Reparatieweek 2](#reparatieweek-2)
+    - [Onderwijsweek C2 (10-02-2025)](#onderwijsweek-c2-10-02-2025)
+    - [Onderwijsweek C3 (17-02-2025)](#onderwijsweek-c3-17-02-2025)
+    - [Onderwijsweek C4 (24-02-2025)](#onderwijsweek-c4-24-02-2025)
+    - [Onderwijsweek C5 (3-03-2025)](#onderwijsweek-c5-3-03-2025)
+    - [Onderwijsweek C6 (10-03-2025)](#onderwijsweek-c6-10-03-2025)
+    - [Onderwijsweek C7 (17-03-2025)](#onderwijsweek-c7-17-03-2025)
+    - [Onderwijsweek C8 (24-03-2025)](#onderwijsweek-c8-24-03-2025)
+    - [Onderwijsweek C9 (31-03-2025)](#onderwijsweek-c9-31-03-2025)
+    - [Onderwijsweek C10 (7-04-2025)](#onderwijsweek-c10-7-04-2025)
+    - [Onderwijsweek D1 (14-04-2025)](#onderwijsweek-d1-14-04-2025)
+    - [Onderwijsweek D2 (21-04-2025)](#onderwijsweek-d2-21-04-2025)
+    - [Onderwijsweek D3 (28-04-2025)](#onderwijsweek-d3-28-04-2025)
+    - [Onderwijsweek D4 (5-05-2025)](#onderwijsweek-d4-5-05-2025)
+    - [Onderwijsweek D5 (12-05-2025)](#onderwijsweek-d5-12-05-2025)
+    - [Onderwijsweek D6 (19-05-2025)](#onderwijsweek-d6-19-05-2025)
+    - [Onderwijsweek D7 (26-05-2025)](#onderwijsweek-d7-26-05-2025)
+    - [Onderwijsweek D8 (2-06-2025)](#onderwijsweek-d8-2-06-2025)
+    - [Onderwijsweek D9 (9-06-2025)](#onderwijsweek-d9-9-06-2025)
+    - [Onderwijsweek D10 (16-06-2025)](#onderwijsweek-d10-16-06-2025)
+    - [Onderwijsweek D11 (23-06-2025)](#onderwijsweek-d11-23-06-2025)
+    - [Onderwijsweek D12 (30-06-2025)](#onderwijsweek-d12-30-06-2025)
+    - [Onderwijsweek D13 (7-7-2025)](#onderwijsweek-d13-7-7-2025)
 
 ---
 
-**v0.1.0** Semester 4 TI programma door HU IICT.
+**v0.1.3 [](version-id)** Semester 4 TI programma door HU IICT[](author-id).
 
 ---
 
-## Organisatie
+## Een introductie
 
-Ons lokaal is
+
+### Organisatie
+
+De contacturen zijn (subject to change):
+|dag|van|tot|
+|---|---|---|
+|ma|13:00|17:00|
+|di|13:00|17:00|
+|wo|9:00|13:00|
+|do|9:00|13:00|
+
+Ons lokaal is HL15 (nog niet bekend).  
 
 De docenten zijn:
 
-- (**NG**) Nick Goris
-- (**JH**) Jan Halsema
-- (**BB**) Bart Bozon
-
-De studentassistenten zijn:
+* (**TM**) Teun Pieter Moddermann
+* (**HS**) Harm Snippe
+* (**GP**) Gera Pronk
+* (**MV**) Marius Versteegen
+* (**BB**) Bart Bozon
+* (**HP**) Hagen Patzke
+* (**NG**) Nick Goris
+* (**JH**) Jan Halsema
 
 ## Programma
 
-Let op; onderwijsweken zijn bedoeld zoals in het [onderwijsjaarrooster voor HBO-ICT](https://wegwijs.hu.nl/thuis-op-de-campus/over-hu/organisatie/institute-for-ict). Bekijk via deze link het jaarrooster voor het huidige studiejaar.
+### Onderwijsweek C2 (10-02-2025)
 
-### Sprint 0
-
-#### Onderwijsweek 1
-
+Week C2.
 - Project introductie
 - Opdrachtgever spreken
 - Solliciteren op project/rol
-- Ontwikkelomgeving opzetten
+- Ontwikkelomgeving opzetten 
 
-<!-- Meta dingen -->
-| **Dag**   | | **Kennissessie** |
-|-----------|-|------------------|
-| Ma 10 feb |o|                  |
-| Di 11 feb |m|                  |
-| Wo 12 feb |m|                  |
-| Do 13 feb |m| Schrijven van solliciatie brief (NG) |
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | | |
+| di  | | |
+| wo  | | |
+| do  | | Schrijven van solliciatie brief (**NG**) |
 
-### Sprint 1
+### Onderwijsweek C3 (17-02-2025)
 
-#### Onderwijsweek 2 
-(17-2-2025)
-- Ontwikkelomgeving simulatieplatform opzetten
+Week A2.
+- Ontwikkelomgeving simulatieplatform opzetten 
 
-| **Dag**   | | **Kennissessie**  |
-|-----------|-|-------------|
-| Ma 17 feb |o| [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I)                                                          |
-| Di 18 feb |m| [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
-| Wo 19 feb |m|Intro & Desktop-Environment (VSCode, CMake, Debugger)|
-| Do 20 feb |m|                                                           |
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I) |
+| di  | | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| wo  | | Intro & Desktop-Environment (VSCode, CMake, Debugger) |
+| do  | :end: Einde sprint 1 & :runner: planning sprint 2 |  |
 
 
+### Onderwijsweek C4 (24-02-2025)
 
-#### Onderwijsweek 3
+| Dag | |
+| --- | --- |
+| ma  | Vakantie |
+| di  | Vakantie |
+| wo  | Vakantie |
+| do  | Vakantie |
+| vr  | Vakantie |
 
+### Onderwijsweek C5 (3-03-2025)
+
+Week C5. 
 - Teamvorming bekend maken
 - Project board opzetten
 - Git opzetten
 - Backlog opbouwen
 - Requirements bedenken
 
-| **Dag**  | | **Kennissessie** |
-|----------|-|------------------|
-| Ma 3 mar |o|[Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II)|
-| Di 4 mar |m|Testing & Geavanceerde Tooling (JH)|
-| Wo 5 mar |m|                  |
-| Do 6 mar |m|Teamcoach sessie (NG)|
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II) |
+| di  | | Testing & Geavanceerde Tooling (**JH)** |
+| wo  | | |
+| do  | | |
 
+### Onderwijsweek C6 (10-03-2025)
 
-### Sprint 2
-
+Week C6.
 Opleveren: Beweegbaar object in simulatieomgeving
 Nodig:
 
@@ -120,192 +131,202 @@ Nodig:
 - Tekenbaar object bewegen (met de hand)
 - Interactie met omgeving
 
-#### Onderwijsweek 4
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | | |
+| di  | | |
+| wo  | | |
+| do  | :end: Einde sprint 2 & :runner: planning sprint 3 | |
 
-| **Dag**   | | **Kennissessie** |
-|-----------|-|------------------|
-| Ma 10 mar |o|Project demo (JH)|
-| Di 11 mar |m|Algoritmen & Datastructuren I (C++ / Python) (JH)|
-| Wo 12 mar |m|Algoritmen & Datastructuren II (C++ Advanced)(JH)|
-| Do 13 mar |m|                  |
+### Onderwijsweek C7 (17-03-2025)
 
+Week C7. 
 
-#### Onderwijsweek 5
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | | Project demo (**JH**) |
+| di  | | Algoritmen & Datastructuren I (C++ / Python) (**JH**) |
+| wo  | | Algoritmen & Datastructuren II (C++ Advanced) (**JH**) |
+| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)** | |
 
-| **Dag**   | | **Kennissessie** |
-|-----------|-|------------------|
-| Ma 17 mar |o|Algoritmen & Datastructuren III (Python & C++ Vergelijking)(JH)|
-| Di 18 mar |m|Koppeling Python ↔ C++ (Interfacing)(JH)|
-| Wo 19 mar |m|[Peilmoment I](../Verantwoordingsdocument_TI_S4.md)                  |
-| Do 20 mar |m|Retrospective (NG)|
+### Onderwijsweek C8 (24-03-2025)
 
-### Sprint 3
+Week C8. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen.
 
-Opleveren: Slimmer bewegen
-Nodig:
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | | Algoritmen & Datastructuren III (Python & C++ Vergelijking) (**JH**) |
+| di  | | Koppeling Python ↔ C++ (Interfacing) (**JH**) |
+| wo  | | |
+| do  | | Retrospective (**NG**) |
 
-- Algoritmiek
-- Python <=> C++
+### Onderwijsweek C9 (31-03-2025)
 
-#### Onderwijsweek 6
+Week C9. 
 
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | | |
+| di  | | |
+| wo  | | |
+| do  | :end: Einde sprint 3 & :runner: planning sprint 4 | |
+
+### Onderwijsweek C10 (7-04-2025)
+
+Week C10.
 - Python Debugging/Big-Oh -> Werkboek?
-- Intro algoritmiek/Python opstart
+- Intro algoritmiek/Python opstart 
 
-| **Dag**   | | **Kennissessie** |
-|-----------|-|-----------------|
-| Ma 24 mar |o|Project demo (JH)|
-| Di 25 mar |m|Profiling & Memory/Performance Debugging(JH)|
-| Wo 26 mar |m|                  |
-| Do 27 mar |m|                  |
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | | |Project demo (**JH**) |
+| di  | | Profiling & Memory/Performance Debugging (**JH**) |
+| wo  | | |
+| do  | | |
 
+### Onderwijsweek D1 (14-04-2025)
 
-#### Onderwijsweek 7
+Week D1. 
 
-| **Dag**   | | **Kennissessie** |
-|-----------|-|-----------------|
-| Ma 31 mar |o|Computer Vision I (Basis beeldverwerking)(BB)|
-| Di 1 apr  |m|                  |
-| Wo 2 apr  |m|                  |
-| Do 3 apr  |m|Retrospective (NG)|
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | | Computer Vision I (Basis beeldverwerking) (**BB**) |
+| di  | | |
+| wo  | | |
+| do  | **2e Peilmoment** | Retrospective (**NG**) |
 
+### Onderwijsweek D2 (21-04-2025)
 
-### Sprint 4
+Week D2. 
 
-Opleveren: Slimmer bewegen uitgebreid
-
-#### Onderwijsweek 8
-
-| **Dag**   | | **Kennissessie** |
-|-----------|-|-----------------|
-| Ma 7 apr  |o|Project demo (JH/BB?)|
-| Di 8 apr  |m||
-| Wo 9 apr  |m|                  |
-| Do 10 apr |m|                  |
-
-#### Onderwijsweek 9
-
-| **Dag** | | **Kennissessie** |
-|---------|-|-----------------|
-| Ma      |o| HEMELVAART |
-| Di      |m|Computer Vision II (Object- en kleurherkenning)(BB)(BB)                  |
-| Wo 16 ap |m|[Peilmoment II](../Verantwoordingsdocument_TI_S4.md)                  |
-| Do      |m|Retrospective(NG)|
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | 2de Paasdag |  |
+| di  | | Project demo (JH/BB?) |
+| wo  | | |
+| do  | | |
 
 
-### Sprint 5
+### Onderwijsweek D3 (28-04-2025)
 
-#### Onderwijsweek 10
+Week D3.
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      | Computer Vision III (CNN's enzo)                 |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+| Dag | |
+| --- | --- |
+| ma  | Vakantie |
+| di  | Vakantie |
+| wo  | Vakantie |
+| do  | Vakantie |
+| vr  | Vakantie |
 
-#### Onderwijsweek 11
+### Onderwijsweek D4 (5-05-2025)
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+Week D4. 
 
-### Sprint 6
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | Bevrijdingsdag |  |
+| di  | | Computer Vision II (Object- en kleurherkenning) (**BB)** |
+| wo  | | |
+| do  | :end: Einde sprint 4 & :runner: Planning sprint 5 | Retrospective(**NG**) |
 
-#### Onderwijsweek 12
+### Onderwijsweek D5 (12-05-2025)
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+Week D5. 
 
-#### Onderwijsweek 13
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | | Computer Vision III (CNN's enzo)  |
+| di  | | |
+| wo  | | |
+| do  | | |
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
-| Di      |                  |
-| Wo      |  [Peilmoment III](../Verantwoordingsdocument_TI_S4.md) |
-| Do      |                  |
 
-### Sprint 7
+### Onderwijsweek D6 (19-05-2025)
 
-#### Onderwijsweek 14
+Week D6. 
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | | |
+| di  | | |
+| wo  | | |
+| do  | **3e Peilmoment** |  |
 
-#### Onderwijsweek 15
+### Onderwijsweek D7 (26-05-2025)
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen. 
 
-### Sprint 8
+| Dag | Project     | Kennissessie     |
+| --- | --- | --- |
+| ma  | | |
+| di  | | |
+| wo  | :end: Einde sprint 5 & :runner: Planning sprint 6  | |
+| do  | Hemelvaartsdag |  |
 
-#### Onderwijsweek 16
+### Onderwijsweek D8 (2-06-2025)
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+Week D8.
 
-#### Onderwijsweek 17 - Oplevering
+| Dag | Project | Kennissessie     |
+| --- | --- | --- |
+| ma  | | |
+| di  | | |
+| wo  | | |
+| do  | | |
+
+
+### Onderwijsweek D9 (9-06-2025)
+
+Week D9.
+
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | 2e Pinksterdag |  |
+| di  |  |  |
+| wo  |  |  |
+| do  | :end: Einde sprint 6 & planning afronden (sprint 7)  | |
+
+### Onderwijsweek D10 (16-06-2025)
+
+Week D10. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen.
 
 Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
-| **Dag** | **Kennissessie** |
-| ------- | ---------------- |
-| Ma      |                  |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+| Dag | Project | Kennissessie |
+| --- | --- | --- |
+| ma  | | |
+| di  | | |
+| wo  | | Demo dag? |
+| do  | **4e Peilmoment**  | |
 
-### Sprint 9
+### Onderwijsweek D11 (23-06-2025)
 
-#### Afrondondingsweek - Evaluaties
+Week D11. De docenten bekijken deze week al het ingeleverde werk. Aan het eind van de week ontvang je individuele feedback en een eindbeoordeling. Op een aparte branch kan alvast gewerkt worden aan eventuele verbeteringen.
 
-Evaluaties<br>Op een aparte branch kan alvast gewerkt worden aan eventuele verbeteringen.
+| Dag | Thema     | 
+| --- | --- | 
+| ma  | **Eindbeoordeling** |  
+| di  | **Eindbeoordeling** |    
+| wo  | **Eindbeoordeling** |    
+| do  | **Eindbeoordeling** |   
 
-| **Dag** | **Kennissessie** |
-|---------|------------------|
-| Ma      |                  |
-| Di      |                  |
-| Wo      |                  |
-| Do      |                  |
+### Onderwijsweek D12 (30-06-2025)
 
-### Reparatie Sprint
+Week D12 en D13 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of om binnen het semester verder de excelleren. Als niet alle leeruitkomsten Op Niveau of Boven Niveau zijn dan kan in samenspraak met de docent een (realistisch) plan worden gemaakt en voer je deze werkzaamheden in deze periode uit. Verder excelleren kan bijvoorbeeld door een leeruitkomst met verbeteringen van Op Niveau naar Boven Niveau te brengen.
 
-Reparatieweken 1 en 2 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of om binnen het semester verder de excelleren. Als niet alle leeruitkomsten Op Niveau of Boven Niveau zijn dan kan in samenspraak met de docent een (realistisch) plan worden gemaakt en voer je deze werkzaamheden in deze periode uit. Verder excelleren kan bijvoorbeeld door een leeruitkomst met verbeteringen van Op Niveau naar Boven Niveau te brengen.
+| Dag | Thema     | 
+| --- | --- | 
+| ma  | **Verbeterperiode** | 
+| di  | **Verbeterperiode** |  
+| wo  | **Verbeterperiode** |  
+| do  | **Verbeterperiode** | 
 
-#### Reparatieweek 1
+### Onderwijsweek D13 (7-7-2025)
 
-| **Dag** | **Kennissessie** |
-|---------|------------------|
-| Ma      | Verbeterperiode  |
-| Di      | Verbeterperiode  |
-| Wo      | Verbeterperiode  |
-| Do      | Verbeterperiode  |
-
-#### Reparatieweek 2
-
-| **Dag** | **Kennissessie** |
-|---------|------------------|
-| Ma      | Verbeterperiode  |
-| Di      | Verbeterperiode  |
-| Wo      | Verbeterperiode  |
-| Do      | Verbeterperiode  |
+| Dag | Thema     
+| --- | --- |
+| ma  | **Verbeterperiode** |  
+| di  | **Verbeterperiode** |  
+| wo  | **Verbeterperiode** |   
+| do  | **Verbeterperiode** |  

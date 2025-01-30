@@ -17,7 +17,6 @@ Deze pagina biedt je houvast voor, tijdens, en ná de sollicitatieprocedure.
     - [Online](#online)
   - [Sollicitatiebrief](#sollicitatiebrief)
   - [Sollicitatiegesprek](#sollicitatiegesprek)
-  - [Tips \& Tricks](#tips--tricks)
   - [Wat verder ter tafel komt](#wat-verder-ter-tafel-komt)
 
 ## Voorbereiding

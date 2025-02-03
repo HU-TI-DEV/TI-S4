@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """
 Created on Sun Jan 26 16:21:34 2025
-
+Created by ChatGPT (for 75%)
 @author: bart.bozon
 """
 
@@ -107,12 +107,14 @@ class TextEditor:
             else:
                  print("Cursor is out of view")
                  line_number=0
+                 
             line_pos, column_pos = map(int, cursor_position.split('.'))
-            print (line_pos,lines[line_pos-1])
             if (line_pos>=len(lines)):
                 line_pos=0             
+            if (line_pos==0):
+                line_pos=1             
             line_value=int(lines[line_pos-1][3:7].lstrip())-1 
-            print ('line value ',line_value)
+            
             self.text_area.delete(1.0, tk.END)
             with open('temp_file', "r") as file_handler:
                 self.text_area.insert(tk.INSERT, file_handler.read())
@@ -163,6 +165,8 @@ class TextEditor:
             print (line_pos,lines[line_pos-1])
             if (line_pos>=len(lines)):
                 line_pos=0             
+            if (line_pos==0):
+                line_pos=1             
             line_value=int(lines[line_pos-1][3:7].lstrip())-1 
             print ('line value ',line_value)
             self.text_area.delete(1.0, tk.END)

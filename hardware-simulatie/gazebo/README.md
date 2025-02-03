@@ -24,7 +24,8 @@ Veel succes!
 # Programma Gazebo deel II
 
 ## Voorbereiding
-TBD
+Bekijk het volgende [filmpje](https://www.youtube.com/watch?v=pY0vca2wpxo).  
+De code van je viewer kun je [hier](./files/sdf_viewer.py) vinden.
 
 ## Tijdens en na de les
 

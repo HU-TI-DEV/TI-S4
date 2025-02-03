@@ -1,33 +1,15 @@
-Dit stsuk nog verwerken:
+# 5. Driving the robot
 
+As we have seen in [building our first robot](./2_Building_our_first_robot.md) we can move the robot with the following instructions:
 
-TODOOOOOO
+~~~
+export GZ_PARTITION=test
+gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
+~~~
 
+As you can see the topic we are publishing to has a certain number of changes:
+- the topic is /cmd_vel in stead of /foo or /imu
+- the message type is of the form gz.msgs.Twist
+- the message consist of several sub messages 
 
-
-
-  // Create a transport node and advertise a topic.
-  gz::transport::Node node;
-  std::string topic = "/cmd_vel";
-
-  auto pub = node.Advertise<gz::msgs::Twist>(topic);
-  if (!pub)
-  {
-    std::cerr << "Error advertising topic [" << topic << "]" << std::endl;
-    return -1;
-  }
-
-  gz::msgs::Twist msg;
-  // Prepare the message.
-      msg.mutable_linear()->set_x(1.0);  // linear velocity in x-direction (m/s)
-    msg.mutable_linear()->set_y(0.0);  // linear velocity in y-direction (m/s)
-    msg.mutable_linear()->set_z(0.0);  // linear velocity in z-direction (m/s)
-
-    msg.mutable_angular()->set_x(0.0);  // angular velocity around x-axis (rad/s)
-    msg.mutable_angular()->set_y(0.0);  // angular velocity around y-axis (rad/s)
-    msg.mutable_angular()->set_z(1.0);  // angular velocity around z-axis (rad/s)
-  // Publish messages at 1Hz.
-  while (!g_terminatePub)
-  {
-    if (!pub.Publish(msg))
-      break;
+We will try to make the robot move with our own .cc code. For this you have to change the publisher.cc code to enable above changes. The first two are trivial. The last one is rather tricky. Study the DiffDrive.cc file in the [gz sim repo](https://github.com/gazebosim/gz-sim/blob/gz-sim9/src/systems/diff_drive/DiffDrive.cc) to understand how the messages need to be build up (tip: search for mutable_linear in the .cc file). 

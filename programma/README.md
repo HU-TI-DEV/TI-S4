@@ -46,10 +46,10 @@
 De contacturen zijn (subject to change):
 |dag|van|tot|
 |---|---|---|
-|ma|13:00|17:00|
+|ma|09:00|13:00|
 |di|13:00|17:00|
-|wo|9:00|13:00|
-|do|9:00|13:00|
+|wo|13:00|17:00|
+|do|13:00|17:00|
 
 Ons lokaal is HL15 (nog niet bekend).  
 
@@ -83,7 +83,7 @@ Week C2.
 
 ### Onderwijsweek C3 (17-02-2025)
 
-Week A2.
+Week C3.
 - Ontwikkelomgeving simulatieplatform opzetten 
 
 | Dag | Project | Kennissessie |

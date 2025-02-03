@@ -14,7 +14,6 @@
   - [Programma](#programma)
   - [Referenties](#referenties)
   - [Licentie informatie](#licentie-informatie)
-
 ---
 
 **v0.1.1 [](version-id)** Semester 4 TI door HU IICT[](author-id).

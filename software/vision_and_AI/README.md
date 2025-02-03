@@ -25,7 +25,7 @@ BLA
 
 Veel succes!
 
-# Programma Vision deel II & intro neural networks
+# Programma Vision deel II
 BLA
 - **Inhoud**:
     (Object- en kleurherkenning)

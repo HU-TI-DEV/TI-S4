@@ -188,7 +188,7 @@ Week D1.
 
 | Dag | Project     | Kennissessie     |
 | --- | --- | --- |
-| ma  | | Computer Vision I (Basis beeldverwerking) (**BB**) |
+| ma  | | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
 | di  | | |
 | wo  | | |
 | do  | **2e Peilmoment** | Retrospective (**NG**) |
@@ -224,7 +224,7 @@ Week D4.
 | Dag | Project     | Kennissessie     |
 | --- | --- | --- |
 | ma  | Bevrijdingsdag |  |
-| di  | | Computer Vision II (Object- en kleurherkenning) (**BB)** |
+| di  | | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
 | wo  | | |
 | do  |  | Retrospective(**NG**) |
 
@@ -234,7 +234,7 @@ Week D5.
 
 | Dag | Project | Kennissessie |
 | --- | --- | --- |
-| ma  | | Computer Vision III (CNN's enzo)  |
+| ma  | | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**)  |
 | di  | | |
 | wo  | | workshop 'what if'|
 | do  | | :end: Einde sprint 4 & :runner: Planning sprint 5 & workshop 'what if'|

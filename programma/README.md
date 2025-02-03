@@ -91,7 +91,7 @@ Week C3.
 | ma  | | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I) |
 | di  | | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
 | wo  | | Intro & Desktop-Environment (VSCode, CMake, Debugger) |
-| do  | :end: Einde sprint 1 & :runner: planning sprint 2 |  |
+| do  |  |  |
 
 
 ### Onderwijsweek C4 (24-02-2025)
@@ -118,7 +118,7 @@ Week C5.
 | ma  | | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II) |
 | di  | | Testing & Geavanceerde Tooling (**JH)** |
 | wo  | | |
-| do  | | |
+| do  | | :end: Einde sprint 1 & :runner: planning sprint 2|
 
 ### Onderwijsweek C6 (10-03-2025)
 
@@ -136,7 +136,7 @@ Nodig:
 | ma  | | |
 | di  | | |
 | wo  | | |
-| do  | :end: Einde sprint 2 & :runner: planning sprint 3 | |
+| do  |  | |
 
 ### Onderwijsweek C7 (17-03-2025)
 
@@ -147,7 +147,7 @@ Week C7.
 | ma  | | Project demo (**JH**) |
 | di  | | Algoritmen & Datastructuren I (C++ / Python) (**JH**) |
 | wo  | | Algoritmen & Datastructuren II (C++ Advanced) (**JH**) |
-| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)** | |
+| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)** |:end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek C8 (24-03-2025)
 
@@ -169,7 +169,7 @@ Week C9.
 | ma  | | |
 | di  | | |
 | wo  | | |
-| do  | :end: Einde sprint 3 & :runner: planning sprint 4 | |
+| do  |  | |
 
 ### Onderwijsweek C10 (7-04-2025)
 
@@ -182,7 +182,7 @@ Week C10.
 | ma  | | |Project demo (**JH**) |
 | di  | | Profiling & Memory/Performance Debugging (**JH**) |
 | wo  | | |
-| do  | | |
+| do  | | :end: Einde sprint 3 & :runner: planning sprint 4|
 
 ### Onderwijsweek D1 (14-04-2025)
 
@@ -228,7 +228,7 @@ Week D4.
 | ma  | Bevrijdingsdag |  |
 | di  | | Computer Vision II (Object- en kleurherkenning) (**BB)** |
 | wo  | | |
-| do  | :end: Einde sprint 4 & :runner: Planning sprint 5 | Retrospective(**NG**) |
+| do  |  | Retrospective(**NG**) |
 
 ### Onderwijsweek D5 (12-05-2025)
 
@@ -238,8 +238,8 @@ Week D5.
 | --- | --- | --- |
 | ma  | | Computer Vision III (CNN's enzo)  |
 | di  | | |
-| wo  | | |
-| do  | | |
+| wo  | | workshop 'what if'|
+| do  | | :end: Einde sprint 4 & :runner: Planning sprint 5 & workshop 'what if'|
 
 
 ### Onderwijsweek D6 (19-05-2025)
@@ -261,7 +261,7 @@ Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tus
 | --- | --- | --- |
 | ma  | | |
 | di  | | |
-| wo  | :end: Einde sprint 5 & :runner: Planning sprint 6  | |
+| wo  |  | |
 | do  | Hemelvaartsdag |  |
 
 ### Onderwijsweek D8 (2-06-2025)
@@ -273,7 +273,7 @@ Week D8.
 | ma  | | |
 | di  | | |
 | wo  | | |
-| do  | | |
+| do  | | :end: Einde sprint 5 & :runner: Planning sprint 6 |
 
 
 ### Onderwijsweek D9 (9-06-2025)
@@ -285,7 +285,7 @@ Week D9.
 | ma  | 2e Pinksterdag |  |
 | di  |  |  |
 | wo  |  |  |
-| do  | :end: Einde sprint 6 & planning afronden (sprint 7)  | |
+| do  | | |
 
 ### Onderwijsweek D10 (16-06-2025)
 
@@ -298,7 +298,7 @@ Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 | ma  | | |
 | di  | | |
 | wo  | | Demo dag? |
-| do  | **4e Peilmoment**  | |
+| do  | **4e Peilmoment**  |  :end: Einde sprint 6 & planning afronden (sprint 7) |
 
 ### Onderwijsweek D11 (23-06-2025)
 

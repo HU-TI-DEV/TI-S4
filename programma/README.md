@@ -86,7 +86,7 @@ Week C3.
 
 | Dag | Project | Kennissessie |
 | --- | --- | --- |
-| ma  | | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-I) |
+| ma  | | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md) |
 | di  | | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
 | wo  | | Intro & Desktop-Environment (VSCode, CMake, Debugger) |
 | do  |  |  |
@@ -113,7 +113,7 @@ Week C5.
 
 | Dag | Project     | Kennissessie     |
 | --- | --- | --- |
-| ma  | | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#Programma-Gazebo-deel-II) |
+| ma  | | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#programma-gazebo-deel-ii) |
 | di  | | Testing & Geavanceerde Tooling (**JH)** |
 | wo  | | |
 | do  | | :end: Einde sprint 1 & :runner: planning sprint 2|

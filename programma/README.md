@@ -72,8 +72,8 @@ Week C2.
 | --- | --- | --- |
 | ma  | | Introductie Semester en Project (**NG, BB, JH**) |
 | di  | | Schrijven van sollicitatiebrief (**NG**) |
-| wo  | | |
-| do  | | |
+| wo  | | Kennismaking opdrachtgevers <> studenten (**JH, NG**)|
+| do  | | Zelfstandig werken |
 
 ### Onderwijsweek C3 (17-02-2025)
 

@@ -77,7 +77,7 @@ Shortcuts naar onderliggende links:
 
 ## Referenties
 
-* [Waarom SDG's in het onderwijs? \[Link\]](<https://husite.nl/duurzaam/duurzame-hu-onderwijs-onderzoek-sdgs-in-het-onderwijs/waarom-sdgs-in-het-onderwijs/>)
+* [Waarom SDG's in het onderwijs?](<https://husite.nl/duurzaam/duurzame-hu-onderwijs-onderzoek-sdgs-in-het-onderwijs/waarom-sdgs-in-het-onderwijs/>)
 
 ## Licentie informatie
 

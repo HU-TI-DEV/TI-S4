@@ -71,7 +71,7 @@ Week C2.
 | Dag | Project | Kennissessie |
 | --- | --- | --- |
 | ma  | | Introductie Semester en Project (**NG, BB, JH**) |
-| di  | | [Schrijven van sollicitatiebrief](vermogens\solliciteren\README.md) (**NG**) |
+| di  | | [Schrijven van sollicitatiebrief](vermogens/solliciteren/README.md) (**NG**) |
 | wo  | | Kennismaking opdrachtgevers <> studenten (**JH, NG**)|
 | do  | | Zelfstandig werken (met begeleiding) |
 

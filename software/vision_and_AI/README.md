@@ -10,8 +10,7 @@ BLA
 
 
 ## Voorbereiding
-Bekijk de volgende video:  
-MAAK VIDEO MET ONDERSTAANDE SITE TODO  
+Bekijk de volgende [video](https://www.youtube.com/watch?v=dvh1tvb3WGU).  
 Bestudeer & speel met de volgende site:  
 https://setosa.io/ev/image-kernels/
 
@@ -26,7 +25,7 @@ BLA
 
 Veel succes!
 
-# Programma Vision deel II & intro neural networks
+# Programma Vision deel II
 BLA
 - **Inhoud**:
     (Object- en kleurherkenning)

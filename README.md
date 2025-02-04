@@ -22,6 +22,12 @@
 
 ## Een introductie
 
+Semester 4 bij Technische Informatica staat in het teken van een aantal verschillende onderwerpen: Desktop programmeren in C++ en Python, Algoritmiek, Performance/Debugging en Simulatietechnieken. Daarnaast wordt er uitgebreid aandacht besteed aan het voorbereiden op de stage en de rest van de bovenbouw. Semester 4 is het laatste semester van de onderbouw.
+
+In dit semester zal er in groepsverband ontwikkeld worden aan een zogeten 'Digital Twin' - een digitale tweeling van een fysiek (vaak embedded) systeem. Robots zijn veelal erg duur, daadwerkelijk werken met en ontwikkelen aan de robots des te meer. Om die reden is het vaak wenselijk om een Digital Twin van deze robots te maken, zodat er met deze simulatie getest, getraind en doorontwikkeld kan worden.
+
+Onderwijs in semester 4 is projectgestuurd. Dat betekent dat het project centraal staat in ons onderwijs. Je werkt samen in een ontwikkelteam en je bent daarnaast verantwoordelijk voor je eigen leerprestaties. Er zijn 4 dagen in de week contactmomenten. De belasting van een voltijds studie is 42 uur per week, deels moet je dus ook buiten de ingeroosterde uren (met je team) aan het werk. Kijk hier voor het volledige [programma van semester 4.](./programma/README.md)
+
 ## Semester leeruitkomst
 
 In semester 4 van de richting Technische Informatica staat de volgende semester leeruitkomst centraal:

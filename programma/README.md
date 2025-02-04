@@ -161,9 +161,9 @@ Week C9.
 | Dag | Project | Kennissessie |
 | --- | --- | --- |
 | ma  | | |
-| di  | | |
+| di  | | Structural Design Patterns (**NG**)|
 | wo  | | |
-| do  |  | |
+| do  |  | Creational Design Patterns (**NG**)|
 
 ### Onderwijsweek C10 (7-04-2025)
 

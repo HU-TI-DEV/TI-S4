@@ -112,7 +112,7 @@ Week C5.
 | ma  | | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#programma-gazebo-deel-ii) |
 | di  | | Testing & Geavanceerde Tooling (**JH)** |
 | wo  | | |
-| do  | | :end: Einde sprint 1 & :runner: planning sprint 2|
+| do  | | Voorlichting bovenbouw door coördinatoren Stage en INNO <br>:end: Einde sprint 1 & :runner: planning sprint 2|
 
 ### Onderwijsweek C6 (10-03-2025)
 

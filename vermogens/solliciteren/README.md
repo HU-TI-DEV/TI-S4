@@ -4,7 +4,7 @@
 Auteur: Nick Goris<br>
 _Eventuele meningen of persoonlijke toevoegingen zijn dan ook vanuit mij, als persoon, toegevoegd._
 
-Tijdens dit semester zullen jullie, ter voorbereiding op de stages voor jaar 3 en het afstuderen, gaan solliciteren op het project waar jullie graag deel van uit zouden willen maken. Tevens kun je hierbij solliciteren op de rol die je binnen je team zou willen vervullen. 
+Tijdens dit semester zullen jullie, ter voorbereiding op de stages voor jaar 3 en het afstuderen, gaan solliciteren op het project waar jullie graag deel van uit zouden willen maken. Tevens kun je hierbij solliciteren op de rol die je binnen je team zou willen vervullen. Voor de bijbehorende opdracht zie [hier.](./1_Opdracht_Solliciteren.md)
 
 Deze pagina biedt je houvast voor, tijdens, en ná de sollicitatieprocedure.
 

@@ -184,7 +184,7 @@ Week D1.
 
 | Dag | Project           | Kennissessie                                                                              |
 |-----|-------------------|-------------------------------------------------------------------------------------------|
-| ma  |               | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
+| ma  |               | |
 | di  | | Klassikale pitches I |
 | wo  | | Klassikale pitches II |
 | do  | **2e Peilmoment** | Retrospective (**NG**) |
@@ -196,8 +196,8 @@ Week D2.
 | Dag | Project     | Kennissessie          |
 |-----|-------------|-----------------------|
 | ma  | 2de Paasdag |                       |
-| di  |             | Project demo (JH/BB?) |
-| wo  |             |                       |
+| di  |             | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
+| wo  |             | Projectdemo (**JH, NG**) |
 | do  |             |                       |
 
 
@@ -217,12 +217,12 @@ Week D3.
 
 Week D4. 
 
-| Dag | Project        | Kennissessie                                                                                                                              |
-|-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| Dag | Project        | Kennissessie               |
+|-----|----------------|----------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
-| di  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
-| wo  |                |                                                                                                                                           |
-| do  |                | Retrospective(**NG**)                                                                                                                     |
+| di  | | Troubleshooting Vision (**BB**) |
+| wo  | | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
+| do  | | Retrospective(**NG**) |
 
 ### Onderwijsweek D5 (12-05-2025)
 
@@ -231,8 +231,8 @@ Week D5.
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
 | ma  |         | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**) |
-| di  |         |                                                                                                     |
-| wo  |         | workshop 'what if'                                                                                  |
+| di  |         | Feedbacksessie onderzoek (**BB**) |
+| wo  |         | workshop 'what if' (**BB**)|
 | do  |         | :end: Einde sprint 4 & :runner: Planning sprint 5 & workshop 'what if'                              |
 
 
@@ -242,9 +242,9 @@ Week D6.
 
 | Dag | Project           | Kennissessie |
 |-----|-------------------|--------------|
-| ma  |                   |              |
-| di  |                   |              |
-| wo  |                   |              |
+| ma  |                   | Projectwerkdag/Deepdive/Project update             |
+| di  |                   | Projectwerkdag/Deepdive/Project update             |
+| wo  |                   | Projectwerkdag/Deepdive/Project update             |
 | do  | **3e Peilmoment** |              |
 
 ### Onderwijsweek D7 (26-05-2025)
@@ -253,9 +253,9 @@ Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tus
 
 | Dag | Project        | Kennissessie |
 |-----|----------------|--------------|
-| ma  |                |              |
-| di  |                |              |
-| wo  |                |              |
+| ma  |                | Projectwerkdag/Deepdive/Project update             |
+| di  |                | Projectwerkdag/Deepdive/Project update             |
+| wo  |                | Projectwerkdag/Deepdive/Project update             |
 | do  | Hemelvaartsdag |              |
 
 ### Onderwijsweek D8 (2-06-2025)
@@ -264,9 +264,9 @@ Week D8.
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         |                                                   |
-| di  |         |                                                   |
-| wo  |         |                                                   |
+| ma  |         | Projectwerkdag/Deepdive/Project update                                                  |
+| di  |         | Projectwerkdag/Deepdive/Project update                                                  |
+| wo  |         | Projectwerkdag/Deepdive/Project update                                                 |
 | do  |         | :end: Einde sprint 5 & :runner: Planning sprint 6 |
 
 
@@ -277,9 +277,9 @@ Week D9.
 | Dag | Project        | Kennissessie |
 |-----|----------------|--------------|
 | ma  | 2e Pinksterdag |              |
-| di  |                |              |
-| wo  |                |              |
-| do  |                |              |
+| di  |                | Projectwerkdag/Deepdive/Project update             |
+| wo  |                | Projectwerkdag/Deepdive/Project update             |
+| do  |                | Projectwerkdag/Deepdive/Project update             |
 
 ### Onderwijsweek D10 (16-06-2025)
 
@@ -289,8 +289,8 @@ Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
 | Dag | Project           | Kennissessie                                        |
 |-----|-------------------|-----------------------------------------------------|
-| ma  |                   |                                                     |
-| di  |                   |                                                     |
+| ma  |                   | Projectwerkdag/Deepdive/Project update                                                    |
+| di  |                   | Projectwerkdag/Deepdive/Project update                                                    |
 | wo  |                   | Demo dag?                                           |
 | do  | **4e Peilmoment** | :end: Einde sprint 6 & planning afronden (sprint 7) |
 

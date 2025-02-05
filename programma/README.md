@@ -152,7 +152,7 @@ Week C8. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login
 | ma  |         | Algoritmen & Datastructuren III (Python & C++ Vergelijking) (**JH**) |
 | di  |         | Koppeling Python ↔ C++ (Interfacing) (**JH**)                        |
 | wo  |         | Projectwerkdag                                                       |
-| do  |         |                                                                       |
+| do  |         |                                                                      |
 
 ### Onderwijsweek C9 (31-03-2025)
 
@@ -197,8 +197,8 @@ Week D2.
 |-----|-------------|-----------------------|
 | ma  | 2de Paasdag |                       |
 | di  |             | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
-| wo  |             | Projectdemo (**JH, NG**) |
-| do  |             |                       |
+| wo  |             | Projectdemo (**JH, NG**)  |
+| do  |             | Teamcoaching (**NG**)     |
 
 
 ### Onderwijsweek D3 (28-04-2025)
@@ -231,9 +231,9 @@ Week D5.
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
 | ma  |         | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**) |
-| di  |         | Feedbacksessie onderzoek (**BB**) |
-| wo  |         | workshop 'what if' (**BB**)|
-| do  |         | ~~:end: Einde sprint 4 & :runner: Planning sprint 5~~ & workshop 'what if'       ???????????        |
+| di  |         | Feedbacksessie onderzoek (**BB**)   |
+| wo  |         | workshop 'what if' (**BB**)         |
+| do  |         | workshop 'what if' (**BB**)         |
 
 
 ### Onderwijsweek D6 (19-05-2025)
@@ -253,7 +253,7 @@ Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tus
 
 | Dag | Project        | Kennissessie |
 |-----|----------------|--------------|
-| ma  |                | Projectwerkdag/Deepdive/Project update |
+| ma  |                | Projectdemo (**JH**) |
 | di  |                | Projectwerkdag/Deepdive/Project update |
 | wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  | Hemelvaartsdag |              |

@@ -73,10 +73,10 @@ De docenten zijn:
 
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)               |
-| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx)                                      |
-| wo  |         | Environment Troubleshooting (**JH & BB**)                                       |
-| do  |         | C++ STL (**NG**)                                                                |
+| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
+| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| wo  |         | Environment Troubleshooting (**JH & BB**)                                                                                                          |
+| do  |         | C++ STL (**NG**)                                                                                                                                   |
 
 
 ### Onderwijsweek C4 (24-02-2025)
@@ -93,11 +93,11 @@ De docenten zijn:
 
 Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook vooral voor het opzetten van de projectomgeving.
 
-| Dag | Project | Kennissessie                                                                                                  |
-|-----|---------|---------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                        |
-| di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                       |
-| wo  |         | Scrum Refresher (**NG, BB**)                            |
+| Dag | Project | Kennissessie                                                                                                          |
+|-----|---------|-----------------------------------------------------------------------------------------------------------------------|
+| ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                                |
+| di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                               |
+| wo  |         | Scrum Refresher (**NG, BB**)                                                                                          |
 | do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |
 
 ### Onderwijsweek C6 (10-03-2025)
@@ -144,8 +144,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | --- |---------|------------------|
 | ma  |         | Project demo (**JH**) |
 | di  |         | Profiling & Memory/Performance Debugging (**JH**) |
-| wo  |         | Onderzoek vervolg (**BB**) |
-| do  |         | Creational Design Patterns (**NG**) |
+| wo  |         | Onderzoek vervolg (**BB**)                        |
+| do  |         | Creational Design Patterns (**NG**)               |
 
 ### Onderwijsweek D1 (14-04-2025)
 
@@ -162,8 +162,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|-------------|-----------------------|
 | ma  | 2de Paasdag |                       |
 | di  |             | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
-| wo  |             | Projectdemo (**JH, NG**)  |
-| do  |             | Teamcoaching (**NG**)     |
+| wo  |             | Projectdemo (**JH, NG**)                                                                  |
+| do  |             | Teamcoaching (**NG**)                                                                     |
 
 
 ### Onderwijsweek D3 (28-04-2025)
@@ -183,16 +183,16 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | ma  | Bevrijdingsdag |                            |
 | di  |                | Troubleshooting Vision (**BB**) |
 | wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
-| do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6 |
+| do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025) 
 
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
 | ma  |         | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**) |
-| di  |         | Feedbacksessie onderzoek (**BB**)   |
-| wo  |         | workshop 'what if' (**BB**)         |
-| do  |         | workshop 'what if' (**BB**)         |
+| di  |         | Feedbacksessie onderzoek (**BB**)                                                                   |
+| wo  |         | workshop 'what if' (**BB**)                                                                         |
+| do  |         | workshop 'what if' (**BB**)                                                                         |
 
 
 ### Onderwijsweek D6 (19-05-2025)
@@ -208,12 +208,12 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen. 
 
-| Dag | Project        | Kennissessie |
-|-----|----------------|--------------|
-| ma  |                | Projectdemo (**JH**) |
+| Dag | Project        | Kennissessie                           |
+|-----|----------------|----------------------------------------|
+| ma  |                | Projectdemo (**JH**)                   |
 | di  |                | Projectwerkdag/Deepdive/Project update |
 | wo  |                | Projectwerkdag/Deepdive/Project update |
-| do  | Hemelvaartsdag |              |
+| do  | Hemelvaartsdag |                                        |
 
 ### Onderwijsweek D8 (2-06-2025)
 
@@ -240,12 +240,12 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
-| Dag | Project           | Kennissessie                                        |
-|-----|-------------------|-----------------------------------------------------|
-| ma  |                   | Projectwerkdag/Deepdive/Project update              |
-| di  |                   | Projectwerkdag/Deepdive/Project update              |
-| wo  |                   | Demo dag?                                           |
-| do  | **4e Peilmoment** | :end: Einde sprint 8 & planning afronden            |
+| Dag | Project           | Kennissessie                             |
+|-----|-------------------|------------------------------------------|
+| ma  |                   | Projectwerkdag/Deepdive/Project update   |
+| di  |                   | Projectwerkdag/Deepdive/Project update   |
+| wo  |                   | Demo dag?                                |
+| do  | **4e Peilmoment** | :end: Einde sprint 8 & planning afronden |
 
 ### Onderwijsweek D11 (23-06-2025)
 

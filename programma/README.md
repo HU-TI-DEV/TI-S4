@@ -73,7 +73,7 @@ Week C2.
 |-----|---------|---------------------------------------------------------------------------------|
 | ma  |         | Introductie Semester en Project (**NG, BB, JH**)                                |
 | di  |         | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**) |
-| wo  |         | Kennismaking opdrachtgevers <> studenten (**JH, NG**)                           |
+| wo  |         | Intro & Desktop-Environment (VSCode, CMake, Debugger)  (**JH**)                           |
 | do  |         | Zelfstandig werken (met begeleiding)                                            |
 
 ### Onderwijsweek C3 (17-02-2025)
@@ -85,7 +85,7 @@ Week C3.
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
 | di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
-| wo  |         | Intro & Desktop-Environment (VSCode, CMake, Debugger)                                                                                              |
+| wo  |         |                                                                                          |
 | do  |         |                                                                                                                                                    |
 
 

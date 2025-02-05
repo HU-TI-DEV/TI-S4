@@ -57,7 +57,6 @@ De docenten zijn:
 * (**NG**) Nick Goris
 * (**JH**) Jan Halsema
 * (**BB**) Bart Bozon
-* (**HP**) Hagen Patzke
 
 ## Programma
 

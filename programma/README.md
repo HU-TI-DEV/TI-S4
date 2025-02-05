@@ -54,13 +54,10 @@ Ons lokaal is HL15 (nog niet bekend).
 De docenten zijn:
 
 * (**TM**) Teun Pieter Moddermann
-* (**HS**) Harm Snippe
-* (**GP**) Gera Pronk
-* (**MV**) Marius Versteegen
-* (**BB**) Bart Bozon
-* (**HP**) Hagen Patzke
 * (**NG**) Nick Goris
 * (**JH**) Jan Halsema
+* (**BB**) Bart Bozon
+* (**HP**) Hagen Patzke
 
 ## Programma
 

@@ -152,7 +152,7 @@ Week C8. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login
 | ma  |         | Algoritmen & Datastructuren III (Python & C++ Vergelijking) (**JH**) |
 | di  |         | Koppeling Python ↔ C++ (Interfacing) (**JH**)                        |
 | wo  |         | Projectwerkdag                                                       |
-| do  |         |                                                                      |
+| do  |         | Teambegeleiding (**NG**)                                             |
 
 ### Onderwijsweek C9 (31-03-2025)
 

@@ -22,6 +22,12 @@
 
 ## Een introductie
 
+Semester 4 bij Technische Informatica staat in het teken van een aantal verschillende onderwerpen: Desktop programmeren in C++ en Python, Algoritmiek, Performance/Debugging en Simulatietechnieken. Daarnaast wordt er uitgebreid aandacht besteed aan het voorbereiden op de stage en de rest van de bovenbouw. Semester 4 is het laatste semester van de onderbouw.
+
+In dit semester zal er in groepsverband ontwikkeld worden aan een zogeten 'Digital Twin' - een digitale tweeling van een fysiek (vaak embedded) systeem. Robots zijn veelal erg duur, daadwerkelijk werken met en ontwikkelen aan de robots des te meer. Om die reden is het vaak wenselijk om een Digital Twin van deze robots te maken, zodat er met deze simulatie getest, getraind en doorontwikkeld kan worden.
+
+Onderwijs in semester 4 is projectgestuurd. Dat betekent dat het project centraal staat in ons onderwijs. Je werkt samen in een ontwikkelteam en je bent daarnaast verantwoordelijk voor je eigen leerprestaties. Er zijn 4 dagen in de week contactmomenten. De belasting van een voltijds studie is 42 uur per week, deels moet je dus ook buiten de ingeroosterde uren (met je team) aan het werk. Kijk hier voor het volledige [programma van semester 4.](./programma/README.md)
+
 ## Semester leeruitkomst
 
 In semester 4 van de richting Technische Informatica staat de volgende semester leeruitkomst centraal:
@@ -39,6 +45,18 @@ In dit semester van Technische Informatica is het project situatie gericht.
 ## Leeruitkomsten
 
 In semester 4 van de richting Technische Informatica zijn de volgende leeruitkomsten gedefineerd:
+
+| Nummer | Leeruitkomst                                                                                                                                                                                                                                                                                                                                                | Competentie                          |
+| ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| S4.1   | Student analyseert de vereisten en doelstellingen van de opdrachtgever betreffende een 'Digital Twin' van een bestaand embedded systeem. Op basis hiervan en rekening houdend met de mogelijke gebruikers deduceert de student requirements volgens een voorgeschreven methode. Deze requirements dienen na validatie door de opdrachtgever als basis voor het ontwerp.                                                                                                                                                                                | Analyseren                           |
+| S4.2   | Student adviseert de opdrachtgever, na analyse van de vereisten en doelstellingen, over de inzet van een digital twin. Het advies is helder onderbouwd en gepresenteerd, zodat het begrijpelijk is voor alle stakeholders/betrokkenen. Het voorgestelde ontwerp is goed gedocumenteerd en het advies volgt een voorgeschreven methode, zodat de implementatie efficiënt kan worden voortgezet.                                                                                                                                                    | Adviseren                            |
+| S4.3   | Student ontwerpt gebaseerd op de requirements en volgens voorgeschreven methoden een 'Digital Twin', inclusief grafische representatie, van een bestaand embedded systeem. Dit ontwerp omvat ook een ontwerp voor teststrategieën.                                                                                                                                                                     | Ontwerpen                           |
+| S4.4   | Student realiseert vanuit het ontwerp een 'Digital Twin' van een bestaand embedded systeem, inclusief grafische representatie. Hierbij wordt gewerkt volgens een voorgeschreven methode waarin testen centraal staat, ten behoeve van het uitvoeren van tests op verschillende ontwikkelniveaus. Testresultaten, omstandigheden en afhankelijkheden worden helder gedocumenteerd, omwille van het reproduceren van de testresultaten.                                                                                              | Realiseren                          |
+| S4.5   | Student zet een professionele ontwikkelomgeving op voor desktop development. Daarbij houdt hij rekening met de samenwerking tussen verschillende programmeertalen. De desktop debugging wordt op een gestructureerde manier uitgevoerd. De tests worden uitgevoerd volgens een vooraf beschreven testplan en moeten desgewenst op een later moment reproduceerbaar zijn. De student werkt volgens een voorgeschreven methodiek en maakt gebruik van geschikte tooling software debugging.                                                                                                                                                                    | Beheren                         |
+| S4.6   | De student brengt een gegeven praktijkvraagstuk in kaart en verzamelt vanuit een nieuwsgierige en kritische houding op gestructureerde en grondige wijze met behulp van een passende (hbo-ict) methode relevante informatie die nodig is om onderbouwde keuzes te maken voor de oplossing van een afgebakend praktijkvraagstuk, analyseert de verkregen informatie en trekt op basis daarvan conclusies met betrekking tot het vraagstuk, rekening houdend met maatschappelijke standaarden.                                                                                    | Onderzoeken |
+| S4.7   | De student steltzelfstandig een planning op voor de uitvoering van meerdere gegeven taken voor zichzelf in relatie tot een team, indien van toepassing met het oog op een toekomstgerichte inbedding van de oplossing voor een praktijkprobleem. De student houdt hierbij rekening met volgordelijkheid, de planning van teamgenoten, middelen, tijd, ethische kwesties, duurzaamheid en potentiële risico’s en past de planning indien nodig zelfstandig en onderbouwd aan naar aanleiding van zowel kleine als grote veranderingen binnen de context van de opdracht en verantwoordt deze wijzigingen naar de opdrachtgever en zo nodig naar andere betrokkenen.                                                                                                                                                      | Organiseren                   |
+| S4.8   | De student werkt onder minimale begeleiding passend binnen de context samen in een team, pakt in het team proactief en doelgericht de eigen rol op en deelt eigen activiteiten mondeling en/of schriftelijk met betrokkenen. Daarbij spreekt en schrijft de student begrijpelijk en correct Nederlands, gericht op het doel en neemt initiatief voor gesprekken met betrokkenen.| Interactief                              |
+| S4.9   | Student signaleert vroegtijdig persoonlijke kansen en/of problemen die zich op korte termijn zullen voordoen en speelt hier adequaat op in. Student reflecteert periodiek en systematisch op eigen handelen en eigen waarden en normen in relatie tot andermans handelen, waarden en normen en past dit gedrag zo nodig aan.                                                                                             | Leren             |
 
 
 
@@ -59,7 +77,7 @@ Shortcuts naar onderliggende links:
 
 ## Referenties
 
-* [Waarom SDG's in het onderwijs? \[Link\]](<https://husite.nl/duurzaam/duurzame-hu-onderwijs-onderzoek-sdgs-in-het-onderwijs/waarom-sdgs-in-het-onderwijs/>)
+* [Waarom SDG's in het onderwijs?](<https://husite.nl/duurzaam/duurzame-hu-onderwijs-onderzoek-sdgs-in-het-onderwijs/waarom-sdgs-in-het-onderwijs/>)
 
 ## Licentie informatie
 

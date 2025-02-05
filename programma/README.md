@@ -233,7 +233,7 @@ Week D5.
 | ma  |         | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**) |
 | di  |         | Feedbacksessie onderzoek (**BB**) |
 | wo  |         | workshop 'what if' (**BB**)|
-| do  |         | ~~:end: Einde sprint 4 & :runner: Planning sprint 5~~ & workshop 'what if'       ???????????                       |
+| do  |         | ~~:end: Einde sprint 4 & :runner: Planning sprint 5~~ & workshop 'what if'       ???????????        |
 
 
 ### Onderwijsweek D6 (19-05-2025)
@@ -253,9 +253,9 @@ Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tus
 
 | Dag | Project        | Kennissessie |
 |-----|----------------|--------------|
-| ma  |                | Projectwerkdag/Deepdive/Project update             |
-| di  |                | Projectwerkdag/Deepdive/Project update             |
-| wo  |                | Projectwerkdag/Deepdive/Project update             |
+| ma  |                | Projectwerkdag/Deepdive/Project update |
+| di  |                | Projectwerkdag/Deepdive/Project update |
+| wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  | Hemelvaartsdag |              |
 
 ### Onderwijsweek D8 (2-06-2025)
@@ -264,9 +264,9 @@ Week D8.
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | Projectwerkdag/Deepdive/Project update                                                  |
-| di  |         | Projectwerkdag/Deepdive/Project update                                                  |
-| wo  |         | Projectwerkdag/Deepdive/Project update                                                 |
+| ma  |         | Projectwerkdag/Deepdive/Project update            |
+| di  |         | Projectwerkdag/Deepdive/Project update            |
+| wo  |         | Projectwerkdag/Deepdive/Project update            |
 | do  |         | :end: Einde sprint 7 & :runner: Planning sprint 8 |
 
 
@@ -277,9 +277,9 @@ Week D9.
 | Dag | Project        | Kennissessie |
 |-----|----------------|--------------|
 | ma  | 2e Pinksterdag |              |
-| di  |                | Projectwerkdag/Deepdive/Project update             |
-| wo  |                | Projectwerkdag/Deepdive/Project update             |
-| do  |                | Projectwerkdag/Deepdive/Project update             |
+| di  |                | Projectwerkdag/Deepdive/Project update |
+| wo  |                | Projectwerkdag/Deepdive/Project update |
+| do  |                | Projectwerkdag/Deepdive/Project update |
 
 ### Onderwijsweek D10 (16-06-2025)
 
@@ -289,10 +289,10 @@ Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
 | Dag | Project           | Kennissessie                                        |
 |-----|-------------------|-----------------------------------------------------|
-| ma  |                   | Projectwerkdag/Deepdive/Project update                                                    |
-| di  |                   | Projectwerkdag/Deepdive/Project update                                                    |
+| ma  |                   | Projectwerkdag/Deepdive/Project update              |
+| di  |                   | Projectwerkdag/Deepdive/Project update              |
 | wo  |                   | Demo dag?                                           |
-| do  | **4e Peilmoment** | :end: Einde sprint 8 & planning afronden |
+| do  | **4e Peilmoment** | :end: Einde sprint 8 & planning afronden            |
 
 ### Onderwijsweek D11 (23-06-2025)
 

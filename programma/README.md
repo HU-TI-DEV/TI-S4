@@ -83,8 +83,8 @@ Week C3.
 
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Introductie Gazebo (BB)](../hardware-simulatie/gazebo/README.md)                                                                                  |
-| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware-simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
+| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
 | wo  |         | Intro & Desktop-Environment (VSCode, CMake, Debugger)                                                                                              |
 | do  |         |                                                                                                                                                    |
 
@@ -110,7 +110,7 @@ Week C5.
 
 | Dag | Project | Kennissessie                                                                                                  |
 |-----|---------|---------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Gazebo deel II (BB)](../hardware-simulatie/gazebo/README.md#programma-gazebo-deel-ii)                        |
+| ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                        |
 | di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                       |
 | wo  |         |                                                                                                               |
 | do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO <br>:end: Einde sprint 1 & :runner: planning sprint 2 |

@@ -71,8 +71,8 @@ De docenten zijn:
 
 ### Onderwijsweek C3 (17-02-2025)
 
-| Dag | Project | Kennissessie                                                                                                                                       |
-|-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| Dag | Project | Kennissessie |
+|-----|---------|--------------|
 | ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
 | di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
 | wo  |         | Environment Troubleshooting (**JH & BB**)                                                                                                          |
@@ -93,8 +93,8 @@ De docenten zijn:
 
 Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook vooral voor het opzetten van de projectomgeving.
 
-| Dag | Project | Kennissessie                                                                                                          |
-|-----|---------|-----------------------------------------------------------------------------------------------------------------------|
+| Dag | Project | Kennissessie |
+|-----|---------|--------------|
 | ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                                |
 | di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                               |
 | wo  |         | Scrum Refresher (**NG, BB**)                                                                                          |

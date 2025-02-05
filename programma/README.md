@@ -70,10 +70,10 @@ Week C2.
 
 | Dag | Project | Kennissessie                                                                    |
 |-----|---------|---------------------------------------------------------------------------------|
-| ma  |         | Introductie Semester en Project (**NG, BB, JH**)                                |
+| ma  |         | Introductie Semester en Project (**NG & JH, BB**)                               |
 | di  |         | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**) |
-| wo  |         | Intro & Desktop-Environment (VSCode, CMake, Debugger)  (**JH**)                           |
-| do  |         | Zelfstandig werken (met begeleiding)                                            |
+| wo  |         | Intro & Desktop-Environment (VSCode, CMake, Debugger)  (**JH**)                 |
+| do  |         | Kennismaking SSM (**NG**)                                                       |
 
 ### Onderwijsweek C3 (17-02-2025)
 
@@ -82,10 +82,10 @@ Week C3.
 
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
-| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
-| wo  |         |                                                                                          |
-| do  |         |                                                                                                                                                    |
+| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)               |
+| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx)                                      |
+| wo  |         | Environment Troubleshooting (**JH & BB**)                                       |
+| do  |         | C++ STL (**NG**)                                                                |
 
 
 ### Onderwijsweek C4 (24-02-2025)
@@ -111,8 +111,8 @@ Week C5.
 |-----|---------|---------------------------------------------------------------------------------------------------------------|
 | ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                        |
 | di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                       |
-| wo  |         |                                                                                                               |
-| do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO <br>:end: Einde sprint 1 & :runner: planning sprint 2 |
+| wo  |         | Scrum Refresher (**NG, BB**)                            |
+| do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |
 
 ### Onderwijsweek C6 (10-03-2025)
 
@@ -127,8 +127,8 @@ Nodig:
 
 | Dag | Project | Kennissessie |
 |-----|---------|--------------|
-| ma  |         |              |
-| di  |         |              |
+| ma  |         | Project demo (**JH**)             |
+| di  |         | Algoritmen & Datastructuren I (C++ / Python) (**JH**)   |
 | wo  |         |              |
 | do  |         |              |
 
@@ -138,10 +138,10 @@ Week C7.
 
 | Dag | Project                                                  | Kennissessie                                           |
 |-----|----------------------------------------------------------|--------------------------------------------------------|
-| ma  |                                                          | Project demo (**JH**)                                  |
-| di  |                                                          | Algoritmen & Datastructuren I (C++ / Python) (**JH**)  |
-| wo  |                                                          | Algoritmen & Datastructuren II (C++ Advanced) (**JH**) |
-| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)** | :end: Einde sprint 2 & :runner: planning sprint 3      |
+| ma  |  | Algoritmen & Datastructuren II (C++ Advanced) (**JH**) |
+| di  |  | Projectwerkdag (**NG, JH, BB**)                        |
+| wo  |  | Troubleshooting (**JH & BB**)                          |
+| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)**  | :end: Einde sprint 2 & :runner: planning sprint 3 <br>     |
 
 ### Onderwijsweek C8 (24-03-2025)
 
@@ -151,8 +151,8 @@ Week C8. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login
 |-----|---------|----------------------------------------------------------------------|
 | ma  |         | Algoritmen & Datastructuren III (Python & C++ Vergelijking) (**JH**) |
 | di  |         | Koppeling Python ↔ C++ (Interfacing) (**JH**)                        |
-| wo  |         |                                                                      |
-| do  |         | Retrospective (**NG**)                                               |
+| wo  |         | Projectwerkdag                                                       |
+| do  |         |                                                |
 
 ### Onderwijsweek C9 (31-03-2025)
 
@@ -160,10 +160,10 @@ Week C9.
 
 | Dag | Project | Kennissessie                        |
 |-----|---------|-------------------------------------|
-| ma  |         |                                     |
+| ma  |         | Onderzoek/Deepdive (**BB**)         |
 | di  |         | Structural Design Patterns (**NG**) |
-| wo  |         |                                     |
-| do  |         | Creational Design Patterns (**NG**) |
+| wo  |         | Projectwerkdag                      |
+| do  | :end: Einde sprint 3 & :runner: planning sprint 4 |  |
 
 ### Onderwijsweek C10 (7-04-2025)
 
@@ -175,8 +175,8 @@ Week C10.
 | --- | --- | --- |
 | ma  | | |Project demo (**JH**) |
 | di  | | Profiling & Memory/Performance Debugging (**JH**) |
-| wo  | | |
-| do  | | :end: Einde sprint 3 & :runner: planning sprint 4|
+| wo  | | Onderzoek vervolg (**BB**) |
+| do  | | Creational Design Patterns (**NG**) |
 
 ### Onderwijsweek D1 (14-04-2025)
 
@@ -184,10 +184,10 @@ Week D1.
 
 | Dag | Project           | Kennissessie                                                                              |
 |-----|-------------------|-------------------------------------------------------------------------------------------|
-| ma  |                   | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
-| di  |                   |                                                                                           |
-| wo  |                   |                                                                                           |
-| do  | **2e Peilmoment** | Retrospective (**NG**)                                                                    |
+| ma  |               | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
+| di  | | Klassikale pitches I |
+| wo  | | Klassikale pitches II |
+| do  | **2e Peilmoment** | Retrospective (**NG**) |
 
 ### Onderwijsweek D2 (21-04-2025)
 

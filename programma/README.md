@@ -68,12 +68,12 @@ Week C2.
 - Solliciteren op project/rol
 - Ontwikkelomgeving opzetten 
 
-| Dag | Project | Kennissessie                                                                    |
-|-----|---------|---------------------------------------------------------------------------------|
-| ma  |         | Introductie Semester en Project (**NG & JH, BB**)                               |
-| di  |         | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**) |
-| wo  |         | Intro & Desktop-Environment (VSCode, CMake, Debugger)  (**JH**)                 |
-| do  |         | Kennismaking SSM (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint 1|
+| Dag | Project | Kennissessie                                                                                                      |
+|-----|---------|-------------------------------------------------------------------------------------------------------------------|
+| ma  |         | Introductie Semester en Project (**NG & JH, BB**)                                                                 |
+| di  |         | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**)                                   |
+| wo  |         | [Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md) (**JH**) |
+| do  |         | Kennismaking SSM (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint 1                                  |
 
 ### Onderwijsweek C3 (17-02-2025)
 
@@ -82,10 +82,10 @@ Week C3.
 
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)               |
-| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx)                                      |
-| wo  |         | Environment Troubleshooting (**JH & BB**)                                       |
-| do  |         | C++ STL (**NG**)                                                                |
+| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
+| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| wo  |         | Environment Troubleshooting (**JH & BB**)                                                                                                          |
+| do  |         | C++ STL (**NG**)                                                                                                                                   |
 
 
 ### Onderwijsweek C4 (24-02-2025)
@@ -107,11 +107,11 @@ Week C5.
 - Backlog opbouwen
 - Requirements bedenken
 
-| Dag | Project | Kennissessie                                                                                                  |
-|-----|---------|---------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                        |
-| di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                       |
-| wo  |         | Scrum Refresher (**NG, BB**)                            |
+| Dag | Project | Kennissessie                                                                                                          |
+|-----|---------|-----------------------------------------------------------------------------------------------------------------------|
+| ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                                |
+| di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                               |
+| wo  |         | Scrum Refresher (**NG, BB**)                                                                                          |
 | do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |
 
 ### Onderwijsweek C6 (10-03-2025)
@@ -125,22 +125,22 @@ Nodig:
 - Tekenbaar object bewegen (met de hand)
 - Interactie met omgeving
 
-| Dag | Project | Kennissessie |
-|-----|---------|--------------|
-| ma  |         | Project demo (**JH**)             |
-| di  |         | Algoritmen & Datastructuren I (C++ / Python) (**JH**)   |
-| wo  |         | Projectwerkdag            |
-| do  |         | Teambegeleiding (**NG**) |
+| Dag | Project | Kennissessie                                          |
+|-----|---------|-------------------------------------------------------|
+| ma  |         | Project demo (**JH**)                                 |
+| di  |         | Algoritmen & Datastructuren I (C++ / Python) (**JH**) |
+| wo  |         | Projectwerkdag                                        |
+| do  |         | Teambegeleiding (**NG**)                              |
 
 ### Onderwijsweek C7 (17-03-2025)
 
 Week C7. 
 
-| Dag | Project | Kennissessie                                           |
-|-----|---------|--------------------------------------------------------|
-| ma  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**) |
-| di  |         | Projectwerkdag (**NG, JH, BB**)                        |
-| wo  |         | Troubleshooting (**JH & BB**)                          |
+| Dag | Project | Kennissessie                                                                                                    |
+|-----|---------|-----------------------------------------------------------------------------------------------------------------|
+| ma  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**)                                                          |
+| di  |         | Projectwerkdag (**NG, JH, BB**)                                                                                 |
+| wo  |         | Troubleshooting (**JH & BB**)                                                                                   |
 | do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek C8 (24-03-2025)
@@ -158,11 +158,11 @@ Week C8. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login
 
 Week C9. 
 
-| Dag | Project | Kennissessie                        |
-|-----|---------|-------------------------------------|
-| ma  |         | Onderzoek/Deepdive (**BB**)         |
-| di  |         | Structural Design Patterns (**NG**) |
-| wo  |         | Projectwerkdag                      |
+| Dag | Project | Kennissessie                                      |
+|-----|---------|---------------------------------------------------|
+| ma  |         | Onderzoek/Deepdive (**BB**)                       |
+| di  |         | Structural Design Patterns (**NG**)               |
+| wo  |         | Projectwerkdag                                    |
 | do  |         | :end: Einde sprint 3 & :runner: planning sprint 4 |
 
 ### Onderwijsweek C10 (7-04-2025)
@@ -171,34 +171,34 @@ Week C10.
 - Python Debugging/Big-Oh -> Werkboek?
 - Intro algoritmiek/Python opstart 
 
-| Dag | Project | Kennissessie     |
-| --- |---------|------------------|
-| ma  |         | Project demo (**JH**) |
+| Dag | Project | Kennissessie                                      |
+|-----|---------|---------------------------------------------------|
+| ma  |         | Project demo (**JH**)                             |
 | di  |         | Profiling & Memory/Performance Debugging (**JH**) |
-| wo  |         | Onderzoek vervolg (**BB**) |
-| do  |         | Creational Design Patterns (**NG**) |
+| wo  |         | Onderzoek vervolg (**BB**)                        |
+| do  |         | Creational Design Patterns (**NG**)               |
 
 ### Onderwijsweek D1 (14-04-2025)
 
 Week D1. 
 
-| Dag | Project | Kennissessie                                                                              |
-|-----|---------|-------------------------------------------------------------------------------------------|
-| ma  |         | |
-| di  |         | Klassikale pitches I |
-| wo  |         | Klassikale pitches II |
+| Dag | Project | Kennissessie                                                             |
+|-----|---------|--------------------------------------------------------------------------|
+| ma  |         |                                                                          |
+| di  |         | Klassikale pitches I                                                     |
+| wo  |         | Klassikale pitches II                                                    |
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
 ### Onderwijsweek D2 (21-04-2025)
 
 Week D2. 
 
-| Dag | Project     | Kennissessie          |
-|-----|-------------|-----------------------|
-| ma  | 2de Paasdag |                       |
+| Dag | Project     | Kennissessie                                                                              |
+|-----|-------------|-------------------------------------------------------------------------------------------|
+| ma  | 2de Paasdag |                                                                                           |
 | di  |             | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
-| wo  |             | Projectdemo (**JH, NG**)  |
-| do  |             | Teamcoaching (**NG**)     |
+| wo  |             | Projectdemo (**JH, NG**)                                                                  |
+| do  |             | Teamcoaching (**NG**)                                                                     |
 
 
 ### Onderwijsweek D3 (28-04-2025)
@@ -217,12 +217,12 @@ Week D3.
 
 Week D4. 
 
-| Dag | Project        | Kennissessie               |
-|-----|----------------|----------------------------|
+| Dag | Project        | Kennissessie                                                                                                                              |
+|-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
-| di  |                | Troubleshooting Vision (**BB**) |
+| di  |                | Troubleshooting Vision (**BB**)                                                                                                           |
 | wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
-| do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6 |
+| do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
 
@@ -231,32 +231,32 @@ Week D5.
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
 | ma  |         | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**) |
-| di  |         | Feedbacksessie onderzoek (**BB**)   |
-| wo  |         | workshop 'what if' (**BB**)         |
-| do  |         | workshop 'what if' (**BB**)         |
+| di  |         | Feedbacksessie onderzoek (**BB**)                                                                   |
+| wo  |         | workshop 'what if' (**BB**)                                                                         |
+| do  |         | workshop 'what if' (**BB**)                                                                         |
 
 
 ### Onderwijsweek D6 (19-05-2025)
 
 Week D6. 
 
-| Dag | Project | Kennissessie |
-|-----|---------|--------------|
-| ma  |         | Projectwerkdag/Deepdive/Project update             |
-| di  |         | Projectwerkdag/Deepdive/Project update             |
-| wo  |         | Projectwerkdag/Deepdive/Project update             |
+| Dag | Project | Kennissessie                                                             |
+|-----|---------|--------------------------------------------------------------------------|
+| ma  |         | Projectwerkdag/Deepdive/Project update                                   |
+| di  |         | Projectwerkdag/Deepdive/Project update                                   |
+| wo  |         | Projectwerkdag/Deepdive/Project update                                   |
 | do  |         | **3e Peilmoment** <br> :end: Einde sprint 6 & :runner: Planning sprint 7 |
 
 ### Onderwijsweek D7 (26-05-2025)
 
 Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen. 
 
-| Dag | Project        | Kennissessie |
-|-----|----------------|--------------|
-| ma  |                | Projectdemo (**JH**) |
+| Dag | Project        | Kennissessie                           |
+|-----|----------------|----------------------------------------|
+| ma  |                | Projectdemo (**JH**)                   |
 | di  |                | Projectwerkdag/Deepdive/Project update |
 | wo  |                | Projectwerkdag/Deepdive/Project update |
-| do  | Hemelvaartsdag |              |
+| do  | Hemelvaartsdag |                                        |
 
 ### Onderwijsweek D8 (2-06-2025)
 
@@ -274,9 +274,9 @@ Week D8.
 
 Week D9.
 
-| Dag | Project        | Kennissessie |
-|-----|----------------|--------------|
-| ma  | 2e Pinksterdag |              |
+| Dag | Project        | Kennissessie                           |
+|-----|----------------|----------------------------------------|
+| ma  | 2e Pinksterdag |                                        |
 | di  |                | Projectwerkdag/Deepdive/Project update |
 | wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  |                | Projectwerkdag/Deepdive/Project update |
@@ -287,12 +287,12 @@ Week D10. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/logi
 
 Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
-| Dag | Project           | Kennissessie                                        |
-|-----|-------------------|-----------------------------------------------------|
-| ma  |                   | Projectwerkdag/Deepdive/Project update              |
-| di  |                   | Projectwerkdag/Deepdive/Project update              |
-| wo  |                   | Demo dag?                                           |
-| do  | **4e Peilmoment** | :end: Einde sprint 8 & planning afronden            |
+| Dag | Project           | Kennissessie                             |
+|-----|-------------------|------------------------------------------|
+| ma  |                   | Projectwerkdag/Deepdive/Project update   |
+| di  |                   | Projectwerkdag/Deepdive/Project update   |
+| wo  |                   | Demo dag?                                |
+| do  | **4e Peilmoment** | :end: Einde sprint 8 & planning afronden |
 
 ### Onderwijsweek D11 (23-06-2025)
 

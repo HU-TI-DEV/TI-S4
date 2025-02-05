@@ -129,8 +129,8 @@ Nodig:
 |-----|---------|--------------|
 | ma  |         | Project demo (**JH**)             |
 | di  |         | Algoritmen & Datastructuren I (C++ / Python) (**JH**)   |
-| wo  |         |              |
-| do  |         |              |
+| wo  |         | Projectwerkdag            |
+| do  |         | Teambegeleiding (**NG**) |
 
 ### Onderwijsweek C7 (17-03-2025)
 

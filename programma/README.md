@@ -62,12 +62,6 @@ De docenten zijn:
 
 ### Onderwijsweek C2 (10-02-2025)
 
-Week C2.
-- Project introductie
-- Opdrachtgever spreken
-- Solliciteren op project/rol
-- Ontwikkelomgeving opzetten 
-
 | Dag | Project | Kennissessie                                                                    |
 |-----|---------|---------------------------------------------------------------------------------|
 | ma  |         | Introductie Semester en Project (**NG & JH, BB**)                               |
@@ -76,9 +70,6 @@ Week C2.
 | do  |         | Kennismaking SSM (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint 1|
 
 ### Onderwijsweek C3 (17-02-2025)
-
-Week C3.
-- Ontwikkelomgeving simulatieplatform opzetten 
 
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -100,12 +91,7 @@ Week C3.
 
 ### Onderwijsweek C5 (3-03-2025)
 
-Week C5. 
-- Teamvorming bekend maken
-- Project board opzetten
-- Git opzetten
-- Backlog opbouwen
-- Requirements bedenken
+Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook vooral voor het opzetten van de projectomgeving.
 
 | Dag | Project | Kennissessie                                                                                                  |
 |-----|---------|---------------------------------------------------------------------------------------------------------------|
@@ -116,15 +102,6 @@ Week C5.
 
 ### Onderwijsweek C6 (10-03-2025)
 
-Week C6.
-Opleveren: Beweegbaar object in simulatieomgeving
-Nodig:
-
-- Werkende omgeving
-- Tekenbaar object
-- Tekenbaar object bewegen (met de hand)
-- Interactie met omgeving
-
 | Dag | Project | Kennissessie |
 |-----|---------|--------------|
 | ma  |         | Project demo (**JH**)             |
@@ -133,8 +110,6 @@ Nodig:
 | do  |         | Teambegeleiding (**NG**) |
 
 ### Onderwijsweek C7 (17-03-2025)
-
-Week C7. 
 
 | Dag | Project | Kennissessie                                           |
 |-----|---------|--------------------------------------------------------|
@@ -145,7 +120,7 @@ Week C7.
 
 ### Onderwijsweek C8 (24-03-2025)
 
-Week C8. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen.
+Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen.
 
 | Dag | Project | Kennissessie                                                         |
 |-----|---------|----------------------------------------------------------------------|
@@ -156,8 +131,6 @@ Week C8. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login
 
 ### Onderwijsweek C9 (31-03-2025)
 
-Week C9. 
-
 | Dag | Project | Kennissessie                        |
 |-----|---------|-------------------------------------|
 | ma  |         | Onderzoek/Deepdive (**BB**)         |
@@ -166,10 +139,6 @@ Week C9.
 | do  |         | :end: Einde sprint 3 & :runner: planning sprint 4 |
 
 ### Onderwijsweek C10 (7-04-2025)
-
-Week C10.
-- Python Debugging/Big-Oh -> Werkboek?
-- Intro algoritmiek/Python opstart 
 
 | Dag | Project | Kennissessie     |
 | --- |---------|------------------|
@@ -180,8 +149,6 @@ Week C10.
 
 ### Onderwijsweek D1 (14-04-2025)
 
-Week D1. 
-
 | Dag | Project | Kennissessie                                                                              |
 |-----|---------|-------------------------------------------------------------------------------------------|
 | ma  |         | |
@@ -190,8 +157,6 @@ Week D1.
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
 ### Onderwijsweek D2 (21-04-2025)
-
-Week D2. 
 
 | Dag | Project     | Kennissessie          |
 |-----|-------------|-----------------------|
@@ -203,8 +168,6 @@ Week D2.
 
 ### Onderwijsweek D3 (28-04-2025)
 
-Week D3.
-
 | Dag |          |
 |-----|----------|
 | ma  | Vakantie |
@@ -215,18 +178,14 @@ Week D3.
 
 ### Onderwijsweek D4 (5-05-2025)
 
-Week D4. 
-
 | Dag | Project        | Kennissessie               |
 |-----|----------------|----------------------------|
-| ma  | Bevrijdingsdag |                                                                                                                                           |
+| ma  | Bevrijdingsdag |                            |
 | di  |                | Troubleshooting Vision (**BB**) |
 | wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6 |
 
-### Onderwijsweek D5 (12-05-2025)
-
-Week D5. 
+### Onderwijsweek D5 (12-05-2025) 
 
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
@@ -238,8 +197,6 @@ Week D5.
 
 ### Onderwijsweek D6 (19-05-2025)
 
-Week D6. 
-
 | Dag | Project | Kennissessie |
 |-----|---------|--------------|
 | ma  |         | Projectwerkdag/Deepdive/Project update             |
@@ -249,7 +206,7 @@ Week D6.
 
 ### Onderwijsweek D7 (26-05-2025)
 
-Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen. 
+Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen. 
 
 | Dag | Project        | Kennissessie |
 |-----|----------------|--------------|
@@ -259,8 +216,6 @@ Week D7. Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tus
 | do  | Hemelvaartsdag |              |
 
 ### Onderwijsweek D8 (2-06-2025)
-
-Week D8.
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
@@ -272,8 +227,6 @@ Week D8.
 
 ### Onderwijsweek D9 (9-06-2025)
 
-Week D9.
-
 | Dag | Project        | Kennissessie |
 |-----|----------------|--------------|
 | ma  | 2e Pinksterdag |              |
@@ -283,7 +236,7 @@ Week D9.
 
 ### Onderwijsweek D10 (16-06-2025)
 
-Week D10. Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen.
+Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zodat je dit semester tussentijds kan beoordelen en wij met de feedback verbeteringen kunnen aanbrengen.
 
 Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
@@ -296,7 +249,7 @@ Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 
 ### Onderwijsweek D11 (23-06-2025)
 
-Week D11. De docenten bekijken deze week al het ingeleverde werk. Aan het eind van de week ontvang je individuele feedback en een eindbeoordeling. Op een aparte branch kan alvast gewerkt worden aan eventuele verbeteringen.
+De docenten bekijken deze week al het ingeleverde werk. Aan het eind van de week ontvang je individuele feedback en een eindbeoordeling. Op een aparte branch kan alvast gewerkt worden aan eventuele verbeteringen.
 
 | Dag | Thema               |
 |-----|---------------------|

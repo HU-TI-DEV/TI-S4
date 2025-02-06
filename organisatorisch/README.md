@@ -1,4 +1,7 @@
 # Werkwijze S4
+
+# LET OP: Deze pagina bevat nog gedeeltelijk informatie uit S3. Niet alle informatie is ook van toepassing op S4
+
 Hoe haal je S4? Voor **S4** wordt van je verwacht dat je qua **professioneel gedrag** een belangrijke stap vooruit maakt. Onderstaand wordt dat in detail beschreven.
 
 # Dagdeel-indeling

@@ -62,12 +62,12 @@ De docenten zijn:
 
 ### Onderwijsweek C2 (10-02-2025)
 
-| Dag | Project | Kennissessie                                                                     |
-|-----|---------|----------------------------------------------------------------------------------|
-| ma  |         | Introductie Semester en Project (**NG & JH, BB**)                                |
-| di  |         | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**)  |
-| wo  |         | [Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**)                  |
-| do  |         | Kennismaking SSM (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint 1 |
+| Dag | Project | Kennissessie                                                                                                       |
+|-----|---------|--------------------------------------------------------------------------------------------------------------------|
+| ma  |         | Introductie Semester en Project (**NG & JH, BB**)                                                                  |
+| di  |         | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**)                                    |
+| wo  |         | [Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
+| do  |         | Kennismaking SSM (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint 1                                   |
 
 ### Onderwijsweek C3 (17-02-2025)
 

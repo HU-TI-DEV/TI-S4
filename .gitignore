@@ -2,6 +2,7 @@
 *.autosave
 *.drawio.bkp
 node_modules/
+.vite/
 # *.lock
 .Programma_for_export_html.drawio
 .DS_store

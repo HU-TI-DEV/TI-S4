@@ -1,4 +1,5 @@
 # Programma Desktopontwikkeling en Tooling - Deel I
+
 In deze lessenreeks maken we kennis met professionele desktop-ontwikkeling in C++. We richten ons op het opzetten van een project in VSCode met CMake en leren de basis van debugging.
 
 ## Voorbereiding
@@ -16,12 +17,14 @@ In deze lessenreeks maken we kennis met professionele desktop-ontwikkeling in C+
 
 ## Inleveren op Canvas
 
-Opdracht: [Desktop-Environment Opdracht](./Assignment_desktop_environment.md)
+Opdracht: [Desktop-Environment Opdracht](./Assignment_opzetten_ontwikkelomgeving.md)
 
 # Programma Desktopontwikkeling en Tooling - Deel II
+
 In dit tweede deel breiden we onze kennis uit met geavanceerde tooling, waaronder unit testing, linting, documentatie en profiling.
 
 ## Voorbereiding
+
 - Lees over unit testing frameworks zoals Catch2.
 - Bekijk een introductievideo over Doxygen voor automatische documentatie.
 - Zorg dat je ontwikkelomgeving is ingericht met de benodigde libraries voor testing en profiling.

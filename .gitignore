@@ -6,3 +6,4 @@ node_modules/
 .Programma_for_export_html.drawio
 .DS_store
 xxx/
+*.temp.pdf

@@ -1,6 +1,6 @@
 ---
 title: Infrastructuur & Desktop Environment
-output: ../infrastructuur/Desktop_Environment/files/les-infrastructuur-desktop-environment.pdf
+output: ../infrastructuur/desktop_environment/files/les-infrastructuur-desktop-environment.pdf
 theme: ./slidev-theme-ti
 ---
 

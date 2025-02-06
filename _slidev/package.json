@@ -1,0 +1,15 @@
+{
+    "name": "slidev-ti",
+    "private": true,
+    "scripts": {
+        "build": "make",
+        "dev": "slidev --open",
+        "export": "slidev export"
+    },
+    "dependencies": {
+        "@slidev/cli": "^51.0.2"
+    },
+    "devDependencies": {
+        "playwright-chromium": "^1.50.0"
+    }
+}

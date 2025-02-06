@@ -68,7 +68,7 @@ Shortcuts naar onderliggende links:
 - [Portfolio Items en Feedback maken](./organisatorisch/portfolio_items_en_feedback.md)
   <!-- - [Leerdoelenkaart S4](./leerdoelen/interactieve-leerdoelen-kaart/LeerdoelenKaart_S4.svg)-->
 - [Verantwoordingsdocument](./Verantwoordingsdocument_TI_S4.md)
-- [Portfolio items - algemeen](./Portfolio-items.md)
+<!-- - [Portfolio items - algemeen](./Portfolio-items.md) -->
 - [Documenteren](./organisatorisch/documenteren.md)
 
 ## Programma

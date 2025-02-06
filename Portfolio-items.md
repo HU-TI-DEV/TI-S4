@@ -1,8 +1,11 @@
 # Portfolio Items[](title-id)
 
+# LET OP: Als je op deze pagina bent - deze pagina is een kopie van S3, en dus niet bedoeld voor S4. Under construction!
+
 ### Inhoud[](toc-id)
 
 - [Portfolio Items](#portfolio-items)
+- [LET OP: Als je op deze pagina bent - deze pagina is een kopie van S3, en dus niet bedoeld voor S4. Under construction!](#let-op-als-je-op-deze-pagina-bent---deze-pagina-is-een-kopie-van-s3-en-dus-niet-bedoeld-voor-s4-under-construction)
     - [Inhoud](#inhoud)
   - [Een introductie](#een-introductie)
   - [Aanbevolen Portfolio Items \<\>](#aanbevolen-portfolio-items-)

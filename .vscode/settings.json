@@ -1,0 +1,9 @@
+{
+    "ltex.language": "nl",
+    "ltex.spellcheck": true,
+    "slidev.force-enabled": true,
+    "slidev.include": [
+        "**/slides.md",
+        "_slidev/les-infrastructuur-desktop-environment.md"
+    ],
+}

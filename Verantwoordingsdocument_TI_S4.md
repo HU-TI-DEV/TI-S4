@@ -85,7 +85,9 @@ Succes met de uitwerking van de verantwoording!
 Student analyseert de vereisten en doelstellingen van de opdrachtgever betreffende een 'Digital Twin' van een bestaand embedded systeem. Op basis hiervan en rekening houdend met de mogelijke gebruikers deduceert de student requirements volgens een voorgeschreven methode. Deze requirements dienen na validatie door de opdrachtgever als basis voor het ontwerp.
 
 Indicatoren
-
+- Requirements analyse
+- Stakeholder analyse
+- Testplan
 ---
 
 **Leeruitkomst 1 Persoonlijke opdrachten:**
@@ -120,8 +122,10 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 Student ontwerpt gebaseerd op de requirements en volgens voorgeschreven methoden een 'Digital Twin', inclusief grafische representatie, van een bestaand embedded systeem. Dit ontwerp omvat ook een ontwerp voor teststrategieën.
 
-Indicatoren
-
+Indicatoren:
+- Onderzoeksverslag (deepdive)
+- (Overdrachts)documentatie
+- Testverslag
 ---
 
 **Leeruitkomst 2 Persoonlijke opdrachten:**
@@ -158,8 +162,10 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 Student adviseert de opdrachtgever, na analyse van de vereisten en doelstellingen, over de inzet van een digital twin. Het advies is helder onderbouwd en gepresenteerd, zodat het begrijpelijk is voor alle stakeholders/betrokkenen. Het voorgestelde ontwerp is goed gedocumenteerd en het advies volgt een voorgeschreven methode, zodat de implementatie efficiënt kan worden voortgezet.
 
-Indicatoren
-
+Indicatoren:
+- Software architectuur
+- Simulatiemodel
+- Testplan
 ---
 
 **Leeruitkomst 3 Persoonlijke opdrachten:**
@@ -196,8 +202,12 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 Student realiseert vanuit het ontwerp een 'Digital Twin' van een bestaand embedded systeem, inclusief grafische representatie. Hierbij wordt gewerkt volgens een voorgeschreven methode waarin testen centraal staat, ten behoeve van het uitvoeren van tests op verschillende ontwikkelniveaus. Testresultaten, omstandigheden en afhankelijkheden worden helder gedocumenteerd, omwille van het reproduceren van de testresultaten. 
 
-Indicatoren
-
+Indicatoren:
+- Broncode simulator
+- Algoritmiek opdrachten
+- C++ STL opdrachten
+- C++<->Python opdrachten
+- Creational/Structural design pattern opdrachten
 ---
 
 **Leeruitkomst 4 Groepsopdrachten:**
@@ -220,8 +230,11 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 Student zet een professionele ontwikkelomgeving op voor desktop development. Daarbij houdt hij rekening met de samenwerking tussen verschillende programmeertalen. De desktop debugging wordt op een gestructureerde manier uitgevoerd. De tests worden uitgevoerd volgens een vooraf beschreven testplan en moeten desgewenst op een later moment reproduceerbaar zijn. De student werkt volgens een voorgeschreven methodiek en maakt gebruik van geschikte tooling software debugging.
 
-Indicatoren
-
+Indicatoren:
+- (Overdrachts)documentatie
+- Opdrachten ontwikkelomgeving
+- Opdrachten debugging/tooling
+- Testverslag
 ---
 
 **Leeruitkomst 5 Groepsopdrachten:**

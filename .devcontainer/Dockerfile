@@ -5,7 +5,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update && \
     apt-get install -y build-essential cmake cppcheck valgrind clang lldb llvm gdb && \
-    apt-get install -y ghostscript
+    apt-get install -y ghostscript socat
 
 ENV BUN_INSTALL=/usr/local
 RUN curl -fsSL https://bun.sh/install | bash

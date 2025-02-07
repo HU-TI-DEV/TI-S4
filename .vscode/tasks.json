@@ -16,7 +16,7 @@
         {
             "label": "present current slide",
             "type": "shell",
-            "command": "cd _slidev && slidev --open ${file}",
+            "command": "cd _slidev && slidev --open ${file}  --bind 0.0.0.0 --port 3030",
             "problemMatcher": [],
         },
         {

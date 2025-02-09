@@ -1,10 +1,12 @@
 ---
 theme: ./slidev-theme-ti
-output: ./introductie_les.pdf
+output: ./../introductie_les.pdf
 hideInToc: true
 ---
 
-# Introductie
+# Introductie S4
+
+Welkom!
 
 ---
 layout: table-of-contents
@@ -36,17 +38,33 @@ hideInToc: true
 
 # Jan Halsema
 
-- C++, Python, Algoritmen & Datastructuren, Assembly, Vision
+- Expertise: C++, Python, Algoritmen & Datastructuren, Assembly, Vision
 - Dit semester ook: Product Owner
 
 ---
 hideInToc: true
+layout: two-cols
 ---
 
 # Nick Goris
 
-- Python, C++, Algoritmiek, AI, Testing, Agile
-- Dit semester ook: 'Super' Scrum Master / Procesbegeleiding
+- Eerst andere studies; vioolbouw, docent Engels
+- Daarna bij TI uitgekomen
+- Tijdens studie: studentassistent, ZZP Software Engineer, TI reisbureau
+- Na afstuderen docent geworden:
+    - Propedeuse AI, Propedeuse CSC/TI, THDE, THGA, CSPE2, INNO
+    - Ontwikkelwerk aan S4, INNO, Stage 2026
+    - Toekomstig coördineren van Propedeuse TI
+
+Verder in de toekomst:
+- BDB halen, een Master gaan doen..
+
+- Expertise: Python, C++, Algoritmiek, AI, Testing, Agile
+- Dit semester ook: 'Super' Scrum Master
+
+::right::
+
+
 
 ---
 
@@ -56,6 +74,7 @@ Doelen van het semester zijn:
 - Leren desktop programmeren
 - Verdiepen in Algoritmiek, Datastructuren
 - Voorbereiden op stage, INNO, en daarna
+- Professionalisering
 
 ---
 layout: two-cols
@@ -64,11 +83,19 @@ layout: two-cols
 # Project
 
 - Team Digitale Verkenning (Brandweer)
-- Dure robots, gevaarlijke situaties
+- Dure robots, gevaarlijke situaties:
+    - Brandblusrobot
+    - Drone
+    - Onderzeeër
+    - Robot 'hond'
 
 <br>
 
 - Oplossing? Simulaties! 
+
+<br>
+
+- Solliciteren op project/rol
 
 <Footnotes separator>
   <Footnote>https://www.youtube.com/watch?v=-JbOo2gfcJ0</Footnote>
@@ -82,17 +109,25 @@ layout: two-cols
 <br>
 <Youtube id="-JbOo2gfcJ0"/>
 
-
-
 ---
 
 # Opdrachtgever
 
+Kon vandaag helaas niet aanwezig zijn :(
+
+---
+layout: figure-side
+figureCaption: Structuur semester
+figureUrl: ./portfolio_toetsing.png
 ---
 
 # Werkwijze
 
-- Portfolio toetsen; leeruitkomsten op GitHub+Canvas
+In het semester:
+
+- Portfolio toetsen
+    - Leeruitkomsten op GitHub+Canvas
+    - Ritme zoals voorgaande semesters
 - Agile/Scrum
     - Sprints van 2 weken (deze week uitgezonderd)
     - Einde van de sprint:
@@ -100,7 +135,34 @@ layout: two-cols
         - Plannen van de volgende sprint
         - Review voorbereiden
     - Begin van de sprint:
-        - Review
+        - Review (?)
+
+---
+layout: figure-side
+figureCaption: https://kitchen.co/blog/scrum-roles/
+figureUrl: ./What-are-the-3-Scrum-team-roles_.png
+
+hideInToc: true
+---
+
+# Werkwijze
+
+In het project:
+- Iedereen heeft een rol:
+    - Technical Lead (1/team)
+        - Verantwoordelijk kwaliteit code
+        - Verantwoordelijk voor build omgeving
+    - Scrum Master (1/team)
+        - Verantwoordelijk voor proces
+        - Verantwoordelijk voor scrumboard
+    - Developer
+        - Geen extra verantwoordelijkheden
+
+- Let op: Scrum zijn zelfsturende teams
+    - Scrum Master is géén team leider
+
+- Belang van overdrachtsdocumentatie
+
 
 ---
 
@@ -108,10 +170,38 @@ layout: two-cols
 
 - Minder vaste portfolio items
 - Zelf portfolioitems definiëren
-- Projectbegeleiding minder veel
+- Projectbegeleiding minder vaak
+- Aanwezigheid: gaan wij niet bijhouden
+
+<br>
+
+Al met al verwachten wij; professionaliteit
+
+---
+layout: image
+image: /NSE.png
+backgroundSize: 22%
+---
+# NSE
+
+Graag even de NSE invullen - na afloop krijgen jullie dan een bon voor Mams
+
+Code vergeten? Vraag dan een nieuwe aan via de QR code!
+
+<Footnotes separator>
+  <Footnote>https://lcsk.nl/nse/</Footnote>
+</Footnotes>
 
 ---
 
-# NSE
+# Huiswerk
 
+Ter voorbereiding op solliciteren:
+
+Google jezelf eens, wat kom je tegen? Is dit wat je wilt dat een opdrachtgever ziet?
+
+Denk ook aan eventuele pseudoniemen, zoals je GitHub naam
+
+---
+layout: end
 ---

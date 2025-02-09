@@ -6,4 +6,6 @@
         "**/slides.md",
         "_slidev/les-infrastructuur-desktop-environment.md"
     ],
+    "slidev.port": 3030,
+    "cSpell.language": "en,nl",
 }

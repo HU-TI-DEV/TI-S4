@@ -43,5 +43,5 @@
 	"postCreateCommand": "bash -i .devcontainer/install-deps.sh"
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "devcontainer"
+	//"remoteUser": "root"
 }

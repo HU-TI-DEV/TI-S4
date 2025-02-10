@@ -1,25 +1,23 @@
 ![logo](https://www.hu.nl/-/media/hu/afbeeldingen/algemeen/hu-logo.ashx) [](logo-id)
 
-# Verantwoordingsdocument[](title-id)
+# Verantwoordingsdocument[](title-id) <!-- omit in toc -->
 
 ### Inhoud[](toc-id)
 
-- [Verantwoordingsdocument](#verantwoordingsdocument)
-    - [Inhoud](#inhoud)
-  - [Portfolio Technische Informatica (TI) semester 4 (S4)](#portfolio-technische-informatica-ti-semester-4-s4)
-    - [Deel 1 Algemeen.](#deel-1-algemeen)
-    - [Deel 2 Leeruitkomsten.](#deel-2-leeruitkomsten)
-  - [Algemeen](#algemeen)
-  - [Leeruitkomsten](#leeruitkomsten)
-    - [Leeruitkomst 1 Analyseren](#leeruitkomst-1-analyseren)
-    - [Leeruitkomst 2 Ontwerpen](#leeruitkomst-2-ontwerpen)
-    - [Leeruitkomst 3 Adviseren](#leeruitkomst-3-adviseren)
-    - [Leeruitkomst 4 Realiseren](#leeruitkomst-4-realiseren)
-    - [Leeruitkomst 5 Beheren](#leeruitkomst-5-beheren)
-    - [Leeruitkomst 6 Toekomstgericht organiseren](#leeruitkomst-6-toekomstgericht-organiseren)
-    - [Leeruitkomst 7 Doelgericht interacteren](#leeruitkomst-7-doelgericht-interacteren)
-    - [Leeruitkomst 8 Persoonlijk leiderschap](#leeruitkomst-8-persoonlijk-leiderschap)
-    - [Leeruitkomst 9 Onderzoek probleem oplossen](#leeruitkomst-9-onderzoek-probleem-oplossen)
+- [Portfolio Technische Informatica (TI) semester 4 (S4)](#portfolio-technische-informatica-ti-semester-4-s4)
+  - [Deel 1 Algemeen.](#deel-1-algemeen)
+  - [Deel 2 Leeruitkomsten.](#deel-2-leeruitkomsten)
+- [Algemeen](#algemeen)
+- [Leeruitkomsten](#leeruitkomsten)
+  - [Leeruitkomst 1 Analyseren](#leeruitkomst-1-analyseren)
+  - [Leeruitkomst 2 Ontwerpen](#leeruitkomst-2-ontwerpen)
+  - [Leeruitkomst 3 Adviseren](#leeruitkomst-3-adviseren)
+  - [Leeruitkomst 4 Realiseren](#leeruitkomst-4-realiseren)
+  - [Leeruitkomst 5 Beheren](#leeruitkomst-5-beheren)
+  - [Leeruitkomst 6 Toekomstgericht organiseren](#leeruitkomst-6-toekomstgericht-organiseren)
+  - [Leeruitkomst 7 Doelgericht interacteren](#leeruitkomst-7-doelgericht-interacteren)
+  - [Leeruitkomst 8 Persoonlijk leiderschap](#leeruitkomst-8-persoonlijk-leiderschap)
+  - [Leeruitkomst 9 Onderzoek probleem oplossen](#leeruitkomst-9-onderzoek-probleem-oplossen)
 
 ---
 
@@ -43,8 +41,8 @@ Dit is het verantwoordingsdocument waarin je op vier verschillende peilmomenten 
 
 ### Deel 1 Algemeen.
 Geef eerst kort aan:
-- Waar je trots op bent
-- Waar je tegenaan bent gelopen 
+- Waar je trots op bent.
+- Waar je tegenaan bent gelopen. 
 - Wat je nog wilt leren. 
 
 ### Deel 2 Leeruitkomsten.
@@ -88,6 +86,7 @@ Indicatoren
 - Requirements analyse
 - Stakeholder analyse
 - Testplan
+- Ontwikkeldocument (eerste deel)
 ---
 
 **Leeruitkomst 1 Persoonlijke opdrachten:**
@@ -123,9 +122,8 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 Student ontwerpt gebaseerd op de requirements en volgens voorgeschreven methoden een 'Digital Twin', inclusief grafische representatie, van een bestaand embedded systeem. Dit ontwerp omvat ook een ontwerp voor teststrategieën.
 
 Indicatoren:
-- Onderzoeksverslag (deepdive)
-- (Overdrachts)documentatie
 - Testverslag
+- Ontwikkeldocument
 ---
 
 **Leeruitkomst 2 Persoonlijke opdrachten:**
@@ -163,9 +161,8 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 Student adviseert de opdrachtgever, na analyse van de vereisten en doelstellingen, over de inzet van een digital twin. Het advies is helder onderbouwd en gepresenteerd, zodat het begrijpelijk is voor alle stakeholders/betrokkenen. Het voorgestelde ontwerp is goed gedocumenteerd en het advies volgt een voorgeschreven methode, zodat de implementatie efficiënt kan worden voortgezet.
 
 Indicatoren:
-- Software architectuur
-- Simulatiemodel
-- Testplan
+- Adviesrapport
+- Advies presentatie
 ---
 
 **Leeruitkomst 3 Persoonlijke opdrachten:**
@@ -203,7 +200,9 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 Student realiseert vanuit het ontwerp een 'Digital Twin' van een bestaand embedded systeem, inclusief grafische representatie. Hierbij wordt gewerkt volgens een voorgeschreven methode waarin testen centraal staat, ten behoeve van het uitvoeren van tests op verschillende ontwikkelniveaus. Testresultaten, omstandigheden en afhankelijkheden worden helder gedocumenteerd, omwille van het reproduceren van de testresultaten. 
 
 Indicatoren:
-- Broncode simulator
+- Broncode simulatie
+- Projectcode
+- Vision opdrachten
 - Algoritmiek opdrachten
 - C++ STL opdrachten
 - C++<->Python opdrachten
@@ -231,7 +230,7 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 Student zet een professionele ontwikkelomgeving op voor desktop development. Daarbij houdt hij rekening met de samenwerking tussen verschillende programmeertalen. De desktop debugging wordt op een gestructureerde manier uitgevoerd. De tests worden uitgevoerd volgens een vooraf beschreven testplan en moeten desgewenst op een later moment reproduceerbaar zijn. De student werkt volgens een voorgeschreven methodiek en maakt gebruik van geschikte tooling software debugging.
 
 Indicatoren:
-- (Overdrachts)documentatie
+- Ontwikkeldocument
 - Opdrachten ontwikkelomgeving
 - Opdrachten debugging/tooling
 - Testverslag
@@ -257,7 +256,10 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 De student kan een probleem vertalen naar een product door randvoorwaarden en requirements op te stellen in overleg met de opdrachtgever. Het project wordt gestructureerd opgezet, uitgevoerd en opgeleverd, met aandacht voor omgevingsfactoren, en maatschappelijke en ethische aspecten.
 
-Indicatoren
+Indicatoren:
+- Ontwikkeldocument
+- Scrum board
+- Sprintverslagen
 
 ---
 
@@ -281,7 +283,10 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 De student onderhoudt actief de relatie met relevante samenwerkingspartners (denk aan teamleden, opdrachtgevers, eindgebruikers, maatschappelijke organisaties en/of andere stakeholders) door middel van het geven van weloverwogen presentaties die afgestemd zijn op de doelgroep.
 
-Indicatoren
+Indicatoren:
+- Onderzoeksverslag(deepdive)
+- Adviespresentatie
+- Sprintverslagen (review)
 
 ---
 
@@ -319,7 +324,9 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 De student bereidt zich voor op studie- en loopbaankeuzes. De student evalueert hierbij persoonlijke ambities en kwaliteiten in relatie tot de gewenste positionering in het werkveld. De student kan deze effectief communiceren in bv sollicitatie brief of gesprek.
 
-Indicatoren
+Indicatoren:
+- Sollicitatiebrief
+- Professionaliseringsdocument
 
 ---
 
@@ -343,8 +350,9 @@ Beschrijving van de feedback die ik heb ontvangen op de portfolio-items.
 
 De student kan een praktijkgericht probleem identificeren en de juiste oplossingsrichting kiezen door wensen van de opdrachtgever centraal te stellen. Gedurende het proces handelt de student onderzoekend, stelt kritische vragen en past verschillende (hbo-ICT) methoden toe om relevante informatie te verzamelen. Hierbij wordt de informatie op gestructureerde en grondige wijze geanalyseerd en worden daarmee keuzes onderbouwt, rekening houdend met maatschappelijke standaarden en ethische aspecten.
 
-Indicatoren
-
+Indicatoren:
+- Onderzoeksverslag (deepdive)
+- Ontwikkeldocument
 ---
 
 **Leeruitkomst 9 Persoonlijke opdrachten:**

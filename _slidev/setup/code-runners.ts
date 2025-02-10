@@ -3,8 +3,8 @@ import { defineCodeRunnersSetup } from '@slidev/types'
 export default defineCodeRunnersSetup(() => {
   return {
     cpp: async (code: string, ctx) => {
-      // Use a compiler id from runner options, or default to 'g82'
-      const compilerId = (ctx.options.compilerId as string) || 'g82'
+      // Use a compiler id from runner options, or default to 'clang_trunk'
+      const compilerId = (ctx.options.compilerId as string) || 'clang_trunk'
 
       // Build the payload for the Godbolt API
       const payload = {

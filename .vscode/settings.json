@@ -8,4 +8,5 @@
     ],
     "slidev.port": 3030,
     "cSpell.language": "en,nl",
+    "task.saveBeforeRun": "always"
 }

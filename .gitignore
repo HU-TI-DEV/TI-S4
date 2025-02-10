@@ -3,7 +3,7 @@
 *.drawio.bkp
 node_modules/
 .vite/
-# *.lock
+*.lock
 .Programma_for_export_html.drawio
 .DS_store
 xxx/

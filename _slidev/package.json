@@ -2,6 +2,7 @@
   "dependencies": {
     "@slidev/cli": "^51.1.0",
     "@slidev/theme-default": "^0.25.0",
-    "playwright-chromium": "^1.50.1"
+    "playwright-chromium": "^1.50.1",
+    "ansi-to-html": "^0.7.2"
   }
 }

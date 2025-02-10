@@ -6,7 +6,7 @@
         {
             "label": "export slides",
             "type": "shell",
-            "command": "cd _slidev && make -j",
+            "command": "cd _slidev && sudo make -j",
             "problemMatcher": [],
             "group": {
                 "kind": "build",

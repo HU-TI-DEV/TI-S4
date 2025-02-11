@@ -106,7 +106,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 | ma  |         | Project demo (**JH**)                                 |
 | di  |         | Algoritmen & Datastructuren I (C++ / Python) (**JH**) |
 | wo  |         | Voorbereiding loopbaankeuzes (**LB**)                                        |
-| do  |         | Teambegeleiding (**NG**)                              |
+| do  |         | Minormarkt <br> Teambegeleiding (**NG**)                              |
 
 ### Onderwijsweek C7 (17-03-2025)
 

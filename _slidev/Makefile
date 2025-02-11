@@ -1,16 +1,23 @@
-# Zoek alle markdown presentaties in de huidige map
+# Makefile in _slidev directory
+
+# Filter out README.md from the list, in case you have one
 MARKDOWN := $(filter-out README.md, $(wildcard *.md))
 
-# Zorg ervoor dat slidev is geïnstalleerd in path
-# Er is een bug met playwright headless & WSL2, dat is waarom we DISPLAY unsetten
-# Dat kostte me maar een paar uur om te vinden.
-SLIDEV := env -u DISPLAY slidev
-SLIDEV_OPTIONS ?= \
-	--with-toc
+# Slidev command (unsetting DISPLAY for headless export)
+SLIDEV := env -u DISPLAY bun --bun node_modules/.bin/slidev
 
-# Genereer een lijst van <input.md>:<output.pdf> paren
-# We gebruiken grep om de regel met 'output:' op te halen, en cut voor het pad.
-# Formaat: "les-foo.md:./programma/les-foo.pdf"
+# Default options for Slidev
+SLIDEV_OPTIONS ?= \
+	--with-toc \
+	--timeout 60000
+
+# Ghostscript settings for PDF optimization
+GS_DEVICE ?= pdfwrite
+GS_PROFILE ?= /ebook
+GS_COMPAT ?= 1.4
+
+# We create a list of pairs: "<mdfile>:<pdfpath>"
+# from lines starting with `output:` in the frontmatter.
 FILES = $(shell \
 	for f in $(MARKDOWN); do \
 	  OUT=$$(grep '^output:' $$f | cut -d ' ' -f 2); \
@@ -20,35 +27,44 @@ FILES = $(shell \
 	done \
 )
 
-# Hier extraheren we de output-paden als losse targets
+# Extract just the PDF paths from those pairs
 TARGETS = $(foreach pair,$(FILES),$(word 2,$(subst :, ,$(pair))))
 
+# By default, make all PDFs
 .PHONY: all
 all: $(TARGETS)
 
-# Automatisch een recipe genereren voor elk (md,output)-paar
-# $(word 1,...) is het .md-bestand, $(word 2,...) is het output-pad
-# We roepen 'slidev export' aan met $(SLIDEV_OPTIONS).
+###
+# Next, we auto-generate a rule for each pair:  pdf-file : md-file (+ optional images)
+# That way, `make path/to/file.pdf` is recognized by Make, and only rebuilds if needed.
+###
+
 define build_presentation
+# Grab the two parts: $(1) -> .md file, $(2) -> .pdf output
 $(2): $(1)
-	@echo "Exporting $(1) to $(2) (intermediate: $(2).temp.pdf)"
+	@echo "Exporting $(1) -> $(2).temp.pdf"
 	$(SLIDEV) export $(1) --output $(2).temp.pdf $(SLIDEV_OPTIONS)
-	@echo "Optimising PDF with Ghostscript..."
+
+	@echo "Optimizing PDF with Ghostscript..."
 	gs -q \
 	   -dNOPAUSE -dBATCH \
-	   -sDEVICE=pdfwrite \
-	   -dPDFSETTINGS=/ebook \
-	   -dCompatibilityLevel=1.4 \
+	   -sDEVICE=$(GS_DEVICE) \
+	   -dPDFSETTINGS=$(GS_PROFILE) \
+	   -dCompatibilityLevel=$(GS_COMPAT) \
 	   -sOutputFile=$(2) \
 	   $(2).temp.pdf
-	@rm -f $(2).temp.pdf
-	@echo "Done -> $(2)"
+
+	rm -f $(2).temp.pdf
+	@echo "Done -> $(2)\n"
 endef
 
-# Voor elke entry in FILES maken we een rule
-$(foreach pair,$(FILES),$(eval $(call build_presentation,$(word 1,$(subst :, ,$(pair))),$(word 2,$(subst :, ,$(pair))))))
+# Here we evaluate that rule for each pair
+$(foreach pair,$(FILES),$(eval \
+  $(call build_presentation,$(word 1,$(subst :, ,$(pair))),$(word 2,$(subst :, ,$(pair))))))
 
-# Optioneel: opruimen van de gegenereerde bestanden
+###
+# (Optional) Clean target: remove all generated PDFs
+###
 .PHONY: clean
 clean:
 	rm -f $(TARGETS)

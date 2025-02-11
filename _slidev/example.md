@@ -9,6 +9,7 @@ output: ./example-slides.pdf
 
 <Pagination classNames="text-gray-300" />
 
+
 ---
 layout: table-of-contents
 hideInToc: false
@@ -104,14 +105,28 @@ indexRedirectType: external
 
 ---
 
+# JS
+
+```js {monaco-run}
+
+console.log("hello world")
+
+```
+
+---
+
 # Code
 
-```cpp
+```cpp {monaco-run}
+#include <iostream>
+
 int main() {
     int i = 1234567890;
-    std::cout << "Hallo wereld";
+    std::cout << "Hallo wereld " << __VERSION__;
 }
 ```
+
+---
 
 <br>
 
@@ -133,5 +148,3 @@ state CurrentSite #pink {
     Schedule -> AlarmSupression
 }
 ```
-
-

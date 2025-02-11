@@ -4,9 +4,15 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "export slides",
+            "label": "Present current slide",
             "type": "shell",
-            "command": "cd _slidev && make -j",
+            "command": "source ~/.zshrc && cd _slidev && bun --bun node_modules/.bin/slidev --open ${file} --bind 0.0.0.0 --port 3030",
+            "problemMatcher": [],
+        },
+        {
+            "label": "Export current slide",
+            "type": "shell",
+            "command": "source ~/.zshrc && cd _slidev && make `grep '^output:' ${file} | cut -d ' ' -f 2`",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
@@ -14,16 +20,14 @@
             }
         },
         {
-            "label": "present current slide",
+            "label": "Export all slides",
             "type": "shell",
-            "command": "cd _slidev && slidev --open ${file}  --bind 0.0.0.0 --port 3030",
+            "command": "source ~/.zshrc && cd _slidev && make -j",
             "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         },
-        {
-            "label": "install dependencies",
-            "type": "shell",
-            "command": "cd _slidev/slidev-theme-ti && bun install",
-            "problemMatcher": []
-        }
     ]
 }

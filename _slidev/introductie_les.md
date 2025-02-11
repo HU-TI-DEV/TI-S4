@@ -34,9 +34,16 @@ En jullie zullen ook Teun Pieter nog hier en daar zien :)
 
 ---
 hideInToc: true
+layout: image-right
+image: https://i.mandejan.nl/profielfoto.jpg
 ---
 
 # Jan Halsema
+
+- Studies
+  - TI
+  - Medical Imaging
+  - Applied Data Science
 
 - Expertise: C++, Python, Algoritmen & Datastructuren, Assembly, Vision
 - Dit semester ook: Product Owner
@@ -52,9 +59,10 @@ layout: two-cols
 - Daarna bij TI uitgekomen
 - Tijdens studie: studentassistent, ZZP Software Engineer, TI reisbureau
 - Na afstuderen docent geworden:
-    - Propedeuse AI, Propedeuse CSC/TI, THDE, THGA, CSPE2, INNO
+    - Propedeuse AI, Propedeuse CSC/TI, THDE, THGA, CPSE2, INNO
     - Ontwikkelwerk aan S4, INNO, Stage 2026
     - Toekomstig coördineren van Propedeuse TI
+
 
 Verder in de toekomst:
 - BDB halen, een Master gaan doen..
@@ -64,7 +72,11 @@ Verder in de toekomst:
 
 ::right::
 
-
+<v-switch> 
+    <template #1> <img src="./photo_2020-05-08_12-55-09.jpg"> </template>
+    <template #2> <img src="./10212094492691294.jpg"> </template>
+    <template #3> <img src="./nick_lab.png" style="width: 400px; height: auto; display: block; margin: auto;"> </template>
+</v-switch>
 
 ---
 

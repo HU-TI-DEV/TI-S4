@@ -13,7 +13,9 @@
 				"ms-vscode.cmake-tools",
 				"ms-vscode.cpptools-extension-pack",
 				"darkriszty.markdown-table-prettify",
-				"antfu.slidev"
+				"antfu.slidev",
+				"ms-vscode.makefile-tools",
+				"SanaAjani.taskrunnercode"
 			]
 		}
 	},
@@ -35,14 +37,11 @@
 		// Uncomment the next line to use a non-root user.
 		// "--user=vscode"
 		"--sysctl", "net.ipv6.conf.all.disable_ipv6=1"
-	]
+	],
 
 	// Uncomment the next line to run commands after the container is created.
-	// "postCreateCommand": "cat /etc/os-release",
-
-	// Configure tool-specific properties.
-	// "customizations": {},
+	"postCreateCommand": "bash -i .devcontainer/install-deps.sh"
 
 	// Uncomment to connect as an existing user other than the container default. More info: https://aka.ms/dev-containers-non-root.
-	// "remoteUser": "devcontainer"
+	//"remoteUser": "root"
 }

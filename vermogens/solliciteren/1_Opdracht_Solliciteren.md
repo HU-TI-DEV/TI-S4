@@ -2,7 +2,7 @@
 
 Binnen dit project is het de bedoeling dat je je voorbereidt op het zoeken, vinden en verkrijgen van een stageplaats. Om deze vaardigheden te oefenen moeten jullie solliciteren op een rol binnen het project waar jullie aan zouden willen werken. De vacatures waar je op kunt reageren kun je vinden in de map [vacatures](vacatures). Heb je vragen over de vacatures? Stel ze dan gerust tijdens de werkcolleges.
 
-Zie [de pagina over solliciteren](.\README.md) voor informatie over welke onderdelen er minimaal verwacht worden in een sollicitatiebrief.
+Zie [de pagina over solliciteren](./README.md) voor informatie over welke onderdelen er minimaal verwacht worden in een sollicitatiebrief.
 
 Let op dat een goede sollicitatiebrief begeleid wordt door een (up to date!) CV. In bovenstaande link kun je ook tips vinden voor het maken van je CV.
 

@@ -25,15 +25,69 @@ hideInToc: true
 
 # CV
 
+Curriculum Vitae - 'levensloop' (uit Latijn)
+
+<v-clicks>
+
+- Eerste indruk
+- Nadruk op indruk
+
+</v-clicks>
+
+<v-click>
+Een voller CV is niet altijd beter
+</v-click>
+
+<!-- Gemiddeld genomen wordt er maar zo'n 7 seconden naar een CV gekeken -->
+
+---
+hideInToc: true
+---
+
+# CV
+
+Welke onderdelen?
 <v-clicks>
 
 - Persoonsgegevens
-- Persoonlijke intro*
-- Ervaring, opleidingen
+- Persoonlijk intro*
+- Ervaring, opleidingen, nevenactiviteiten
+- Vaardigheden, competenties
 - Hobby's? 
 - Verder?
 
 </v-clicks>
+
+---
+layout: two-cols
+hideInToc: true
+---
+
+# CV; hoe, waar?
+
+<v-click>
+
+Veel tools voor het maken:
+- Word
+- Adobe (/Photoshop)
+- Canva
+- ... Paint ...
+- Markdown
+- Online tools
+
+</v-click>
+
+::right::
+
+<br>
+<v-click>
+
+Waar?
+- Fysiek
+- Online
+- LinkedIn(?)
+
+</v-click>
 
 ---
 

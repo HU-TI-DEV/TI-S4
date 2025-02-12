@@ -1,10 +1,11 @@
 #include <iostream>
 
 int main() {
-    int a = 4;
-
-    int b = 5;
-
-    std::cout << "Hello world" << std::endl;
+    int a = 5;
+    int b = 0;
+    // Zet hier een breakpoint
+    int c = a / b; // Fout: deling door nul
+    std::cout << "Result: " << c << "\n";
     return 0;
 }
+`

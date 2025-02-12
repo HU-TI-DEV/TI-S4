@@ -63,6 +63,7 @@ stappen verder uitsplitsen in de volgende slides.
 - Vervangt macro’s en constante expressies
 - Verwerkt `#include` statements: voegt header-bestanden in
 - Voert voorwaardelijke compilatie uit via `#ifdef`, `#ifndef` etc.
+- Verwijdert commentaar
 - Eigenlijk alles waar een `#` voor staat heeft met de preprocessor
   te maken
 
@@ -169,7 +170,7 @@ import std; // toekomstmuziek
 
 ---
 
-# Voorwaardelijke Compilatie: Introductie
+# Voorwaardelijke Compilatie
 
 **Wat is voorwaardelijke compilatie?**
 
@@ -199,10 +200,10 @@ int main() {
 ```
 ````
 
-Je kunt de macro `DEBUG` ook definiëren via de command line, zonder deze in de code te zetten
+Je kunt de macro `DEBUG` ook definiëren via de command line (of je buildsysteem), zonder deze in de code te zetten
 
 ```bash
-g++ -DDEBUG -E main.cc -o main.i
+g++ -DDEBUG -E main.cc -o main.ii
 ```
 
 ---
@@ -285,7 +286,7 @@ int main() {
 
 # Include Transformatie: Voorbeeld
 
-Stel je hebt een headerbestand `myheader.h`:
+Stel je hebt een headerbestand `myheader.hh`:
 
 **Na Preprocessing (vereenvoudigd):**
 
@@ -343,7 +344,7 @@ int add(int a, int b) {
 **Compiler opdracht (GCC):**
 
 ```bash
-g++ -S main.cpp -o main.s
+g++ -S main.cc -o main.s
 ```
 
 ---
@@ -389,6 +390,7 @@ add(int, int):
 
 - De assembly-code wordt omgezet in objectcode (van text naar machinecode)
 - Het resultaat is een objectbestand (.o of .obj) dat nog niet zelfstandig uitvoerbaar is
+- Een object bestand bevat informatie over welke functies en variabele deze aanbied en nodig heeft
 
 **Voorbeeld:**
 
@@ -427,6 +429,8 @@ section .rodata
 
 ::right::
 
+# <br>
+
 ```bash
 objdump -D hello.o
 ```
@@ -447,7 +451,514 @@ Disassembly of section .text:
 
 ```
 
-
-
 # <br>
 
+---
+
+# Linking
+
+**Wat gebeurt er bij linken?**
+
+- Meerdere objectbestanden en bibliotheken worden samengevoegd tot één uitvoerbaar bestand
+  - Statische objecten (.o, .a, .lib)
+  - Dynamische objecten (.so, .dll)
+- De linker zorgt voor het oplossen van symbolen (functies en variabelen die in verschillende bestanden of zelfs programmeertalen gedefinieerd zijn)
+- Geeft alles een adres
+- Zet alles in de juiste sectie
+  - text / data / bss
+
+**Voorbeeld:**
+
+```bash
+ld -o hello hello.o
+objdump -D hello
+```
+
+---
+
+# Name mangling
+
+<div class="text-center">
+C / Assembly: Geen overloading, interne naam == externe naam
+</div>
+
+<div class="grid grid-cols-2 gap-4">
+
+```c
+// C
+void print_char(char c) {...}
+void print_int(int x) {...}
+void print_string(const char *s) {...}
+```
+
+```asm
+; Assembler
+print_char: ...
+print_int: ...
+print_string: ...
+```
+</div>
+
+<div class="text-center">
+C++: Overloading, interne naam == mangle(externe naam)
+</div>
+
+<div class="grid grid-cols-2 gap-4">
+
+```cpp
+// C++
+void print(char c) {...}
+void print(int x) {...}
+void print(const char *s) {...}
+```
+
+```asm
+; Assembler
+_Z5printc: ...
+_Z5printi: ...
+_Z5printPKc: ...
+```
+</div>
+
+<div class="text-center">
+C++ met extern "C": Schakelt overloading en mangling uit
+</div>
+
+<div class="grid grid-cols-2 gap-4">
+
+```cpp
+// C++
+extern "C" void print_char(char c) {...}
+extern "C" {
+    void print_int(int x) {...}
+    void print_string(const char *s) {...}
+}
+```
+
+```asm
+; Assembler
+print_char: ...
+
+print_int: ...
+print_string: ...
+⠀
+```
+</div>
+
+---
+
+# Linking 
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+main.cc
+```cpp
+void print_bericht();
+char bericht[] = "Hello";
+int main() {
+    std::cout
+        << "Main: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+    print_bericht();
+}
+```
+
+
+```plantuml
+!theme cyborg
+skinparam nodesep 10
+skinparam ranksep 1
+file main.cc
+file bericht.cc
+package objects {
+  database stdlib.so
+  database main.o
+  database bericht.o
+}
+main.cc --> main.o: compile
+bericht.cc --> bericht.o: compile
+
+artifact main.exe
+objects -> main.exe: link
+```
+
+</div>
+<div>
+bericht.cc
+```cpp
+char bericht[] = "Hello";
+void print_bericht() {
+    std::cout
+        << "Func: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+}
+```
+
+stdout
+```
+Main: [Hello] @ 102032131358752
+Func: [Hello] @ 102032131358758
+```
+
+- Twee kopieën in de sources
+- Twee kopieën in de executable
+
+</div>
+</div>
+<Arrow x1="320" y1="162" x2="540" y2="143" two-way />
+
+---
+
+# Linking 
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+main.cc
+```cpp
+#include "bericht.hh"
+void print_bericht();
+int main() {
+    std::cout
+        << "Main: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+    print_bericht();
+}
+```
+
+
+```plantuml
+!theme cyborg
+skinparam nodesep 10
+skinparam ranksep 1
+file bericht.hh
+file main.cc
+file bericht.cc
+package objects {
+  database stdlib.so
+  database main.o
+  database bericht.o
+}
+bericht.hh -r-> main.cc: include
+bericht.hh -r-> bericht.cc: include
+main.cc --> main.o: compile
+bericht.cc --> bericht.o: compile
+
+artifact main.exe
+objects -> main.exe: link
+```
+
+</div>
+<div>
+bericht.hh
+```cpp
+char bericht[] = "Hello";
+```
+
+bericht.cc
+```cpp
+#include "bericht.hh"
+void print_bericht() {
+    std::cout
+        << "Func: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+}
+```
+
+stdout
+```
+Main: [Hello] @ 102032131358752
+Func: [Hello] @ 102032131358752
+```
+
+- Een kopie in de sources
+- Twee kopieën in de executable
+
+</div>
+</div>
+
+---
+
+# Linking 
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+main.cc
+```cpp
+void print_bericht();
+extern char bericht[];
+int main() {
+    std::cout
+        << "Main: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+    print_bericht();
+}
+```
+
+
+```plantuml
+!theme cyborg
+skinparam nodesep 10
+skinparam ranksep 1
+file main.cc
+file bericht.cc
+package objects {
+  database stdlib.so
+  database main.o
+  database bericht.o
+}
+main.cc --> main.o: compile
+bericht.cc --> bericht.o: compile
+
+artifact main.exe
+objects -> main.exe: link
+```
+
+</div>
+<div>
+bericht.cc
+```cpp
+char bericht[] = "Hello";
+void print_bericht() {
+    std::cout
+        << "Func: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+}
+```
+
+stdout
+```
+Main: [Hello] @ 102032131358752
+Func: [Hello] @ 102032131358752
+```
+
+- Een kopie in de sources
+- Een kopie in de executable
+- Maar...
+
+</div>
+</div>
+
+---
+
+# Linking 
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+main.cc
+```cpp
+void print_bericht();
+extern char bericht[];
+int main() {
+    std::cout
+        << "Main: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+    print_bericht();
+}
+```
+
+
+```plantuml
+!theme cyborg
+skinparam nodesep 10
+skinparam ranksep 1
+file main.cc
+file bericht.cc
+package objects {
+  database stdlib.so
+  database main.o
+  database bericht.o
+}
+main.cc --> main.o: compile
+bericht.cc --> bericht.o: compile
+
+artifact main.exe
+objects -> main.exe: link
+```
+
+</div>
+<div>
+bericht.cc
+```cpp
+int bericht = 42;
+void print_bericht() {
+    std::cout
+        << "Func: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+}
+```
+
+stdout
+```
+Main: [Hello] @ 102032131358752
+Func: [
+
+Program terminated with signal: SIGSEGV
+```
+
+- Voor de linker is een label maar een geheugenplekje
+
+</div>
+</div>
+
+---
+
+# Linking 
+
+<div class="grid grid-cols-2 gap-4">
+<div>
+main.cc
+```cpp
+#include "bericht.hh"
+void print_bericht();
+int main() {
+    std::cout
+        << "Main: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+    print_bericht();
+}
+```
+
+
+```plantuml
+!theme cyborg
+skinparam nodesep 10
+skinparam ranksep 1
+file bericht.hh
+file main.cc
+file bericht.cc
+package objects {
+  database stdlib.so
+  database main.o
+  database bericht.o
+}
+bericht.hh -r-> main.cc: include
+bericht.hh -r-> bericht.cc: include
+main.cc --> main.o: compile
+bericht.cc --> bericht.o: compile
+
+artifact main.exe
+objects -> main.exe: link
+```
+
+</div>
+<div>
+bericht.hh
+```cpp
+char bericht[]; // declaratie (makkelijk)
+```
+
+bericht.cc
+```cpp
+#include "bericht.hh"
+char bericht[] = "Hello" // definitie
+void print_bericht() {
+    std::cout
+        << "Func: [" << bericht << "]"
+        << " @ " << (size_t) bericht << "\n";
+}
+```
+
+stdout
+```
+Main: [Hello] @ 102032131358752
+Func: [Hello] @ 102032131358752
+```
+
+- Een kopie in de sources
+- Een kopie in de executable
+- Geen onenigheid!
+
+</div>
+</div>
+
+---
+layout: center
+---
+
+# \<br>
+
+---
+
+# Devcontainers & Ontwikkelomgeving
+
+**Wat zijn devcontainers?**
+
+- Docker containers die als complete ontwikkelomgeving fungeren.
+- Bieden een consistente setup voor alle teamleden.
+- Verminderen "it works on my machine" problemen.
+
+**Hoe werken ze?**
+
+- Gebruik de **Remote - Containers** extensie in VSCode.
+- Start een devcontainer via de command palette.
+- Gebruik de "Dev Container: New C++ Project" template als basis.
+
+---
+
+# CMake 
+
+**Waarom CMake?**
+
+- Cross-platform build systeem.
+- Beheert buildprocessen via `CMakeLists.txt`.
+- Integreert met VSCode voor betere code-completion en debugging.
+
+**Voorbeeld van een CMakeLists.txt:**
+
+```cmake
+cmake_minimum_required(VERSION 3.10)
+project(HelloWorld)
+
+# Zorgt voor het genereren van compile_commands.json voor IntelliSense
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
+add_executable(hello main.cc)
+```
+
+---
+
+# Configuratie CMake voor Autocomplete
+
+**Stap-voor-stap:**
+
+1. **CMakeLists.txt aanpassen:** Voeg `set(CMAKE_EXPORT_COMPILE_COMMANDS ON)` toe.
+2. **Build directory maken:**
+
+   ```bash
+   mkdir build && cd build
+   cmake ..
+   ```
+
+3. **VSCode instellen:**  
+   Open de Command Palette (`Ctrl+Shift+P`) en kies `C/C++: Edit Configurations (UI)` om het pad naar `build/compile_commands.json` in te stellen.
+
+---
+
+# Debuggen in C++
+
+**Basisprincipes:**
+
+- **Breakpoints:** Stop de uitvoering op een specifieke regel.
+- **Step Over/Into:** Voer code regel voor regel uit.
+- **Variabelen inspecteren:** Bekijk de waarde van variabelen tijdens runtime.
+
+**Voorbeeldcode:**
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;
+    int b = 0;
+    // Zet hier een breakpoint
+    int c = a / b; // Fout: deling door nul
+    std::cout << "Result: " << c << "\n";
+    return 0;
+}
+```
+
+---
+layout: center
+---
+
+# \0

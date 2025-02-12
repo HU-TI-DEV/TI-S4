@@ -8,4 +8,4 @@ int main() {
     std::cout << "Result: " << c << "\n";
     return 0;
 }
-`
+ 

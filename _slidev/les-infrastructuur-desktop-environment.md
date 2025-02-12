@@ -228,7 +228,7 @@ int berekenFactorial(int n) {
 }
 
 int main() {
-    std::cout << "Factorial van 5 is " << berekenFactorial(5) << "\n";;
+    std::cout << "Factorial van 5 is " << berekenFactorial(5) << "\n";
     return 0;
 }
 ```
@@ -789,8 +789,7 @@ void print_bericht() {
 
 stdout
 ```
-Main: [Hello] @ 102032131358752
-Func: [
+Main: [
 
 Program terminated with signal: SIGSEGV
 ```

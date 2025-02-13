@@ -74,7 +74,7 @@ De docenten zijn:
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
-| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/gazebo/files/Hoe-werken-modellering-en-simulatie-pakketten-voor-git.pptx) |
+| di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) |
 | wo  |         | Environment Troubleshooting (**JH & BB**)                                                                                                          |
 | do  |         | C++ STL (**NG**)                                                                                                                                   |
 

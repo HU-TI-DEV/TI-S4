@@ -12,12 +12,18 @@ In deze lessenreeks maken we kennis met professionele desktop-ontwikkeling in C+
 1. [Opzetten van een C++ project in VSCode](./VSCode_C++_setup.md)  
    Bouw een “Hello World”-applicatie met CMake en leer hoe je je project configureert in VSCode.
 
-2. [Debugging in actie](./Debugging.md)  
-   Oefen met breakpoints en stepping om runtime errors, zoals een nullptr dereferentie, op te sporen en te verhelpen.
-
 ## Inleveren op Canvas
 
-Opdracht: [Desktop-Environment Opdracht](./Assignment_opzetten_ontwikkelomgeving.md)
+Opdracht 1: [Buildomgeving opzetten](./Assignment_opzetten_ontwikkelomgeving.md)
+
+Hier ga je een Docker maken die een CMake applicatie kan bouwen en
+uitvoeren.
+
+
+Opdracht 2: [Devcontainer opzetten](./Assignment_devcontainers_cmake_debug.md)
+
+Hier ga je een Devcontainer opzetten en een simpele applicatie
+maken en debuggen.
 
 # Programma Desktopontwikkeling en Tooling - Deel II
 

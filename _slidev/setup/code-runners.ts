@@ -1,7 +1,12 @@
 import { defineCodeRunnersSetup } from '@slidev/types'
 import Convert from 'ansi-to-html'
 
-const convert = new Convert()
+const convert = new Convert({
+  colors: [
+    '#333333', '#C4265E', '#86B42B', '#B3B42B', '#6A7EC8', '#8C6BC8', '#56ADBC', '#E3E3DD',
+    '#666666', '#F92672', '#A6E22E', '#E2E22E', '#819AFF', '#AE81FF', '#66D9EF', '#F8F8F2',
+  ]
+})
 
 export default defineCodeRunnersSetup(() => {
   return {
@@ -57,8 +62,6 @@ export default defineCodeRunnersSetup(() => {
         } else {
           output = stdout + (stderr ? "\n" + stderr : "");
         }
-
-        console.log(output)
 
         // Process ANSI escape codes into HTML formatting and wrap it in a pre tag.
         // Process ANSI escape codes with ansi2html-extended.

@@ -15,7 +15,8 @@
 				"darkriszty.markdown-table-prettify",
 				"antfu.slidev",
 				"ms-vscode.makefile-tools",
-				"SanaAjani.taskrunnercode"
+				"SanaAjani.taskrunnercode",
+				"jebbs.plantuml"
 			]
 		}
 	},

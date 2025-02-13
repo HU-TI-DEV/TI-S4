@@ -162,7 +162,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | ma  | 2de Paasdag |                                                                                           |
 | di  |             | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
 | wo  |             | Projectdemo (**JH, NG**)                                                                  |
-| do  |             | Teamcoaching (**NG**)                                                                     |
+| do  |             | Stagebedrijvendag <br> Teamcoaching (**NG**)                                                                     |
 
 ### Onderwijsweek D3 (28-04-2025)
 

@@ -75,8 +75,8 @@ De docenten zijn:
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
 | di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) |
-| wo  |         | Environment Troubleshooting (**JH & BB**)                                                                                                          |
-| do  |         | C++ STL (**NG**)                                                                                                                                   |
+| wo  |         | C++ Intro gevorderde concepten (**JH**)                                                                                                          |
+| do  |         | Feedback CV & Sollicatie brief (**BB**) , C++ STL (**NG**)                                                                                                                                   |
 
 ### Onderwijsweek C4 (24-02-2025)
 

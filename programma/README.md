@@ -73,7 +73,7 @@ De docenten zijn:
 
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
+| ma  |         |[Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
 | di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) |
 | wo  |         | C++ Intro gevorderde concepten (**JH**)                                                                                                          |
 | do  |         | 1) Feedback CV & Sollicatie brief 2) Bewustwording kwaliteiten 3) [Teamrollen Belbin](https://werkenmetteamrollen.nl/vragenlijst/) (**BB**) |
@@ -94,7 +94,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 
 | Dag | Project | Kennissessie                                                                                                          |
 |-----|---------|-----------------------------------------------------------------------------------------------------------------------|
-| ma  |         | [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                                |
+| ma  |         | LET OP! we beginnen om 10:00!!!   [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                                |
 | di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                               |
 | wo  |         | Scrum Refresher (**NG, BB**)                                                                                          |
 | do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |

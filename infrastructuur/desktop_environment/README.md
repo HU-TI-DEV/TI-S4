@@ -12,6 +12,8 @@ In deze lessenreeks maken we kennis met professionele desktop-ontwikkeling in C+
 1. [Opzetten van een C++ project in VSCode](./VSCode_C++_setup.md)  
    Bouw een “Hello World”-applicatie met CMake en leer hoe je je project configureert in VSCode.
 
+2. [pdf](./files/les-infrastructuur-desktop-environment.pdf) van de les.
+
 ## Inleveren op Canvas
 
 Opdracht 1: [Buildomgeving opzetten](./Assignment_opzetten_ontwikkelomgeving.md)

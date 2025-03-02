@@ -1,0 +1,2112 @@
+<sdf version='1.10'>
+  <world name='nao_world'>
+    <physics name='1ms' type='ignored'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='ignition::gazebo::systems::Physics' filename='ignition-gazebo-physics-system'/>
+    <plugin name='ignition::gazebo::systems::UserCommands' filename='ignition-gazebo-user-commands-system'/>
+    <plugin name='ignition::gazebo::systems::SceneBroadcaster' filename='ignition-gazebo-scene-broadcaster-system'/>
+    <gui fullscreen='false'>
+      <plugin name='3D View' filename='GzScene3D'>
+        <ignition-gui>
+          <title>3D View</title>
+          <property type='bool' key='showTitleBar'>false</property>
+          <property type='string' key='state'>docked</property>
+        </ignition-gui>
+        <engine>ogre2</engine>
+        <scene>scene</scene>
+        <ambient_light>0.4 0.4 0.4</ambient_light>
+        <background_color>0.8 0.8 0.8</background_color>
+        <camera_pose>0.4 0.4 0.6 0 0.5 -2.5</camera_pose>
+      </plugin>
+      <plugin name='World control' filename='WorldControl'>
+        <ignition-gui>
+          <title>World control</title>
+          <property type='bool' key='showTitleBar'>false</property>
+          <property type='bool' key='resizable'>false</property>
+          <property type='double' key='height'>72</property>
+          <property type='double' key='width'>121</property>
+          <property type='double' key='z'>1</property>
+          <property type='string' key='state'>floating</property>
+          <anchors target='3D View'>
+            <line own='left' target='left'/>
+            <line own='bottom' target='bottom'/>
+          </anchors>
+        </ignition-gui>
+        <play_pause>true</play_pause>
+        <step>true</step>
+        <start_paused>true</start_paused>
+      </plugin>
+      <plugin name='World stats' filename='WorldStats'>
+        <ignition-gui>
+          <title>World stats</title>
+          <property type='bool' key='showTitleBar'>false</property>
+          <property type='bool' key='resizable'>false</property>
+          <property type='double' key='height'>110</property>
+          <property type='double' key='width'>290</property>
+          <property type='double' key='z'>1</property>
+          <property type='string' key='state'>floating</property>
+          <anchors target='3D View'>
+            <line own='right' target='right'/>
+            <line own='bottom' target='bottom'/>
+          </anchors>
+        </ignition-gui>
+        <sim_time>true</sim_time>
+        <real_time>true</real_time>
+        <real_time_factor>true</real_time_factor>
+        <iterations>true</iterations>
+      </plugin>
+      <plugin name='JointPositionController' filename='JointPositionController'>
+        <ignition-gui>
+          <property type='double' key='height'>600</property>
+          <property type='double' key='width'>400</property>
+          <property type='string' key='state'>floating</property>
+          <anchors target='3D View'>
+            <line own='right' target='right'/>
+            <line own='top' target='top'/>
+          </anchors>
+        </ignition-gui>
+        <model_name>Nao</model_name>
+      </plugin>
+    </gui>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <model name='Nao'>
+      <pose>0 0 0.34999999999999998 0 0 0</pose>
+      <link name='Torso'>
+        <pose>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>-0.00413 0 0.04342 0 0 0</pose>
+          <mass>1.04956</mass>
+          <inertia>
+            <ixx>0.0050623400000000002</ixx>
+            <ixy>1.43116e-05</ixy>
+            <ixz>0.000155191</ixz>
+            <iyy>0.0048801399999999998</iyy>
+            <iyz>-2.70793e-05</iyz>
+            <izz>0.0016103000000000001</izz>
+          </inertia>
+        </inertial>
+        <collision name='Torso_collision'>
+          <pose>0 0 0.01 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.10000000000000001 0.10000000000000001 0.21149999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='Torso_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/Torso.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='World' type='fixed'>
+        <child>Torso</child>
+        <parent>world</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-inf</lower>
+            <upper>inf</upper>
+            <effort>inf</effort>
+            <velocity>inf</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <link name='Neck'>
+        <pose>0 0 0.1265 0 0 0</pose>
+        <inertial>
+          <pose>-1.0000000000000001e-05 0 -0.02742 0 0 0</pose>
+          <mass>0.064420000000000005</mass>
+          <inertia>
+            <ixx>7.4993000000000005e-05</ixx>
+            <ixy>1.57e-09</ixy>
+            <ixz>-1.8340000000000001e-08</ixz>
+            <iyy>7.6000000000000004e-05</iyy>
+            <iyz>-5.2950000000000001e-08</iyz>
+            <izz>5.5337299999999996e-06</izz>
+          </inertia>
+        </inertial>
+        <visual name='Neck_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/HeadYaw.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='HeadYaw' type='revolute'>
+        <child>Neck</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.0856699999999999</lower>
+            <upper>2.0856699999999999</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>HeadYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='Head'>
+        <pose>0 0 0.1265 0 0 0</pose>
+        <inertial>
+          <pose>-0.0011199999999999999 0 0.052580000000000002 0 0 0</pose>
+          <mass>0.60533000000000003</mass>
+          <inertia>
+            <ixx>0.0026313</ixx>
+            <ixy>8.7881399999999992e-06</ixy>
+            <ixz>4.0984700000000001e-05</ixz>
+            <iyy>0.0024911199999999999</iyy>
+            <iyz>-2.99579e-05</iyz>
+            <izz>0.00098573600000000008</izz>
+          </inertia>
+        </inertial>
+        <collision name='Head_collision'>
+          <pose>0 0 0.058000000000000003 1.5700000000000001 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.14000000000000001</length>
+              <radius>0.040000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='Head_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/HeadPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <velocity_decay/>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='HeadPitch' type='revolute'>
+        <child>Head</child>
+        <parent>Neck</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.67195199999999999</lower>
+            <upper>0.514872</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>HeadPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LPelvis'>
+        <pose>0 0.050000000000000003 -0.08500000000000002 0 0 0</pose>
+        <inertial>
+          <pose>-0.0078100000000000001 -0.011140000000000001 0.026610000000000002 0 0 0</pose>
+          <mass>0.069809999999999997</mass>
+          <inertia>
+            <ixx>8.1502300000000001e-05</ixx>
+            <ixy>-4.9944900000000004e-06</ixy>
+            <ixz>1.2748199999999999e-05</ixz>
+            <iyy>0.000101326</iyy>
+            <iyz>2.3454700000000001e-05</iyz>
+            <izz>6.2623600000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LPelvis_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LHipYawPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LHipYawPitch' type='revolute'>
+        <child>LPelvis</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz>0 0.70710678118654757 -0.70710678118654757</xyz>
+          <limit>
+            <lower>-1.1452899999999999</lower>
+            <upper>0.74071799999999999</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LHipYawPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LHip'>
+        <pose>0 0.050000000000000003 -0.08500000000000002 0 0 0</pose>
+        <inertial>
+          <pose>-0.01549 0.00029 -0.0051500000000000001 0 0 0</pose>
+          <mass>0.13053000000000001</mass>
+          <inertia>
+            <ixx>2.7583500000000001e-05</ixx>
+            <ixy>-2.2329999999999999e-08</ixy>
+            <ixz>-4.0816400000000003e-06</ixz>
+            <iyy>9.8270599999999994e-05</iyy>
+            <iyz>-4.1899999999999998e-09</iyz>
+            <izz>8.8099700000000006e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LHip_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LHipRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LHipRoll' type='revolute'>
+        <child>LHip</child>
+        <parent>LPelvis</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.37943500000000002</lower>
+            <upper>0.79046000000000005</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LHipRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LThigh'>
+        <pose>0 0.050000000000000003 -0.08500000000000002 0 0 0</pose>
+        <inertial>
+          <pose>0.0013799999999999999 0.0022100000000000002 -0.05373 0 0 0</pose>
+          <mass>0.38968000000000003</mass>
+          <inertia>
+            <ixx>0.0016367199999999999</ixx>
+            <ixy>9.2450999999999996e-07</ixy>
+            <ixz>8.5306699999999994e-05</ixz>
+            <iyy>0.00159107</iyy>
+            <iyz>3.8361600000000002e-05</iyz>
+            <izz>0.00030374299999999998</izz>
+          </inertia>
+        </inertial>
+        <collision name='LThigh_collision'>
+          <pose>0 0 -0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.10000000000000001</length>
+              <radius>0.040000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='LThigh_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LHipPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LHipPitch' type='revolute'>
+        <child>LThigh</child>
+        <parent>LHip</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.53589</lower>
+            <upper>0.48398000000000002</upper>
+            <effort>59.5</effort>
+            <velocity>6.4023899999999996</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LHipPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LTibia'>
+        <pose>0 0.050000000000000003 -0.185 0 0 0</pose>
+        <inertial>
+          <pose>0.0045300000000000002 0.0022499999999999998 -0.049360000000000001 0 0 0</pose>
+          <mass>0.29142000000000001</mass>
+          <inertia>
+            <ixx>0.0011820800000000001</ixx>
+            <ixy>6.3361999999999998e-07</ixy>
+            <ixz>3.6497e-05</ixz>
+            <iyy>0.0011286499999999999</iyy>
+            <iyz>3.9495200000000001e-05</iyz>
+            <izz>0.000193227</izz>
+          </inertia>
+        </inertial>
+        <collision name='LTibia_collision'>
+          <pose>0 0 -0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.10000000000000001</length>
+              <radius>0.040000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='LTibia_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LKneePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LKneePitch' type='revolute'>
+        <child>LTibia</child>
+        <parent>LThigh</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.092327900000000004</lower>
+            <upper>2.1125500000000001</upper>
+            <effort>59.5</effort>
+            <velocity>6.4023899999999996</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LKneePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LAnkle'>
+        <pose>0 0.050000000000000003 -0.28789999999999999 0 0 0</pose>
+        <inertial>
+          <pose>0.00044999999999999999 0.00029 0.0068500000000000002 0 0 0</pose>
+          <mass>0.13416</mass>
+          <inertia>
+            <ixx>3.8509800000000002e-05</ixx>
+            <ixy>-2.634e-08</ixy>
+            <ixz>3.8619399999999997e-06</ixz>
+            <iyy>7.4265300000000002e-05</iyy>
+            <iyz>1.8340000000000001e-08</iyz>
+            <izz>5.4865399999999998e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LAnkle_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LAnklePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LAnklePitch' type='revolute'>
+        <child>LAnkle</child>
+        <parent>LTibia</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.1894400000000001</lower>
+            <upper>0.92258099999999998</upper>
+            <effort>59.5</effort>
+            <velocity>6.4023899999999996</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LAnklePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LSole'>
+        <pose>0 0.050000000000000003 -0.28789999999999999 0 0 0</pose>
+        <inertial>
+          <pose>0.025420000000000002 0.0033 -0.032390000000000002 0 0 0</pose>
+          <mass>0.16184000000000001</mass>
+          <inertia>
+            <ixx>0.000269442</ixx>
+            <ixy>-5.6957200000000001e-06</ixy>
+            <ixz>0.00013937899999999999</ixz>
+            <iyy>0.00064434300000000002</iyy>
+            <iyz>1.8740899999999999e-05</iyz>
+            <izz>0.00052575699999999996</izz>
+          </inertia>
+        </inertial>
+        <collision name='LSole_collision'>
+          <pose>0.02 0.0050000000000000001 -0.036999999999999998 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.16 0.085000000000000006 0.014999999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0.10000000000000001</max_vel>
+                <min_depth>0.0030000000000000001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='LSole_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LAnkleRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LAnkleRoll' type='revolute'>
+        <child>LSole</child>
+        <parent>LAnkle</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.39776099999999998</lower>
+            <upper>0.76899200000000001</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LAnkleRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LShoulder'>
+        <pose>0 0.098000000000000004 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>-0.00165 -0.026630000000000001 0.00013999999999999999 0 0 0</pose>
+          <mass>0.075039999999999996</mass>
+          <inertia>
+            <ixx>8.4284300000000002e-05</ixx>
+            <ixy>-2.02802e-06</ixy>
+            <ixz>2.3380000000000002e-08</ixz>
+            <iyy>1.41556e-05</iyy>
+            <iyz>-1.9720000000000001e-08</iyz>
+            <izz>8.6419499999999995e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='LShoulder_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LShoulderPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LShoulderPitch' type='revolute'>
+        <child>LShoulder</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-2.0856699999999999</lower>
+            <upper>2.0856699999999999</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LShoulderPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LBicep'>
+        <pose>0 0.098000000000000004 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>0.024549999999999999 0.0056299999999999996 0.0033 0 0 0</pose>
+          <mass>0.15776999999999999</mass>
+          <inertia>
+            <ixx>9.3899899999999999e-05</ixx>
+            <ixy>-4.7144500000000002e-05</ixy>
+            <ixz>-2.6994700000000001e-05</ixz>
+            <iyy>0.00037151900000000001</iyy>
+            <iyz>-2.4597700000000002e-06</iyz>
+            <izz>0.00034190099999999998</izz>
+          </inertia>
+        </inertial>
+        <collision name='LBicep_collision'>
+          <pose>0.044999999999999998 0 0 1.5700000000000001 -5.5511151231257827e-17 1.8000000000000003</pose>
+          <geometry>
+            <cylinder>
+              <length>0.089999999999999997</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='LBicep_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LShoulderRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LShoulderRoll' type='revolute'>
+        <child>LBicep</child>
+        <parent>LShoulder</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-0.31415900000000002</lower>
+            <upper>1.3264499999999999</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LShoulderRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LElbow'>
+        <pose>0.105 0.113 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>-0.027439999999999999 0 -0.00013999999999999999 0 0 0</pose>
+          <mass>0.064829999999999999</mass>
+          <inertia>
+            <ixx>5.5971500000000003e-06</ixx>
+            <ixy>4.2100000000000001e-09</ixy>
+            <ixz>4.3189999999999998e-08</ixz>
+            <iyy>7.5433100000000001e-05</iyy>
+            <iyz>-1.8400000000000001e-09</iyz>
+            <izz>7.6443400000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LElbowYaw' type='revolute'>
+        <child>LElbow</child>
+        <parent>LBicep</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-2.0856699999999999</lower>
+            <upper>2.0856699999999999</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LElbowYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LForeArm'>
+        <pose>0.105 0.113 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>0.025559999999999999 0.00281 0.00076000000000000004 0 0 0</pose>
+          <mass>0.077609999999999998</mass>
+          <inertia>
+            <ixx>2.5332200000000001e-05</ixx>
+            <ixy>-2.3427099999999999e-06</ixy>
+            <ixz>7.4589999999999995e-08</ixz>
+            <iyy>8.91322e-05</iyy>
+            <iyz>-2.655e-08</iyz>
+            <izz>8.72873e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='LForeArm_collision'>
+          <pose>0.025325 0 0 1.5700000000000001 -5.5511151231257827e-17 1.5700000000000001</pose>
+          <geometry>
+            <cylinder>
+              <length>0.050650000000000001</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='LForeArm_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LElbowRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LElbowRoll' type='revolute'>
+        <child>LForeArm</child>
+        <parent>LElbow</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1.5446200000000001</lower>
+            <upper>-0.034906600000000003</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LElbowRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='LWrist'>
+        <pose>0.16095000000000001 0.113 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>0.034340000000000002 -0.00088000000000000003 0.0030799999999999998 0 0 0</pose>
+          <mass>0.18532999999999999</mass>
+          <inertia>
+            <ixx>7.0549299999999999e-05</ixx>
+            <ixy>5.7159900000000001e-06</ixy>
+            <ixz>-2.2474399999999999e-05</ixz>
+            <iyy>0.00035606199999999998</iyy>
+            <iyz>3.1777099999999999e-06</iyz>
+            <izz>0.00035191900000000002</izz>
+          </inertia>
+        </inertial>
+        <collision name='LWrist_collision'>
+          <pose>0.039 0 0 1.27 -1.1102230246251565e-16 1.5700000000000001</pose>
+          <geometry>
+            <box>
+              <size>0.059999999999999998 0.040000000000000001 0.058000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='LWrist_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/LWristYaw.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='LWristYaw' type='revolute'>
+        <child>LWrist</child>
+        <parent>LForeArm</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.8238700000000001</lower>
+            <upper>1.8238700000000001</upper>
+            <effort>40.25</effort>
+            <velocity>24.622900000000001</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>LWristYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RPelvis'>
+        <pose>0 -0.050000000000000003 -0.08500000000000002 0 0 0</pose>
+        <inertial>
+          <pose>-0.0078100000000000001 0.011140000000000001 0.026610000000000002 0 0 0</pose>
+          <mass>0.069809999999999997</mass>
+          <inertia>
+            <ixx>8.9971999999999998e-05</ixx>
+            <ixy>5.0021900000000003e-06</ixy>
+            <ixz>1.27352e-05</ixz>
+            <iyy>0.00010552600000000001</iyy>
+            <iyz>-2.7700800000000001e-05</iyz>
+            <izz>6.6887199999999999e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='RPelvis_collision'>
+          <pose>0 0 -0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.10000000000000001</length>
+              <radius>0.040000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='RPelvis_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RHipYawPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RHipYawPitch' type='revolute'>
+        <child>RPelvis</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz>0 0.70710678118654757 0.70710678118654757</xyz>
+          <limit>
+            <lower>-1.1452899999999999</lower>
+            <upper>0.74071799999999999</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RHipYawPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RHip'>
+        <pose>0 -0.050000000000000003 -0.08500000000000002 0 0 0</pose>
+        <inertial>
+          <pose>-0.01549 -0.00029 -0.0051500000000000001 0 0 0</pose>
+          <mass>0.13053000000000001</mass>
+          <inertia>
+            <ixx>2.7586500000000001e-05</ixx>
+            <ixy>-1.9189999999999998e-08</ixy>
+            <ixz>-4.1082199999999996e-06</ixz>
+            <iyy>9.8270000000000006e-05</iyy>
+            <iyz>2.5099999999999998e-09</iyz>
+            <izz>8.8103300000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='RHip_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RHipRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RHipRoll' type='revolute'>
+        <child>RHip</child>
+        <parent>RPelvis</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.79046000000000005</lower>
+            <upper>0.37943500000000002</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RHipRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RThigh'>
+        <pose>0 -0.050000000000000003 -0.08500000000000002 0 0 0</pose>
+        <inertial>
+          <pose>0.0013799999999999999 -0.0022100000000000002 -0.05373 0 0 0</pose>
+          <mass>0.38968000000000003</mass>
+          <inertia>
+            <ixx>0.00163748</ixx>
+            <ixy>-8.3954000000000001e-07</ixy>
+            <ixz>8.5883000000000004e-05</ixz>
+            <iyy>0.0015922099999999999</iyy>
+            <iyz>-3.91763e-05</iyz>
+            <izz>0.000303978</izz>
+          </inertia>
+        </inertial>
+        <visual name='RThigh_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RHipPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RHipPitch' type='revolute'>
+        <child>RThigh</child>
+        <parent>RHip</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.53589</lower>
+            <upper>0.48398000000000002</upper>
+            <effort>59.5</effort>
+            <velocity>6.4023899999999996</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RHipPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RTibia'>
+        <pose>0 -0.050000000000000003 -0.185 0 0 0</pose>
+        <inertial>
+          <pose>0.0045300000000000002 -0.0022499999999999998 -0.049360000000000001 0 0 0</pose>
+          <mass>0.29142000000000001</mass>
+          <inertia>
+            <ixx>0.0011828299999999999</ixx>
+            <ixy>-8.9650000000000001e-07</ixy>
+            <ixz>2.79969e-05</ixz>
+            <iyy>0.00112828</iyy>
+            <iyz>-3.8476000000000002e-05</iyz>
+            <izz>0.00019145300000000001</izz>
+          </inertia>
+        </inertial>
+        <collision name='RTibia_collision'>
+          <pose>0 0 -0.050000000000000003 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.10000000000000001</length>
+              <radius>0.040000000000000001</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='RTibia_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RKneePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RKneePitch' type='revolute'>
+        <child>RTibia</child>
+        <parent>RThigh</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-0.092327900000000004</lower>
+            <upper>2.1125500000000001</upper>
+            <effort>59.5</effort>
+            <velocity>6.4023899999999996</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RKneePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RAnkle'>
+        <pose>0 -0.050000000000000003 -0.28789999999999999 0 0 0</pose>
+        <inertial>
+          <pose>0.00044999999999999999 -0.00029 0.0068500000000000002 0 0 0</pose>
+          <mass>0.13416</mass>
+          <inertia>
+            <ixx>3.8508099999999998e-05</ixx>
+            <ixy>6.4340000000000006e-08</ixy>
+            <ixz>3.8746600000000001e-06</ixz>
+            <iyy>7.43108e-05</iyy>
+            <iyz>-4.5800000000000003e-09</iyz>
+            <izz>5.4913100000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='RAnkle_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RAnklePitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RAnklePitch' type='revolute'>
+        <child>RAnkle</child>
+        <parent>RTibia</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.1862999999999999</lower>
+            <upper>0.932006</upper>
+            <effort>59.5</effort>
+            <velocity>6.4023899999999996</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RAnklePitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RSole'>
+        <pose>0 -0.050000000000000003 -0.28789999999999999 0 0 0</pose>
+        <inertial>
+          <pose>0.025420000000000002 -0.0033 -0.032390000000000002 0 0 0</pose>
+          <mass>0.16184000000000001</mass>
+          <inertia>
+            <ixx>0.00026930200000000002</ixx>
+            <ixy>5.8750499999999998e-06</ixy>
+            <ixz>0.000139133</ixz>
+            <iyy>0.000643474</iyy>
+            <iyz>-1.8849199999999999e-05</iyz>
+            <izz>0.00052503499999999998</izz>
+          </inertia>
+        </inertial>
+        <collision name='RSole_collision'>
+          <pose>0.02 -0.0050000000000000001 -0.036999999999999998 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.16 0.085000000000000006 0.014999999999999999</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode>
+                <max_vel>0.10000000000000001</max_vel>
+                <min_depth>0.0030000000000000001</min_depth>
+              </ode>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+                <fdir1>1 0 0</fdir1>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='RSole_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RAnkleRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RAnkleRoll' type='revolute'>
+        <child>RSole</child>
+        <parent>RAnkle</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-0.76899200000000001</lower>
+            <upper>0.39793499999999998</upper>
+            <effort>59.5</effort>
+            <velocity>4.16174</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RAnkleRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RShoulder'>
+        <pose>0 -0.098000000000000004 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>-0.00165 0.026630000000000001 0.00013999999999999999 0 0 0</pose>
+          <mass>0.075039999999999996</mass>
+          <inertia>
+            <ixx>8.4284300000000002e-05</ixx>
+            <ixy>2.02802e-06</ixy>
+            <ixz>2.3380000000000002e-08</ixz>
+            <iyy>1.41556e-05</iyy>
+            <iyz>1.9720000000000001e-08</iyz>
+            <izz>8.6419499999999995e-05</izz>
+          </inertia>
+        </inertial>
+        <visual name='RShoulder_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RShoulderPitch.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RShoulderPitch' type='revolute'>
+        <child>RShoulder</child>
+        <parent>Torso</parent>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-2.0856699999999999</lower>
+            <upper>2.0856699999999999</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RShoulderPitch</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RBicep'>
+        <pose>0 -0.098000000000000004 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>0.024549999999999999 -0.0056299999999999996 0.0033 0 0 0</pose>
+          <mass>0.15776999999999999</mass>
+          <inertia>
+            <ixx>0.00011012</ixx>
+            <ixy>7.6691299999999995e-05</ixy>
+            <ixz>-2.6046100000000001e-05</ixz>
+            <iyy>0.00036757700000000001</iyy>
+            <iyz>1.2098300000000001e-05</iyz>
+            <izz>0.00035461800000000001</izz>
+          </inertia>
+        </inertial>
+        <collision name='RBicep_collision'>
+          <pose>0.044999999999999998 0 0 1.5700000000000001 5.5511151231257827e-17 -1.8000000000000003</pose>
+          <geometry>
+            <cylinder>
+              <length>0.089999999999999997</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='RBicep_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RShoulderRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RShoulderRoll' type='revolute'>
+        <child>RBicep</child>
+        <parent>RShoulder</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-1.3264499999999999</lower>
+            <upper>0.31415900000000002</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RShoulderRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RElbow'>
+        <pose>0.105 -0.113 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>-0.027439999999999999 0 -0.00013999999999999999 0 0 0</pose>
+          <mass>0.064829999999999999</mass>
+          <inertia>
+            <ixx>5.5971500000000003e-06</ixx>
+            <ixy>4.2100000000000001e-09</ixy>
+            <ixz>4.3189999999999998e-08</ixz>
+            <iyy>7.5433100000000001e-05</iyy>
+            <iyz>-1.8400000000000001e-09</iyz>
+            <izz>7.6443400000000001e-05</izz>
+          </inertia>
+        </inertial>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RElbowYaw' type='revolute'>
+        <child>RElbow</child>
+        <parent>RBicep</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-2.0856699999999999</lower>
+            <upper>2.0856699999999999</upper>
+            <effort>40.25</effort>
+            <velocity>8.26797</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RElbowYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RForeArm'>
+        <pose>0.105 -0.113 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>0.025559999999999999 -0.00281 0.00076000000000000004 0 0 0</pose>
+          <mass>0.077609999999999998</mass>
+          <inertia>
+            <ixx>2.5390700000000001e-05</ixx>
+            <ixy>2.3324299999999999e-06</ixy>
+            <ixz>-6.0116999999999998e-07</ixz>
+            <iyy>8.9220400000000004e-05</iyy>
+            <iyz>2.6939999999999998e-08</iyz>
+            <izz>8.7248400000000003e-05</izz>
+          </inertia>
+        </inertial>
+        <collision name='RForeArm_collision'>
+          <pose>0.025325 0 0 1.5700000000000001 -5.5511151231257827e-17 1.5700000000000001</pose>
+          <geometry>
+            <cylinder>
+              <length>0.050650000000000001</length>
+              <radius>0.02</radius>
+            </cylinder>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='RForeArm_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RElbowRoll.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RElbowRoll' type='revolute'>
+        <child>RForeArm</child>
+        <parent>RElbow</parent>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>0.034906600000000003</lower>
+            <upper>1.5446200000000001</upper>
+            <effort>40.25</effort>
+            <velocity>7.19407</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RElbowRoll</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <link name='RWrist'>
+        <pose>0.16095000000000001 -0.113 0.099999999999999978 0 0 0</pose>
+        <inertial>
+          <pose>0.034340000000000002 0.00088000000000000003 0.0030799999999999998 0 0 0</pose>
+          <mass>0.18532999999999999</mass>
+          <inertia>
+            <ixx>7.0549299999999999e-05</ixx>
+            <ixy>5.7159900000000001e-06</ixy>
+            <ixz>-2.2474399999999999e-05</ixz>
+            <iyy>0.00035606199999999998</iyy>
+            <iyz>3.1777099999999999e-06</iyz>
+            <izz>0.00035191900000000002</izz>
+          </inertia>
+        </inertial>
+        <collision name='RWrist_collision'>
+          <pose>0.039 0 0 1.27 -1.1102230246251565e-16 1.5700000000000001</pose>
+          <geometry>
+            <box>
+              <size>0.059999999999999998 0.040000000000000001 0.058000000000000003</size>
+            </box>
+          </geometry>
+          <surface>
+            <contact>
+              <ode/>
+            </contact>
+            <friction>
+              <ode>
+                <mu>0.5</mu>
+                <mu2>0.5</mu2>
+              </ode>
+            </friction>
+            <bounce/>
+          </surface>
+        </collision>
+        <visual name='RWrist_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <mesh>
+              <scale>0.10000000000000001 0.10000000000000001 0.10000000000000001</scale>
+              <uri>file:///root/.gz/fuel/fuel.ignitionrobotics.org/openrobotics/models/nao with ignition position controller/2/meshes/V40/RWristYaw.dae</uri>
+            </mesh>
+          </geometry>
+        </visual>
+        <gravity>true</gravity>
+        <velocity_decay/>
+        <self_collide>false</self_collide>
+        <enable_wind>false</enable_wind>
+      </link>
+      <joint name='RWristYaw' type='revolute'>
+        <child>RWrist</child>
+        <parent>RForeArm</parent>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.8238700000000001</lower>
+            <upper>1.8238700000000001</upper>
+            <effort>40.25</effort>
+            <velocity>24.622900000000001</velocity>
+            <stiffness>100000000</stiffness>
+            <dissipation>1</dissipation>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+            <damping>0.10000000000000001</damping>
+            <friction>0</friction>
+          </dynamics>
+        </axis>
+        <physics>
+          <ode>
+            <implicit_spring_damper>true</implicit_spring_damper>
+            <cfm_damping>true</cfm_damping>
+            <limit>
+              <cfm>0</cfm>
+              <erp>0.20000000000000001</erp>
+            </limit>
+          </ode>
+        </physics>
+        <pose>0 0 0 0 0 0</pose>
+      </joint>
+      <plugin name='ignition::gazebo::systems::JointPositionController' filename='ignition-gazebo-joint-position-controller-system'>
+        <joint_name>RWristYaw</joint_name>
+        <p_gain>10</p_gain>
+        <i_gain>0.1</i_gain>
+        <d_gain>0.01</d_gain>
+        <i_max>1</i_max>
+        <i_min>-1</i_min>
+        <cmd_max>1000</cmd_max>
+        <cmd_min>-1000</cmd_min>
+      </plugin>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

@@ -2,6 +2,8 @@
 
 Gazebo install on Mac OS X. Tested on Mac M4 with Sequoia 15.1.1. Date: 23-01-2025
 
+    Confirmed not to work on Mac with M1 due to installation problems with the Orge rendering library (1-03-2025). 
+
 Source: [https://gazebosim.org/docs/latest/install_osx_src/](https://gazebosim.org/docs/latest/install_osx_src/)
 
 - Check if you have xQuartz x terminal for Mac OS
@@ -45,7 +47,7 @@ Make the binaries available and add the bin folder to the PATH.
 sudo nano /etc/paths
 ```
 
-Add /Users/<your username>/Library/Python/3.9/bin
+Add `/Users/<your username>/Library/Python/3.9/bin`
 Save and quit. Restart your terminal and navigate to your src folder.
 
 ```bash

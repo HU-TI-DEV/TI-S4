@@ -479,15 +479,10 @@ std::find_if(v.begin(), v.end(), [](auto& x){x == 'c';} );
 ```
 
 ---
-layout: iframe-right
+layout: iframe
 
 url: https://en.cppreference.com/w/cpp/standard_library
 ---
-
-# STL
-
-Bevat nog véél meer;
-
 
 ---
 
@@ -505,6 +500,12 @@ Youtube:
 - 'Algorithm Intuition' van Connor Hoekstra
 - 'Better Algorithm Intuition' van Connor Hoekstra
 - '105 STL Algorithms in Less Than an Hour' van Jonathan Boccara
+
+---
+
+# Huiswerk
+
+STL opdracht: schrijf zo min mogelijk eigen code!
 
 ---
 layout: center

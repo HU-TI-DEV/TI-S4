@@ -165,9 +165,13 @@ hideInToc: true
 
 # Klein uitstapje; types
 
-- In vorige slide; `auto` - waarom?
+- In vorige slide; `auto func = ...` - waarom?
+
+<v-click>
+
 - Elke lambda heeft een uniek type
 
+</v-click>
 
 <v-click hide>
 
@@ -176,15 +180,16 @@ hideInToc: true
 using namespace std;
 
 int main(){
-    auto x = 10;
-    auto y = 20;
+    int x = 10;
+    int y = 20;
     cout << boolalpha << is_same<decltype(x), decltype(y)>::value << endl;
 }
 
 ```
 
 </v-click>
-<v-after>
+
+<v-after hide>
 
 ```cpp {monaco-run}
 #include <iostream>
@@ -200,6 +205,28 @@ int main(){
 ```
 
 </v-after>
+
+---
+hideInToc: true
+---
+
+# Klein uitstapje; types
+
+- In vorige slide; `auto func = ...` - waarom?
+- Elke lambda heeft een uniek type, maar niet bij kopieën
+
+```cpp {monaco-run}
+#include <iostream>
+#include <typeinfo>
+using namespace std;
+
+int main(){
+    auto x = []{return true;};
+    auto y = x;
+    cout << boolalpha << is_same<decltype(x), decltype(y)>::value << endl;
+    cout << typeid(x).name() << " - " << typeid(y).name() << endl;
+}
+```
 
 ---
 
@@ -235,6 +262,12 @@ Je kunt ook álles capturen: `[=]` == alles by value, `[&]` == alles by referenc
 - Lambda al bijna een 'functie', maar mist nog e.e.a!
 
 ````md magic-move
+```cpp
+    auto halve(int& x){
+        return x/2;
+    }
+```
+
 ```cpp
 // Zoals parameters:
 int main(){
@@ -276,6 +309,14 @@ int main(){
 ```
 ````
 
+<br>
+
+<v-click>
+```cpp
+[capture_clause](parameters) -> return-type {body};
+```
+</v-click>
+
 # <br>
 
 <v-click>
@@ -292,11 +333,178 @@ auto halve(int& x) -> float {
 
 ---
 layout: center
+hideInToc: true
+---
+
+# \<br>
+
+Daarna:
+
+# Lambda; waarom?
+
 ---
 
 # Lambda; waarom?
 
-# \<br\>
+Belangrijkste usecase:
+
+- Kleine functies meegeven aan andere functies
+- Hogere orde functies (komen we later(?) op terug)
+
+---
+layout: center
+---
+
+# STL Algorithms
+
+---
+hideInToc: true
+---
+
+# STL Algorithms
+
+- Implementeert veelgebruikte algoritmes op containers
+- vector, array, string, ...
+- Voor zoeken, aanpassen, tellen, sorteren, etc.
+
+---
+hideInToc: true
+---
+
+# STL Algorithms
+
+Bijvoorbeeld, 'in place' verdubbelen:
+
+````md magic-move
+```cpp
+// Old school C++
+#include <vector>
+
+int main(){
+    std::vector<int> v = {1,2,3,4,5,6,7};
+    
+    for (int i = 0; i<v.size();++i){
+        v[i] = v[i]*2;
+    }
+}
+```
+
+```cpp
+// C++11
+#include <vector>
+
+int main(){
+    std::vector<int> v = {1,2,3,4,5,6,7};
+    
+    for (auto& i : v){
+        i*=2;
+    }
+}
+```
+
+```cpp
+// Maar dit kan al gewoon vanaf C++98!
+#include <vector>
+#include <algorithm>
+
+int multiply(int& x){
+    return x*=2;
+}
+
+int main(){
+    std::vector<int> v = {1,2,3,4,5,6,7};
+    std::transform(v.begin(), v.end(), v.begin(), multiply);
+}
+```
+
+```cpp
+// En dit ook vanaf C++11 al gewoon!
+#include <vector>
+#include <algorithm>
+
+int main(){
+    std::vector<int> v = {1,2,3,4,5,6,7};
+    std::transform(v.begin(), v.end(), v.begin(), [](int& x){return x*=2;} );
+}
+```
+
+```cpp
+// Maar soms kun je het ook nóg wat makkelijker doen
+#include <vector>
+#include <algorithm>
+
+int main(){
+    std::vector<int> v = {1,2,3,4,5,6,7};
+    std::for_each(v.begin(), v.end(), [](int& x){x*=2;} );
+}
+```
+
+```cpp
+// En vanaf C++17..
+#include <vector>
+#include <algorithm>
+
+int main(){
+    std::vector v = {1,2,3,4,5,6,7};
+    std::for_each(v.begin(), v.end(), [](auto& x){x*=2;} );
+}
+```
+
+```cpp
+// En vanaf C++20 nóg makkelijker
+#include <vector>
+#include <algorithm>
+
+int main(){
+    std::vector v = {1,2,3,4,5,6,7}
+    std::ranges::for_each(v, [](auto& x){x*=2;} );
+}
+```
+```` 
+
+---
+hideInToc: true
+---
+
+# STL Algorithms syntax
+
+Definities:
+- 'Predicate'
+- 'Criteria'
+
+```cpp
+std::any(v.begin(), v.end(), [](auto& x){x%2 == 0;} );
+
+std::find_if(v.begin(), v.end(), [](auto& x){x == 'c';} );
+```
+
+---
+layout: iframe-right
+
+url: https://en.cppreference.com/w/cpp/standard_library
+---
+
+# STL
+
+Bevat nog véél meer;
+
+
+---
+
+# STL documentatie
+
+Waar te vinden:
+- https://en.cppreference.com
+- Offline door een tool als Zeal (https://zealdocs.org/)
+
+---
+
+# Verdere info:
+
+Youtube: 
+- 'Algorithm Intuition' van Connor Hoekstra
+- 'Better Algorithm Intuition' van Connor Hoekstra
+- '105 STL Algorithms in Less Than an Hour' van Jonathan Boccara
 
 ---
 layout: center

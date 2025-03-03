@@ -1,6 +1,6 @@
 ---
 theme: ./slidev-theme-ti
-output: ./vermogens/solliciteren/solliciteren_les.pdf
+output: ../vermogens/solliciteren/solliciteren_les.pdf
 hideInToc: true
 ---
 

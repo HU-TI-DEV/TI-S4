@@ -73,9 +73,9 @@ De docenten zijn:
 
 | Dag | Project | Kennissessie                                                                                                                                       |
 |-----|---------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| ma  |         |[Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
+| ma  |         | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md)                                                                                  |
 | di  |         | [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) |
-| wo  |         | C++ Intro gevorderde concepten (**JH**)                                                                                                          |
+| wo  |         | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf) **JH**                                                                                                     |
 | do  |         | 1) Feedback CV & Sollicatie brief 2) Bewustwording kwaliteiten 3) [Teamrollen Belbin](https://werkenmetteamrollen.nl/vragenlijst/) (**BB**) |
 
 ### Onderwijsweek C4 (24-02-2025)

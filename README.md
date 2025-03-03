@@ -2,6 +2,8 @@
 
 # Semester 4 van Technische Informatica[](title-id)
 
+<sub><sup>Snel naar het programma? [klik hier](./programma/README.md#programma)</sup></sub>
+
 ### Inhoud[](toc-id)
 
 - [Semester 4 van Technische Informatica](#semester-4-van-technische-informatica)

@@ -103,7 +103,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 
 | Dag | Project | Kennissessie                                          |
 |-----|---------|-------------------------------------------------------|
-| ma  |         | Project demo (**JH**)                                 |
+| ma  |         | Product Owner gesprekken (**JH**) en Sprint planning (**NG**)         |
 | di  |         | Algoritmen & Datastructuren I (C++ / Python) (**JH**) |
 | wo  |         | Voorbereiding loopbaankeuzes (**LB**)  Werken aan project    |
 | do  |         | Minormarkt <br> Teambegeleiding (**NG**)                              |

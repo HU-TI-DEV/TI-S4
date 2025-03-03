@@ -332,6 +332,33 @@ auto halve(int& x) -> float {
 </v-click>
 
 ---
+hideInToc: true
+---
+
+# Lambda syntax; extra's
+
+````md magic-move
+```cpp
+// C++11 -> Standaard lambda
+int y = 2;
+[y](std::vector<int> v){return v[0]%y == 0; };
+```
+
+```cpp
+// C++14 -> Init captures, auto parameters
+int y = 2;
+[two = y](auto v){return v[0]%two == 0; };
+```
+
+```cpp
+// C++20 -> Template parameters
+int y = 2;
+[y]<typename T>(std::vector<T> v){return v[0]%y == 0; };
+```
+
+```` 
+
+---
 layout: center
 hideInToc: true
 ---

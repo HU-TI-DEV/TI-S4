@@ -95,7 +95,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 | Dag | Project | Kennissessie                                                                                                          |
 |-----|---------|-----------------------------------------------------------------------------------------------------------------------|
 | ma  |         | LET OP! we beginnen om 10:00!!!   [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                                |
-| di  |         | Testing & Geavanceerde Tooling (**JH)**                                                                               |
+| di  |         | \[&]( )->auto{} en STL (**NG**)                                                                               |
 | wo  |         | Scrum Refresher (**NG, BB**)                                                                                          |
 | do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |
 

@@ -9,7 +9,7 @@ Schrijf hiervoor code die het volgende doet, gebruikmakend van zoveel mogelijk f
 - Print hoeveel regels de file bevat
 - Print hoeveel alfabetische karacters de file bevat
 - Print of de file alleen maar letters en karakters bevat
-- Zet alle letters in de vector om in kleine letters
+- Zet alle letters in de container om in kleine letters
 - Tel in een geschikte container voor iedere letter (a..z) hoe vaak deze voorkomt in de tekst
     - Druk deze container af:
         1) gesorteerd op lettervolgorde

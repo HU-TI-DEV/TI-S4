@@ -8,7 +8,7 @@ Schrijf hiervoor code die het volgende doet, gebruikmakend van zoveel mogelijk f
 - Tel en print hoeveel karakters de file bevat
 - Print hoeveel regels de file bevat
 - Print hoeveel alfabetische karacters de file bevat
-- Print of de file alleen maar letters en karakters bevat
+- Print of de file alleen maar letters en leestekens bevat
 - Zet alle letters in de container om in kleine letters
 - Tel in een geschikte container voor iedere letter (a..z) hoe vaak deze voorkomt in de tekst
     - Druk deze container af:

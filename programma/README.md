@@ -180,14 +180,14 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
 | di  |                | Troubleshooting Vision (**BB**)                                                                                                           |
-| wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision-and-AI/README.md#programma-vision-deel-ii) (**BB**) |
+| wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**) |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
 
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
-| ma  |         | [Computer Vision III (CNN)](../software/vision-and-AI/README.md#programma-vision-deel-iii) (**BB**) |
+| ma  |         | [Computer Vision III (CNN)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**) |
 | di  |         | Feedbacksessie onderzoek (**BB**)                                                                   |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |

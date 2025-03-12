@@ -115,7 +115,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 | ma  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**)                                                          |
 | di  |         | Projectwerkdag (**NG, JH, BB**)                                                                                 |
 | wo  |         | Intro deepdive & Troubleshooting (**JH & BB**)                                                                                   |
-| do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
+| do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek C8 (24-03-2025)
 
@@ -160,7 +160,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project     | Kennissessie                                                                              |
 |-----|-------------|-------------------------------------------------------------------------------------------|
 | ma  | 2de Paasdag |                                                                                           |
-| di  |             | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
+| di  |             | [Computer Vision I (Basis beeldverwerking)](../software/vision_en_AI/README.md) (**BB**) |
 | wo  |             | Projectdemo (**JH, NG**)                                                                  |
 | do  |             | Stagebedrijvendag <br> Teamcoaching (**NG**)                                                                     |
 
@@ -180,14 +180,14 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
 | di  |                | Troubleshooting Vision (**BB**)                                                                                                           |
-| wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
+| wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision-and-AI/README.md#programma-vision-deel-ii) (**BB**) |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
 
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
-| ma  |         | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**) |
+| ma  |         | [Computer Vision III (CNN)](../software/vision-and-AI/README.md#programma-vision-deel-iii) (**BB**) |
 | di  |         | Feedbacksessie onderzoek (**BB**)                                                                   |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |

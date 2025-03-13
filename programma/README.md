@@ -132,7 +132,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | Onderzoek/Deepdive (**BB**)                       |
+| ma  |         | TBD                     |
 | di  |         | Structural Design Patterns (**NG**)               |
 | wo  |         | Projectwerkdag                                    |
 | do  |         | :end: Einde sprint 3 & :runner: planning sprint 4 |

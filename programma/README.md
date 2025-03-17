@@ -113,7 +113,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 | Dag | Project | Kennissessie                                                                                                    |
 |-----|---------|-----------------------------------------------------------------------------------------------------------------|
 | ma  |         | Projectwerkdag (**JH**)                                                                                         |
-| di  |         | Hoorcollege - Intro deepdive & Troubleshooting (**BB**)                                                          |
+| di  |         | Hoorcollege - [Intro deepdive](../vermogens/onderzoek/Onderzoek%20S4.pptx) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/Troubleshooting%20S4.pptx) (**BB**)                                                          |
 | wo  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**)                                                                  |
 | do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 

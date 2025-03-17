@@ -113,8 +113,8 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 | Dag | Project | Kennissessie                                                                                                    |
 |-----|---------|-----------------------------------------------------------------------------------------------------------------|
 | ma  |         | Projectwerkdag (**JH**)                                                                                         |
-| di  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**)                                                          |
-| wo  |         | Intro deepdive & Troubleshooting (**JH & BB**)                                                                  |
+| di  |         | Hoorcollege - Intro deepdive & Troubleshooting (**BB**)                                                          |
+| wo  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**)                                                                  |
 | do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek C8 (24-03-2025)

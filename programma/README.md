@@ -114,7 +114,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 |-----|---------|-----------------------------------------------------------------------------------------------------------------|
 | ma  |         | Projectwerkdag (**JH**)                                                                                         |
 | di  |         | Hoorcollege - [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)                                                          |
-| wo  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**)                                                                  |
+| wo  |         |  (**JH**)                                                                  |
 | do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek C8 (24-03-2025)
@@ -123,8 +123,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag | Project | Kennissessie                                                         |
 |-----|---------|----------------------------------------------------------------------|
-| ma  |         | Algoritmen & Datastructuren III (Python & C++ Vergelijking) (**JH**) |
-| di  |         | Koppeling Python ↔ C++ (Interfacing) (**JH**)                        |
+| ma  |         | Product Owner gesprekken (**JH**) / Projectwerken                    |
+| di  |         | TBD                                                                  |
 | wo  |         | Projectwerkdag                                                       |
 | do  |         | Teambegeleiding (**NG**)                                             |
 

@@ -124,27 +124,27 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project | Kennissessie                                                         |
 |-----|---------|----------------------------------------------------------------------|
 | ma  |         | Product Owner gesprekken (**JH**) / Projectwerken                    |
-| di  |         | TBD                                                                  |
-| wo  |         | Projectwerkdag                                                       |
+| di  |         | Git branches & (non) functional requirements  (**NG**)                                                                  |
+| wo  |         | ALDS II - data structuren (**JH**)                                                       |
 | do  |         | Teambegeleiding (**NG**)                                             |
 
 ### Onderwijsweek C9 (31-03-2025)
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | TBD                     |
+| ma  |         | Projectwerkdag                     |
 | di  |         | Structural Design Patterns (**NG**)               |
-| wo  |         | Projectwerkdag                                    |
+| wo  |         | ALDS III (**JH**)                                    |
 | do  |         | :end: Einde sprint 3 & :runner: planning sprint 4 |
 
 ### Onderwijsweek C10 (7-04-2025)
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | Project demo (**JH**)                             |
-| di  |         | Profiling & Memory/Performance Debugging (**JH**) |
-| wo  |         | Onderzoek vervolg (**BB**)                        |
-| do  |         | Creational Design Patterns (**NG**)               |
+| ma  |         | Project demo (klassikaal)  (**JH**)                             |
+| di  |         | Creational Design Patterns (**NG**) |
+| wo  |         | Profiling & Memory/Performance Debugging (**JH**)                        |
+| do  |         | Teambegeleiding (**NG**)               |
 
 ### Onderwijsweek D1 (14-04-2025)
 

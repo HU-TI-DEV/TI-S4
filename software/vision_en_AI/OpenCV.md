@@ -62,3 +62,47 @@ Run the example & enjoy:
 python3 example1.py
 ```
 
+### Sobel filter
+The following code implements a sobel filter:
+
+```python
+import cv2
+import numpy as np
+
+# Read the image
+image = cv2.imread("example1.png")
+
+# Convert to grayscale
+gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+sobel_kernel_x = np.array([[-1, 0, 1],
+                            [-2, 0, 2],
+                            [-1, 0, 1]])
+
+
+sobel_x = cv2.filter2D(gray, -1, sobel_kernel_x) 
+cv2.imshow("Processed Image", sobel_x)
+cv2.waitKey(0)  # Wait for a key press
+cv2.destroyAllWindows()  # Close the window
+```
+Implement a sobel filter in the y-direction.  
+**Save the resulting image (you need to upload it to canvas)**.
+
+### Sharpening filter
+Implement a 3x3 sharpening filter.  
+**Save the resulting image (you need to upload it to canvas)**.
+
+
+### Gaussian blur
+
+use cv2.getGaussianKernel() to implement a 5 x 5 gaussian blur.   
+**Save the resulting image (you need to upload it to canvas)**
+
+substract the previous result from the original image using something like: 
+```
+result_image=gray-gaussian_blur_image
+```
+
+Result should be: 
+
+[Statler en Waldorf](image.png)
+

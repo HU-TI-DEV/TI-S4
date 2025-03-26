@@ -12,7 +12,7 @@ Below the following environments are used:<br>
 
 ## Installing OpenCV in a Docker container
 
-Make sure Docker Desktop is running. Enter your container. First we will install all the necessary software tools<sup>2</sup>:
+Make sure Docker Desktop is running. In addition run vcxsrv in your windows environment. Enter your container. First we will install all the necessary software tools<sup>2</sup>:
 ```bash
 apt-get update && apt-get install -y
 apt-get install python3-pip python3-dev -y
@@ -32,7 +32,7 @@ docker cp <source> <container_id>:<destination>
 Please note: you run this command in the prompt of the powershell.   
 If you have already mounted a hd in your container (or made a coupling in vs code) you could do this probably much easier!
 
-In my case I have put example1.png in the same folder as my gz_transport example:  
+In my case I have put example1.png in the same folder as my gz_transport example<sup>1</sup>:  
 ```
 docker cp example1.png f1d965431e05:/root/gz_transport_tutorial/
 ```
@@ -84,17 +84,20 @@ cv2.imshow("Processed Image", sobel_x)
 cv2.waitKey(0)  # Wait for a key press
 cv2.destroyAllWindows()  # Close the window
 ```
-Implement a sobel filter in the y-direction.  
+
+Upload a picture of you choice, but make sure it is clear it is from YOU (if you do not want to be in the picture make a picture of a piece of paper with your student #).  
+
+Implement a sobel filter in the y-direction on your picture.  
 **Save the resulting image (you need to upload it to canvas)**.
 
 ### Sharpening filter
-Implement a 3x3 sharpening filter.  
+Implement a 3x3 sharpening filter (see https://setosa.io/ev/image-kernels/).  
 **Save the resulting image (you need to upload it to canvas)**.
 
 
 ### Gaussian blur
 
-use cv2.getGaussianKernel() to implement a 5 x 5 gaussian blur.   
+use cv2.getGaussianKernel() to implement a **5 x 5** gaussian blur.   
 **Save the resulting image (you need to upload it to canvas)**
 
 substract the previous result from the original image using something like: 
@@ -102,7 +105,34 @@ substract the previous result from the original image using something like:
 result_image=gray-gaussian_blur_image
 ```
 
-Result should be: 
+Result should be simular to: 
+![Statler en Waldorf](./files/image.png)    
 
-[Statler en Waldorf](image.png)
+**Save the resulting image (you need to upload it to canvas)**
 
+### Color filtering
+
+Try the following code:
+```python
+import cv2
+import numpy as np
+
+# Read the image
+img = cv2.imread("example1.png")
+img2=cv2.inRange(img, np.array([0, 0, 100]), np.array([100, 100, 255]))
+cv2.imshow("Original Image", img)
+cv2.waitKey(0) # Wait for a key press
+cv2.imshow("Processed Image", img2)
+cv2.waitKey(0)  # Wait for a key press
+cv2.destroyAllWindows()  # Close the window
+```
+The result:
+![alt text](./files/image2.png)
+
+Apply a color filter on your image.  
+**Save the resulting image (you need to upload it to canvas)**.
+
+
+
+
+pip install torch torchvision

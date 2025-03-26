@@ -1,4 +1,16 @@
-# 1. OpenCV
+# 1. OpenCV  <!-- omit in toc -->
+
+- [Introduction](#introduction)
+- [Installing OpenCV in a Docker container](#installing-opencv-in-a-docker-container)
+- [Sobel filter](#sobel-filter)
+- [Sharpening filter](#sharpening-filter)
+- [Gaussian blur](#gaussian-blur)
+- [Color filtering](#color-filtering)
+- [Color spaces](#color-spaces)
+- [Extra material](#extra-material)
+
+
+## Introduction
 OpenCV (Open Source Computer Vision Library) is a library of programming functions mainly for real-time computer vision. It focusses on the classical vision methods.
 
 **Machine Learning (AI)**  
@@ -63,7 +75,7 @@ cv2.destroyAllWindows()  # Close the window
 python3 example1.py
 ```
 
-### Sobel filter
+## Sobel filter
 The following code implements a sobel filter:
 
 ```python
@@ -89,14 +101,14 @@ cv2.destroyAllWindows()  # Close the window
 2) Upload a picture of you choice, but make sure it is clear it is from YOU (if you do not want to be in the picture make a picture of a piece of paper with your student #).  
 
 3) Implement a sobel filter in the y-direction on your picture.  
-** Save the resulting image (you need to upload it to canvas)**.
+**Save the resulting image (you need to upload it to canvas), you can use a screenshot...**.
 
-### Sharpening filter
+## Sharpening filter
 4) Implement a 3x3 sharpening filter (see https://setosa.io/ev/image-kernels/).  
 **Save the resulting image (you need to upload it to canvas)**.
 
 
-### Gaussian blur
+## Gaussian blur
 
 5) Watch the following video [convolution filters](https://www.youtube.com/watch?v=W_p2XQSB9XI)
 6) use cv2.getGaussianKernel() to implement a **5 x 5** gaussian blur.   
@@ -113,7 +125,7 @@ Result should be simular to:
 7) Apply it to your image.  
 **Save the resulting image (you need to upload it to canvas)**
 
-### Color filtering
+## Color filtering
 
 8) Try the following code:
 ```python
@@ -135,16 +147,16 @@ The result:
 9) Apply a color filter on your image.  
 **Save the resulting image (you need to upload it to canvas)**.
 
-### Color spaces
+## Color spaces
 
 10) Watch the following video: [kleurruimtes & filtering](https://www.youtube.com/watch?v=v3x9IHCdM0Y)  
 The code: [kleurruimtes.py](./files/kleurruimtes.py)
 
 
-### Extra material
+## Extra material
 
 For the aficionados (liefhebbers) I've made the following video's:
-- [star recognition](https://www.youtube.com/watch?v=Ez7qANwAAQw) [the code](./files/starrecognition.py)
-- [template matching](https://www.youtube.com/watch?v=kyz_5xZmepA) [the code](./files/templatematching.py)
+- [Star recognition](https://www.youtube.com/watch?v=Ez7qANwAAQw), the [code](./files/starrecognition.py)
+- [Template matching](https://www.youtube.com/watch?v=kyz_5xZmepA), the [code](./files/templatematching.py)
 
 pip install torch torchvision

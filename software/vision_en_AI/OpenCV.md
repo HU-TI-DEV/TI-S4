@@ -57,7 +57,8 @@ cv2.imshow("Processed Image", gray)
 cv2.waitKey(0)  # Wait for a key press
 cv2.destroyAllWindows()  # Close the window
 ```
-Run the example & enjoy:
+
+1) Run the example & enjoy:
 ```
 python3 example1.py
 ```
@@ -85,19 +86,20 @@ cv2.waitKey(0)  # Wait for a key press
 cv2.destroyAllWindows()  # Close the window
 ```
 
-Upload a picture of you choice, but make sure it is clear it is from YOU (if you do not want to be in the picture make a picture of a piece of paper with your student #).  
+2) Upload a picture of you choice, but make sure it is clear it is from YOU (if you do not want to be in the picture make a picture of a piece of paper with your student #).  
 
-Implement a sobel filter in the y-direction on your picture.  
-**Save the resulting image (you need to upload it to canvas)**.
+3) Implement a sobel filter in the y-direction on your picture.  
+** Save the resulting image (you need to upload it to canvas)**.
 
 ### Sharpening filter
-Implement a 3x3 sharpening filter (see https://setosa.io/ev/image-kernels/).  
+4) Implement a 3x3 sharpening filter (see https://setosa.io/ev/image-kernels/).  
 **Save the resulting image (you need to upload it to canvas)**.
 
 
 ### Gaussian blur
 
-use cv2.getGaussianKernel() to implement a **5 x 5** gaussian blur.   
+5) Watch the following video [convolution filters](https://www.youtube.com/watch?v=W_p2XQSB9XI)
+6) use cv2.getGaussianKernel() to implement a **5 x 5** gaussian blur.   
 **Save the resulting image (you need to upload it to canvas)**
 
 substract the previous result from the original image using something like: 
@@ -108,11 +110,12 @@ result_image=gray-gaussian_blur_image
 Result should be simular to: 
 ![Statler en Waldorf](./files/image.png)    
 
+7) Apply it to your image.  
 **Save the resulting image (you need to upload it to canvas)**
 
 ### Color filtering
 
-Try the following code:
+8) Try the following code:
 ```python
 import cv2
 import numpy as np
@@ -129,10 +132,19 @@ cv2.destroyAllWindows()  # Close the window
 The result:
 ![alt text](./files/image2.png)
 
-Apply a color filter on your image.  
+9) Apply a color filter on your image.  
 **Save the resulting image (you need to upload it to canvas)**.
 
+### Color spaces
+
+10) Watch the following video: [kleurruimtes & filtering](https://www.youtube.com/watch?v=v3x9IHCdM0Y)  
+The code: [kleurruimtes.py](./files/kleurruimtes.py)
 
 
+### Extra material
+
+For the aficionados (liefhebbers) I've made the following video's:
+- [star recognition](https://www.youtube.com/watch?v=Ez7qANwAAQw) [the code](./files/starrecognition.py)
+- [template matching](https://www.youtube.com/watch?v=kyz_5xZmepA) [the code](./files/templatematching.py)
 
 pip install torch torchvision

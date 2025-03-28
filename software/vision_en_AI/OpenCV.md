@@ -7,6 +7,7 @@
 - [Gaussian blur](#gaussian-blur)
 - [Color filtering](#color-filtering)
 - [Color spaces](#color-spaces)
+- [Template matching](#template-matching)
 - [Extra material](#extra-material)
 
 
@@ -152,11 +153,14 @@ The result:
 10) Watch the following video: [kleurruimtes & filtering](https://www.youtube.com/watch?v=v3x9IHCdM0Y)  
 The code: [kleurruimtes.py](./files/kleurruimtes.py)
 
+## Template matching
+11) Watch the following video: [Template matching](https://www.youtube.com/watch?v=kyz_5xZmepA)  
+The [code](./files/templatematching.py)
+
 
 ## Extra material
 
 For the aficionados (liefhebbers) I've made the following video's:
 - [Star recognition](https://www.youtube.com/watch?v=Ez7qANwAAQw), the [code](./files/starrecognition.py)
-- [Template matching](https://www.youtube.com/watch?v=kyz_5xZmepA), the [code](./files/templatematching.py)
 
 pip install torch torchvision

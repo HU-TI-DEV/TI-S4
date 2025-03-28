@@ -98,7 +98,7 @@ cv2.waitKey(0)  # Wait for a key press
 cv2.destroyAllWindows()  # Close the window
 ```
 
-2) Upload a picture of you choice, but make sure it is clear it is from YOU (if you do not want to be in the picture make a picture of a piece of paper with your student #).  
+2) Upload a picture of your choice, but make sure it is clear it is from YOU (if you do not want to be in the picture make a picture of a piece of paper with your student #).  
 
 3) Implement a sobel filter in the y-direction on your picture.  
 **Save the resulting image (you need to upload it to canvas), you can use a screenshot...**.

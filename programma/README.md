@@ -95,7 +95,7 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 | Dag | Project | Kennissessie                                                                                                          |
 |-----|---------|-----------------------------------------------------------------------------------------------------------------------|
 | ma  |         | LET OP! we beginnen om 10:00!!!   [Gazebo deel II (BB)](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii)                                |
-| di  |         | \[&]( )->auto{} en STL (**NG**)                                                                               |
+| di  |         | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**NG**)                                                                               |
 | wo  |         | Scrum Refresher (**NG, BB**)                                                                                          |
 | do  |         | Voorlichting bovenbouw door coördinatoren Stage en INNO (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |
 
@@ -112,10 +112,10 @@ Deze week worden de projectteams bekend gemaakt. Gebruik deze week dus ook voora
 
 | Dag | Project | Kennissessie                                                                                                    |
 |-----|---------|-----------------------------------------------------------------------------------------------------------------|
-| ma  |         | Algoritmen & Datastructuren II (C++ Advanced) (**JH**)                                                          |
-| di  |         | Projectwerkdag (**NG, JH, BB**)                                                                                 |
-| wo  |         | Troubleshooting (**JH & BB**)                                                                                   |
-| do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S2.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
+| ma  |         | Projectwerkdag (**JH**)                                                                                         |
+| di  |         | Hoorcollege - [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)                                                          |
+| wo  |         |  (**JH**)                                                                  |
+| do  |         | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek C8 (24-03-2025)
 
@@ -123,36 +123,36 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag | Project | Kennissessie                                                         |
 |-----|---------|----------------------------------------------------------------------|
-| ma  |         | Algoritmen & Datastructuren III (Python & C++ Vergelijking) (**JH**) |
-| di  |         | Koppeling Python ↔ C++ (Interfacing) (**JH**)                        |
-| wo  |         | Projectwerkdag                                                       |
+| ma  |         | Product Owner gesprekken (**JH**) / Projectwerken                    |
+| di  |         | Git branches & (non) functional requirements  (**NG**)                                                                  |
+| wo  |         | ALDS II - data structuren (**JH**)                                                       |
 | do  |         | Teambegeleiding (**NG**)                                             |
 
 ### Onderwijsweek C9 (31-03-2025)
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | Onderzoek/Deepdive (**BB**)                       |
+| ma  |         | Projectwerkdag                     |
 | di  |         | Structural Design Patterns (**NG**)               |
-| wo  |         | Projectwerkdag                                    |
+| wo  |         | ALDS III (**JH**)                                    |
 | do  |         | :end: Einde sprint 3 & :runner: planning sprint 4 |
 
 ### Onderwijsweek C10 (7-04-2025)
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | Project demo (**JH**)                             |
-| di  |         | Profiling & Memory/Performance Debugging (**JH**) |
-| wo  |         | Onderzoek vervolg (**BB**)                        |
-| do  |         | Creational Design Patterns (**NG**)               |
+| ma  |         | Project demo   (**TM**)                             |
+| di  |         | [Computer Vision I (Basis beeldverwerking)](../software/vision_en_AI/README.md) (**BB**)|
+| wo  |         | Profiling & Memory/Performance Debugging (**JH**)                        |
+| do  |         | Teambegeleiding (**NG**)               |
 
 ### Onderwijsweek D1 (14-04-2025)
 
 | Dag | Project | Kennissessie                                                             |
 |-----|---------|--------------------------------------------------------------------------|
-| ma  |         |                                                                          |
-| di  |         | Klassikale pitches I                                                     |
-| wo  |         | Klassikale pitches II                                                    |
+| ma  |         |  Klassikale pitches I   (**NG&TM**)                                                                     |
+| di  |         | Klassikale pitches II   (**NG&TM**)                                          |
+| wo  |         | Creational Design Patterns (**NG**)                                                     |
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
 ### Onderwijsweek D2 (21-04-2025)
@@ -160,8 +160,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project     | Kennissessie                                                                              |
 |-----|-------------|-------------------------------------------------------------------------------------------|
 | ma  | 2de Paasdag |                                                                                           |
-| di  |             | [Computer Vision I (Basis beeldverwerking)](../software/Vision_and_AI/README.md) (**BB**) |
-| wo  |             | Projectdemo (**JH, NG**)                                                                  |
+| di  |             | Projectdemo (**TM, NG**)  |
+| wo  |             |  [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)                                                                |
 | do  |             | Stagebedrijvendag <br> Teamcoaching (**NG**)                                                                     |
 
 ### Onderwijsweek D3 (28-04-2025)
@@ -180,14 +180,14 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
 | di  |                | Troubleshooting Vision (**BB**)                                                                                                           |
-| wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/Vision_and_AI/README.md#programma-vision-deel-ii) (**BB**) |
+| wo  |                |  |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
 
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
-| ma  |         | [Computer Vision III (CNN)](../software/Vision_and_AI/README.md#programma-vision-deel-iii) (**BB**) |
+| ma  |         | [Computer Vision III (CNN)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**) | 
 | di  |         | Feedbacksessie onderzoek (**BB**)                                                                   |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |

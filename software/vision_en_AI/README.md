@@ -1,40 +1,27 @@
 # Programma Vision deel I
-BLA
-- **Inhoud**:
-    - Intro OpenCV (installatie, basis API)
-    - Eenvoudige filters (blur, edge detection, kleurconversie)
-    - (Virtuele) camera simulatie in Gazebo (indien aanwezig)
-- **Oefening**: Edge Detection Test
-    - *Scope*: Gebruik de (virtuele) camerabeelden uit Gazebo of een afbeelding, pas edge detection toe (Canny, Sobel) en toon de resultaten.
-    - *Leeruitkomsten*: Beheersing van basis CV-technieken en tooling.
-
 
 ## Voorbereiding
-Bekijk de volgende [video](https://www.youtube.com/watch?v=dvh1tvb3WGU).  
+Bekijk de volgende
+- [video](https://www.youtube.com/watch?v=dvh1tvb3WGU).  
+
 Bestudeer & speel met de volgende site:  
-https://setosa.io/ev/image-kernels/
+- https://setosa.io/ev/image-kernels/
 
 ## Tijdens en na de les
 
-bekijk de volgende video:  
-BLA
+De ppt van de les:
+-  [introduction_vision_part_I](./files/Introduction_vision_part_I.pptx)
+
+Voor de opdrachten uit van :
+-  [OpenCV](./OpenCV.md)
 
 ## Inleveren op Canvas
 
-BLA
+Upload de screenshots van de oefeningen zoals beschreven in de markdownfile. 
 
 Veel succes!
 
 # Programma Vision deel II
-BLA
-- **Inhoud**:
-    (Object- en kleurherkenning)
-    - Thresholding, contour detection, eenvoudige objectherkenning
-    - Kleurdetectie (HSV filtering)
-    - Introductie Neural networks
-- **Oefening**: Mini-Detection
-    - *Scope*: Herken een felgekleurde marker in beeld (rood object) en genereer een signaal (in C++ of Python) om iets in Gazebo te triggeren (bijv. plugincommando).
-    - *Leeruitkomsten*: Integratie ontwerp (CV) en realisatie (besturing).
 
 ## Voorbereiding
 Bekijk de volgende video:  
@@ -46,6 +33,15 @@ Bekijk de volgende video:
 ## Inleveren op Canvas
 
 BLA
+BLA
+- **Inhoud**:
+    (Object- en kleurherkenning)
+    - Thresholding, contour detection, eenvoudige objectherkenning
+    - Kleurdetectie (HSV filtering)
+    - Introductie Neural networks
+- **Oefening**: Mini-Detection
+    - *Scope*: Herken een felgekleurde marker in beeld (rood object) en genereer een signaal (in C++ of Python) om iets in Gazebo te triggeren (bijv. plugincommando).
+    - *Leeruitkomsten*: Integratie ontwerp (CV) en realisatie (besturing).
 
 # Programma Vision deel III
 BLA

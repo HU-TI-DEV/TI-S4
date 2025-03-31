@@ -150,8 +150,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag | Project | Kennissessie                                                             |
 |-----|---------|--------------------------------------------------------------------------|
-| ma  |         |  Klassikale pitches I                                                                        |
-| di  |         | Klassikale pitches II                                                    |
+| ma  |         |  Klassikale pitches I   (**NG&TM**)                                                                     |
+| di  |         | Klassikale pitches II   (**NG&TM**)                                          |
 | wo  |         | Creational Design Patterns (**NG**)                                                     |
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 

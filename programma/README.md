@@ -141,7 +141,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | Project demo (klassikaal)  (**TM**)                             |
+| ma  |         | Project demo   (**TM**)                             |
 | di  |         | Creational Design Patterns (**NG**) |
 | wo  |         | Profiling & Memory/Performance Debugging (**JH**)                        |
 | do  |         | Teambegeleiding (**NG**)               |

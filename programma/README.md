@@ -141,8 +141,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag | Project | Kennissessie                                      |
 |-----|---------|---------------------------------------------------|
-| ma  |         | Project demo (klassikaal)  (**JH**)                             |
-| di  |         | Creational Design Patterns (**NG**) |
+| ma  |         | Project demo   (**TM**)                             |
+| di  |         | [Computer Vision I (Basis beeldverwerking)](../software/vision_en_AI/README.md) (**BB**)|
 | wo  |         | Profiling & Memory/Performance Debugging (**JH**)                        |
 | do  |         | Teambegeleiding (**NG**)               |
 
@@ -150,9 +150,9 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag | Project | Kennissessie                                                             |
 |-----|---------|--------------------------------------------------------------------------|
-| ma  |         |                                                                          |
-| di  |         | Klassikale pitches I                                                     |
-| wo  |         | Klassikale pitches II                                                    |
+| ma  |         |  Klassikale pitches I   (**NG&TM**)                                                                     |
+| di  |         | Klassikale pitches II   (**NG&TM**)                                          |
+| wo  |         | Creational Design Patterns (**NG**)                                                     |
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
 ### Onderwijsweek D2 (21-04-2025)
@@ -160,8 +160,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project     | Kennissessie                                                                              |
 |-----|-------------|-------------------------------------------------------------------------------------------|
 | ma  | 2de Paasdag |                                                                                           |
-| di  |             | [Computer Vision I (Basis beeldverwerking)](../software/vision_en_AI/README.md) (**BB**) |
-| wo  |             | Projectdemo (**JH, NG**)                                                                  |
+| di  |             | Projectdemo (**TM, NG**)  |
+| wo  |             |  [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)                                                                |
 | do  |             | Stagebedrijvendag <br> Teamcoaching (**NG**)                                                                     |
 
 ### Onderwijsweek D3 (28-04-2025)
@@ -180,7 +180,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
 | di  |                | Troubleshooting Vision (**BB**)                                                                                                           |
-| wo  |                | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**) |
+| wo  |                |  |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)

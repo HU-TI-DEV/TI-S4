@@ -17,7 +17,7 @@ Voor de opdrachten uit van :
 
 ## Inleveren op Canvas
 
-Upload de screenshots van de oefeningen zoals beschreven in de markdownfile. 
+Upload de screenshots van de oefeningen (en de code van de final assignment) zoals beschreven in de markdownfile. 
 
 Veel succes!
 

@@ -8,6 +8,8 @@
 - [Color filtering](#color-filtering)
 - [Color spaces](#color-spaces)
 - [Template matching](#template-matching)
+- [Hough lines](#hough-lines)
+- [Final assignment](#final-assignment)
 - [Extra material](#extra-material)
 
 
@@ -157,10 +159,49 @@ The code: [kleurruimtes.py](./files/kleurruimtes.py)
 11) Watch the following video: [Template matching](https://www.youtube.com/watch?v=kyz_5xZmepA)  
 The [code](./files/templatematching.py)
 
+## Hough lines
+12) Upload [example6.png](./files/example6.png) to your directory and run the following code:
+
+```python
+import cv2
+import numpy as np
+
+# Load image in grayscale
+image = cv2.imread('example6.png', cv2.IMREAD_GRAYSCALE)
+
+# THE FOLOWING LINE SHOULD BE REPLACED BY SOMETHING INTELLIGENT! Maybe filtering? Maybe edge detect? Maybe both? 
+image=image
+
+# Hough Line Transform
+lines = cv2.HoughLinesP(image, 1, np.pi/180, threshold=100, minLineLength=50, maxLineGap=10)
+
+# Convert grayscale to BGR for colored lines
+output = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
+
+# Draw lines
+if lines is not None:
+    for line in lines:
+        x1, y1, x2, y2 = line[0]
+        cv2.line(output, (x1, y1), (x2, y2), (0, 255, 0), 2)
+
+
+
+# Show result
+cv2.imshow('Hough Lines', output)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+```
+
+As you can see in the code the whole preprocessing is missing. Add it, and see if you get a better result!
+**Save the resulting image (you need to upload it to canvas)**.
+
+## Final assignment
+
+13) Experiment with a number of techniques of opencv on your image of choice. 
+**Save the resulting images (you need to upload them to canvas)**.
+**Save the python code to canvas**.
 
 ## Extra material
 
 For the aficionados (liefhebbers) I've made the following video's:
 - [Star recognition](https://www.youtube.com/watch?v=Ez7qANwAAQw), the [code](./files/starrecognition.py)
-
-pip install torch torchvision

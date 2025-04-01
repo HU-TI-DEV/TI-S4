@@ -192,7 +192,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 ```
 
-As you can see in the code the whole preprocessing is missing. Add it, and see if you get a better result!
+As you can see in the code the whole preprocessing is missing. Add it, and see if you get a better result!   
 **Save the resulting image (you need to upload it to canvas)**.
 
 ## Final assignment

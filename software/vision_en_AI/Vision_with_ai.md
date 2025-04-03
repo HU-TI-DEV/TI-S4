@@ -38,7 +38,7 @@ if torch.cuda.is_available():
 ```
 
 Let's get down to business.  
-Run the following code:
+Run the following code (make sure you have the x server running):
 
 ```python
 import torch

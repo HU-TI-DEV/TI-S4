@@ -96,13 +96,13 @@ print ('------------------------------------------------------------------------
 print (' Of simpeler geprint: ')
 print (model)
 
-# Train for 10 epochs
+# Train for 20 epochs
 print ('----------------------------------------------------------------------------------------------')
 print(" Starten met de training...")
 
 train_loss=[]
 test_loss=[]
-for epoch in range(10):
+for epoch in range(20):
     model.train()  # Set model to training mode
     for images, labels in trainloader:
         images, labels = images.to(device), labels.to(device)
@@ -124,10 +124,10 @@ for epoch in range(10):
             testloss += loss.item() * images.size(0)  # Accumulate test loss
  
     # Print the loss on the training set
-    print(f"Epoch [{epoch+1}/10] Training Loss: {loss.item():.4f}")   
+    print(f"Epoch [{epoch+1}/20] Training Loss: {loss.item():.4f}")   
     # Compute the average test loss
     testloss /= len(testloader.dataset)
-    print(f"Epoch [{epoch+1}/10] Test Loss: {testloss:.4f}")
+    print(f"Epoch [{epoch+1}/20] Test Loss: {testloss:.4f}")
     train_loss.append(loss.item())
     test_loss.append(testloss)
 
@@ -155,6 +155,15 @@ conf_matrix = confusion_matrix(all_labels, all_preds)
 
 print ('----------------------------------------------------------------------------------------------')
 print(" De Confusion Matrix:\n", conf_matrix)
+
+# Calculate accuracy
+# Sum the diagonal elements (correctly classified instances)
+correct_predictions = np.sum(np.diag(conf_matrix))
+# Total number of instances
+total_instances = np.sum(conf_matrix)
+# Accuracy calculation
+accuracy = correct_predictions / total_instances
+print (' De accuracy :',accuracy)
 
 def imshow(text_img, img):
     img = img.squeeze().cpu().numpy()  # Remove the batch dimension and convert to numpy

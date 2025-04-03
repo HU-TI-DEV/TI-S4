@@ -3,7 +3,7 @@
 In this markdown file we will experiment with AI for vision applications. We will use the pytorch framework.
 PyTorch is an open-source machine learning library developed by Facebook's AI Research lab. It is widely used for applications such as natural language processing and computer vision. PyTorch provides a multi-dimensional array called Tensor, which is similar to NumPy arrays but can run on GPUs. Tensors are the core data structure used in PyTorch for performing numerical computations.
 
-Let's install it (in the same container as were you installed the opencv library):
+Let's install it (in the same container as the opencv library):
 
 ```bash
 apt-get update && apt-get install -y python3 python3-pip

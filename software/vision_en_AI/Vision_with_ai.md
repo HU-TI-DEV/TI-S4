@@ -103,6 +103,7 @@ print(" Starten met de training...")
 train_loss=[]
 test_loss=[]
 for epoch in range(20):
+    trainloss=0.0
     model.train()  # Set model to training mode
     for images, labels in trainloader:
         images, labels = images.to(device), labels.to(device)
@@ -112,9 +113,11 @@ for epoch in range(20):
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
+        trainloss += loss.item() * images.size(0) 
     # Print the loss on the training set
-    print(f"Epoch [{epoch+1}/20] Training Loss: {loss.item():.4f}")   
-    train_loss.append(loss.item())
+    trainloss /= len(trainloader.dataset)
+    print(f"Epoch [{epoch+1}/20] Training Loss: {trainloss:.4f}")   
+    train_loss.append(trainloss)
     
     # Validate the model on the test set
     model.eval()  # Set model to evaluation mode

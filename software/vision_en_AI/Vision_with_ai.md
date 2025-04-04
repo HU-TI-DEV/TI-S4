@@ -112,6 +112,9 @@ for epoch in range(20):
         loss = criterion(outputs, labels)
         loss.backward()
         optimizer.step()
+    # Print the loss on the training set
+    print(f"Epoch [{epoch+1}/20] Training Loss: {loss.item():.4f}")   
+    train_loss.append(loss.item())
     
     # Validate the model on the test set
     model.eval()  # Set model to evaluation mode
@@ -123,12 +126,9 @@ for epoch in range(20):
             loss = criterion(outputs, labels)
             testloss += loss.item() * images.size(0)  # Accumulate test loss
  
-    # Print the loss on the training set
-    print(f"Epoch [{epoch+1}/20] Training Loss: {loss.item():.4f}")   
     # Compute the average test loss
     testloss /= len(testloader.dataset)
     print(f"Epoch [{epoch+1}/20] Test Loss: {testloss:.4f}")
-    train_loss.append(loss.item())
     test_loss.append(testloss)
 
 print(" Training compleet.")
@@ -188,5 +188,5 @@ print (' De foute voorspellingen ')
 for i in range(300):
     if predicted[i] != test_labels[i]:  # If prediction is wrong
         print(f'Image {i} - True Label: {test_labels[i].item()}, Predicted: {predicted[i].item()}')
-        imshow(f'Image {i} - True Label: {test_labels[i].item()}, Predicted: {predicted[i].item()}      ', test_images[i])  # Show the wrong prediction image using OpenCV
+        imshow(f'Image {i} - True Label: {test_labels[i].item()}, Predicted: {predicted[i].item()}      ', test_images[i]) 
 ```

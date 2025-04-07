@@ -107,11 +107,15 @@ Bijvoorbeeld: Signed Integer Overflow
 
 ````md magic-move
 ```cpp
-bool f(int i) { return i+1 > 1; }
+bool f(int i) { 
+    return i+1 > 1; 
+}
 ```
 
 ```cpp
-bool f(int i) { return i+1 > 1; }
+bool f(int i) { 
+    return i+1 > 1; 
+}
 
 bool g(int i) {
     if (i == INT_MAX) return false;
@@ -123,16 +127,87 @@ bool g(int i) {
 bool g(int i){ return true; }
 ```
 
-```asm
-f:
-mov $0x1, %eax
-retq
+```cpp
+                                        //| x86 ASM
+bool f(int i) {                         //| f:
+    return i+1 > 1;                     //| mov $0x1, %eax
+}                                       //| retq
+                                        //|
+bool g(int i) {                         //| g:
+    if (i == INT_MAX) return false;     //| mov $0x1, %eax
+    else return f(i);                   //| retq
+}                                       //|
+```
+````
 
-g:
-mov $0x1, %eax
-retq
+---
+hideInToc: true
+---
+
+# Undefined Behaviour; het echte gevaar
+
+- UB _ergens_ in je programma maakt het hele programma undefined
+- Volgens de standaard: UB komt niet voor, dus mogen het negeren
+
+<br>
+
+Bijvoorbeeld: Signed Integer Overflow
+
+````md magic-move
+```cpp
+void read_from_network(int size) {
+    // Catch integer overflow.
+    //
+    if (size > size+1) errx(1, "packet too big");
+
+    char *buf = malloc(size+1);
+    if (buf == NULL)
+    errx(1, "out of memory");
+
+    read(fd, buf, size);
+    // ... error checking on read.
+
+    buf[size] = 0;
+    process_packet(buf);
+    free(buf);
+}
+```
+
+```cpp
+void read_from_network(int size) {
+    // size > size+1 is impossible since signed
+    // overflow is impossible. Optimize it out!
+    // if (size > size+1) errx(1, "packet too big");
+
+    char *buf = malloc(size+1);
+    if (buf == NULL)
+    errx(1, "out of memory");
+
+    read(fd, buf, size);
+    // ... error checking on read.
+
+    buf[size] = 0;
+    process_packet(buf);
+    free(buf);
+}
 ```
 ```` 
+
+---
+hideInToc: true
+---
+
+# Undefined Behaviour; het echte gevaar
+
+- Probleem: Security Audits zien dit snel over het hoofd
+- Hoe check je dan wel op signed integer overflow?
+- Vóórdat je iets aanpast
+
+```cpp
+int a = <something>;
+int x = <something>;
+if (x > 0 && a > INT_MAX - x) { ... } // `a + x` would overflow
+```
 
 ---
 hideInToc: true
@@ -143,10 +218,16 @@ hideInToc: true
 Voorbeelden:
 
 - Signed integer overflow
-- Array indexing buiten bounds
+- Out of bounds memory access
 - Zero division
+- Gebruik van ongeïnitialiseerde variabele
 - Dereferencing null ptr
 - Gebruik van objecten na lifetime
+
+<br>
+
+- En meer.. Helaas..
+- Oplossingen zijn specifiek per geval
 
 ---
 layout: two-cols
@@ -154,17 +235,24 @@ layout: two-cols
 
 # Unspecified Behaviour; huh?
 
-En ook; Implementation-defined behaviour. Verschil? Documentatie.
+En ook; Implementation-defined behaviour. Verschil?
 
 Unspecified behaviour:
 
 - Hóeft niet gedocumenteerd te worden
 - Order of Evaluation
-```cpp
-void f(int a, int b, int c){ ... }
 
-int x = 12;
-f(x, x++, x+20);
+```cpp 
+#include <iostream>
+void f(int a, int b, int c){ 
+    printf("%d, %d, %d", a,b,c);
+}
+
+int main(){
+    int x = 12;
+    f(x, x++, x+20);
+}
+
 ```
 
 - String Literal Comparison
@@ -186,6 +274,26 @@ Implementation defined behaviour:
     - 32- of 64-bit
 - Uit hoeveel bits een byte bestaat
     - Mééstal 8, maar niet altijd! 
+
+---
+hideInToc: true
+---
+
+# Proof is in the pudding;
+
+```cpp {monaco-run}
+#include <iostream>
+void f(int a, int b, int c){ 
+    printf("%d, %d, %d", a,b,c);
+}
+
+int main(){
+    int x = 12;
+    f(x, x++, x+20);
+}
+```
+
+<img src="/OutputCE.png" style="display: block; margin: 10; width: 60%; height: auto;">
 
 ---
 layout: center

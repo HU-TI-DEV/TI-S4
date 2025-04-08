@@ -144,9 +144,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | ma  |         | Project demo   (**TM & NG**)                             |
 | di  |         | Ptrs, Ref, UB (**NG**) |
 | wo  |         | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)                      |
-| do  |         | Teambegeleiding (**NG**)               |
-
-Profiling & Memory/Performance Debugging (**JH**)   
+| do  |         | Teambegeleiding (**NG**)               | 
 
 ### Onderwijsweek D1 (14-04-2025)
 
@@ -163,7 +161,7 @@ Profiling & Memory/Performance Debugging (**JH**)
 |-----|-------------|-------------------------------------------------------------------------------------------|
 | ma  | 2de Paasdag |                                                                                           |
 | di  |             | Projectdemo (**TM, NG**)  |
-| wo  |             |  ...                                                               |
+| wo  |             |  Creational/Behavioural design patterns (**NG**)                                                              |
 | do  |             | Stagebedrijvendag <br> Teamcoaching (**NG**)                                                                     |
 
 ### Onderwijsweek D3 (28-04-2025)
@@ -181,8 +179,8 @@ Profiling & Memory/Performance Debugging (**JH**)
 | Dag | Project        | Kennissessie                                                                                                                              |
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
-| di  |                | Troubleshooting Vision (**BB**)                                                                                                           |
-| wo  |                |  |
+| di  |                | Feedbacksessie onderzoek (**B & TM & NG**)                                                          |
+| wo  |                | Troubleshooting Vision (**BB**)                                                   |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
@@ -190,7 +188,7 @@ Profiling & Memory/Performance Debugging (**JH**)
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
 | ma  |         | [Computer Vision III (CNN)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**) | 
-| di  |         | Feedbacksessie onderzoek (**BB**)                                                                   |
+| di  |         | ...                                                                  |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |
 
@@ -275,3 +273,5 @@ Week D12 en D13 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk 
 | di  | **Verbeterperiode** |
 | wo  | **Verbeterperiode** |
 | do  | **Verbeterperiode** |
+
+Profiling & Memory/Performance Debugging (**JH**)  

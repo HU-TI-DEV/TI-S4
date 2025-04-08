@@ -34,13 +34,14 @@ Speel met de volgende : [site](https://adamharley.com/nn_vis/cnn/3d.html)
 ## Tijdens en na de les
 
 - De powerpoint: [Introductie Neural networks](./files/Neural_Networks_introduction.pptx)
+- De tweede powerpoint: [Introductie vision met AI](./files/Introduction_vision_part_II.pptx)
 
 - werk aan de opdracht: [Vision with AI](./Vision_with_ai.md)
 
 ## Inleveren op Canvas
-
+Zie [Vision with AI](./Vision_with_ai.md)
 
 
 # Programma Vision deel III
 
-
+Algemene AI & Impact maatschappij

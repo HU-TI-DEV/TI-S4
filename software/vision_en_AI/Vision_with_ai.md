@@ -215,11 +215,11 @@ For assignment 3 you will use AI assistance to make or change code. Before assig
 6) gemini
 7) grok
 
-The assignment:
-a) Which companies are behind all the different models?
-b) In which country is the company based?
-c) In which country do they store their data? 
-d) do the AI's answer truthfully on question a/b/c?
+The assignment:  
+a) Which companies are behind all the different models?  
+b) In which country is the company based?  
+c) In which country do they store their data?   
+d) do the AI's answer truthfully on question a/b/c?  
 
 Make a table with the results (a/b/c/d) and add as an extra column any information you can find on privacy policy of the different companies.
 

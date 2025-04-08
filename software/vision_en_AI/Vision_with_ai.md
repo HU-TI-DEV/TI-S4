@@ -3,7 +3,12 @@
 In this markdown file we will experiment with AI for vision applications. We will use the pytorch framework.
 PyTorch is an open-source machine learning library developed by Facebook's AI Research lab. It is widely used for applications such as natural language processing and computer vision. PyTorch provides a multi-dimensional array called Tensor, which is similar to NumPy arrays but can run on GPUs. Tensors are the core data structure used in PyTorch for performing numerical computations.
 
-Let's install it (in the same container as the opencv library):
+## Installation
+Let's install it (in the same container as the opencv library):  
+**PLEASE NOTE, THE FOLLOWING USES --BREAK-SYSTEM-PACKAGES, THIS CHANGES THE SYSTEM PACKAGES. IF YOU DO NOT WANT THIS, USE A VIRTUAL ENVIRONMENT.** 
+
+Make sure you [commit](https://github.com/HU-TI-DEV/TI-S4/blob/main/hardware_simulatie/gazebo/1_Installing_gazebo.md) 
+your container before you execute the following code.
 
 ```bash
 apt-get update && apt-get install -y python3 python3-pip
@@ -193,3 +198,39 @@ for i in range(300):
         print(f'Image {i} - True Label: {test_labels[i].item()}, Predicted: {predicted[i].item()}')
         imshow(f'Image {i} - True Label: {test_labels[i].item()}, Predicted: {predicted[i].item()}      ', test_images[i]) 
 ```
+
+## Assignment 1
+1) Make different versions of the code so that the network is bigger (more conv filters) and smaller (less conv filters).
+2) Investigate the performance by plotting the confusion matrix for your 3 different versions of the cnn.
+3) Investigate when overfitting happens for the 3 different versions of the cnn. Plot the learning curves for the 3 different versions (you will probably need to increase the number of epochs)
+4) Add a extra hidden layer and again plot learning curves and confusion matrices for the 3 networks with an extra hidden layer. 
+
+## Assignment 2
+For assignment 3 you will use AI assistance to make or change code. Before assignment 3 you will do a small investigation in the following different options:
+1) copilot
+2) phind.com
+3) chatgpt
+4) mistral.ai
+5) deepseek
+6) gemini
+7) grok
+
+The assignment:
+a) Which companies are behind all the different models?
+b) In which country is the company based?
+c) In which country do they store their data? 
+d) do the AI's answer truthfully on question a/b/c?
+
+Make a table with the results (a/b/c/d) and add as an extra column any information you can find on privacy policy of the different companies.
+
+**LIMIT THE TIME YOU SPEND ON ASSIGNMENT 2 TO TWO HRS MAX**
+
+## Assignment 3
+Use AI assisted programming to make or change code to apply a cnn model to the mnist fashion data base. 
+Show the learning curve and the confusion matrix. 
+
+## Assignment 4
+Use gazebo (camera) to generate images WITH and WITHOUT a certain object (e.g. a big red cube or a ball or an elephant with a pink tutu, etc).
+Use the images to train a cnn. 
+
+

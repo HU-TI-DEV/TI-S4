@@ -179,8 +179,8 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project        | Kennissessie                                                                                                                              |
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
-| di  |                | Troubleshooting Vision (**BB**)                                                                                                           |
-| wo  |                |  |
+| di  |                | Feedbacksessie onderzoek (**B & TM & NG**)                                                          |
+| wo  |                | Troubleshooting Vision (**BB**)                                                   |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
@@ -188,7 +188,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
 | ma  |         | [Computer Vision III (CNN)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**) | 
-| di  |         | Feedbacksessie onderzoek (**BB**)                                                                   |
+| di  |         | ...                                                                  |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |
 

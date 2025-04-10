@@ -7,7 +7,7 @@ PyTorch is an open-source machine learning library developed by Facebook's AI Re
 Let's install it (in the same container as the opencv library):  
 **PLEASE NOTE, THE FOLLOWING USES --BREAK-SYSTEM-PACKAGES, THIS CHANGES THE SYSTEM PACKAGES. IF YOU DO NOT WANT THIS, USE A VIRTUAL ENVIRONMENT.** 
 
-An extra tip from Ingmar:
+An extra tip from Ingmar & Luke:
 ```
 Hi Bart, een FYI voor de Vision opdracht. Mensen moeten tussen Python versie 3.7 en 3.12 gebruiken ervoor, als je Python 3.13 gebruikt zegt Pip dat hij de libraries niet kan vinden om te installeren
 ```

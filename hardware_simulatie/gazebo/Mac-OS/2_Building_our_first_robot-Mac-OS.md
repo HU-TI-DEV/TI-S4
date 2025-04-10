@@ -1,4 +1,4 @@
-### Gazebo build your first robot using gazebo ionic on Mac OS X
+### Gazebo build your first robot using gazebo ionic on Mac OS
 
 Make a new folder for the project in your workspace.
 

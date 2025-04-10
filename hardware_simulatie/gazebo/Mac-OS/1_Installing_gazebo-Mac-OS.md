@@ -1,10 +1,8 @@
-### Gazebo install on Mac OS X
+### Gazebo install on Mac OS
 
-Gazebo install on Mac OS X. Tested on Mac M4 with Sequoia 15.1.1. Date: 23-01-2025
+Gazebo install on Mac OS. Tested on Mac M4 with Sequoia 15.1.1. Date: 23-01-2025. We can also confirm a working installation on [Apple silicon M1](./gazeb_on_M1.md) with great thanks to Ingmar van de Sande.
 
-    Confirmed not to work on Mac with M1 due to installation problems with the Orge rendering library (1-03-2025). 
-
-Source: [https://gazebosim.org/docs/latest/install_osx_src/](https://gazebosim.org/docs/latest/install_osx_src/)
+Source for the following workbook: [https://gazebosim.org/docs/latest/install_osx_src/](https://gazebosim.org/docs/latest/install_osx_src/)
 
 - Check if you have xQuartz x terminal for Mac OS
 

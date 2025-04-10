@@ -1,4 +1,4 @@
-### Connect with C on Mac OS X
+### Connect with C on Mac OS
 
 First check your tooling:
 

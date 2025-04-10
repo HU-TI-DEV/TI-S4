@@ -6,7 +6,7 @@ Below the following environments are used:<br>
 <sup>2</sup> The prompt of the Docker container<br>
 
 ## Installing gazebo in a Docker container
-Although you can install Gazebo on native Windows that specific version is broken, it malfunctions. Therefore we will install Gazebo in a Docker container on Ubuntu. If you use a Mac only a native install seems to be possibel. Use the following [logbook-item for installing on Mac OS X](./Mac-OS-X/1_Installing_gazebo-Mac-OS-X.md).
+Although you can install Gazebo on native Windows that specific version is broken, it malfunctions. Therefore we will install Gazebo in a Docker container on Ubuntu. If you use a Mac only a native install seems to be possible. Use the following [logbook-item for installing on Mac OS X](./Mac-OS/1_Installing_gazebo-Mac-OS.md).
 
 ### Install Docker Desktop on Windows:
 If you have not done this already we first install [Docker Desktop](https://www.docker.com/products/docker-desktop/). Please note, you need approximatly 10Gb of diskspace to install it. You can download it from Docker's official site.

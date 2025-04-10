@@ -151,7 +151,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project | Kennissessie                                                             |
 |-----|---------|--------------------------------------------------------------------------|
 | ma  |         | Klassikale pitches I   (**NG&TM**)                                                                     |
-| di  |         | Klassikale pitches II   (**NG&TM**)                                          |
+| di  |         | Klassikale pitches II   (**NG&TM**) <br> Vanaf 14.00 - Stagevoortraject                                         |
 | wo  |         | ALDS III (**MV**)                                                     |
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
@@ -208,7 +208,7 @@ Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds 
 | Dag | Project        | Kennissessie                           |
 |-----|----------------|----------------------------------------|
 | ma  |                | Projectdemo (**JH**)                   |
-| di  |                | Projectwerkdag/Deepdive/Project update |
+| di  |                | Projectwerkdag/Deepdive/Project update <br> Vanaf 14.00 - Stagevoortraject |
 | wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  | Hemelvaartsdag |                                        |
 
@@ -226,7 +226,7 @@ Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds 
 | Dag | Project        | Kennissessie                           |
 |-----|----------------|----------------------------------------|
 | ma  | 2e Pinksterdag |                                        |
-| di  |                | Projectwerkdag/Deepdive/Project update |
+| di  |                | Projectwerkdag/Deepdive/Project update <br> Vanaf 14.00 - Stagevoortraject|
 | wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  |                | Projectwerkdag/Deepdive/Project update |
 

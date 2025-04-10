@@ -179,15 +179,15 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project        | Kennissessie                                                                                                                              |
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
-| di  |                | Feedbacksessie onderzoek (**B & TM & NG**)                                                          |
-| wo  |                | Troubleshooting Vision (**BB**)                                                   |
+| di  |                | Feedbacksessie onderzoek (**BB & TM & NG**)                                                          |
+| wo  |                |  [General AI)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**)             |
 | do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
 
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
-| ma  |         | [Computer Vision III (CNN)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**) | 
+| ma  |         | ...| 
 | di  |         | ...                                                                  |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |

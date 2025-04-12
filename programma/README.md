@@ -134,7 +134,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|---------|---------------------------------------------------|
 | ma  |         | Projectwerkdag                     |
 | di  |         | Structural Design Patterns (**NG**)               |
-| wo  |         | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3----pathfinding) (**MV**)                                    |
+| wo  |         | ALDS III (**JH**)                                    |
 | do  |         | :end: Einde sprint 3 & :runner: planning sprint 4 |
 
 ### Onderwijsweek C10 (7-04-2025)
@@ -152,7 +152,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|---------|--------------------------------------------------------------------------|
 | ma  |         | Klassikale pitches I   (**NG&TM**)                                                                     |
 | di  |         | Klassikale pitches II   (**NG&TM**) <br> Vanaf 14.00 - Stagevoortraject                                         |
-| wo  |         | ALDS III (**MV**)                                                     |
+| wo  |         | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3----pathfinding) (**MV**)                                                     |
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
 ### Onderwijsweek D2 (21-04-2025)

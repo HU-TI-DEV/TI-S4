@@ -134,7 +134,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|---------|---------------------------------------------------|
 | ma  |         | Projectwerkdag                     |
 | di  |         | Structural Design Patterns (**NG**)               |
-| wo  |         | ALDS III (**JH**)                                    |
+| wo  |         | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3----pathfinding) (**MV**)                                    |
 | do  |         | :end: Einde sprint 3 & :runner: planning sprint 4 |
 
 ### Onderwijsweek C10 (7-04-2025)

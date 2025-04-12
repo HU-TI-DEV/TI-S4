@@ -152,7 +152,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|---------|--------------------------------------------------------------------------|
 | ma  |         | Klassikale pitches I   (**NG&TM**)                                                                     |
 | di  |         | Klassikale pitches II   (**NG&TM**) <br> Vanaf 14.00 - Stagevoortraject                                         |
-| wo  |         | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3----pathfinding) (**MV**)                                                     |
+| wo  |         | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**MV**)                                                     |
 | do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
 ### Onderwijsweek D2 (21-04-2025)

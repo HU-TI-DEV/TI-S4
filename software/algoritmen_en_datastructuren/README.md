@@ -1,23 +1,4 @@
-# Programma BLBLBLALLA
-BLALBLBA
-
-## Voorbereiding
-BLALBLLA
-
-## Tijdens en na de les
-
-BLALBALBA:
-
-## Inleveren op Canvas
-
-Opdracht: link naar canvas
-
-Veel succes!
-
-# Programma blalblal deel II
-Enzovoort
-
-# Programma ALDS deel 3 - Pathfinding
+# Programma ALDS deel 3
 
 ## Voorbereiding
 - Bestudeer als voorbereiding het **hoofdstuk 13 tm 14.1** over grafen uit de reader (https://canvas.hu.nl/courses/44572/files/5382884).

@@ -153,14 +153,14 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | ma  |         | Klassikale pitches I   (**NG&TM**)                                                                     |
 | di  |         | Klassikale pitches II   (**NG&TM**) <br> Vanaf 14.00 - Stagevoortraject                                         |
 | wo  |         | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**MV**)                                                     |
-| do  |         | **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
+| do  |         | PO gesprekken groep 1 <br> **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
 
 ### Onderwijsweek D2 (21-04-2025)
 
 | Dag | Project     | Kennissessie                                                                              |
 |-----|-------------|-------------------------------------------------------------------------------------------|
 | ma  | 2de Paasdag |                                                                                           |
-| di  |             | Projectdemo (**TM, NG**)  |
+| di  |             | PO gesprekken groep 2 |
 | wo  |             |  Creational/Behavioural design patterns (**NG**)                                                              |
 | do  |             | Stagebedrijvendag <br> Teamcoaching (**NG**)                                                                     |
 
@@ -168,11 +168,11 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 
 | Dag |          |
 |-----|----------|
-| ma  | Vakantie |
-| di  | Vakantie |
-| wo  | Vakantie |
-| do  | Vakantie |
-| vr  | Vakantie |
+| ma  | Onderwijsluw |
+| di  | Onderwijsluw |
+| wo  | Onderwijsluw |
+| do  | Onderwijsluw |
+| vr  | Onderwijsluw |
 
 ### Onderwijsweek D4 (5-05-2025)
 
@@ -181,13 +181,13 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | ma  | Bevrijdingsdag |                                                                                                                                           |
 | di  |                | Feedbacksessie onderzoek (**BB & TM & NG**)                                                          |
 | wo  |                |  [General AI)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**)             |
-| do  |                | :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
+| do  |                | PO gesprekken groep 2 <br> :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)
 
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
-| ma  |         | ...| 
+| ma  |         | PO gesprekken groep 1 | 
 | di  |         | ...                                                                  |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |
@@ -199,7 +199,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | ma  |         | Projectwerkdag/Deepdive/Project update                                   |
 | di  |         | Projectwerkdag/Deepdive/Project update                                   |
 | wo  |         | Projectwerkdag/Deepdive/Project update                                   |
-| do  |         | **3e Peilmoment** <br> :end: Einde sprint 6 & :runner: Planning sprint 7 |
+| do  |         | PO gesprekken groep 1 <br> **3e Peilmoment** <br> :end: Einde sprint 6 & :runner: Planning sprint 7 |
 
 ### Onderwijsweek D7 (26-05-2025)
 
@@ -207,7 +207,7 @@ Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds 
 
 | Dag | Project        | Kennissessie                           |
 |-----|----------------|----------------------------------------|
-| ma  |                | Projectdemo (**JH**)                   |
+| ma  |                | PO gesprekken groep 2                   |
 | di  |                | Projectwerkdag/Deepdive/Project update <br> Vanaf 14.00 - Stagevoortraject |
 | wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  | Hemelvaartsdag |                                        |
@@ -219,14 +219,14 @@ Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds 
 | ma  |         | Projectwerkdag/Deepdive/Project update            |
 | di  |         | Projectwerkdag/Deepdive/Project update            |
 | wo  |         | Projectwerkdag/Deepdive/Project update            |
-| do  |         | :end: Einde sprint 7 & :runner: Planning sprint 8 |
+| do  |         | PO gesprekken groep 2 <br> :end: Einde sprint 7 & :runner: Planning sprint 8 |
 
 ### Onderwijsweek D9 (9-06-2025)
 
 | Dag | Project        | Kennissessie                           |
 |-----|----------------|----------------------------------------|
 | ma  | 2e Pinksterdag |                                        |
-| di  |                | Projectwerkdag/Deepdive/Project update <br> Vanaf 14.00 - Stagevoortraject|
+| di  |                | PO gesprekken groep 1 <br> Vanaf 14.00 - Stagevoortraject|
 | wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  |                | Projectwerkdag/Deepdive/Project update |
 

@@ -360,6 +360,12 @@ Grofweg zijn er 5:
 
 ---
 
+# CDP; Builder/Factory
+
+TODO.. :(
+
+---
+
 # CDP; Singleton
 
 - Verzekert dat er maar één instantie van dat object is

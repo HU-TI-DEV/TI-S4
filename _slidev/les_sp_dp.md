@@ -330,8 +330,218 @@ hideInToc: true
 
 ---
 
-# Design Patterns; Builder
+# Creational Design Patterns; wat?
 
+- Voor het creëren van objecten
+- Promoot flexibiliteit en DRY principe
 
+Grofweg zijn er 5:
+- Factory Method
+- Abstract Factory
+- Builder
+- Prototype
+- Singleton
 
+---
+hideInToc: true
+---
+
+# Creational Design Patterns; wat?
+
+- Voor het creëren van objecten
+- Promoot flexibiliteit en DRY principe
+
+Grofweg zijn er 5:
+- **Factory Method**
+- Abstract Factory
+- **Builder**
+- Prototype
+- **Singleton**
+
+---
+
+# CDP; Singleton
+
+- Verzekert dat er maar één instantie van dat object is
+- Biedt global access naar een resource
+
+````md magic-move
+```cpp
+class Singleton{
+private:
+    ... // Een resource waar je toegang toe wilt controleren
+public:
+    Singleton(){ ... }
+    void doSomething(){ ... }
+};
+
+int main(){
+    Singleton A = new Singleton();
+    A.doSomething();
+}
+```
+
+```cpp
+class Singleton{
+private:
+    ... // Een resource waar je toegang toe wilt controleren
+public:
+    Singleton(){ ... }
+    void doSomething(){ ... }
+};
+
+int main(){
+    Singleton A = new Singleton();
+    A.doSomething();
+    Singleton B = new Singleton();
+    B.doSomething();
+}
+```
+
+```cpp
+class Singleton{
+private:
+    ... // Een resource waar je toegang toe wilt controleren
+    Singleton(){ ... }; // Constructor is nu private!
+    static Singleton* instance;
+public:
+    static Singleton* getInstance(){ ... }
+    void doSomething(){ ... }
+};
+
+int main(){
+    Singleton* A = Singleton::getInstance();
+    A->doSomething();
+    Singleton& B = Singleton::getInstance(); // Dit is nu 'magisch' hetzelfde object
+    B->doSomething();
+}
+```
+
+```cpp
+class Singleton{
+private:
+    ... // Een resource waar je toegang toe wilt controleren
+    Singleton(){ ... }
+    static Singleton* instance;
+public:
+    static Singleton* getInstance( ... ){ 
+        if (instance == nullptr){
+            instance = new Singleton();
+        }
+        return instance;
+    }
+    void doSomething(){ ... }
+};
+Singleton* Singleton::instance = nullptr;
+
+int main(){
+    Singleton* A = Singleton::getInstance();
+    A->doSomething();
+    Singleton* B = Singleton::getInstance(); // Toch niet magisch.. :(
+    B->doSomething();
+}
+```
+
+```cpp
+class Singleton{
+private:
+    ... // Een resource waar je toegang toe wilt controleren
+    Singleton(){ ... }
+    static Singleton* instance;
+public:
+    static Singleton& getInstance( ... ){ 
+        if (instance == nullptr){
+            instance = new Singleton();
+        }
+        return *instance;
+    }
+    void doSomething(){ ... }
+};
+Singleton* Singleton::instance = nullptr;
+
+int main(){
+    Singleton& A = Singleton::getInstance();
+    A.doSomething();
+    Singleton& B = Singleton::getInstance(); // Toch niet magisch.. :(
+    B.doSomething();
+}
+```
+
+```cpp
+class Singleton{
+private:
+    ... // Een resource waar je toegang toe wilt controleren
+    Singleton(){ ... }
+    static std::unique_ptr<Singleton> instance;
+public:
+    static Singleton& getInstance( ... ){ 
+        if (!instance){
+            instance = std::make_unique<Singleton>();
+        }
+        return *instance;
+    }
+    void doSomething(){ ... }
+};
+
+int main(){
+    Singleton& A = Singleton::getInstance();
+    A.doSomething();
+    Singleton& B = Singleton::getInstance(); // Toch niet magisch.. :(
+    B.doSomething();
+}
+```
+```` 
+
+---
+hideInToc: true
+---
+
+# CDP; Singleton
+
+- Zonder dure memory management;
+
+```cpp
+class Singleton {
+private:
+    Singleton() { ... }
+public:
+    static Singleton& getInstance() {
+        static Singleton instance; // Gegarandeerd maar één keer
+        return instance;
+    }
+    void doSomething() { ... }
+};
+
+int main() {
+    Singleton& singleton = Singleton::getInstance();
+    singleton.doSomething();
+}
+```
+---
+hideInToc: true
+---
+
+# CDP; Singleton
+
+Krachtig, maar..
+
+<v-click>
+
+Nadelen:
+
+</v-click>
+
+<v-clicks>
+
+- Single Responsibility Principle
+- Gevoelig voor Undefined Behaviour
+- Globale State / Side Effects
+- Hidden Dependencies
+- Mogelijk niet Thread Safe
+
+</v-clicks>
+
+---
+layout: end
+---
 

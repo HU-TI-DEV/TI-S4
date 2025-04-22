@@ -19,12 +19,15 @@ hideInToc: true
 
 <v-clicks>
 
+- Resource Acquisition Is Initialization
 - Vorm van resource management
 - Gebonden aan lifetime van een object
 
 </v-clicks>
 
 <v-click after>
+
+<br>
 
 ```cpp
 class FileHandler{
@@ -47,7 +50,6 @@ hideInToc: true
 
 # RAII; stapje verder!
 
-- Dit kun je óók voor geheugen doen
 
 ```cpp
 template<typename T>
@@ -80,10 +82,13 @@ int main(){
 
 - ... Dat is (deels) wat smartpointers zijn
 - Taal feature voor RAII bij het managen van dynamische objecten
+- (Met wat extra slimmigheden)
 
-<v-clicks>
+<br>
 
 3 typen Smart Pointers, uit de `<memory>` header:
+<v-clicks>
+
 - `std::unique_ptr`
     - Één eigenaar van de resource; geen kopieën mogelijk
     - Eigenaarschap doorgeven d.m.v. `std::move`
@@ -100,7 +105,233 @@ int main(){
 
 # Smart Pointers; hoe?
 
+````md magic-move
+```cpp
+class Res {
+private:
+    std::string name;
+public:
+    Res(const std::string& name) : name(name){
+        std::cout << name << " aangemaakt.\n";
+    }
+    ~Res() {
+        std::cout << name << " verwijderd.\n";
+    }
+    void sayHello() const {
+        std::cout << name << "!\n";
+    }
+};
+```
+
+```cpp
+class Res {
+private:
+    std::string name;
+public:
+    Res(const std::string& name) : name(name){ ... }
+    ~Res(){ ... }
+    void sayHello() const { ... }
+};
+```
+
+```cpp
+class Res {
+private:
+    std::string name;
+public:
+    Res(const std::string& name) : name(name){ ... }
+    ~Res(){ ... }
+    void sayHello() const { ... }
+};
+
+int main() {
+    // 1. std::unique_ptr: Één eigenaar
+    {
+        std::unique_ptr<Res> uniqueRes = std::make_unique<Res>("Unique");
+        uniqueRes->sayHello();
+        // Eigenaarschap doorgeven
+        std::unique_ptr<Res> movedRes = std::move(uniqueRes);
+        if (!uniqueRes) {
+            std::cout << "uniqueRes is nu leeg.\n";
+        }
+        movedRes->sayHello();
+    } // Resource wordt hier automatisch vrijgegeven
+}
+```
+
+```cpp
+class Res {
+private:
+    std::string name;
+public:
+    Res(const std::string& name) : name(name){ ... }
+    ~Res(){ ... }
+    void sayHello() const { ... }
+};
+
+int main() {
+    // 1. std::unique_ptr: Één eigenaar
+    {
+        std::unique_ptr<Res> uniqueRes = std::make_unique<Res>("Unique");
+        *uniqueRes.sayHello();
+        // Eigenaarschap doorgeven
+        std::unique_ptr<Res> movedRes = std::move(uniqueRes);
+        if (!uniqueRes) {
+            std::cout << "uniqueRes is nu leeg.\n";
+        }
+        *movedRes.sayHello();
+    } // Resource wordt hier automatisch vrijgegeven
+}
+```
+
+```cpp
+class Res {
+private:
+    std::string name;
+public:
+    Res(const std::string& name) : name(name){ ... }
+    ~Res(){ ... }
+    void sayHello() const { ... }
+};
+
+int main(){
+    // 2. std::shared_ptr: Meerdere eigenaren
+    {
+        std::shared_ptr<Res> sharedRes1 = std::make_shared<Res>("Shared");
+        {
+            std::shared_ptr<Res> sharedRes2 = sharedRes1; // Kopie delen
+            sharedRes2->sayHello();
+            std::cout << "Aantal eigenaren: " << sharedRes1.use_count() << "\n";
+        } // sharedRes2 gaat uit scope, maar resource blijft bestaan
+        std::cout << "Aantal eigenaren: " << sharedRes1.use_count() << "\n";
+    } // Resource wordt hier vrijgegeven als de laatste eigenaar verdwijnt
+}
+```
+
+```cpp
+class Res {
+private:
+    std::string name;
+public:
+    Res(const std::string& name) : name(name){ ... }
+    ~Res(){ ... }
+    void sayHello() const { ... }
+};
+
+int main(){
+    // 3. std::weak_ptr: Geen eigenaarschap
+    {
+        std::shared_ptr<Res> sharedRes = std::make_shared<Res>("Weak");
+        std::weak_ptr<Res> weakRes = sharedRes; // Geen eigenaarschap
+        if (auto lockedRes = weakRes.lock()) { // Controleer of resource nog bestaat
+            lockedRes->sayHello();
+        }
+        sharedRes.reset(); // Resource vrijgeven
+        if (weakRes.expired()) {
+            std::cout << "Resource is niet meer beschikbaar.\n";
+        }
+    }
+}
+```
+````
 
 ---
+
+# Smart Pointers; de perfecte oplossing?
+
+<v-clicks>
+
+- Helaas :(
+- Unique Ptrs zijn perfect ⭐
+- Weak Ptrs 'ook'
+- Shared Ptrs gebruiken éxtra geheugen (reference counting)
+- Shared Ptrs vragen íets meer peformance voor reference counting
+- Weak Ptrs geen extra overhead, maar hebben Shared Ptrs nodig
+- Shared Ptr reference counting is thread safe, maar resource access niet
+
+</v-clicks>
+
+<v-click after>
+
+<br>
+
+- Shared Ptrs kunnen Cyclic Dependency veroorzaken -> Memory Leak
+
+</v-click>
+
+
+
+---
+hideInToc: true
+---
+
+# Smart Pointers; de perfecte oplossing?
+
+- Shared Ptrs kunnen Cyclic Dependency veroorzaken
+
+````md magic-move
+```cpp
+class B; // Forward declaration
+
+class A {
+public:
+    std::shared_ptr<B> b_ptr; // Shared pointer naar B
+    ~A() { std::cout << "A verwijderd\n"; }
+};
+
+class B {
+public:
+    std::shared_ptr<A> a_ptr; // Shared pointer naar A
+    ~B() { std::cout << "B verwijderd\n"; }
+};
+
+int main() {
+    auto a = std::make_shared<A>();
+    auto b = std::make_shared<B>();
+
+    a->b_ptr = b; // A wijst naar B
+    b->a_ptr = a; // B wijst naar A
+    // Beide objecten blijven bestaan omdat de reference count nooit nul wordt -> Memory Leak
+}
+```
+
+```cpp
+class B; // Forward declaration
+
+class A {
+public:
+    std::shared_ptr<B> b_ptr; // Shared pointer naar B
+    ~A() { std::cout << "A verwijderd\n"; }
+};
+
+class B {
+public:
+    std::weak_ptr<A> a_ptr; // Weak pointer naar A
+    ~B() { std::cout << "B verwijderd\n"; }
+};
+
+int main() {
+    auto a = std::make_shared<A>();
+    auto b = std::make_shared<B>();
+
+    a->b_ptr = b; // A wijst naar B
+    b->a_ptr = a; // B wijst naar A, maar via weak_ptr
+    // Nu worden beide objecten correct vrijgegeven, geen memory leak :)
+}
+```
+```` 
+
+---
+layout: center
+hideInToc: true
+---
+
+# \<br>
+
+---
+
+# Design Patterns; Builder
+
+
 
 

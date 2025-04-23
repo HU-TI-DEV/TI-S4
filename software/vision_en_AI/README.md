@@ -42,6 +42,14 @@ Speel met de volgende : [site](https://adamharley.com/nn_vis/cnn/3d.html)
 Zie [Vision with AI](./Vision_with_ai.md)
 
 
-# Programma Vision deel III
+# Programma Machine learning
+
+## Voorbereiding
+Bekijk de volgende video's:
+- [Intro LLM](https://youtu.be/LPZh9BOjkQs?si=2c7dNNPAyRwIYZT1)
+- [Intro Transformers](https://youtu.be/wjZofJX0v4M?si=8_1Kv3WDJ6CiFe6d)
+
+
+## Tijdens en na de les
 
 Algemene AI & Impact maatschappij

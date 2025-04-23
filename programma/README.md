@@ -180,7 +180,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 |-----|----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | ma  | Bevrijdingsdag |                                                                                                                                           |
 | di  |                | Feedbacksessie onderzoek (**BB & TM & NG**)                                                          |
-| wo  |                |  [General AI)](../software/vision_en_AI/README.md#programma-vision-deel-iii) (**BB**)             |
+| wo  |                |  [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)             |
 | do  |                | PO gesprekken groep 2 <br> :end: Einde sprint 5 & :runner: Planning sprint 6                                                                                         |
 
 ### Onderwijsweek D5 (12-05-2025)

@@ -47,11 +47,11 @@ Zie [Vision with AI](./Vision_with_ai.md)
 ## Voorbereiding
 Bekijk de volgende video's:
 - [Intro LLM](https://youtu.be/LPZh9BOjkQs?si=2c7dNNPAyRwIYZT1)
-- [Intro Transformers](https://youtu.be/wjZofJX0v4M?si=8_1Kv3WDJ6CiFe6d)
-
+- [Intro Transformers](https://youtu.be/wjZofJX0v4M?si=8_1Kv3WDJ6CiFe6d)  In ieder geval het stuk over word embedding (van 12:23 tot 20:20)  
 
 ## Tijdens en na de les
 
+- De powerpoint: [Machine Learning overview](./files/Machine_learning_overview.pptx)
 .....
 
 

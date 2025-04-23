@@ -52,4 +52,8 @@ Bekijk de volgende video's:
 
 ## Tijdens en na de les
 
-Algemene AI & Impact maatschappij
+.....
+
+
+## Inleveren op Canvas
+Geen inlevering

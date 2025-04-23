@@ -1,6 +1,6 @@
 ---
 theme: ./slidev-theme-ti
-output: ../software/cpp/sp_dp.pdf
+output: ../software/cpp/SmartPointers_DesignPatterns.pdf
 hideInToc: true
 ---
 
@@ -90,14 +90,14 @@ int main(){
 <v-clicks>
 
 - `std::unique_ptr`
-    - Één eigenaar van de resource; geen kopieën mogelijk
-    - Eigenaarschap doorgeven d.m.v. `std::move`
+    - **Één eigenaar** van de resource; geen kopieën mogelijk
+    - Eigenaarschap **doorgeven** d.m.v. `std::move`
 - `std::shared_ptr`
-    - Meerdere eigenaren van de resource; kopieën mogelijk
-    - Maakt gebruik van Reference Counting
+    - **Meerdere eigenaren** van de resource; kopieën mogelijk
+    - Maakt gebruik van **Reference Counting**
 - `std::weak_ptr`
     - Specifiek voor gebruik met `std::shared_ptr`
-    - Draagt niet bij aan Reference Counting
+    - Draagt **niet** bij aan Reference Counting
 
 </v-clicks>
 
@@ -242,10 +242,10 @@ int main(){
 <v-clicks>
 
 - Helaas :(
-- Unique Ptrs zijn perfect ⭐
+- Unique Ptrs zijn ⭐ **perfect** ⭐
 - Weak Ptrs 'ook'
-- Shared Ptrs gebruiken éxtra geheugen (reference counting)
-- Shared Ptrs vragen íets meer peformance voor reference counting
+- Shared Ptrs gebruiken **éxtra geheugen** (reference counting)
+- Shared Ptrs vragen **íets meer peformance** voor reference counting
 - Weak Ptrs geen extra overhead, maar hebben Shared Ptrs nodig
 - Shared Ptr reference counting is thread safe, maar resource access niet
 
@@ -323,7 +323,6 @@ int main() {
 
 ---
 layout: center
-hideInToc: true
 ---
 
 # \<br>
@@ -354,15 +353,9 @@ hideInToc: true
 Grofweg zijn er 5:
 - **Factory Method**
 - Abstract Factory
-- **Builder**
+- Builder
 - Prototype
 - **Singleton**
-
----
-
-# CDP; Builder/Factory
-
-TODO.. :(
 
 ---
 
@@ -411,7 +404,7 @@ private:
     Singleton(){ ... }; // Constructor is nu private!
     static Singleton* instance;
 public:
-    static Singleton* getInstance(){ ... }
+    static Singleton* getInstance(){ ... } // Controleert dat er maar één instantie is
     void doSomething(){ ... }
 };
 
@@ -523,6 +516,7 @@ int main() {
     singleton.doSomething();
 }
 ```
+
 ---
 hideInToc: true
 ---
@@ -533,7 +527,7 @@ Krachtig, maar..
 
 <v-click>
 
-Nadelen:
+Nadelen, dus niet zonder controverse:
 
 </v-click>
 
@@ -546,6 +540,157 @@ Nadelen:
 - Mogelijk niet Thread Safe
 
 </v-clicks>
+
+
+
+---
+
+# CDP; Factory Pattern
+
+- Stel, we willen een aantal objecten creëren
+
+<v-click>
+
+```cpp
+class Colour; // Forward Declaration
+
+class Drawable{
+private:
+    std::string Name; // Default onderdelen van een drawable object
+    std::vector Pos; 
+    Colour colour;
+public:
+    Drawable(std::vector Pos, Colour colour){ ... }
+    virtual void draw const = 0;
+}
+
+class Rectangle : public Drawable{ ... }; // Implementeert specifieke onderdelen voor dit object
+class Circle : public Drawable{ ... };
+class Line : public Drawable{ ... };
+
+int main(){
+    Rectangle rect1 = Rectangle( ... );
+    Rectangle rect2 = Rectangle( ... );
+    Circle circ1 = Circle( ... );
+    ...
+}
+```
+
+</v-click>
+
+---
+hideInToc: true
+---
+
+# Kleine uitstap; Polymorfisme
+
+- Het concept dat je een derived class pointer in een base class pointer kwijt kunt
+
+````md magic-move
+```cpp
+class Drawable{ ... };
+class Rectangle : public Drawable{ ... };
+class Circle : public Drawable{ ... };
+
+int main(){
+    Drawable* obj = new Rectangle( ... );
+    obj = new Circle( ... );
+}
+```
+
+```cpp
+class Drawable{ ... };
+class Rectangle : public Drawable{ ... };
+class Circle : public Drawable{ ... };
+
+int main(){
+    std::vector<Drawable*> drawables;
+    drawables.push_back(new Rectangle( ... ));
+    drawables.push_back(new Circle( ... ));
+}
+```
+
+```cpp
+class Drawable{ ... };
+class Rectangle : public Drawable{ ... };
+class Circle : public Drawable{ ... };
+
+int main(){
+    std::vector<Drawable*> drawables;
+    drawables.push_back(new Rectangle( ... ));
+    drawables.push_back(new Circle( ... ));
+
+    for(auto obj : drawables){
+        obj->draw();
+    }
+}
+```
+
+```cpp
+class Drawable{ ... };
+class Rectangle : public Drawable{ ... };
+class Circle : public Drawable{ ... };
+
+int main(){
+    std::vector<std::unique_ptr<Drawable>> drawables;
+    drawables.push_back(std::make_unique(Rectangle( ... )));
+    drawables.push_back(std::make_unique(Circle( ... )));
+
+    for(auto obj : drawables){
+        obj->draw();
+    }
+}
+```
+
+```cpp
+class Drawable{ ... };
+class Rectangle : public Drawable{ ... };
+class Circle : public Drawable{ ... };
+
+int main(){
+    std::vector<std::unique_ptr<Drawable>> drawables;
+    drawables.push_back(std::make_unique(Rectangle( ... )));
+    drawables.push_back(std::make_unique(Circle( ... )));
+
+    for(auto *obj : drawables){
+        obj.draw();
+    }
+}
+```
+````
+
+---
+hideInToc: true
+---
+
+# CDP; Factory Pattern
+
+```cpp
+
+Drawable* makeDrawable(std::ifstream & input){
+    std::string name;
+    std::vector pos;
+    Colour colour;
+    
+    input >> name >> pos >> colour;
+
+    if (name == "Circle"){ return new Circle( ... ); }
+    if (name == "Rectangle"){ return new Rectangle( ... ); }
+    ...
+}
+
+int main(){
+    std::vector<Drawable*> drawables;
+
+    while(true){
+        drawables.push_back(makeDrawable(input));
+    }
+    
+    for(auto drawable : drawables){
+        drawable->draw();
+    }
+}
+```
 
 ---
 layout: end

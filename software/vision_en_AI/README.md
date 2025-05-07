@@ -56,4 +56,4 @@ Bekijk de volgende video's:
 
 
 ## Inleveren op Canvas
-Geen inlevering
+- zie opdracht "K-Means clustering" op canvas.

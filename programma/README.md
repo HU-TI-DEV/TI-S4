@@ -188,7 +188,7 @@ Vul deze week de [Evalytics vragenlijst](https://app.evalytics.nl/login) in zoda
 | Dag | Project | Kennissessie                                                                                        |
 |-----|---------|-----------------------------------------------------------------------------------------------------|
 | ma  |         | PO gesprekken groep 1 | 
-| di  |         | ...                                                                  |
+| di  |         | Projectwerkdag                                                                 |
 | wo  |         | workshop 'what if' (**BB**)                                                                         |
 | do  |         | workshop 'what if' (**BB**)                                                                         |
 

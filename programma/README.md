@@ -208,7 +208,7 @@ Vul deze week de **Evalytics vragenlijst** in zodat je dit semester tussentijds 
 | Dag | Project        | Kennissessie                           |
 |-----|----------------|----------------------------------------|
 | ma  |                | PO gesprekken groep 2                   |
-| di  |                | Projectwerkdag/Deepdive/Project update <br> Vanaf 14.00 - Stagevoortraject |
+| di  |                | Projectwerkdag/Deepdive/Project update <br> Vanaf 15.00 - Stagevoortraject |
 | wo  |                | Projectwerkdag/Deepdive/Project update |
 | do  | Hemelvaartsdag |                                        |
 

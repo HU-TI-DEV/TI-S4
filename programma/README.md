@@ -273,5 +273,3 @@ Week D12 en D13 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk 
 | di  | **Verbeterperiode** |
 | wo  | **Verbeterperiode** |
 | do  | **Verbeterperiode** |
-
-Profiling & Memory/Performance Debugging (**JH**)  

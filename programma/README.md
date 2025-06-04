@@ -240,7 +240,7 @@ Werkend eindproduct presenteren en demonstreren. Documentatie opleveren.
 |-----|-------------------|------------------------------------------|
 | ma  |                   | Projectwerkdag/Deepdive/Project update   |
 | di  |                   | Projectwerkdag/Deepdive/Project update   |
-| wo  |                   | Demo dag?                                |
+| wo  |                   | Demo dag                                |
 | do  | **4e Peilmoment** | :end: Einde sprint 8 & planning afronden |
 
 ### Onderwijsweek D11 (23-06-2025)

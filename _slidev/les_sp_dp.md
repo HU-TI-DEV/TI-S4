@@ -693,6 +693,14 @@ int main(){
 ```
 
 ---
+
+# Huiswerk
+
+- Voorbereiden voor ná de vakantie; voortgang deepdive bespreken
+- We verwachten op minimaal één deelvraag voortgang
+- Gaan dan ook de planning bespreken
+
+---
 layout: end
 ---
 

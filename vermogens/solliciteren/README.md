@@ -12,13 +12,14 @@ Deze pagina biedt je houvast voor, tijdens, en ná de sollicitatieprocedure.
 
 ## Inhoud
 <!-- no toc -->
-  - [Voorbereiding](#voorbereiding)
-    - [CV](#cv)
-    - [Online](#online)
-  - [Sollicitatiebrief](#sollicitatiebrief)
-  - [Sollicitatiegesprek](#sollicitatiegesprek)
-  - [Tips \& Tricks](#tips--tricks)
-  - [Wat verder ter tafel komt](#wat-verder-ter-tafel-komt)
+- [Voorbereiding](#voorbereiding)
+  - [CV](#cv)
+  - [Online](#online)
+- [Sollicitatiebrief](#sollicitatiebrief)
+- [Sollicitatiegesprek](#sollicitatiegesprek)
+- [Wat verder ter tafel komt](#wat-verder-ter-tafel-komt)
+  - [Ethisch en Veiligheid](#ethisch-en-veiligheid)
+
 
 ## Voorbereiding
 

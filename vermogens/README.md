@@ -1,4 +1,4 @@
 ## Overzicht
 
 - [Solliciteren](./solliciteren/README.md)
-- [Sprintverslag](./Sprintverslag/Sprint-verslag.md)
+- [Sprintverslag](./sprintverslag/sprint-verslag.md)

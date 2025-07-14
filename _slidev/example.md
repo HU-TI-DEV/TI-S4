@@ -150,6 +150,103 @@ int main() {
 
 ---
 
+# Code
+
+```cpp {monaco-run}
+#include <iostream>
+
+int main() {
+    int i = 1234567890;
+    std::cout << "Hallo wereld " << __VERSION__ << std::endl;
+    std::cout << "[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m\n"
+              << "[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m\n";
+}
+```
+
+
+# <br>
+
+```cpp
+#include <iostream>
+
+int main() {
+    int i = 1234567890;
+    std::cout << "Hallo wereld " << __VERSION__ << std::endl;
+}
+```
+
+```ansi
+[41C[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+[41C[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m
+```
+
+---
+
+# Code
+
+```cpp {monaco-run}
+#include <iostream>
+
+int main() {
+    int i = 1234567890;
+    std::cout << "Hallo wereld " << __VERSION__ << std::endl;
+    std::cout << "[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m\n"
+              << "[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m\n";
+}
+```
+
+
+# <br>
+
+```cpp
+#include <iostream>
+
+int main() {
+    int i = 1234567890;
+    std::cout << "Hallo wereld " << __VERSION__ << std::endl;
+}
+```
+
+```ansi
+[41C[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+[41C[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m
+```
+
+---
+---
+
+# Code
+
+```cpp {monaco-run}
+#include <iostream>
+
+int main() {
+    int i = 1234567890;
+    std::cout << "Hallo wereld " << __VERSION__ << std::endl;
+    std::cout << "[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m\n"
+              << "[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m\n";
+}
+```
+
+
+# <br>
+
+```cpp
+#include <iostream>
+
+int main() {
+    int i = 1234567890;
+    std::cout << "Hallo wereld " << __VERSION__ << std::endl;
+}
+```
+
+```ansi
+[41C[40m   [41m   [42m   [43m   [44m   [45m   [46m   [47m   [m
+[41C[100m   [101m   [102m   [103m   [104m   [105m   [106m   [107m   [m
+```
+
+---
+
 
 
 <br>

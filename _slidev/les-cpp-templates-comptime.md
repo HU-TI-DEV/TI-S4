@@ -57,7 +57,9 @@ print_value(5)
 print_value("Hello")
 ```
 
-<!-- Leg uit dat C++ strikt type-veilig is door compile-time type-checking, terwijl Python flexibel is maar potentieel voor runtime fouten biedt. En dat we python voorbeeldjes er naast gaan houden voor snapvermogen -->
+<!--
+Leg uit dat C++ strikt type-veilig is door compile-time type-checking, terwijl Python flexibel is maar potentieel voor runtime fouten biedt. En dat we python voorbeeldjes er naast gaan houden voor snapvermogen
+-->
 
 ---
 layout: two-cols
@@ -313,7 +315,7 @@ void log(Args&&... args) {
 
 https://godbolt.org/z/hhfEen3sE
 
-https://en.cppreference.com/w/cpp/language/pack
+https://en.cppreference.com/w/cpp/language/parameter_pack.html
 
 https://en.cppreference.com/w/cpp/language/fold
 

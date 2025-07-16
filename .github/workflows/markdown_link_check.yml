@@ -36,8 +36,6 @@ jobs:
           if ! npx markdown-link-check "$file" --config .markdown-link-check.json $QUIET_FLAG; then
             echo "❌ Error in file: $file"
             HAS_ERRORS=true
-          else
-            echo "✅ $file passed"
           fi
         done < <(find . -name "*.md" -not -path "./_slidev/*" -print0)
         

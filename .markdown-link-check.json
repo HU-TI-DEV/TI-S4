@@ -17,9 +17,9 @@
     }
   ],
   "ignoreFiles": [
-    "_slidev/**",
-    "./_slidev/**",
-    "**//_slidev/**"
+    {
+      "pattern": ".*_slidev.*"
+    }
   ],
   "aliveStatusCodes": [200, 206],
   "timeout": "20s",

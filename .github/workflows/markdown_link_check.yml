@@ -28,15 +28,23 @@ jobs:
           QUIET_FLAG=""
         fi
         
+        HAS_ERRORS=false
+        
         # Find all markdown files excluding _slidev folder
         find . -name "*.md" -not -path "./_slidev/*" -print0 | while IFS= read -r -d '' file; do
           echo "Checking: $file"
-          if ! npx markdown-link-check "$file" --config .markdown-link-check.json $QUIET_FLAG; then
-            echo "❌ Error in file: $file"
-            echo "Continuing with other files..."
-            # Don't exit immediately, continue checking other files
-          else
+          if npx markdown-link-check "$file" --config .markdown-link-check.json $QUIET_FLAG; then
             echo "✅ $file passed"
+          else
+            echo "❌ Error in file: $file"
+            HAS_ERRORS=true
           fi
         done
+        
+        if [ "$HAS_ERRORS" = true ]; then
+          echo "❌ Some files had link errors"
+          exit 1
+        else
+          echo "✅ All files passed"
+        fi
       shell: bash

@@ -19,17 +19,11 @@ jobs:
         # Fetch full history for proper diff comparison
         fetch-depth: 0
         
-    - name: Find markdown files (excluding _slidev)
-      id: find-files
+    - name: Run markdown link check on individual files
       run: |
-        FILES=$(find . -name "*.md" -not -path "./_slidev/*" | tr '\n' ' ')
-        echo "files=$FILES" >> $GITHUB_OUTPUT
-        
-    - name: Run markdown link check
-      uses: tcort/github-action-markdown-link-check@v1
-      with:
-        use-quiet-mode: ${{ github.event_name == 'push' && 'yes' || 'no' }}
-        config-file: '.markdown-link-check.json'
-        file-path: ${{ steps.find-files.outputs.files }}
-        base-branch: 'main'
-        # check-modified-files-only: ${{ github.event_name == 'push' && 'yes' || 'no' }}
+        # Find all markdown files excluding _slidev folder
+        find . -name "*.md" -not -path "./_slidev/*" -print0 | while IFS= read -r -d '' file; do
+          echo "Checking: $file"
+          npx markdown-link-check "$file" --config .markdown-link-check.json || exit 1
+        done
+      shell: bash

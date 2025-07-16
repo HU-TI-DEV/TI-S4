@@ -6,7 +6,7 @@ name: Check Markdown links
 on:
   push: # Check modified files on push
     paths-ignore:
-      - '_slidev/**'
+      - './_slidev/**'
   schedule: # Check all files monthly (temporarily set for testing)
     - cron: '0 0 1 * *' # At 00:00 on day-of-month 1 (monthly)
 

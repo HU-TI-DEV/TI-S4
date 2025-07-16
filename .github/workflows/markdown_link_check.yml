@@ -26,4 +26,4 @@ jobs:
         config-file: '.markdown-link-check.json'
         base-branch: 'main'
         max-depth: -1
-        check-modified-files-only: ${{ github.event_name == 'push' && 'yes' || 'no' }}
+        # check-modified-files-only: ${{ github.event_name == 'push' && 'yes' || 'no' }}

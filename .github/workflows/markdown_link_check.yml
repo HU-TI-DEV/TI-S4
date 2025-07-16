@@ -20,13 +20,11 @@ jobs:
     - name: Run markdown link check
       uses: tcort/github-action-markdown-link-check@v1
       with:
-        paths:
-          - '!**/_slidev/**' # Exclude _slidev directory' 
-        # Only check modified files on push, check all files on schedule  
-        # check-modified-files-only: ${{ github.event_name == 'push' && 'yes' || 'no' }}
-        # Only show errors on push, be verbose on scheduled runs
         use-quiet-mode: ${{ github.event_name == 'push' && 'yes' || 'no' }}
-        # Use the config file
         config-file: '.markdown-link-check.json'
-        # Specify the base branch explicitly
         base-branch: 'main'
+        file-path: './**/*.md'
+        folder-path: '.'
+        max-depth: -1
+        check-modified-files-only: ${{ github.event_name == 'push' && 'yes' || 'no' }}
+        exclude-dirs: '_slidev'

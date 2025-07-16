@@ -14,10 +14,10 @@
     },
     {
       "pattern": ".*author-id.*"
-    },
-    {
-      "pattern": "./_slidev/*.*"
     }
+  ],
+  "ignoreFiles": [
+    "./_slidev/*.*"
   ],
   "aliveStatusCodes": [200, 206],
   "timeout": "20s",

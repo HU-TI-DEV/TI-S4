@@ -14,12 +14,10 @@
     },
     {
       "pattern": ".*author-id.*"
+    },
+    {
+      "pattern": "./_slidev/*.md"
     }
-  ],
-  "ignoreFiles": [
-    "_slidev/**",
-    "./_slidev/**",
-    "**//_slidev/**/*.md"
   ],
   "aliveStatusCodes": [200, 206],
   "timeout": "20s",

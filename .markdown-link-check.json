@@ -16,7 +16,7 @@
       "pattern": ".*author-id.*"
     },
     {
-      "pattern": "./_slidev/*.md"
+      "pattern": "./_slidev/**"
     }
   ],
   "aliveStatusCodes": [200, 206],

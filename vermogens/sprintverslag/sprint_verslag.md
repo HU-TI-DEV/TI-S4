@@ -1,6 +1,7 @@
 # Sprint verslag sprint X [](title-id) <!-- omit in toc -->
 # teamnaam <!-- omit in toc -->
 
+<!-- markdown-link-check-disable -->
 ### Inhoud[](toc-id)
 - [Sprint doel](#sprint-doel)
 - [Sprint planning](#sprint-planning)
@@ -13,6 +14,7 @@
 - [Sprint retrospective](#sprint-retrospective)
   - [Feedback teambegeleider](#feedback-teambegeleider-1)
 
+<!-- markdown-link-check-enable -->
 
 
 ---

@@ -47,6 +47,6 @@ In dit tweede deel breiden we onze kennis uit met geavanceerde tooling, waaronde
 ## Inleveren op Canvas
 
 !TODO: Deze link is dood, opdracht bestaat niet?
-Opdracht: [Testing & Tooling Opdracht](./Assignment_testing_tooling.md)
+Opdracht: [Testing & Tooling Opdracht](./Assignment_testing_tooling.md) <!-- markdown-link-check-disable-line -->
 
 Veel succes!

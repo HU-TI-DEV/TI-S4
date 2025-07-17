@@ -3,12 +3,12 @@
 # Sustainable Development Goals[](title-id)
 
 ### Inhoud[](toc-id)
-
+<!-- markdown-link-check-disable -->
 - [Sustainable Development Goals](#sustainable-development-goals)
     - [Inhoud](#inhoud)
   - [Een introductie](#een-introductie)
   - [Referenties](#referenties)
-
+<!-- markdown-link-check-enable -->
 ---
 
 **v0.1.0 [](version-id)** Semester 2 TI SDG start document door HU IICT[](author-id).

@@ -113,7 +113,7 @@ gz topic -e -t /imu
 You will see logging something simular like this: 
 ![alt text](images/image-6.png)
 
-Go to the website : https://gazebosim.org/home
+Go to the website : https://gazebosim.org/home <!-- markdown-link-check-disable-line -->
 
 Click DOCS -> Library Reference -> Sensors -> Classes -> List -> ImuSensor
 

@@ -24,7 +24,7 @@
       "pattern": ".*_slidev.*"
     },
     {
-      "pattern": "Verantwoordingsdocument_TI_S4.md"
+      "pattern": "./Verantwoordingsdocument_TI_S4.md"
     }
   ],
   "aliveStatusCodes": [200, 206],

@@ -13,9 +13,9 @@ Om precies te zijn, zijn er **3 typen** portfolio items:
 
 **Voor elk type** portfolio item verwachten we dat je **de bijbehorende workflow** volgt (klik op de links voor uitleg):
 
-- [Workflow voor Oefenopdracht Portfolio Item](./werkwijze_s4-Oefenopdracht.svg)
-- [Workflow voor Projectbijdrage Portfolio Item](./werkwijze_s4-Projectbijdrage.svg)
-- [Workflow voor Gegeven Review Feedback Portfolio Item](./werkwijze_s4-Feedback.svg)
+- [Workflow voor Oefenopdracht Portfolio Item](./werkwijze_S4-Oefenopdracht.svg)
+- [Workflow voor Projectbijdrage Portfolio Item](./werkwijze_S4-Projectbijdrage.svg)
+- [Workflow voor Gegeven Review Feedback Portfolio Item](./werkwijze_S4-Feedback.svg)
 
 ## Inhoudelijke feedback van docenten = mondeling
 

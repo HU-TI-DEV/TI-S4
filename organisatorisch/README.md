@@ -33,10 +33,9 @@ Net als binnen S3 staat voor de beoordeling in S4 een **[verantwoordingsdocument
 
 ## Documenteren, documenteren, documenteren...
 Helder documenteren is van belang voor vrijwel alle leeruitkomsten. Het is essentieel om met de klant, met je team, en met jezelf (in de toekomst) **af te stemmen** wat het plan is, welke **afwegingen** er zijn gemaakt en **hoe het ervoor staat**.
-Op de pagina [documenteren](./documenteren.md) wordt uitgelegd om welke documentatie het gaat.
 
 ## Scrum
-Net als in S3 staat de [Scrum](../vermogens/sprint_verslag.md) methodiek centraal bij het maken van planningen en het coordineren van activiteiten met het team.
+Net als in S3 staat de [Scrum](../vermogens/sprintverslag/sprint_verslag.md) methodiek centraal bij het maken van planningen en het coordineren van activiteiten met het team.
 
 ## Goed Nederlands - guidelines
 - Wanneer je een **chatgpt-prompt** gebruikt hebt voor het maken van een stuk tekst, wordt er van je verwacht dat je dat meldt.

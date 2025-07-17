@@ -14,6 +14,9 @@
     },
     {
       "pattern": ".*author-id.*"
+    },
+    {
+      "pattern": "^$"
     }
   ],
   "ignoreFiles": [

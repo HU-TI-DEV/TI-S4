@@ -44,10 +44,11 @@ De contacturen zijn (subject to change):
 
 |dag|van|tot| lokaal |
 |---|---|---| --- |
-|ma|9:00|13:00| HL15-5.068 |
+|ma|13:00|17:00|  HL15-5.032 |
 |di|13:00|17:00| HL15-5.032 |
-|wo|13:00|17:00| HL15-5.068 |
-|do|13:00|17:00| HL15-5.068 |
+|di|09:00|12:00| PL101-2.528 | 
+|wo|13:00|17:00| HL15-5.032 |
+|do|13:00|17:00| HL15-5.032 |
 GOED ZETTEN
 
 De docenten zijn:
@@ -70,7 +71,7 @@ De docenten zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Introductie Gazebo (BB)](../hardware_simulatie/gazebo/README.md) <br>  [Teamrollen Belbin](https://werkenmetteamrollen.nl/vragenlijst/) (**BB**) |
-| di  | OCHTEND [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) |
+| di  | OCHTEND,PL101-2.528 [Hoe werken modellering/simulatie pakketten? (BB)](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) |
 | wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf) (**NG**) |
 | do  | Feedback CV & Sollicatie brief (**NG & LB**) |
 
@@ -86,7 +87,7 @@ De docenten zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | TD [Gazebo deel III](), [PID control]() (**BB**) |
-| di  | TD Algoritmen & Datastructuren I (C++ / Python) (**BB**) |
+| di  | OCHTEND,PL101-2.528, TD Algoritmen & Datastructuren I (C++ / Python) (**BB**) |
 | wo  | Voorbereiding loopbaankeuzes (**LB**)  Werken aan project    |
 | do  | Zelfstandig werken aan project (**NG**)  |
 
@@ -94,7 +95,7 @@ De docenten zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
-| di  | ALDS II - data structuren (**BB**)|
+| di  | OCHTEND,PL101-2.528, ALDS II - data structuren (**BB**)|
 | wo  | Ptrs, Ref, UB (**NG**) |
 | do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
@@ -110,7 +111,7 @@ De docenten zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | ALDS IV (**BB**)                   |
-| di  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)              |
+| di  | OCHTEND,PL101-2.528, [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)              |
 | wo  |  Structural Design Patterns (**NG**)  |
 | do  | :end: Einde sprint 3 & :runner: planning sprint 4 |
 

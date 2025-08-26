@@ -60,9 +60,9 @@ docker commit <container_id> gazebo
 This may take some time. Patience is virtue.
 
 ### Installing X server
-*Source:  https://vcxsrv.com/*
+*Source:  https://vcxsrv.com/* <!-- markdown-link-check-disable-line -->
 
-We have to install a X server (to enable a graphical user interface in Ubuntu). Go to https://vcxsrv.com/ and install the server on your windows computer. 
+We have to install a X server (to enable a graphical user interface in Ubuntu). Go to https://vcxsrv.com/ and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
 
 Run the X server (via the start menu of windows).
 

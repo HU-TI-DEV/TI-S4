@@ -1,3 +1,4 @@
+<!-- markdown-link-check-disable -->
 # Solliciteren
 <!-- no toc -->
 
@@ -85,3 +86,4 @@ Verdere potentiële interessante vraagstukken rondom de sollicitatie procedure.
 Het gaat in het nieuws relatief vaak over problemen rondom solliciteren; of het nu gaat over [stagediscriminatie](https://www.mensenrechten.nl/voorlichting/campagne/stop-stagediscriminatie) of zorgen rond het verstrekken van [persoonsgevens](https://www.autoriteitpersoonsgegevens.nl/themas/werk-en-uitkering/sollicitaties/persoonsgegevens-van-sollicitanten), solliciteren is ([voor nu nog vooral](https://www.indeed.com/career-advice/resumes-cover-letters/automated-screening-resume)) een proces van mensen. Dit betekent dat er soms, hopelijk onverhoopt, oneerlijk geoordeeld wordt tijdens de stageprocedure. Wat kun je doen als je het idee hebt dat dit proces problemen oplevert?
 
 De hierboven gelinkte websites geven je een paar handvatten, maar de HU hanteert zelf ook een zero-tolerance policy voor elke vorm van seksuele en verbale intimidatie en discriminatie. Deze policy geldt niet alleen binnen de school, maar ook op stageplaatsen. Stagediscriminatie of een vorm van intimidatie tijdens de stage is dus ook verantwoordelijkheid van de Hogeschool Utrecht. Kom je, onverhoopt, in een situatie waar dit aan de orde is? Schroom dan zeker niet om [aan te kloppen bij een van de onafhankelijke vertrouwenspersonen](https://wegwijs.hu.nl/ondersteuning/begeleiders/vertrouwenspersoon/vertrouwenspersoon). Je kunt ook altijd aankloppen bij de stage/afstudeercoördinator, je docentbegeleider of je SLB-er. 
+<!-- markdown-link-check-enable-line -->

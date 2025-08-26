@@ -1,0 +1,34 @@
+{
+  "ignorePatterns": [
+    {
+      "pattern": ".*logo-id.*"
+    },
+    {
+      "pattern": ".*title-id.*"
+    },
+    {
+      "pattern": ".*toc-id.*"
+    },
+    {
+      "pattern": ".*version-id.*"
+    },
+    {
+      "pattern": ".*author-id.*"
+    },
+    {
+      "pattern": "^$"
+    }
+  ],
+  "ignoreFiles": [
+    {
+      "pattern": ".*_slidev.*"
+    },
+    {
+      "pattern": "./Verantwoordingsdocument_TI_S4.md"
+    }
+  ],
+  "aliveStatusCodes": [200, 206],
+  "timeout": "20s",
+  "retryOn429": true,
+  "retryCount": 3
+}

@@ -5,7 +5,7 @@
 <sub><sup>Snel naar het programma? [klik hier](./programma/README.md#programma)</sup></sub>
 
 ### Inhoud[](toc-id)
-
+<!-- markdown-link-check-disable -->
 - [Semester 4 van Technische Informatica](#semester-4-van-technische-informatica)
     - [Inhoud](#inhoud)
   - [Een introductie](#een-introductie)
@@ -16,6 +16,7 @@
   - [Programma](#programma)
   - [Referenties](#referenties)
   - [Licentie informatie](#licentie-informatie)
+<!-- markdown-link-check-enable -->
 ---
 
 **v0.1.1 [](version-id)** Semester 4 TI door HU IICT[](author-id).
@@ -69,8 +70,6 @@ Shortcuts naar onderliggende links:
 - [Portfolio Items en Feedback maken](./organisatorisch/portfolio_items_en_feedback.md)
   <!-- - [Leerdoelenkaart S4](./leerdoelen/interactieve-leerdoelen-kaart/LeerdoelenKaart_S4.svg)-->
 - [Verantwoordingsdocument](./Verantwoordingsdocument_TI_S4.md)
-<!-- - [Portfolio items - algemeen](./Portfolio-items.md) -->
-- [Documenteren](./organisatorisch/documenteren.md)
 
 ## Programma
 

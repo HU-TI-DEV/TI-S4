@@ -46,10 +46,9 @@ De contacturen zijn (subject to change):
 |---|---|---| --- |
 |ma|13:00|17:00|  HL15-5.032 |
 |di|13:00|17:00| HL15-5.032 |
-|di|09:00|12:00| PL101-2.528 | 
+ OF di|09:00|12:00| PL101-2.528 | 
 |wo|13:00|17:00| HL15-5.032 |
 |do|13:00|17:00| HL15-5.032 |
-GOED ZETTEN
 
 De docenten zijn:
 - (**NG**) Nick Goris

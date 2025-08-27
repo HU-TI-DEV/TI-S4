@@ -54,6 +54,10 @@ De docenten zijn:
 - (**NG**) Nick Goris
 - (**BB**) Bart Bozon
 
+De SLB'ers zijn:
+- (**LB**) Len Bunte
+- (**AD**) Adrie van Doesburg
+
 ## Programma
 
 ### Onderwijsweek A1 (01-09-2025)
@@ -62,8 +66,8 @@ De docenten zijn:
 | --- |  --- |
 | ma  |1)  Introductie Semester en Project (**NG , BB**) <br> 2) Bewustwording kwaliteiten (**BB**)  |
 | di  | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**) |
-| wo  | [Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**NG**) |
-| do  | Kennismaking SSM (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint |
+| wo  | Kennismaking project, mogelijkheid tot stellen vragen aan klant (**NG**) |
+| do  | [Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint |
 
 ### Onderwijsweek A2 (08-09-2025)
 

@@ -143,7 +143,7 @@ In het project:
 - Minder vaste portfolio items
 - Zelf portfolioitems definiëren
 - Projectbegeleiding minder vaak
-- Aanwezigheid: gaan wij niet bijhouden
+- Aanwezigheid: verantwoordelijkheid van het team
 - We beoordelen de portfolios strenger(?)
     - Zonder feedback geen (sterk) item
     - Navolgbaarheid

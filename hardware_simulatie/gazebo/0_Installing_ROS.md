@@ -1,4 +1,4 @@
-# 1. Installing ROS
+# 0. Installing ROS
 "ROS, or Robot Operating System, is an open-source framework designed to facilitate the development of robotic applications. It provides a collection of tools, libraries, and conventions that simplify the process of designing complex robot behaviors across a wide variety of robotic platforms.
 
 ROS was initially developed in 2007 by the Stanford Artificial Intelligence Laboratory and continued by Willow Garage, with the goal of providing a common platform for research and development in robotics. The primary motivation was to create a standard framework that could support a broad range of robotic applications, promote code reuse, and foster collaboration within the robotics community" ([source](https://github.com/MOGI-ROS/Week-1-2-Introduction-to-ROS2?tab=readme-ov-file#what-is-ros2))
@@ -61,45 +61,10 @@ and save it as an image. First we need to  find the id<sup>1</sup>:
 ~~~
 docker ps -a
 ~~~
-You need to find the id of the container you just exited (so the last one). You could also use the ~~~ docker ps -s ~~~ command. <br>
+You need to find the id of the container you just exited (so the last one). <br>
 Copy the id & paste it in the below command<sup>1</sup>:
 ~~~
 docker commit <container_id> ros2
-~~~
-This may take some time. Patience is virtue.
-
-
-https://github.com/MOGI-ROS
-
-source /opt/ros/jazzy/setup.bash
-
-
-### Install Gazebo inside the container:
-*Source: https://gazebosim.org/docs/latest/install_ubuntu/<br>*
-To install type the following<sup>2</sup>:
-~~~
-sudo apt-get update
-sudo apt-get install lsb-release gnupg
-
-sudo curl https://packages.osrfoundation.org/gazebo.gpg --output /usr/share/keyrings/pkgs-osrf-archive-keyring.gpg
-
-echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/pkgs-osrf-archive-keyring.gpg] http://packages.osrfoundation.org/gazebo/ubuntu-stable $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/gazebo-stable.list > /dev/null
-
-sudo apt-get update
-sudo apt-get install gz-ionic
-~~~~
-We will now exit the container<sup>2</sup>:
-~~~
-exit
-~~~
-and save it as an image. First we need to  find the id<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-You need to find the id of the container you just exited (so the last one).<br>
-Copy the id & paste it in the below command<sup>1</sup>:
-~~~
-docker commit <container_id> gazebo
 ~~~
 This may take some time. Patience is virtue.
 
@@ -129,19 +94,13 @@ docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
-We can test it by running<sup>2</sup>:
+Each time you start a container you have to set the environment variables with <sup>2</sup>:
 ~~~
-gz sim
+source /opt/ros/jazzy/setup.bash
 ~~~
-We should see:
 
-![alt text](images/image-4.png)
-
-Select the robot and press run. You should see the robot in a new window (some errors/warnings could be present in the container window):
-
-![alt text](images/image-5.png)
-
-If you want to take a break with this manual this would be a nice time to do so. You've committed the container so everything is nicely saved! 
+Run the examples on (excluding rqt_graph) up till and including the turtlesim:  
+https://github.com/MOGI-ROS/Week-1-2-Introduction-to-ROS2?tab=readme-ov-file#running-some-examples
 
 ### Running after a reboot or exiting the powershell:
 
@@ -160,17 +119,8 @@ docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
-Type<sup>2<sup>:
+Each time you start a container you have to set the environment variables with <sup>2</sup>:
 ~~~
-gz sim
-~~~
-
-### Creating a new container from our image:
-We could also create a new container from our image (the disadvantage is that you will accumulate containers very quickly!)
-Run our previously commited image, this will create a new container<sup>1</sup>:
-~~~
-docker run -it -e DISPLAY=host.docker.internal:0  gazebo
+source /opt/ros/jazzy/setup.bash
 ~~~
 
-For the next step:  
-2 [Building our first robot](./2_Building_our_first_robot.md)

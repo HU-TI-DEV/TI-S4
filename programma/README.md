@@ -88,7 +88,7 @@ De SLB'ers zijn:
 ### Onderwijsweek A4 (22-09-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | TD [Gazebo deel III](), [PID control]() (**BB**) |
+| ma  | TD , [PID control]()[Gazebo deel III](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) (**BB**) |
 | di  | OCHTEND,PL101-2.528, TD Algoritmen & Datastructuren I (C++ / Python) (**BB**) |
 | wo  | Voorbereiding loopbaankeuzes (**LB**)  Werken aan project    |
 | do  | Zelfstandig werken aan project (**NG**)  |

@@ -6,7 +6,7 @@ Bekijk de video [Waarom we aan de slag gaan met Gazebo](https://www.youtube.com/
 
 ## Tijdens en na de les
 
-Bekijk de volgende [Installeren van Gazebo in een Docker Container](https://www.youtube.com/watch?v=QGR8SJ4w3zA) als voorbereiding op de onderstaande installatie instructies. 
+0 [Installing ROS2](0_Installing_ROS.md)
 
 1 [Installing Gazebo](./1_Installing_gazebo.md)
 
@@ -36,5 +36,22 @@ De code van je viewer kun je [hier](./files/sdf_viewer.py) vinden.
 
 6 Opdracht: [Assignment let's start building the robot for our project!](./6_Assignment_start_with_the_real_one.md)
 
+# Programma Gazebo deel III
+
+## Voorbereiding
+Bekijk de volgende website : https://github.com/MOGI-ROS
+
+## Tijdens en na de les
+
+7 [studying the manual & PID control](./7_Assignment_study_MOGI-ROS_manual.md)
+
+## Inleveren op Canvas
+
+## Inleveren op Canvas
+
+7 Opdracht: [PID Controlling your robot](./7_Assignment_study_MOGI-ROS_manual.md)
+
+
+Geen canvas entry
 
 Veel succes!

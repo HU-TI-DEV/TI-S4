@@ -1,12 +1,16 @@
-# 1. Installing Gazebo
-Gazebo is a modelling/simulation framework. In this guide we will learn how to install it. 
+# 1. Installing ROS
+"ROS, or Robot Operating System, is an open-source framework designed to facilitate the development of robotic applications. It provides a collection of tools, libraries, and conventions that simplify the process of designing complex robot behaviors across a wide variety of robotic platforms.
 
+ROS was initially developed in 2007 by the Stanford Artificial Intelligence Laboratory and continued by Willow Garage, with the goal of providing a common platform for research and development in robotics. The primary motivation was to create a standard framework that could support a broad range of robotic applications, promote code reuse, and foster collaboration within the robotics community" ([source](https://github.com/MOGI-ROS/Week-1-2-Introduction-to-ROS2?tab=readme-ov-file#what-is-ros2))
+
+In this manual we will install ROS and experiment with it. It is based on the following two sites:
+-https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#try-some-examples
+-https://github.com/MOGI-ROS
+
+We will install ROS in a docker container. 
 Below the following environments are used:<br>
 <sup>1</sup> The prompt of the power shell environment<br>
 <sup>2</sup> The prompt of the Docker container<br>
-
-## Installing gazebo in a Docker container
-Although you can install Gazebo on native Windows that specific version is broken, it malfunctions. Therefore we will install Gazebo in a Docker container on Ubuntu. If you use a Mac only a native install seems to be possible. Use the following [logbook-item for installing on Mac OS X](./Mac-OS/1_Installing_gazebo-Mac-OS.md).
 
 ### Install Docker Desktop on Windows:
 If you have not done this already we first install [Docker Desktop](https://www.docker.com/products/docker-desktop/). Please note, you need approximatly 10Gb of diskspace to install it. You can download it from Docker's official site.
@@ -30,6 +34,44 @@ apt-get install -y wget
 ~~~
 Please note, on my setup I could paste one sentence at a time. I would copy a sentence and with rightclick I could paste it in the docker container.
 
+### Install ROS 2 in docker:
+
+We will base the installation on this site: https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#try-some-examples  
+I've copied the relevant commando's below.  
+Type the following commands<sup>2</sup>:
+~~~
+sudo apt install software-properties-common
+sudo add-apt-repository universe
+sudo apt update && sudo apt install curl -y
+export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
+curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb" # If using Ubuntu derivates use $UBUNTU_CODENAME
+sudo dpkg -i /tmp/ros2-apt-source.deb
+sudo apt update && sudo apt install ros-dev-tools
+sudo apt update
+sudo apt upgrade
+sudo apt install ros-jazzy-desktop
+source /opt/ros/jazzy/setup.bash
+~~~
+
+We will now exit the container<sup>2</sup>:
+~~~
+exit
+~~~
+and save it as an image. First we need to  find the id<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (so the last one). You could also use the docker ps -s command. <br>
+Copy the id & paste it in the below command<sup>1</sup>:
+~~~
+docker commit <container_id> ros2
+~~~
+This may take some time. Patience is virtue.
+
+
+https://github.com/MOGI-ROS
+
+source /opt/ros/jazzy/setup.bash
 
 
 ### Install Gazebo inside the container:

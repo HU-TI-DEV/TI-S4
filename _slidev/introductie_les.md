@@ -22,7 +22,6 @@ Vandaag:
 # Introductie
 
 Docenten:
-- Jan Halsema 
 - Nick Goris
 - Bart Bozon
 
@@ -30,23 +29,7 @@ SLB:
 - Len Bunte
 - Adrie van Doesburg
 
-En jullie zullen ook Teun Pieter nog hier en daar zien :)
-
----
-hideInToc: true
-layout: image-right
-image: https://i.mandejan.nl/profielfoto.jpg
----
-
-# Jan Halsema
-
-- Studies
-  - TI
-  - Medical Imaging
-  - Applied Data Science
-
-- Expertise: C++, Python, Algoritmen & Datastructuren, Assembly, Vision
-- Dit semester ook: Product Owner
+En wellicht zien we andere docenten ook zo nu en dan :)
 
 ---
 hideInToc: true
@@ -60,15 +43,10 @@ layout: two-cols
 - Tijdens studie: studentassistent, ZZP Software Engineer, TI reisbureau
 - Na afstuderen docent geworden:
     - Propedeuse AI, Propedeuse CSC/TI, THDE, THGA, CPSE2, INNO
-    - Ontwikkelwerk aan S4, INNO, Stage 2026
-    - Toekomstig coördineren van Propedeuse TI
-
-
-Verder in de toekomst:
-- BDB halen, een Master gaan doen..
+    - Ontwikkelwerk aan TI Propedeuse, S4, INNO, Stage 2026
 
 - Expertise: Python, C++, Algoritmiek, AI, Testing, Agile
-- Dit semester ook: 'Super' Scrum Master
+- Dit semester ook: Product Owner & 'Super' Scrum Master
 
 ::right::
 
@@ -83,49 +61,33 @@ Verder in de toekomst:
 # Doel van dit semester
 
 Doelen van het semester zijn:
-- Leren desktop programmeren
+- Desktop programming
 - Verdiepen in Algoritmiek, Datastructuren
 - Voorbereiden op stage, INNO, en daarna
 - Professionalisering
 
 ---
-layout: two-cols
----
 
 # Project
 
-- Team Digitale Verkenning (Brandweer)
-- Dure robots, gevaarlijke situaties:
-    - Brandblusrobot
-    - Drone
-    - Onderzeeër
-    - Robot 'hond'
+- Lectoraat Smart Systems for Healthy Living
+- Innovatieve projecten om het welzijn van de mens te behouden en te verbeteren
+    - Scoliose brace
+    - Sociale robots
+    - 3D Bioprinten
+    - HU Robosub
 
 <br>
 
-- Oplossing? Simulaties! 
-
-<br>
-
-- Solliciteren op project/rol
-
-<Footnotes separator>
-  <Footnote>https://www.youtube.com/watch?v=-JbOo2gfcJ0</Footnote>
-</Footnotes>
-
-
-::right::
-<br>
-<br>
-<br>
-<br>
-<Youtube id="-JbOo2gfcJ0"/>
+- Van deze laatste wil het lectoraat een simulatie! 
+- Lectoraat komt woensdag langs
 
 ---
+layout: image
+image: ./robosub.jpg
+backgroundSize: cover
+---
 
-# Opdrachtgever
-
-Kon vandaag helaas niet aanwezig zijn :(
 
 ---
 layout: figure-side
@@ -145,9 +107,7 @@ In het semester:
     - Einde van de sprint:
         - Retrospective
         - Plannen van de volgende sprint
-        - Review voorbereiden
-    - Begin van de sprint:
-        - Review (?)
+        - Review
 
 ---
 layout: figure-side
@@ -183,26 +143,22 @@ In het project:
 - Minder vaste portfolio items
 - Zelf portfolioitems definiëren
 - Projectbegeleiding minder vaak
-- Aanwezigheid: gaan wij niet bijhouden
-
+- Aanwezigheid: verantwoordelijkheid van het team
+- We beoordelen de portfolios strenger(?)
+    - Zonder feedback geen (sterk) item
+    - Navolgbaarheid
+    - -> Zoals voor stage/inno
 <br>
 
 Al met al verwachten wij; professionaliteit
 
 ---
-layout: image
-image: /NSE.png
-backgroundSize: 22%
----
-# NSE
 
-Graag even de NSE invullen - na afloop krijgen jullie dan een bon voor Mams
+# Veranderingen t.o.v. S4 vorig jaar
 
-Code vergeten? Vraag dan een nieuwe aan via de QR code!
-
-<Footnotes separator>
-  <Footnote>https://lcsk.nl/nse/</Footnote>
-</Footnotes>
+- Meer nadruk op programmeerwerk; Gazebo met ROS
+- Indicatoren zijn (worden) meer écht indicatoren
+- Projectbegeleiding altijd op donderdag
 
 ---
 
@@ -213,6 +169,14 @@ Ter voorbereiding op solliciteren:
 Google jezelf eens, wat kom je tegen? Is dit wat je wilt dat een opdrachtgever ziet?
 
 Denk ook aan eventuele pseudoniemen, zoals je GitHub naam
+
+Check ook de website van de HU Robosub; robosub.nl
+
+
+<br>
+<br>
+
+En voor nu laat ik jullie over aan Bart :)
 
 ---
 layout: end

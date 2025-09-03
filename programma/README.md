@@ -44,15 +44,18 @@ De contacturen zijn (subject to change):
 
 |dag|van|tot| lokaal |
 |---|---|---| --- |
-|ma|13:00|17:00|  HL15-5.032 |
-|di|13:00|17:00| HL15-5.032 |
- OF di|09:00|12:00| PL101-2.528 | 
-|wo|13:00|17:00| HL15-5.032 |
-|do|13:00|17:00| HL15-5.032 |
+|ma|13:00|17:00| Zie rooster |
+|di|13:00|17:00| Zie rooster | 
+|wo|13:00|17:00| Zie rooster |
+|do|13:00|17:00| Zie rooster |
 
 De docenten zijn:
 - (**NG**) Nick Goris
 - (**BB**) Bart Bozon
+
+De SLB'ers zijn:
+- (**LB**) Len Bunte
+- (**AD**) Adrie van Doesburg
 
 ## Programma
 
@@ -62,8 +65,8 @@ De docenten zijn:
 | --- |  --- |
 | ma  |1)  Introductie Semester en Project (**NG , BB**) <br> 2) Bewustwording kwaliteiten (**BB**)  |
 | di  | [Schrijven van sollicitatiebrief](../vermogens/solliciteren/README.md) (**NG**) |
-| wo  | [Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**NG**) |
-| do  | Kennismaking SSM (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint |
+| wo  | Kennismaking project, mogelijkheid tot stellen vragen aan klant (**NG**) |
+| do  | [Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**NG**) <br> :end: Einde sprint 0 & :runner: planning sprint |
 
 ### Onderwijsweek A2 (08-09-2025)
 

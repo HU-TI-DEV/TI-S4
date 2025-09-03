@@ -3,9 +3,9 @@
 
 ROS was initially developed in 2007 by the Stanford Artificial Intelligence Laboratory and continued by Willow Garage, with the goal of providing a common platform for research and development in robotics. The primary motivation was to create a standard framework that could support a broad range of robotic applications, promote code reuse, and foster collaboration within the robotics community" ([source](https://github.com/MOGI-ROS/Week-1-2-Introduction-to-ROS2?tab=readme-ov-file#what-is-ros2))
 
-In this manual we will install ROS and experiment with it. It is based on the following two sites:
--https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#try-some-examples
--https://github.com/MOGI-ROS
+In this manual we will install ROS and experiment with it. It is based on the following two sites:  
+-https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#try-some-examples  
+-https://github.com/MOGI-ROS  
 
 We will install ROS in a docker container. 
 Below the following environments are used:<br>
@@ -61,7 +61,7 @@ and save it as an image. First we need to  find the id<sup>1</sup>:
 ~~~
 docker ps -a
 ~~~
-You need to find the id of the container you just exited (so the last one). You could also use the docker ps -s command. <br>
+You need to find the id of the container you just exited (so the last one). You could also use the ~~~ docker ps -s ~~~ command. <br>
 Copy the id & paste it in the below command<sup>1</sup>:
 ~~~
 docker commit <container_id> ros2

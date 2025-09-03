@@ -47,11 +47,6 @@ Bekijk de volgende website : https://github.com/MOGI-ROS
 
 ## Inleveren op Canvas
 
-## Inleveren op Canvas
-
 7 Opdracht: [PID Controlling your robot](./7_Assignment_study_MOGI-ROS_manual.md)
-
-
-Geen canvas entry
 
 Veel succes!

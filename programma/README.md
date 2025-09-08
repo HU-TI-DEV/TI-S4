@@ -99,7 +99,7 @@ De SLB'ers zijn:
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
 | di  | OCHTEND,PL101-2.528, ALDS II - data structuren (**BB**)|
 | wo  | Ptrs, Ref, UB (**NG**) |
-| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> [HBO-i Job Event](https://hboictjobevent.nl/) :end: Einde sprint 2 & :runner: planning sprint 3 |
+| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> [HBO-i Job Event](https://hboictjobevent.nl/) <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek A6 (06-10-2025)
 | Dag | Project & Kennissessie |

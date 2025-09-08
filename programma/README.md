@@ -83,7 +83,7 @@ De SLB'ers zijn:
 | ma  | [Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)  |
 | di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**NG**)  |
 | wo  | Opzetten team inrichting (team contract, github,etc.) (**NG**) |
-| do  | TD Voorlichting bovenbouw door coördinatoren Stage en INNO (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |
+| do  | Vervolg (**NG**)<br>:end: Einde sprint 1 & :runner: planning sprint 2 |
 
 ### Onderwijsweek A4 (22-09-2025)
 | Dag | Project & Kennissessie |
@@ -99,7 +99,7 @@ De SLB'ers zijn:
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
 | di  | OCHTEND,PL101-2.528, ALDS II - data structuren (**BB**)|
 | wo  | Ptrs, Ref, UB (**NG**) |
-| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
+| do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> [HBO-i Job Event](https://hboictjobevent.nl/) :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek A6 (06-10-2025)
 | Dag | Project & Kennissessie |
@@ -108,6 +108,7 @@ De SLB'ers zijn:
 | di  |Zelfstandig werken aan project (**NG**) |
 | wo  | Git branches & (non) functional requirements  (**NG**)  |
 | do  | TD (AI Bieb langs) Teamsessie (**NG & BB**)  |
+| vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
 
 ### Onderwijsweek A7 (13-10-2025)
 | Dag | Project & Kennissessie |

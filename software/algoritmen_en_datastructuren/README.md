@@ -1,4 +1,18 @@
-# Programma ALDS deel 3
+# Programma ALDS deel I
+
+## Voorbereiding
+- bladeer door de ALDS reader (~ 15 min)
+- 
+## Tijdens en na de les
+- de ppt van de les: [Big O](./files/Big%20O.pptx)
+- de reader : [reader](./files/Algorithms%20and%20Datastructures%20Reader.pdf)
+
+## Inleveren op Canvas
+Opdracht: [Opdracht Complexiteit en algoritmes](./1_complexiteit_en_algoritmes.ipynb)
+
+
+
+# Programma ALDS deel III
 
 ## Voorbereiding
 - Bestudeer als voorbereiding het **hoofdstuk 13 tm 14.1** over grafen uit de reader (https://canvas.hu.nl/courses/44572/files/5382884).

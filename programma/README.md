@@ -89,7 +89,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | TD , [PID control]()[Gazebo deel III](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) (**BB**) |
-| di  | OCHTEND,PL101-2.528, TD Algoritmen & Datastructuren I (C++ / Python) (**BB**) |
+| di  | OCHTEND,PL101-2.528, [Algoritmen & Datastructuren I (C++ / Python)](../software/algoritmen_en_datastructuren/README.md) (**BB**) |
 | wo  | Voorbereiding loopbaankeuzes (**LB**)  Werken aan project    |
 | do  | Zelfstandig werken aan project (**NG**)  |
 

@@ -1,11 +1,12 @@
 # Programma ALDS deel I
 
 ## Voorbereiding
-- bladeer door de ALDS reader (~ 15 min)
-- 
+- bladeer door de ALDS reader (~ 15 min), zie tijdens en na de les. 
+  
 ## Tijdens en na de les
 - de ppt van de les: [Big O](./files/Big%20O.pptx)
 - de reader : [reader](./files/Algorithms%20and%20Datastructures%20Reader.pdf)
+- aan de slag met de opdrachten!
 
 ## Inleveren op Canvas
 Opdracht: [Opdracht Complexiteit en algoritmes](./1_complexiteit_en_algoritmes.ipynb)

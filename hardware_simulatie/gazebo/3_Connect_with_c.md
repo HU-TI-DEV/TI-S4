@@ -1,5 +1,5 @@
 # 3. Connect with C++
-*Source: https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md*
+*Source: https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md*
 
 We would like to be able to interact with Gazebo via C++. The next steps enable this. [There is also a Mac OS logbook](./Mac-OS/3_Connect_with_c_Mac-OS.md).
 
@@ -26,27 +26,10 @@ cd ~/gz_transport_tutorial
 Download 
 - publisher.cc 
 - subscriber.cc
-
-from [https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md)
-
-
- We download the 
 - CMakeLists.txt
 
-from [https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt](https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt).
+from [https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md)
 
-Expand the CMakeLists.txt with the following text:
-```
-if (EXISTS "${CMAKE_SOURCE_DIR}/publisher.cc")
-  add_executable(publisher publisher.cc)
-  target_link_libraries(publisher gz-transport${GZ_TRANSPORT_VER}::core)
-endif()
-
-if (EXISTS "${CMAKE_SOURCE_DIR}/subscriber.cc")
-  add_executable(subscriber subscriber.cc)
-  target_link_libraries(subscriber gz-transport${GZ_TRANSPORT_VER}::core)
-endif()
-```
 
 Make a new file with the vi editor with<sup>2</sup>:
 ~~~

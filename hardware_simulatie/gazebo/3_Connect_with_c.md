@@ -1,5 +1,5 @@
 # 3. Connect with C++
-*Source: [https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport15/tutorials/04_messages.md)*
+*Source: https://github.com/gazebosim/gz-transport/blob/gz-transport15/tutorials/04_messages.md*
 
 We would like to be able to interact with Gazebo via C++. The next steps enable this. [There is also a Mac OS logbook](./Mac-OS/3_Connect_with_c_Mac-OS.md).
 
@@ -28,7 +28,7 @@ Download
 - subscriber.cc 
 - CMakeLists.txt
 
-from [https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport15/tutorials/04_messages.md)
+from [https://github.com/gazebosim/gz-transport/blob/gz-transport15/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport15/tutorials/04_messages.md)
 
 Make a new file with the vi editor with<sup>2</sup>:
 ~~~
@@ -57,7 +57,7 @@ make publisher subscriber
 ~~~
 We have now compiled the subscriber.cc and publisher.cc file!
 
-Read the description in *https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md* to understand what happens in the subscriber and publisher code. 
+Read the description in *https://github.com/gazebosim/gz-transport/blob/gz-transport15/tutorials/04_messages.md* to understand what happens in the subscriber and publisher code. 
 
 ## Running our first test with the transport layer!
 

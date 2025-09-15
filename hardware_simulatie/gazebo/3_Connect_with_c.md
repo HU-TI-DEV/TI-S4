@@ -27,13 +27,26 @@ Download
 - publisher.cc 
 - subscriber.cc
 
+from [https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md)
+
+
  We download the 
 - CMakeLists.txt
 
 from [https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt](https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt).
 
+Expand the CMakeLists.txt with the following text:
+```
+if (EXISTS "${CMAKE_SOURCE_DIR}/publisher.cc")
+  add_executable(publisher publisher.cc)
+  target_link_libraries(publisher gz-transport${GZ_TRANSPORT_VER}::core)
+endif()
 
-from [https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md)
+if (EXISTS "${CMAKE_SOURCE_DIR}/subscriber.cc")
+  add_executable(subscriber subscriber.cc)
+  target_link_libraries(subscriber gz-transport${GZ_TRANSPORT_VER}::core)
+endif()
+```
 
 Make a new file with the vi editor with<sup>2</sup>:
 ~~~

@@ -25,8 +25,12 @@ cd ~/gz_transport_tutorial
 
 Download 
 - publisher.cc 
-- subscriber.cc 
+- subscriber.cc
+
+ We download the 
 - CMakeLists.txt
+from [https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt](https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt).
+
 
 from [https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport14/tutorials/04_messages.md)
 

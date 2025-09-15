@@ -28,7 +28,8 @@ Download
 - subscriber.cc
 
  We download the 
-- CMakeLists.txt  
+- CMakeLists.txt
+
 from [https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt](https://github.com/gazebosim/docs/blob/master/harmonic/tutorials/sensors/CMakeLists.txt).
 
 

@@ -90,7 +90,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | TD , [PID control]()[Gazebo deel III](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) (**BB**) |
 | di  | OCHTEND,PL101-2.528, [Algoritmen & Datastructuren I (C++ / Python)](../software/algoritmen_en_datastructuren/README.md) (**BB**) |
-| wo  | Voorbereiding loopbaankeuzes (**LB**)  Werken aan project    |
+| wo  | Werken aan project (**NG**)  |
 | do  | Zelfstandig werken aan project (**NG**)  |
 
 ### Onderwijsweek A5 (29-09-2025)
@@ -107,7 +107,7 @@ De SLB'ers zijn:
 | ma  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**)  |
 | di  | **Vanaf 15:00 stage/INNO voorlichting** <br> Zelfstandig werken aan project (**NG**) |
 | wo  | Git branches & (non) functional requirements  (**NG**)  |
-| do  | TD (AI Bieb langs) Teamsessie (**NG & BB**)  |
+| do  | Voorbereiding loopbaankeuzes (**LB**)  |
 | vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
 
 ### Onderwijsweek A7 (13-10-2025)

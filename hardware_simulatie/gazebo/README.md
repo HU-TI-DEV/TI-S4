@@ -43,6 +43,7 @@ Bekijk de volgende website : https://github.com/MOGI-ROS
 
 ## Tijdens en na de les
 
+Look at the following code [pid](../../software/algoritmen_en_datastructuren/files/pid.md)
 7 [studying the manual & PID control](./7_Assignment_study_MOGI-ROS_manual.md)
 
 ## Inleveren op Canvas

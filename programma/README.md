@@ -90,7 +90,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | TD , [PID control]()[Gazebo deel III](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) (**BB**) |
 | di  | OCHTEND,PL101-2.528, [Algoritmen & Datastructuren I (C++ / Python)](../software/algoritmen_en_datastructuren/README.md) (**BB**) |
-| wo  | Voorbereiding loopbaankeuzes (**LB**)  Werken aan project    |
+| wo  | Werken aan project (**NG**)  |
 | do  | Zelfstandig werken aan project (**NG**)  |
 
 ### Onderwijsweek A5 (29-09-2025)
@@ -105,9 +105,9 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**)  |
-| di  |Zelfstandig werken aan project (**NG**) |
+| di  | **Vanaf 15:00 stage/INNO voorlichting** <br> Zelfstandig werken aan project (**NG**) |
 | wo  | Git branches & (non) functional requirements  (**NG**)  |
-| do  | TD (AI Bieb langs) Teamsessie (**NG & BB**)  |
+| do  | Voorbereiding loopbaankeuzes (**LB**)  |
 | vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
 
 ### Onderwijsweek A7 (13-10-2025)
@@ -150,7 +150,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Deepdive (2) (**BB & NG**)|
-| di  |  Zelfstandig werken  (**NG**)|
+| di  |  Zelfstandig werken  (**NG**) <br> Vanaf 15:00 stagevoortgang bespreken |
 | wo  |  What if workshop (**BB**)|
 | do  |  :end: Einde sprint 5 & :runner: Planning sprint 6 |
 
@@ -183,7 +183,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Deepdive (2) (**BB & NG**)    |
-| di  | Zelfstandig werken  (**NG**)           |
+| di  | Zelfstandig werken  (**NG**) <br> Vanaf 15:00 stagevoortgang bespreken  |
 | wo  | Zelfstandig werken aan project (**NG**) |
 | do  | PO gesprekken groep 2 <br> :end: Einde sprint 7 & :runner: Planning sprint 8 |
 

@@ -48,6 +48,6 @@ Look at the following code [pid](../../software/algoritmen_en_datastructuren/fil
 
 ## Inleveren op Canvas
 
-7 Opdracht: [PID Controlling your robot](./7_Assignment_study_MOGI-ROS_manual.md)
+8 Opdracht: [PID Controlling your robot](./7_Assignment_study_MOGI-ROS_manual.md)
 
 Veel succes!

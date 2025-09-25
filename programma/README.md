@@ -115,8 +115,8 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | ALDS IV (**BB**)                   |
 | di  | OCHTEND,PL101-2.528, [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)              |
-| wo  |  Structural Design Patterns (**MV**)  |
-| do  | :end: Einde sprint 3 & :runner: planning sprint 4 |
+| wo  |  :end: Einde sprint 3 & :runner: planning sprint 4|
+| do  |  Structural Design Patterns (**MV**)  |
 
 ### Onderwijsweek A8 (20-10-2025)
 

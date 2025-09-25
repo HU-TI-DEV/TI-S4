@@ -98,7 +98,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
 | di  | OCHTEND,PL101-2.528, ALDS II - data structuren (**BB**)|
-| wo  | Ptrs, Ref, UB (**NG**) |
+| wo  | Ptrs, Ref, UB (**MV**) |
 | do  | **[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)** <br> [HBO-i Job Event](https://hboictjobevent.nl/) <br> :end: Einde sprint 2 & :runner: planning sprint 3 |
 
 ### Onderwijsweek A6 (06-10-2025)
@@ -106,7 +106,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**)  |
 | di  | **Vanaf 15:00 stage/INNO voorlichting** <br> Zelfstandig werken aan project (**NG**) |
-| wo  | Git branches & (non) functional requirements  (**NG**)  |
+| wo  | Git branches & (non) functional requirements  (**MV**)  |
 | do  | Voorbereiding loopbaankeuzes (**LB**)  |
 | vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
 
@@ -115,7 +115,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | ALDS IV (**BB**)                   |
 | di  | OCHTEND,PL101-2.528, [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)              |
-| wo  |  Structural Design Patterns (**NG**)  |
+| wo  |  Structural Design Patterns (**MV**)  |
 | do  | :end: Einde sprint 3 & :runner: planning sprint 4 |
 
 ### Onderwijsweek A8 (20-10-2025)
@@ -126,7 +126,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**) |
-| di  | TD Creational/Behavioural design patterns ( **NG**) |
+| di  | TD Creational/Behavioural design patterns ( **MV**) |
 | wo  | Project demo   (**NG**) |
 | do  | Feedbacksessie onderzoek (**BB & NG**)|
 
@@ -143,7 +143,7 @@ Herfstvakantie
 | --- |  --- |
 | ma  | TD [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)     |
 | di  |  Zelfstandig werken  (**NG**)|
-| wo  |  Value sensitive design workshop (**NG**)|
+| wo  |  Value sensitive design workshop (**BB**)|
 | do  |  Teamcoaching (**NG**)  |
 
 ### Onderwijsweek B2 (17-11-2025)

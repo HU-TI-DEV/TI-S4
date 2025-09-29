@@ -113,7 +113,7 @@ De SLB'ers zijn:
 ### Onderwijsweek A7 (13-10-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | ALDS IV (**BB**)                   |
+| ma  | ALDS support (1hr) (**BB**)                   |
 | di  | OCHTEND,PL101-2.528, [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)              |
 | wo  |  :end: Einde sprint 3 & :runner: planning sprint 4|
 | do  |  Structural Design Patterns (**MV**)  |

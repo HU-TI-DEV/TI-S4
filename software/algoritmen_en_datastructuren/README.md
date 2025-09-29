@@ -11,6 +11,18 @@
 ## Inleveren op Canvas
 Opdracht: [Opdracht Complexiteit en algoritmes](./1_complexiteit_en_algoritmes.ipynb)
 
+# Programma ALDS deel II
+
+## Voorbereiding
+  
+## Tijdens en na de les
+- de ppt van de les: [data structuren](./files/)
+- de reader : [reader](./files/Algorithms%20and%20Datastructures%20Reader.pdf)
+- aan de slag met de opdrachten!
+
+## Inleveren op Canvas
+Opdracht: [Opdracht Complexiteit en algoritmes](./2_containers_zoeken_sorteren.ipynb)
+
 
 
 # Programma ALDS deel III

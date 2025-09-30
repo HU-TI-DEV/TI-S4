@@ -16,7 +16,7 @@ Opdracht: [Opdracht Complexiteit en algoritmes](./1_complexiteit_en_algoritmes.i
 ## Voorbereiding
   
 ## Tijdens en na de les
-- de ppt van de les: [data structuren](./files/)
+- de ppt van de les: [data structuren](./files/Data%20structures.pptx)
 - de reader : [reader](./files/Algorithms%20and%20Datastructures%20Reader.pdf)
 - aan de slag met de opdrachten!
 
@@ -32,9 +32,7 @@ Opdracht: [Opdracht Complexiteit en algoritmes](./2_containers_zoeken_sorteren.i
 - Bestudeer ook volledig deze webpagina (speel daarbij ook met de interactieve animaties): [redblobgames pathfinding introduction](https://www.redblobgames.com/pathfinding/a-star/introduction.html)
 
 ## Tijdens en na de les
-- Er wordt een voorbeeld gegeven van pathfinding toegepast in de praktijk
-- A-Star wordt uitgelegd aan de hand van een voorbeeld
-- Dijkstra wordt uitgelegd aan de hand van een voorbeeld
+- de ppt van de les: [search](./files/search%20algorythm.pptx)
 - Werken aan de opdracht: [Opdracht Pathfinding](./3_pathfinding.ipynb)
 
 ## Inleveren op Canvas

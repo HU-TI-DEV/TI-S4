@@ -105,7 +105,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**)  |
-| di  | **Vanaf 15:00 stage/INNO voorlichting** <br> Zelfstandig werken aan project (**NG**) |
+| di  | **Vanaf 15:00 stage/INNO voorlichting** (Inge en Berend) <br> Zelfstandig werken aan project |
 | wo  | Git branches & (non) functional requirements  (**MV**)  |
 | do  | 14:00 : Voorbereiding loopbaankeuzes (**LB**)  & project werk (zelfstandig)|
 | vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
@@ -127,8 +127,8 @@ Herfstvakantie
 | --- |  --- |
 | ma  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**) |
 | di  | TD Creational/Behavioural design patterns ( **MV**) |
-| wo  | Project demo   (**NG**) |
-| do  | Feedbacksessie onderzoek (**BB & NG**)|
+| wo  | Project demo   (**TP**) |
+| do  | Feedbacksessie onderzoek (**BB**)|
 
 ### Onderwijsweek A10 (03-11-2025)
 | Dag | Project & Kennissessie |

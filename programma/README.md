@@ -107,7 +107,7 @@ De SLB'ers zijn:
 | ma  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**)  |
 | di  | **Vanaf 15:00 stage/INNO voorlichting** <br> Zelfstandig werken aan project (**NG**) |
 | wo  | Git branches & (non) functional requirements  (**MV**)  |
-| do  | Voorbereiding loopbaankeuzes (**LB**)  |
+| do  | 14:00 : Voorbereiding loopbaankeuzes (**LB**)  & project werk (zelfstandig)|
 | vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
 
 ### Onderwijsweek A7 (13-10-2025)

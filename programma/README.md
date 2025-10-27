@@ -126,17 +126,17 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**) |
-| di  | Feedbacksessie onderzoek (**TM**)|
-| wo  | Project demo   (**TM**) |
+| di  | Feedbacksessie onderzoek & projectdemo (**TM**)|
+| wo  | Zelfstandig werken |
 | do  | TD Creational/Behavioural design patterns ( **MV**) |
 
 ### Onderwijsweek A10 (03-11-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)|
-| di  | Zelfstandig werken  (**NG**) |
-| wo  | Klassikale pitches I   (**NG & BB**)|
-| do  | PO gesprekken groep 1 <br> **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 |
+| di  | Zelfstandig werken |
+| wo  | Klassikale pitches I   (**TM&BB**)|
+| do  | PO gesprekken groep 1 <br> **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 (**TM**)|
 
 ### Onderwijsweek B1 (10-11-2025)
 | Dag | Project & Kennissessie |

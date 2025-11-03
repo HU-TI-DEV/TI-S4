@@ -142,9 +142,9 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**)     |
-| di  |  Zelfstandig werken  (**NG**)|
+| di  |  Zelfstandig werken  ()|
 | wo  |  Value sensitive design workshop (**BB**)|
-| do  |  Teamcoaching (**NG**)  |
+| do  |  Zelfstandig werken ()  |
 
 ### Onderwijsweek B2 (17-11-2025)
 | Dag | Project & Kennissessie |

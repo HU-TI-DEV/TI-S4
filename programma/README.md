@@ -141,7 +141,7 @@ Herfstvakantie
 ### Onderwijsweek B1 (10-11-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | TD [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)     |
+| ma  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**)     |
 | di  |  Zelfstandig werken  (**NG**)|
 | wo  |  Value sensitive design workshop (**BB**)|
 | do  |  Teamcoaching (**NG**)  |

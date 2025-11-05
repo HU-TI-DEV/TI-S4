@@ -235,7 +235,9 @@ Use AI assisted programming to make or change code to apply a cnn model to the m
 Show the learning curve and the confusion matrix. 
 
 ## Assignment 4
-Use gazebo (camera) to generate images WITH and WITHOUT a certain object (e.g. a big red cube or a ball or an elephant with a pink tutu, etc).
-Use the images to train a cnn. 
+Make a class which can implement a NN. The NN should be able to execute forward propagation. 
+For each layer the amount of neurons and the activition function should be setable.
+How each layer is connected to the next layer should be setable.
 
+The code should you be made by yourself without using AI/Vibe coding. 
 

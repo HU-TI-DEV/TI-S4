@@ -135,16 +135,16 @@ Herfstvakantie
 | --- |  --- |
 | ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)|
 | di  | Zelfstandig werken |
-| wo  |10:00-12:00  Klassikale pitches I   (**TM&BB**)|
-| do  | PO gesprekken groep 1 <br> **2e Peilmoment** <br> :end: Einde sprint 4 & :runner: Planning sprint 5 (**TM**)|
+| wo  |10:00-12:00  Klassikale pitches I  & PO gesprekken  (**TM&BB**)|
+| do  | **2e Peilmoment**|
 
 ### Onderwijsweek B1 (10-11-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | TD [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)     |
-| di  |  Zelfstandig werken  (**NG**)|
-| wo  |  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)|
-| do  |  Teamcoaching (**NG**)  |
+| ma  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**)     |
+| di  |  Zelfstandig werken  ()|
+| wo  |  Value sensitive design workshop (**BB**)|
+| do  |  Zelfstandig werken ()  |
 
 ### Onderwijsweek B2 (17-11-2025)
 | Dag | Project & Kennissessie |

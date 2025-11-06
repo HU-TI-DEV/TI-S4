@@ -143,7 +143,7 @@ Herfstvakantie
 | --- |  --- |
 | ma  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**)     |
 | di  |  Zelfstandig werken  ()|
-| wo  |  Value sensitive design workshop (**BB**)|
+| wo  |  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)|
 | do  |  Zelfstandig werken ()  |
 
 ### Onderwijsweek B2 (17-11-2025)

@@ -158,9 +158,9 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |Deepdive (2) (**BB & NG**)  | 
-| di  | Zelfstandig werken  (**NG**) |
+| di  | Zelfstandig werken  (**TM & AvD**) |
 | wo  | Zelfstandig werken aan project (**BB**)|
-| do  | Zelfstandig werken aan project (**NG**)|
+| do  | Zelfstandig werken aan project (**LB & TM**)|
 
 ### Onderwijsweek B4 (01-12-2025)
 

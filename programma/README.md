@@ -157,7 +157,7 @@ Herfstvakantie
 ### Onderwijsweek B3 (24-11-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |Deepdive (2) (**BB & NG**)  | 
+| ma  |Deepdive (2) (**BB**)  | 
 | di  | Zelfstandig werken  (**TM & AvD**) |
 | wo  | Zelfstandig werken aan project (**BB**)|
 | do  | Zelfstandig werken aan project (**LB & TM**)|

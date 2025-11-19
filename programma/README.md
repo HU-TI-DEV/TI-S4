@@ -158,7 +158,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |Deepdive (2) (**BB**)  | 
-| di  | Zelfstandig werken  (**TM & AvD**) |
+| di  | Zelfstandig werken aan project (**TM & AvD**) |
 | wo  | Zelfstandig werken aan project (**BB**)|
 | do  | Zelfstandig werken aan project (**LB & TM**)|
 
@@ -167,24 +167,24 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Deepdive (2) (**BB & NG**)  |
-| di  | Zelfstandig werken  (**NG**)   |
-| wo  | Zelfstandig werken aan project (**NG**)                                 |
+| di  | Zelfstandig werken aan project (**TM & AvD**)   |
+| wo  | Zelfstandig werken aan project (**LB**)                                 |
 | do  | PO gesprekken groep 1 <br> **3e Peilmoment** <br> :end: Einde sprint 6 & :runner: Planning sprint 7 |
 
 ### Onderwijsweek B5 (08-12-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (2) (**BB & NG**)   |
-| di  | Zelfstandig werken  (**NG**) |
-| wo  | Zelfstandig werken aan project (**BB**) |
-| do  | Zelfstandig werken aan project (**BB**)|
+| ma  | Deepdive (2) (**BB**)   |
+| di  | Zelfstandig werken aan project (**TM & AvD**) |
+| wo  | Zelfstandig werken aan project (**BB & LB**) |
+| do  | Zelfstandig werken aan project (**BB & LB**)|
 
 ### Onderwijsweek B6 (15-12-2025)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (2) (**BB & NG**)    |
-| di  | Zelfstandig werken  (**NG**) <br> Vanaf 15:00 stagevoortgang bespreken  |
-| wo  | Zelfstandig werken aan project (**NG**) |
+| ma  | Deepdive (2) (**BB**)    |
+| di  | Zelfstandig werken aan project (**TM & AvD**) <br> Vanaf 15:00 stagevoortgang bespreken  |
+| wo  | Zelfstandig werken aan project (**LB**) |
 | do  | PO gesprekken groep 2 <br> :end: Einde sprint 7 & :runner: Planning sprint 8 |
 
 
@@ -197,9 +197,9 @@ vakantie
 HIER MOETEN ALLE DEMO'S IN. 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive verbetering (**BB & NG**) |
-| di  | Zelfstandig werken (**NG**)|
-| wo   Demo dag 12.00 uur – 15.00 uur (**NG & BB**)                        |
+| ma  | Deepdive verbetering (**BB**) |
+| di  | Zelfstandig werken aan project (**TM & AvD**)|
+| wo   Demo dag 12.00 uur – 15.00 uur (**TM & BB**)                        |
 | do  | **4e Peilmoment** :end: Einde sprint 8 & planning afronden |
 
 

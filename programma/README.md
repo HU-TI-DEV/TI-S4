@@ -160,7 +160,7 @@ Herfstvakantie
 | ma  |Deepdive (2) (**BB**)  | 
 | di  | Zelfstandig werken aan project (**TM & AvD**) |
 | wo  | Zelfstandig werken aan project (**BB**)|
-| do  | Zelfstandig werken aan project (**LB & TM**)|
+| do  | Zelfstandig werken aan project (**TM**)|
 
 ### Onderwijsweek B4 (01-12-2025)
 

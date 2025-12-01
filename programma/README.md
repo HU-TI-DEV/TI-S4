@@ -168,7 +168,7 @@ Herfstvakantie
 | --- |  --- |
 | ma  | Deepdive (2) (**BB & NG**)  |
 | di  | Zelfstandig werken aan project (**TM & AvD**)   |
-| wo  | Zelfstandig werken aan project (**LB**)                                 |
+| wo  | Bezoek van opdrachtgever Colin (**LB & BB**)                                 |
 | do  | PO gesprekken groep 1 <br> **3e Peilmoment** <br> :end: Einde sprint 6 & :runner: Planning sprint 7 |
 
 ### Onderwijsweek B5 (08-12-2025)

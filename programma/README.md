@@ -114,7 +114,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | ALDS support (1hr) (**BB**)                   |
-| di  | OCHTEND,PL101-1.318, [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)              |
+| di  | OCHTEND,PL101-1.318, [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)              |
 | wo  |  10:00 OCHTEND, HL 15 - 7.047 :end: Einde sprint 3 & :runner: planning sprint 4|
 | do  |  Structural Design Patterns (**MV**)  |
 

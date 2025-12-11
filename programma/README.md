@@ -177,7 +177,7 @@ Herfstvakantie
 | ma  | Deepdive (2) (**BB**)   |
 | di  | Zelfstandig werken aan project (**TM & AvD**) |
 | wo  | Zelfstandig werken aan project (**BB**) |
-| do  | Zelfstandig werken aan project (**BB & LB**)|
+| do  | Zelfstandig werken aan project (**BB**)|
 
 ### Onderwijsweek B6 (15-12-2025)
 | Dag | Project & Kennissessie |

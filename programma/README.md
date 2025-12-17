@@ -185,7 +185,7 @@ Herfstvakantie
 | ma  | Deepdive (2) (**BB**)    |
 | di  | Zelfstandig werken aan project (**TM & AvD**) |
 | wo  | COLIN BEZOEK - Deepdive verbetering (**BB**) |
-| do  | PO gesprekken groep 2 <br> :end: Einde sprint 7 & :runner: Planning sprint 8 |
+| do  |  :end: Einde sprint 7 & :runner: Planning sprint 8 |
 
 
 ### Onderwijsweek B7 (22-12-2025)

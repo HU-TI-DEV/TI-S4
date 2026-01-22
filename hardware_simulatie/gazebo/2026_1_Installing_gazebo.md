@@ -20,7 +20,7 @@ Download the image.tar file from canvas (canvas -> hoofdpagina -> linkje bij pla
 Open the CMD prompt and type the following<sup>1</sup>:
 
 ~~~
-docker load -i gazebo_s4.tar
+docker load -i s4_2026.tar
 ~~~
 This will load the docker container as an image, please note this will take some time.
 Double check if the image was loaded by going to the docker desktop gui and see if in the images tab the gazebo_s4 image is displayed. 
@@ -30,9 +30,9 @@ Double check if the image was loaded by going to the docker desktop gui and see 
 
 We have to install a X server (to enable a graphical user interface in Ubuntu). Go to (https://mobaxterm.mobatek.net) [https://mobaxterm.mobatek.net/download-home-edition.html] and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
 
-Run the X server (via the start menu of windows).
+Run mobaxterm (via the start menu of windows).
 
-Set the environment display variable<sup>1</sup>:
+Set the environment display variable in your cmd window <sup>1</sup>:
 ~~~
 set DISPLAY=host.docker.internal:0
 ~~~

@@ -1,4 +1,4 @@
-# 0. Installing Gazebo
+# 1. Installing Gazebo
 
 Gazebo is a modelling/simulation framework. In this guide we will learn how to install it. 
 
@@ -20,7 +20,7 @@ Download the image.tar file from canvas (canvas -> hoofdpagina -> linkje bij pla
 Open the CMD prompt and type the following<sup>1</sup>:
 
 ~~~
-docker load -i image.tar
+docker load -i gazebo_s4.tar
 ~~~
 This will load the docker container as an image. 
 

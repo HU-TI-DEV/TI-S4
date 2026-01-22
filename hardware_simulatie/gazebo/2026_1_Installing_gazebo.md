@@ -26,9 +26,8 @@ This will load the docker container as an image, please note this will take some
 Double check if the image was loaded by going to the docker desktop gui and see if in the images tab the gazebo_s4 image is displayed. 
 
 ### Installing X server
-*Source:  [https://vcxsrv.com/](https://mobaxterm.mobatek.net/download-home-edition.html)* <!-- markdown-link-check-disable-line -->
 
-We have to install a X server (to enable a graphical user interface in Ubuntu). Go to (https://mobaxterm.mobatek.net) [https://mobaxterm.mobatek.net/download-home-edition.html] and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
+We have to install a X server (to enable a graphical user interface in Ubuntu). Go to [https://mobaxterm.mobatek.net] (https://mobaxterm.mobatek.net/download-home-edition.html) and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
 
 Run mobaxterm (via the start menu of windows).
 

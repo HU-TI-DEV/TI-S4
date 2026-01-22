@@ -29,7 +29,7 @@ Double check if the image was loaded by going to the docker desktop gui and see 
 
 We have to install a X server (to enable a graphical user interface in Ubuntu). Go to [https://mobaxterm.mobatek.net] (https://mobaxterm.mobatek.net/download-home-edition.html) and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
 
-Run mobaxterm (via the start menu of windows).
+Run MobaXterm (via the start menu of windows).
 
 Set the environment display variable in your cmd window <sup>1</sup>:
 ~~~
@@ -61,7 +61,7 @@ Select the robot and press run. You should see the robot in a new window (some e
 
 ### Running after a reboot or exiting the powershell:
 
-- start dockers for desktop in your windows environment.
+- start dockers desktop in your windows environment.
 - run MobaXterm in your windows environment.
 - run the cmd window
 

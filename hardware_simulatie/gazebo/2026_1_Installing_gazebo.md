@@ -22,47 +22,7 @@ Open the CMD prompt and type the following<sup>1</sup>:
 ~~~
 docker load -i image.tar
 ~~~
-~~~
-apt-get update
-apt-get install -y curl
-apt-get install -y sudo
-apt-get install -y wget
-~~~
-Please note, on my setup I could paste one sentence at a time. I would copy a sentence and with rightclick I could paste it in the docker container.
-
-### Install ROS 2 in docker:
-
-We will base the installation on this site: https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html#try-some-examples  
-I've copied the relevant commando's below.  
-Type the following commands<sup>2</sup>:
-~~~
-sudo apt install software-properties-common
-sudo add-apt-repository universe
-sudo apt update && sudo apt install curl -y
-export ROS_APT_SOURCE_VERSION=$(curl -s https://api.github.com/repos/ros-infrastructure/ros-apt-source/releases/latest | grep -F "tag_name" | awk -F\" '{print $4}')
-curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-apt-source/releases/download/${ROS_APT_SOURCE_VERSION}/ros2-apt-source_${ROS_APT_SOURCE_VERSION}.$(. /etc/os-release && echo $VERSION_CODENAME)_all.deb" # If using Ubuntu derivates use $UBUNTU_CODENAME
-sudo dpkg -i /tmp/ros2-apt-source.deb
-sudo apt update && sudo apt install ros-dev-tools
-sudo apt update
-sudo apt upgrade
-sudo apt install ros-jazzy-desktop
-source /opt/ros/jazzy/setup.bash
-~~~
-
-We will now exit the container<sup>2</sup>:
-~~~
-exit
-~~~
-and save it as an image. First we need to  find the id<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-You need to find the id of the container you just exited (so the last one). <br>
-Copy the id & paste it in the below command<sup>1</sup>:
-~~~
-docker commit <container_id> ros2
-~~~
-This may take some time. Patience is virtue.
+This will load the docker container as an image. 
 
 ### Installing X server
 *Source:  https://vcxsrv.com/* <!-- markdown-link-check-disable-line -->

@@ -25,9 +25,9 @@ docker load -i image.tar
 This will load the docker container as an image. 
 
 ### Installing X server
-*Source:  https://vcxsrv.com/* <!-- markdown-link-check-disable-line -->
+*Source:  [https://vcxsrv.com/](https://mobaxterm.mobatek.net/download-home-edition.html)* <!-- markdown-link-check-disable-line -->
 
-We have to install a X server (to enable a graphical user interface in Ubuntu). Go to https://vcxsrv.com/ and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
+We have to install a X server (to enable a graphical user interface in Ubuntu). Go to (https://mobaxterm.mobatek.net) [https://mobaxterm.mobatek.net/download-home-edition.html] and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
 
 Run the X server (via the start menu of windows).
 

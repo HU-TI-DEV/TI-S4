@@ -42,20 +42,10 @@ set DISPLAY=host.docker.internal:0
 We will now start a container based on the image. It is a little bit like classes. The container is an instance based on the image template.
 First we need to make the container, we do this by<sup>1</sup>:
 ~~~
-docker run gazebo_s4
+docker run -it --rm -e DISPLAY=host.docker.internal:0 s4_2026 bash
 ~~~
 Double check if the container was started by going to the docker desktop gui and see if in the container tab if a new containere (based on gazebo_s4 image) is displayed. We will now continue working in this container. You can make a new image of your work (for security, in case your container is corrupted) but do not do this too often as it will consume a lot of disk space. We will explain later how you can make an image of a container (you do this with the docker commit command). 
 
-First we need to  find the id<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-You need to find the id of the container you just exited (so the last one).<br>
-Copy the id & paste it in the lines below<sup>1</sup>:
-~~~
-docker start <container_id>
-docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
-~~~
 We can test it by running<sup>2</sup>:
 ~~~
 gz sim
@@ -75,6 +65,10 @@ Select the robot and press run. You should see the robot in a new window (some e
 - run MobaXterm in your windows environment.
 - run the cmd window
 
+
+
+
+TODO
 First we need to  find the id<sup>1</sup>:
 ~~~
 docker ps -a
@@ -86,3 +80,13 @@ docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
+First we need to  find the id<sup>1</sup>:
+~~~
+docker ps -a
+~~~
+You need to find the id of the container you just exited (so the last one).<br>
+Copy the id & paste it in the lines below<sup>1</sup>:
+~~~
+docker start <container_id>
+docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
+~~~

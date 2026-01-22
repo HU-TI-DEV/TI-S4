@@ -1,9 +1,8 @@
 # 3. Connect with C++
 *Source: https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md*
 
-We would like to be able to interact with Gazebo via C++. The next steps enable this. [There is also a Mac OS logbook](./Mac-OS/3_Connect_with_c_Mac-OS.md).
-
- if you did not open your container yet<sup>1</sup>:
+We would like to be able to interact with Gazebo via C++. The next steps enable this.<br>
+if you did not open your container yet<sup>1</sup>:
 ~~~
 docker ps -a
 ~~~
@@ -17,10 +16,6 @@ docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 We will first install the tooling we need<sup>2</sup>:
 ~~~
 sudo apt install cmake g++ -y
-~~~
-Next step: we are going to our directory<sup>2<sup>:
-~~~
-cd ~/gz_transport_tutorial
 ~~~
 
 Download 
@@ -77,7 +72,7 @@ We start a new powershell and re-enter the container.
 
 We will first go to the correct directory<sup>2</sup>:
 ~~~
-cd ~/gz_transport_tutorial/build
+cd ~/build
 ~~~
 Then we start the subscriber<sup>2</sup>:
 ~~~

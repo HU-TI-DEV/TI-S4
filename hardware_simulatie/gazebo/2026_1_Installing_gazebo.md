@@ -27,7 +27,7 @@ Double check if the image was loaded by going to the docker desktop gui and see 
 
 ### Installing X server
 
-We have to install a X server (to enable a graphical user interface in Ubuntu). Go to [https://mobaxterm.mobatek.net] (https://mobaxterm.mobatek.net/download-home-edition.html) and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
+We have to install a X server (to enable a graphical user interface in Ubuntu). Go to [https://mobaxterm.mobatek.net](https://mobaxterm.mobatek.net/download-home-edition.html) and install the server on your windows computer. <!-- markdown-link-check-disable-line -->
 
 Run MobaXterm (via the start menu of windows).
 

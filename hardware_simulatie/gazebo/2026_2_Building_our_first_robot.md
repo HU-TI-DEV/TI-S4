@@ -176,7 +176,7 @@ docker ps -a
 You need to find the id of the container you just exited (so the last one).<br>
 Copy the id & paste it in the below command<sup>1</sup>:
 ~~~
-docker commit <container_id> gazebo
+docker commit <container_id> gazebo_building_first_robot
 ~~~
 This may take some time. Patience is virtue.
 

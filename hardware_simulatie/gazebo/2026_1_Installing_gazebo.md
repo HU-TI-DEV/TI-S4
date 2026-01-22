@@ -72,8 +72,8 @@ Select the robot and press run. You should see the robot in a new window (some e
 ### Running after a reboot or exiting the powershell:
 
 - start dockers for desktop in your windows environment.
-- run vcxsrv in your windows environment.
-- run the powershell
+- run MobaXterm in your windows environment.
+- run the cmd window
 
 First we need to  find the id<sup>1</sup>:
 ~~~
@@ -84,10 +84,5 @@ Copy the id & paste it in the lines below<sup>1</sup>:
 ~~~
 docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
-~~~
-
-Each time you start a container you have to set the environment variables with <sup>2</sup>:
-~~~
-source /opt/ros/jazzy/setup.bash
 ~~~
 

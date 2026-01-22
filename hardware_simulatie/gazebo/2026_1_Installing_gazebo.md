@@ -22,7 +22,8 @@ Open the CMD prompt and type the following<sup>1</sup>:
 ~~~
 docker load -i gazebo_s4.tar
 ~~~
-This will load the docker container as an image. 
+This will load the docker container as an image, please note this will take some time.
+Double check if the image was loaded by going to the docker desktop gui and see if in the images tab the gazebo_s4 image is displayed. 
 
 ### Installing X server
 *Source:  [https://vcxsrv.com/](https://mobaxterm.mobatek.net/download-home-edition.html)* <!-- markdown-link-check-disable-line -->
@@ -33,12 +34,18 @@ Run the X server (via the start menu of windows).
 
 Set the environment display variable<sup>1</sup>:
 ~~~
-$env:DISPLAY="host.docker.internal:0"
+set DISPLAY=host.docker.internal:0
 ~~~
 
 ### First time running
 
-We will now start the container again.  
+We will now start a container based on the image. It is a little bit like classes. The container is an instance based on the image template.
+First we need to make the container, we do this by<sup>1</sup>:
+~~~
+docker run gazebo_s4
+~~~
+Double check if the container was started by going to the docker desktop gui and see if in the container tab if a new containere (based on gazebo_s4 image) is displayed. We will now continue working in this container. You can make a new image of your work (for security, in case your container is corrupted) but do not do this too often as it will consume a lot of disk space. We will explain later how you can make an image of a container (you do this with the docker commit command). 
+
 First we need to  find the id<sup>1</sup>:
 ~~~
 docker ps -a
@@ -49,14 +56,18 @@ Copy the id & paste it in the lines below<sup>1</sup>:
 docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
-
-Each time you start a container you have to set the environment variables with <sup>2</sup>:
+We can test it by running<sup>2</sup>:
 ~~~
-source /opt/ros/jazzy/setup.bash
+gz sim
 ~~~
+We should see:
 
-Run the examples on (excluding rqt_graph) up till and including the turtlesim:  
-https://github.com/MOGI-ROS/Week-1-2-Introduction-to-ROS2?tab=readme-ov-file#running-some-examples
+![alt text](images/image-4.png)
+
+Select the robot and press run. You should see the robot in a new window (some errors/warnings could be present in the container window):
+
+![alt text](images/image-5.png)
+
 
 ### Running after a reboot or exiting the powershell:
 

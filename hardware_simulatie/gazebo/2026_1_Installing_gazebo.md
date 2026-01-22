@@ -65,28 +65,14 @@ Select the robot and press run. You should see the robot in a new window (some e
 - run MobaXterm in your windows environment.
 - run the cmd window
 
-
-
-
-TODO
 First we need to  find the id<sup>1</sup>:
 ~~~
 docker ps -a
 ~~~
-You need to find the id of the container you just exited (so the last one).<br>
+You need to find the id of the container you exited the last time (so the last one).<br>
 Copy the id & paste it in the lines below<sup>1</sup>:
 ~~~
 docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
-First we need to  find the id<sup>1</sup>:
-~~~
-docker ps -a
-~~~
-You need to find the id of the container you just exited (so the last one).<br>
-Copy the id & paste it in the lines below<sup>1</sup>:
-~~~
-docker start <container_id>
-docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
-~~~

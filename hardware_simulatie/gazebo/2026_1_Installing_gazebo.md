@@ -22,6 +22,7 @@ Open the CMD prompt and type the following<sup>1</sup>:
 ~~~
 docker load -i image.tar
 ~~~
+~~~
 apt-get update
 apt-get install -y curl
 apt-get install -y sudo

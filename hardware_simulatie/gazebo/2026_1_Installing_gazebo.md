@@ -26,8 +26,8 @@ This will load the docker container as an image, please note this will take some
 This image contains o.a. the following:
 | Name         | Description |
 |--------------|-------------|
-| Gazebo Jetty | A robotics simulation environment used for simulating robots and sensors in 3D worlds. |
-| Python 3     | High level program language designed by Guido van Rossum |
+| Gazebo Jetty | A robotics simulation environment used for simulating robots and sensors in 3D worlds (version 10.0.0).|
+| Python 3     | High level program language designed by Guido van Rossum. |
 | OpenCV       | A computer vision library for image processing, video analysis, and machine vision applications. |
 | CMake        | A build-system generator used to manage and configure the compilation of software projects. |
 | VIM          | A keyboard-driven text editor. |

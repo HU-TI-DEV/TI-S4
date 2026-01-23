@@ -24,8 +24,15 @@ docker load -i s4_2026.tar
 ~~~
 This will load the docker container as an image, please note this will take some time.
 This image contains o.a. the following:
-- Gazbo Jetty
-- 
+| Name         | Description |
+|--------------|-------------|
+| Gazebo Jetty | A robotics simulation environment used for simulating robots and sensors in 3D worlds. |
+| Python 3     | High level program language designed by Guido van Rossum |
+| OpenCV       | A computer vision library for image processing, video analysis, and machine vision applications. |
+| CMake        | A build-system generator used to manage and configure the compilation of software projects. |
+| VIM          | A keyboard-driven text editor. |
+| g++          | The GNU C++ compiler used to compile and link C++ programs. |
+
 Double check if the image was loaded by going to the docker desktop gui and see if in the images tab the s4_2026 image is displayed. 
 
 ### Installing X server

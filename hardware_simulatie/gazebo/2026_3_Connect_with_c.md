@@ -1,5 +1,4 @@
 # 3. Connect with C++
-*Source: https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md*
 
 We would like to be able to interact with Gazebo via C++. The next steps enable this.<br>
 if you did not open your container yet<sup>1</sup>:

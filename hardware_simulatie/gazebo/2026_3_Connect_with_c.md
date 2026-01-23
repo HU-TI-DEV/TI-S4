@@ -12,11 +12,6 @@ docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
-We will first install the tooling we need<sup>2</sup>:
-~~~
-sudo apt install cmake g++ -y
-~~~
-
 Download 
 - publisher.cc 
 - subscriber.cc

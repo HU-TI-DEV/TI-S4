@@ -23,6 +23,9 @@ Open the CMD prompt and type the following<sup>1</sup>:
 docker load -i s4_2026.tar
 ~~~
 This will load the docker container as an image, please note this will take some time.
+This image contains o.a. the following:
+- Gazbo Jetty
+- 
 Double check if the image was loaded by going to the docker desktop gui and see if in the images tab the s4_2026 image is displayed. 
 
 ### Installing X server

@@ -41,7 +41,7 @@ set DISPLAY=host.docker.internal:0
 We will now start a container based on the image. It is a little bit like classes. The container is an instance based on the image template.
 First we need to make the container, we do this by<sup>1</sup>:
 ~~~
-docker run -it --rm -e DISPLAY=host.docker.internal:0 s4_2026 bash
+docker run -it -e DISPLAY=host.docker.internal:0 s4_2026 bash
 ~~~
 Double check if the container was started by going to the docker desktop gui and see if in the container tab a new container (based on your image) is displayed.<br>
 We will now continue working in this container. You can make a new image of your work (for security, in case your container is corrupted) but do not do this too often as it will consume a lot of disk space. We will explain later how you can make an image of a container (you do this with the docker commit command). 

@@ -119,8 +119,6 @@ gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}
 Hopefully the robot should start moving!!!  
 Close gazebo.
 
-HIER EEEN STUK OVR DAT JE HEM OOK HEADLESS KAN STARTEN ACHTIG....
-
 ## Adding a sensor to the robot
 *Source: https://gazebosim.org/docs/latest/sensors/*
 

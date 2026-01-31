@@ -23,8 +23,7 @@ Download
 - subscriber.cc
 - CMakeLists.txt
 
-from [https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md)
-
+from [https://gazebosim.org/api/transport/15/messages.html](https://gazebosim.org/api/transport/15/messages.html)
 
 Make a new file with the vi editor with<sup>2</sup>:
 ~~~

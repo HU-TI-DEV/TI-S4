@@ -52,7 +52,7 @@ make publisher subscriber
 ~~~
 We have now compiled the subscriber.cc and publisher.cc file!
 
-Read the description in *https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md* to understand what happens in the subscriber and publisher code. 
+Read the description in *[https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md](https://gazebosim.org/api/transport/15/messages.html)* to understand what happens in the subscriber and publisher code. 
 
 ## Running our first test with the transport layer!
 

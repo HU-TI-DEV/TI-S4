@@ -67,11 +67,11 @@ We should see something like this:
 ![
 ](images/image.png)
 
-We start a new powershell and re-enter the container.
+We start a new cmd window and re-enter the container.
 
 We will first go to the correct directory<sup>2</sup>:
 ~~~
-cd ~/build
+cd gz_transport_tutorial/build
 ~~~
 Then we start the subscriber<sup>2</sup>:
 ~~~

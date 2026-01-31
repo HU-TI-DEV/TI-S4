@@ -22,7 +22,7 @@ Open the CMD prompt and type the following<sup>1</sup>:
 ~~~
 docker load -i s4_2026.tar
 ~~~
-This will load the docker container as an image, please note this will take some time.
+This will load the docker container as an image, please note this will take some time (**could be 3~4 min**).
 This image contains o.a. the following:
 | Name         | Description |
 |--------------|-------------|

@@ -1,0 +1,144 @@
+<?xml version="1.0" ?>
+<sdf version="1.12">
+  <world name="cube_thruster_world">
+
+    <!-- Ground plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <inertial>
+          <mass>0.0001</mass>
+          <inertia>
+            <ixx>1e-6</ixx>
+            <iyy>1e-6</iyy>
+            <izz>1e-6</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>10 10</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Cube with thruster -->
+    <model name="cube_with_thruster">
+      <pose>0 0 0.25 0 0 0</pose>
+      <static>false</static>
+
+      <!-- Cube link -->
+      <link name="base_link">
+        <inertial>
+          <mass>1.0</mass>
+          <inertia>
+            <ixx>0.02</ixx>
+            <iyy>0.02</iyy>
+            <izz>0.02</izz>
+          </inertia>
+        </inertial>
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.5 0.5 0.5</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.7 0.2 0.2 1</ambient>
+            <diffuse>0.7 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+
+      <!-- Thruster link -->
+      <link name="thruster_link">
+        <pose>0 0 -0.25 0 0 0</pose>
+        <inertial>
+          <mass>0.2</mass>
+          <inertia>
+            <ixx>0.001</ixx>
+            <iyy>0.001</iyy>
+            <izz>0.001</izz>
+          </inertia>
+        </inertial>
+
+        <collision name="thruster_collision">
+          <geometry>
+            <cylinder>
+              <radius>0.04</radius>
+              <length>0.08</length>
+            </cylinder>
+          </geometry>
+        </collision>
+
+        <visual name="thruster_visual">
+          <geometry>
+            <cylinder>
+              <radius>0.04</radius>
+              <length>0.08</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0 0 1 1</ambient>
+            <diffuse>0 0 1 1</diffuse>
+          </material>
+        </visual>
+      </link>
+
+      <!-- Prismatic joint along Z for thruster plugin -->
+      <joint name="thruster_joint" type="prismatic">
+        <parent>base_link</parent>
+        <child>thruster_link</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>0</upper>
+            <effort>1e6</effort>
+          </limit>
+          <dynamics>
+            <damping>0.01</damping>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <!-- Thruster plugin -->
+      <plugin
+        filename="gz-sim-thruster-system"
+        name="gz::sim::systems::Thruster">
+        <joint_name>thruster_joint</joint_name>
+        <thrust_coefficient>1.0</thrust_coefficient>
+        <velocity_control>true</velocity_control>
+      </plugin>
+
+    </model>
+
+    <!-- Very low gravity -->
+    <gravity>0 0 -0.01</gravity>
+
+  </world>
+</sdf>

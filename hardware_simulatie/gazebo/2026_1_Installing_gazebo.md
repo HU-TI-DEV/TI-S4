@@ -68,6 +68,7 @@ Select the robot and press run. You should see the robot in a new window (some e
 
 ![alt text](images/image-5.png)
 
+You can "run" the robot by pressing the triangle at the left bottom.
 
 ### Running after a reboot or exiting the powershell:
 

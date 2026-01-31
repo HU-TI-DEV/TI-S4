@@ -13,7 +13,7 @@ Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save t
 
 We will now try to run the robot.sdf with gz sim. First:
 - start dockers for desktop in your windows environment.
-- run vcxsrv in your windows environement.
+- run MobaXterm in your windows environement.
 - run the cmd window
 
 First we need to find the id of our last container<sup>1</sup>:

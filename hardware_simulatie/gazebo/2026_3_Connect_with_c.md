@@ -12,6 +12,8 @@ docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
+Make a dir and enter it<sup>2</sup>:
+
 Download 
 - publisher.cc 
 - subscriber.cc

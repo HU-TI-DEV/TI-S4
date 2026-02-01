@@ -49,4 +49,6 @@ PID
 
 8 Opdracht: [PID Controlling your robot](./7_Assignment_study_MOGI-ROS_manual.md)
 
+Canvas naam: Gazebo opdracht 3 - PID controlling your robot
+
 Veel succes!

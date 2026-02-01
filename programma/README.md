@@ -86,7 +86,7 @@ TODO
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br>Bewustwording kwaliteiten [Teamrollen Belbin](https://werkenmetteamrollen.nl/vragenlijst/) (**BB**)|
+| ma  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br>Bewustwording kwaliteiten [Teamrollen DISC]([[https://werkenmetteamrollen.nl/vragenlijst/](https://www.123test.com/nl/disc-test/)](https://www.123test.com/nl/disc-test/)) (**BB**)|
 | di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf) (**HK**)|
 | wo  | [Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)  |
 | do  | Teamindeling op basis van sollicitatie (**Onderwijsmanager TI , LB, HK**) Teamindeling |

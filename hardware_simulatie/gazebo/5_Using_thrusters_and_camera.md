@@ -30,3 +30,8 @@ The camera output the images... bla bla bla
 gz topic -e -t /camera/image
 
 
+### END OF THIS MD...
+For the next step:  
+[6_Driving_the_robot](./6_Driving_the_robot.md)
+
+

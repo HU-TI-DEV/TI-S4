@@ -118,6 +118,6 @@ Het probleem... We willen het karretje gaan regelen....
 
 ## Inleveren op Canvas
 
-Opdracht: [8_Assignment_PID_control](../hardware_simulatie/gazebo/8_Assignment_PID_control.md)
+Opdracht: [8_Assignment_PID_control](./8_Assignment_PID_control.md)
 
 Veel succes!

@@ -1,9 +1,7 @@
 # 3. Connect with C++
-*Source: https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md*
 
-We would like to be able to interact with Gazebo via C++. The next steps enable this. [There is also a Mac OS logbook](./Mac-OS/3_Connect_with_c_Mac-OS.md).
-
- if you did not open your container yet<sup>1</sup>:
+We would like to be able to interact with Gazebo via C++. The next steps enable this.<br>
+if you did not open your container yet<sup>1</sup>:
 ~~~
 docker ps -a
 ~~~
@@ -14,13 +12,10 @@ docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
 ~~~
 
-We will first install the tooling we need<sup>2</sup>:
+Make a dir and enter it<sup>2</sup>:
 ~~~
-sudo apt install cmake g++ -y
-~~~
-Next step: we are going to our directory<sup>2<sup>:
-~~~
-cd ~/gz_transport_tutorial
+mkdir gz_transport_tutorial
+cd gz_transport_tutorial
 ~~~
 
 Download 
@@ -28,8 +23,7 @@ Download
 - subscriber.cc
 - CMakeLists.txt
 
-from [https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md](https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md)
-
+from [https://gazebosim.org/api/transport/15/messages.html](https://gazebosim.org/api/transport/15/messages.html)
 
 Make a new file with the vi editor with<sup>2</sup>:
 ~~~
@@ -58,7 +52,7 @@ make publisher subscriber
 ~~~
 We have now compiled the subscriber.cc and publisher.cc file!
 
-Read the description in *https://github.com/gazebosim/gz-transport/blob/gz-transport13/tutorials/04_messages.md* to understand what happens in the subscriber and publisher code. 
+Read the description in *[https://gazebosim.org/api/transport/15/messages.html](https://gazebosim.org/api/transport/15/messages.html)* to understand what happens in the subscriber and publisher code. 
 
 ## Running our first test with the transport layer!
 
@@ -73,11 +67,11 @@ We should see something like this:
 ![
 ](images/image.png)
 
-We start a new powershell and re-enter the container.
+We start a new cmd window and re-enter the container.
 
 We will first go to the correct directory<sup>2</sup>:
 ~~~
-cd ~/gz_transport_tutorial/build
+cd gz_transport_tutorial/build
 ~~~
 Then we start the subscriber<sup>2</sup>:
 ~~~

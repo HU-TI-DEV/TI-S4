@@ -156,7 +156,7 @@ Type the following command<sup>2</sup>:
 ~~~
 gz topic -l
 ~~~
-You should see something like: 
+You should see something like:   
 ![](images/image-topic-l.png)
 
 As you can see there are several topics with which you can exchange messages with gazebo. 

@@ -1,4 +1,4 @@
-# 5. Driving the robot
+# 6. Driving the robot
 
 As we have seen in [building our first robot](./2_Building_our_first_robot.md) we can move the robot with the following instructions:
 

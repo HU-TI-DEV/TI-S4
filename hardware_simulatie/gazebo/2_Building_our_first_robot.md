@@ -100,7 +100,7 @@ gz sim robot_move.sdf
 Press run in the gz sim (the orange triangle in the bottom left corner)  
 Leave gazebo runninng.  
 
-We will now re-enter the container in a different window. Open a new powershell.
+We will now re-enter the container in a different window. Open a new cmd.
 Find the id of our last container<sup>1</sup>:
 ~~~
 docker ps -a
@@ -147,13 +147,16 @@ tag:
 
 Use vi to save the file also in your docker container under robot_with_imu.sdf.  
 The end result should look something like this [robot_with_imu.sdf](./files/robot_with_imu.sdf).  
-Start the robot in gz sim, press also run and enter the other container. First we need to set the environment right<sup>2</sup>:
-~~~
-export GZ_PARTITION=test
-~~~
+Start the robot in gz sim, press also run and enter the other container. 
 
 You can communicate with gazebo with so called "topics". Topics are like a lettre box where you can publish to (tell something to gazebo) but also subscribe to (see what gazebo tries to tell you). 
 First we will see which topics exist in robot_with_imu
+
+Type the following command<sup>2</sup>:
+~~~
+gz topic -l
+~~~
+
 
 Type the following command<sup>2</sup>:
 ~~~

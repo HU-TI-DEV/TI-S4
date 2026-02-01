@@ -1,10 +1,10 @@
 # 2. Building our first robot
 *source: https://gazebosim.org/docs/latest/building_robot/*
 
-In this step we will build our first robot and move it using commands in the command editor window. There is also a [logbook for Mac OS X](./Mac-OS/2_Building_our_first_robot-Mac-OS.md). 
+In this step we will build our first robot and move it using commands in the command editor window. 
 
 Below the following environments are used:<br>
-<sup>1</sup> The prompt of the power shell environment<br>
+<sup>1</sup> The prompt of the cmd window<br>
 <sup>2</sup> The prompt of the docker container<br>
 <sup>3</sup> Inside the docker container, inside the vi editor
 
@@ -13,8 +13,8 @@ Follow the steps in https://gazebosim.org/docs/latest/building_robot/ and save t
 
 We will now try to run the robot.sdf with gz sim. First:
 - start dockers for desktop in your windows environment.
-- run vcxsrv in your windows environement.
-- run the powershell
+- run MobaXterm in your windows environement.
+- run the cmd window
 
 First we need to find the id of our last container<sup>1</sup>:
 ~~~
@@ -25,18 +25,6 @@ Copy the id & paste it in the lines below<sup>1</sup>:
 ~~~
 docker start <container_id>
 docker exec -it -e DISPLAY=host.docker.internal:0 <container_id> bash
-~~~
-
-We will first install the tooling we need<sup>2</sup>:
-~~~
-apt-get install vim
-~~~
-
-
-We will make a directory in which we will save our robot.sdf<sup>2</sup>:
-~~~
-mkdir ~/gz_transport_tutorial
-cd ~/gz_transport_tutorial
 ~~~
 
 Study the manual of the VI editor: 
@@ -186,13 +174,12 @@ docker ps -a
 You need to find the id of the container you just exited (so the last one).<br>
 Copy the id & paste it in the below command<sup>1</sup>:
 ~~~
-docker commit <container_id> gazebo
+docker commit <container_id> gazebo_building_first_robot
 ~~~
 This may take some time. Patience is virtue.
 
 For the next step:  
 [3_Connect_with_c++](./3_Connect_with_c.md)
-
 
 
 

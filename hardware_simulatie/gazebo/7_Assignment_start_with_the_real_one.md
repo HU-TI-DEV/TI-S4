@@ -3,7 +3,7 @@
 Deze opdracht bestaat uit twee delen. 
 
 Stappen deel I
-1) Voer de stappen van [Driving the robot](./5_Driving_the_robot.md) uit voor de robot van opdracht 4.
+1) Voer de stappen van [Driving the robot](./6_Driving_the_robot.md) uit voor de robot van opdracht 4.
 
 Stappen deel II
 1) Brainstorm met je team welke zaken jullie samen moeten afstemmen (bv welke settings voor je "world" gebruik je).

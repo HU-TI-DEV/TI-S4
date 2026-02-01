@@ -178,6 +178,7 @@ docker commit <container_id> gazebo_building_first_robot
 ~~~
 This may take some time. Patience is virtue.
 
+### END OF THIS MD...
 For the next step:  
 [3_Connect_with_c++](./3_Connect_with_c.md)
 

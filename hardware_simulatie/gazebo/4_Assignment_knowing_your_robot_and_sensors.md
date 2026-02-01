@@ -43,6 +43,7 @@ Have fun & Learn!!!
 
 ### END OF THIS MD...
 For the next step:  
-[6_Using_thrusters_and_camera](./6_Using_thrusters_and_camera.md)
+[5_Using_thrusters_and_camera](./5_Using_thrusters_and_camera.md)
+
 
 

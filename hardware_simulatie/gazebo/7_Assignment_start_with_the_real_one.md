@@ -1,4 +1,4 @@
-# 6. Assignment: let's start building the robot for our project!
+# 7. Assignment: let's start building the robot for our project!
 
 Deze opdracht bestaat uit twee delen. 
 

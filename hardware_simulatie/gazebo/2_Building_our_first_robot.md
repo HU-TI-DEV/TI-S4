@@ -147,16 +147,26 @@ tag:
 
 Use vi to save the file also in your docker container under robot_with_imu.sdf.  
 The end result should look something like this [robot_with_imu.sdf](./files/robot_with_imu.sdf).  
-Start the robot in gz sim, press also run and use the other container to make it "walk" with the following command<sup>2</sup>
+Start the robot in gz sim, press also run and enter the other container. First we need to set the environment right<sup>2</sup>:
 ~~~
 export GZ_PARTITION=test
-gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
 ~~~
+
+You can communicate with gazebo with so called "topics". Topics are like a lettre box where you can publish to (tell something to gazebo) but also subscribe to (see what gazebo tries to tell you). 
+First we will see which topics exist in robot_with_imu
 
 Type the following command<sup>2</sup>:
 ~~~
 gz topic -e -t /imu
 ~~~
+
+ to make it "walk" with the following command<sup>2</sup>:
+~~~
+export GZ_PARTITION=test
+gz topic -t "/cmd_vel" -m gz.msgs.Twist -p "linear: {x: 0.5}, angular: {z: 0.05}"
+~~~
+
+
 We now see the logging of the moving robot:
 
 ![](images/image-2.png)

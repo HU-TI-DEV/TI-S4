@@ -20,12 +20,14 @@ Opdracht 1: [Buildomgeving opzetten](./Assignment_opzetten_ontwikkelomgeving.md)
 
 Hier ga je een Docker maken die een CMake applicatie kan bouwen en
 uitvoeren.
+Canvas naam: Ontwikkelomgeving Opzetten
 
 
 Opdracht 2: [Devcontainer opzetten](./Assignment_devcontainers_cmake_debug.md)
 
 Hier ga je een Devcontainer opzetten en een simpele applicatie
 maken en debuggen.
+Canvas naam: Devcontainer, CMake en Debugger Gebruiken
 
 # Programma Desktopontwikkeling en Tooling - Deel II
 
@@ -50,3 +52,4 @@ In dit tweede deel breiden we onze kennis uit met geavanceerde tooling, waaronde
 Opdracht: [Testing & Tooling Opdracht](./Assignment_testing_tooling.md) <!-- markdown-link-check-disable-line -->
 
 Veel succes!
+

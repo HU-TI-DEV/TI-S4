@@ -197,7 +197,7 @@ As you can see in the code the whole preprocessing is missing. Add it, and see i
 
 ## Final assignment
 
-13) Experiment with a number of techniques* of opencv on your image of choice (*please choose new techniques, other than the mentioned above).  
+13) Experiment with image detection. Inspiration see : [https://pyimagesearch.com/2016/02/08/opencv-shape-detection/](https://pyimagesearch.com/2016/02/08/opencv-shape-detection/)
 **Save the resulting images (you need to upload them to canvas)**.  
 **Save the python code to canvas**.  
 

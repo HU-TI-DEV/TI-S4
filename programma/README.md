@@ -96,7 +96,7 @@ TODO
 | --- |  --- |
 | ma  | Opzetten team inrichting (team contract, github,etc.) (**HK,BB,TM**)  |
 | di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**)  |
-| wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii-PID-control) (**BB**)|
+| wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii-pid-control) (**BB**)|
 | do  | Review individual deliverables  (**HK, BB**)|
 
 ### Onderwijsweek C6 (09-03-2026)

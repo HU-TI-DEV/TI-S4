@@ -41,9 +41,12 @@ What to hand in @ canvas?
 
 Have fun & Learn!!!
 
+Canvas name: Gazebo opdracht 1 - Knowing your robot and sensors
+
 ### END OF THIS MD...
 For the next step:  
 [5_Using_thrusters_and_camera](./5_Using_thrusters_and_camera.md)
+
 
 
 

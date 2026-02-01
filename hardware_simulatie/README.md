@@ -1,2 +1,2 @@
 - Alle opdrachten staan in de gazebo map
-- de ppt over wat er gebeurd onder de motorkap staat in hoe-werken-modellering-.. map
+- Achtergrondmateriaal modelleren & simuleren staat in de hoe-werken-modellering-.. map

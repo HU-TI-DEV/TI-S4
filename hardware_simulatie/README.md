@@ -1,1 +1,2 @@
-Todo: introduction
+- Alle opdrachten staan in de gazebo map
+- de ppt over wat er gebeurd onder de motorkap staat in hoe-werken-modellering-.. map

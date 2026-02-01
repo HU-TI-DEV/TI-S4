@@ -1,4 +1,4 @@
-# 7. Using thrusters and camera
+# 5. Using thrusters and camera
 
 ## Thrusters
 

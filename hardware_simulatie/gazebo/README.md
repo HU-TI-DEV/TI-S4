@@ -34,7 +34,7 @@ Zorg dat je Gazebo deel I af hebt.
 
 7 Opdracht: [Assignment let's start building the robot for our project!](./7_Assignment_start_with_the_real_one.md)
 
-# Programma Gazebo deel III - PID control
+# Programma Gazebo deel III
 PID control is de standaard om dingen "te regelen". De cruise control van een auto werkt bijvoorbeeld met een PID controller. Maar ook in drones zitten (geneste) PID controllers.  
 
 ## Voorbereiding

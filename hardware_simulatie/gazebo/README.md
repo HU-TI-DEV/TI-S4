@@ -26,7 +26,7 @@ Zorg dat je Gazebo deel I af hebt.
 
 ## Tijdens en na de les
 
-5 [Using_thrusters_and_camera](./7_Using_thrusters_and_camera.md)
+5 [Using_thrusters_and_camera](./5_Using_thrusters_and_camera.md)
 
 6 [Driving the robot](./6_Driving_the_robot.md)
 

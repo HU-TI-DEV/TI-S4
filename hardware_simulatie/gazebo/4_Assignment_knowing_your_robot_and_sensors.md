@@ -39,5 +39,8 @@ What to hand in @ canvas?
 2) the code of the robot you made/adapted (the sdf)
 3) the code of your subscriber.cc
 
-
 Have fun & Learn!!!
+
+### END OF THIS MD...
+For the next step:  
+[5_Driving_the_robot](./3_Driving_the_robot.md)

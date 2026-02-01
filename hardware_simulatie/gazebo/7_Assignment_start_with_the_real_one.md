@@ -17,4 +17,6 @@ deel II:
 2) Voor je project: een screenshot van gazebo hoe ver je bent gekomen met het bouwen van je robot.
 3) Voor je project: De code van jouw stukje van de robot (de sdf)
 
+Canvas naam: Gazebo opdracht 2 - Let's start with the real one
+
 Veel succes!

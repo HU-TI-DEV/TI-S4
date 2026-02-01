@@ -60,8 +60,7 @@ De SLB'ers zijn:
 TODO
 <br> [HBO-i Job Event](https://hboictjobevent.nl/)
 | vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
-**Vanaf 15:00 stage/INNO voorlichting** (Inge en Berend) <br> Zelfstandig werken aan project
-ALDS support (1hr) (**BB**) 
+**Vanaf 15:00 stage/INNO voorlichting** (Inge en Berend) ) 
 
 
 ### Onderwijsweek C2 (09-02-2026)

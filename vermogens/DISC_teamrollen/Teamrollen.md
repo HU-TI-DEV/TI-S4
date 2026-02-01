@@ -9,7 +9,7 @@ De resultaten van zo'n test bepalen **niet** wie jij bent! Hoogstens zeggen ze i
 
 ## Tijdens en na de les
 
-![alt text](./DISC.png)
+![alt text](./disc.png)
 
 - Bron: [leansixsigma](https://leansixsigmagroep.nl/lean-agile-en-six-sigma/disc-model/?srsltid=AfmBOorgFeD0PLzn2EJo6QvGK0FAyyOOKN25c9CM9_X11l1iyjLzaQeU)
  

@@ -9,6 +9,11 @@ De resultaten van zo'n test bepalen **niet** wie jij bent! Hoogstens zeggen ze i
 
 ## Tijdens en na de les
 
+
+
+- Bron: [leansixsigma](https://leansixsigmagroep.nl/lean-agile-en-six-sigma/disc-model/?srsltid=AfmBOorgFeD0PLzn2EJo6QvGK0FAyyOOKN25c9CM9_X11l1iyjLzaQeU)
+ 
+
 - Voor de volgende test uit: [https://www.123test.com/nl/disc-test/](https://www.123test.com/nl/disc-test/). Maak een screenshot van je resultaten. 
 
 ## Inleveren op Canvas

@@ -27,6 +27,7 @@ Zorg dat je Gazebo deel I af hebt.
 ## Tijdens en na de les
 
 5 [Using_thrusters_and_camera](./7_Using_thrusters_and_camera.md)
+
 6 [Driving the robot](./6_Driving_the_robot.md)
 
 ## Inleveren op Canvas
@@ -36,12 +37,13 @@ Zorg dat je Gazebo deel I af hebt.
 # Programma Gazebo deel III
 
 ## Voorbereiding
-Bekijk de volgende website : https://github.com/MOGI-ROS
+PID STUK
 
 ## Tijdens en na de les
 
 Look at the following code [pid](../../software/algoritmen_en_datastructuren/files/pid.md)  
-7 [studying the manual & PID control](./7_Assignment_study_MOGI-ROS_manual.md)
+
+PID
 
 ## Inleveren op Canvas
 

@@ -32,7 +32,7 @@ Zorg dat je Gazebo deel I af hebt.
 
 ## Inleveren op Canvas
 
-7 Opdracht: [Assignment let's start building the robot for our project!](./6_Assignment_start_with_the_real_one.md)
+7 Opdracht: [Assignment let's start building the robot for our project!](./7_Assignment_start_with_the_real_one.md)
 
 # Programma Gazebo deel III
 

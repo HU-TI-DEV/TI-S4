@@ -192,7 +192,7 @@ TODO
 | ma  | Zelfstandig werken  (**HK**)  |
 | di  | Zelfstandig werken aan project (**BB, HK**)   |
 | wo  | Teamcoach sessie (**BB**, **HK**)                                |
-| do  | Deepdive (**BB**, **HK**) |
+| do  |  **3e Peilmoment**, Deepdive (**BB**, **HK**) |
 
 ### Onderwijsweek D7 (25-05-2026)
 | Dag | Project & Kennissessie |

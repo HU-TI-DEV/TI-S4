@@ -6,7 +6,6 @@ Bekijk de video [Waarom we aan de slag gaan met Gazebo](https://www.youtube.com/
 
 ## Tijdens en na de les
 
-0 [Installing ROS2](0_Installing_ROS.md)
 
 1 [Installing Gazebo](./1_Installing_gazebo.md)
 
@@ -18,23 +17,21 @@ Bekijk de video [Waarom we aan de slag gaan met Gazebo](https://www.youtube.com/
 
 4 Opdracht: [Assignment knowing your robot and sensors](./4_Assignment_knowing_your_robot_and_sensors.md)
 
-
 Veel succes!
 
 # Programma Gazebo deel II
 
 ## Voorbereiding
-Bekijk het volgende [filmpje](https://www.youtube.com/watch?v=pY0vca2wpxo).  
-De code van je viewer kun je [hier](./files/sdf_viewer.py) vinden.
+Zorg dat je Gazebo deel I af hebt. 
 
 ## Tijdens en na de les
 
-5 [Driving the robot](./5_Driving_the_robot.md)
-
+5 [Using_thrusters_and_camera](./7_Using_thrusters_and_camera.md)
+6 [Driving the robot](./6_Driving_the_robot.md)
 
 ## Inleveren op Canvas
 
-6 Opdracht: [Assignment let's start building the robot for our project!](./6_Assignment_start_with_the_real_one.md)
+7 Opdracht: [Assignment let's start building the robot for our project!](./6_Assignment_start_with_the_real_one.md)
 
 # Programma Gazebo deel III
 

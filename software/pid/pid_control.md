@@ -82,6 +82,6 @@ Het probleem... We willen het karretje gaan regelen....
 
 ## Inleveren op Canvas
 
-4 Opdracht: [Assignment knowing your robot and sensors](./4_Assignment_knowing_your_robot_and_sensors.md)
+Opdracht: [8_Assignment_PID_control](../hardware_simulatie/gazebo/8_Assignment_PID_control.md)
 
 Veel succes!

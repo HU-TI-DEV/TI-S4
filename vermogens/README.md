@@ -3,4 +3,5 @@
 - [Solliciteren](./solliciteren/README.md)
 
 - [Sprintverslag](./sprintverslag/sprint_verslag.md)
-- [DISC teamrollen](./disc_teamrollen/Teamrollen.md)
+- [DISC teamrollen](./DISC_teamrollen/Teamrollen.md)
+

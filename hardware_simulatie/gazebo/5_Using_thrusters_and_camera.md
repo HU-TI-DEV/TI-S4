@@ -173,7 +173,7 @@ except KeyboardInterrupt:
 cv2.destroyAllWindows()
 ```
 
-The demo (execute it yourself):  
+The demo (execute it yourself, you know the steps by now I hope...):  
 [![YouTube Video Preview](https://img.youtube.com/vi/lhfKNJloKxw/0.jpg)](https://www.youtube.com/watch?v=lhfKNJloKxw)
 
 ### END OF THIS MD...

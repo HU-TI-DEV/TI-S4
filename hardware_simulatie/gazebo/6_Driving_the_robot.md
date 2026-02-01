@@ -13,3 +13,7 @@ As you can see the topic we are publishing to has a certain number of changes:
 - the message consist of several sub messages 
 
 We will try to make the robot move with our own .cc code. For this you have to change the publisher.cc code to enable above changes. The first two are trivial. The last one is rather tricky. Study the DiffDrive.cc file in the [gz sim repo](https://github.com/gazebosim/gz-sim/blob/gz-sim10/src/systems/diff_drive/DiffDrive.cc) to understand how the messages need to be build up (tip: search for mutable_linear in the .cc file). 
+
+### END OF THIS MD...
+For the next step:  
+[7_Assignment_start_with_real_one](./7_Assignment_start_with_real_one.md)

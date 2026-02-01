@@ -16,6 +16,9 @@ We can now (in the same container) still give commands in the container:
 gz topic -t /model/cube_with_thruster/joint/thruster_joint/cmd_thrust -m gz.msgs.Double -p "data: 1.0"
 ```
 The cube should behave like a rocket!
+See: 
+[![YouTube Video Preview](https://img.youtube.com/vi/DtrU5ze-Ux8/0.jpg)](https://www.youtube.com/watch?v=DtrU5ze-Ux8)
+
 
 ## Camera
 

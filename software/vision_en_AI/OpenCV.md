@@ -22,7 +22,7 @@ OpenCV however does **not** include **deep** learning frameworks like TensorFlow
 The present state of the art approach for vision applications (CNN) is better implemented in those modern frameworks.
 
 Below the following environments are used:<br>
-<sup>1</sup> The prompt of the power shell environment<br>
+<sup>1</sup> The prompt of the cmd<br>
 <sup>2</sup> The prompt of the Docker container<br>
 
 ## Installing OpenCV in a Docker container
@@ -44,7 +44,7 @@ We will now copy the [example1.png](./files/example1.png) file to our container.
 ```
 docker cp <source> <container_id>:<destination>
 ```
-Please note: you run this command in the prompt of the powershell.   
+Please note: you run this command in the prompt of the cmd.   
 If you have already mounted a hd in your container (or made a coupling in vs code) you could do this probably much easier!
 
 In my case I have put example1.png in the same folder as my gz_transport example<sup>1</sup>:  

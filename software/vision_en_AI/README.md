@@ -15,10 +15,11 @@ De ppt van de les:
 Voor de opdrachten uit van :
 -  [OpenCV](./OpenCV.md)
 
+
 ## Inleveren op Canvas
 
 Upload de screenshots van de oefeningen (en de code van de final assignment) zoals beschreven in de markdownfile. 
-
+Canvas naam : Computer Vision I - OpenCV 
 Veel succes!
 
 # Programma Vision deel II
@@ -41,6 +42,7 @@ Speel met de volgende : [site](https://adamharley.com/nn_vis/cnn/3d.html)
 ## Inleveren op Canvas
 Zie [Vision with AI](./Vision_with_ai.md)
 
+Canvas naam : Computer Vision II
 
 # Programma Machine learning
 

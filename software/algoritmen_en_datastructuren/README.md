@@ -11,6 +11,8 @@
 ## Inleveren op Canvas
 Opdracht: [Opdracht Complexiteit en algoritmes](./1_complexiteit_en_algoritmes.ipynb)
 
+Canvas naam : Algoritmes en Datastructuren 1
+
 # Programma ALDS deel II
 
 ## Voorbereiding
@@ -23,6 +25,7 @@ Opdracht: [Opdracht Complexiteit en algoritmes](./1_complexiteit_en_algoritmes.i
 ## Inleveren op Canvas
 Opdracht: [Opdracht Complexiteit en algoritmes](./2_containers_zoeken_sorteren.ipynb)
 
+Canvas naam : Algoritmes en Datastructuren 2
 
 
 # Programma ALDS deel III
@@ -37,3 +40,6 @@ Opdracht: [Opdracht Complexiteit en algoritmes](./2_containers_zoeken_sorteren.i
 
 ## Inleveren op Canvas
 Opdracht: [Opdracht Pathfinding](./3_pathfinding.ipynb)
+
+Canvas naam : Algoritmes en Datastructuren 3
+

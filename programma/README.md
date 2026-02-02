@@ -226,7 +226,7 @@ TODO
 | ma  | Deepdive verbetering (**BB**) |
 | di  | Zelfstandig werken aan project (**TM & AvD**)|
 | wo  | Demo dag 12.00 uur – 15.00 uur (**HK & BB**)  |
-| do  | **4e Peilmoment** :end: Einde sprint 8 & planning afronden |
+| do  | **4e Peilmoment** :end: |
 
 
 ### Onderwijsweek D11 (22-06-2026)

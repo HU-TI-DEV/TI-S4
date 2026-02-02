@@ -190,7 +190,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Zelfstandig werken  (**HK**)  |
-| di  | Zelfstandig werken aan project (**BB, HK**)   |
+| di  | Zelfstandig werken aan project (**HK**)   |
 | wo  | Teamcoach sessie (**BB**, **HK**)                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **HK**) |
 

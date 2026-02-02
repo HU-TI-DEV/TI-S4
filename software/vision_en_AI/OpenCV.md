@@ -25,22 +25,9 @@ Below the following environments are used:<br>
 <sup>1</sup> The prompt of the cmd<br>
 <sup>2</sup> The prompt of the Docker container<br>
 
-## Installing OpenCV in a Docker container
-
-Make sure Docker Desktop is running. In addition run vcxsrv in your windows environment. Enter your container. First we will install all the necessary software tools<sup>2</sup>:
-```bash
-apt-get update && apt-get install -y
-apt-get install python3-pip python3-dev -y
-apt-get install libopencv-dev python3-opencv -y
-rm -rf /var/lib/apt/lists/
-```
-Please note, on my setup I could paste one sentence at a time. I would copy a sentence and with rightclick I could paste it in the docker container.
-Let's check if it is installed<sup>2</sup>:
-```
-python3 -c "import cv2; print(cv2.__version__)"
-```
-
-We will now copy the [example1.png](./files/example1.png) file to our container. You could use the following command for it<sup>1</sup>:
+## OpenCV
+OpenCV is already installed in our image so we can get straight down to business.  
+We will first copy the [example1.png](./files/example1.png) file to our container. You could use the following command for it<sup>1</sup>:
 ```
 docker cp <source> <container_id>:<destination>
 ```

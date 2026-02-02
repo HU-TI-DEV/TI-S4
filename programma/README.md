@@ -199,7 +199,7 @@ TODO
 | --- |  --- |
 | ma  | ${\color{red}\mathrm{Pinksterdag}}$   |
 | di  | Deepdive (**BB ,HK**) |
-| wo  |  project TODO (**BB**, **HK**) |
+| wo  | Einde sprint 6. demo aan PO (**BB**, **HK**) |
 | do  | project TODO (**BB**, **HK**)|
 
 ### Onderwijsweek D8 (01-06-2026)

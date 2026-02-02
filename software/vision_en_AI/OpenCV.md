@@ -55,7 +55,7 @@ docker cp example1.png af7ac3bb3d5d:/workspace/gz_transport_tutorial/
 
 Go to the folder<sup>2</sup>
 ```
-cd ~/gz_transport_tutorial
+cd gz_transport_tutorial
 ```
 
 Use your favorite editor to make an `example1.py` and paste the following:

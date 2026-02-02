@@ -49,7 +49,7 @@ If you have already mounted a hd in your container (or made a coupling in vs cod
 
 In my case I have put example1.png in the same folder as my gz_transport example<sup>1</sup>:  
 ```
-docker cp example1.png f1d965431e05:/root/gz_transport_tutorial/
+docker cp example1.png af7ac3bb3d5d:/workspace/gz_transport_tutorial/
 ```
 
 

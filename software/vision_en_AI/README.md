@@ -12,6 +12,10 @@ Bestudeer & speel met de volgende site:
 De ppt van de les:
 -  [introduction_vision_part_I](./files/Introduction_vision_part_I.pptx)
 
+Ter referentie:
+- [deel 1 van de les](https://www.youtube.com/watch?v=4Z3iT55JkRc)
+- [deel 2 van de les](https://www.youtube.com/watch?v=Rgf-XLHMCTA)
+
 Voor de opdrachten uit van :
 -  [OpenCV](./OpenCV.md)
 

@@ -89,7 +89,7 @@ TODO
 | ma  | (**BB**)<br>[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br>|
 | di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf) (**HK**)|
 | wo  | [Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)  |
-| do  | Teamindeling op basis van sollicitatie (**Onderwijsmanager TI , LB, HK, BB**) Teamindeling |
+| do  | Teamindeling op basis van sollicitatie (**LB, HK, BB**) Teamindeling |
 
 ### Onderwijsweek C5 (02-03-2026)
 | Dag | Project & Kennissessie |

@@ -70,7 +70,7 @@ TODO
 | ma  |Introductie Semester en Project (**HK, BB**) <br>[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
 | di  | [NSE](https://github.com/HU-TI-DEV/TI-S2/blob/main/programma/lesprogramma/programma-NSE.md)<br>  [Sollicitatietraining door Capgemini, solliciteren naar projecten](../vermogens/solliciteren/README.md) (**LB**)|
 | wo  | Bezoek opdrachtgevers!!!!, mogelijkheid tot stellen vragen aan klant (**HK, BB, LB**) <br> |
-| do  |[Introductie Gazebo](../hardware_simulatie/gazebo/README.md)  (**BB**) |
+| do  |Bewustwording kwaliteiten [DISC profiel](../vermogens/README.md) <br>[Introductie Gazebo](../hardware_simulatie/gazebo/README.md)  (**BB**) |
 
 ### Onderwijsweek C3 (16-02-2026)
 
@@ -86,7 +86,7 @@ TODO
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |Bewustwording kwaliteiten [DISC profiel](../vermogens/README.md) (**BB**)<br>[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br>|
+| ma  | (**BB**)<br>[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br>|
 | di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf) (**HK**)|
 | wo  | [Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)  |
 | do  | Teamindeling op basis van sollicitatie (**Onderwijsmanager TI , LB, HK**) Teamindeling |

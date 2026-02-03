@@ -68,7 +68,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |Introductie Semester en Project (**HK, BB**) <br>[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
-| di  |  [Sollicitatietraining door Capgemini, solliciteren naar projecten](../vermogens/solliciteren/README.md) (**LB**)|
+| di  | [NSE](https://github.com/HU-TI-DEV/TI-S2/blob/main/programma/lesprogramma/programma-NSE.md)<br>  [Sollicitatietraining door Capgemini, solliciteren naar projecten](../vermogens/solliciteren/README.md) (**LB**)|
 | wo  | Bezoek opdrachtgevers!!!!, mogelijkheid tot stellen vragen aan klant (**HK, BB, LB**) <br> |
 | do  |[Introductie Gazebo](../hardware_simulatie/gazebo/README.md)  (**BB**) |
 

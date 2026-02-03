@@ -144,7 +144,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Feedbacksessie onderzoek  (**BB**) |
-| di  | Semicoductor manufacturing (**BB**) |
+| di  | Semiconductor manufacturing (**BB**) |
 | wo  | Teamcoach sessie per team (**BB**, **HK**)|
 | do  | **2e Peilmoment**,  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)|
 

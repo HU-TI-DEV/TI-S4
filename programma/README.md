@@ -97,7 +97,7 @@ TODO
 | ma  | Opzetten team inrichting (github,etc.) (**TM,BB,HK**)  |
 | di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**)  |
 | wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) (**BB,HK**)|
-| do  | Review individual deliverables  (**HK, BB**)|
+| do  | Voorbereiding loopbaankeuzes (**LB**)  <br> Review individual deliverables  (**HK, BB**) |
 
 ### Onderwijsweek C6 (09-03-2026)
 | Dag | Project & Kennissessie |
@@ -111,7 +111,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
-| di  |Git branches & (non) functional requirements (**TM**) Voorbereiding loopbaankeuzes (**LB**) |
+| di  |Git branches & (non) functional requirements (**TM**)|
 | wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
 | do  | Review individual deliverables (**BB, HK**)<br>**[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)**   |
 

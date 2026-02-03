@@ -119,7 +119,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
-| di  | [Algoritmen & Datastructuren I (C++ / Python)](../software/algoritmen_en_datastructuren/README.md)(**BB**)  |
+| di  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**)  |
 | wo  |Einde sprint 2. Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**HK,BB**) |
 | do  | Structural Design Patterns (**HK**) |
 

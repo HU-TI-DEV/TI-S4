@@ -23,8 +23,9 @@ The code will print out your personal assignment.
 
 steps:
 1) deduce the correct filename and name of the sensor. Use this link https://robotics.stackexchange.com/questions/103881/gazebo-plugin-location-and-documentation/103884#103884 to help you find the correct naming convention. Please note if you open a repository (as mentioned in the post) make sure you select the lastest (default) commit! <!-- markdown-link-check-disable-line -->
-2) insert the code for the sensor in a new sdf. The code will (like mentioned in the md file "connect with c++") consist of two parts. In the first part you insert the correct plugin. In the second part you change the name of the topic and type of the sensor.
-3) you can also change the shape of the robot and the color (for the color see: https://classic.gazebosim.org/tutorials?tut=color_model) 
+Please note: **Luuk Heijmeriks** also found a very useful site for this: [Gazebo Sim (Harmonic) Plugins and Sensors for ROS2](https://medium.com/@alitekes1/gazebo-sim-plugin-and-sensors-for-acquire-data-from-simulation-environment-681d8e2ad853)
+3) insert the code for the sensor in a new sdf. The code will (like mentioned in the md file "connect with c++") consist of two parts. In the first part you insert the correct plugin. In the second part you change the name of the topic and type of the sensor.
+4) you can also change the shape of the robot and the color (for the color see: https://classic.gazebosim.org/tutorials?tut=color_model) 
 3) run the gz sim with your sdf (don't forget to set the GZ_PARTITION variable and to start the robot)
 4) check which topics are published by gz sim (gz topic -l) in a new instance of the container (again the GZ_PARTITION).
 5) is your topic not in the list? Go back to step 1...
@@ -46,6 +47,7 @@ Canvas name: Gazebo opdracht 1 - Knowing your robot and sensors
 ### END OF THIS MD...
 For the next step:  
 [5_Using_thrusters_and_camera](./5_Using_thrusters_and_camera.md)
+
 
 
 

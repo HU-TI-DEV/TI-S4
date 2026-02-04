@@ -53,7 +53,7 @@ De docenten zijn:
 
 De SLB'ers zijn:
 - (**LB**) Len Bunte
-- (**AD**) Adrie van Doesburg
+- (**MW**) Mirella Wijnen
 
 ## Programma
 

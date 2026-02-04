@@ -87,7 +87,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | (**BB**)<br>[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br>|
-| di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf) (**HK**)|
+| di  | Recap C++ Deel I  (**HK**)|
 | wo  | [Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)  |
 | do  | Teamindeling op basis van sollicitatie (**LB, HK, BB**) Teamcontract |
 
@@ -95,7 +95,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Opzetten team inrichting (github,etc.) (**TM,BB,HK**)  |
-| di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**)  |
+| di  |Recap C++ Deel I (**HK**)  |
 | wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) (**BB,HK**)|
 | do  | Voorbereiding loopbaankeuzes (**LB**)  <br> Review individual deliverables  (**HK, BB**) |
 
@@ -103,7 +103,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**) |
-| di  | Ptrs, Ref, UB (**HK**) |
+| di  |  [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
 | wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,BB**)  |
 | do  | MINORMARKT HU  |
 
@@ -121,7 +121,7 @@ TODO
 | ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
 | di  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**)  |
 | wo  |Einde sprint 2. Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**HK,BB**) |
-| do  | Structural Design Patterns (**HK**) |
+| do  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**) |
 
 ### Onderwijsweek C9 (30-03-2026)
 | Dag | Project & Kennissessie |
@@ -136,7 +136,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | ${\color{red}\mathrm{Pasen}}$ |
-| di  | TD Creational/Behavioural design patterns ( **HK**)|
+| di  | Ptrs, Ref, UB ( **HK**)|
 | wo  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**HK,BB**) |
 | do  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**) |
 
@@ -144,7 +144,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Feedbacksessie onderzoek  (**BB**) |
-| di  | Semiconductor manufacturing (**BB**) |
+| di  | Structural Design Patterns (**HK**) |
 | wo  | Teamcoach sessie per team (**BB**, **HK**)|
 | do  | **2e Peilmoment**,  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)|
 
@@ -152,7 +152,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Quantum computing (**BB**)     |
-| di  | Review deliverables (**HK**)|
+| di  | TD Creational/Behavioural design patterns (**HK**)|
 | wo  | Einde sprint 4. Product demo aan de PO  (**HK,BB**)|
 | do  | Review all deliverables (**BB**, **HK**)  |
 
@@ -175,7 +175,7 @@ TODO
 | ma  | Deepdive  (**BB, HK**)|
 | di  | ${\color{red}\mathrm{Bevrijdingsdag}}$ |
 | wo  |  Teamcoach sessie met team (**BB**, **HK**)|
-| do  |  Deepdive  (**BB, HK**)|
+| do  |  Semiconductor manufacturing (**BB**)|
 
 ### Onderwijsweek D5 (11-05-2026)
 | Dag | Project & Kennissessie |
@@ -189,7 +189,7 @@ TODO
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Zelfstandig werken  (**HK**)  |
+| ma  | Deepdive  (**BB, HK**)  |
 | di  | Zelfstandig werken aan project (**HK**)   |
 | wo  | Teamcoach sessie (**BB**, **HK**)                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **HK**) |
@@ -205,18 +205,18 @@ TODO
 ### Onderwijsweek D8 (01-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (2) (**BB**)    |
+| ma  | Deepdive (**BB**)    |
 | di  | Zelfstandig werken aan project (**TM & AvD**) <br> Vanaf 15:00 stagevoortgang bespreken  |
-| wo  |  project TODO (**BB**, **HK**) |
-| do  |  project TODO (**BB**, **HK**) |
+| wo  |  Teamcoach sessie (**BB**, **HK**)  |
+| do  |  Review deliverables (**BB**, **HK**) |
 
 ### Onderwijsweek D9 (08-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | TODO   |
-| di  | TODO   |
-| wo  |  project TODO (**BB**, **HK**) |
-| do  |  project TODO (**BB**, **HK**) |
+| ma  | Deepdive  (**BB, HK**) |
+| di  | Deepdive  (**BB, HK**)|
+| wo  | Product overdracht web site per team (20 min) enkel aan PO |
+| do  |  Review deliverables (**BB**, **HK**)  |
 
 
 ### Onderwijsweek D10 (15-06-2026)
@@ -224,7 +224,7 @@ TODO
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Deepdive verbetering (**BB**) |
-| di  | Zelfstandig werken aan project (**TM & AvD**)|
+| di  | Deepdive verbetering (**BB**)|
 | wo  | Demo dag 12.00 uur – 15.00 uur (**HK & BB**)  |
 | do  | **4e Peilmoment** :end: |
 

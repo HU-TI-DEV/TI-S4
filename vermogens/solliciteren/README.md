@@ -28,7 +28,7 @@ Er wordt vaak "een goed begin is het halve werk" gezegd en ook bij de sollicitat
 
 ### CV
 
-Je curriculum vitae (CV) is je visitkaartje. Dit is het eerste waar een werkgever naar kijkt, maar wel gemiddeld maar zo'n [7 tot 9 seconden.](https://www.tealhq.com/post/how-long-recruiters-spend-reviewing-resume) Om deze reden is het belangrijk dat je je CV zo relevant mogelijk probeert te maken voor een zo sterk mogelijke eerste indruk. Let wel; een voller CV geeft niet altijd een beter beeld. Op [werk.nl](https://www.werk.nl/werkzoekenden/solliciteren/tips/cv/index.aspx) van de overheid kun je een hoop tips vinden voor het maken van een CV, waaronder welke onderdelen er minimaal verwacht worden op een CV:
+Je curriculum vitae (CV) is je visitkaartje. Dit is het eerste waar een werkgever naar kijkt, maar wel gemiddeld maar zo'n [7 tot 9 seconden.](https://www.tealhq.com/post/how-long-employers-look-at-resume) Om deze reden is het belangrijk dat je je CV zo relevant mogelijk probeert te maken voor een zo sterk mogelijke eerste indruk. Let wel; een voller CV geeft niet altijd een beter beeld. Op [werk.nl](https://www.werk.nl/werkzoekenden/solliciteren/tips/cv/index.aspx) van de overheid kun je een hoop tips vinden voor het maken van een CV, waaronder welke onderdelen er minimaal verwacht worden op een CV:
 
 1. Persoonlijke gegevens;<br>
     Naam, adres, contactgegevens, eventueel een pasfoto. Let er op dat je een semi-professioneel ogend persoonlijk e-mail adres gebruikt. Je kunt eventueel ook je HU e-mail gebruiken, maar deze verlies je na het afronden van je opleiding. Het is in ieder geval tijd om xX__D4RKN355<span>__Xx@hotmai<span>l.c<span>om met pensioen te sturen. 
@@ -87,3 +87,4 @@ Het gaat in het nieuws relatief vaak over problemen rondom solliciteren; of het 
 
 De hierboven gelinkte websites geven je een paar handvatten, maar de HU hanteert zelf ook een zero-tolerance policy voor elke vorm van seksuele en verbale intimidatie en discriminatie. Deze policy geldt niet alleen binnen de school, maar ook op stageplaatsen. Stagediscriminatie of een vorm van intimidatie tijdens de stage is dus ook verantwoordelijkheid van de Hogeschool Utrecht. Kom je, onverhoopt, in een situatie waar dit aan de orde is? Schroom dan zeker niet om [aan te kloppen bij een van de onafhankelijke vertrouwenspersonen](https://wegwijs.hu.nl/ondersteuning/begeleiders/vertrouwenspersoon/vertrouwenspersoon). Je kunt ook altijd aankloppen bij de stage/afstudeercoördinator, je docentbegeleider of je SLB-er. 
 <!-- markdown-link-check-enable-line -->
+

@@ -113,7 +113,7 @@ TODO
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
 | di  |Git branches & (non) functional requirements (**TM**)|
 | wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
-| do  | Review individual deliverables (**BB, HK**)<br>**[1e Peilmoment](../Verantwoordingsdocument_TI_S4.md)**   |
+| do  | Review individual deliverables (**BB, HK**)<br>**1e Peilmoment**   |
 
 ### Onderwijsweek C8 (23-03-2026)
 | Dag | Project & Kennissessie |

@@ -57,17 +57,11 @@ De SLB'ers zijn:
 
 ## Programma
 
-TODO
-<br> [HBO-i Job Event](https://hboictjobevent.nl/)
-| vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
-**Vanaf 15:00 stage/INNO voorlichting** (Inge en Berend) ) 
-
-
 ### Onderwijsweek C2 (09-02-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |Introductie Semester en Project (**HK, BB**) <br>[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
+| ma  |[Introductie Semester en Project](../organisatorisch/Aftrap_S4.pptx) (**HK, BB**) <br>[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
 | di  | [NSE](https://github.com/HU-TI-DEV/TI-S2/blob/main/programma/lesprogramma/programma-NSE.md)<br>  [Sollicitatietraining door Capgemini, solliciteren naar projecten](../vermogens/solliciteren/README.md) (**LB**)|
 | wo  | Bezoek opdrachtgevers!!!!, mogelijkheid tot stellen vragen aan klant (**HK, BB, LB**) <br> |
 | do  |Bewustwording kwaliteiten [DISC profiel](../vermogens/README.md) <br>[Introductie Gazebo](../hardware_simulatie/gazebo/README.md)  (**BB**) |
@@ -242,3 +236,10 @@ Week E1 en E2 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of
 Verbeterweek 2
 
 Week E1 en E2 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of om binnen het semester verder de excelleren. Als niet alle leeruitkomsten Op Niveau of Boven Niveau zijn dan kan in samenspraak met de docent een (realistisch) plan worden gemaakt en voer je deze werkzaamheden in deze periode uit. Verder excelleren kan bijvoorbeeld door een leeruitkomst met verbeteringen van Op Niveau naar Boven Niveau te brengen.
+
+
+
+TODO
+<br> [HBO-i Job Event](https://hboictjobevent.nl/)
+| vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
+**Vanaf 15:00 stage/INNO voorlichting** (Inge en Berend) ) 

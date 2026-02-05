@@ -151,7 +151,7 @@ TODO
 ### Onderwijsweek D2 (20-04-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Quantum computing (**BB**)     |
+| ma  | Semiconductor manufacturing (**BB**)     |
 | di  | TD Creational/Behavioural design patterns (**HK**)|
 | wo  | Einde sprint 4. Product demo aan de PO  (**HK,BB**)|
 | do  | Review all deliverables (**BB**, **HK**)  |
@@ -175,7 +175,7 @@ TODO
 | ma  | Deepdive  (**BB, HK**)|
 | di  | ${\color{red}\mathrm{Bevrijdingsdag}}$ |
 | wo  |  Teamcoach sessie met team (**BB**, **HK**)|
-| do  |  Semiconductor manufacturing (**BB**)|
+| do  |  Quantum computing (**BB**)|
 
 ### Onderwijsweek D5 (11-05-2026)
 | Dag | Project & Kennissessie |

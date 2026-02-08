@@ -88,7 +88,7 @@ De SLB'ers zijn:
 ### Onderwijsweek C5 (02-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Opzetten team inrichting (github,etc.) (**TM,BB,HK**)  |
+| ma  | **Start sprint** <br>Opzetten team inrichting (github,etc.) (**TM,BB,HK**)  |
 | di  |Recap C++ Deel II (**HK**)  |
 | wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) (**BB,HK**)|
 | do  | Voorbereiding loopbaankeuzes (**LB**)  <br> Review individual deliverables  (**HK, BB**) |
@@ -99,7 +99,7 @@ De SLB'ers zijn:
 | ma  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**) |
 | di  |  [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
 | wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,BB**)  |
-| do  | MINORMARKT HU  |
+| do  | **Start sprint** <br>MINORMARKT HU  |
 
 ### Onderwijsweek C7 (16-03-2026)
 | Dag | Project & Kennissessie |
@@ -115,7 +115,7 @@ De SLB'ers zijn:
 | ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
 | di  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**)  |
 | wo  |Einde sprint 2. Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**HK,BB**) |
-| do  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**) |
+| do  |**Start sprint** <br> [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**) |
 
 ### Onderwijsweek C9 (30-03-2026)
 | Dag | Project & Kennissessie |
@@ -132,7 +132,7 @@ De SLB'ers zijn:
 | ma  | ${\color{red}\mathrm{Pasen}}$ |
 | di  | Ptrs, Ref, UB ( **HK**)|
 | wo  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**HK,BB**) |
-| do  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**) |
+| do  |**Start sprint** <br> [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**) |
 
 ### Onderwijsweek D1 (13-04-2026)
 | Dag | Project & Kennissessie |
@@ -148,7 +148,7 @@ De SLB'ers zijn:
 | ma  | Semiconductor manufacturing (**BB**)     |
 | di  | TD Creational/Behavioural design patterns (**HK**)|
 | wo  | Einde sprint 4. Product demo aan de PO  (**HK,BB**)|
-| do  | Review all deliverables (**BB**, **HK**)  |
+| do  | **Start sprint** <br>Review all deliverables (**BB**, **HK**)  |
 
 
 
@@ -183,7 +183,7 @@ De SLB'ers zijn:
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive  (**BB, HK**)  |
+| ma  | **Start sprint** <br>Deepdive  (**BB, HK**)  |
 | di  | Zelfstandig werken aan project (**HK**)   |
 | wo  | Teamcoach sessie (**BB**, **HK**)                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **HK**) |
@@ -194,7 +194,7 @@ De SLB'ers zijn:
 | ma  | ${\color{red}\mathrm{Pinksterdag}}$   |
 | di  | Deepdive (**BB ,HK**) |
 | wo  | Einde sprint 6. demo aan PO (**BB**, **HK**) |
-| do  | project TODO (**BB**, **HK**)|
+| do  | **Start sprint** <br>project TODO (**BB**, **HK**)|
 
 ### Onderwijsweek D8 (01-06-2026)
 | Dag | Project & Kennissessie |

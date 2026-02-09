@@ -80,7 +80,7 @@ De SLB'ers zijn:
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | (**BB**)<br>[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br>|
+| ma  | (**BB**)<br>[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br> Kwaliteitenspel|
 | di  | [Recap C++ Deel I](../software/cpp/recap_cpp_1.md)  (**HK**)|
 | wo  | [Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)  |
 | do  | Teamindeling op basis van sollicitatie (**LB, HK, BB**) Teamcontract |

@@ -209,7 +209,7 @@ Student realiseert vanuit het ontwerp een 'Digital Twin' van een bestaand embedd
 ---
 ### Leeruitkomst 9 : Beheren
 
-Student zet een professionele ontwikkelomgeving op voor desktop development. Daarbij houdt hij rekening met de samenwerking tussen verschillende programmeertalen. De desktop debugging wordt op een gestructureerde manier uitgevoerd. De tests worden uitgevoerd volgens een vooraf beschreven testplan en moeten desgewenst op een later moment reproduceerbaar zijn. De student werkt volgens een voorgeschreven methodiek en maakt gebruik van geschikte tooling software debugging. 
+Student zet een professionele ontwikkelomgeving op voor desktop development. Daarbij wordt er rekening gehouden met de samenwerking tussen verschillende programmeertalen. De desktop debugging wordt op een gestructureerde manier uitgevoerd. De tests worden uitgevoerd volgens een vooraf beschreven testplan en moeten desgewenst op een later moment reproduceerbaar zijn. De student werkt volgens een voorgeschreven methodiek en maakt gebruik van geschikte tooling software debugging. 
 
 #### Indicatoren
 

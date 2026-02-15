@@ -44,7 +44,7 @@ Bekijk de video's:
 - [PID - stap 2](https://www.youtube.com/watch?v=7C77m7qwhs4)
 - [PID - stap 3](https://www.youtube.com/watch?v=8hbh8vUTaEk)
 
-Run de volgende code:
+Run de volgende code in je favoriete python editor, niet in je container:
 ```python
 import matplotlib.pyplot as plt
 import math

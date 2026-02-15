@@ -207,9 +207,11 @@ for i in range(300):
 ## Assignment 1
 1) Make different versions of the code so that the network is bigger (more conv filters) and smaller (less conv filters).
 2) Investigate the performance by plotting the confusion matrix for your 3 different versions of the cnn.
-3) Investigate when overfitting happens for the 3 different versions of the cnn. Plot the learning curves for the 3 different versions (you will probably need to increase the number of epochs)
-4) Add a extra hidden layer and again plot learning curves and confusion matrices for the 3 networks with an extra hidden layer. 
-
+3) Make it so you can see the test accuracy of the 3 versions in 1 graph.
+4) Investigate when overfitting happens for the 3 different versions of the cnn. Plot the learning curves for the 3 different versions (you will probably need to increase the number of epochs)
+5) Add a extra hidden layer and again plot learning curves and confusion matrices for the 3 networks with an extra hidden layer. 
+6) Again make sure the results are visisble in 1 graph (where you combine the different outcomes).
+   
 ## Assignment 2
 For assignment 3 you will use AI assistance to make or change code. Before assignment 3 you will do a small investigation in the following different options:
 1) copilot
@@ -234,10 +236,15 @@ Make a table with the results (a/b/c/d) and add as an extra column any informati
 Use AI assisted programming to make or change code to apply a cnn model to the mnist fashion data base. 
 Show the learning curve and the confusion matrix. 
 
-## Assignment 4
+For the fourth assignment you can make a choice:
+## Assignment 4a
 Make a class which can implement a NN. The NN should be able to execute forward propagation. 
 For each layer the amount of neurons and the activition function should be setable.
 How each layer is connected to the next layer should be setable.
 
 The code should you be made by yourself without using AI/Vibe coding. 
+
+## Assignment 4b
+Experiment with edge AI. Use the edge impulse framework to make a working application on your embedded controller.
+Align your plans with the teacher. **This assignment is a lot more work than 4a!**
 

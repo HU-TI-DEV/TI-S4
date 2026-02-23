@@ -3,7 +3,7 @@
 ## Thrusters
 *Please note: the youtube link at the end of this chapter shows a demo of the following steps.*   
 In this section we will see how to use thrusters. Thrusters are a way to simulate for instance propellers.<br>
-The sdf can be found here: [thrusters.sdf](./files/thrusters.sdf)  
+The sdf can be found here: [thruster.sdf](./files/thruster.sdf)  
 Copy it to your container. Run it with:
 ```
 gz sim thruster.sdf &

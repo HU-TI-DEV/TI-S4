@@ -156,28 +156,36 @@ LU9 Beheren|
 De student brengt een gegeven praktijkvraagstuk in kaart en verzamelt vanuit een nieuwsgierige en kritische houding op gestructureerde en grondige wijze met behulp van een passende (hbo-ict) methode relevante informatie die nodig is om onderbouwde keuzes te maken voor de oplossing van een afgebakend praktijkvraagstuk, analyseert de verkregen informatie en trekt op basis daarvan conclusies met betrekking tot het vraagstuk, rekening houdend met maatschappelijke standaarden.
 
 #### Indicatoren
-
+- Bekwaamheid in het uitvoeren en vastleggen van een Deep Dive/ onderzoek.
+- Bekwaamheid en discipline in het journaliseren.
 ---
 ### Leeruitkomst 2 : Organiserend vermogen
 
 De student stelt zelfstandig een planning op voor de uitvoering van meerdere gegeven taken voor zichzelf in relatie tot een team, indien van toepassing met het oog op een toekomstgerichte inbedding van de oplossing voor een praktijkprobleem. De student houdt hierbij rekening met volgordelijkheid, de planning van teamgenoten, middelen, tijd, ethische kwesties, duurzaamheid en potentiële risico’s en past de planning indien nodig zelfstandig en onderbouwd aan naar aanleiding van zowel kleine als grote veranderingen binnen de context van de opdracht en verantwoordt deze wijzigingen naar de opdrachtgever en zo nodig naar andere betrokkenen. 
 
 #### Indicatoren
-
+- Bekwaamheid in het gebruik van het SCRUM-board.
+- Bekwaamheid in het plannen op basis van gemaakte tijdsinschattingen.
+- Notulen van vergaderingen met de opdrachtgever.
+- Aanscherpen van backlog met de opdrachtgever (refinement)
 ---
 ### Leeruitkomst 3 : Interactief vermogen
 
 De student werkt onder minimale begeleiding passend binnen de context samen in een team, pakt in het team proactief en doelgericht de eigen rol op en deelt eigen activiteiten mondeling en/of schriftelijk met betrokkenen. Daarbij  neemt de student initiatief voor gesprekken met betrokkenen en spreekt en schrijft begrijpelijk, correct en passend bij de context met de doelgroep.
 
 #### Indicatoren
-
+- Bekwaamheid in het helder verwoorden in geschreven documenten.
+- Bekwaamheid in het helder communiceren tijdens presentaties.
+- Mogelijkheden maximaal benutten om (mondelinge-) feedback op te halen bij de docenten.
+- Retro's met het team en persoonlijke peer reviews.
 ---
 ### Leeruitkomst 4 : Zelflerend Vermogen
 
 Student signaleert vroegtijdig persoonlijke kansen en/of problemen die zich op korte termijn zullen voordoen en speelt hier adequaat op in. Student reflecteert periodiek en systematisch op eigen handelen en eigen waarden en normen in relatie tot andermans handelen, waarden en normen en past dit gedrag zo nodig aan.
 
 # Indicatoren
-
+- POP/Star inlevering op canvas.
+- Reflectie bij peilmoment.
 ---
 ### Leeruitkomst 5 : Analyseren
 
@@ -198,7 +206,8 @@ Student ontwerpt gebaseerd op de requirements en volgens voorgeschreven methoden
 Student adviseert de opdrachtgever, na analyse van de vereisten en doelstellingen, over de inzet van een digital twin. Het advies is helder onderbouwd en gepresenteerd, zodat het begrijpelijk is voor alle stakeholders/betrokkenen. Het voorgestelde ontwerp is goed gedocumenteerd en het advies volgt een voorgeschreven methode, zodat de implementatie efficiënt kan worden voortgezet. 
 
 #### Indicatoren
- 
+- Scrum ceremonies met opdrachtgever.
+- Backlog owner gesprekken.
 ---
 ### Leeruitkomst 8 : Realiseren
 

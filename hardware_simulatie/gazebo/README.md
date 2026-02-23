@@ -46,6 +46,150 @@ Bekijk de video's:
 
 Run de volgende code in je favoriete python editor, niet in je container:
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+
+# ==========================================================
+# ----------------- SYSTEM PARAMETERS ----------------------
+# ==========================================================
+
+m = 5.0          # inertia
+d = 2.0          # damping
+u_max = 10.0     # actuator saturation (max steering power)
+
+dt = 0.02        # simulation timestep
+
+# ==========================================================
+# ------------------- INITIAL STATE ------------------------
+# ==========================================================
+
+h = 0.0          # level (0–10)
+v = 0.0          # velocity
+setpoint = 5.0   # desired level
+
+# ==========================================================
+# ------------------- CONTROLLER AREA ----------------------
+# ==========================================================
+
+Kp = 8.0         # proportional gain
+
+def p_controller(setpoint, h):
+    """
+    Simple P-controller.
+    Rreplace this
+    with your own PID controller.
+    """
+    error = setpoint - h
+    u = Kp * error 
+    preverror=error
+    return u
+
+
+# ==========================================================
+# ---------------------- SIMULATION ------------------------
+# ==========================================================
+
+fig, (ax_level, ax_plot) = plt.subplots(1, 2, figsize=(10, 6))
+
+# ----- Tank Visualization -----
+ax_level.set_xlim(0, 1)
+ax_level.set_ylim(0, 10)
+ax_level.set_title("Level System (Click to change setpoint)")
+ax_level.set_xticks([])
+
+water_rect = plt.Rectangle((0.2, 0), 0.6, h, color="blue")
+ax_level.add_patch(water_rect)
+
+sp_line = ax_level.axhline(setpoint, color='red', linestyle='--')
+
+# ----- Response Plot -----
+ax_plot.set_xlim(0, 10)
+ax_plot.set_ylim(0, 10)
+ax_plot.set_title("Level Response")
+ax_plot.set_xlabel("Time [s]")
+ax_plot.set_ylabel("Level")
+
+time_data = []
+level_data = []
+sp_data = []
+
+line_level, = ax_plot.plot([], [], label="Level")
+line_sp, = ax_plot.plot([], [], '--', label="Setpoint")
+ax_plot.legend()
+
+t = 0.0
+
+
+# ==========================================================
+# ------------------ MOUSE INTERACTION ---------------------
+# ==========================================================
+
+def onclick(event):
+    global setpoint
+    if event.inaxes == ax_level and event.ydata is not None:
+        # Limit setpoint between 0 and 10
+        setpoint = np.clip(event.ydata, 0, 10)
+
+fig.canvas.mpl_connect('button_press_event', onclick)
+
+
+# ==========================================================
+# ------------------- ANIMATION LOOP -----------------------
+# ==========================================================
+
+def update(frame):
+    global h, v, t
+
+    # ----- Controller -----
+    u = p_controller(setpoint, h)
+
+    # ----- Actuator saturation -----
+    u = np.clip(u, -u_max, u_max)
+
+    # ----- System dynamics (Euler integration) -----
+    a = (u - d*v) / m
+    v += a * dt
+    h += v * dt
+
+    # Limit level between 0 and 10
+    if h < 0:
+        h = 0
+        v = 0
+    elif h > 10:
+        h = 10
+        v = 0
+
+    t += dt
+
+    # ----- Update tank -----
+    water_rect.set_height(h)
+    sp_line.set_ydata([setpoint, setpoint])  # must be sequence!
+
+    # ----- Update plot data -----
+    time_data.append(t)
+    level_data.append(h)
+    sp_data.append(setpoint)
+
+    # Scroll plot after 10 seconds
+    if t > 10:
+        ax_plot.set_xlim(t - 10, t)
+
+    line_level.set_data(time_data, level_data)
+    line_sp.set_data(time_data, sp_data)
+
+    return water_rect, sp_line, line_level, line_sp
+
+
+ani = FuncAnimation(fig, update, interval=dt*1000)
+
+plt.tight_layout()
+plt.show()
+```
+mmmhhh... dit werkt best slecht toch????
+
+Run de volgende code in je favoriete python editor, niet in je container:
+```python
 import matplotlib.pyplot as plt
 import math
 import matplotlib.patches as patches

@@ -121,7 +121,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**)                  |
-| di  |   [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB**)|
+| di  |   [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**)|
 | wo  |  Team coach sessies met elk team (**BB, HK**)|
 | do  |  Review all deliverables. (**BB, HK**) |
 
@@ -132,7 +132,7 @@ De SLB'ers zijn:
 | ma  | ${\color{red}\mathrm{Pasen}}$ |
 | di  | Ptrs, Ref, UB ( **HK**)|
 | wo  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**HK,BB**) |
-| do  |**Start sprint** <br> [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB**) |
+| do  |**Start sprint** <br> [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB, NG**) |
 
 ### Onderwijsweek D1 (13-04-2026)
 | Dag | Project & Kennissessie |

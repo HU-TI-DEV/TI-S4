@@ -77,8 +77,8 @@ Kp = 8.0         # proportional gain
 def p_controller(setpoint, h):
     """
     Simple P-controller.
-    Rreplace this
-    with your own PID controller.
+    Replace this
+    with your own controller.
     """
     error = setpoint - h
     u = Kp * error 

@@ -88,7 +88,7 @@ De SLB'ers zijn:
 ### Onderwijsweek C5 (02-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | INFORMATIE STAGE door stagecoördinator **Start sprint** <br>Opzetten team inrichting (github,etc.) (**TM,BB,HK**)  |
+| ma  | INFORMATIE STAGE door stagecoördinator    **Start sprint** <br>Opzetten team inrichting (github,etc.) (**TM,BB,HK**)  |
 | di  |Recap C++ Deel II (**HK**)  |
 | wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) + POP (**BB,HK**)|
 | do  | Voorbereiding loopbaankeuzes (**LB**)  <br> Review individual deliverables  (**HK, BB**) |

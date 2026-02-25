@@ -25,29 +25,29 @@ Jullie hebben in de voorgaande semesters al met C++ gewerkt, je kan in je favori
 We beginnen de les met een Wooclap quiz, waarna we de antwoorden bespreken.
 
 ## Oefeningen ter voorbereiding
-1a.Schrijf een functie template `maxValue` die twee waarden vergelijkt en de grootste teruggeeft.
+### 1a.Schrijf een functie template `maxValue` die twee waarden vergelijkt en de grootste teruggeeft.
 Test de functie met: `int`, `double`, `std::string`
-1b. Breid `maxValue` uit met een template specialization voor `const char*`.
+### 1b. Breid `maxValue` uit met een template specialization voor `const char*`.
 
 Probleem: bij `const char*` wordt standaard het adres vergeleken in plaats van de inhoud.
 Zorg dat de specialisatie `strcmp` gebruikt.
-2. Maak een abstracte klasse Shape met:
+### 2. Maak een abstracte klasse Shape met:
 
-`virtual double area() const = 0;`
+- `virtual double area() const = 0;`
 
-`virtual ~Shape();`
+- `virtual ~Shape();`
 
 Maak twee afgeleide klassen: `Circle` en `Rectangle`
 
 Gebruik polymorfisme via een `Shape*` array.
 
-3. Oefening – Garage met verschillende voertuigen
+### 3. Oefening – Garage met verschillende voertuigen
 Modelleer een Garage waarin zich 0 of meer voertuigen kunnen bevinden.
 
-### Vereisten
-#### Abstracte klasse Vehicle
+#### Vereisten
+Abstracte klasse `Vehicle`
 
-- protected: std::string brand
+- `protected: std::string brand`
 
 - constructor met parameter
 
@@ -58,41 +58,32 @@ Modelleer een Garage waarin zich 0 of meer voertuigen kunnen bevinden.
 `virtual ~Vehicle();`
 
 #### Afgeleide klassen
-`Car`
-
-extra attribuut: `int horsepower`
+`Car`, met extra attribuut: `int horsepower`
 
 belasting = `horsepower * 0.5`
 
-`Truck`
-
-extra attribuut: `double maxLoad`
+`Truck`, met extra attribuut: `double maxLoad`
 
 belasting = `maxLoad * 2`
 
-`Garage`
+`Garage`, bevat een `std::vector<Vehicle*>` en de methodes:
 
-Bevat een `std::vector<Vehicle*>`
 
-Methods:
+- `void addVehicle(Vehicle* v);`
 
-`void addVehicle(Vehicle* v);`
+- `double totalTax() const;`
 
-`double totalTax() const;`
-
-`void printAll() const;`
+- `void printAll() const;`
 
 Destructor moet alle voertuigen correct verwijderen
 
 #### Test in main
 
-Maak een garage
+Maak een garage en voeg minstens:
 
-Voeg minstens:
+- 2 auto’s
 
-2 auto’s
-
-1 vrachtwagen
+- 1 vrachtwagen
 
 Print alle voertuigen
 

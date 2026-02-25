@@ -37,6 +37,10 @@ Zorg dat je Gazebo deel I af hebt.
 # Programma Gazebo deel III
 PID control is de standaard om dingen "te regelen". De cruise control van een auto werkt bijvoorbeeld met een PID controller. Maar ook in drones zitten (geneste) PID controllers.  
 
+Ter inspiratie: wat kun je met regeltechniek?
+- [https://www.youtube.com/watch?v=Rh7JuL3PRSY](https://www.youtube.com/watch?v=Rh7JuL3PRSY)
+-
+
 ## Voorbereiding
 Bekijk de video's:
 - [What is a PID controller?](https://www.youtube.com/shorts/AqWYZFeyAwY).  

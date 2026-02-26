@@ -120,8 +120,8 @@ De SLB'ers zijn:
 ### Onderwijsweek C9 (30-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**)                  |
-| di  |   [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**)|
+| ma  |   [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**) |
+| di  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**) |
 | wo  |  Team coach sessies met elk team (**BB, HK**)|
 | do  |  Review all deliverables. (**BB, HK**) |
 
@@ -132,12 +132,12 @@ De SLB'ers zijn:
 | ma  | ${\color{red}\mathrm{Pasen}}$ |
 | di  | Ptrs, Ref, UB ( **HK**)|
 | wo  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**HK,BB**) |
-| do  |**Start sprint** <br> [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB, NG**) |
+| do  |**Start sprint** <br> Feedbacksessie onderzoek  (**BB**)|
 
 ### Onderwijsweek D1 (13-04-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Feedbacksessie onderzoek  (**BB**) |
+| ma  |  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB, NG**) |
 | di  | Structural Design Patterns (**HK**) |
 | wo  | Teamcoach sessie per team (**BB**, **HK**)|
 | do  | **2e Peilmoment**,  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)|
@@ -145,10 +145,10 @@ De SLB'ers zijn:
 ### Onderwijsweek D2 (20-04-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Semiconductor manufacturing (**BB**)     |
+| ma  |  [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**BB, NG**)    |
 | di  | TD Creational/Behavioural design patterns (**HK**)|
 | wo  | Einde sprint 4. Product demo aan de PO  (**HK,BB**)|
-| do  | **Start sprint** <br>Review all deliverables (**BB**, **HK**)  |
+| do  | Semiconductor manufacturing (**BB**)   **Start sprint** <br>Review all deliverables (**BB**, **HK**)  |
 
 
 

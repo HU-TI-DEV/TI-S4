@@ -263,6 +263,7 @@ plt.show()
 ## Tijdens en na de les
 
 Het probleem... We willen het karretje gaan regelen....
+ppt: [I](./files/PID%20–%20de%20ideeën.pptx)[II](./files/PID%20–%20stap%202.pptx)[III](./files/PID%20–%20stap%203%20-%20programmeren.pptx)[IV](./files/PID%20stap%204.pptx)[V](./files/Control%20stap%205.pptx)
 
 ## Inleveren op Canvas
 

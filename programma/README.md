@@ -97,7 +97,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**) |
-| di  |  [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
+| di  |  [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**)
 | wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,BB**)  |
 | do  | **Start sprint** <br>MINORMARKT HU  |
 
@@ -115,7 +115,7 @@ De SLB'ers zijn:
 | ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
 | di  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**)  |
 | wo  |Einde sprint 2. Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**HK,BB**) |
-| do  |**Start sprint** <br> [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**) |
+| do  | | **Start sprint** <br> [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
 
 ### Onderwijsweek C9 (30-03-2026)
 | Dag | Project & Kennissessie |

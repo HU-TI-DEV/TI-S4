@@ -97,7 +97,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**) |
-| di  |  [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.pdf) (**HK**)
+| di  |  [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**HK**)
 | wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,BB**)  |
 | do  | **Start sprint** <br>MINORMARKT HU  |
 

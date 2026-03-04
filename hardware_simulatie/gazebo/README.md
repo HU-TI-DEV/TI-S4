@@ -39,7 +39,6 @@ PID control is de standaard om dingen "te regelen". De cruise control van een au
 
 Ter inspiratie: wat kun je met regeltechniek?
 - [https://www.youtube.com/watch?v=Rh7JuL3PRSY](https://www.youtube.com/watch?v=Rh7JuL3PRSY)
--
 
 ## Voorbereiding
 Bekijk de video's:

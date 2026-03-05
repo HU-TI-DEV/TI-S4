@@ -93,11 +93,13 @@ De SLB'ers zijn:
 | wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) + POP (**BB,HK**)|
 | do  | Voorbereiding loopbaankeuzes (**LB**)  <br> Review individual deliverables  (**HK, BB**) |
 
+
+<!--- [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**) -->
 ### Onderwijsweek C6 (09-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**) |
-| di  |  [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**HK**)
+| ma  | (non) functional requirements (**TM**) & Git branches (**NG**) |
+| di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**HK**)
 | wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,BB**)  |
 | do  | **Start sprint** <br>MINORMARKT HU  |
 
@@ -105,7 +107,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
-| di  |Git branches & (non) functional requirements (**TM**)|
+| di  | PLACEHOLDER|
 | wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
 | do  | Review individual deliverables (**BB, HK**)<br>**1e Peilmoment**   |
 

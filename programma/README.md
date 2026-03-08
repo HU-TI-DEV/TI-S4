@@ -98,7 +98,7 @@ De SLB'ers zijn:
 ### Onderwijsweek C6 (09-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | (non) functional requirements (**TM**) & Git branches (**NG**) |
+| ma  | (non) functional requirements (**TM**) & [Git branches](../infrastructuur/testing_en_tooling/Git_branches.md) (**NG**) |
 | di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**HK**)
 | wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,BB**)  |
 | do  | **Start sprint** <br>MINORMARKT HU  |

@@ -107,7 +107,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
-| di  | PLACEHOLDER|
+| di  | **Start sprint** <br> [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
 | wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
 | do  | Review individual deliverables (**BB, HK**)<br>**1e Peilmoment**   |
 
@@ -117,7 +117,7 @@ De SLB'ers zijn:
 | ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
 | di  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**)  |
 | wo  |Einde sprint 2. Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**HK,BB**) |
-| do  | **Start sprint** <br> [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
+| do  | Placeholder |
 
 ### Onderwijsweek C9 (30-03-2026)
 | Dag | Project & Kennissessie |

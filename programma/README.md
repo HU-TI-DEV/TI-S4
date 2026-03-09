@@ -100,7 +100,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | (non) functional requirements (**TM**) & [Git branches](../infrastructuur/testing_en_tooling/Git_branches.md) (**NG**) |
 | di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**HK**)
-| wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,BB**)  |
+| wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,HS**)  |
 | do  | **Start sprint** <br>MINORMARKT HU  |
 
 ### Onderwijsweek C7 (16-03-2026)

@@ -94,7 +94,7 @@ De SLB'ers zijn:
 | do  | Voorbereiding loopbaankeuzes (**LB**)  <br> Review individual deliverables  (**HK, BB**) |
 
 
-<!--- [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**) -->
+
 ### Onderwijsweek C6 (09-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
@@ -107,9 +107,12 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
-| di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
-| wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
+| di  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |
+| wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
 | do  | Review individual deliverables (**BB, HK**)<br>**1e Peilmoment**   |
+
+
+<!-- [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**) -->
 
 ### Onderwijsweek C8 (23-03-2026)
 | Dag | Project & Kennissessie |

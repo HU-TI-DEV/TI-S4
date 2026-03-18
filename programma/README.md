@@ -108,7 +108,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
 | di  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |
-| wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**HK**) |
+| wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**) |
 | do  | Review individual deliverables (**BB, HK**)<br>**1e Peilmoment**   |
 
 

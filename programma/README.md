@@ -135,7 +135,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | ${\color{red}\mathrm{Pasen}}$ |
-| di  | Ptrs, Ref, UB ( **HK**)|
+| di  | Smart Pointers & Design Patterns I (**HK**)
 | wo  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**HK,BB**) |
 | do  |**Start sprint** <br> Feedbacksessie onderzoek  (**BB**)|
 
@@ -143,7 +143,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB, NG**) |
-| di  | Structural Design Patterns (**HK**) |
+| di  |  Design Patterns II (**HK**) |
 | wo  | Teamcoach sessie per team (**BB**, **HK**)|
 | do  | **2e Peilmoment**,  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)|
 
@@ -151,7 +151,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**BB, NG**)    |
-| di  | TD Creational/Behavioural design patterns (**HK**)|
+| di  | C++: Some cool nice stuff  (**HK**)|
 | wo  | Einde sprint 4. Product demo aan de PO  (**HK,BB**)|
 | do  | Semiconductor manufacturing (**BB**)   **Start sprint** <br>Review all deliverables (**BB**, **HK**)  |
 

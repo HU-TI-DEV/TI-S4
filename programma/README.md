@@ -142,10 +142,10 @@ De SLB'ers zijn:
 ### Onderwijsweek D1 (13-04-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**BB, NG**) |
+| ma  |  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**) |
 | di  |  Design Patterns II (**HK**) |
 | wo  | Teamcoach sessie per team (**BB**, **HK**)|
-| do  | **2e Peilmoment**,  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)|
+| do  | **2e Peilmoment**,  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**)|
 
 ### Onderwijsweek D2 (20-04-2026)
 | Dag | Project & Kennissessie |

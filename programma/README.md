@@ -126,7 +126,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |   [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**) |
-| di  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) werksessie (**BB**) |
+| di  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
 | wo  |  Team coach sessies met elk team (**BB, HK**)|
 | do  |  Review all deliverables. (**BB, HK**) |
 

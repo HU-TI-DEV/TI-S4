@@ -137,7 +137,7 @@ De SLB'ers zijn:
 | ma  | ${\color{red}\mathrm{Pasen}}$ |
 | di  | Carriere dag op HL15 12:00 - 16:00|
 | wo  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**HK,BB**) |
-| do  |Smart Pointers & Design Patterns I (**HK**) Feedbacksessie onderzoek  (**BB**)  **Start sprint** <br> |
+| do  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**HK**) Feedbacksessie onderzoek  (**BB**)  **Start sprint** <br> |
 
 ### Onderwijsweek D1 (13-04-2026)
 | Dag | Project & Kennissessie |

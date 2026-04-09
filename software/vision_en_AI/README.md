@@ -63,3 +63,6 @@ Bekijk de volgende video's:
 
 ## Inleveren op Canvas
 - zie opdracht "K-Means clustering" op canvas.
+
+Voor extra uitleg: 
+[https://www.geeksforgeeks.org/machine-learning/k-means-clustering-introduction/](https://www.geeksforgeeks.org/machine-learning/k-means-clustering-introduction/)

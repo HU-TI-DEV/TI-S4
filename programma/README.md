@@ -143,7 +143,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**) |
-| di  |  Design Patterns II (**HK**) |
+| di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**HK**) |
 | wo  | Teamcoach sessie per team (**BB**, **HK**)|
 | do  | **2e Peilmoment**,  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**)|
 

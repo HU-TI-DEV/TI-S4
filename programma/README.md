@@ -198,7 +198,7 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | ${\color{red}\mathrm{Pinksterdag}}$   |
 | di  | Deepdive (**BB ,HK**) |
-| wo  | Einde sprint 6. demo aan PO (**BB**, **HK**) |
+| wo  | Einde sprint 6. demo aan PO (**BB**) |
 | do  | **Start sprint** <br>project TODO (**BB**, **HK**)|
 
 ### Onderwijsweek D8 (01-06-2026)
@@ -212,7 +212,7 @@ De SLB'ers zijn:
 ### Onderwijsweek D9 (08-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive  (**BB, HK**) |
+| ma  | Deepdive  (**BB, LB**) |
 | di  | Deepdive  (**BB, HK**)|
 | wo  | Product overdracht web site per team (20 min) enkel aan PO |
 | do  |  Review deliverables (**BB**, **HK**)  |

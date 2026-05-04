@@ -204,7 +204,7 @@ De SLB'ers zijn:
 ### Onderwijsweek D8 (01-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (**BB**)    |
+| ma  | Deepdive (**BB && HK**)    |
 | di  | Zelfstandig werken aan project (**TM & AvD**) <br> Vanaf 15:00 stagevoortgang bespreken  |
 | wo  |  Teamcoach sessie (**BB**, **HK**)  |
 | do  |  Review deliverables (**BB**, **HK**) |
@@ -222,8 +222,8 @@ De SLB'ers zijn:
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive verbetering (**BB**) |
-| di  | Deepdive verbetering (**BB**)|
+| ma  | Deepdive verbetering (**BB && HK**) |
+| di  | Deepdive verbetering (**BB && HK**)|
 | wo  | Demo dag 12.00 uur – 15.00 uur (**HK & BB**)  |
 | do  | **4e Peilmoment** :end: |
 

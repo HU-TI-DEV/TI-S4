@@ -171,7 +171,7 @@ De SLB'ers zijn:
 ### Onderwijsweek D4 (04-05-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive  (**BB, HK**)|
+| ma  | Deepdive  (**BB, HK**) & aftekenen opdrachten|
 | di  | ${\color{red}\mathrm{Bevrijdingsdag}}$ |
 | wo  |  Teamcoach sessie met team (**BB**, **HK**)|
 | do  |  Quantum computing (**BB**)|
@@ -179,8 +179,8 @@ De SLB'ers zijn:
 ### Onderwijsweek D5 (11-05-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (**BB,HK**)  | 
-| di  | Deepdive (**BB, HK**) |
+| ma  | Deepdive (**BB,HK**) & aftekenen opdrachten | 
+| di  | Deepdive (**BB, HK**)& aftekenen opdrachten |
 | wo  |  Einde sprint 5. Pitch (demo) 10 min aan hele klas  (**HK,BB**)|
 | do  | ${\color{red}\mathrm{Hemelvaart}}$|
 
@@ -189,7 +189,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Start sprint** <br>Deepdive  (**BB, HK**)  |
-| di  | Zelfstandig werken aan project (**HK**)   |
+| di  | Zelfstandig werken aan project (**HK**)  & aftekenen opdrachten |
 | wo  | Teamcoach sessie (**BB**, **HK**)                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **HK**) |
 
@@ -197,14 +197,14 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | ${\color{red}\mathrm{Pinksterdag}}$   |
-| di  | Deepdive (**BB ,HK**) |
+| di  | Deepdive (**BB ,HK**) & aftekenen opdrachten|
 | wo  | Einde sprint 6. demo aan PO (**BB**) |
 | do  | **Start sprint** <br>project TODO (**BB**, **HK**)|
 
 ### Onderwijsweek D8 (01-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (**BB && HK**)    |
+| ma  | Deepdive (**BB && HK**)  & aftekenen opdrachten  |
 | di  | Zelfstandig werken aan project (**TM & AvD**) <br> Vanaf 15:00 stagevoortgang bespreken  |
 | wo  |  Teamcoach sessie (**BB**, **HK**)  |
 | do  |  Review deliverables (**BB**, **HK**) |
@@ -212,8 +212,8 @@ De SLB'ers zijn:
 ### Onderwijsweek D9 (08-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive  (**BB, LB**) |
-| di  | Deepdive  (**BB, HK**)|
+| ma  | Deepdive  (**BB, LB**) & aftekenen opdrachten|
+| di  | Deepdive  (**BB, HK**)& aftekenen opdrachten|
 | wo  | Product overdracht web site per team (20 min) enkel aan PO |
 | do  |  Review deliverables (**BB**, **HK**)  |
 

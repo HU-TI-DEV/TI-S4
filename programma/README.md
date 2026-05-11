@@ -189,8 +189,8 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Start sprint** <br>Deepdive  (**BB, HK**)  |
-| di  | Zelfstandig werken aan project (**HK**)  & aftekenen opdrachten |
-| wo  | Teamcoach sessie (**BB**, **HK**)                                |
+| di  |  Teamcoach sessie (**BB**, **HK**)|
+| wo  | Zelfstandig werken aan project (**HK**)  & aftekenen opdrachten                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **HK**) |
 
 ### Onderwijsweek D7 (25-05-2026)

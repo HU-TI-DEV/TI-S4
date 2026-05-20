@@ -210,7 +210,7 @@ for i in range(300):
 3) Make it so you can see the test accuracy of the 3 versions in 1 graph.
 4) Investigate when overfitting happens for the 3 different versions of the cnn. Plot the learning curves for the 3 different versions (you will probably need to increase the number of epochs)
 5) Add a extra hidden layer and again plot learning curves and confusion matrices for the 3 networks with an extra hidden layer. 
-6) Again make sure the results are visisble in 1 graph (where you combine the different outcomes).
+6) Again make sure the results are visible in 1 graph (where you combine the different outcomes).
    
 ## Assignment 2
 For assignment 3 you will use AI assistance to make or change code. Before assignment 3 you will do a small investigation in the following different options:

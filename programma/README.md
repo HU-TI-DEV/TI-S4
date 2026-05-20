@@ -198,8 +198,8 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | ${\color{red}\mathrm{Pinksterdag}}$   |
 | di  | Deepdive (**BB ,HK**) & aftekenen opdrachten|
-| wo  | Einde sprint 6. demo aan PO (**BB**) |
-| do  | **Start sprint** <br>project TODO (**BB**, **HK**)|
+| wo  | Les over haLfgeleider fabricatie (optioneel voor degene die hem nog niet gehad hebben (**BB**) |
+| do  | **Start sprint** <br>Einde sprint 6. demo aan PO (**BB**, **HK**)|
 
 ### Onderwijsweek D8 (01-06-2026)
 | Dag | Project & Kennissessie |

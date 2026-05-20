@@ -96,7 +96,7 @@ De SLB'ers zijn:
 ### Onderwijsweek A5 (16-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |**Einde sprint 1**. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**TM**) <br> **Start sprint 2**  |
+| ma  |**Einde sprint 1**<br> Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**TM**) <br> **Start sprint 2**  |
 | di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**)  |
 | wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
 | do  | Review individual deliverables (**TBD**)<br>**1e Peilmoment**   |
@@ -112,7 +112,7 @@ De SLB'ers zijn:
 ### Onderwijsweek A7 (30-03-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |**Einde sprint 2**. Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**TM**)|
+| ma  |**Einde sprint 2**<br> Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**TM**)<br> **Start sprint 3**|
 | di  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
 | wo  | [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**)|
 | do  |  Review all deliverables. (**BB, TBD**) |
@@ -132,7 +132,7 @@ Herfstvakantie
 ### Onderwijsweek A10 (13-04-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**) |
+| ma  | **Einde sprint 3**<br> Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)<br> **Start sprint 4** |
 | di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**TBD**) |
 | wo  | Teamcoach sessie per team (**BB**, **TBD**)|
 | do  | **2e Peilmoment**,  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**)|
@@ -149,24 +149,24 @@ Herfstvakantie
 ### Onderwijsweek B2 (04-05-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive  (**BB, TBD**) & aftekenen opdrachten|
-| di  | ${\color{red}\mathrm{Bevrijdingsdag}}$ |
-| wo  |  Teamcoach sessie met team (**BB**, **TBD**)|
+| ma  | **Einde sprint 4**<br>Deepdive  (**BB, TBD**) & aftekenen opdrachten|
+| di  |  |
+| wo  | |
 | do  |  Quantum computing (**BB**)|
 
 ### Onderwijsweek B3 (11-05-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (**BB,TBD**) & aftekenen opdrachten | 
+| ma  |  Teamcoach sessie met team (**BB**, **TBD**) | 
 | di  | Deepdive (**BB, TBD**)& aftekenen opdrachten |
-| wo  |  Einde sprint 5. Pitch (demo) 10 min aan hele klas  (**TBD,BB**)|
-| do  | ${\color{red}\mathrm{Hemelvaart}}$|
+| wo  | Deepdive (**BB,TBD**) & aftekenen opdrachten |
+| do  | |
 
 ### Onderwijsweek B4 (18-05-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Start sprint** <br>Deepdive  (**BB, TBD**)  |
+| ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TBD,BB**)**Start sprint** <br>Deepdive  (**BB, TBD**)  |
 | di  |  Teamcoach sessie (**BB**, **TBD**)|
 | wo  | Zelfstandig werken aan project (**TBD**)  & aftekenen opdrachten                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **TBD**) |
@@ -174,7 +174,7 @@ Herfstvakantie
 ### Onderwijsweek B5 (25-05-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | ${\color{red}\mathrm{Pinksterdag}}$   |
+| ma  |    |
 | di  | Deepdive (**BB ,TBD**) & aftekenen opdrachten|
 | wo  | Einde sprint 6. demo aan PO (**BB**) |
 | do  | **Start sprint** <br>project TODO (**BB**, **TBD**)|
@@ -182,9 +182,9 @@ Herfstvakantie
 ### Onderwijsweek B6 (01-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive (**BB && TBD**)  & aftekenen opdrachten  |
+| ma  | **Einde sprint 6**<br>Deepdive (**BB && TBD**)  & aftekenen opdrachten  |
 | di  | Zelfstandig werken aan project (**TM & AvD**) <br> Vanaf 15:00 stagevoortgang bespreken  |
-| wo  |  Teamcoach sessie (**BB**, **TBD**)  |
+| wo  | Product overdracht web site per team (20 min)| 
 | do  |  Review deliverables (**BB**, **TBD**) |
 
 ### Onderwijsweek B7 (01-06-2026)
@@ -196,17 +196,9 @@ Kerstvakantie
 ### Onderwijsweek B9 (08-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive  (**BB, LB**) & aftekenen opdrachten|
-| di  | Deepdive  (**BB, TBD**)& aftekenen opdrachten|
-| wo  | Product overdracht web site per team (20 min) enkel aan PO |
-| do  |  Review deliverables (**BB**, **TBD**)  |
-
-
-| Dag | Project & Kennissessie |
-| --- |  --- |
-| ma  | Deepdive verbetering (**BB && TBD**) |
-| di  | Deepdive verbetering (**BB && TBD**)|
-| wo  | Demo dag 12.00 uur – 15.00 uur (**TBD & BB**)  |
+| ma  | Deepdive verbetering (**BB**) |
+| di  | Deepdive verbetering (**BB**)|
+| wo  | Demo dag 12.00 uur – 15.00 uur<br>(**TM & BB & JH & NG**)  |
 | do  | **4e Peilmoment** :end: |
 
 

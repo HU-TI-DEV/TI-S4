@@ -222,8 +222,8 @@ De SLB'ers zijn:
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive verbetering (**BB && HK**) |
-| di  | Deepdive verbetering (**BB && HK**)|
+| ma  | Deepdive verbetering (**BB & HK**) |
+| di  | Deepdive verbetering (**HK**)|
 | wo  | Demo dag 12.00 uur – 15.00 uur (**HK & BB**)  |
 | do  | **4e Peilmoment** :end: |
 

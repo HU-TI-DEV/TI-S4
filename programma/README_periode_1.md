@@ -105,8 +105,8 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | Gesprek met teamcoach **TM**|
 | di  |[Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)|
-| wo |  [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
-| do  | Aftekenen (**BB**) |
+| wo | Eigen review process per project groep opstellen. <br>- deels geautmatiseerde review pipelines op stellen. <br> - deels menselijke (pull requests).  (**JH**) |
+| do  |  [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
 
 ### Onderwijsweek A7 (12-10-2026)
 | Dag | Project & Kennissessie |
@@ -133,7 +133,7 @@ Herfstvakantie
 | --- |  --- |
 | ma  | **Einde sprint 3**<br> Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) <br> **Start sprint 4** |
 | di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**JH**) |
-| wo  | Aftekenen (**JH**) |
+| wo  | Debat vorm <br>Twee of meer code voorbeelden uitdelen. Studenten in groepjes indelen op aspecten (bv performance, overdraagbaarheid, etc) en laat ze argumenten geven pro of contra.  (**JH**) |
 | do  | **2e Peilmoment**<br>[ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**) |
 
 ### Onderwijsweek B1 (09-11-2026)
@@ -182,8 +182,8 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 6** (**TM**) Product overdracht web site per team (20 min)  |
-| di  | Zelfstandig werken aan project (**JH**) <br> Vanaf  |
-| wo  | Zelfstandig werken aan project (**JH**)| 
+| di  | Zelfstandig werken aan project (**NG**) <br> Vanaf  |
+| wo  | Zelfstandig werken aan project (**BB**)| 
 | do  |  Review deliverables (**NG**) |
 
 ### Onderwijsweek B7 (21-12-2026)

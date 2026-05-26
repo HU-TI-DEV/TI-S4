@@ -53,7 +53,6 @@ De docenten zijn:
 
 De SLB'ers zijn:
 - (**LB**) Len Bunte
-- (**MW**) Mirella Wijnen
 
 ## Programma
 
@@ -61,36 +60,36 @@ De SLB'ers zijn:
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | [Introductie Semester en Project](../organisatorisch/Aftrap_S4.pptx) (**TM,LB,JH,NG,BB**)<br>Bewustwording kwaliteiten [DISC profiel](../vermogens/README.md) <br>[Introductie Gazebo](../hardware_simulatie/gazebo/README.md)  (**BB**) <br> |
-| di  | [solliciteren naar projecten](../vermogens/solliciteren/README.md)  + POP (**LB**)|
-| wo  | Bezoek opdrachtgevers!!!!, mogelijkheid tot stellen vragen aan klant (**TM, BB**) <br>|
-| do  |[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
+| ma  | [Introductie Semester en Project](../organisatorisch/Aftrap_S4.pptx) (**TM,LB**)<br>Bewustwording kwaliteiten [DISC profiel](../vermogens/README.md) <br>[Introductie Gazebo](../hardware_simulatie/gazebo/README.md)  (**BB**) <br> |
+| di  |[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**)|
+| wo  | [solliciteren](../vermogens/solliciteren/README.md)  + POP (**LB**) |
+| do  | Bezoek opdrachtgevers!!!!, mogelijkheid tot stellen vragen aan klant (**TM, BB**) <br>|
 
 ### Onderwijsweek A2 (07-09-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Kwaliteitenspel & Teamcontract (**TM**)|
-| di  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) (**BB**)<br>[Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)
-| wo  | [Recap C++ Deel I](../software/cpp/recap_cpp_1.md)  (**TBD**)  |
-| do  | [Recap C++ Deel II](../software/cpp/recap_cpp_2.md)  (**TBD**)  |
+| di  | [Recap C++ Deel I](../software/cpp/recap_cpp_1.md)  (**JH**)  |
+| wo  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) <br>[Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)
+| do  | [Recap C++ Deel II](../software/cpp/recap_cpp_2.md)  (**NG**)  |
 
 ### Onderwijsweek A3 (14-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Teamindeling op basis van sollicitatie <br> **Start sprint 1** <br>Opzetten team inrichting (github,etc.) (**TM**)  |
 | di  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii)  (**BB**)|
-| wo  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**TBD**)|
-| do  | Voorbereiding loopbaankeuzes (**LB**)   |
+| wo  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**NG**)|
+| do  |  PID WORKSHOP (**BB**) |
 
 
 
 ### Onderwijsweek A4 (21-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | (non) functional requirements (**TM**)  |
+| ma  | (non) functional requirements (**TM**) Voorbereiding loopbaankeuzes (**LB**)   |
 | di  |[Git branches](../infrastructuur/testing_en_tooling/Git_branches.md) (**NG**)|
-| wo  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)  |
+| wo  | [Intro deepdive](../vermogens/onderzoek/README.md)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)  |
 | do  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |
 
 ### Onderwijsweek A5 (28-09-2026)
@@ -98,24 +97,24 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  |**Einde sprint 1**<br> Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**TM**) <br> **Start sprint 2**  |
 | di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**)  |
-| wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
-| do  | Review individual deliverables (**TBD**)<br>**1e Peilmoment**   |
+| wo  | Vision met C++ (**JH**) |
+| do  | Review individual deliverables (**NG**)<br>**1e Peilmoment**   |
 
 ### Onderwijsweek A6 (05-10-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Gesprek met teamcoach **TM**|
-| di  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
-| wo |[Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**) |
-| do  |   |
+| di  |[Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)|
+| wo |  [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
+| do  | Aftekenen (**BB**) |
 
 ### Onderwijsweek A7 (12-10-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |**Einde sprint 2**<br> Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**TM**)<br> **Start sprint 3**|
 | di  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
-| wo  | [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**)|
-| do  |  Review all deliverables. (**BB, TBD**) |
+| wo  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md) (**NG**) |
+| do  |  [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md) (**NG**) |
 
 ### Onderwijsweek A8 (19-10-2026)
 Herfstvakantie
@@ -124,50 +123,50 @@ Herfstvakantie
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |  Team coach sessies met elk team (**BB, TBD**) |
-| di  | Carriere dag op HL15 12:00 - 16:00|
-| wo  |  |
-| do  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**TBD**) Feedbacksessie onderzoek  (**BB**)  **Start sprint** <br> |
+| ma  |  Team coach sessies met elk team (**TM**) |
+| di  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**JH**)|
+| wo  | [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**) |
+| do  | Feedbacksessie onderzoek  (**BB**)   |
 
 ### Onderwijsweek A10 (02-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Einde sprint 3**<br> Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)<br> **Start sprint 4** |
-| di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**TBD**) |
-| wo  | Teamcoach sessie per team (**BB**, **TBD**)|
-| do  | **2e Peilmoment**,  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**)|
+| ma  | **Einde sprint 3**<br> Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) <br> **Start sprint 4** |
+| di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**JH**) |
+| wo  | Aftekenen (**JH**) |
+| do  | **2e Peilmoment**<br>[ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**) |
 
 ### Onderwijsweek B1 (09-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |  [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**BB, NG**)    |
-| di  | C++: Some cool nice stuff  (**TBD**)|
-| wo  | Einde sprint 4. Product demo aan de PO  (**TBD,BB**)|
-| do  | Semiconductor manufacturing (**BB**)   **Start sprint** <br>Review all deliverables (**BB**, **TBD**)  |
+| ma  |(**TM**)    |
+| di  | Microcontroller les (**JH**) |
+| wo  | [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**NG**) |
+| do  |  Quantum computing (**BB**)  |
 
 
 ### Onderwijsweek B2 (16-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Einde sprint 4**<br>Deepdive  (**BB, TBD**) & aftekenen opdrachten|
-| di  |  |
-| wo  | |
-| do  |  Quantum computing (**BB**)|
+| ma  | **Einde sprint 4** (**TM**)|
+| di  | Halfgeleider fabricage (**BB**) |
+| wo  | <br>Deepdive  (**JH**) |
+| do  | aftekenen opdrachten (**NG**)|
 
 ### Onderwijsweek B3 (23-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  Teamcoach sessie met team (**BB**, **TBD**) | 
-| di  | Deepdive (**BB, TBD**)& aftekenen opdrachten |
-| wo  | Deepdive (**BB,TBD**) & aftekenen opdrachten |
-| do  | |
+| di  |  Microcontroller les II (**JH**) |
+| wo  | Deepdive (**JH**) |
+| do  | aftekenen opdrachten (**BB**) |
 
 ### Onderwijsweek B4 (30-11-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TBD,BB**)**Start sprint** <br>Deepdive  (**BB, TBD**)  |
-| di  |  Teamcoach sessie (**BB**, **TBD**)|
+| ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TM**)**Start sprint**   |
+| di  | | di  |  Microcontroller les III (**JH**) |
 | wo  | Zelfstandig werken aan project (**TBD**)  & aftekenen opdrachten                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **TBD**) |
 
@@ -222,3 +221,9 @@ TODO
 <br> [HBO-i Job Event](https://hboictjobevent.nl/)
 | vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
 **Vanaf 15:00 stage/INNO voorlichting** (Inge en Berend) ) 
+
+TODO
+
+
+Validatie
+WORKSHOP PID

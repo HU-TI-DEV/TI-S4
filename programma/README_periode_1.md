@@ -71,16 +71,16 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | Kwaliteitenspel & Teamcontract (**TM**)|
 | di  | [Recap C++ Deel I](../software/cpp/recap_cpp_1.md)  (**JH**)  |
-| wo  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) <br>[Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)
+| wo  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) <br>[Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)|
 | do  | [Recap C++ Deel II](../software/cpp/recap_cpp_2.md)  (**NG**)  |
 
 ### Onderwijsweek A3 (14-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Teamindeling op basis van sollicitatie <br> **Start sprint 1** <br>Opzetten team inrichting (github,etc.) (**TM**)  |
+| ma  | Teamindeling op basis van sollicitatie <br> **Start sprint 1** <br>Opzetten team inrichting (github,etc.) (**TM**)|
 | di  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii)  (**BB**)|
 | wo  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**NG**)|
-| do  |  PID WORKSHOP (**BB**) |
+| do  |  PID WORKSHOP (**BB**)|
 
 
 
@@ -139,7 +139,7 @@ Herfstvakantie
 ### Onderwijsweek B1 (09-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |(**TM**)    |
+| ma  |Teamcoach sessie (**TM**)    |
 | di  | Microcontroller les (**JH**) |
 | wo  | [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**NG**) |
 | do  |  Quantum computing (**BB**)  |
@@ -156,35 +156,35 @@ Herfstvakantie
 ### Onderwijsweek B3 (23-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |  Teamcoach sessie met team (**BB**, **TBD**) | 
+| ma  |  Teamcoach sessie met team (**TM**) | 
 | di  |  Microcontroller les II (**JH**) |
 | wo  | Deepdive (**JH**) |
-| do  | aftekenen opdrachten (**BB**) |
+| do  | aftekenen opdrachten (**NG**) |
 
 ### Onderwijsweek B4 (30-11-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TM**)**Start sprint**   |
-| di  | | di  |  Microcontroller les III (**JH**) |
-| wo  | Zelfstandig werken aan project (**TBD**)  & aftekenen opdrachten                                |
-| do  |  **3e Peilmoment**, Deepdive (**BB**, **TBD**) |
+| di  |  Microcontroller les III (**JH**) |
+| wo  | Zelfstandig werken aan project (**JH**)  & aftekenen opdrachten                                |
+| do  |  **3e Peilmoment**, Aftekenen opdrachten (**NG**) |
 
 ### Onderwijsweek B5 (07-12-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |    |
-| di  | Deepdive (**BB ,TBD**) & aftekenen opdrachten|
-| wo  | Einde sprint 6. demo aan PO (**BB**) |
-| do  | **Start sprint** <br>project TODO (**BB**, **TBD**)|
+| ma  |   Teamcoach (**TM**) |
+| di  | Deepdive (**JH**) & aftekenen opdrachten|
+| wo  | Deepdive (**JH**) & aftekenen opdrachten |
+| do  | Aftekenen opdrachten (**NG**)|
 
 ### Onderwijsweek B6 (14-12-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Einde sprint 6**<br>Deepdive (**BB && TBD**)  & aftekenen opdrachten  |
-| di  | Zelfstandig werken aan project (**TM & AvD**) <br> Vanaf 15:00 stagevoortgang bespreken  |
-| wo  | Product overdracht web site per team (20 min)| 
-| do  |  Review deliverables (**BB**, **TBD**) |
+| ma  | **Einde sprint 6** (**TM**) Product overdracht web site per team (20 min)  |
+| di  | Zelfstandig werken aan project (**JH**) <br> Vanaf  |
+| wo  | Zelfstandig werken aan project (**JH**)| 
+| do  |  Review deliverables (**NG**) |
 
 ### Onderwijsweek B7 (21-12-2026)
 Kerstvakantie
@@ -195,8 +195,8 @@ Kerstvakantie
 ### Onderwijsweek B9 (04-01-2027)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive verbetering (**BB**) |
-| di  | Deepdive verbetering (**BB**)|
+| ma  | Deepdive verbetering (**JH**) |
+| di  | Deepdive verbetering (**JH**)|
 | wo  | Demo dag 12.00 uur – 15.00 uur<br>(**TM & BB & JH & NG**)  |
 | do  | **4e Peilmoment** :end: |
 

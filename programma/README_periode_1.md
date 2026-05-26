@@ -8,27 +8,27 @@
   - [Organisatie](#organisatie)
 - [Programma](#programma)
   - [Onderwijsweek A1 (31-08-2026)](#onderwijsweek-a1-31-08-2026)
-  - [Onderwijsweek A2 (23-02-2026)](#onderwijsweek-a2-23-02-2026)
-  - [Onderwijsweek A3 (02-03-2026)](#onderwijsweek-a3-02-03-2026)
-  - [Onderwijsweek A4 (09-03-2026)](#onderwijsweek-a4-09-03-2026)
-  - [Onderwijsweek A5 (16-03-2026)](#onderwijsweek-a5-16-03-2026)
-  - [Onderwijsweek A6 (23-03-2026)](#onderwijsweek-a6-23-03-2026)
-  - [Onderwijsweek A7 (30-03-2026)](#onderwijsweek-a7-30-03-2026)
-  - [Onderwijsweek A8 (06-04-2026)](#onderwijsweek-a8-06-04-2026)
-  - [Onderwijsweek A9 (06-04-2026)](#onderwijsweek-a9-06-04-2026)
-  - [Onderwijsweek A10 (13-04-2026)](#onderwijsweek-a10-13-04-2026)
-  - [Onderwijsweek B1 (20-04-2026)](#onderwijsweek-b1-20-04-2026)
-  - [Onderwijsweek B2 (04-05-2026)](#onderwijsweek-b2-04-05-2026)
-  - [Onderwijsweek B3 (11-05-2026)](#onderwijsweek-b3-11-05-2026)
-  - [Onderwijsweek B4 (18-05-2026)](#onderwijsweek-b4-18-05-2026)
-  - [Onderwijsweek B5 (25-05-2026)](#onderwijsweek-b5-25-05-2026)
-  - [Onderwijsweek B6 (01-06-2026)](#onderwijsweek-b6-01-06-2026)
-  - [Onderwijsweek B7 (01-06-2026)](#onderwijsweek-b7-01-06-2026)
-  - [Onderwijsweek B8 (01-06-2026)](#onderwijsweek-b8-01-06-2026)
-  - [Onderwijsweek B9 (08-06-2026)](#onderwijsweek-b9-08-06-2026)
-  - [Onderwijsweek B10 (22-06-2026)](#onderwijsweek-b10-22-06-2026)
-  - [Onderwijsweek B11/B12 (29-06-2026)](#onderwijsweek-b11b12-29-06-2026)
-  - [Onderwijsweek E2 (06-07-2026)](#onderwijsweek-e2-06-07-2026)
+  - [Onderwijsweek A2 (07-09-2026)](#onderwijsweek-a2-07-09-2026)
+  - [Onderwijsweek A3 (14-09-2026)](#onderwijsweek-a3-14-09-2026)
+  - [Onderwijsweek A4 (21-09-2026)](#onderwijsweek-a4-21-09-2026)
+  - [Onderwijsweek A5 (28-09-2026)](#onderwijsweek-a5-28-09-2026)
+  - [Onderwijsweek A6 (05-10-2026)](#onderwijsweek-a6-05-10-2026)
+  - [Onderwijsweek A7 (12-10-2026)](#onderwijsweek-a7-12-10-2026)
+  - [Onderwijsweek A8 (19-10-2026)](#onderwijsweek-a8-19-10-2026)
+  - [Onderwijsweek A9 (26-10-2026)](#onderwijsweek-a9-26-10-2026)
+  - [Onderwijsweek A10 (02-11-2026)](#onderwijsweek-a10-02-11-2026)
+  - [Onderwijsweek B1 (09-11-2026)](#onderwijsweek-b1-09-11-2026)
+  - [Onderwijsweek B2 (16-11-2026)](#onderwijsweek-b2-16-11-2026)
+  - [Onderwijsweek B3 (23-11-2026)](#onderwijsweek-b3-23-11-2026)
+  - [Onderwijsweek B4 (30-11-2026)](#onderwijsweek-b4-30-11-2026)
+  - [Onderwijsweek B5 (07-12-2026)](#onderwijsweek-b5-07-12-2026)
+  - [Onderwijsweek B6 (14-12-2026)](#onderwijsweek-b6-14-12-2026)
+  - [Onderwijsweek B7 (21-12-2026)](#onderwijsweek-b7-21-12-2026)
+  - [Onderwijsweek B8 (28-12-2026)](#onderwijsweek-b8-28-12-2026)
+  - [Onderwijsweek B9 (04-01-2027)](#onderwijsweek-b9-04-01-2027)
+  - [Onderwijsweek B10 (11-01-2027)](#onderwijsweek-b10-11-01-2027)
+  - [Onderwijsweek B11/B12 (18-01-2027)](#onderwijsweek-b11b12-18-01-2027)
+  - [Onderwijsweek E2 (25-01-2027)](#onderwijsweek-e2-25-01-2027)
 
 
 ## Een introductie
@@ -66,7 +66,7 @@ De SLB'ers zijn:
 | wo  | Bezoek opdrachtgevers!!!!, mogelijkheid tot stellen vragen aan klant (**TM, BB**) <br>|
 | do  |[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
 
-### Onderwijsweek A2 (23-02-2026)
+### Onderwijsweek A2 (07-09-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
@@ -75,7 +75,7 @@ De SLB'ers zijn:
 | wo  | [Recap C++ Deel I](../software/cpp/recap_cpp_1.md)  (**TBD**)  |
 | do  | [Recap C++ Deel II](../software/cpp/recap_cpp_2.md)  (**TBD**)  |
 
-### Onderwijsweek A3 (02-03-2026)
+### Onderwijsweek A3 (14-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Teamindeling op basis van sollicitatie <br> **Start sprint 1** <br>Opzetten team inrichting (github,etc.) (**TM**)  |
@@ -85,7 +85,7 @@ De SLB'ers zijn:
 
 
 
-### Onderwijsweek A4 (09-03-2026)
+### Onderwijsweek A4 (21-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | (non) functional requirements (**TM**)  |
@@ -93,7 +93,7 @@ De SLB'ers zijn:
 | wo  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)  |
 | do  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |
 
-### Onderwijsweek A5 (16-03-2026)
+### Onderwijsweek A5 (28-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |**Einde sprint 1**<br> Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**TM**) <br> **Start sprint 2**  |
@@ -101,7 +101,7 @@ De SLB'ers zijn:
 | wo  | [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)  |
 | do  | Review individual deliverables (**TBD**)<br>**1e Peilmoment**   |
 
-### Onderwijsweek A6 (23-03-2026)
+### Onderwijsweek A6 (05-10-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Gesprek met teamcoach **TM**|
@@ -109,7 +109,7 @@ De SLB'ers zijn:
 | wo |[Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**) |
 | do  |   |
 
-### Onderwijsweek A7 (30-03-2026)
+### Onderwijsweek A7 (12-10-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |**Einde sprint 2**<br> Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**TM**)<br> **Start sprint 3**|
@@ -117,10 +117,10 @@ De SLB'ers zijn:
 | wo  | [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**)|
 | do  |  Review all deliverables. (**BB, TBD**) |
 
-### Onderwijsweek A8 (06-04-2026)
+### Onderwijsweek A8 (19-10-2026)
 Herfstvakantie
 
-### Onderwijsweek A9 (06-04-2026)
+### Onderwijsweek A9 (26-10-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
@@ -129,7 +129,7 @@ Herfstvakantie
 | wo  |  |
 | do  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**TBD**) Feedbacksessie onderzoek  (**BB**)  **Start sprint** <br> |
 
-### Onderwijsweek A10 (13-04-2026)
+### Onderwijsweek A10 (02-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 3**<br> Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**)<br> **Start sprint 4** |
@@ -137,7 +137,7 @@ Herfstvakantie
 | wo  | Teamcoach sessie per team (**BB**, **TBD**)|
 | do  | **2e Peilmoment**,  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**)|
 
-### Onderwijsweek B1 (20-04-2026)
+### Onderwijsweek B1 (09-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**BB, NG**)    |
@@ -146,7 +146,7 @@ Herfstvakantie
 | do  | Semiconductor manufacturing (**BB**)   **Start sprint** <br>Review all deliverables (**BB**, **TBD**)  |
 
 
-### Onderwijsweek B2 (04-05-2026)
+### Onderwijsweek B2 (16-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 4**<br>Deepdive  (**BB, TBD**) & aftekenen opdrachten|
@@ -154,7 +154,7 @@ Herfstvakantie
 | wo  | |
 | do  |  Quantum computing (**BB**)|
 
-### Onderwijsweek B3 (11-05-2026)
+### Onderwijsweek B3 (23-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  Teamcoach sessie met team (**BB**, **TBD**) | 
@@ -162,7 +162,7 @@ Herfstvakantie
 | wo  | Deepdive (**BB,TBD**) & aftekenen opdrachten |
 | do  | |
 
-### Onderwijsweek B4 (18-05-2026)
+### Onderwijsweek B4 (30-11-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
@@ -171,7 +171,7 @@ Herfstvakantie
 | wo  | Zelfstandig werken aan project (**TBD**)  & aftekenen opdrachten                                |
 | do  |  **3e Peilmoment**, Deepdive (**BB**, **TBD**) |
 
-### Onderwijsweek B5 (25-05-2026)
+### Onderwijsweek B5 (07-12-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |    |
@@ -179,7 +179,7 @@ Herfstvakantie
 | wo  | Einde sprint 6. demo aan PO (**BB**) |
 | do  | **Start sprint** <br>project TODO (**BB**, **TBD**)|
 
-### Onderwijsweek B6 (01-06-2026)
+### Onderwijsweek B6 (14-12-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 6**<br>Deepdive (**BB && TBD**)  & aftekenen opdrachten  |
@@ -187,13 +187,13 @@ Herfstvakantie
 | wo  | Product overdracht web site per team (20 min)| 
 | do  |  Review deliverables (**BB**, **TBD**) |
 
-### Onderwijsweek B7 (01-06-2026)
+### Onderwijsweek B7 (21-12-2026)
 Kerstvakantie
 
-### Onderwijsweek B8 (01-06-2026)
+### Onderwijsweek B8 (28-12-2026)
 Kerstvakantie
 
-### Onderwijsweek B9 (08-06-2026)
+### Onderwijsweek B9 (04-01-2027)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Deepdive verbetering (**BB**) |
@@ -202,16 +202,16 @@ Kerstvakantie
 | do  | **4e Peilmoment** :end: |
 
 
-### Onderwijsweek B10 (22-06-2026)
+### Onderwijsweek B10 (11-01-2027)
 De docenten bekijken deze week al het ingeleverde werk. Aan het eind van de week ontvang je individuele feedback en een eindbeoordeling.
 
 
-### Onderwijsweek B11/B12 (29-06-2026)
+### Onderwijsweek B11/B12 (18-01-2027)
 Verbeterweek 1
 
 Week E1 en E2 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of om binnen het semester verder de excelleren. Als niet alle leeruitkomsten Op Niveau of Boven Niveau zijn dan kan in samenspraak met de docent een (realistisch) plan worden gemaakt en voer je deze werkzaamheden in deze periode uit. Verder excelleren kan bijvoorbeeld door een leeruitkomst met verbeteringen van Op Niveau naar Boven Niveau te brengen.
 
-### Onderwijsweek E2 (06-07-2026)
+### Onderwijsweek E2 (25-01-2027)
 Verbeterweek 2
 
 Week E1 en E2 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of om binnen het semester verder de excelleren. Als niet alle leeruitkomsten Op Niveau of Boven Niveau zijn dan kan in samenspraak met de docent een (realistisch) plan worden gemaakt en voer je deze werkzaamheden in deze periode uit. Verder excelleren kan bijvoorbeeld door een leeruitkomst met verbeteringen van Op Niveau naar Boven Niveau te brengen.

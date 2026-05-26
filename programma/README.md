@@ -205,7 +205,7 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Deepdive (**BB && HK**)  & aftekenen opdrachten  |
-| di  | Zelfstandig werken aan project (**TM & AvD**) <br> Vanaf 15:00 stagevoortgang bespreken  |
+| di  | Zelfstandig werken aan project (**TM**)  |
 | wo  |  Teamcoach sessie (**BB**, **HK**)  |
 | do  |  Review deliverables (**BB**, **HK**) |
 

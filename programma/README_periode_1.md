@@ -148,7 +148,7 @@ Herfstvakantie
 ### Onderwijsweek B2 (16-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Einde sprint 4** (**TM**)|
+| ma  | **Einde sprint 4** (**TM**)<br>**Start sprint**|
 | di  | Halfgeleider fabricage (**BB**) |
 | wo  | <br>Deepdive  (**JH**) |
 | do  | aftekenen opdrachten (**NG**)|
@@ -165,7 +165,7 @@ Herfstvakantie
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TM**)**Start sprint**   |
+| ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TM**)<br>**Start sprint**   |
 | di  |  Microcontroller les III (**JH**) |
 | wo  | Zelfstandig werken aan project (**JH**)  & aftekenen opdrachten                                |
 | do  |  **3e Peilmoment**, Aftekenen opdrachten (**NG**) |
@@ -173,7 +173,7 @@ Herfstvakantie
 ### Onderwijsweek B5 (07-12-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  |   Teamcoach (**TM**) |
+| ma  | Teamcoach (**TM**) |
 | di  | Deepdive (**JH**) & aftekenen opdrachten|
 | wo  | Deepdive (**JH**) & aftekenen opdrachten |
 | do  | Aftekenen opdrachten (**NG**)|
@@ -181,7 +181,7 @@ Herfstvakantie
 ### Onderwijsweek B6 (14-12-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | **Einde sprint 6** (**TM**) Product overdracht web site per team (20 min)  |
+| ma  | **Einde sprint 6** (**TM**) Product overdracht web site per team (20 min)<br>**Start sprint** |
 | di  | Zelfstandig werken aan project (**NG**) <br> Vanaf  |
 | wo  | Zelfstandig werken aan project (**BB**)| 
 | do  |  Review deliverables (**NG**) |

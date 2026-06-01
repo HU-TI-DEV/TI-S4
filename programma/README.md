@@ -205,9 +205,9 @@ De SLB'ers zijn:
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Deepdive (**BB && HK**)  & aftekenen opdrachten  |
-| di  | Zelfstandig werken aan project (**TM**)  |
+| di  | Zelfstandig werken aan project (**BB&HK**)  |
 | wo  |  Teamcoach sessie (**BB**, **HK**)  |
-| do  |  Review deliverables (**BB**, **HK**) |
+| do  |  Deepdive (**BB**, **HK**) |
 
 ### Onderwijsweek D9 (08-06-2026)
 | Dag | Project & Kennissessie |

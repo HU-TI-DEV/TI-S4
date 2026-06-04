@@ -212,10 +212,10 @@ De SLB'ers zijn:
 ### Onderwijsweek D9 (08-06-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Deepdive  (**BB, LB**) & aftekenen opdrachten|
+| ma  | Deepdive  (**BB, LB**) & Product overdracht web site review|
 | di  | Deepdive  (**BB, HK**)& aftekenen opdrachten|
-| wo  | Product overdracht web site per team (20 min) enkel aan PO |
-| do  |  Review deliverables (**BB**, **HK**)  |
+| wo  | aftekenen opdrachten (**BB**) |
+| do  | aftekenen opdrachten(**BB**, **HK**)  |
 
 
 ### Onderwijsweek D10 (15-06-2026)

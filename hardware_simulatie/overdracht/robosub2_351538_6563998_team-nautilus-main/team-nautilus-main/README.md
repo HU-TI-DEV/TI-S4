@@ -26,9 +26,9 @@ This section offers a step by step guide on how to properly set up and run the s
 
 1. The simulation will not work without a docker container with Gazebo installed, and MobaXterm to run the Gazebo environment. You can install docker [here](https://www.docker.com/products/docker-desktop/). You can install MobaXterm [here](https://mobaxterm.mobatek.net/download-home-edition.html).
 
-2. Follow the steps in the [devcontainer README](/.devcontainer/README.md). This will install all the required dependencies, and allows Gazebo to run on your GPU instead of your CPU, massively boosting runtime speed and overall performance. MobaXterm is still used for a fallback, in case WSLg doesn't work.
+2. Follow the steps in the [devcontainer README](.devcontainer/README.md). This will install all the required dependencies, and allows Gazebo to run on your GPU instead of your CPU, massively boosting runtime speed and overall performance. MobaXterm is still used for a fallback, in case WSLg doesn't work.
 
-3. Build the simulation by pressing right click on the [CMakeLists.txt file](/module_dev/CMakeLists.txt) inside of the module_dev folder, and pressing build file.
+3. Build the simulation by pressing right click on the [CMakeLists.txt file](module_dev/CMakeLists.txt) inside of the module_dev folder, and pressing build file.
 
 4. After building, go to the terminal within your code editor and run ```gz sim SubSimV4.sdf&```. Once Gazebo is opened, navigate to the robotic arm located under the block in the middle, and press the run button in Gazebo.
 
@@ -45,17 +45,16 @@ This section offers a step by step guide on how to properly set up and run the s
 ## Links to modules
 
 Here you can find the modules themselves, along with their respective READMEs or other documents. 
-- [Overview](../team-nautilus/)
-- [Dev Container](/.devcontainer/)
-  - [Gazebo Test](/.devcontainer/TestGazebo/)
-  - [Python Test](/.devcontainer/TestPython/)
-- [Development Module](/module_dev/)
-  - [Arm Coordinate Movement](/module_dev/ArmCoordinatenMovement/)
-  - [Common](/module_dev/common/)
-  - [Gripper](/module_dev/gripper/)
-  - [IK Solver](/module_dev/IKSolver/)
-  - [Robot Arm](/module_dev/RobotArm/)
-  - [Submarine Sim](/module_dev/subSim/)
+- [Dev Container](.devcontainer/README.md)
+  - [Gazebo Test](.devcontainer/TestGazebo/README.md)
+  - [Python Test](.devcontainer/TestPython/main.py)
+- [Development Module](module_dev/README.md)
+  - [Arm Coordinate Movement](module_dev/ArmCoordinatenMovement/README.md)
+  - [Common](module_dev/common/README.md)
+  - [Gripper](module_dev/gripper/README.md)
+  - [IK Solver](module_dev/IKSolver/README.md)
+  - [Robot Arm](module_dev/RobotArm/README.md)
+  - [Submarine Sim](module_dev/subSim/README.md)
 
 
 ## Limitations & Recommendations
@@ -65,16 +64,16 @@ Here you can find the modules themselves, along with their respective READMEs or
 - The gripper of the arm does not yet rotate to align with the angle of the valve handle. The handle angle detection itself, however, is already implemented and published to a topic.
 - The gripper doesn't approach the handle in a straight line yet, this can be achieved by continously adjusting the target position in a straight line towards the valve, ideally also implementing a Slow in and Slow out effect.
 - Currently a depth camera is used to determine the distance to the valve, this is however not true to the actual model, which merely has possession over a regular camera. In order to make the simulation more in line with the actual robosub it is advisable to also switch to a regular camera and use the (known) actual size of the valve, the perceived size of the valve and the field of view to calculate the distance.
-- The gripper at [Gripper](/module_dev/gripper/) that was made was not implemented in the final version of the sdf model so the current gripper of the robosub is a simple box, the [Gripper](/module_dev/gripper/) is a more realistic version that could be implemented.
+- The gripper at [Gripper](module_dev/gripper/README.md) that was made was not implemented in the final version of the sdf model so the current gripper of the robosub is a simple box, the [Gripper](module_dev/gripper/README.md) is a more realistic version that could be implemented.
 
 # Technical Contributions
 | Technical module  | Description | Contributors |
 |---|---|---|
-| [ArmCoordinatenMovement](/module_dev/ArmCoordinatenMovement/) | Background loop running low-level joint PID velocity controls. | David, Luuc|
-| [Common](/module_dev/common/) | Single source of truth containing static joint parameters and kinematic specs. | Luuc |
-| [ComputerVision](/module_dev/computerVision/) | OpenCV object tracking and depth-camera transforms for world 3D vectors. | Ying, Aya|
-| [Gripper](/module_dev/gripper/) | URDF finger geometry implementation handling asymmetric revolute joint workarounds. | David |
-| [IKSolver](/module_dev/IKSolver/)| Forward (FK) and Inverse Kinematics (IK) coordinate processing. | Luuc, Jorn |
-| [RobotArm](/module_dev/RobotArm/)| Top-level node linking CV targets, IK solvers, and low-level joint loops. | David, Luuc |
-| [SubSim](/module_dev/subSim/) | Gazebo `.sdf` world templates with underwater physics and plugins. | David |
-| [PID](/module_dev/ArmCoordinatenMovement/PIDTest.md)| PID configuration and PID tuning with a simple python script | David |
+| [ArmCoordinatenMovement](module_dev/ArmCoordinatenMovement/README.md) | Background loop running low-level joint PID velocity controls. | David, Luuc|
+| [Common](module_dev/common/README.md) | Single source of truth containing static joint parameters and kinematic specs. | Luuc |
+| [ComputerVision](module_dev/computerVision/README.md) | OpenCV object tracking and depth-camera transforms for world 3D vectors. | Ying, Aya|
+| [Gripper](module_dev/gripper/README.md) | URDF finger geometry implementation handling asymmetric revolute joint workarounds. | David |
+| [IKSolver](module_dev/IKSolver/README.md)| Forward (FK) and Inverse Kinematics (IK) coordinate processing. | Luuc, Jorn |
+| [RobotArm](module_dev/RobotArm/README.md)| Top-level node linking CV targets, IK solvers, and low-level joint loops. | David, Luuc |
+| [SubSim](module_dev/subSim/README.md) | Gazebo `.sdf` world templates with underwater physics and plugins. | David |
+| [PID](module_dev/ArmCoordinatenMovement/PIDTest.md)| PID configuration and PID tuning with a simple python script | David |

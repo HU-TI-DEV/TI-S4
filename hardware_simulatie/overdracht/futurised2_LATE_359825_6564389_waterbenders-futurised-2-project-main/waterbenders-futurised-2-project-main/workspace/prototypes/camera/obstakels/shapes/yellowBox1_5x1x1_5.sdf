@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+    <model name="yellowBox1_5x1x1_5">
+      <static>true</static>
+      <pose>-3 2 0.75 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>1.5 1 1.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>1.5 1 1.5</size></box></geometry>
+          <material><ambient>1 1 0 1</ambient><diffuse>1 1 0 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+</sdf>

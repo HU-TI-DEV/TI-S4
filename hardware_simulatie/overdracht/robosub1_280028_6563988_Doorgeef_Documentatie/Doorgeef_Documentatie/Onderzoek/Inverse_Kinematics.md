@@ -17,7 +17,7 @@ Voor de RoboSub robotarm is de harde eis gesteld dat het systeem de robotarm aut
 
 Kinematica is een tak van de mechanica die zich bezig houdt met de beweging van objecten en het veranderen van hun positie, zonder rekening te houden met externe krachten. Afhankelijk van het vakgebied kan kinematica verschillende vormen hebben (Velocity, Contrained Systems, etc.). Dit onderzoek en de toepassingen bevinden zich in de tak van robot-kinematics ([*Robot Kinematics*](https://motion.cs.illinois.edu/RoboticSystems/Kinematics.html#Chapter_5_Robot_Kinematics_)). Deze tak van kinematica bestudeert de bewegingen en coördinatieverandering van robotische onderdelen, zonder het in acht nemen van externe kracten. Het focust op de coördinaten van de gewrichten, de lengtes van segmenten en de hoek tussen de segmenten. Binnen de algemene kinematica zijn er twee problemen/scenario's: **forward-** en **inverse-kinematica**. De scenario's verschillen van elkaar op al bekende informatie. In een scenario met de opdracht om de positie en de hoek van de eindeffector te bepalen aan de hand van de al bekende hoeken tussen segementen en de lengtes van de segmenten is er spraken van Forward kinematics. In een scenario met de opdracht om de vorm van de kinematische ketting te bepalen (hoeken tussen de segmenten) gegeven het coördinaat van de base en eindeffector en de lengtes van de segmenten, is er spraken van inverse-kinematics ([*Forward and Inverse Kinematics: Explained*](https://irisdynamics.com/articles/forward-and-inverse-kinematics)).
 
-![kinematicchain](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/KinematicChain.png) </br>
+![kinematicchain](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/KinematicChain.png) </br>
 *Afbeelding 1*
  
 Naasts een verschil in voorkennis is er ook een verschil in de oplossing. Voor een forwards-kinematisch probleem is er altijd één of geen oplossing. Voor een inverse-kinematisch probleem zijn er mogelijk meerdere oplossingen. Het aantal hangt af van een aantal factoren, waaronder de bewegingsvrijheid van de gewrichten. Om tot een oplossing te komen voor een inverse-kinematisch probleem zijn er twee soorten oplossingen: annalytisch en numeriek. Binnen deze oplossingen zijn er weer verschillende oplossingsmethodes ([*Inverse kinematics*](https://opentextbooks.clemson.edu/wangrobotics/chapter/inverse-kinematics/)).
@@ -35,7 +35,7 @@ Algoritme's voor Inverse Kinematica:
 
 Op aandringen van de docenten is er gekozen om zelf een oplossing voor het inverse kinematische probleem te vinden en geen gebruik te maken van een al bestaand algoritme of iets dergelijks. Na grondig onderzoek is er op basis van cirkelkruising een oplossing bedacht voor het probleem ([*Robotic Systems, Section II. MODELING*](https://motion.cs.illinois.edu/RoboticSystems/InverseKinematics.html)). De kern van de methode is dat je 'alle' mogelijke posities van het base-segment en het segment gekoppelt aan de eindeffector mee neemt in het bepalen van de vorm van de kinematische ketting. Neem het voorbeeld hieronder:
 
-![circkle](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/circkle.png) ![arm](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/armend.png) </br> 
+![circkle](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/circkle.png) ![arm](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/armend.png) </br> 
 *Afbeelding 2*                                                       
 
 In de voorbeelden hierboven is de blauwe stip het coördinaat van de base, de rode stip het coördinaat van de eindeffector en zijn de groene stippen de snijpunten van de twee cirkels met elkaar. Omdat we bij dit soort problemen altijd weten wat de lengte is van het segmenten verbonden met de base en de eindeffector kan er door middel van een cirkel, om het coördinaat heen, met de radius van de segmentlengte worden bepaald welk snijpunten de afstand naar het basispunt L1 is en naar de eindeffector L2. Door vervolgens de hoek te berekenen kan er worden bepaald of de hoeken ook mogelijk zijn voor de daadwerkelijke gewrichten. Voor een kinematische ketting met twee segmenten is het vinden van de mogelijke snijpunten niet heel lastig. Als de ketting meerdere gewrichten heeft wordt het een lastiger verhaal. 
@@ -48,7 +48,7 @@ $$(x−x_2)^2+(y−y_2)^2=r_2^2$$
 Als het coördinaat van het snijpunt is gevonden kan er door middel van de functie atan2(x,y) worden bepaald welke hoek het snijpunt heeft vanaf de x-as van de base. Met deze hoek kan vervolgens worden bepaald of deze kinematische ketting mogelijk is: kan mijn gewricht ook werkelijk deze hoek bereiken? 
 Om de hoek te bereken moet het punt ook in de rotatie van de origin zitten. Zo is de base voor de eindeffector het punt (x1, y1). Voor meer [informatie](https://www.youtube.com/watch?v=FvgGSgvB2I0).
 
-![angle](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/angle.png) </br>
+![angle](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/angle.png) </br>
 *Afbeelding 3*
 
 * θ1 = atan2(y1, x2) 
@@ -64,7 +64,7 @@ Voor meer informatie over [atan2](https://en.wikipedia.org/wiki/Atan2).
 
 De oplossing voor de casus heeft veel weg van de oplossing in de vorige kop; we maken een cirkel om de eindeffector en de base joint. In dit geval nemen we de minimale en maximale draai van de base joint mee. Zie de afbeelding hieronder.
 
-![subarm](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/SubArm.png) ![robobase](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/bridge.png) </br>
+![subarm](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/SubArm.png) ![robobase](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/bridge.png) </br>
 *Afbeelding 4*
 
 Uit de gegevens van de Robotarm kunnen we achterhalen dat:
@@ -81,7 +81,7 @@ $$ atan2((P_y - C_y), (P_x - C_x)) $$
 
 Met deze uitkomst hebben we de hoek van punt P in frame C bepaald, waarbij frame C dezelfde rotatie heeft als het base frame (punt A). Om te bepalen of de hoek die we net hebben uitgerkend nog steeds tussen +20° en -99,3° valt kunnen we met de optelling van de rotatie van frame B (theta 1 in afbeelding 5) bij de +20° en -99,3° de nieuwe min en max hoeken bepalen in het geroteerde frame C, want de hoek die we hebben berekend valt in hetzelfde geroteerde frame. Zie de afbeelding hieronder:
 
-![roation](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/roation.png) </br>
+![roation](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/roation.png) </br>
 *Afbeelding 5* 
 
 Links is de rotatie te zien van frame C met rotatie theta 1.  
@@ -90,11 +90,11 @@ Links is de rotatie te zien van frame C met rotatie theta 1.
 
 Voor de inverse kinematica is er in de programmeer taal Python een functie geschreven die berekend of de mogelijke eindeffector bereikbaar is. Als dit punt bereikbaar is geeft de functie de hoeken van de joints terug waarmee de eindeffector van de kinematische ketting op het gewenste eindpunt uitkomt.
 
-Voor meer informatie van de [code](/Documentatie/Doorgeef_Documentatie/Code/Inverse_Kinematica/Inverse_Kinematica.py).
+Voor meer informatie van de [code](/Doorgeef_Documentatie/Code/Inverse_Kinematica/Inverse_Kinematica.py).
 
 ## Testresultaten
 
-Om de resulaten van de inverse kinematica te testen is er een [functie](/Documentatie/Doorgeef_Documentatie/Code/Inverse_Kinematica/Inverse_Kinematica_Test.py) geschreven die met de coördinaten van de joints de hoeken tussen de segmenten berekend. Er zijn vijf testen gedaan om de resultaten van de Inverse kinematica met de test-functie te vergelijken. De resultaten met L1 = 2.10, L2 = 2.35 en L3 = 1.34
+Om de resulaten van de inverse kinematica te testen is er een [functie](/Doorgeef_Documentatie/Code/Inverse_Kinematica/Inverse_Kinematica_Test.py) geschreven die met de coördinaten van de joints de hoeken tussen de segmenten berekend. Er zijn vijf testen gedaan om de resultaten van de Inverse kinematica met de test-functie te vergelijken. De resultaten met L1 = 2.10, L2 = 2.35 en L3 = 1.34
 
 | Base (X,Y) | Eindeffector | Joint2 | Joint3 | Theta1 | Theta2 | Theta3 | Theta1 Test | Theta2 Test | Theta3 Test |
 |------------|--------------|--------|--------|---------|---------|---------|-------------|-------------|-------------|
@@ -104,9 +104,9 @@ Om de resulaten van de inverse kinematica te testen is er een [functie](/Documen
 | (0.00, 0.00) | (0.50, -2.50) | (-2.08, -0.29) | (0.14, -1.21) | 8.00° | 31.12° | 231.81° | 8.00° | 31.12° | 231.81° |
 | (0.00, 0.00) | (1.33, -2.22) | (-2.02, -0.57) | (0.16, -1.58) | 15.70° | 41.26° | 183.93° | 15.70° | 41.26° | 183.93° |
 
-Aardig goede resulataten. Om de resultaten visueel te maken voor de gebruiker is er een python [script](/Documentatie/Doorgeef_Documentatie/Code/Inverse_Kinematica/Inverse_Kinematica_Visueel.py) geschreven dat de gegevens van de inverse kinematica plot. Voorbeelden:
+Aardig goede resulataten. Om de resultaten visueel te maken voor de gebruiker is er een python [script](/Doorgeef_Documentatie/Code/Inverse_Kinematica/Inverse_Kinematica_Visueel.py) geschreven dat de gegevens van de inverse kinematica plot. Voorbeelden:
 
-![test5](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/Test5.png) ![test4](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/test4.png) ![test1](/Documentatie/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/test1.png) </br>
+![test5](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/Test5.png) ![test4](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/test4.png) ![test1](/Doorgeef_Documentatie/Onderzoek/Images/Inverse_Kinematics/test1.png) </br>
 *Afbeelding 6* 
 Groen: Base, Blauw: joint, Rood: eindeffector.
 

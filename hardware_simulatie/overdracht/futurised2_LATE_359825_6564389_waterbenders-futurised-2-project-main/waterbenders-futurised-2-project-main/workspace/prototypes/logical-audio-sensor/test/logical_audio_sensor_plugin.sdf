@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+
+<sdf version="1.6">
+  <world name="logical_audio_sensor">
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+    <plugin
+      filename="ignition-gazebo-physics-system"
+      name="ignition::gazebo::systems::Physics">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-user-commands-system"
+      name="ignition::gazebo::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="ignition-gazebo-scene-broadcaster-system"
+      name="ignition::gazebo::systems::SceneBroadcaster">
+    </plugin>
+
+    <scene>
+      <ambient>1.0 1.0 1.0</ambient>
+      <background>0.8 0.8 0.8</background>
+    </scene>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.8 0.8 0.8 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="green_box_speaker">
+          <pose>0 0 0.5 0 0 0</pose>
+          <link name="link">
+            <visual name="visual">
+              <geometry><box><size>1 1 1</size></box></geometry>
+              <material>
+                <ambient>0 1 0 1</ambient>
+                <diffuse>0 1 0 1</diffuse>
+              </material>
+            </visual>
+          </link>
+          <plugin filename="ignition-gazebo-logicalaudiosensorplugin-system" name="ignition::gazebo::systems::LogicalAudioSensorPlugin">
+            <source>
+              <id>1</id>
+              <pose>0 0 0 0 0 0</pose>
+              <attenuation_function>linear</attenuation_function>
+              <attenuation_shape>sphere</attenuation_shape>
+              <inner_radius>1.0</inner_radius>
+              <falloff_distance>10.0</falloff_distance>
+              <volume_level>1.0</volume_level>
+              <playing>true</playing>
+              <play_duration>0</play_duration> </source>
+          </plugin>
+        </model>
+
+        <model name="grey_box_listener">
+          <pose>3 0 0.5 0 0 0</pose>
+          <link name="link">
+            <visual name="visual">
+              <geometry><box><size>1 1 1</size></box></geometry>
+              <material>
+                <ambient>0.5 0.5 0.5 1</ambient>
+                <diffuse>0.5 0.5 0.5 1</diffuse>
+              </material>
+            </visual>
+          </link>
+          <plugin filename="ignition-gazebo-logicalaudiosensorplugin-system" name="ignition::gazebo::systems::LogicalAudioSensorPlugin">
+            <microphone>
+              <id>1</id>
+              <pose>0 0 0 0 0 0</pose>
+              <volume_threshold>0.1</volume_threshold>
+            </microphone>
+          </plugin>
+        </model>
+
+      </world>
+    </sdf>

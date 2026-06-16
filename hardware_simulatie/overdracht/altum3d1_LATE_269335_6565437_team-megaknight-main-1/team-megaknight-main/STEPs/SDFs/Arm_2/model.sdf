@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="default">
+    <scene>
+      <shadows>true</shadows>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+    </scene>
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.3 0.3 0.3 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="robot-arm">
+      <static>false</static>
+      <link name="Base_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <visual name="Base_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Base.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Base_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Base_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="Pivot_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <visual name="Pivot_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Pivot.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Pivot_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Pivot_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="Arm1_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <visual name="Arm1_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm1.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Arm1_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm1_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="Arm2_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <visual name="Arm2_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm2.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Arm2_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm2_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <joint name="base_anchor" type="fixed">
+        <parent>world</parent>
+        <child>Base_link</child>
+        <pose>0 0 0 0 1.5707963 0</pose>
+      </joint>
+
+      <joint name="base_pivot" type="revolute">
+        <parent>Base_link</parent>
+        <child>Pivot_link</child>
+        <pose relative_to='Base_link'>0 0 0 0 0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>-1.5707963</lower>
+            <upper>1.5707963</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="pivot_arm1" type="revolute">
+        <parent>Pivot_link</parent>
+        <child>Arm1_link</child>
+        <pose relative_to='Pivot_link'>0.20424 0.73808 -0.11331 0 0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-1.5707963</lower>
+            <upper>1.5707963</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="arm1_arm2" type="revolute">
+        <parent>Arm1_link</parent>
+        <child>Arm2_link</child>
+        <pose relative_to='Arm1_link'>0.1937 1.8875 -0.1448 0 0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-3.14159265359</lower>
+            <upper>3.14159265359</upper>
+          </limit>
+        </axis>
+      </joint>
+
+      <plugin
+        filename="gz-sim-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>base_pivot</joint_name>
+        <topic>/base_pivot/cmd_pos</topic>
+      </plugin>
+      <plugin
+        filename="gz-sim-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>pivot_arm1</joint_name>
+        <topic>/pivot_arm1/cmd_pos</topic>
+      </plugin>
+      <plugin
+        filename="gz-sim-joint-position-controller-system"
+        name="gz::sim::systems::JointPositionController">
+        <joint_name>arm1_arm2</joint_name>
+        <topic>/arm1_arm2/cmd_pos</topic>
+      </plugin>
+
+    </model>
+  </world>
+</sdf>

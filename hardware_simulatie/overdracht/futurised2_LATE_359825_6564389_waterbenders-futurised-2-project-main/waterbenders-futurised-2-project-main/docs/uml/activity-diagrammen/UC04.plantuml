@@ -1,0 +1,13 @@
+@startuml
+partition "UC04 Handmatige Besturing" {
+    start
+    :Gebruiker zet manuele modus aan;
+    :Robot Schakelt autonome-modus uit;
+    :Bevestig manuele modus aan gebruiker;
+    repeat
+        :Gebruiker bestuurt robot;
+    repeat while (Manuele modus aan?) is (ja) -[#green]->
+    -[#red]->
+    stop
+}
+@enduml

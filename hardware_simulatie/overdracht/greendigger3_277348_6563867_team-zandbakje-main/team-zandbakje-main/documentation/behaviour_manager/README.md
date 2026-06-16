@@ -117,7 +117,7 @@ Since it's not entirely complete, there are some assumptions during testing that
 ---
 
 ## Additional Documentation
-For a detailed explanation of the project layer architecture, data flow, and how the behaviour manager fits into the rest of the system, see: [Architecture](../../docs/project-items/project-style/architecture.md)
+For a detailed explanation of the project layer architecture, data flow, and how the behaviour manager fits into the rest of the system, see: [Architecture](https://github.com/2025-TICT-TV2SE4-24-3-V/team-zandbakje/blob/main/documentation/project-style/architecture.md)
 
 For navigation details, see: [Points of Interest Navigation](../points_of_interest/README.md)
 For interface details, see: [Digger Interface](../interface/README.md)

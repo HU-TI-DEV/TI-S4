@@ -24,7 +24,7 @@ Our contribution to this project is the simulation of the excavator arm movement
 This inlcudes models of what is shown in gazebo. We have different types of srubs and a tree in there [read more...](../EindProduct/models/README.md) 
 
 ## Vision
-Here we have a class for our camera. It takes pictures that we use in "Vision.py" to find out if trees are closeby [read more...](../Vision/README.md)
+Here we have a class for our camera. It takes pictures that we use in "Vision.py" to find out if trees are closeby [read more...](../EindProduct/Vision/README.md)
 
 ## Controller
 The calulations and movements of our excavator arm, you find in here. This also includes a "stopSignal.txt". In there you will find a boolean, sent by "Vision.py" (0 for "no tree", 1 for "tree") [read more...](../EindProduct/controller/README.md)

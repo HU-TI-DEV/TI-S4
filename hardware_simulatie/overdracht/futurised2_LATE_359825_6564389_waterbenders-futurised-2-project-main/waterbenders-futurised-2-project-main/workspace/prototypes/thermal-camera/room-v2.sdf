@@ -1,0 +1,250 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <world name="room">
+    <gui>
+      <plugin filename="ImageDisplay" name="ThermalCameraDisplay">
+      <ignition-gui>
+        <title>Thermal Camera</title>
+        <property key="state" type="string">floating</property>
+        <property type="double" key="width">350</property>
+        <property type="double" key="height">315</property>
+      </ignition-gui>
+
+      <topic>/FLIP/thermal_camera</topic>
+
+      <topic_picker>false</topic_picker>
+      </plugin>
+
+      <plugin filename="WorldStats" name="World stats">
+        <ignition-gui>
+          <title>World stats</title>
+          <property type="bool" key="showTitleBar">false</property>
+          <property type="bool" key="resizable">false</property>
+          <property type="double" key="height">110</property>
+          <property type="double" key="width">290</property>
+          <property type="double" key="z">1</property>
+          <property type="string" key="state">floating</property>
+          <anchors target="3D View">
+            <line own="right" target="right"/>
+            <line own="bottom" target="bottom"/>
+          </anchors>
+        </ignition-gui>
+
+        <sim_time>true</sim_time>
+        <real_time>true</real_time>
+        <real_time_factor>true</real_time_factor>
+        <iterations>true</iterations>
+        <topic>/world/lidarRoomScan/stats</topic>
+      </plugin>
+    </gui>
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- GUI for Visualizing Lidar Beams -->
+    <!-- <gui fullscreen="0">
+      <plugin filename="GzScene3D" name="3D View">
+        <gz-gui>
+          <title>3D View</title>
+          <property type="bool" key="showTitleBar">false</property>
+          <property type="string" key="state">docked</property>
+        </gz-gui>
+        <engine>ogre2</engine>
+        <scene>scene</scene>
+        <ambient_light>0.4 0.4 0.4</ambient_light>
+        <background_color>0.8 0.8 0.8</background_color>
+        <camera_pose>0 0 6 0 0 0</camera_pose>
+      </plugin>
+
+      <plugin filename="VisualizeLidar" name="Visualize Lidar">
+        <gz-gui>
+          <property type="bool" key="showTitleBar">true</property>
+          <property type="string" key="state">docked</property>
+          <property type="string" key="width">5</property>
+          <property type="string" key="height">5</property>
+        </gz-gui>
+      </plugin>
+    </gui> -->
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Include FLIP here when needed -->
+    
+    <include>
+      <uri>file:///workspace/models/gazebo/flip</uri>
+      <name>FLIP</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+   
+    <!-- Walls -->
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x12x3_5</uri>
+      <name>horizontalWallBig</name>
+      <pose>6.1378297805786133 0 1.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x12x3_5</uri>
+      <name>verticalWallBig</name>
+      <pose>7.2243547037942335e-06 -5.8478302955627441 1.75 0 0 1.5708000357176291</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x5x3_5</uri>
+      <name>horizontalWallSmall</name>
+      <pose>-5.8479700088500977 -3.2032356262207031 1.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x5x3_5</uri>
+      <name>verticalWallSmall</name>
+      <pose>-3.2926583290100098 6.3540897369384766 1.75 0 0 1.5707999672671717</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x12x3_5</uri>
+      <name>horizontalWallBig_1</name>
+      <pose>6.1292400360107422 11.98643970489502 1.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x12x3_5</uri>
+      <name>verticalWallBig_1</name>
+      <pose>0.00072676839772611856 17.835100173950195 1.75 0 0 1.5707999672671711</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x12x3_5</uri>
+      <name>horizontalWallBig_2</name>
+      <pose>-5.8510937690734863 11.696800231933594 1.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x5x3_5</uri>
+      <name>horizontalWallSmall_2</name>
+      <pose>-5.849639892578125 4.0064177513122559 1.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x12x3_5</uri>
+      <name>verticalWallBig_2</name>
+      <pose>-11.975589752197266 -5.8330597877502441 1.75 0 0 1.5707999672671717</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x12x3_5</uri>
+      <name>horizontalWallBig_3</name>
+      <pose>-17.832462310791016 0.27177301049232483 1.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x5x3_5</uri>
+      <name>verticalWallSmall_2</name>
+      <pose>-8.252507209777832 6.3668909072875977 1.75 0 0 1.5707999672671717</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x5x3_5</uri>
+      <name>verticalWallSmall_3</name>
+      <pose>-15.482864379882812 6.3641500473022452 1.75 0 0 1.5707999672671717</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/horizontalWall0_3x5x3_5</uri>
+      <name>horizontalWallSmall_3</name>
+      <pose>-17.841299057006836 9.0118703842163086 1.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x12x3_5</uri>
+      <name>verticalWallBig_3</name>
+      <pose>-11.987987518310547 11.363300323486328 1.75 0 0 1.5707999672671717</pose>
+    </include>
+
+    <!-- Objects -->
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/redCube1x1x1</uri>
+      <name>redCube</name>
+      <pose>-3.6559658050537109 8.7096595764160156 0.5 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/greenCylinder0_5x1</uri>
+      <name>greenCylinder</name>
+      <pose>-7.8899140357971191 -3 0.5 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/blueBox1x2x1</uri>
+      <name>blueBox</name>
+      <pose>3 15.608985900878906 0.5 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/yellowBox1_5x1x1_5</uri>
+      <name>yellowBox</name>
+      <pose>-7.9256100654602051 4.3805632591247559 0.75 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/pinkBall0_6</uri>
+      <name>pinkBall</name>
+      <pose>-8.2594108581542969 8.8796701431274414 0.60000002384185791 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/orangeBox0_8x0_8x0_8</uri>
+      <name>orangeBox</name>
+      <pose>-16 -4 0.4 0 0 0</pose>
+    </include>
+    
+  </world>
+</sdf>

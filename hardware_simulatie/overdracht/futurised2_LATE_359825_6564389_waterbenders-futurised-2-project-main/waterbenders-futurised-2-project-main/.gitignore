@@ -1,0 +1,83 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Shortcut files for running containers
+*.ps1
+*.sh
+*.bat
+
+# Obsidian
+*.obsidian
+
+# Cache files
+__pycache__/
+
+# Swap files
+*.swp
+
+# --- Virtual Environments ---
+venv/
+.venv/
+env/
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+*$py.class
+
+# C++ CMake build folder
+*build
+
+# ROS 2/colcon build artifacts
+build/
+install/
+log/
+
+# IDE/Editor
+.idea/
+.vscode/
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+*.db
+
+# AI model files
+*.pt
+
+# Docker image (exceeds max. size)
+s4_2026.tar

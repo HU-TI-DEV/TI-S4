@@ -1,0 +1,494 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <world name="default">
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <scene>
+      <shadows>true</shadows>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+    </scene>
+
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 1</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.3 0.3 0.3 1</specular>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="robot-arm">
+      <static>false</static>
+      <self_collide>false</self_collide>
+
+      <link name="Base_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <inertial>
+          <pose>0.0091 0.2071 0.0000 0 0 0</pose>
+          <mass>83.81</mass>
+          <inertia>
+            <ixx>2.8702</ixx>
+            <iyy>3.3429</iyy>
+            <izz>2.8702</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <visual name="Base_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Base.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Base_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Base_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="Pivot_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <inertial>
+          <pose>0.0091 0.6602 -0.0739 0 0 0</pose>
+          <mass>63.06</mass>
+          <inertia>
+            <ixx>3.4033</ixx>
+            <iyy>3.3899</iyy>
+            <izz>2.5286</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <visual name="Pivot_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Pivot.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Pivot_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Pivot_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="Arm1_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <inertial>
+          <pose>-0.1796 1.3129 -0.1987 0 0 0</pose>
+          <mass>38.36</mass>
+          <inertia>
+            <ixx>6.3166</ixx>
+            <iyy>0.2478</iyy>
+            <izz>6.1810</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <visual name="Arm1_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm1.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Arm1_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm1_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <link name="Arm2_link">
+        <pose>0 0 0 1.5707963 0 0</pose>
+        <inertial>
+          <pose>0.0091 2.5478 -0.1937 0 0 0</pose>
+          <mass>34.77</mass>
+          <inertia>
+            <ixx>7.1872</ixx>
+            <iyy>0.3098</iyy>
+            <izz>7.1729</izz>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyz>0</iyz>
+          </inertia>
+        </inertial>
+        <visual name="Arm2_visual">
+          <cast_shadows>true</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm2.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.2400 0.1674 0.0001 1.0000</ambient>
+            <diffuse>0.8000 0.5581 0.0002 1.0000</diffuse>
+            <specular>0.2500 0.2500 0.2500 1.0000</specular>
+            <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+          </material>
+        </visual>
+        <collision name="Arm2_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Arm2_col.obj</uri>
+              <scale>0.1 0.1 0.1</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+
+      <joint name="base_anchor" type="fixed">
+        <parent>world</parent>
+        <child>Base_link</child>
+        <pose>0 0 0 0 1.5707963 0</pose>
+      </joint>
+
+      <joint name="base_pivot" type="revolute">
+        <parent>Base_link</parent>
+        <child>Pivot_link</child>
+        <pose relative_to='Base_link'>0 0 0 0 0 0</pose>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <!-- <limit>
+            <lower>-2.9670597283903602807702743064306</lower>
+            <upper>2.9670597283903602807702743064306</upper>
+          </limit> -->
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0.1</friction>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <joint name="pivot_arm1" type="revolute">
+        <parent>Pivot_link</parent>
+        <child>Arm1_link</child>
+        <pose relative_to='Pivot_link'>0.20424 0.73808 -0.11331 0 0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-2.1816615649929119711546134606108</lower>
+            <upper>2.1816615649929119711546134606108</upper>
+          </limit>
+          <dynamics>
+            <damping>0.5</damping>
+            <friction>0.1</friction>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <joint name="arm1_arm2" type="revolute">
+        <parent>Arm1_link</parent>
+        <child>Arm2_link</child>
+        <pose relative_to='Arm1_link'>0.1937 1.8875 -0.1448 0 0 0</pose>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit>
+            <lower>-2</lower>
+            <upper>2</upper>
+          </limit>
+          <dynamics>
+            <damping>5</damping>
+            <friction>1</friction>
+          </dynamics>
+        </axis>
+      </joint>
+
+
+      <plugin
+        filename="gz-sim-apply-joint-force-system"
+        name="gz::sim::systems::ApplyJointForce">
+        <joint_name>base_pivot</joint_name>
+      </plugin>
+      <plugin
+        filename="gz-sim-apply-joint-force-system"
+        name="gz::sim::systems::ApplyJointForce">
+        <joint_name>pivot_arm1</joint_name>
+      </plugin>
+      <plugin
+        filename="gz-sim-apply-joint-force-system"
+        name="gz::sim::systems::ApplyJointForce">
+        <joint_name>arm1_arm2</joint_name>
+      </plugin>
+
+      <plugin
+        filename="gz-sim-joint-state-publisher-system"
+        name="gz::sim::systems::JointStatePublisher">
+      </plugin>
+    </model>
+
+    <model name="Camera">
+      <pose>0 7 3.5 0 0.5999 -1.5708</pose>
+      <static>true</static>
+      <link name="link">
+        <pose>0.05 0.05 0.05 0 0 0</pose>
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>0.1 0.1 0.1</size>
+            </box>
+          </geometry>
+        </visual>
+
+        <sensor name="rgb_camera" type="camera">
+          <always_on>true</always_on>
+          <update_rate>10</update_rate>
+          <camera>
+            <horizontal_fov>1.5</horizontal_fov>
+            <image>
+              <width>800</width>
+              <height>600</height>
+              <format>R8G8B8</format>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>30</far>
+            </clip>
+          </camera>
+          <topic>/camera/image</topic>
+        </sensor>
+
+        <sensor name="depth_camera" type="depth_camera">
+          <always_on>true</always_on>
+          <update_rate>10</update_rate>
+          <camera>
+            <horizontal_fov>1.5</horizontal_fov>
+            <image>
+              <width>800</width>
+              <height>600</height>
+              <format>R_FLOAT32</format>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>30</far>
+            </clip>
+          </camera>
+          <topic>/depth_camera/image</topic>
+        </sensor>
+      </link>
+    </model>
+
+    <actor name="actor_walking">
+    <pose>0 0 1 0 0 0</pose>
+      <skin>
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <scale>1.0</scale>
+      </skin>
+      <animation name="walk">
+        <filename>https://fuel.gazebosim.org/1.0/Mingfei/models/actor/tip/files/meshes/walk.dae</filename>
+        <interpolate_x>false</interpolate_x>
+      </animation>
+      <script>
+        <loop>true</loop>
+        <delay_start>0.000000</delay_start>
+        <auto_start>true</auto_start>
+        <trajectory id="0" type="walk" tension="1">
+          <waypoint><time>0</time><pose>3 -3 0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>6</time><pose>3 3 0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>9</time><pose>2 4 0 0 0 3.1416</pose></waypoint>
+          <waypoint><time>13</time><pose>-2 4 0 0 0 3.1416</pose></waypoint>
+          <waypoint><time>16</time><pose>-3 3 0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>21</time><pose>-3 -2 0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>24</time><pose>-3 -3 0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>29</time><pose>-3 3 0 0 0 1.5708</pose></waypoint>
+          <waypoint><time>32</time><pose>-2 4 0 0 0 0</pose></waypoint>
+          <waypoint><time>36</time><pose>2 4 0 0 0 0</pose></waypoint>
+          <waypoint><time>39</time><pose>3 3 0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>45</time><pose>3 -3 0 0 0 -1.5708</pose></waypoint>
+          <waypoint><time>45.1</time><pose>3 -3 0 0 0 1.5708</pose></waypoint>
+        </trajectory>
+      </script>
+      <plugin filename="gz-sim-label-system" name="gz::sim::systems::Label">
+        <label>40</label>
+      </plugin>
+    </actor>
+
+    <model name="Curing_station">
+      <static>true</static>
+      <link name="Curing_link">
+        <pose>-1 -1.8 0.9 0 0 0</pose>
+        <visual name="Curing_visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/Curing.obj</uri>
+              <scale>0.0015 0.0015 0.0015</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+          </material>
+        </visual>
+        <collision name="Curing_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Curing_col.obj</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="3d Printer">
+      <static>true</static>
+      <link name="Printer_link">
+        <pose>1 -1.9 0.65 0 0 0</pose>
+        <visual name="Printer_visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/Printer.obj</uri>
+              <scale>0.002 0.002 0.002</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+        <collision name="Printer_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Printer_col.obj</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="Table">
+      <static>true</static>
+      <link name="Table_link">
+        <pose>0 2.02 0 1.570 0 0</pose>
+        <visual name="Table_visual">
+          <geometry>
+            <mesh>
+              <uri>meshes/Table.obj</uri>
+              <scale>0.005 0.005 0.005</scale>
+            </mesh>
+          </geometry>
+          <material>
+            <ambient>0.1 0.1 0.1 1</ambient>
+            <diffuse>0.1 0.1 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name="Table_collision">
+          <geometry>
+            <mesh>
+              <uri>meshes/Table_col.obj</uri>
+              <scale>0.001 0.001 0.001</scale>
+            </mesh>
+          </geometry>
+        </collision>
+      </link>
+    </model>
+
+    <model name="target_marker">
+      <static>true</static>
+      <pose>1.5 1.0 1.0 0 0 0</pose>
+      <link name="marker_link">
+        <visual name="marker_visual">
+          <geometry>
+            <sphere>
+              <radius>0.05</radius>
+            </sphere>
+          </geometry>
+          <material>
+            <ambient>0 1 0 1</ambient>
+            <diffuse>0 1 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <model name="ground_plane">
+  <static>true</static>
+  <link name="ground_link">
+    <pose>0 0 0 0 0 0</pose>
+    <collision name="ground_collision">
+      <geometry>
+        <plane>
+          <normal>0 0 1</normal>
+          <size>100 100</size>
+        </plane>
+      </geometry>
+      <surface>
+        <friction>
+          <ode>
+            <mu>1.0</mu>
+            <mu2>1.0</mu2>
+          </ode>
+        </friction>
+      </surface>
+    </collision>
+    <visual name="ground_visual">
+      <cast_shadows>false</cast_shadows>
+      <geometry>
+        <plane>
+          <normal>0 0 1</normal>
+          <size>100 100</size>
+        </plane>
+      </geometry>
+      <material>
+        <ambient>0.3 0.3 0.3 1</ambient>
+        <diffuse>0.7 0.7 0.7 1</diffuse>
+        <specular>0.1 0.1 0.1 1</specular>
+      </material>
+    </visual>
+  </link>
+</model>
+  </world>
+</sdf>

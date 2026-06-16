@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+    <model name="verticalWall0_6x8_1x3_5">
+      <static>true</static>
+      <pose>0 3.9 1.75 0 0 1.5708</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.6 8.1 3.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.6 8.1 3.5</size></box></geometry>
+          <material>
+            <ambient>0.76 0.22 0.22 1</ambient>
+            <diffuse>0.76 0.22 0.22 1</diffuse>
+            <specular>0.56 0.44 0.44 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+</sdf>

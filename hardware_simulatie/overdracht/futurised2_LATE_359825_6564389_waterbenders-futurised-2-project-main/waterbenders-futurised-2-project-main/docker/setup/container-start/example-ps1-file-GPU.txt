@@ -1,0 +1,14 @@
+# 1. Start the gzc container
+docker start gzc
+
+# 2. Quick environment check (Optional but recommended)
+Write-Host "Entering container and installing packages..." -ForegroundColor Cyan
+docker exec gzc /workspace/venv/bin/pip install --quiet numpy==1.26.4 "numpy<2.0" "opencv-python<4.11"
+
+# 3. Enter the container
+# This uses the GPU and Display settings we need
+docker exec -it `
+    -e DISPLAY=host.docker.internal:0 `
+    -e NVIDIA_VISIBLE_DEVICES=all `
+    -e NVIDIA_DRIVER_CAPABILITIES=all `
+    gzc bash

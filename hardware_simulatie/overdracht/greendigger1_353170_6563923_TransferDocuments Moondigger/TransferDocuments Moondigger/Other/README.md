@@ -1,4 +1,4 @@
-<img src = ../../images/teamlogo.png align="right" width="135">
+<img src = ../StylisticFeatures/teamlogo.png align="right" width="135">
 
 # Other
 In this folder, any files can be found which do not belong to a different category but are still part of the end product. These files are files such as Gazebo specific files, a main file and a terrain file. 

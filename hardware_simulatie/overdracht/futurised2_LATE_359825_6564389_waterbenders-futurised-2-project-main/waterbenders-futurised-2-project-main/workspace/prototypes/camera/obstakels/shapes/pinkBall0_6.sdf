@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+    <model name="pinkBall0_6">
+      <static>true</static>
+      <pose>1 3 0.6 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><sphere><radius>0.6</radius></sphere></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><sphere><radius>0.6</radius></sphere></geometry>
+          <material><ambient>1 0 1 1</ambient><diffuse>1 0 1 1</diffuse></material>
+        </visual>
+      </link>
+    </model>
+</sdf>

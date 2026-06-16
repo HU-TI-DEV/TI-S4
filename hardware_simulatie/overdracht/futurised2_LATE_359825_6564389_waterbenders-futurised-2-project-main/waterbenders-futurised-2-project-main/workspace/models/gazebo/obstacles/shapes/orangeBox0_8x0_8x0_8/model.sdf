@@ -1,0 +1,74 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+<model name="orangeBox0_8x0_8x0_8">
+  <static>true</static>
+  <pose>-2 0 0.4 0 0 0</pose>
+  <link name="link">
+    <!-- 2. REMOVED loose <temperature> tag from here -->
+
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>0.8 0.8 0.8</size>
+        </box>
+      </geometry>
+    </collision>
+
+    <!-- Orange box visual -->
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>0.8 0.8 0.8</size>
+        </box>
+      </geometry>
+      <material>
+        <ambient>1 0.5 0 1</ambient>
+        <diffuse>1 0.5 0 1</diffuse>
+      </material>
+      <plugin
+        filename="gz-sim-thermal-system"
+        name="gz::sim::systems::Thermal">
+        <temperature>513.15</temperature> 
+        <emissivity>0.9</emissivity>
+      </plugin>
+    </visual>
+
+    <!-- Thermal core visual -->
+    <visual name="thermal_core">
+      <pose>0 0 0.25 1.5708 0 0</pose>
+      <geometry>
+        <sphere>
+          <radius>0.08</radius>
+        </sphere>
+      </geometry>
+      <material>
+        <ambient>1 0.4 0 1</ambient>
+        <diffuse>1 0.4 0 1</diffuse>
+      </material>
+      <plugin
+        filename="gz-sim-thermal-system"
+        name="gz::sim::systems::Thermal">
+        <temperature>583.83</temperature> 
+        <emissivity>0.9</emissivity>
+      </plugin>
+    </visual>
+
+    <!-- 3. CLEANED PARTICLE EMITTER: Removed invalid nested tags for Ionic -->
+    <particle_emitter name="fire" type="box">
+      <pose>0 0 0.25 1.5708 0 0</pose>
+      <size>0.15 0.15 0.30</size>
+      <rate>50</rate>
+      <particle_size>0.05 0.05 0.05</particle_size>
+      <lifetime>1</lifetime>
+      <!-- Simplified for Ionic stability -->
+      <min_velocity>2.5</min_velocity>
+      <max_velocity>3.5</max_velocity>
+      <color_start>0.6 0 0 0</color_start>
+      <color_end>1 0.8 0.2 1</color_end> 
+      <scale_rate>0.4</scale_rate>
+      <emitting>true</emitting>
+    </particle_emitter>
+
+  </link>
+</model>
+</sdf>

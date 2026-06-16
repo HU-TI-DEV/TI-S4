@@ -1,0 +1,158 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <world name="room">
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <!-- GUI for Visualizing Lidar Beams -->
+    <!-- <gui fullscreen="0">
+      <plugin filename="GzScene3D" name="3D View">
+        <gz-gui>
+          <title>3D View</title>
+          <property type="bool" key="showTitleBar">false</property>
+          <property type="string" key="state">docked</property>
+        </gz-gui>
+        <engine>ogre2</engine>
+        <scene>scene</scene>
+        <ambient_light>0.4 0.4 0.4</ambient_light>
+        <background_color>0.8 0.8 0.8</background_color>
+        <camera_pose>0 0 6 0 0 0</camera_pose>
+      </plugin>
+
+      <plugin filename="VisualizeLidar" name="Visualize Lidar">
+        <gz-gui>
+          <property type="bool" key="showTitleBar">true</property>
+          <property type="string" key="state">docked</property>
+          <property type="string" key="width">5</property>
+          <property type="string" key="height">5</property>
+        </gz-gui>
+      </plugin>
+    </gui> -->
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.8 0.8 0.8 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Include FLIP here when needed -->
+    
+    <include>
+			<uri>file:///workspace/prototypes/camera/FLIP.sdf</uri>
+      <name>FLIP</name>
+      <pose>0 0 0 0 0 0</pose>
+    </include>
+
+    <!-- Walls -->
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x12x3_5</uri>
+      <name>frontWall</name>
+      <pose>4.2 0 1.75 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x12x3_5</uri>
+      <name>backWall</name>
+      <pose>-4.2 0 1.75 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x5x3_5</uri>
+      <name>leftWall</name>
+      <pose>0 -3.9 1.75 0 0 1.5708</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/walls/verticalWall0_3x5x3_5</uri>
+      <name>rightWall</name>
+      <pose>0 3.9 1.75 0 0 1.5708</pose>
+    </include>
+
+
+    <!-- Objects -->
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/redCube1x1x1</uri>
+      <name>redCube</name>
+      <pose>3 2 0.5 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/greenCylinder0_5x1</uri>
+      <name>greenCylinder</name>
+      <pose>-2 -3 0.5 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/blueBox1x2x1</uri>
+      <name>blueBox</name>
+      <pose>3 -2 0.5 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/yellowBox1_5x1x1_5</uri>
+      <name>yellowBox</name>
+      <pose>-3 2 0.75 0 0 0</pose>
+    </include>
+
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/pinkBall0_6</uri>
+      <name>pinkBall</name>
+      <pose>1 3 0.6 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>file:///workspace/models/gazebo/obstacles/shapes/orangeBox0_8x0_8x0_8</uri>
+      <name>orangeBox</name>
+      <pose>-2 0 0.4 0 0 0</pose>
+    </include>
+    
+  </world>
+</sdf>

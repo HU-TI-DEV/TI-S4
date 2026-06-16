@@ -1,0 +1,22 @@
+@startuml
+partition "UC01 Autonoom Manouvreren" {
+    start
+    :Gebruiker zet autonome-modus aan;
+    :Gebruiker krijgt bevestiging;
+    
+    repeat
+        :Robot scant omgeving;
+        if (Pad vrij of past tussen objecten?) then (ja)
+            -[#green]->
+        else (nee)
+            -[#red]->
+            :Zoekt route om obstakel heen;
+            :Manoeuvreert om obstakel heen;
+        endif
+        :Robot rijdt door;
+    backward:Blijf scannen;
+    repeat while (Autonome-modus nog aan?) is (ja) -[#green]->
+    -[#red]->
+    stop
+}
+@enduml

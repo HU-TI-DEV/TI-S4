@@ -1,0 +1,17 @@
+@startuml
+partition "UC05 Data Opslaan" {
+    start
+    repeat
+        :Meet data uit sensoren;
+        if (Sensoren oververhit of opslag vol?) then (ja)
+            -[#green]->
+            :Geef waarschuwing;
+        else (nee)
+            -[#red]->
+            :Sla data op computer op;
+            :Geef data weer op computer;
+            :Stuur data door naar applicatie;
+        endif
+    repeat while (Systeem aan?) -[#green]->
+}
+@enduml

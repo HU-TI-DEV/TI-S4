@@ -1,4 +1,4 @@
-<img src = ../../images/teamlogo.png align="right" width="135">
+<img src = ../StylisticFeatures/teamlogo.png align="right" width="135">
 
 # Contributions
 `The following text has been written by Yannick Hogetoorn`

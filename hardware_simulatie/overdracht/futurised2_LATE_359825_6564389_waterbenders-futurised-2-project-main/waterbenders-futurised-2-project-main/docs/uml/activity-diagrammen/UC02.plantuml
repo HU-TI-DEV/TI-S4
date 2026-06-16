@@ -1,0 +1,24 @@
+@startuml
+partition "UC02 Objecten Detecteren" {
+    start
+    
+    repeat
+        :Robot scant omgeving;
+        if (Object gedetecteerd?) then (ja)
+            -[#green]->
+            fork
+                :Thermo-sensor: Bepaal of het leeft;
+            fork again
+                :LiDAR-sensor: Bepaal formaat;
+            fork again
+                :Ultra-wide camera: Bepaal type object;
+            end fork
+            :Sla gescand object op;
+        else (nee)
+            -[#red]->
+        endif
+    repeat while (Systeem actief?) is (ja) -[#green]->
+    -[#red]->
+    stop
+}
+@enduml

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+
+  <model name="airpressure_sensor">
+
+    <static>true</static>
+
+    <link name="link">
+
+      <sensor name="air_pressure_sensor" type="air_pressure">
+
+        <always_on>1</always_on>
+        <update_rate>10</update_rate>
+
+        <air_pressure>
+          <topic>/air_pressure</topic>
+        </air_pressure>
+
+      </sensor>
+
+    </link>
+
+  </model>
+
+</sdf>

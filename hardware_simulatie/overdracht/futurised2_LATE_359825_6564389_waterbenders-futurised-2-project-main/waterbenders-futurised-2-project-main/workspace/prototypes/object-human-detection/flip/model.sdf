@@ -1,0 +1,274 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <model name='FLIP' canonical_link='chassis'>
+    <pose>0 0 0 0 0 0</pose>
+
+    <link name='chassis'>
+      <pose relative_to='__model__'>0 0 0.625 0 0 0</pose>
+      <inertial>
+        <pose>0 0 0 0 0 0</pose>
+        <mass>450.0</mass>
+        <inertia>
+          <ixx>62.438</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>131.438</iyy>
+          <iyz>0</iyz>
+          <izz>111.188</izz>
+        </inertia>
+      </inertial>
+      <visual name='visual'>
+        <geometry><box><size>1.55 0.75 1.05</size></box></geometry>
+        <material>
+          <ambient>0.0 0.0 1.0 1</ambient>
+          <diffuse>0.0 0.0 1.0 1</diffuse>
+          <specular>0.0 0.0 1.0 1</specular>
+        </material>
+      </visual>
+      <collision name='collision'>
+        <geometry><box><size>1.55 0.75 1.05</size></box></geometry>
+      </collision>
+      <sensor name="imu_sensor" type="imu">
+        <always_on>1</always_on>
+        <update_rate>20</update_rate>
+        <visualize>true</visualize>
+        <topic>imu</topic>
+      </sensor>
+      <sensor name="gpu_lidar" type="gpu_lidar">
+        <pose>0.6 0 0.3 0 0 0</pose>
+        <always_on>1</always_on>
+        <update_rate>10</update_rate>
+        <lidar>
+          <scan>
+            <horizontal>
+              <samples>640</samples>
+              <resolution>1</resolution>
+              <min_angle>-1.396263</min_angle>
+              <max_angle>1.396263</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>12</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.261779</min_angle>
+              <max_angle>0.261779</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.08</min>
+            <max>10.0</max>
+            <resolution>0.01</resolution>
+          </range>
+        </lidar>
+        <visualize>true</visualize>
+        <topic>lidar</topic>
+      </sensor>
+    </link>
+
+    <!-- =============includes + plugin + joint van sensoren=========== -->
+    <!-- THERMAL CAMERA -->
+    <include>
+      <uri>file:///workspace/models/gazebo/plugins/thermal_camera.sdf</uri>
+      <name>thermal_cam_instance</name>
+      <pose relative_to="chassis">0.3 0 -0.2 0 0 0</pose>
+    </include>
+
+    <!-- thermal camera aan chassis -->
+    <joint name="thermal_camera_fixed" type="fixed">
+      <parent>chassis</parent>
+      <child>thermal_cam_instance::thermal_body</child>
+    </joint>
+
+    <!-- FRONT CAMERA -->
+    <include>
+      <uri>file:///workspace/models/gazebo/plugins/front_camera.sdf</uri>
+      <name>front_camera</name>
+      <pose>0.9 0 1.2 0 0 0</pose>
+    </include>
+
+    <joint name="front_cam_joint" type="fixed">
+      <parent>chassis</parent>
+      <child>front_camera::front_camera_link</child>
+    </joint>
+
+    <!-- REAR CAMERA -->
+    <include>
+      <uri>file:///workspace/models/gazebo/plugins/rear_camera.sdf</uri>
+      <name>rear_camera</name>
+      <pose>-0.9 0 1.2 0 0 0</pose>
+    </include>
+
+    <joint name="rear_cam_joint" type="fixed">
+      <parent>chassis</parent>
+      <child>rear_camera::rear_camera_link</child>
+    </joint>
+
+
+    <link name='left_back_wheel'>
+      <pose relative_to="chassis">-0.533 0.475 -0.383 -1.5707 0 0</pose>
+      <inertial><mass>5</mass><inertia><ixx>0.694</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1.460</iyy><iyz>0</iyz><izz>1.235</izz></inertia></inertial>
+      <visual name='visual'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></visual>
+      <collision name='collision'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></collision>
+    </link>
+
+    <link name='left_middle_wheel'>
+      <pose relative_to="chassis">0 0.475 -0.383 -1.5707 0 0</pose>
+      <inertial><mass>5</mass><inertia><ixx>0.694</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1.460</iyy><iyz>0</iyz><izz>1.235</izz></inertia></inertial>
+      <visual name='visual'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></visual>
+      <collision name='collision'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></collision>
+    </link>
+
+    <link name='right_back_wheel'>
+      <pose relative_to="chassis">-0.533 -0.475 -0.383 -1.5707 0 0</pose>
+      <inertial><mass>5</mass><inertia><ixx>0.694</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1.460</iyy><iyz>0</iyz><izz>1.235</izz></inertia></inertial>
+      <visual name='visual'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></visual>
+      <collision name='collision'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></collision>
+    </link>
+
+    <link name='right_middle_wheel'>
+      <pose relative_to="chassis">0 -0.475 -0.383 -1.5707 0 0</pose>
+      <inertial><mass>5</mass><inertia><ixx>0.694</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1.460</iyy><iyz>0</iyz><izz>1.235</izz></inertia></inertial>
+      <visual name='visual'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></visual>
+      <collision name='collision'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></collision>
+    </link>
+
+    <link name='left_front_steer_link'>
+      <pose relative_to="chassis">0.533 0.475 -0.383 0 0 0</pose>
+      <inertial><mass>1.0</mass><inertia><ixx>0.01</ixx><ixy>0</ixy><ixz>0</ixz><iyy>0.01</iyy><iyz>0</iyz><izz>0.01</izz></inertia></inertial>
+    </link>
+
+    <link name='right_front_steer_link'>
+      <pose relative_to="chassis">0.533 -0.475 -0.383 0 0 0</pose>
+      <inertial><mass>1.0</mass><inertia><ixx>0.01</ixx><ixy>0</ixy><ixz>0</ixz><iyy>0.01</iyy><iyz>0</iyz><izz>0.01</izz></inertia></inertial>
+    </link>
+
+    <link name='left_front_wheel'>
+      <pose relative_to="left_front_steer_link">0 0 0 -1.5707 0 0</pose>
+      <inertial><mass>5</mass><inertia><ixx>0.694</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1.460</iyy><iyz>0</iyz><izz>1.235</izz></inertia></inertial>
+      <visual name='visual'>
+        <geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry>
+        <!-- <material><ambient>1.0 0.0 0.0 1</ambient><diffuse>1.0 0.0 0.0 1</diffuse><specular>1.0 0.0 0.0 1</specular></material> -->
+      </visual>
+      <collision name='collision'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></collision>
+    </link>
+
+    <link name='right_front_wheel'>
+      <pose relative_to="right_front_steer_link">0 0 0 -1.5707 0 0</pose>
+      <inertial><mass>5</mass><inertia><ixx>0.694</ixx><ixy>0</ixy><ixz>0</ixz><iyy>1.460</iyy><iyz>0</iyz><izz>1.235</izz></inertia></inertial>
+      <visual name='visual'>
+        <geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry>
+        <!-- <material><ambient>1.0 0.0 0.0 1</ambient><diffuse>1.0 0.0 0.0 1</diffuse><specular>1.0 0.0 0.0 1</specular></material> -->
+      </visual>
+      <collision name='collision'><geometry><cylinder><radius>0.242</radius><length>0.2</length></cylinder></geometry></collision>
+    </link>
+
+
+
+    <!-- Wheel joints -->
+    <joint name="left_front_wheel_joint" type="revolute">
+    <parent>chassis</parent>
+    <child>left_front_wheel</child>
+    <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <joint name="left_middle_wheel_joint" type="revolute">
+    <parent>chassis</parent>
+    <child>left_middle_wheel</child>
+    <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <joint name="left_back_wheel_joint" type="revolute">
+    <parent>chassis</parent>
+    <child>left_back_wheel</child>
+    <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <joint name="right_front_wheel_joint" type="revolute">
+    <parent>chassis</parent>
+    <child>right_front_wheel</child>
+    <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <joint name="right_middle_wheel_joint" type="revolute">
+    <parent>chassis</parent>
+    <child>right_middle_wheel</child>
+    <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+    <joint name="right_back_wheel_joint" type="revolute">
+    <parent>chassis</parent>
+    <child>right_back_wheel</child>
+    <axis><xyz>0 0 1</xyz></axis>
+    </joint>
+
+
+    <!-- Diff Drive Plugin -->
+    <plugin
+    filename="gz-sim-diff-drive-system"
+    name="gz::sim::systems::DiffDrive">
+
+    <!-- all 6 wheels driven -->
+    <left_joint>left_back_wheel_joint</left_joint>
+    <left_joint>left_middle_wheel_joint</left_joint>
+    <left_joint>left_front_wheel_joint</left_joint>
+
+    <right_joint>right_back_wheel_joint</right_joint>
+    <right_joint>right_middle_wheel_joint</right_joint>
+    <right_joint>right_front_wheel_joint</right_joint>
+
+    <wheel_separation>0.95</wheel_separation>
+    <wheel_radius>0.242</wheel_radius>
+
+    <topic>/model/FLIP/cmd_vel</topic>
+    <odom_topic>/model/FLIP/odometry</odom_topic>
+    <tf_topic>/model/FLIP/tf</tf_topic>
+
+    <frame_id>odom</frame_id>
+    <child_frame_id>chassis</child_frame_id>
+
+    </plugin>
+
+    <!-- Moving Forward-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">16777235</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/model/FLIP/cmd_vel">
+            linear: {x: 0.5}, angular: {z: 0.0}
+        </output>
+    </plugin>
+
+    <!-- Moving Backward-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">16777237</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/model/FLIP/cmd_vel">
+            linear: {x: -0.5}, angular: {z: 0.0}
+        </output>
+    </plugin>
+
+    <!-- Moving left-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">16777234</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/model/FLIP/cmd_vel">
+            linear: {x: 0.0}, angular: {z: 1.0}
+        </output>
+    </plugin>
+
+    <!-- Moving right-->
+    <plugin filename="gz-sim-triggered-publisher-system"
+            name="gz::sim::systems::TriggeredPublisher">
+        <input type="gz.msgs.Int32" topic="/keyboard/keypress">
+            <match field="data">16777236</match>
+        </input>
+        <output type="gz.msgs.Twist" topic="/model/FLIP/cmd_vel">
+            linear: {x: 0.0}, angular: {z: -1.0}
+        </output>
+    </plugin>
+  </model>
+</sdf>

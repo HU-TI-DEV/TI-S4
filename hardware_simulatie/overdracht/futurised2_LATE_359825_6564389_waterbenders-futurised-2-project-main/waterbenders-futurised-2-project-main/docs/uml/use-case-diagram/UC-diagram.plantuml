@@ -1,0 +1,33 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Brandweer" as br
+actor "Product Owner" as po 
+actor "Futurised" as fu
+
+rectangle Flip {
+  usecase "UC01 - Autonoom Manouvreren" as UC1
+  usecase "UC02 - Objecten Detecteren" as UC2
+  usecase "UC03 - Plattegrond Generen" as UC3
+  usecase "UC04 - Handmatige Besturing" as UC4
+  usecase "UC05 - Data Beheren/Inzien" as UC5
+}
+' Brandweer kiest modus
+br --> UC1
+br --> UC4
+' Brandweer bekijkt plattegrond
+br --> UC3
+
+'Om Autonoom te Manoeuvreren (UC1), 
+'heeft de robot de data van Objecten Detecteren (UC2) nodig.
+UC1 ..> UC2 : <<include>>
+'objecten nodig voor een kaart
+UC3 ..> UC2 : <<include>>
+' Data van detecteerde objecten moet opgeslagen worden 
+UC2 ..> UC5 : <<include>>
+
+' Beheerders van de data
+po -right-> UC5
+fu -right-> UC5
+@enduml

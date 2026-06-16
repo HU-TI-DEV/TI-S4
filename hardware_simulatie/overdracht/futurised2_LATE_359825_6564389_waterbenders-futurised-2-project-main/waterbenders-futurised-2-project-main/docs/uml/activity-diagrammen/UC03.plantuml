@@ -1,0 +1,17 @@
+@startuml
+partition "UC03 Plattegrond Genereren" {
+    start
+    :Ontvang objectdata (UC02);
+    :Koppel correcte vorm aan object;
+    :Bepaal positie van object;
+    :Sla locatie en type op in plattegrond;
+    if (Verbinding met pc?) then (ja)
+        -[#green]->
+        :Toon plattegrond op pc;
+    else (nee)
+        -[#red]->
+        :Log foutmelding: Data niet verzonden;
+    endif
+    stop
+}
+@enduml

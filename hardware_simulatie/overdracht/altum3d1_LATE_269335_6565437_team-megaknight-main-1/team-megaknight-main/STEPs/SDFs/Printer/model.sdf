@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="remeshes_gazebo">
+    <static>true</static>
+    <link name="Printer_link">
+      <pose>0.000000 0.000000 0.000000 0.000000 0.000000 0.000000</pose>
+      <visual name="Printer_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/Printer.obj</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="Printer_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/Printer_col.obj</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

@@ -92,7 +92,7 @@ Gazebo must already be running with the digger world loaded and playing, otherwi
 ---
 
 ## Additional Documentation
-For a detailed explanation of the project layer architecture and how the interface fits into the rest of the system, see: [Architecture](../../docs/project-items/project-style/architecture.md)
+For a detailed explanation of the project layer architecture and how the interface fits into the rest of the system, see: [Architecture](https://github.com/2025-TICT-TV2SE4-24-3-V/team-zandbakje/blob/main/documentation/project-style/architecture.md)
 
 For behaviour manager details, see: [Behaviour Manager](../behaviour_manager/README.md)
 

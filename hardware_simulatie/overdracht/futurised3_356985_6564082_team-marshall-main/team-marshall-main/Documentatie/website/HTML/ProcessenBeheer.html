@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processen beheer en verantwoording</title>
+
+    <link rel="stylesheet" href="CSS_/main.css"> 
+    <link rel="stylesheet" href="Ham_menu/Ham.css">
+    <script defer src="Ham_menu/Ham.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Processen</h1>
+    </header>
+
+    <main>
+        <section id="introductie">
+            <h2>Introductie</h2>
+            <p>Hieronder vind je een sneak-peek van de processen en verantwoording per groepslid. Klik op "Lees meer" om het volledige verslag te lezen.</p>
+        </section>
+
+        <div class="processen-grid">
+            
+            <section class="card-clickable">
+                <h2>Aimée</h2>
+                <p class="sneak-peek">Hier staat de documentatie en uitleg over het AStar Algoritme, Software Architectuur en Projectbeheer.</p>
+                <a href="Processen/aimee.html" class="read-more-btn">Lees meer &rarr;</a>
+            </section>
+          
+            <section class="card-clickable">
+                <h2>Axl</h2>
+                <p class="sneak-peek">Axl heeft een van de testomgevingen in Gazebo opgezet, onderzoek gedaan naar de Dijkstra- en A*-algoritmes, en de pathfinding met het A*-algoritme gebouwd (met een zichtbare route in RViz). Daarnaast heeft hij de botsingdetectie samengevoegd met de pathfinding, zodat de robot afremt voor obstakels.</p>
+                <a href="Processen/axl.html" class="read-more-btn">Lees meer &rarr;</a>
+            </section>
+
+            <section class="card-clickable">
+                <h2>Casper</h2>
+                <p class="sneak-peek">Casper heeft zich bezig gehouden met de launch configuratie, mapper, RViz visualisatie en de TF broadcaster van robot Flip. Daarnaast heeft hij de beginfase van de explorer geschreven en veel onderzoek gedaan naar SLAM en Lidar mapping.</p>
+                <a href="Processen/casper.html" class="read-more-btn">Lees meer &rarr;</a>
+            </section>
+          
+            <section class="card-clickable">
+                <h2>Jochem</h2>
+                <p class="sneak-peek">Jochem heeft zich bezig gehouden met verschillende aspecten, voornamelijk op het vlak van onderzoek doen naar machine learning en het pathfinding met het dijkstra algoritme, world building en autonoom rijden door middel van de PID.</p>
+                <a href="Processen/jochem.html" class="read-more-btn">Lees meer &rarr;</a>
+            </section>
+
+            <section class="card-clickable">
+                <h2>Nick</h2>
+                <p class="sneak-peek">Nick heeft de sensoren en de complete simulatieomgeving van robot Flip in Gazebo geconfigureerd en opgebouwd. Daarnaast heeft hij een betrouwbare C++ botsingdetectie met noodstop geschreven, een OpenCV-node voor geometrische deurendetectie ontwikkeld en ondersteuning geboden bij de Scrum-planning en de technische architectuur.</p>
+                <a href="Processen/nick.html" class="read-more-btn">Lees meer &rarr;</a>
+            </section>
+        </div>
+
+        <section class="tabel-sectie">
+            <h2>Taakverdeling & Verantwoording</h2>
+            <p class="tabel-intro">Hieronder is een overzicht te vinden van de rollen en primaire verantwoordelijkheden per groepslid.</p>
+            
+            <div class="tabel-container">
+                <table class="raster-tabel">
+                    <thead>
+                        <tr>
+                            <th>Groepslid</th>
+                            <th>Rol</th>
+                            <th>Taken</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Aimée</strong></td>
+                            <td>Scrummaster</td>
+                            <td>Flip simuleren, Pathfinding algortime, Installatie, notuleren/ taakverdeling, planboard, sprint verslag, Overdracht website en software architectuur.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Axl</strong></td>
+                            <td>Software developer</td>
+                            <td>Testomgeving Gazebo, onderzoek Dijkstra & A*, pathfinding (A*), zichtbare route in RViz, botsingdetectie samenvoegen met pathfinding, documentatie.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Casper</strong></td>
+                            <td>Techlead</td>
+                            <td>Launch configuratie, Mapper (Lidar/SLAM), RViz visualisatie, TF broadcaster, beginfase Explorer.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Jochem</strong></td>
+                            <td>Software developer</td>
+                            <td>PID, Dijkstra algoritme, world building, Machine Learning, overdracht website(HTML/CSS/JS,React) en software architectuur.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Nick</strong></td>
+                            <td>Software developer</td>
+                            <td>Configureren en opbouwen van sensoren en complete Gazebo-simulatieomgeving. C++ botsingdetectie met noodstop, OpenCV-node voor geometrische deurendetectie, en ondersteuning bij Scrum-planning en technische architectuur. |</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

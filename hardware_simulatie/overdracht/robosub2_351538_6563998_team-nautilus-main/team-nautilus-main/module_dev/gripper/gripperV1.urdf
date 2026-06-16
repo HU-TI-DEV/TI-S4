@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<robot name="gripper">
+
+  <material name="grey"><color rgba="0.5 0.5 0.5 1.0"/></material>
+  <material name="red"><color rgba="1.0 0.2 0.2 1.0"/></material>
+  <material name="blue"><color rgba="0.2 0.2 1.0 1.0"/></material>
+  <material name="green"><color rgba="0.2 1.0 0.2 1.0"/></material>
+
+  <link name="base">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry><box size="0.0615 0.0025 0.0075"/></geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+  
+  <link name="firstFinger">
+    <visual>
+      <origin xyz="0.015375 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.03075 0.005 0.005"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <visual>
+      <origin xyz="0.0076875 0.0695 0" rpy="0 0 -0.1100"/>
+      <geometry><box size="0.002 0.14 0.005"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <visual>
+      <origin xyz="0.0230625 0.0695 0" rpy="0 0 0.1100"/>
+      <geometry><box size="0.002 0.14 0.005"/></geometry>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <origin xyz="0.015375 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.03075 0.005 0.005"/></geometry>
+    </collision>
+  </link>
+
+  <link name="secondFinger">
+    <visual>
+      <origin xyz="-0.015375 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.03075 0.005 0.005"/></geometry>
+      <material name="red"/>
+    </visual>
+    <visual>
+      <origin xyz="-0.0076875 0.0695 0" rpy="0 0 0.1100"/>
+      <geometry><box size="0.002 0.14 0.005"/></geometry>
+      <material name="red"/>
+    </visual>
+    <visual>
+      <origin xyz="-0.0230625 0.0695 0" rpy="0 0 -0.1100"/>
+      <geometry><box size="0.002 0.14 0.005"/></geometry>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <origin xyz="-0.015375 0 0" rpy="0 0 0"/>
+      <geometry><box size="0.03075 0.005 0.005"/></geometry>
+    </collision>
+  </link>
+
+  <link name="firstHinge">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry><cylinder radius="0.0025" length="0.01"/></geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+  
+  <link name="secondHinge">
+    <visual>
+      <origin xyz="0 0 0"/>
+      <geometry><cylinder radius="0.0025" length="0.01"/></geometry>
+      <material name="green"/>
+    </visual>
+  </link>
+
+  <!-- joints -->
+  <joint name="baseToFirstHinge" type="fixed">
+    <parent link="base"/>
+    <child link="firstHinge"/>
+    <origin xyz="-0.03075 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="baseToSecondHinge" type="fixed">
+    <parent link="base"/>
+    <child link="secondHinge"/>
+    <origin xyz="0.03075 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="firstFingerToFirstHinge" type="revolute">
+    <parent link="firstHinge"/>
+    <child link="firstFinger"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.10994" upper="0.67546" effort="10" velocity="1.0"/>
+  </joint>
+
+  <joint name="secondFingerToSecondHinge" type="revolute">
+    <parent link="secondHinge"/>
+    <child link="secondFinger"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-0.67546" upper="0.10994" effort="10" velocity="1.0"/>
+  </joint>
+
+</robot>

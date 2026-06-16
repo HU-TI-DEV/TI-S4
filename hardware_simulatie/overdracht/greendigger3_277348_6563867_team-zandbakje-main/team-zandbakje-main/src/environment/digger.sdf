@@ -1,0 +1,423 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+<!-- 
+ 	Author: Replitard
+	Contributors: GrijzePanda, Ocarian, ShelleKjell
+-->
+	<model name="digger" canonical_link="chassis">
+		<pose>0 0 0 0 0 0</pose>
+		<static>false</static>
+		<!-- Main platform -->
+		<link name="chassis">
+			<pose>0 0 0.55 0 0 0</pose>
+			<inertial>
+				<mass>200.0</mass>
+				<inertia>
+					<ixx>50.0</ixx>
+					<iyy>220.0</iyy>
+					<izz>250.0</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<collision name="chassis_collision">
+				<geometry>
+					<box>
+						<size>4.5 2.0 0.3</size>
+					</box>
+				</geometry>
+			</collision>
+			<visual name="chassis_visual">
+				<geometry>
+					<box>
+						<size>4.5 2.0 0.3</size>
+					</box>
+				</geometry>
+			</visual>
+			<!-- IMU -->
+			<sensor name="imu_sensor" type="imu">
+				<always_on>true</always_on>
+				<update_rate>50</update_rate>
+				<visualize>true</visualize>
+				<pose>0 0 0 0 0 0</pose>
+				<topic>/digger/imu</topic>
+			</sensor>
+			<!-- Camera -->
+			<sensor name="front_camera" type="camera">
+				<pose>2.2 0 0.8 0 0 0</pose>
+				<update_rate>1</update_rate>
+				<always_on>true</always_on>
+				<visualize>true</visualize>
+				<topic>/digger/camera</topic>
+				<camera>
+					<horizontal_fov>1.047</horizontal_fov>
+					<image>
+						<width>640</width>
+						<height>480</height>
+						<format>R8G8B8</format>
+					</image>
+					<clip>
+						<near>0.1</near>
+						<far>100</far>
+					</clip>
+				</camera>
+			</sensor>
+			<!-- GPU Lidar -->
+			<sensor name="lidar_sensor" type="gpu_lidar">
+				<pose>1.8 0 1.0 0 0 0</pose>
+				<update_rate>1</update_rate>
+				<topic>/digger/lidar</topic>
+				<always_on>true</always_on>
+				<visualize>true</visualize>
+				<lidar>
+					<scan>
+						<horizontal>
+							<samples>720</samples>
+							<resolution>1</resolution>
+							<min_angle>-3.14</min_angle>
+							<max_angle>3.14</max_angle>
+						</horizontal>
+					</scan>
+					<range>
+						<min>0.2</min>
+						<max>50</max>
+						<resolution>0.01</resolution>
+					</range>
+				</lidar>
+			</sensor>
+			<!-- GPS -->
+			<sensor name="gps_sensor" type="navsat">
+				<pose>0 0 1.0 0 0 0</pose>
+				<always_on>true</always_on>
+				<update_rate>1</update_rate>
+				<topic>/digger/gps</topic>
+			</sensor>
+			<sensor name="contact_sensor_chassis" type="contact">
+				<always_on>true</always_on>
+				<update_rate>1</update_rate>
+				<topic>/digger/chassis_contact</topic>
+				<contact>
+					<collision>chassis_collision</collision>
+				</contact>
+			</sensor>
+		</link>
+		<link name="counter_weight">
+			<pose relative_to="chassis">0.0 -0.9 0.4 0 0 0</pose>
+			<inertial>
+				<mass>80.0</mass>
+				<inertia>
+					<ixx>13.3333</ixx>
+					<iyy>13.3333</iyy>
+					<izz>13.3333</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<collision name="counter_weight_collision">
+				<geometry>
+					<box>
+						<size>1.6 1.3 1.0</size>
+					</box>
+				</geometry>
+			</collision>
+			<visual name="counter_weight_visual">
+				<geometry>
+					<box>
+						<size>1.6 1.3 1.0</size>
+					</box>
+				</geometry>
+			</visual>
+		</link>
+		<link name="wheel_front_left">
+			<pose>1.55 1.13 0.40 -1.5708 0 0</pose>
+			<inertial>
+				<mass>25.0</mass>
+				<inertia>
+					<ixx>8.0</ixx>
+					<iyy>8.0</iyy>
+					<izz>8.0</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<collision name="wheel_front_left_collision">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>2.0</mu>
+							<mu2>2.0</mu2>
+						</ode>
+					</friction>
+				</surface>
+			</collision>
+			<visual name="wheel_front_left_visual">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<material>
+					<ambient>0.35 0.28 0.20 1</ambient>
+					<diffuse>0.55 0.44 0.30 1</diffuse>
+					<specular>0.05 0.05 0.05 1</specular>
+				</material>
+			</visual>
+			<!-- Front Left Wheel Contact Sensor -->
+			<sensor name="contact_sensor_fl" type="contact">
+				<always_on>true</always_on>
+				<update_rate>1</update_rate>
+				<topic>/digger/wheel_fl_contact</topic>
+				<contact>
+					<collision>wheel_front_left_collision</collision>
+				</contact>
+			</sensor>
+		</link>
+		<!-- Front right wheel -->
+		<link name="wheel_front_right">
+			<pose>1.55 -1.13 0.40 -1.5708 0 0</pose>
+			<inertial>
+				<mass>25.0</mass>
+				<inertia>
+					<ixx>8.0</ixx>
+					<iyy>8.0</iyy>
+					<izz>8.0</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<collision name="wheel_front_right_collision">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>2.0</mu>
+							<mu2>2.0</mu2>
+						</ode>
+					</friction>
+				</surface>
+			</collision>
+			<visual name="wheel_front_right_visual">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<material>
+					<ambient>0.60 0.00 0.00 1</ambient>
+					<diffuse>1.00 0.00 0.00 1</diffuse>
+					<specular>0.05 0.05 0.05 1</specular>
+				</material>
+			</visual>
+			<!-- Front Right Wheel Contact Sensor -->
+			<sensor name="contact_sensor_fr" type="contact">
+				<always_on>true</always_on>
+				<update_rate>1</update_rate>
+				<topic>/digger/wheel_fr_contact</topic>
+				<contact>
+					<collision>wheel_front_right_collision</collision>
+				</contact>
+			</sensor>
+		</link>
+		<!-- Rear left wheel -->
+		<link name="wheel_rear_left">
+			<pose>-1.55 1.13 0.40 -1.5708 0 0</pose>
+			<inertial>
+				<mass>25.0</mass>
+				<inertia>
+					<ixx>8.0</ixx>
+					<iyy>8.0</iyy>
+					<izz>8.0</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<collision name="wheel_rear_left_collision">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>2.0</mu>
+							<mu2>2.0</mu2>
+						</ode>
+					</friction>
+				</surface>
+			</collision>
+			<visual name="wheel_rear_left_visual">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<material>
+					<ambient>0.60 0.00 0.00 1</ambient>
+					<diffuse>1.00 0.00 0.00 1</diffuse>
+					<specular>0.05 0.05 0.05 1</specular>
+				</material>
+			</visual>
+			<!-- Rear Left Wheel Contact Sensor -->
+			<sensor name="contact_sensor_rl" type="contact">
+				<always_on>true</always_on>
+				<update_rate>1</update_rate>
+				<topic>/digger/wheel_rl_contact</topic>
+				<contact>
+					<collision>wheel_rear_left_collision</collision>
+				</contact>
+			</sensor>
+		</link>
+		<!-- Rear right wheel -->
+		<link name="wheel_rear_right">
+			<pose>-1.55 -1.13 0.40 -1.5708 0 0</pose>
+			<inertial>
+				<mass>25.0</mass>
+				<inertia>
+					<ixx>8.0</ixx>
+					<iyy>8.0</iyy>
+					<izz>8.0</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<collision name="wheel_rear_right_collision">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>2.0</mu>
+							<mu2>2.0</mu2>
+						</ode>
+					</friction>
+				</surface>
+			</collision>
+			<visual name="wheel_rear_right_visual">
+				<geometry>
+					<cylinder>
+						<radius>0.4</radius>
+						<length>0.25</length>
+					</cylinder>
+				</geometry>
+				<material>
+					<ambient>0.60 0.00 0.00 1</ambient>
+					<diffuse>1.00 0.00 0.00 1</diffuse>
+					<specular>0.05 0.05 0.05 1</specular>
+				</material>
+			</visual>
+			<!-- Rear Right Wheel Contact Sensor -->
+			<sensor name="contact_sensor_rr" type="contact">
+				<always_on>true</always_on>
+				<update_rate>1</update_rate>
+				<topic>/digger/wheel_rr_contact</topic>
+				<contact>
+					<collision>wheel_rear_right_collision</collision>
+				</contact>
+			</sensor>
+		</link>
+		<!-- front left wheel -->
+		<joint name="joint_front_left" type="revolute">
+			<pose relative_to="wheel_front_left" />
+			<parent>chassis</parent>
+			<child>wheel_front_left</child>
+			<axis>
+				<xyz expressed_in="__model__">0 1 0</xyz>
+				<limit>
+					<lower>-1.79769e+308</lower>
+					<upper>1.79769e+308</upper>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="joint_front_right" type="revolute">
+			<pose relative_to="wheel_front_right" />
+			<parent>chassis</parent>
+			<child>wheel_front_right</child>
+			<axis>
+				<xyz expressed_in="__model__">0 1 0</xyz>
+				<limit>
+					<lower>-1.79769e+308</lower>
+					<upper>1.79769e+308</upper>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="joint_rear_left" type="revolute">
+			<pose relative_to="wheel_rear_left" />
+			<parent>chassis</parent>
+			<child>wheel_rear_left</child>
+			<axis>
+				<xyz expressed_in="__model__">0 1 0</xyz>
+				<limit>
+					<lower>-1.79769e+308</lower>
+					<upper>1.79769e+308</upper>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="joint_rear_right" type="revolute">
+			<pose relative_to="wheel_rear_right" />
+			<parent>chassis</parent>
+			<child>wheel_rear_right</child>
+			<axis>
+				<xyz expressed_in="__model__">0 1 0</xyz>
+				<limit>
+					<lower>-1.79769e+308</lower>
+					<upper>1.79769e+308</upper>
+				</limit>
+			</axis>
+		</joint>
+		<joint name="counter_weight_joint" type="fixed">
+			<parent>chassis</parent>
+			<child>counter_weight</child>
+		</joint>
+		<include>
+			<name>mounted_arm</name>
+			<uri>file://arm.sdf</uri>
+			<pose relative_to="chassis">0.0 0.5 0.2 0 0 0</pose>
+		</include>
+		<joint name="mounted_arm_joint" type="fixed">
+			<parent>chassis</parent>
+			<child>mounted_arm::base_link</child>
+		</joint>
+		<plugin filename="gz-sim-diff-drive-system" name="gz::sim::systems::DiffDrive">
+			<left_joint>joint_front_left</left_joint>
+			<left_joint>joint_rear_left</left_joint>
+			<right_joint>joint_front_right</right_joint>
+			<right_joint>joint_rear_right</right_joint>
+			<wheel_separation>2.2</wheel_separation>
+			<wheel_radius>0.4</wheel_radius>
+			<topic>/model/digger/cmd_vel</topic>
+			<max_acceleration>20.0</max_acceleration>
+			<min_acceleration>-20.0</min_acceleration>
+			<max_velocity>8.0</max_velocity>
+			<min_velocity>-8.0</min_velocity>
+			<odom_topic>/model/digger/odometry</odom_topic>
+			<tf_topic>/model/digger/tf</tf_topic>
+			<odom_publish_frequency>30</odom_publish_frequency>
+		</plugin>
+	</model>
+</sdf>

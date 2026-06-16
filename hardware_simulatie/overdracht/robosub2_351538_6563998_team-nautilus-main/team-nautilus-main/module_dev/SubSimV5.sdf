@@ -1,0 +1,770 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+    <world name="robosubSimulationV4">
+
+        <gravity>0 0 0</gravity>
+
+        <light name="sun" type="directional">
+            <pose>0 0 10 0 0 0</pose>
+            <diffuse>1 1 1 1</diffuse>
+            <specular>0.5 0.5 0.5 1</specular>
+            <direction>0.1 0.1 -1</direction>
+            <cast_shadows>true</cast_shadows>
+        </light>
+
+        <model name="robosub">
+
+            <link name="robosubBody">
+                <pose>0 0 0.1 0 0 0</pose>
+                <visual name="visual">
+                    <geometry><box><size>0.4 0.2 0.2</size></box></geometry>
+                    <material>
+                        <ambient>0.5 0.5 0.5 1</ambient>
+                        <diffuse>0.5 0.5 0.5 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>0.49 0.29 0.19</size></box></geometry>
+                </collision>
+            </link>
+
+            <link name="base">
+                <pose>0 0 -0.0206 0 0 0</pose>
+                <visual name="visual">
+                    <geometry><box><size>0.01 0.01 0.0412</size></box></geometry>
+                    <material>
+                        <ambient>1 0.2 0.2 1</ambient>
+                        <diffuse>1 0.2 0.2 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>0.01 0.01 0.0412</size></box></geometry>
+                </collision>
+            </link>
+
+            <link name="upperarm">
+                <pose>0 0 -0.0412 0 0 0</pose>
+                <visual name="visual1">
+                    <pose>-0.104 0 0 0 0 0</pose>
+                    <geometry><box><size>0.208 0.01 0.01</size></box></geometry>
+                    <material>
+                        <ambient>0.2 0.2 1 1</ambient>
+                        <diffuse>0.2 0.2 1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision1">
+                    <pose>-0.104 0 0 0 0 0</pose>
+                    <geometry><box><size>0.206 0.009 0.009</size></box></geometry>
+                </collision>
+                <visual name="visual2">
+                    <pose>-0.208 0 -0.0146 0 0 0</pose>
+                    <geometry><box><size>0.01 0.01 0.0292</size></box></geometry>
+                    <material>
+                        <ambient>0.2 0.2 1 1</ambient>
+                        <diffuse>0.2 0.2 1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision2">
+                    <pose>-0.208 0 -0.0146 0 0 0</pose>
+                    <geometry><box><size>0.009 0.009 0.028</size></box></geometry>
+                </collision>
+            </link>
+
+            <link name="forearm">
+                <pose>-0.208 0 -0.0704 0 0 0</pose>
+                <visual name="visual">
+                    <pose>0.1175 0 0 0 0 0</pose>
+                    <geometry><box><size>0.235 0.01 0.01</size></box></geometry>
+                    <material>
+                        <ambient>0.2 1 0.2 1</ambient>
+                        <diffuse>0.2 1 0.2 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0.1175 0 0 0 0 0</pose>
+                    <geometry><box><size>0.233 0.009 0.009</size></box></geometry>
+                </collision>
+            </link>
+
+            <link name="wrist">
+                <pose>0.027 0 -0.0704 0 0 0</pose>
+                <visual name="visual">
+                    <pose>0.07755 0 0 0 0 0</pose>
+                    <geometry><box><size>0.1551 0.01 0.01</size></box></geometry>
+                    <material>
+                        <ambient>0.2 0.5 0.5 1</ambient>
+                        <diffuse>0.2 0.5 0.5 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0.07755 0 0 0 0 0</pose>
+                    <geometry><box><size>0.153 0.009 0.009</size></box></geometry>
+                </collision>
+            </link>
+
+            <link name="hand">
+                <pose>0.1871 0 -0.0704 0 0 0</pose>
+                <visual name="visual">
+                    <geometry><box><size>0.01 0.01 0.01</size></box></geometry>
+                    <material>
+                        <ambient>1 0.6 0.1 1</ambient>
+                        <diffuse>1 0.6 0.1 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <geometry><box><size>0.01 0.01 0.01</size></box></geometry>
+                </collision>
+            </link>
+
+            <link name="firstfinger">
+                <pose>0.1921 0.005 -0.0704 0 0 0</pose>
+                <visual name="visual">
+                    <pose>0.051 0 0 0 0 0</pose>
+                    <geometry><box><size>0.102 0.01 0.01</size></box></geometry>
+                    <material>
+                        <ambient>0.5 0.25 0.25 1</ambient>
+                        <diffuse>0.5 0.25 0.25 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0.051 0 0 0 0 0</pose>
+                    <geometry><box><size>0.102 0.009 0.009</size></box></geometry>
+                </collision>
+            </link>
+
+            <link name="secondfinger">
+                <pose>0.1921 -0.005 -0.0704 0 0 0</pose>
+                <visual name="visual">
+                    <pose>0.051 0 0 0 0 0</pose>
+                    <geometry><box><size>0.102 0.01 0.01</size></box></geometry>
+                    <material>
+                        <ambient>0.5 0.2 0.5 1</ambient>
+                        <diffuse>0.5 0.2 0.5 1</diffuse>
+                    </material>
+                </visual>
+                <collision name="collision">
+                    <pose>0.051 0 0 0 0 0</pose>
+                    <geometry><box><size>0.102 0.009 0.009</size></box></geometry>
+                </collision>
+            </link>
+
+            <!-- camera -->
+            <link name="camera_link">
+                <pose relative_to="robosubBody">0.25 0 0 0 0.78 0</pose>
+                <visual name="camera_visual">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.05 0.05</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0 0 1 1</ambient>
+                    </material>
+                </visual>
+
+                <sensor name="rgbd_camera" type="rgbd_camera">
+                    <pose relative_to="camera_link">0 0 0 0 0 0</pose>
+                    <always_on>true</always_on>
+                    <update_rate>30</update_rate>
+                    <visualize>true</visualize>
+
+                    <camera>
+                        <horizontal_fov>1.047</horizontal_fov>
+                        <image>
+                            <width>640</width>
+                            <height>480</height>
+                            <format>R8G8B8</format>
+                        </image>
+                        <clip>
+                            <near>0.1</near>
+                            <far>100</far>
+                        </clip>
+                    </camera>
+
+                    <topic>/camera</topic>
+                </sensor>
+            </link>
+
+            <joint name="cameraBToSub" type="fixed">
+                <parent>robosubBody</parent>
+                <child>camera_link</child>
+            </joint>
+
+            <joint name="fixedToWorld" type="fixed">
+                <parent>world</parent>
+                <child>robosubBody</child>
+            </joint>
+
+            <joint name="subToBase" type="revolute">
+                <parent>robosubBody</parent>
+                <child>base</child>
+                <axis>
+                    <xyz>0 0 1</xyz>
+                    <limit>
+                        <lower>-0.7854</lower>
+                        <upper>0.7854</upper>
+                        <effort>1000000</effort>
+                    </limit>
+                </axis>
+            </joint>
+
+            <joint name="baseToUpperarm" type="revolute">
+                <parent>base</parent>
+                <child>upperarm</child>
+                <axis>
+                    <xyz>0 1 0</xyz>
+                    <limit><lower>-1.8307</lower><upper>0</upper><effort>1000000</effort></limit>
+                </axis>
+            </joint>
+
+            <joint name="upperarmToForearm" type="revolute">
+                <parent>upperarm</parent>
+                <child>forearm</child>
+                <axis>
+                    <xyz>0 -1 0</xyz>
+                    <limit><lower>-1.6493</lower><upper>0</upper><effort>1000000</effort></limit>
+                </axis>
+            </joint>
+
+            <joint name="forearmToWrist" type="revolute">
+                <parent>forearm</parent>
+                <child>wrist</child>
+                <axis>
+                    <xyz>0 1 0</xyz>
+                    <limit><lower>-0.3491</lower><upper>1.7523</upper><effort>1000000</effort></limit>
+                </axis>
+            </joint>
+
+            <joint name="wristToHand" type="revolute">
+                <parent>wrist</parent>
+                <child>hand</child>
+                <axis>
+                    <xyz>1 0 0</xyz>
+                    <limit><lower>0</lower><upper>4.7124</upper><effort>1000000</effort></limit>
+                </axis>
+            </joint>
+
+            <joint name="handToFirstfinger" type="revolute">
+                <parent>hand</parent>
+                <child>firstfinger</child>
+                <axis>
+                    <xyz>0 0 1</xyz>
+                    <limit><lower>0</lower><upper>0.7854</upper><effort>1000000</effort></limit>
+                </axis>
+            </joint>
+
+            <joint name="handToSecondfinger" type="revolute">
+                <parent>hand</parent>
+                <child>secondfinger</child>
+                <axis>
+                    <xyz>0 0 1</xyz>
+                    <limit><lower>-0.7854</lower><upper>0</upper><effort>1000000</effort></limit>
+                </axis>
+            </joint>
+
+            <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher"/>
+
+            <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+                <joint_name>subToBase</joint_name>
+                <topic>/subToBaseTopic</topic>
+                <initial_position>0.0</initial_position>
+            </plugin>
+
+            <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+                <joint_name>baseToUpperarm</joint_name>
+                <topic>/baseToUpperarmTopic</topic>
+                <initial_position>0.0</initial_position>
+            </plugin>
+
+            <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+                <joint_name>upperarmToForearm</joint_name>
+                <topic>/upperarmToForearmTopic</topic>
+                <initial_position>0.0</initial_position>
+            </plugin>
+
+            <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+                <joint_name>forearmToWrist</joint_name>
+                <topic>/forearmToWristTopic</topic>
+                <initial_position>0.0</initial_position>
+            </plugin>
+
+            <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+                <joint_name>wristToHand</joint_name>
+                <topic>/wristToHandTopic</topic>
+                <initial_position>0.0</initial_position>
+            </plugin>
+
+            <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+                <joint_name>handToFirstfinger</joint_name>
+                <topic>/handToFirstfingerTopic</topic>
+                <initial_position>0.0</initial_position>
+            </plugin>
+
+            <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+                <joint_name>handToSecondfinger</joint_name>
+                <topic>/handToSecondfingerTopic</topic>
+                <initial_position>0.0</initial_position>
+            </plugin>
+
+            <!-- REQUIRED: enable sensor updates (Jetty) -->
+            <plugin
+                    filename="gz-sim-sensors-system"
+                    name="gz::sim::systems::Sensors">
+                <render_engine>ogre2</render_engine>
+            </plugin>
+
+
+        </model>
+        <model name="valve">
+            <pose>0.5 0 -0.35 0 1 0</pose>
+            <static>false</static>
+
+            <link name="valveBase">
+                <pose relative_to='__model__'> 0.03 0 0 0 1.5707  0</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <cylinder>
+                            <radius>0.12</radius>
+                            <length>0.03</length>
+                        </cylinder>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <cylinder>
+                            <radius>0.12</radius>
+                            <length>0.03</length>
+                        </cylinder>
+                    </geometry>
+                    <material>
+                        <ambient>0.886 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>0.886 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+            <link name="valveHandle">
+                <pose relative_to='valveBase'>0 0 -0.04 0 0 -1</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.15 0.025 0.06</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.18 0.025 0.065</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>0.886 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>0.886 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim1">
+                <pose relative_to='valveBase'>0 0.105 -0.051 0 0 0</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim2">
+                <pose relative_to='valveRim1'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim3">
+                <pose relative_to='valveRim2'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim4">
+                <pose relative_to='valveRim3'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim5">
+                <pose relative_to='valveRim4'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim6">
+                <pose relative_to='valveRim5'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim7">
+                <pose relative_to='valveRim6'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim8">
+                <pose relative_to='valveRim7'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim9">
+                <pose relative_to='valveRim8'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim10">
+                <pose relative_to='valveRim9'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim11">
+                <pose relative_to='valveRim10'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <link name="valveRim12">
+                <pose relative_to='valveRim11'>0.0525 -0.014 0 0 0 -0.524</pose>
+                <inertial>
+                    <mass>1.0</mass>
+                </inertial>
+
+                <collision name="collision">
+                    <geometry>
+                        <box>
+                            <size>0.05 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                </collision>
+
+                <visual name="visual">
+                    <geometry>
+                        <box>
+                            <size>0.065 0.03 0.062</size>
+                        </box>
+                    </geometry>
+                    <material>
+                        <ambient>1 0.325 0.012 1</ambient>  <!-- RGB(226, 83, 3) -->
+                        <diffuse>1 0.325 0.012 1</diffuse>
+                    </material>
+                </visual>
+            </link>
+
+            <joint name="fixedToWorld_valve" type="fixed">
+                <parent>world</parent>
+                <child>valveBase</child>
+            </joint>
+
+            <joint name="valveToRim1" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim1</child>
+            </joint>
+            <joint name="valveToRim2" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim2</child>
+            </joint>
+            <joint name="valveToRim3" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim3</child>
+            </joint>
+            <joint name="valveToRim4" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim4</child>
+            </joint>
+            <joint name="valveToRim5" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim5</child>
+            </joint>
+            <joint name="valveToRim6" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim6</child>
+            </joint>
+            <joint name="valveToRim7" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim7</child>
+            </joint>
+            <joint name="valveToRim8" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim8</child>
+            </joint>
+            <joint name="valveToRim9" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim9</child>
+            </joint>
+            <joint name="valveToRim10" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim10</child>
+            </joint>
+            <joint name="valveToRim11" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim11</child>
+            </joint>
+            <joint name="valveToRim12" type="fixed">
+                <parent>valveBase</parent>
+                <child>valveRim12</child>
+            </joint>
+
+            <joint name="valveToHandle" type="revolute">
+                <parent>valveBase</parent>
+                <child>valveHandle</child>
+                <axis>
+                    <xyz>0 0 1</xyz>
+                    <limit>
+                        <lower>-1.5707</lower>
+                        <upper>0 </upper>
+                        <effort>10</effort>
+                        <velocity>1.0</velocity>
+                    </limit>
+                </axis>
+            </joint>
+        </model>
+    </world>
+</sdf>

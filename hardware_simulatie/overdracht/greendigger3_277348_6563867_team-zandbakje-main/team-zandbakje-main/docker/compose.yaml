@@ -1,0 +1,10 @@
+services:
+  gazebo-dev:
+    image: s4_2026:latest
+    working_dir: /workspace
+    environment:
+      DISPLAY: host.docker.internal:0
+    volumes:
+      - ../:/workspace
+    stdin_open: true
+    tty: true

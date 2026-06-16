@@ -1,0 +1,432 @@
+/* ==========================================
+   FUTURISED OVERDRACHT WEBSITE
+   ========================================== */
+:root {
+    /* Base Colors */
+    --bg-main: #ffffff;          /* Witte achtergrond */
+    --text-dark: #111111;        /* Zwarte voor primaire tekst */
+    --text-muted: #555555;       /* Grijs voor secundaire tekst */
+    
+    /* Rode Accenten */
+    --fire-bright: #e63946;              /* Rood (fel */
+    --fire-dark: #990505;                /* Rood (donker) */
+    --fire-glow: rgba(230, 57, 70, 0.2); /* Zachte rode gloed */
+    
+    /* Box Accenten */
+    --card-glass-bg: rgba(255, 255, 255, 0.75);   /* Off-White invulling */
+    --card-glass-border: rgba(230, 57, 70, 0.15); /* Zachte rode rand */
+    
+    /* Grid Pattern */
+    --grid-color: rgba(238, 232, 226, 0.55); /* Grid achtergrond */
+}
+
+/* ==========================================
+   BASIS LAY-OUT
+   ========================================== */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+    overflow-x: hidden;
+    
+    /* Grid patroon op de achtergrond */
+    background-image: 
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+    background-size: 40px 40px;
+
+    /* FIX: Dit zet het grid muurvast op het scherm */
+    background-attachment: fixed;
+    background-position: center top; /* Houdt het patroon netjes uitgelijnd */
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem 2rem;
+}
+
+/* ==========================================
+   HEADER
+   ========================================== */
+header {
+    text-align: center;
+    padding: 5rem 1rem 3rem 1rem;
+    margin: 0 auto 3.5rem auto; /* De bovenkant staat op 0 padding en onderkant 3.5 */
+
+    background: var(--card-glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-glass-border);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin: 0;
+    text-transform: uppercase;
+    /* Gradient van felrood naar donkerrood */
+    background: linear-gradient(135deg, var(--fire-bright), var(--fire-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--fire-bright), var(--fire-dark));
+    margin: 1.5rem auto 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 0 15px var(--fire-bright);
+}
+
+/* ==========================================
+   CLEAN SECTIES & Boxen
+   ========================================== */
+section {
+    background: var(--card-glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--card-glass-border);
+    padding: 3rem;
+    margin-bottom: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Oplichten bij hover */
+section:hover {
+    border-color: var(--fire-bright);
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px var(--fire-glow);
+    transform: translateY(-4px);
+}
+
+section h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+    letter-spacing: -0.5px;
+}
+
+section p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   INTRODUCTIE
+   ========================================== */
+#introductie {
+    border-left: 5px solid var(--fire-bright);
+    /* Subtiele rode gloed achter de eerste box */
+    background: linear-gradient(135deg, rgba(236, 57, 69, 0.034), rgba(255, 255, 255, 0.8));
+}
+
+#introductie h2 {
+    color: var(--fire-bright);
+    text-shadow: 0 0 20px var(--fire-glow);
+}
+
+#introductie p {
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+/* ==========================================
+   PROCESSEN GRID (2 AAN 2 NAAST ELKAAR)
+   ========================================== */
+.processen-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Maakt exact 2 gelijke kolommen */
+    gap: 2rem;                             /* Ruimte tussen de blokjes */
+}
+
+/* Zorgt dat op kleine schermen de blokjes netjes onder elkaar springen */
+@media (max-width: 768px) {
+    .processen-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Aanpassingen voor de klikbare kaarten */
+.card-clickable {
+    margin-bottom: 0 !important; /* Overschrijft de oude marge, want het grid regelt nu de gap */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Zorgt dat de knop altijd netjes onderaan de kaart staat */
+}
+
+/* De sneak-peak tekst iets subtieler maken */
+.sneak-peek {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem !important;
+}
+
+/* De "Read More" Knop Styling */
+.read-more-btn {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--fire-bright);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.2s ease;
+    padding: 0.5rem 0;
+}
+
+/* Animatie effectje als je over de knop of de kaart hoovert */
+.card-clickable:hover .read-more-btn {
+    color: var(--fire-dark);
+    transform: translateX(5px); /* Het pijltje schuift subtiel op */
+}
+
+/* ==========================================
+   RASTER TABEL
+   ========================================== */
+.tabel-sectie {
+    margin-top: 3rem;
+}
+
+.tabel-intro {
+    margin-bottom: 2rem !important;
+}
+
+.tabel-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Het echte raster effect */
+.raster-tabel {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+    /* Geeft de hele tabel een buitenrand die past bij de matglas boxen */
+    border: 1px solid var(--card-glass-border); 
+}
+
+/* De gridlijnen voor de kolomkopjes */
+.raster-tabel th {
+    background-color: rgba(230, 57, 71, 0.075);
+    color: var(--fire-bright);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85rem;
+    padding: 1rem 1.5rem;
+    /* Dit tekent de rasterlijnen om de kopjes heen */
+    border: 1px solid var(--card-glass-border);
+    border-bottom: 2px solid var(--card-glass-border);
+}
+
+/* De gridlijnen voor de datacellen */
+.raster-tabel td {
+    padding: 1.2rem 1.5rem;
+    color: var(--text-dark);
+    /* Dit tekent de rasterlijnen tussen alle rijen en kolommen */
+    border: 1px solid rgba(0, 0, 0, 0.08); 
+}
+
+/* Rij highlight bij mouse-over */
+.raster-tabel tbody tr:hover {
+    background-color: rgba(238, 232, 226, 0.55);
+}
+
+/* ==========================================
+   UITVOUW MENU STYLING
+   ========================================== */
+.requirements-accordion {
+    margin-top: 2rem;
+}
+
+details {
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--card-glass-border);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+/* De klikbare 'balk' van de uitklapper */
+summary {
+    padding: 1rem 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    cursor: pointer;
+    list-style: none; /* Verwijdert het standaard lelijke HTML pijltje */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Voegt zelf een '+' indicator toe aan de rechterkant */
+summary::after {
+    content: '+';
+    color: var(--fire-bright);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+/* Als de uitklapper openstaat, verandert de + in een x en lopt de balk rood op */
+details[open] summary {
+    background-color: rgba(230, 57, 70, 0.05);
+    border-bottom: 1px solid var(--card-glass-border);
+}
+
+details[open] summary::after {
+    content: '×';
+    transform: rotate(90deg);
+}
+
+/* De container waar de tabel in leeft zodra hij uitklapt */
+.uitklap-content {
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+/* ==========================================
+   CODE & TERMINAL BLOKKEN STYLING
+   ========================================== */
+pre {
+    background-color: rgba(230, 57, 70, 0.1); /* Donkere terminal look */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    padding: 1.2rem;
+    overflow-x: auto; /* Zorgt voor een scrollbalk als code te lang is op mobiel */
+    margin: 1rem 0 1.5rem 0;
+}
+
+code {
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    color: #000000; /* Heldere, witte code-tekst */
+    line-height: 1.5;
+}
+
+/* Inline code-tags in normale tekst (zoals `apt`) */
+p code {
+    background-color: rgba(230, 57, 70, 0.1);
+    color: var(--fire-bright);
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* Troubleshooting items extra ruimte geven */
+.trouble-item {
+    margin-top: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--card-glass-border);
+}
+
+.trouble-item:last-child {
+    border-bottom: none;
+}
+
+.trouble-item h4 {
+    margin-bottom: 0.5rem;
+    color: var(--fire-bright);
+}
+/* ==========================================
+   AFBEELDING STYLING
+   ==========================================*/
+
+/* Container voor de robot foto */
+.robot-foto-container {
+    margin: 2rem 0;
+    width: 100%;
+    text-align: center; /* Centreert de tekst */
+}
+
+/* De foto zelf */
+.robot-foto {
+    width: 100%;
+    max-width: 600px; /* Zorgt dat de foto op grote schermen niet té gigantisch wordt */
+    height: auto;     /* Houdt de verhoudingen van de foto intact */
+    border-radius: 8px;
+    border: 1px solid var(--card-glass-border); /* Hetzelfde randje als de boxen */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);  /* Geeft een schaduw Yayyyy */
+}
+
+/* De tekst onder de foto */
+.foto-caption {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-dark);
+    opacity: 0.7; /* Maakt de tekst net iets subtieler */
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* ==========================================
+   OVERIG EN LINKJES
+   ========================================== */
+hr {
+    display: none; /* Tussen lijnen onzichtbaar maken */
+}
+
+/* Container die de knoppen naast elkaar zet met ruimte eromheen */
+.documenten-links {
+    display: flex;
+    gap: 1rem;          /* Ruimte tussen de knoppen */
+    flex-wrap: wrap;    /* Zorgt dat ze onder elkaar zakken op mobiel */
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--card-glass-border); /* lichte scheidingslijntje */
+}
+
+/* De knoppen zelf */
+.doc-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.2rem;
+    background-color: rgba(230, 57, 70, 0.06); /* Heel licht transparant rood */
+    color: var(--text-dark); /* Matcht met normale tekstkleur */
+    border: 1px solid rgba(230, 57, 70, 0.2); /* Subtiel rood randje */
+    border-radius: 6px;
+    text-decoration: none; /* Verwijdert die lelijke onderstreping */
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.25s ease; /* Zorgt voor een vloeiende animatie wauwiee */
+}
+
+/* Het pijltje in de knop een felle brandweerkleur geven */
+.doc-btn .icon {
+    color: var(--fire-bright);
+    margin-right: 0.5rem;
+    font-weight: bold;
+    transition: transform 0.25s ease;
+}
+
+/* effect wanneer je eroverheen hovert */
+.doc-btn:hover {
+    background-color: var(--fire-bright); /* Knop kleurt volledig rood */
+    color: #ffffff; /* Tekst wordt strak wit */
+    border-color: var(--fire-bright);
+    transform: translateY(-2px); /* Knop komt heel subtiel een stukje omhoog */
+    box-shadow: 0 4px 12px rgba(230, 57, 70, 0.3); /* Geeft een rode gloed aan de onderkant */
+}
+
+/* Laat het pijltje een klein stukje naar rechts schieten bij hover */
+.doc-btn:hover .icon {
+    color: #ffffff;
+    transform: translateX(3px);
+}
+

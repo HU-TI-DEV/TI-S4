@@ -1,0 +1,269 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="robosubSimulationV4">
+
+    <gravity>0 0 0</gravity>
+
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <direction>0.1 0.1 -1</direction>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+    <model name="robosub">
+
+      <link name="robosubBody">
+        <pose>0 0 0.1 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.8 0.4 0.2</size></box></geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.5 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.79 0.39 0.19</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="base">
+        <pose>0 0 -0.0206 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.01 0.01 0.0412</size></box></geometry>
+          <material>
+            <ambient>1 0.2 0.2 1</ambient>
+            <diffuse>1 0.2 0.2 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.01 0.01 0.0412</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="upperarm">
+        <pose>0 0 -0.0412 0 0 0</pose>
+        <visual name="visual1">
+          <pose>-0.104 0 0 0 0 0</pose>
+          <geometry><box><size>0.208 0.01 0.01</size></box></geometry>
+          <material>
+            <ambient>0.2 0.2 1 1</ambient>
+            <diffuse>0.2 0.2 1 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision1">
+          <pose>-0.104 0 0 0 0 0</pose>
+          <geometry><box><size>0.206 0.009 0.009</size></box></geometry>
+        </collision>
+        <visual name="visual2">
+          <pose>-0.208 0 -0.0146 0 0 0</pose>
+          <geometry><box><size>0.01 0.01 0.0292</size></box></geometry>
+          <material>
+            <ambient>0.2 0.2 1 1</ambient>
+            <diffuse>0.2 0.2 1 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision2">
+          <pose>-0.208 0 -0.0146 0 0 0</pose>
+          <geometry><box><size>0.009 0.009 0.028</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="forearm">
+        <pose>-0.208 0 -0.0704 0 0 0</pose>
+        <visual name="visual">
+          <pose>0.1175 0 0 0 0 0</pose>
+          <geometry><box><size>0.235 0.01 0.01</size></box></geometry>
+          <material>
+            <ambient>0.2 1 0.2 1</ambient>
+            <diffuse>0.2 1 0.2 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <pose>0.1175 0 0 0 0 0</pose>
+          <geometry><box><size>0.233 0.009 0.009</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="wrist">
+        <pose>0.027 0 -0.0704 0 0 0</pose>
+        <visual name="visual">
+          <pose>0.07755 0 0 0 0 0</pose>
+          <geometry><box><size>0.1551 0.01 0.01</size></box></geometry>
+          <material>
+            <ambient>0.2 0.5 0.5 1</ambient>
+            <diffuse>0.2 0.5 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <pose>0.07755 0 0 0 0 0</pose>
+          <geometry><box><size>0.153 0.009 0.009</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="hand">
+        <pose>0.1871 0 -0.0704 0 0 0</pose>
+        <visual name="visual">
+          <geometry><box><size>0.01 0.01 0.01</size></box></geometry>
+          <material>
+            <ambient>1 0.6 0.1 1</ambient>
+            <diffuse>1 0.6 0.1 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>0.01 0.01 0.01</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="firstfinger">
+        <pose>0.1921 0.005 -0.0704 0 0 0</pose>
+        <visual name="visual">
+          <pose>0.051 0 0 0 0 0</pose>
+          <geometry><box><size>0.102 0.01 0.01</size></box></geometry>
+          <material>
+            <ambient>0.5 0.25 0.25 1</ambient>
+            <diffuse>0.5 0.25 0.25 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <pose>0.051 0 0 0 0 0</pose>
+          <geometry><box><size>0.102 0.009 0.009</size></box></geometry>
+        </collision>
+      </link>
+
+      <link name="secondfinger">
+        <pose>0.1921 -0.005 -0.0704 0 0 0</pose>
+        <visual name="visual">
+          <pose>0.051 0 0 0 0 0</pose>
+          <geometry><box><size>0.102 0.01 0.01</size></box></geometry>
+          <material>
+            <ambient>0.5 0.2 0.5 1</ambient>
+            <diffuse>0.5 0.2 0.5 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <pose>0.051 0 0 0 0 0</pose>
+          <geometry><box><size>0.102 0.009 0.009</size></box></geometry>
+        </collision>
+      </link>
+
+      <joint name="fixedToWorld" type="fixed">
+        <parent>world</parent>
+        <child>robosubBody</child>
+      </joint>
+
+      <joint name="subToBase" type="revolute">
+        <parent>robosubBody</parent>
+        <child>base</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-0.7854</lower>
+            <upper>0.7854</upper>
+            <effort>1000000</effort>
+          </limit>
+        </axis>
+      </joint>
+
+      <joint name="baseToUpperarm" type="revolute">
+        <parent>base</parent>
+        <child>upperarm</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit><lower>-1.8307</lower><upper>0</upper><effort>1000000</effort></limit>
+        </axis>
+      </joint>
+
+      <joint name="upperarmToForearm" type="revolute">
+        <parent>upperarm</parent>
+        <child>forearm</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit><lower>-1.6493</lower><upper>0</upper><effort>1000000</effort></limit>
+        </axis>
+      </joint>
+
+      <joint name="forearmToWrist" type="revolute">
+        <parent>forearm</parent>
+        <child>wrist</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit><lower>-0.3491</lower><upper>1.7523</upper><effort>1000000</effort></limit>
+        </axis>
+      </joint>
+
+      <joint name="wristToHand" type="revolute">
+        <parent>wrist</parent>
+        <child>hand</child>
+        <axis>
+          <xyz>1 0 0</xyz>
+          <limit><lower>0</lower><upper>4.7124</upper><effort>1000000</effort></limit>
+        </axis>
+      </joint>
+
+      <joint name="handToFirstfinger" type="revolute">
+        <parent>hand</parent>
+        <child>firstfinger</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit><lower>0</lower><upper>0.7854</upper><effort>1000000</effort></limit>
+        </axis>
+      </joint>
+
+      <joint name="handToSecondfinger" type="revolute">
+        <parent>hand</parent>
+        <child>secondfinger</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit><lower>-0.7854</lower><upper>0</upper><effort>1000000</effort></limit>
+        </axis>
+      </joint>
+
+      <plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher"/>
+
+      <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+        <joint_name>subToBase</joint_name>
+        <topic>/subToBaseTopic</topic>
+        <initial_position>0.0</initial_position>
+      </plugin>
+
+      <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+        <joint_name>baseToUpperarm</joint_name>
+        <topic>/baseToUpperarmTopic</topic>
+        <initial_position>0.0</initial_position>
+      </plugin>
+
+      <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+        <joint_name>upperarmToForearm</joint_name>
+        <topic>/upperarmToForearmTopic</topic>
+        <initial_position>0.0</initial_position>
+      </plugin>
+
+      <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+        <joint_name>forearmToWrist</joint_name>
+        <topic>/forearmToWristTopic</topic>
+        <initial_position>0.0</initial_position>
+      </plugin>
+
+      <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+        <joint_name>wristToHand</joint_name>
+        <topic>/wristToHandTopic</topic>
+        <initial_position>0.0</initial_position>
+      </plugin>
+
+      <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+        <joint_name>handToFirstfinger</joint_name>
+        <topic>/handToFirstfingerTopic</topic>
+        <initial_position>0.0</initial_position>
+      </plugin>
+
+      <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+        <joint_name>handToSecondfinger</joint_name>
+        <topic>/handToSecondfingerTopic</topic>
+        <initial_position>0.0</initial_position>
+      </plugin>
+
+    </model>
+  </world>
+</sdf>

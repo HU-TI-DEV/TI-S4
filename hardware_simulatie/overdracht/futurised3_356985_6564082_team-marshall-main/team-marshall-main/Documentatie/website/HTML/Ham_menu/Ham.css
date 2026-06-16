@@ -1,0 +1,83 @@
+nav {
+    padding: 1rem;
+    display: flex;
+    background-color: rgb(238, 232, 226);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.onzichtbaar_menutje {
+    background-color: rgb(238, 232, 226);
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.5rem;
+    transition: right 0.3s ease;
+    z-index: 999;
+}
+.onzichtbaar_menutje ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.onzichtbaar_menutje a {
+    color: #990505;
+    text-decoration: none;
+}
+.onzichtbaar_menutje li {
+    margin: 0.75rem 0;
+}
+.onzichtbaar_menutje.actief {
+    right: 0;
+}
+
+.menutje {
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0;
+}
+.menutje span {
+    height: 5px;
+    width: 100%;
+    background-color:  #990505;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.menutje span:nth-child(1) {
+    top: 25%;
+}
+.menutje span:nth-child(2) {
+    top: 50%;
+}
+.menutje span:nth-child(3) {
+    top: 75%;
+}
+
+.menutje.actief span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.menutje.actief span:nth-child(2) {
+    opacity: 0;
+}
+.menutje.actief span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}

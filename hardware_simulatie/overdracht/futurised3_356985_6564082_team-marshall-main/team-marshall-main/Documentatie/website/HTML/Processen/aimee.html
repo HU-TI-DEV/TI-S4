@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanbevelingen - Futurised</title>
+    
+<link rel="stylesheet" href="../CSS_/main.css"> 
+    <link rel="stylesheet" href="../Ham_menu/Ham.css">
+    
+    <script defer src="../Ham_menu/Ham.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Process Aimée</h1>
+    </header>
+
+    <!-- Boxen voor de tekst -->
+    <main>
+        
+        <!-- De eerste box met de rode rand -->
+        <section id="introductie">
+            <h2>Introductie</h2>
+            <p>Mijn bijdrage aan dit project is een schommelend proces geweest met ups en downs. Het ontwikkelen van een complex systeem zoals dit brengt altijd onverwachte technische uitdagingen met zich mee, maar door kritisch te blijven kijken naar onze workflow hebben we als team grote stappen gemaakt. Om een duidelijk beeld te geven van hoe dit is verlopen, heb ik mijn proces op deze pagina opgesplitst in verschillende categorieën. Hierin leg ik uit wat exact alle onderdelen inhouden, maar ook waar ik tegen aan gelopen ben en wat ik anders had kunnen doen.</p>
+            <p>Gedurende het project heb ik op zowel technisch als organisatorisch bijgedragen. Aan de technische kant heb ik me beziggehouden met de software architectuur en heb ik de logica opgesteld voor onder andere het A* (A-Star) pathfinding-algoritme. Aan de organisatorische kant ben ik aan de slag gegaan met de Scrum-structuur door het Planboard up-to-date te houden, de sprinttaken te verdelen en het sprintverslag uit te werken.</p>
+            <p>Hieronder kijk ik per onderdeel terug op de uitdagingen, de leermomenten en het uiteindelijke resultaat:</p>
+            <ul>
+                <p><strong>pathfinding-algorimte:</strong> Het AStar algortime.</p>
+                <p><strong>Software Architectuur:</strong> De keydrivers, requirements en contraints.</p>
+                <p><strong>Projectbeheer:</strong> Sprintverslag, Notulen, Teamcontract en planboard.</p>
+            </ul>
+        </section>
+
+        <!-- Een extra box voor een specifieke -->
+        <section>
+            <h2>Pathfinding algoritme</h2>
+            <h3>Architectuur</h3>
+            <p>Voor de navigatie van Flip is gekozen voor het A* (A-Star) algoritme. Het doel van pathfinding is om van punt A naar punt B te navigeren met de laagste 'kosten'.</p>
+            
+            <p>Het systeem is opgebouwd uit drie componenten:</p>
+            <ul>
+                <p><strong>De Prioriteitswachtrij (pQueue):</strong> Een op maat gemaakte datastructuur die zorgt dat we altijd de meest kansrijke volgende stap als eerste berekenen. Dit bespaart rekentijd.</p>
+                <p><strong>De Grid-omzetter:</strong> Functies die wereld-coördinaten (meters) vertalen naar raster-coördinaten (pixels/cellen) en vice versa, zodat de robot begrijpt waar hij staat.</p>
+                <p><strong>De Omgevingsanalyse:</strong> De logica die controleert welke cellen begaanbaar zijn en welke aangrenzende cellen (buren) de robot kan bezoeken.</p>
+            </ul>
+
+            <h3>Keuze onderbouwing</h3>
+            <p>In de beginfase van het project hebben we naar het Dijkstra algoritme gekeken. het Dijkstra algoritme is een ook een pathfinding algoritme, maar het is 'blind': het zoekt in alle richtingen tegelijk naar het doel, wat erg rekenintensief is.</p>
+            <p>Het AStar algoritme is de logische verbetering op het Dijkstra algoritme. Het voegt een heuristiek toe (een slimme schatting). Het AStar algoritme kijkt niet alleen naar de kosten die al gemaakt zijn om op een plek te komen (gScore), maar schat ook in wat de afstand tot het einddoel nog is (hScore of heuristic).</p>
+            <ul>
+                <p><strong>Dijkstra:</strong> f(n) = g(n) (afgelegde weg)</p>
+                <p><strong>Astar:</strong> f(n) = g(n) + h(n) (afgelegde weg en geschatte afstand tot doel)</p>
+            </ul>
+            <p>Door deze extra informatie 'ziet' het algoritme waar het doel ligt, waardoor het veel minder cellen hoeft te verkennen en aanzienlijk sneller een pad vindt. Al helemaal voor een blusrobot is het *sneller* vinden van een pad ontzettend belangrijk, vandaar was het ook geen moeilijke keuze toen we hoorde over het AStar algortime en zijn we direct overgestapt.</p>
+        
+            <h3>Klasse pQueue</h3>
+            <p>Deze klasse beheert de 'Open Set'. Het maakt gebruik van een min-heap implementatie om efficiënt de node met de laagste fScore (kosten) op te halen. Hierdoor hoeven we niet de hele lijst te sorteren, wat de prestaties enorm verbetert.</p>
+            <p><strong>Leermoment:</strong> We hebben deze pQueue volledig zelf geschreven voor extra controle over de data. In een professionele productieomgeving zouden we heapq (Python's standaard library) gebruiken voor hogere performance, maar door het zelf te schrijven hebben we diep inzicht gekregen in hoe padvinden op datastructuur-niveau werkt.</p>
+
+            <h3>Klasse AStarPathfinder</h3>
+            <p><strong>world_to_grid & grid_to_world:</strong>Deze functies werken als vertalers tussen de fysieke wereld en het interne raster van de robot. De wereld werkt in meters (float), maar ons grid werkt in gehele getallen (indexen). Deze functies schalen de coördinaten aan de hand van de resolution. Voorbeeld: Als de resolutie 0.05m is, wordt een positie van 1.0 meter in de wereld vertaald naar index 20 in het grid.</p>
+            <p><strong>is_valid:</strong> De veiligheidscheck. Hier wordt bepaald of een cel begaanbaar is (waarde < 50) of dat er een obstakel aanwezig is.</p>
+            <p><strong>get_neigbours:</strong> Berekend de mogelijke stappen. De robot kan horizontaal, verticaal en diagonaal bewegen, waarbij diagonale stappen een hogere kostenfactor (1.414) hebben.</p>
+        </section>
+
+        <section id="architectuur-documentatie">
+            <h2>Software Architectuur</h2>
+            <h3>Opbouw</h3>
+            <p>De architectuur van een softwaresysteem is de absolute basis waarop alle latere code wordt gebouwd. Voor de brandweerrobot Flip was het de taak om een robuuste, voorspelbare en autonome structuur neer te zetten die kan tegen extreme omstandigheden.</p>
+            <p>Het ontwerpen van deze architectuur was een complex proces. In de praktijk was de grootste uitdaging niet per se het schrijven van de code zelf, maar het omzetten van de wensen van de opdrachtgever naar de techniek. Een stabiele architectuur vereist dat vage functionele eisen worden omgezet in meetbare, niet-functionele requirements. Gedurende dit project hebben we geleerd dat een architectuur nooit 'af' is na de eerste sprint, maar continu meebeweegt met de kennis die er achteraf bij komt.</p>
+            
+            <h3>Uitdagingen</h3>
+            <p>Het vertalen van de gesprekken met opdrachtgever Futurised naar concrete Keydrivers, Functionele Requirements (FRs) en Niet-Functionele Requirements (NFRs) bleek een van de grootste struikelblokken in de beginfase van het project.</p>
+            <p>Tijdens een gesprek met een opdrachtgever worden wensen vaak in broad, functionele termen uitgedrukt, zoals "de robot moet betrouwbaar rondrijden en objecten ontwijken". Voor een software architect is zo’n uitspraak echter te vaag. Het correct vertalen van deze input naar een Niet-Functionele Requirement vereiste veel discussie. Want wat betekent "betrouwbaar"? Uiteindelijk hebben we dit moeten omzetten naar harde eisen, zoals: “in drie identieke testsituaties mag de route een maximale afwijking van 10% in tijd en afstand hebben” (NF05) en “de robot moet binnen twee seconden reageren op een obstakel” (NF06). Het risico op miscommunicatie of een foutieve interpretatie is hierbij continu aanwezig.</p>
+            <p>Daarnaast was het stellen van de juiste prioriteiten binnen de requirements een moeilijker proces dan verwacht. In een ideale wereld wil je elke feature opleveren als een 'Must-Have'. Echter, door de beperkte tijd binnen de sprints moesten we prioriteiten stellen tussen wat cruciaal was voor het minimum viable product en wat later pas als 'Should-Have' toegevoegd kon worden. Het kiezen tussen de hoge verwachtingen van de klant en de technische haalbaarheid binnen ons team zorgde voor de nodige discussies tijdens de Scrum-meetings.</p>
+
+            <h3>Onbekend terrein</h3>
+            <p>Een ander groot knelpunt waar we als team tegenaan liepen, was het verschil tussen onze eigen wereld en de wereld van de brandweer. Als Technische Informatica studenten zitten wij dagelijks achter onze schermen rustig op school of in onze kamer. De werk omgeving van de brandweer, waarin een robot moet functioneren in temperaturen tot 500 graden Celsius en dichte rookwolken, is compleet het tegenovergestelde.</p>
+            <p>Hoewel we van tevoren logische Constraints hadden opgesteld (zoals het voldoen aan de machinerichtlijnen), loop je halverwege het project regelmatig tegen nieuwe punten aan. Je kunt van tevoren simpelweg niet alle natuurkundige en operationele aspecten voorspellen.</p>
+            
+            <div class="requirements-accordion">
+
+                <details>
+                    <summary>Bekijk Keydrivers</summary>
+                    <div class="uitklap-content">
+                        <table class="raster-tabel">
+                            <thead>
+                                <tr>
+                                    <th>Keydrivers</th>
+                                    <th>Omschrijving</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Betrouwbaarheid</strong></td><td>De techniek dat Futurised gebruikt moet betrouwbaar zijn. Machines moeten voorspelbaar reageren, zodat zij hier altijd op kunnen vertrouwen.</td></tr>
+                                <tr><td><strong>Veiligheid</strong></td><td>De technologie moet een bijdrage leveren aan het redden en helpen van mensen tijdens een brand. Apparatuur moet gevaren minimaliseren en mag nooit zelf een extra obstakel vormen.</td></tr>
+                                <tr><td><strong>Autonomie</strong></td><td>Tijdens een brand is er zoveel mogenlijk mankracht nodig en moet apparatuur zelfstandig kunnen rijden, obstakels ontwijken en de snelste route kunnen uitrekenen.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Bekijk Functionele Requirements (FR)</summary>
+                    <div class="uitklap-content">
+                        <table class="raster-tabel">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Requirement</th>
+                                    <th>Prioriteit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>F01 Rondrijden</strong></td><td>Omschrijving: De robot moet zich in de simulatie kunnen bewegen (Vooruit, achteruit em draaien.)</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F02 Omgeving scannen</strong></td><td>De robot moet in de simulatie de omgeving kunnen scannen met behulp van een sensor.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F03 Obstakels herkennen</strong></td><td>De robot moet objecten en muren in de simulatie herkennen om botsingen te voorkomen.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F04 Zelfstandig Navigeren</strong></td><td>De robot moet zelfstandig van de ene naar de andere plek rijden in de simulatie.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F05 Doorgangen vinden</strong></td><td>De robot moet bepalen of een opening (zoals een deur) breed genoeg is om doorheen te rijden.</td><td><span class="status-tag status-progress">Should have</span></td></tr>
+                                <tr><td><strong>F06 Gebruikers interactie</strong></td><td>De gebruiker geeft commandos en de robot moet deze zelfstandig uitvoeren.</td><td><span class="status-tag status-done">Should have</span></td></tr>
+                                <tr><td><strong>F07 Virtuele omgeving</strong></td><td>Er is een virtuele omgeving waar de robot kan rondrijden.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F08 Veilig werken</strong></td><td>De Robot moet stoppen wanneer een obstakel te dicht in de buurt komt van de robot. De robot moet bij voorkeur iets terug.</td><td><span class="status-tag status-progress">Must have</span></td></tr>
+                                <tr><td><strong>F09 Andere route bepalen</strong></td><td>De robot moet wanneer het ingesloten wordt door obstakels een andere route kiezen zonder verder in de buurt te komen van de obstakels.</td><td><span class="status-tag status-done">Should have</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Bekijk Niet-Functionele Requirements (NFR) & Constraints (C)</summary>
+                    <div class="uitklap-content">
+                        <table class="raster-tabel">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Specificatie</th>
+                                    <th>Waarde</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>NF01</strong></td><td>Simulatie omgeving</td><td>De simulatie draait binnen Gazebo.</td></tr>
+                                <tr><td><strong>NF02</strong></td><td>Rondrijden</td><td>De robot kan rijden met een snelheid van 0,5 m/s.</td></tr>
+                                <tr><td><strong>NF03</strong></td><td>Navigatie sensor</td><td>Voor het navigeren en scannen van de omgeving wordt er gebruik gemaakt van een Lidar-sensor met een bereik van 360 graden.</td></tr>
+                                <tr><td><strong>NF04</strong></td><td>Obstakels ontwijken</td><td>De robot navigeert via een Pathfinding algortime.</td></tr>
+                                <tr><td><strong>NF05</strong></td><td>Voorspelbaar reageren</td><td>In drie identieke testsituaties heeft de route een maximale afwijking van 10% in tijd en afstand.</td></tr>
+                                <tr><td><strong>NF06</strong></td><td>Reactie tijd</td><td>De robot reageert op een obstakel binnen twee seconden na het detecteren ervan.</td></tr>
+                                <tr><td><strong>NF07</strong></td><td>Sensorwaarden vastleggen</td><td>De sensorwaarden van de LiDAR sensor worden vastgelegd met een frequentie van 10hz , zodat dit meegenomen kan worden voor verder onderzoek.</td></tr>
+                                <tr><td><strong>NF08</strong></td><td>Route herberekenen</td><td>Zorda een obstakel gedetecteerd wordt op de route, vindt de robot binnen vijf senconden een alternatieve route.</td></tr>
+                                <tr><td><strong>NF09</strong></td><td>Nauwkeurige Sensoren</td><td>De sensoren in de simulatie hebben ten minste 85% van de test gevallen de obstakels correct gedetecteerd.</td></tr>
+                                <tr><td><strong>NF10</strong></td><td>Afstand tot obstakel</td><td>De robot houdt minstens 30cm afstand van een obstakel.</td></tr>
+                                <tr><td><strong>NF11</strong></td><td>Doorgangen</td><td>Een opening wordt pas gezien als doorgang zodra dit minimaal 20 centimeter breder is dan de breedte van de robot zelf.</td></tr>
+                                <tr><td><strong>NF12</strong></td><td>Beperkt zicht</td><td>De LiDAR kijkt door rook met een nauwkeurigheid van 85%</td></tr>
+                                <tr><td><strong>C01</strong></td><td>Wetgeving</td><td>De robot moet voldoen aan de Europese richtlijnen voor machines en specifieke veiligheidseisen voor brandweer uitrusting.</td></tr>
+                                <tr><td><strong>C02</strong></td><td>Omgeving</td><td>De robot gaat te werk in een omgeving waar de temperatuur kan oplopen tot 500 graden en waar veel rook kan plaatsvinden.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+            </div>
+            </section>
+
+        <section>
+            <h2>Projectbeheer</h2>
+            <p>Naast de technische uitwerking van de architectuur en het algoritme, heb ik een grote rol op me genomen binnen het organisatorische proces van het team. Voor een goede samenwerking is een strak bijgehouden planning en heldere documentatie cruciaal.</p>
+            <ul>
+                <p><strong>Planboard & Taakverdeling:</strong> Gedurende de sprints heb ik de leiding genomen over het up-to-date houden van ons Planboard. Door taken duidelijk te definiëren, prioriteren en toe te wijzen, wist elk teamlid precies wat er per sprint van hem of haar werd verwacht. Dit voorkwam onduidelijkheden en zorgde ervoor dat we strak op schema bleven lopen.</p>
+                <p><strong>Notulen & Contract:</strong> Tijdens de overlegmomenten zorgde ik voor de notulen, zodat besluiten en feedback van de opdrachtgever direct zwart-op-wit stonden en niet verloren gingen in de waan van de dag. Ook hebben we aan het begin van de samenwerking een contract opgesteld over onze samenwerking, die aangepast kon worden gedurende onze samenwerking.</p>
+                <p><strong>Het Sprintverslag:</strong> Als overzicht van de sprints heb ik het sprintverslag uitgewerkt. Dit document dient als een kritische terugblik over ons proces: hoe verliepen de opbrengsten, welke taken zijn succesvol afgerond, en waar moesten we extra aandacht aan besteden? Het schrijven van dit verslag gaf niet alleen de opdrachtgever inzicht in onze progressie, maar zorgde ook als team dat wij konden reflecteren en onze workflow per sprint konden verbeteren.</p>
+            </ul>
+            <div class="documenten-links">
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/blob/main/Management/Sprint-verslag.md" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Bekijk Sprintverslag op GitHub
+                </a>
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/blob/main/Management/Teamcontract.md" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Bekijk Teamcontract op GitHub
+                </a>
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/tree/main/Management/Notulen" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Bekijk Notulen op GitHub
+                </a>
+                <a href="https://github.com/orgs/2025-TICT-TV2SE4-24-3-V/projects/8/views/1" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Bekijk Planboard op GitHub
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

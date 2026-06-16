@@ -1,0 +1,17 @@
+{
+  "name": "Team Broodje Kroket Dev",
+  "dockerComposeFile": [
+    "../DockerContainer/docker-compose.yml"
+  ],
+  "service": "team-project",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "overrideCommand": true,
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@startuml UC01_Vuur_Detecteren
+
+title UC01 – Vuur detecteren en onderscheiden
+
+left to right direction
+skinparam actorStyle awesome
+skinparam usecase {
+  BackgroundColor #FFF8F0
+  BorderColor #CC4400
+  ArrowColor #883300
+  FontName Arial
+}
+skinparam actor {
+  BackgroundColor #FFDDCC
+  BorderColor #CC4400
+}
+skinparam rectangle {
+  BackgroundColor #FFF3E8
+  BorderColor #CC4400
+}
+skinparam note {
+  BackgroundColor #FFFBE6
+  BorderColor #CCAA00
+}
+
+actor "Systeem (autonoom)" as Sys
+
+rectangle "UC01 – Vuur detecteren en onderscheiden" {
+
+  usecase "Omgeving continu scannen\nvia warmtesensor" as UC1
+  usecase "Warmtebron detecteren" as UC2
+  usecase "Temperatuur meten" as UC3
+  usecase "Temperatuur vergelijken\nmet drempelwaarde (1000°C)" as UC4
+  usecase "Locatie registreren als vuur\nen signaal afgeven" as UC5
+  usecase "Bron classificeren als\nniet-vuur en scannen hervatten" as UC6
+  usecase "Systeem stoppen en\nfoutmelding geven" as UC7
+
+}
+
+Sys --> UC1
+UC1 --> UC2
+UC2 --> UC3
+UC3 --> UC4
+UC4 --> UC5 : temperatuur ≥ 1000°C
+UC4 --> UC6 : temperatuur < 1000°C\n(bijv. mens of motor)
+UC1 ..> UC7 : <<extend>>\nsensor defect
+
+note right of UC5
+  Postconditie:
+  Vuurlocatie vastgelegd,
+  systeem gereed om te rijden
+  en te blussen (→ UC02)
+end note
+
+note bottom of UC7
+  Uitzondering:
+  Sensor geeft geen of
+  onjuiste data terug
+end note
+
+@enduml

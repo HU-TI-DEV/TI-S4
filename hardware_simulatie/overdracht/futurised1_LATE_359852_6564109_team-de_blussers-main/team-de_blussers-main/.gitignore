@@ -1,0 +1,62 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Build artifacts (plugins)
+build/
+*.so
+*.o
+*.log
+
+# VS Code specifieke instellingen
+.vscode/
+
+# Devcontainer caches (optioneel)
+.devcontainer/.cache
+
+# Systeem files
+.DS_Store
+
+start_gz.sh
+
+thor_start.sh
+
+install/
+log/
+__pycache__/
+
+runs/
+vision/dataset/
+
+start_container.sh
+
+thor_portfolio.md

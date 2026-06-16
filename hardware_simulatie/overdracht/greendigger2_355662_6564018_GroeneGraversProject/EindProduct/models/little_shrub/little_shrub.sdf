@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <model name="little_shrub">
+    <static>true</static>
+    <link name="link">
+      <pose>0 0 0.25 0 0 0</pose>
+
+      <visual name="blok1_laag_1">
+        <pose>-0.5 0 0 0 0 0</pose>
+        <geometry><box><size>0.6 0.6 0.5</size></box></geometry>
+        <material>
+          <ambient>0.05 0.25 0.05 1</ambient>
+          <diffuse>0.1 0.3 0.1 1</diffuse>
+        </material>
+        <transparency>0.05</transparency>
+      </visual>
+      <visual name="blok1_laag_2">
+        <pose>-0.5 0 0 0 0 0.785</pose>
+        <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        <material>
+          <ambient>0.02 0.2 0.02 1</ambient>
+          <diffuse>0.05 0.25 0.05 1</diffuse>
+        </material>
+        <transparency>0.05</transparency>
+      </visual>
+
+      <visual name="blok2_laag_1">
+        <pose>0 0 0 0 0 0</pose>
+        <geometry><box><size>0.6 0.6 0.5</size></box></geometry>
+        <material>
+          <ambient>0.05 0.25 0.05 1</ambient>
+          <diffuse>0.1 0.3 0.1 1</diffuse>
+        </material>
+        <transparency>0.05</transparency>
+      </visual>
+      <visual name="blok2_laag_2">
+        <pose>0 0 0 0 0 0.785</pose>
+        <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        <material>
+          <ambient>0.02 0.2 0.02 1</ambient>
+          <diffuse>0.05 0.25 0.05 1</diffuse>
+        </material>
+        <transparency>0.05</transparency>
+      </visual>
+
+      <visual name="blok3_laag_1">
+        <pose>0.5 0 0 0 0 0</pose>
+        <geometry><box><size>0.6 0.6 0.5</size></box></geometry>
+        <material>
+          <ambient>0.05 0.25 0.05 1</ambient>
+          <diffuse>0.1 0.3 0.1 1</diffuse>
+        </material>
+        <transparency>0.05</transparency>
+      </visual>
+      <visual name="blok3_laag_2">
+        <pose>0.5 0 0 0 0 0.785</pose>
+        <geometry><box><size>0.5 0.5 0.6</size></box></geometry>
+        <material>
+          <ambient>0.02 0.2 0.02 1</ambient>
+          <diffuse>0.05 0.25 0.05 1</diffuse>
+        </material>
+        <transparency>0.05</transparency>
+      </visual>
+
+      <collision name="collision">
+        <geometry>
+          <box><size>1.6 0.6 0.6</size></box>
+        </geometry>
+      </collision>
+    </link>
+  </model>
+</sdf>

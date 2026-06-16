@@ -1,0 +1,42 @@
+{
+  "name": "S4 Devcontainer GPU",
+  "build": {
+    "context": "..", // Use the Root Directory of the directory containing this devcontainer.json file
+    "dockerfile": "Dockerfile"
+  },
+  "runArgs": [
+    "--shm-size=4gb", // Default is 64mb, we need more for Gazebo
+    "--net=host",
+    "--device=/dev/dxg", // Allow access to the GPU device through the host
+  ],
+  "containerEnv": {
+    "DISPLAY": ":0",
+    "LD_LIBRARY_PATH": "/usr/lib/wsl/lib:${LD_LIBRARY_PATH}",
+    "PULSE_SERVER": "/mnt/wslg/PulseServer",
+    "QT_X11_NO_MITSHM": "1",
+    "XDG_RUNTIME_DIR": "/mnt/wslg/runtime-dir",
+    "MESA_LOADER_DRIVER_OVERRIDE": "d3d12",
+    "GALLIUM_DRIVER": "d3d12",
+    "LIBGL_ALWAYS_INDIRECT": "0",
+  },
+  "mounts": [
+    "source=/mnt/wslg,target=/mnt/wslg,type=bind,consistency=cached",
+    "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+    "source=/usr/lib/wsl,target=/usr/lib/wsl,type=bind,readonly,consistency=cached",
+    "source=/usr/share/glvnd,target=/usr/share/glvnd,type=bind,readonly,consistency=cached"
+  ],
+  "remoteUser": "CLion", // Set the default user to be used in the container, being CLion in this case.
+  "features": {
+    "ghcr.io/devcontainers/features/git": {}, // Enable Git integration.
+  },
+  customizations : {
+    // Configure JetBrains IDE-specific properties
+    jetbrains : {
+      backend : "CLion", // Specify that we are using CLion as the JetBrains IDE
+      plugins: [
+        "com.jetbrains.cmake", // Install CMake plugin
+        "Docker" // Install Docker plugin
+      ]
+    }
+  }
+}

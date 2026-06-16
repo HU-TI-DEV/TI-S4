@@ -1,0 +1,11 @@
+[
+  {"name": "marker3", "x": -20.0, "y":  20.0},
+  {"name": "marker2", "x":   0.0, "y":  20.0},
+  {"name": "marker1", "x":  20.0, "y":  20.0},
+  {"name": "marker6", "x": -20.0, "y":   0.0},
+  {"name": "marker5", "x":   0.0, "y":   0.0},
+  {"name": "marker4", "x":  20.0, "y":   0.0},
+  {"name": "marker9", "x": -20.0, "y": -20.0},
+  {"name": "marker8", "x":   0.0, "y": -20.0},
+  {"name": "marker7", "x":  20.0, "y": -20.0}
+]

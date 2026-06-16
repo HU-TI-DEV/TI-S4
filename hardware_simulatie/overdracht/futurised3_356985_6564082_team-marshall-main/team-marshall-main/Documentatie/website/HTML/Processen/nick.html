@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Page - Sensors, Simulation & Vision</title>
+    <link rel="stylesheet" href="../CSS_/main.css"> 
+    <link rel="stylesheet" href="../Ham_menu/Ham.css">
+    <script defer src="../Ham_menu/Ham.js"></script>
+    <style>
+        
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-left: 4px solid #0056b3;
+            border-radius: 4px;
+            overflow-x: auto;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        code {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #f4f4f4;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .flowchart {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            margin: 15px 0;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Process Nick</h1>
+    </header>
+
+    <main>
+        <section id="introductie">
+            <h2>Introductie overzicht</h2>
+            <p>Op deze pagina staat een gedetailleerd overzicht van mijn specifieke technische en organisatorische bijdragen aan robot Flip binnen Team Marshall. Mijn focus lag op het inrichten van de simulatie-infrastructuur, het schrijven van embedded veiligheidslogica in C++, het ontwikkelen van een geometrisch computer vision-algoritme in Python, en het ondersteunen van de managementlijnen binnen het team.</p>
+            <p>Mijn proces is opgedeeld in de volgende kernmodules:</p>
+            <ul>
+                <li><a href="#sensors-simulatie">Sensors &amp; Simulatie-integratie (Gazebo)</a></li>
+                <li><a href="#testomgeving-world">Ontwikkeling Testomgeving &amp; Wereld-SDF</a></li>
+                <li><a href="#gazebo-infra">Configuratiewereld &amp; Gazebo Sim-Infrastructuur</a></li>
+                <li><a href="#veiligheidslaag">Ontwikkeling botsingdetectie &amp; Noodstop</a></li>
+                <li><a href="#door-detector">Ontwikkeling ROS 2 Geometrische Deurendetector (OpenCV)</a></li>
+                <li><a href="#scrum-hulp">Scrum-ondersteuning &amp; Technisch Hulp</a></li>
+                <li><a href="#algemeen-leermoment">Systeemintegratie &amp; Organiserend Vermogen</a></li>
+            </ul>
+        </section>
+
+        <section id="sensors-simulatie">
+            <h2>Sensors &amp; Simulatie-integratie (Gazebo)</h2>
+            <h3>Opbouw van de sensoren</h3>
+            <p>Binnen de simulatie-omgeving van Gazebo (gebruikt voor onze robot Flip) was het mijn specifieke taak om de zintuigen van de robot te configureren en te implementeren. Zonder nauwkeurige sensorwaarden is autonome navigatie of computer vision immers onmogelijk. In het SDF-model (<code>flip.sdf</code>) heb ik een fysiek <code>front_block</code> ontworpen en door middel van een fixed joint aan het chassis gekoppeld. Dit blok fungeert als de sensorbehuizing op de neus van de robot en biedt plaats aan twee cruciale sensoren:</p>
+            <ul>
+                <li><strong>GPU LiDAR (gpu_lidar):</strong> Een gesimuleerde 2D-LiDAR-sensor die op een update-frequentie van 10 Hz de omgeving scant. De sensor heeft een volledig horizontaal bereik van 360 graden (&pi; tot -&pi; radialen) met 1000 samples per scan. Het bereik is nauwkeurig afgesteld tussen een minimum van 0.08 meter en een maximum van 10.0 meter met een resolutie van 1 centimeter. Door gebruik te maken van de GPU-variant (gpu_lidar) ontlasten we de CPU van de simulatielaptop aanzienlijk tijdens het renderen van de laserstralen.</li>
+                <li><strong>RGB-Camera (camera):</strong> Een camerasensor die geplaatst is aan de voorzijde van de behuizing, gekanteld en gepositioneerd om een optimaal zicht vlak voor de robot te garanderen. Deze sensor draait op 30 frames per seconde (FPS) met een resolutie van 640x480 pixels in een R8G8B8-formaat.</li>
+            </ul>
+
+            <h3>Uitdagingen &amp; Aanpassingen</h3>
+            <p>Tijdens het testen van de eerste simulaties liep ik tegen een aantal technische beperkingen aan die direct invloed hadden op het functioneren van de navigatie- en computervision-algoritmes:</p>
+            <ul>
+                <li><strong>Gezichtsveld van de camera (Field of View):</strong> Aanvankelijk stond de horizontale FOV van de camera ingesteld op 1.047 radialen (ongeveer 60 graden). Tijdens de eerste testruns bleek dit gezichtsveld veel te nauw. Wanneer Flip een gang inreed, verdwenen de deurposten en muren te snel uit het zicht van de camera, waardoor onze vision-software (de deurendetectie) geen stabiel referentiepunt kon behouden. Ik heb dit aangepast naar 1.5708 radialen (exact 90 graden). Deze verbreding bleek de 'sweet spot': het gaf de computervision-node voldoende context om doorgangen vroegtijdig te herkennen, zonder dat er te veel visuele vervorming (fisheye-effect) optrad aan de randen van het beeld.</li>
+                <li><strong>LiDAR Visuele Grondprojectie (Debugging):</strong> Tijdens de initiële integratie in Gazebo liep ik tegen een hardnekkige visuele bug aan waarbij de gesimuleerde laserstralen van de LiDAR constant direct op de grond geprojecteerd werden. Hierdoor scande de sensor de vloer in plaats van de muren en meubels (dacht ik). Na een grondige analyse van de output en heel veel settings aanpassingen en debugging bleek dit een bug te zijn in gazebo. Gazebo heeft last van visuele lidar issues die onder bepaalde omstandigheden plaats vinden. Dit verstoorde gelukkig niet de daadwerkelijk lidar output.
+                <li><strong>LiDAR-uitlijning:</strong> De LiDAR was initieel blind voor objecten die zich heel dichtbij bevonden of die qua hoogte net onder de straal doorliepen. Door de vertical scan expliciet vast te zetten op 1 sample op exact 0 graden en het minimale detectiebereik strak te begrenzen op 0.08 meter (8 centimeter), reageert de LiDAR nu betrouwbaar op obstakels die zich in het directe pad van de robot bevinden, wat essentieel is voor de veiligheidschecks (is_valid) in onze navigatie.</li>
+            </ul>
+
+            <h3>Leermoment</h3>
+            <p>Met het configureren van een SDF-bestand in Gazebo leer je dat simulatie-instellingen niet zomaar abstracte getallen zijn. Een ogenschijnlijk kleine aanpassing, zoals het verhogen van de FOV van 60 naar 90 graden, heeft direct een domino-effect op de performance van de software-nodes die deze data later moeten verwerken. Daarnaast vereiste het afstemmen van mijn sensor-blok met het rij-onderdeel (de DiffDrive plugin en de wielen, die door mijn groepsgenoten zijn geschreven) goede communicatie over de transformaties (tf) en referentiekaders binnen het model.</p>
+        </section>
+
+        <section id="testomgeving-world">
+            <h2>Ontwikkeling Testomgeving &amp; Wereld-SDF</h2>
+            <h3>Opbouw van de gesimuleerde wereld</h3>
+            <p>Om de navigatie-, pathfinding- en computervision-algoritmes van Flip grondig en representatief te kunnen testen, was een kale simulatieomgeving niet voldoende. Het was mijn taak om een realistische, gestructureerde indooromgeving te ontwerpen. Hiervoor heb ik de wereld <em>Huis_met_meubels</em> volledig zelfstandig opgebouwd in SDF 1.7. De wereld is statisch gedefinieerd (<code>&lt;static&gt;true&lt;/static&gt;</code>), wat betekent dat muren en obstakels vaststaan en niet door fysieke krachten of botsingen van de robot kunnen verschuiven.</p>
+            <p>De structuur is opgedeeld in twee hoofdcomponenten:</p>
+            <ul>
+                <li><strong>De bouwkundige structuur (Muren):</strong> 
+                    <ul>
+                        <li><em>Buitenmuren:</em> De buitenste grenzen van het huis vormen een symmetrische rechthoek van 30 bij 24 meter (wall_north, wall_south, wall_east, wall_west). De muren hebben een dikte van 20 centimeter en een realistische hoogte van 2 meter. Om ze in de simulatie direct herkenbaar te maken en te contrasteren met de meubels, heb ik ze een felle rode kleur (<code>&lt;ambient&gt;1 0 0 1&lt;/ambient&gt;</code>) gegeven.</li>
+                        <li><em>Binnenmuren:</em> De ruimte is opgesplitst door middel van een kruisend stelsel van binnenmuren (mid_wall en mid_vertical segmenten). Essentieel hierbij is dat de muren niet volledig doorlopen, maar strategisch zijn opgeknipt (bijvoorbeeld mid_wall_left_outer en mid_wall_left_inner). Hierdoor ontstaan er bewuste openingen en doorgangen in het centrum van de wereld. Deze openingen fungeren als 'deuren' of gangen waar de robot doorheen moet navigeren.</li>
+                    </ul>
+                </li>
+                <li><strong>Obstakels (Meubels):</strong>
+                    <p>Om de kamers daadwerkelijk te vullen en het pathfinding-algoritme uit te dagen, heb ik de vier kwadranten (Noord-West, Noord-Oost, Zuid-West en Zuid-Oost) systematisch voorzien van obstakels (nw_1 tot en met se_4). Deze objecten zijn gedefinieerd als massieve blokken van 1x1 meter met een hoogte van 1.5 meter en hebben een neutrale grijze kleur gekregen. Ze staan verspreid in de ruimtes gepositioneerd om complexe navigatiepaden af te dwingen.</p>
+                </li>
+            </ul>
+
+            <h3>Uitdagingen &amp; Geometrische Symmetrie</h3>
+            <p>Bij het handmatig schrijven van dit SDF-bestand was de grootste uitdaging het accuraat berekenen van de posities (<code>&lt;pose&gt;</code>) in het driedimensionale assenstelsel van Gazebo. Omdat SDF werkt met absolute coördinaten ten opzichte van de world origin (0,0,0), moest de positionering van de muren en obstakels mathematisch kloppen om gaten in de buitenmuren of overlappende objecten te voorkomen.</p>
+            <p>Een concreet voorbeeld hiervan is de berekening van de binnenwanden:</p>
+            <ul>
+                <li>De noordelijke verticale binnenmuur (mid_vertical_upper) staat op Y = 3 met een lengte van 6 meter, wat betekent dat deze loopt van Y = 0 tot Y = 6.</li>
+                <li>De top-muur (mid_vertical_top) staat op Y = 10 met een lengte van 4 meter, wat betekent dat deze loopt van Y = 8 tot Y = 12 (waar hij exact aansluit op de buitenmuur).</li>
+            </ul>
+            <p>Hierdoor ontstaat er bewust een opening tussen Y = 6 and Y = 8. Deze opening van exact 2 meter is de perfecte doorgang om te testen of de robot een opening herkent en of deze breed genoeg is op basis van onze Niet-Functionele Requirements (zoals NF11, waarin staat dat een doorgang minimaal 20 cm breder moet zijn dan de robot).</p>
+            <p>Daarnaast moesten voor elk model de collision-boxen exact overeenkomen met de visual-boxen. Als dit niet zorgvuldig gebeurt, zie je in de simulatie een muur staan waar de robot 'spookachtig' doorheen kan rijden, of botst de robot tegen een onzichtbaar object. Door de geometrie strak synchroon te houden, genereert de LiDAR-sensor nu loepzuivere en betrouwbare reflecties.</p>
+
+            <h3>Leermoment</h3>
+            <p>Het handmatig ontwerpen van een wereld leert je hoe belangrijk een goede testomgeving is voor het software-verificatieproces. Door de symmetrische opbouw van de obstakels (nw, ne, sw, se) kon ik identieke testsituaties creëren in verschillende kamers. Dit was direct noodzakelijk om requirement NF05 te valideren: controleren of de robot in identieke situaties inderdaad een maximale routeafwijking van slechts 10% in tijd en afstand vertoont. Het zelf bouwen van deze wereld gaf ons als team de volledige controle over de moeilijkheidsgraad van de testtracks.</p>
+        </section>
+
+        <section id="gazebo-infra">
+            <h2>Configuratiewereld &amp; Gazebo Sim-Infrastructuur</h2>
+            <h3>Integratie van de Systeemarchitectuur</h3>
+            <p>Om het zelfgemaakte model van het huis en de robot daadwerkelijk tot leven te wekken in Gazebo, heb ik een overkoepelend wereld-SDF-bestand (robotWorld) opgezet onder de SDF 1.8 specificatie. Dit bestand fungeert als de 'engine' van onze simulatieomgeving. In plaats van alleen visuele objecten te tonen, configureert dit bestand de essentiële backend-plugins, fysica-instellingen en belichting die nodig zijn voor betrouwbare sensordata.</p>
+            <p>De configuratie is opgebouwd uit drie kritieke lagen:</p>
+            <ol>
+                <li><strong>De Fysica &amp; Real-Time Factor (&lt;physics&gt;):</strong> De simulatiestap is hard ingesteld op een max_step_size van 0.001 seconden (1 ms) met een real_time_factor van 1.0. Dit zorgt voor een stabiele simulatie die synchroon loopt met de werkelijke tijd. Dit is van vitaal belang voor de PID-controllers en de odometrie-berekeningen van de robot; een haperende simulatietijd zou leiden tot foutieve sensor-updates en instabiel rijgedrag.</li>
+                <li><strong>Gazebo Systeemplugins:</strong>
+                    <ul>
+                        <li><em>Physics (gz-sim-physics-system):</em> Verantwoordelijk voor de botsingsdetectie (collision) en de zwaartekracht tussen de robotwielen, de vloer (groundPlane) en de muren.</li>
+                        <li><em>Sensors (ignition::gazebo::systems::Sensors):</em> Deze plugin is essentieel voor ons project. Hij draait op de Ogre2 render engine en zorgt ervoor dat de gesimuleerde LiDAR-sensoren en camera's daadwerkelijk data genereren op basis van de visuele wereld. Zonder deze plugin zouden de ROS 2-nodes van de camera en LiDAR lege data ontvangen.</li>
+                        <li><em>SceneBroadcaster &amp; UserCommands:</em> Zorgen voor de grafische interface (GUI) en de mogelijkheid om tijdens runtime via commando's of handmatig objecten te verplaatsen.</li>
+                    </ul>
+                </li>
+                <li><strong>Wereld-omgeving &amp; Belichting:</strong> Er is een oneinfelijk grondvlak gedefinieerd (groundPlane) met een neutrale grijze kleur om reflecties constant te houden. De zon (sun) is ingesteld als een directionele lichtbron met schaduwwerking (cast_shadows: true). De specifieke richting en attenuatie zijn zo afgesteld dat er realistische schaduwen en contrasten ontstaan. Dit is een harde randvoorwaarde voor de OpenCV-beeldverwerking op de camera, aangezien geometrische deurendetectie (zoals Sobel-filters) robuust moet omgaan met schaduwranden en wisselende lichtval.</li>
+            </ol>
+
+            <h3>Modulaire Compositie (&lt;include&gt;)</h3>
+            <p>Een belangrijk software-engineering principe dat ik hier heb toegepast is modulariteit. In plaats van alle code van de robot en het huis in één gigantisch bestand te dumpen, maak ik gebruik van de &lt;include&gt;-tag met URI-verwijzingen:</p>
+            <ul>
+                <li><code>model://Flip</code>: De robot wordt ingeladen en krijgt een specifieke startpositie mee (pose: -11 5 2.5). Hij dropt dus net boven de grond in een specifiek kwadrant van de wereld om zijn navigatieroute te starten.</li>
+                <li><code>model://Huis_met_meubels</code>: Mijn eerder ontworpen huismodel wordt hier modulair ingeladen en met een offset van X = 2 geplaatst ten opzichte van de world origin, zodat de robot zich direct in de juiste startpositie ten opzichte van de binnenmuren bevindt.</li>
+            </ul>
+            <p><em>Opmerking:</em> De terrain-include is bewust uitgecommentarieerd. Dit was een oude test map die als dat nodig is altijd weer ingeladen kan worden.
+
+            <h3>Leermoment, Structuur &amp; Organiserend Vermogen</h3>
+            <p>Het opzetten van dit overkoepelende configuratiebestand heeft mijn inzicht in complexe systeemarchitecturen sterk vergroot. Waar projecten met ROS 2 en Gazebo snel onoverzichtelijk kunnen worden door een wildgroei aan losse nodes en losse SDF-bestanden, heb ik hier bewust de regie genomen over de <strong>structuur en modulariteit</strong>.</p>
+            <p>Door de robot (Flip) en de gesimuleerde wereld rigoureus van elkaar te scheiden en modulair in te laden via de <code>&lt;include&gt;</code>-tag, heb ik een helder overzicht bewaard. Dit organiserend vermogen zorgde ervoor dat de abstracte scheiding tussen hardware, simulatie en software concreet werd. </p>
+            <p>Dit resultaat bewijst dat ik in staat ben om de technische infrastructuur van een softwaresysteem zo te structureren dat het voor het hele team overzichtelijk, schaalbaar en onderhoudbaar blijft.</p>
+        </section>
+
+        <section id="veiligheidslaag">
+            <h2>Ontwikkeling btosingdetectie &amp; Noodstop</h2>
+            
+            <h3>Finite State Machine (FSM) Besturingsarchitectuur</h3>
+            <p>Om de robot op een gestructureerde en deterministische manier aan te sturen, heb ik een architectuur op basis van een Finite State Machine ontworpen. Door middel van een sterk getypeerd C++ <code>enum class RobotState</code> is de actuele status van de robot op elk moment softwarematig bekend:</p>
+            <pre><code>enum class RobotState {
+    IDLE,
+    MOVING_FORWARD,
+    MOVING_BACKWARD,
+    TURNING
+};</code></pre>
+            <p>Dit state-management zorgt voor een robuuste scheiding van gedrag in de hoofdloop. Wanneer de gebruiker via de terminal-toetsenlezer (<code>getKey()</code>) invoer geeft, controleert de software eerst de actuele omgevingsvlaggen (<code>front_blocked</code> of <code>rear_blocked</code>). Alleen als de transitie naar een bewegende status veilig is, wordt de state geüpdatet en de lineaire snelheid (linVel = 2.6 m/s) naar Gazebo weggeschreven via het <code>/cmd_vel</code> topic. Probeert de gebruiker in de richting van een obstakel te rijden, dan grijpt de software preventief in (<code>currentState = RobotState::IDLE</code>) og blokkeert de transitie.</p>
+
+            <h3>Multidirectionele LiDAR-Segmentatie</h3>
+            <p>In de <code>lidarCallback</code> wordt de ruwe array met afstandsmetingen (LaserScan) niet als één grote databrij behandeld, maar opgedeeld in functionele sensor-sectoren. Dit stelt de robot in staat om zowel vooruit als achteruit veilig te manoeuvreren:</p>
+            <ul>
+                <li><strong>Sector Voor (Frontal Danger Zone):</strong> Gefilterd op het centrum van de array (tussen 40% en 60% van de samples). De kritieke veiligheidsmarge is hier scherp afgesteld op <code>LIMIT_FRONT = 1.3</code> meter. Dit stelt de robot in staat dicht genoeg bij muren te stoppen om nauwkeurige inspecties of bluswerkzaamheden uit te voeren.</li>
+                <li><strong>Sector Achter (Rear Danger Zone):</strong> Gefilterd op de flanken van de array (de eerste 15% en de laatste 15% van de samples, die bij een 360° LiDAR recht naar achteren wijzen). Om te voorkomen dat de robot tijdens het manoeuvreren in krappe kamers ergens tegenaan botst, is de achtergrens ingesteld op <code>LIMIT_REAR = 2.0</code> meter. Dit zorgt voor voldoende reactietijd en fysieke bufferruimte.</li>
+            </ul>
+
+            <h3>Actieve Tegenpuls Noodstop (Active Braking)</h3>
+            <p>De belangrijkste technische innovatie in deze module is de implementatie van een actieve tegenpuls-noodstop. Een passieve stop (de snelheid simpelweg naar 0.0 schrijven) zorgt er in een real-time physics engine voor dat een robot door zijn kinetische energie en inertie alsnog doorschuift tegen een muur. Om dit natuurkundige effect te elimineren, grijpt de callback direct asynchroon in zodra er een conflict optreedt tussen de actuele rijrichting en de LiDAR-omgevingsvlaggen:</p>
+            <ul>
+                <li><strong>Bepaling van de remrichting:</strong> Als de robot vooruit rijdt en de voorkant raakt geblokkeerd, berekent de software direct een krachtige negatieve tegenpuls (<code>brakeForce = -16.0</code>). Rijdt de robot achteruit, dan genereert hij een positieve puls (+16.0).</li>
+                <li><strong>Inertie-onderdrukking:</strong> Deze extreme tegenpuls wordt onmiddellijk gepubliceerd naar de motoren om de voorwaartse of achterwaartse momentum-vector direct te breken.</li>
+                <li><strong>Wielblokkering:</strong> Direct in de opeenvolgende regel code wordt een absolute stop (0.0) gestuurd om de wielen te vergrendelen zodra de energie is geabsorbeerd. De status wordt direct teruggezet naar <code>RobotState::IDLE</code>.</li>
+            </ul>
+
+            <div class="flowchart">
+[Rijdt Vooruit (State: MOVING_FORWARD)] ---> [LiDAR detecteert object < 1.3m]
+                                                       |
+                                                       v
+                                       [Actieve Tegenpuls: cmd_vel = -16.0]
+                                                       |
+                                                       v
+                                       [Wielblokkering:    cmd_vel =   0.0]
+                                                       |
+                                                       v
+                                       [Nieuwe Status:     RobotState::IDLE]</div>
+
+            <<h3>Leermoment &amp; Code-Refactoring</h3>
+            <p>Tijdens de live testfase liep ik tegen het probleem aan dat de ruwe sensorwaarden van de LiDAR zich erg onvoorspelbaar en 'vervelend' gedroegen. Door kleine fluctuaties en lichte ruis in de gesimuleerde data was de robot aanvankelijk extreem gevoelig: hij schoot bij de minste of geringste sensoraustraging al direct in de actieve noodstop, nog voordat er sprake was van een reëel botsingsgevaar.</p>
+            <p>Daarnaast bleek de initiële afstelling van de marges (<code>LIMIT_REAR</code> stond eerst op 3.0 meter) de robot veel te sterk te beperken in de zelfgemaakte binnenruimtes van het huis. Omdat de robot zo hypergevoelig reageerde, raakte hij in nauwe gangen constant 'gevangen' in zijn eigen veiligheidslogica. Door de C++ code grondig te refactoren, filters toe te passen op de sensorruis en de achterwaartse stopmarge strak te verkleinen naar 2.0 meter, ontstond de perfecte balans tussen actieve botsingspreventie en voldoende bewegingsvrijheid om soepel door de nauwe, zelfontworpen deuropeningen van 2 meter te manoeuvreren.</p>
+            <p>Dit anti-botsingsysteem bewijst dat logica en asynchrone callback-interventies, mits nauwkeurig gekalibreerd tegen sensorruis, kritieke veiligheidsrisico's effectief kunnen ondervangen zonder de operationele inzetbaarheid van de robot te hinderen en zijn omgeving.</p>
+        </section>
+
+        <section id="door-detector">
+            <h2>Ontwikkeling ROS 2 Geometrische Deurendetector (OpenCV)</h2>
+            <h3>Geometrische Computer Vision vs. Kleurfiltering</h3>
+            <p>Om de robot autonoom te laten navigeren door het zelfontworpen huis, moesten deuropeningen betrouwbaar worden herkend. In plaats van te 'valsspelen' door muren of deuren een specifieke kleur te geven en daarop te segmenteren, heb ik gekozen voor een puur geometrische benadering. Dit maakt het systeem robuust tegen veranderende lichtval en schaduwen, zoals veroorzaakt door de gesimuleerde zon in onze Gazebo-wereld. Hiervoor heb ik de <code>DoorDetectorNode</code> geschreven, een ROS 2-node in Python 3 die live camerabeelden van het <code>/camera</code>-topic converteert via <code>CvBridge</code> naar een verwerkbare OpenCV-matrix (BGR).</p>
+            
+            <h3>De Beeldverwerkingspijplijn (Sobel-X)</h3>
+            <p>De kern van het algoritme filtert oninteressante omgevingsfactoren (zoals horizontale vloerlijnen of ruis) weg door middel van de volgende opeenvolgende stappen:</p>
+            <ol>
+                <li><strong>Pre-processing:</strong> De afbeelding wordt omgezet naar grijswaarden en verzacht met een <code>cv2.GaussianBlur</code> (kernelgrootte 5x5). Dit elimineert hoogfrequente ruis in de pixelstructuur.</li>
+                <li><strong>Sobel-X Gradiëntfilter:</strong> Om specifiek verticale deurstijlen te isoleren, wordt een Sobel-filter toegepast op de X-as (<code>cv2.Sobel(..., dx=1, dy=0, ksize=3)</code>). Dit filter berekent de intensiteitsgradiënten in horizontale richting. Horizontale overgangen vallen hierdoor volledig weg, terwijl verticale randen van muren en posten oplichten.</li>
+                <li><strong>Drempelwaarde (Thresholding):</strong> Via een binaire threshold (<code>cv2.threshold</code> op een afkapwaarde van 40) worden vage gradiënten weggeschreven naar 0 (zwart) en harde verticale randen omgezet naar 255 (wit).</li>
+            </ol>
+
+            <h3>Regio-of-Interest (ROI) en Pixel-Histogrammen</h3>
+            <p>Om te focussen op de daadwerkelijke deurtrajecten, wordt een Region of Interest (ROI) gedefinieerd tussen 20% en 80% van de beeldhoogte. Binnen deze ROI wordt een kolom-histogram berekend:</p>
+            <pre><code>column_counts = np.sum(roi == 255, axis=0)</code></pre>
+            <p>Dit telt het aantal witte pixels per verticale kolom op. Een deurstijl resulteert in een enorme, scherpe piek in dit histogram. Het beeld wordt vervolgens in twee zones opgesplitst (links en rechts van het centrum op 50% breedte) om afzonderlijk naar de linker- en rechterpost te zoeken middels <code>np.argmax()</code>.</p>
+
+            <h3>Validatie- en Afstandslogica</h3>
+            <p>Een deuropening wordt pas als legitiem gemarkeerd (<code>door_found = True</code>) als de gedetecteerde pieken aan stringente criteria voldoen:</p>
+            <ul>
+                <li><strong>Piekintensiteit:</strong> De pieken moeten minimaal 20 pixels hoog zijn om verre ruislijnen uit te sluiten.</li>
+                <li><strong>Ruimtelijk deurgat:</strong> De onderlinge afstand tussen de linker- en rechterstijl moet groter zijn dan 25% van de beeldbreedte (om te voorkomen dat de robot reageert op verre gaten in de achtergrond) maar kleiner dan 98% (zodat de muren niet buiten het blikveld vallen als de robot de deur al is gepasseerd).</li>
+                <li><strong>Diepte-indicatie:</strong> Door de pixelhoogtes van beide wanden op te tellen (<code>totale_hoogte_indicator > 50</code>), is er een softwarematige afstandscheck ingebouwd. De robot reageert hierdoor pas wanneer hij de deuropening nadert en filtert hiermee verre, irrelevante openingen weg.</li>
+            </ul>
+
+            <div class="flowchart">
+[Camera Frame] ---> [Blur & Gray] ---> [Sobel-X] ---> [ROI Split (50%)] 
+                                                             |
+                                           +-----------------+-----------------+
+                                           v                                   v
+                                   [Argmax Left Zone]                  [Argmax Right Zone]
+                                           |                                   |
+                                           +-----------------+-----------------+
+                                                             v
+                                              [Breedte- & Hoogte-validatie]
+                                                             |
+                                                             v
+                                                [Publish: /door_detected]</div>
+
+            <h3>Feedback</h3>
+            <p>Daarnaast genereert de node een live visuele demo-omgeving waarin gedetecteerde deurstijlen worden gemarkeerd met blauwe verticale lijnen en een actieve groene indicatorbalk zodra de robot gecentreerd voor een mogelijke begaanbare doorgang staat.</p>
+
+            <h3>Leermoment</h3>
+            <p>Het ontwikkelen van deze node toont aan hoe krachtig klassieke computer vision-algoritmes kunnen zijn zonder direct terug te hoeven vallen op zware machine learning-modellen. Door de logica parametrisch op te bouwen (zoals de dynamische ROI-grootte og de drempelwaarde van 50 voor de hoogte-indicator), kon de detector perfect worden afgestemd op de 2 meter brede doorgangen in de gesimuleerde wereld. Dit garandeert een betrouwbare runtime-werking binnen de 20 Hz loop van ons besturingssysteem.</p>
+        </section>
+
+        <section id="scrum-hulp">
+            <h2>Scrum-ondersteuning &amp; Technisch hulp</h2>
+            <p>Naast de directe ontwikkeling van de simulatiewerelden en de functionele software modules (zoals de C++ veiligheidslaag en de OpenCV deurendetector), heb ik een actieve rol gespeeld in de organisatie en de technische lijn van het project. Binnen Team Marshall heb ik nauw samengewerkt met de Scrum Master en de Technical Lead om de voortgang te bewaken en de software-architectuur zuiver te houden.</p>
+            
+            <h3>Ondersteuning van de Scrum Master</h3>
+            <p>Om ervoor te zorgen dat ons ontwikkelproces soepel verliep en we de wekelijkse sprints effectief haalden, heb ik de Scrum Master ondersteund bij diverse procesmatige taken:</p>
+            <ul>
+                <li><strong>Sprint Planning &amp; Backlog Refinement:</strong> Ik heb actief meegedacht over het opbreken van grote features. Hierdoor konden we de work-load binnen het team beter verdelen.</li>
+                <li><strong>Voortgangsbewaking:</strong> Tijdens de Daily Stand-ups hielp ik mee om eventuele blockers (technische knelpunten) snel te identificeren en op te lossen.<li>
+                <li><strong>Documentatie &amp; Procesbeheer:</strong> Ik heb meegewerkt aan het structureren van onze procespagina's en het documenteren van de sprint-beoordelingen.</li>
+            </ul>
+
+            <h3>Ondersteuning van de Technical Lead</h3>
+            <p>Op technisch vlak is het bij een complex project met ROS 2, Gazebo en OpenCV essentieel dat alle losse componenten naadloos op elkaar aansluiten. In samenwerking met de Technical Lead heb ik bijgedragen aan de systeemarchitectuur:</p>
+            <ul>
+                <li><strong>Code Reviews &amp; Kwaliteitsbewaking:</strong> Ik heb meegewerkt aan het reviewen van pull requests van teamgenoten. Hierbij heb ik kritisch gelet op code-kwaliteit, het correct toepassen van C++/Python en het zoveel mogelijk voorkomen van 'spaghetti-code' binnen onze code.</li>
+                <li><strong>Integratie-architectuur:</strong> Samen met de Technical Lead heb ik de interfaces tussen de verschillende subsystemen gestroomlijnd. </li>
+                <li><strong>Docker &amp; Environment Troubleshooting:</strong> Waar nodig heb ik gehelpen bij het oplossen van vroege opstart- en configuratieproblemen in onze gezamenlijke Docker-ontwikkelomgeving (zoals het correct configureren van de ros_gz_bridge), zodat het hele team met een stabiele en identieke build kon werken.</li>
+            </ul>
+
+            <h3>Leermoment</h3>
+            <p> Het succes van een robotisch systeem valt of staat met heldere communicatie, een strakke planning en een solide software-architectuur. Door deze rollen te ondersteunen, heb ik mijn vaardigheden in zowel projectmatig werken (Agile/Scrum) als in het bewaken van systeemintegratie sterk kunnen doorontwikkelen.</p>
+        </section>
+        <section id="algemeen-leermoment">
+            <h2>Samenvattend Leermoment: Systeemintegratie &amp; Organiserend Vermogen</h2>
+            <p>Het doorlopen van dit project binnen Team Marshall heeft mij een diepgaand inzicht gegeven in de complexiteit van embedded systemen en roboticavraagstukken. Mijn grootste leermoment is dat code alleen niet genoeg is. De echte uitdaging zit in de samenwerking tussen de hardware, de simulatie en de software..</p>
+            <p>In de beginfase werd ik geconfronteerd met de harde realiteit van sensorintegratie. Een ogenschijnlijk abstracte parameter in een SDF-model (zoals de camerahoek of de oriëntatie van de LiDAR) heeft direct een domino-effect op de logica van de computer vision- en navigatie-nodes. Het overwinnen van 'vervelende' hardware-uitdagingen, zoals een LiDAR-straal die door bijzondere wijzen op de grond bleef liggen of de extreme gevoeligheid voor sensorruis, dwong mij om systematisch te debuggen en code effectief te refactoren naar een stabiele, robuuste runtime-omgeving.</p>
+            <p>Daarnaast heeft dit project mijn organisatorisch vermogen sterk aangescherpt. Door vanaf het begin te kiezen voor een structuur bleef de infrastructuur schaalbaar en onderhoudbaar voor het hele team. Het maken van de fysieke simulatie in Gazebo naar bruikbare ROS 2-topics via de <code>ros_gz_bridge</code> was de ultieme validatie van deze gestructureerde aanpak.</p>
+            <p>Tot slot heeft de nauwe samenwerking met de Scrum Master en Technical Lead mij geleerd hoe je binnen een engineeringteam de regie behoudt over een complex softwaresysteem, bijvoorbeeld wanneer ik werkte aan OpenCV-deurendetectie en de koppeling met de gazebo wereld. Ik heb geleerd om kritisch te reflecteren op functionele en niet-functionele requirements en deze te vertalen naar voorspelbare, veilige en presterende code die standhoudt in een simulatie omgeving.</p>
+        </section>
+    </main>
+</body>
+</html>

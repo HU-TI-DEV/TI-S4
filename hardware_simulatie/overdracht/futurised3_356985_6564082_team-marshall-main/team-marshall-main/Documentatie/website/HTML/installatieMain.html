@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Installatie</title>
+
+    <link rel="stylesheet" href="CSS_/main.css"> 
+    <link rel="stylesheet" href="Ham_menu/Ham.css">
+    <script defer src="Ham_menu/Ham.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Installatie</h1>
+    </header>
+
+    <main>
+        <section id="installatie-voorbereiding">
+            <h2>Installatie- & Configuratiedocumentatie: ROS 2 Jazzy & Gazebo Harmonic</h2>
+            <p>Dit document beschrijft de stappen die nodig zijn om de simulatie-omgeving voor de robot Flip te draaien binnen de Ubuntu 24.04 (Noble) Docker-container.</p>
+            <p>Snelle start: In de standaard Docker-image zijn alle benodigde pakketten uit Sectie 1 al vooraf geïnstalleerd. Is het gz sim commando niet direct beschikbaar? Sla Sectie 1 over en voer direct de stappen uit Sectie 2 (Omgevingsvariabelen) uit.</p>
+
+            <h3>Systeempakketten (Alleen bij schone installatie)e</h3>
+            <p>Mocht je vanaf een volledig lege container beginnen of container die niet helemaal voldoet aan de eisen? Check/installeer dan eerst de simulator en de bijbehorende ROS 2- en navigatiepakketten:</p>
+            <pre><code>apt-get update && apt-get install -y \
+    gz-harmonic \
+    ros-jazzy-ros-gz \
+    ros-jazzy-ros-gz-sim \
+    ros-jazzy-slam-toolbox \
+    ros-jazzy-rviz2</code></pre>
+
+            <h3>Essentiële Omgevingsvariabelen & Sourcing</h3>
+            <p>Voordat de commando's en plugins correct werken, moeten de juiste paden actief zijn. Voer de volgende regels uit in je terminal (of voeg ze toe aan je .bashrc / opstartscript):</p>
+            <pre><code># 1. Activeer de ROS 2-omgeving en de gekoppelde Gazebo-bridges
+source /opt/ros/jazzy/setup.bash
+
+# 2. Geef aan waar Gazebo de robotmodellen van Flip kan vinden
+export GZ_SIM_RESOURCE_PATH=/workspace/Futurised/models</code></pre>
+        </section>
+        
+        <section id="troubleshooting-sectie">
+            <h2>Troubleshooting (Veelvoorkomende Problemen)</h2>
+            <p>Als dingen eruit klappen, is het vrijwel altijd een van deze vier problemen:</p>
+
+            <div class="trouble-item">
+                <h4>1. Error: <code>bash: ./run_flip.sh: Permission denied</code></h4>
+                <p>Linux blokkeert scripts uit veiligheid. Je moet het bestand handmatig uitvoerbaar maken.</p>
+                <pre><code>Fix: chmod +x run_flip.sh</code></pre>
+            </div>
+
+            <div class="trouble-item">
+                <h4>2. Error: <code>cannot execute: required file not found (bij een .sh script)</code></h4>
+                <p>Je script heeft onzichtbare Windows-regeleinden (CRLF) in plaats van Linux-regeleinden (LF). Dit gebeurt vaak als je in VS Code op Windows werkt.</p>
+                <pre><code>Fix: Run dos2unix run_flip.sh om de Windows-tekens te strippen.</code></pre>
+            </div>
+
+            <div class="trouble-item">
+                <h4>3. Error: <code>ImportError: cannot import name 'LaunchDescription' due to circular import</code></h4>
+                <p>Je hebt je eigen launchbestand letterlijk <code>launch.py</code> genoemd. Python probeert hierdoor de officiële launch-bibliotheek uit jouw eigen bestand te laden.</p>
+                <pre><code>Fix: Hernoem je bestand naar iets anders, bijvoorbeeld simulation_launch.py.</code></pre>
+            </div>
+
+            <div class="trouble-item">
+                <h4>4. Error: <code>ModuleNotFoundError: No module named 'rclpy'</code></h4>
+                <p>Je bevindt je in een terminal waarin ROS 2 niet geactiveerd is.</p>
+                <pre><code>Fix: Run source /opt/ros/jazzy/setup.bash of zorg dat de omgeving geautomatiseerd is.</code></pre>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

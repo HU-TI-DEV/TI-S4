@@ -1,0 +1,208 @@
+<mxfile host="65bd71144e">
+    <diagram id="project-architecture" name="Current src architecture">
+        <mxGraphModel dx="3583" dy="2599" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="title" value="GreenDigger architecture // current state" style="text;html=1;strokeColor=none;fillColor=none;fontSize=24;fontStyle=1;align=center;verticalAlign=middle;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="-420" width="760" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="entryGroup" value="Entry points" style="swimlane;html=1;rounded=0;whiteSpace=wrap;fillColor=#e8f1ff;strokeColor=#6c8ebf;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="130" y="-380" width="560" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="runner" value="python_runner.py&#xa;Starts dig_tile.py&#xa;Runs behaviour_manager.py warmup&#xa;Runs behaviour_manager.py drive mode" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="entryGroup" vertex="1">
+                    <mxGeometry x="170" y="40" width="240" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="bmEntry" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;behaviour_manager.py&lt;br&gt;Main autonomous state machine&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;" parent="entryGroup" vertex="1">
+                    <mxGeometry x="10" y="215" width="240" height="65" as="geometry"/>
+                </mxCell>
+                <mxCell id="digTileEntry" value="dig_tile.py&#xa;Terrain deformation worker&#xa;Listens for bucket contacts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="entryGroup" vertex="1">
+                    <mxGeometry x="310" y="210" width="240" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="coreGroup" value="Behaviour" style="swimlane;html=1;rounded=0;whiteSpace=wrap;fillColor=#eaf7ea;strokeColor=#82b366;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="-130" y="90" width="1000" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="manager" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;BehaviourManager&lt;br&gt;States: manual, idle, drive, dig, error&lt;br&gt;Reads sensor state and dispatches handlers&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="coreGroup" vertex="1">
+                    <mxGeometry x="220" y="60" width="210" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="poiRoute" value="poi_route.json&#xa;Ordered POI route&#xa;name, x, y" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="coreGroup" vertex="1">
+                    <mxGeometry x="530" y="60" width="180" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="drivePoi" value="drive_poi.py&#xa;Point-to-point navigation&#xa;distance, heading, speed scaling" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="coreGroup" vertex="1">
+                    <mxGeometry x="10" y="230" width="210" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="drivePid" value="drive_pid.py&#xa;Heading PID / yaw control&#xa;Uses IMU orientation" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="coreGroup" vertex="1">
+                    <mxGeometry x="170" y="385" width="180" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="digHalfmoon" value="dig_halfmoon.py&#xa;Blocking arm dig sequence&#xa;Half-moon sweep pattern" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="coreGroup" vertex="1">
+                    <mxGeometry x="370" y="385" width="210" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="interface" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;interface/interface.py&lt;br&gt;Gazebo transport boundary&lt;br&gt;State dictionary + command publishers&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="coreGroup" vertex="1">
+                    <mxGeometry x="650" y="210" width="180" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="armHelper" value="interface/arm_helper.py&#xa;Named arm poses&#xa;Alias resolution" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="coreGroup" vertex="1">
+                    <mxGeometry x="760" y="385" width="180" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="gazeboGroup" value="Gazebo topics" style="swimlane;html=1;rounded=0;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="950" y="80" width="420" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="sensorTopics" value="Sensor topics&#xa;/digger/imu&#xa;/digger/lidar&#xa;/digger/camera&#xa;/digger/chassis_contact&#xa;/world/starting_environment/dynamic_pose/info&#xa;/arm/joint_state&#xa;bucket rod_contact" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="gazeboGroup" vertex="1">
+                    <mxGeometry x="25" y="45" width="280" height="165" as="geometry"/>
+                </mxCell>
+                <mxCell id="commandTopics" value="Command topics&#xa;/model/digger/cmd_vel&#xa;/arm/joint/*/cmd_pos&#xa;spawn/despawn services" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="gazeboGroup" vertex="1">
+                    <mxGeometry x="90" y="260" width="280" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="gzTransport" value="gz.transport + gz.msgs&#xa;Node, Twist, Double, IMU, LaserScan, Image, Contacts, Pose_V, Model" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="gazeboGroup" vertex="1">
+                    <mxGeometry x="25" y="405" width="280" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="envGroup" value="Gazebo Sim env" style="swimlane;html=1;rounded=0;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="1430" y="-320" width="830" height="560" as="geometry"/>
+                </mxCell>
+                <mxCell id="world" value="&lt;span style=&quot;font-weight: normal;&quot;&gt;environment/world.sdf&lt;br&gt;starting_environment&lt;br&gt;World plugins, terrain, digger, markers, walls&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="envGroup" vertex="1">
+                    <mxGeometry x="590" y="45" width="185" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="diggerSdf" value="digger.sdf&#xa;Digger model&#xa;Sensors + diff drive&#xa;Includes mounted arm" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="envGroup" vertex="1">
+                    <mxGeometry x="130" y="207.5" width="175" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="armSdf" value="arm.sdf&#xa;6 joint arm&#xa;Joint position controllers&#xa;Joint state publisher&#xa;Bucket contact sensor" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="envGroup" vertex="1">
+                    <mxGeometry x="195" y="405" width="175" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="terrainSdf" value="terrain.sdf&#xa;Heightmap terrain&#xa;Uses media/terrain.png" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="envGroup" vertex="1">
+                    <mxGeometry x="290" y="45" width="185" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="markerSdf" value="marker.sdf&#xa;Visual POI markers&#xa;marker1 - marker9 in world.sdf" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="envGroup" vertex="1">
+                    <mxGeometry x="590" y="215" width="185" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="terrainPng" value="media/terrain.png&#xa;Editable heightmap&#xa;Used by terrain.sdf" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="envGroup" vertex="1">
+                    <mxGeometry x="35" y="45" width="175" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="assets" value="models/*.stl, *.dae&#xa;Arm visuals/collisions&#xa;Rocks, bridge, dump, tree, cavities" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="envGroup" vertex="1">
+                    <mxGeometry x="545" y="330" width="230" height="75" as="geometry"/>
+                </mxCell>
+                <mxCell id="toolsGroup" value="Tests" style="swimlane;html=1;rounded=0;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="360" y="740" width="1700" height="330" as="geometry"/>
+                </mxCell>
+                <mxCell id="makeHeightmap" value="make_heightmap.py&#xa;Generates terrain.png from slope/noise inputs" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;" parent="toolsGroup" vertex="1">
+                    <mxGeometry x="1060" y="50" width="220" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="navigate" value="navigate.py&#xa;Legacy nearest-unvisited POI prototype&#xa;Uses interface + tests/navigate_to_point.py" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;" parent="toolsGroup" vertex="1">
+                    <mxGeometry x="30" y="50" width="260" height="85" as="geometry"/>
+                </mxCell>
+                <mxCell id="testsPy" value="tests/*.py&#xa;subscriber_publisher.py&#xa;keyboard_publisher.py&#xa;pid_heading.py&#xa;navigate_to_point.py&#xa;camera_test.py" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;" parent="toolsGroup" vertex="1">
+                    <mxGeometry x="370" y="50" width="250" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="lidarCpp" value="tests/lidar.cpp&#xa;Point cloud decoding&#xa;Filtering + clustering prototype&#xa;Built with tests/CMakeLists.txt" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#666666;" parent="toolsGroup" vertex="1">
+                    <mxGeometry x="725" y="50" width="250" height="105" as="geometry"/>
+                </mxCell>
+                <mxCell id="cmake" value="tests/CMakeLists.txt&#xa;Build config for lidar.cpp" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#eeeeee;strokeColor=#666666;" parent="toolsGroup" vertex="1">
+                    <mxGeometry x="755" y="210" width="190" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_runner_bm" value="starts" style="endArrow=block;html=1;rounded=0;strokeColor=#6c8ebf;" parent="1" source="runner" target="bmEntry" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_runner_digtile" value="starts" style="endArrow=block;html=1;rounded=0;strokeColor=#6c8ebf;" parent="1" source="runner" target="digTileEntry" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_bmentry_manager" value="creates / runs" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="bmEntry" target="manager" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_manager_route" value="loads route" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;" parent="1" source="manager" target="poiRoute" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_manager_drivepoi" value="drive to coordinates" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="manager" target="drivePoi" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_manager_pid" value="heading hold / dig heading" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="manager" target="drivePid" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_manager_dig" value="dig state" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="manager" target="digHalfmoon" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_drivepoi_pid" value="uses yaw control" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="drivePoi" target="drivePid" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_manager_interface" value="get_state / publish commands" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="manager" target="interface" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_dig_interface" value="arm commands" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="digHalfmoon" target="interface" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_interface_armhelper" value="named poses" style="endArrow=block;html=1;rounded=0;strokeColor=#82b366;" parent="1" source="interface" target="armHelper" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_digtile_interface" value="bucket contact + spawn/despawn" style="endArrow=block;html=1;rounded=0;strokeColor=#6c8ebf;" parent="1" source="digTileEntry" target="interface" edge="1">
+                    <mxGeometry x="-0.4156" y="4" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_digtile_terrain" value="edits heightmap" style="endArrow=block;html=1;rounded=0;strokeColor=#d79b00;" parent="1" source="digTileEntry" target="terrainPng" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_interface_sensor" value="subscribes" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;" parent="1" source="sensorTopics" target="interface" edge="1">
+                    <mxGeometry x="-0.515" y="6" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_interface_command" value="publishes / services" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;" parent="1" source="interface" target="commandTopics" edge="1">
+                    <mxGeometry x="-0.1975" y="-5" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_interface_gz" value="uses" style="endArrow=block;html=1;rounded=0;strokeColor=#d6b656;" parent="1" source="interface" target="gzTransport" edge="1">
+                    <mxGeometry x="-0.2432" y="-2" relative="1" as="geometry">
+                        <mxPoint x="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_env_sensors" value="publishes sensor state" style="endArrow=block;html=1;rounded=0;strokeColor=#d79b00;" parent="1" source="diggerSdf" target="sensorTopics" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_env_commands" value="receives commands" style="endArrow=block;html=1;rounded=0;strokeColor=#d79b00;" parent="1" source="commandTopics" target="diggerSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_command_arm" value="joint targets" style="endArrow=block;html=1;rounded=0;strokeColor=#d79b00;" parent="1" source="commandTopics" target="armSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_world_digger" value="includes" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;" parent="1" source="world" target="diggerSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_digger_arm" value="includes mounted_arm" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;" parent="1" source="diggerSdf" target="armSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_world_terrain" value="includes" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;" parent="1" source="world" target="terrainSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_world_marker" value="includes markers" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;" parent="1" source="world" target="markerSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_terrain_png" value="heightmap" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;" parent="1" source="terrainSdf" target="terrainPng" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_assets_digger" value="meshes" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;" parent="1" source="assets" target="diggerSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_assets_arm" value="meshes" style="endArrow=block;html=1;rounded=0;strokeColor=#b85450;" parent="1" source="assets" target="armSdf" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_makeheight_terrain" value="generates" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;entryX=0.252;entryY=1.01;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="makeHeightmap" target="terrainPng" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_nav_interface" value="uses" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;dashed=1;" parent="1" source="navigate" target="interface" edge="1">
+                    <mxGeometry x="-0.4484" y="-2" relative="1" as="geometry">
+                        <mxPoint y="1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_tests_topics" value="direct Gazebo tests" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;dashed=1;" parent="1" source="testsPy" target="gazeboGroup" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e_lidar_topics" value="/digger/lidar/points" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;dashed=1;" parent="1" source="lidarCpp" target="sensorTopics" edge="1">
+                    <mxGeometry x="-0.5567" y="6" relative="1" as="geometry">
+                        <mxPoint y="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_cmake_lidar" value="builds" style="endArrow=block;html=1;rounded=0;strokeColor=#666666;" parent="1" source="cmake" target="lidarCpp" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

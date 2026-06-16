@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Casper - Futurised</title>
+    
+    <link rel="stylesheet" href="../CSS_/main.css"> 
+    <link rel="stylesheet" href="../Ham_menu/Ham.css">
+    
+    <script defer src="../Ham_menu/Ham.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Process Casper</h1>
+    </header>
+
+    <main>
+
+        <!-- Introductie -->
+        <section id="introductie">
+            <h2>Introductie</h2>
+            <p>
+                Binnen het Futurised project heb ik mij bezig gehouden met de ROS 2 robot "Flip".
+                Mijn bijdragen lagen op vijf gebieden: de launch configuratie, de mapper, de RViz visualisatie, de TF broadcaster en de beginfase van de explorer.
+                Daarnaast heb ik in de beginfase ongeveer 30% van de explorer geschreven, waarna Axl dit heeft overgenomen en verder uitgewerkt.
+                Naast het bouwen heb ik ook veel onderzoek gedaan naar de onderliggende technologieën zoals SLAM en Lidar mapping.
+            </p>
+        </section>
+
+        <!-- Launch -->
+        <section id="launch">
+            <h2>Launch</h2>
+            <p>
+                Ik heb het launch-bestand geschreven dat de volledige SLAM-pipeline opstart in combinatie met de Gazebo-simulatie.
+                Het bestand start alle benodigde onderdelen op in de juiste volgorde via een tijdlijn:
+            </p>
+            <ul>
+                <li><strong>t=0s</strong> — ROS↔Gazebo bridge en TF broadcaster starten</li>
+                <li><strong>t=5s</strong> — SLAM Toolbox node start</li>
+                <li><strong>t=10s</strong> — RViz start met de vooraf ingestelde configuratie</li>
+                <li><strong>t=12s</strong> — SLAM lifecycle: configure</li>
+                <li><strong>t=15s</strong> — SLAM lifecycle: activate</li>
+                <li><strong>t=20s</strong> — Explorer start</li>
+            </ul>
+            <p>
+                Een van de belangrijkste uitdagingen was de lifecycle-timing van SLAM Toolbox: als configure of activate te vroeg wordt aangeroepen, mislukt de opstart.
+                Dit is opgelost door de timings stap voor stap te vergroten totdat de volgorde stabiel was.
+            </p>
+            <p>
+                Volledige documentatie:
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/tree/main/Documentatie/Launch" target="_blank">Launch Documentatie (GitHub)</a>
+                &nbsp;|&nbsp;
+                <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Launch/Launch-Main.html" target="_blank">ROS 2 Launch Documentatie</a>
+                &nbsp;|&nbsp;
+                <a href="https://gazebosim.org/docs" target="_blank">Gazebo Documentatie</a>
+            </p>
+        </section>
+
+        <!-- Mapper -->
+        <section id="mapper">
+            <h2>Mapper</h2>
+            <p>
+                De mapper is een zelfstandig Python-script dat LiDAR-sensordata van Gazebo leest en verwerkt tot een 2D-plattegrond via een probabilistisch occupancy grid algoritme.
+                Er is bewust gekozen voor een standalone aanpak zonder ROS 2 middleware: alle communicatie verloopt via het <code>gz topic</code> commandoregelgereedschap.
+            </p>
+            <p>
+                De kern van het algoritme werkt als volgt:
+            </p>
+            <ul>
+                <li>Per LiDAR-straal wordt via <strong>Bresenham ray-casting</strong> bepaald welke gridcellen vrij zijn en welke bezet.</li>
+                <li>In plaats van een binaire bezet/vrij-kaart worden <strong>log-odds waarden</strong> bijgehouden, waardoor de kaart robuust is tegen incidentele foute metingen.</li>
+                <li>De LiDAR-sensor zit 1.45 meter voor het draaipunt van de robot gemonteerd. De werkelijke scanpositie wordt per frame herberekend op basis van de odometrie.</li>
+                <li>De kaart wordt real-time gevisualiseerd via OpenCV.</li>
+            </ul>
+            <p>
+                Voor het onderzoek naar SLAM en Lidar mapping heb ik de volgende bronnen gebruikt:
+            </p>
+            <ul>
+                <li><a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/tree/main/Documentatie/Mapper" target="_blank">Mapper Documentatie (GitHub)</a></li>
+                <li><a href="https://github.com/SteveMacenski/slam_toolbox" target="_blank">SLAM Toolbox (GitHub)</a></li>
+                <li><a href="https://docs.nav2.org/" target="_blank">Nav2 Navigatie Framework</a></li>
+                <li><a href="https://docs.ros.org/en/humble/" target="_blank">ROS 2 Humble Documentatie</a></li>
+            </ul>
+        </section>
+
+        <!-- Explorer -->
+        <section id="explorer">
+            <h2>Explorer</h2>
+            <p>
+                In de beginfase van het project heb ik ongeveer 30% van de explorer geschreven. Hierna heeft Axl dit overgenomen en verder uitgewerkt tot het volledige systeem.
+            </p>
+            <p>
+                De explorer laat robot Flip zelfstandig een gebouw verkennen via <strong>frontier exploration</strong>.
+                De robot kiest automatisch openingen naar onontdekt gebied (frontiers) en beweegt daar naartoe op basis van input van de mapper, odometrie en de LiDAR-scan.
+                Voor het onderzoek naar frontier exploration heb ik de volgende bronnen gebruikt:
+            </p>
+            <ul>
+                <li><a href="https://docs.nav2.org/tutorials/docs/navigation2_with_slam.html" target="_blank">Nav2 met SLAM (frontier exploration)</a></li>
+                <li><a href="https://docs.nav2.org/" target="_blank">Nav2 Navigatie Framework</a></li>
+            </ul>
+        </section>
+
+        <!-- RViz -->
+        <section id="rviz">
+            <h2>RViz</h2>
+            <p>
+                Ik heb de RViz-configuratie opgezet waarmee de volledige navigatiestack van Flip in één oogopslag zichtbaar is.
+                De configuratie toont drie kernprocessen tegelijk:
+            </p>
+            <ul>
+                <li><strong>Map</strong> — de occupancy grid van SLAM Toolbox (<code>/map</code>), met <em>Transient Local</em> durability zodat de kaart ook zichtbaar is als RViz later opstart dan de kaartnode.</li>
+                <li><strong>LaserScan</strong> — de ruwe LiDAR-meetpunten als rode punten in het kaartframe (<code>/scan</code>), met <em>Best Effort</em> reliability voor vloeiende real-time weergave.</li>
+                <li><strong>TF-boom</strong> — de volledige transformatieboom van de robot, zodat de frames <code>map</code> → <code>odom</code> → <code>base_link</code> zichtbaar zijn.</li>
+            </ul>
+            <p>
+                Als standaardweergave is gekozen voor een orthografisch bovenaanzicht (<em>TopDownOrtho</em>), zodat de kaart, robotpositie en rijpaden direct leesbaar zijn zonder perspectiefdistorsie.
+            </p>
+            <p>
+                Volledige documentatie:
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/tree/main/Documentatie/rviz" target="_blank">RViz Documentatie (GitHub)</a>
+                &nbsp;|&nbsp;
+                <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/RViz/RViz-User-Guide/RViz-User-Guide.html" target="_blank">RViz Officiële Documentatie</a>
+            </p>
+        </section>
+
+        <!-- TF -->
+        <section id="tf">
+            <h2>TF Broadcaster</h2>
+            <p>
+                De TF broadcaster is een lichtgewicht ROS 2-node die de transformatieboom van robot Flip publiceert.
+                Zonder een correcte TF-boom kunnen RViz en navigatienodes de sensordata niet correct in de ruimte plaatsen.
+                De node publiceert twee transformaties:
+            </p>
+            <ul>
+                <li><strong>Dynamisch</strong> (<code>odom</code> → <code>base_link</code>): wordt bij elke odometriemeting bijgewerkt en beschrijft de actuele positie van de robot.</li>
+                <li><strong>Statisch</strong> (<code>base_link</code> → <code>Flip/front_block/gpu_lidar</code>): beschrijft de vaste montageplaats van de LiDAR-sensor, 10 cm boven het robotlichaam. Wordt elke seconde opnieuw gepubliceerd zodat de transformatie beschikbaar blijft na een herstart van andere nodes.</li>
+            </ul>
+            <p>
+                Een bewuste ontwerpkeuze was het gebruik van de <strong>wandklok</strong> in plaats van simulatietijd voor de TF-tijdstempels.
+                Simulatietijdstempels kunnen verouderd lijken ten opzichte van andere nodes, wat resulteert in de fout <code>TF_OLD_DATA: Ignoring data from the past</code>.
+                Door de wandklok te gebruiken blijft de TF-boom altijd actueel.
+            </p>
+            <p>
+                Volledige documentatie:
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/tree/main/Documentatie/tf" target="_blank">TF Documentatie (GitHub)</a>
+                &nbsp;|&nbsp;
+                <a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Tf2-Main.html" target="_blank">ROS 2 TF2 Documentatie</a>
+            </p>
+        </section>
+
+        <!-- Onderzoek -->
+        <section id="onderzoek">
+            <h2>Onderzoek</h2>
+            <p>
+                Naast het praktische werk heb ik veel onderzoek gedaan naar de technologieën en algoritmes die gebruikt worden binnen dit project.
+                Hieronder een overzicht van de bronnen:
+            </p>
+            <ul>
+                <li><a href="https://docs.ros.org/en/humble/" target="_blank">ROS 2 Humble Documentatie</a></li>
+                <li><a href="https://gazebosim.org/docs" target="_blank">Gazebo Simulatie Documentatie</a></li>
+                <li><a href="https://github.com/SteveMacenski/slam_toolbox" target="_blank">SLAM Toolbox</a></li>
+                <li><a href="https://docs.nav2.org/" target="_blank">Nav2 Navigatie Framework</a></li>
+                <li><a href="https://docs.nav2.org/tutorials/docs/navigation2_with_slam.html" target="_blank">Nav2 met SLAM uitleg</a></li>
+                <li><a href="https://docs.ros.org/en/humble/Tutorials/Intermediate/Tf2/Tf2-Main.html" target="_blank">ROS 2 TF2 Documentatie</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+</body>
+</html>

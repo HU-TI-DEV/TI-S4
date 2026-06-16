@@ -1,0 +1,7 @@
+| Stakeholder | Welzijn  | Autonomie  | Rechtvaardigheid  |
+| :--- | :--- | :--- | :--- |
+| **Atum3D** | Hogere winst en efficiëntie door 24/7 productie zonder pauzes. | Minder afhankelijkheid van menselijke roosters en ploegendiensten. | Marktpositie versterken door technologische voorsprong en innovatie. |
+| **Werknemers** | **Positief:** Minder contact met giftige resin.<br>**Negatief:** Stress over baanzekerheid. | Verschuiving van repeterend fysiek werk naar procesbewaking en regie. | Eerlijke kansen op omscholing en training voor het werken met robots. |
+| **Studenten** | Ervaring opdoen met state-of-the-art robotica verbetert de carrièrekansen. | Vrijheid om te experimenteren en de robotarm zelfstandig te programmeren. | Gelijke toegang tot moderne faciliteiten, ongeacht technisch niveau. |
+| **Klanten** | Snellere levertijden en mogelijk lagere kosten per product. | Meer mogelijkheden voor snelle 'on-demand' aanpassingen en maatwerk. | Transparantie over hoe producten autonoom en veilig zijn geproduceerd. |
+| **Milieu** | Minder afval door hogere precisie van de robotarm bij het printen. | N.v.t. | Verantwoordelijkheid voor de volledige levenscyclus van gebruikte harsen (resin). |

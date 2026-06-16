@@ -1,0 +1,192 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <world name="car_world">
+  <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics">
+    </plugin>
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster">
+    </plugin>
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <scene>
+      <ambient>0.7 0.7 0.7 1</ambient>
+      <background>0.8 0.9 1.0 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- Scene & Lighting -->
+    <scene>
+      <ambient>0.7 0.7 0.7 1</ambient>
+      <background>0.8 0.9 1.0 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <light type="directional" name="sun">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <!-- Ground -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane><normal>0 0 1</normal></plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.6 0.6 0.6 1</ambient>
+            <diffuse>0.6 0.6 0.6 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- TONK -->
+    <model name="tonk" canonical_link="base">
+      <!-- Spawn height so wheels touch ground -->
+      <pose>0 0 0.35 0 0 0</pose>
+
+      <!-- Diff Drive Plugin (front wheels only) -->
+      <plugin filename="gz-sim-diff-drive-system"
+              name="gz::sim::systems::DiffDrive">
+        <left_joint>left_front_joint</left_joint>
+        <right_joint>right_front_joint</right_joint>
+        <wheel_separation>1.6</wheel_separation>
+        <wheel_radius>0.25</wheel_radius>
+        <topic>cmd_vel</topic>
+      </plugin>
+
+      <!-- Base Link -->
+      <link name="base">
+        <inertial>
+          <mass>40</mass>
+          <inertia><ixx>2</ixx><iyy>2</iyy><izz>2</izz></inertia>
+        </inertial>
+        <visual name="visual">
+          <geometry><box><size>1.8 1.4 0.6</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1.8 1.4 0.6</size></box></geometry>
+        </collision>
+      </link>
+      <!-- Pov camera -->
+      <!-- link -->
+      <link name="camera_link">
+        <pose>0.9 0 0.4 0 0 0</pose> <inertial>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.0001</ixx><iyy>0.0001</iyy><izz>0.0001</izz>
+          </inertia>
+        </inertial>
+        <visual name="visual">
+          <geometry><box><size>0.1 0.1 0.1</size></box></geometry>
+          <material>
+            <ambient>0 0 0 1</ambient>
+            <diffuse>0 0 0 1</diffuse>
+          </material>
+        </visual>
+        <!-- sensor -->
+        <sensor name="camera" type="camera">
+          <pose>0 0 0 0 0 0</pose>
+          <always_on>1</always_on>
+          <update_rate>30</update_rate>
+          <visualize>true</visualize>
+          <topic>camera/image_raw</topic>
+          <camera>
+            <horizontal_fov>1.05</horizontal_fov>
+            <image>
+              <width>640</width>
+              <height>480</height>
+            </image>
+            <clip>
+              <near>0.1</near>
+              <far>100</far>
+            </clip>
+          </camera>
+        </sensor>
+      </link>
+      <!-- joint -->
+      <joint name="camera_joint" type="fixed">
+        <parent>base</parent>
+        <child>camera_link</child>
+      </joint>
+
+      <!-- Wheels -->
+      <!-- Left Front -->
+      <link name="left_front">
+        <pose>0.6 0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Right Front -->
+      <link name="right_front">
+        <pose>0.6 -0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Left Rear -->
+      <link name="left_rear">
+        <pose>-0.6 0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Right Rear -->
+      <link name="right_rear">
+        <pose>-0.6 -0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Joints -->
+      <joint name="left_front_joint" type="revolute">
+        <parent>base</parent><child>left_front</child>
+        <axis><xyz>0 0 -1</xyz></axis>
+      </joint>
+      <joint name="right_front_joint" type="revolute">
+        <parent>base</parent><child>right_front</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="left_rear_joint" type="revolute">
+        <parent>base</parent><child>left_rear</child>
+        <axis><xyz>0 0 -1</xyz></axis>
+      </joint>
+      <joint name="right_rear_joint" type="revolute">
+        <parent>base</parent><child>right_rear</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+
+    </model>
+  </world>
+</sdf>

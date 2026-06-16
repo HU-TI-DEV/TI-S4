@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <world name="valve_capture_world">
+    <gravity>0 0 -9.81</gravity>
+
+    <physics name="1ms" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 20 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>1 1 1 1</specular>
+      <direction>-0.5 0.1 -1</direction>
+    </light>
+
+    <light type="point" name="valve_fill_light">
+      <pose>0 0 3 0 0 0</pose>
+      <diffuse>1 0.82 0.62 1</diffuse>
+      <specular>1 0.82 0.62 1</specular>
+      <attenuation>
+        <range>12</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+    </light>
+
+    <scene>
+      <ambient>0.4 0.4 0.4 1</ambient>
+    </scene>
+
+
+    <include>
+      <uri>file:///workspace/gazebo/valve_flange.sdf</uri>
+      <name>stl_visual</name>
+      <pose>0 0 0.25 0 0 0</pose>
+    </include>
+  </world>
+</sdf>

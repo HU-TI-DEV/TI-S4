@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+    <model name="heated_object">
+        <static>false</static>
+        <link name="link">
+            <collision name="collision">
+                <geometry>
+                    <box>
+                        <size>1 1 1</size>
+                    </box>
+                </geometry>
+            </collision>
+
+            <visual name="visual">
+                <geometry>
+                    <box>
+                        <size>1 1 1</size>
+                    </box>
+                </geometry>
+                <material>
+                    <ambient>1 0 0 1</ambient>
+                    <diffuse>1 0 0 1</diffuse>
+                    <emissive>1 0 0 1</emissive>
+                </material>
+            </visual>
+        </link>
+    </model>
+</sdf>

@@ -1,0 +1,564 @@
+<?xml version="1.0" ?>
+<sdf version="1.9">
+  <model name="my_gazebo_model">
+    <static>false</static>
+    <link name="Sun_link">
+      <gravity>false</gravity>
+      <pose>0.000000 -1.606858 2.135322 0.669098 -0.271814 -0.123795</pose>
+      <light name="Sun" type="directional">
+        <pose>0 0 0 0 0 0</pose>
+        <cast_shadows>true</cast_shadows>
+        <diffuse>1 1 1 1</diffuse>
+        <specular>1 1 1 1</specular>
+        <direction>0.285570 0.589529 -0.755583</direction>
+      </light>
+    </link>
+    <link name="Sun_001_link">
+      <gravity>false</gravity>
+      <pose>0.000000 -1.606858 2.135322 0.669098 -0.271814 -2.259612</pose>
+      <light name="Sun_001" type="directional">
+        <pose>0 0 0 0 0 0</pose>
+        <cast_shadows>true</cast_shadows>
+        <diffuse>1 1 1 1</diffuse>
+        <specular>1 1 1 1</specular>
+        <direction>0.344999 -0.556839 -0.755583</direction>
+      </light>
+    </link>
+    <joint name="joint" type="revolute">
+      <pose relative_to="__model__">0.000000 -1.337465 0.240018 0.000000 -0.000000 0.053171</pose>
+      <parent>robot_arm_1_link</parent>
+      <child>robot_arm_2_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.79769e+308</lower>
+          <upper>1.79769e+308</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="joint1" type="revolute">
+      <pose relative_to="__model__">0.146907 -1.252311 0.524048 1.5707963 0.000000 -0.000000</pose>
+      <parent>robot_arm_2_link</parent>
+      <child>robot_arm_3_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5707963</lower>
+          <upper>1.5707963</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="joint2" type="revolute">
+      <pose relative_to="__model__">0.146907 -1.252311 1.303850 1.5707963 -0.000000 0.053171</pose>
+      <parent>robot_arm_3_link</parent>
+      <child>robot_arm_4_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.0</lower>
+          <upper>1.5707963</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="joint3" type="revolute">
+      <pose relative_to="__model__">0.385573 -1.316667 1.429748 1.5707963 0.000000 1.623967</pose>
+      <parent>robot_arm_4_link</parent>
+      <child>robot_arm_5_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5707963</lower>
+          <upper>1.5707963</upper>
+        </limit>
+      </axis>
+    </joint>
+    <joint name="joint4" type="revolute">
+      <pose relative_to="__model__">1.073194 -1.280071 1.410850 0.000000 0.000000 1.623968</pose>
+      <parent>robot_arm_5_link</parent>
+      <child>robot_arm_6_link</child>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1.5707963</lower>
+          <upper>1.5707963</upper>
+        </limit>
+      </axis>
+    </joint>
+    <link name="robot_arm_1_link">
+      <gravity>false</gravity>
+      <pose>0.000696 -1.337959 0.119624 0.000000 -0.000000 0.000000</pose>
+      <visual name="robot_arm_1_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2400 0.1560 0.0001 1.0000</ambient>
+          <diffuse>0.8000 0.5200 0.0003 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="robot_arm_1_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_1.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="robot_arm_2_link">
+      <gravity>false</gravity>
+      <pose>0.065606 -1.347451 0.461820 -0.000000 -0.000000 0.053171</pose>
+      <visual name="robot_arm_2_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2400 0.1560 0.0001 1.0000</ambient>
+          <diffuse>0.8000 0.5200 0.0003 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="robot_arm_2_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_2.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="robot_arm_3_link">
+      <gravity>false</gravity>
+      <pose>0.142801 -1.145455 0.879497 0.000000 0.000000 0.053171</pose>
+      <visual name="robot_arm_3_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2400 0.1560 0.0001 1.0000</ambient>
+          <diffuse>0.8000 0.5200 0.0003 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="robot_arm_3_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_3.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="robot_arm_4_link">
+      <gravity>false</gravity>
+      <pose>0.202967 -1.334231 1.365673 -0.000000 -0.000000 0.053171</pose>
+      <visual name="robot_arm_4_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_4.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2400 0.1560 0.0001 1.0000</ambient>
+          <diffuse>0.8000 0.5200 0.0003 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="robot_arm_4_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_4.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="robot_arm_5_link">
+      <gravity>false</gravity>
+      <pose>0.943222 -1.286017 1.433182 -0.000000 -0.000000 0.053171</pose>
+      <visual name="robot_arm_5_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_5.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2400 0.1560 0.0001 1.0000</ambient>
+          <diffuse>0.8000 0.5200 0.0003 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="robot_arm_5_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_5.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="robot_arm_6_link">
+      <gravity>false</gravity>
+      <pose>1.116145 -1.287557 1.422429 -0.000000 -0.000000 0.053171</pose>
+      <visual name="robot_arm_6_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_6.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.2400 0.1560 0.0001 1.0000</ambient>
+          <diffuse>0.8000 0.5200 0.0003 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="robot_arm_6_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/robot_arm_6.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="curing_stations_link">
+      <gravity>false</gravity>
+      <pose>-1.691217 -0.477504 0.690809 0.000000 -0.000000 -1.570796</pose>
+      <visual name="curing_stations_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/curing_stations.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0711 0.0602 0.0657 1.0000</ambient>
+          <diffuse>0.2370 0.2008 0.2190 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="curing_stations_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/curing_stations_col.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="table_link">
+      <gravity>false</gravity>
+      <pose>-1.701074 -1.262697 0.255320 0.000000 -0.000000 1.570796</pose>
+      <visual name="table_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/table.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0874 0.0474 0.0125 1.0000</ambient>
+          <diffuse>0.2912 0.1580 0.0418 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="table_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/table_col.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="dryer_link">
+      <gravity>false</gravity>
+      <pose>-1.696544 -1.938708 0.756281 0.000000 -0.000000 0.000000</pose>
+      <visual name="dryer_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/dryer.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0711 0.0602 0.0657 1.0000</ambient>
+          <diffuse>0.2370 0.2008 0.2190 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="dryer_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/dryer_col.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="bin_link">
+      <gravity>false</gravity>
+      <pose>1.738811 -1.415617 0.378498 0.000000 -0.000000 0.000000</pose>
+      <visual name="bin_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/bin.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0874 0.0474 0.0125 1.0000</ambient>
+          <diffuse>0.2912 0.1580 0.0418 1.0000</diffuse>
+          <specular>0.2500 0.2500 0.2500 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="bin_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/bin_col.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="printer_link">
+      <gravity>false</gravity>
+      <pose>0.006227 0.377219 0.879088 0.000000 -0.000000 0.000000</pose>
+      <visual name="printer_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/printer.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0934 0.0934 0.0934 1.0000</ambient>
+          <diffuse>0.3114 0.3114 0.3114 1.0000</diffuse>
+          <specular>0.0779 0.0779 0.0779 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="printer_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/printer_col.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <link name="curing_station_link">
+      <gravity>false</gravity>
+      <pose>-0.002172 -3.107039 1.292825 0.000000 -0.000000 -3.141592</pose>
+      <visual name="curing_station_visual">
+        <geometry>
+          <mesh>
+            <uri>meshes/curing_station.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.0934 0.0934 0.0934 1.0000</ambient>
+          <diffuse>0.3114 0.3114 0.3114 1.0000</diffuse>
+          <specular>0.0779 0.0779 0.0779 1.0000</specular>
+          <emissive>0.0000 0.0000 0.0000 1.0000</emissive>
+        </material>
+      </visual>
+      <collision name="curing_station_collision">
+        <geometry>
+          <mesh>
+            <uri>meshes/curing_station_col.stl</uri>
+            <scale>0.001 0.001 0.001</scale>
+          </mesh>
+        </geometry>
+      </collision>
+    </link>
+    <joint name="robot_arm_1_to_world_fixed" type="fixed">
+      <parent>world</parent>
+      <child>robot_arm_1_link</child>
+    </joint>
+    <joint name="curing_stations_auto_fixed" type="fixed">
+      <parent>robot_arm_1_link</parent>
+      <child>curing_stations_link</child>
+    </joint>
+    <joint name="table_auto_fixed" type="fixed">
+      <parent>robot_arm_1_link</parent>
+      <child>table_link</child>
+    </joint>
+    <joint name="dryer_auto_fixed" type="fixed">
+      <parent>robot_arm_1_link</parent>
+      <child>dryer_link</child>
+    </joint>
+    <joint name="bin_auto_fixed" type="fixed">
+      <parent>robot_arm_1_link</parent>
+      <child>bin_link</child>
+    </joint>
+    <joint name="printer_auto_fixed" type="fixed">
+      <parent>robot_arm_1_link</parent>
+      <child>printer_link</child>
+    </joint>
+    <joint name="curing_station_auto_fixed" type="fixed">
+      <parent>robot_arm_1_link</parent>
+      <child>curing_station_link</child>
+    </joint>
+    <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+      <joint_name>joint1</joint_name>
+    </plugin>
+    <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+      <joint_name>joint</joint_name>
+    </plugin>
+    <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+      <joint_name>joint2</joint_name>
+    </plugin>
+    <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+      <joint_name>joint3</joint_name>
+    </plugin>
+    <plugin filename="gz-sim-joint-controller-system" name="gz::sim::systems::JointController">
+      <joint_name>joint4</joint_name>
+    </plugin>
+
+    <!-- Wrist camera attached to the end of robot_arm_6_link -->
+    <!-- Camera 1: faces arm6 +X (forward) -->
+    <link name="wrist_camera_front_link">
+      <gravity>false</gravity>
+      <pose relative_to="robot_arm_6_link">0.25 0 -0.05 0 0.9599 0</pose>
+      <sensor name="wrist_camera_front" type="camera">
+        <pose>0 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.5</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>RGB_INT8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>10</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>/arm/wrist_camera/image</topic>
+      </sensor>
+    </link>
+    <joint name="wrist_camera_front_fixed" type="fixed">
+      <parent>robot_arm_6_link</parent>
+      <child>wrist_camera_front_link</child>
+    </joint>
+
+    <!-- Camera 2: faces arm6 -Y (user-left), yaw -110° -->
+    <link name="wrist_camera_left_link">
+      <gravity>false</gravity>
+      <pose relative_to="robot_arm_6_link">0.4 0 0 0 0.3142 -1.9199</pose>
+      <sensor name="wrist_camera_left" type="camera">
+        <pose>0 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.5</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>RGB_INT8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>10</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>/arm/wrist_camera_left/image</topic>
+      </sensor>
+    </link>
+    <joint name="wrist_camera_left_fixed" type="fixed">
+      <parent>robot_arm_6_link</parent>
+      <child>wrist_camera_left_link</child>
+    </joint>
+
+    <!-- Camera 3: faces arm6 -X (back), yaw 180° -->
+    <link name="wrist_camera_back_link">
+      <gravity>false</gravity>
+      <pose relative_to="robot_arm_6_link">-1.5 0 0 0 0.2618 3.1415927</pose>
+      <sensor name="wrist_camera_back" type="camera">
+        <pose>0 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.5</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>RGB_INT8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>10</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>/arm/wrist_camera_back/image</topic>
+      </sensor>
+    </link>
+    <joint name="wrist_camera_back_fixed" type="fixed">
+      <parent>robot_arm_6_link</parent>
+      <child>wrist_camera_back_link</child>
+    </joint>
+
+    <!-- Camera 4: faces arm6 +Y (user-right), yaw +100° -->
+    <link name="wrist_camera_right_link">
+      <gravity>false</gravity>
+      <pose relative_to="robot_arm_6_link">0.4 0 0 0 0.0873 1.7453</pose>
+      <sensor name="wrist_camera_right" type="camera">
+        <pose>0 0 0 0 0 0</pose>
+        <camera>
+          <horizontal_fov>1.5</horizontal_fov>
+          <image>
+            <width>640</width>
+            <height>480</height>
+            <format>RGB_INT8</format>
+          </image>
+          <clip>
+            <near>0.01</near>
+            <far>10</far>
+          </clip>
+        </camera>
+        <always_on>1</always_on>
+        <update_rate>30</update_rate>
+        <visualize>true</visualize>
+        <topic>/arm/wrist_camera_right/image</topic>
+      </sensor>
+    </link>
+    <joint name="wrist_camera_right_fixed" type="fixed">
+      <parent>robot_arm_6_link</parent>
+      <child>wrist_camera_right_link</child>
+    </joint>
+
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+  </model>
+</sdf>

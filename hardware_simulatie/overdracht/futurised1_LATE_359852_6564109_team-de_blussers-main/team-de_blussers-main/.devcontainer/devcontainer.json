@@ -1,0 +1,24 @@
+{
+  "name": "Firefighting Tank Dev",
+  "image": "tonk_snapshot:jazzy",
+  "workspaceFolder": "/workspace",
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind"
+  ],
+  "postCreateCommand": "bash .devcontainer/setup-kiss-icp.sh",
+  "runArgs": [
+    "--net=host"
+  ],
+  "containerEnv": {
+    "DISPLAY": "host.docker.internal:0.0",
+    "LIBGL_ALWAYS_INDIRECT": "0",
+    "QT_X11_NO_MITSHM": "1"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.cpptools"
+      ]
+    }
+  }
+}

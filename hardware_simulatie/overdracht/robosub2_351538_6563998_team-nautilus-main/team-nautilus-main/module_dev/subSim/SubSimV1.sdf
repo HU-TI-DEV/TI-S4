@@ -1,0 +1,528 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="robosub_underwater">
+
+    <!-- Lighting -->
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.5 0.5 0.5 1</specular>
+      <direction>0.1 0.1 -1</direction>
+      <cast_shadows>true</cast_shadows>
+    </light>
+
+    <!-- buoyancy plugin -->
+    <plugin filename="gz-sim-buoyancy-system"
+            name="gz::sim::systems::Buoyancy">
+      <uniform_fluid_density>1025</uniform_fluid_density>
+    </plugin>
+
+    <!-- seafloor at z= -10-->
+    <model name="seafloor">
+      <static>true</static>
+      <pose>0 0 -10 0 0 0</pose>
+      <link name="link">
+        <collision name="col">
+          <geometry>
+            <plane><normal>0 0 1</normal></plane>
+          </geometry>
+        </collision>
+        <visual name="vis">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>50 50</size>
+            </plane>
+          </geometry>
+          <material>
+            <diffuse>0.75 0.70 0.45 1</diffuse>
+  	    <ambient>0.75 0.70 0.45 1</ambient>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+
+    <!-- sub model itself-->
+    <model name='RoboSub'>
+      <pose>0 0 -5 0 0 0</pose>
+
+      <!-- Fix RoboSub body to world so it never moves -->
+      <!-- may add hydrodynamics to sub later on -->
+      <joint name='world_to_robosub' type='fixed'>
+        <parent>world</parent>
+        <child>RoboSub</child>
+      </joint>
+
+      <!-- Hydrodynamics on each arm link -->
+      <plugin filename="gz-sim-hydrodynamics-system"
+              name="gz::sim::systems::Hydrodynamics">
+        <link_name>Base</link_name>
+        <linear_damping>-1 -1 -1 -0.1 -0.1 -0.1</linear_damping>
+        <quadratic_damping>-0.5 -0.5 -0.5 -0.05 -0.05 -0.05</quadratic_damping>
+      </plugin>
+      <plugin filename="gz-sim-hydrodynamics-system"
+              name="gz::sim::systems::Hydrodynamics">
+        <link_name>bovenarm</link_name>
+        <linear_damping>-2 -2 -2 -0.1 -0.1 -0.1</linear_damping>
+        <quadratic_damping>-1 -1 -1 -0.05 -0.05 -0.05</quadratic_damping>
+      </plugin>
+      <plugin filename="gz-sim-hydrodynamics-system"
+              name="gz::sim::systems::Hydrodynamics">
+        <link_name>onderarm</link_name>
+        <linear_damping>-2 -2 -2 -0.1 -0.1 -0.1</linear_damping>
+        <quadratic_damping>-1 -1 -1 -0.05 -0.05 -0.05</quadratic_damping>
+      </plugin>
+      <plugin filename="gz-sim-hydrodynamics-system"
+              name="gz::sim::systems::Hydrodynamics">
+        <link_name>pols</link_name>
+        <linear_damping>-1 -1 -1 -0.1 -0.1 -0.1</linear_damping>
+        <quadratic_damping>-0.5 -0.5 -0.5 -0.05 -0.05 -0.05</quadratic_damping>
+      </plugin>
+      <plugin filename="gz-sim-hydrodynamics-system"
+              name="gz::sim::systems::Hydrodynamics">
+        <link_name>handBase</link_name>
+        <linear_damping>-0.5 -0.5 -0.5 -0.05 -0.05 -0.05</linear_damping>
+        <quadratic_damping>-0.2 -0.2 -0.2 -0.01 -0.01 -0.01</quadratic_damping>
+      </plugin>
+      <plugin filename="gz-sim-hydrodynamics-system"
+              name="gz::sim::systems::Hydrodynamics">
+        <link_name>gripper1</link_name>
+        <linear_damping>-0.2 -0.2 -0.2 -0.01 -0.01 -0.01</linear_damping>
+        <quadratic_damping>-0.1 -0.1 -0.1 -0.005 -0.005 -0.005</quadratic_damping>
+      </plugin>
+      <plugin filename="gz-sim-hydrodynamics-system"
+              name="gz::sim::systems::Hydrodynamics">
+        <link_name>gripper2</link_name>
+        <linear_damping>-0.2 -0.2 -0.2 -0.01 -0.01 -0.01</linear_damping>
+        <quadratic_damping>-0.1 -0.1 -0.1 -0.005 -0.005 -0.005</quadratic_damping>
+      </plugin>
+
+      <link name='RoboSub'>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>10</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1</iyy>
+            <iyz>0</iyz>
+            <izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name='RoboSub_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1 0.5 0.3</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='RoboSub_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>1 0.5 0.3</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>0.625 0.625 0.625 1</diffuse>
+            <ambient>0.625 0.625 0.625 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+      <joint name='RoboSub_to_Base' type='revolute'>
+        <pose relative_to='RoboSub'>0 0 -0.15 0 0 0</pose>
+        <parent>RoboSub</parent>
+        <child>Base</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.36</lower>
+            <upper>2.36</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <link name='Base'>
+        <pose relative_to='RoboSub_to_Base'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1</iyy>
+            <iyz>0</iyz>
+            <izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name='Base_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.1</length>
+              <radius>0.1</radius>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='Base_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.1</length>
+              <radius>0.1</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <diffuse>0.375 0.375 1 1</diffuse>
+            <ambient>0.375 0.375 1 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+      <joint name='Base_to_bovenarm' type='revolute'>
+        <pose relative_to='Base'>0 0 -0.05 0 0 0</pose>
+        <parent>Base</parent>
+        <child>bovenarm</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>0.14</lower>
+            <upper>1.5</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <link name='bovenarm'>
+        <pose relative_to='Base_to_bovenarm'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1</iyy>
+            <iyz>0</iyz>
+            <izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name='bovenarm_collision'>
+          <pose>0 0 -0.105 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.21</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='bovenarm_visual'>
+          <pose>0 0 -0.105 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.21</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 0.375 0.375 1</diffuse>
+            <ambient>1 0.375 0.375 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+      <joint name='bovenarm_to_onderarm' type='revolute'>
+        <pose relative_to='bovenarm'>0 0 -0.21 0 0 0</pose>
+        <parent>bovenarm</parent>
+        <child>onderarm</child>
+        <axis>
+          <xyz>0 1 0</xyz>
+          <limit>
+            <lower>0.53</lower>
+            <upper>2.53</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <link name='onderarm'>
+        <pose relative_to='bovenarm_to_onderarm'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1</iyy>
+            <iyz>0</iyz>
+            <izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name='onderarm_collision'>
+          <pose>0 0 -0.1175 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.235</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='onderarm_visual'>
+          <pose>0 0 -0.1175 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.235</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>0.375 1 0.375 1</diffuse>
+            <ambient>0.375 1 0.375 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+      <joint name='onderarm_to_pols' type='revolute'>
+        <pose relative_to='onderarm'>0 0 -0.235 0 0 0</pose>
+        <parent>onderarm</parent>
+        <child>pols</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-0.201</lower>
+            <upper>0</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <link name='pols'>
+        <pose relative_to='onderarm_to_pols'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1</iyy>
+            <iyz>0</iyz>
+            <izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name='pols_collision'>
+          <pose>0 0 -0.067 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.134</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='pols_visual'>
+          <pose>0 0 -0.067 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.05 0.05 0.134</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 1 0.375 1</diffuse>
+            <ambient>1 1 0.375 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+      <joint name='pols_to_handBase' type='revolute'>
+        <pose relative_to='pols'>0 0 -0.117 0 0 0</pose>
+        <parent>pols</parent>
+        <child>handBase</child>
+        <axis>
+          <xyz>0 0 1</xyz>
+          <limit>
+            <lower>-2.36</lower>
+            <upper>2.36</upper>
+            <effort>10</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <link name='handBase'>
+        <pose relative_to='pols_to_handBase'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>1</mass>
+          <inertia>
+            <ixx>0.1</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.1</iyy>
+            <iyz>0</iyz>
+            <izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name='handBase_collision'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.05</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+        </collision>
+        <visual name='handBase_visual'>
+          <pose>0 0 0 0 0 0</pose>
+          <geometry>
+            <cylinder>
+              <length>0.05</length>
+              <radius>0.04</radius>
+            </cylinder>
+          </geometry>
+          <material>
+            <diffuse>0.625 0.375 1 1</diffuse>
+            <ambient>0.625 0.375 1 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+      <joint name='handBase_to_gripper1' type='revolute'>
+        <pose relative_to='handBase'>0.015 0 -0.025 0 0 0</pose>
+        <parent>handBase</parent>
+        <child>gripper1</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>0</lower>
+            <upper>1.57</upper>
+            <effort>5</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <link name='gripper1'>
+        <pose relative_to='handBase_to_gripper1'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+        </inertial>
+        <collision name='gripper1_collision'>
+          <pose>0 0 -0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.031 0.02 0.14</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='gripper1_visual'>
+          <pose>0 0 -0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.031 0.02 0.14</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 0.625 0.125 1</diffuse>
+            <ambient>1 0.625 0.125 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+      <joint name='handBase_to_gripper2' type='revolute'>
+        <pose relative_to='handBase'>-0.015 0 -0.025 0 0 0</pose>
+        <parent>handBase</parent>
+        <child>gripper2</child>
+        <axis>
+          <xyz>0 -1 0</xyz>
+          <limit>
+            <lower>-1.57</lower>
+            <upper>0</upper>
+            <effort>5</effort>
+            <velocity>1</velocity>
+          </limit>
+          <dynamics>
+            <spring_reference>0</spring_reference>
+            <spring_stiffness>0</spring_stiffness>
+          </dynamics>
+        </axis>
+      </joint>
+
+      <link name='gripper2'>
+        <pose relative_to='handBase_to_gripper2'>0 0 0 0 0 0</pose>
+        <inertial>
+          <pose>0 0 0 0 0 0</pose>
+          <mass>0.1</mass>
+          <inertia>
+            <ixx>0.01</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.01</iyy>
+            <iyz>0</iyz>
+            <izz>0.01</izz>
+          </inertia>
+        </inertial>
+        <collision name='gripper2_collision'>
+          <pose>0 0 -0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.031 0.02 0.14</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name='gripper2_visual'>
+          <pose>0 0 -0.05 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>0.031 0.02 0.14</size>
+            </box>
+          </geometry>
+          <material>
+            <diffuse>1 0.625 0.125 1</diffuse>
+            <ambient>1 0.625 0.125 1</ambient>
+          </material>
+        </visual>
+      </link>
+
+    </model>
+  </world>
+</sdf>

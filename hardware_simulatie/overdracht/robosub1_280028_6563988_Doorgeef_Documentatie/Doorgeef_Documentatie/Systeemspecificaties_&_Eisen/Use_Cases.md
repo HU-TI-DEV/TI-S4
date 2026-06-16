@@ -1,0 +1,60 @@
+## Use Cases
+Om de brug te maken tussen de eisen en de praktijk, zijn de handelingen opgedeeld in concrete scenario's.
+
+Elke use case beschrijft een specifiek interactiescenario tussen een actor en het systeem, met als doel een concreet resultaat te bereiken.
+
+| Naam           | `UC01 - Meting uitvoeren`                                                                                                                                                                                                                                                                                           |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Actor          | `gebruiker`                                                                                                                                                                                                                                                                                                         |
+| Samenvatting   | De gebruiker start een meting waarbij de spectrometer licht opvangt, splitst en omzet naar meetbare data.                                                                                                                                                                                                           |
+| Preconditie    | De spectrometer is aan en gekalibreerd.                                                                                                                                                                                                                                                                             |
+| Scenario       | 1. Gebruiker zet lichtbron aan. <br> 2. Gebruiker activeert “Start meting”.<br>3. Systeem vangt gedurende 10 seconden licht op (F02).<br>4. Systeem splitst licht in golflengtes (F03).<br>4. Systeem zet lichtdata om in meetbare waarden (F04).<br>5. Het resultaat wordt binnen 10 seconden weergegeven. (NF01). |
+| Invariant      | Het systeem blijft licht meten tot de gebruiker op een uit knop drukt. Als de gebruiker op de opslaan knop drukt, gaat UC02 in effect.                                                                                                                                                                              |
+| Postconditie   | De spectrale data is beschikbaar voor opslag en wordt (actueel) weergegeven.                                                                                                                                                                                                                                        |
+| Uitzonderingen | Geen licht gedetecteerd → foutmelding “Geen lichtbron gevonden”. <br> Displayfout → melding “Display niet verbonden”.                                                                                                                                                                                               |
+
+| Naam           | `UC02 - Meting opslaan`                                                                                                                       |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Actor          | `gebruiker`                                                                                                                                   |
+| Samenvatting   | De gebruiker kiest om de huidige meting op te slaan voor later gebruik.                                                                       |
+| Preconditie    | Er is een meting uitgevoerd.                                                                                                                  |
+| Scenario       | 1. Gebruiker kiest “Opslaan meting”.<br>2. Het systeem slaat data op in tijdelijk geheugen (F08).<br>3. Systeem bevestigt succesvolle opslag. |
+| Invariant      | De spectrometer kan minimaal 5 metingen bewaren (NF08).                                                                                       |
+| Postconditie   | De meting wordt toegevoegd aan de lokale opslag.                                                                                              |
+| Uitzonderingen | Opslag vol → melding “Opslaglimiet bereikt”.                                                                                                  |
+
+| Naam           | `UC03 - Meting exporteren`                                                                                                                                                                                                                                                                          |
+| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Actor          | `gebruiker`                                                                                                                                                                                                                                                                                         |
+| Samenvatting   | De gebruiker exporteert meetdata naar een extern apparaat.                                                                                                                                                                                                                                          |
+| Preconditie    | Er is opgeslagen meetdata beschikbaar.                                                                                                                                                                                                                                                              |
+| Scenario       | 1. Gebruiker kiest “Exporteren”.<br>2. Gebruiker selecteerd speciafieke metingen/ systeem selecteerd metingen van laatste 10 minuten. <br> 3. Systeem maakt CSV- of HDF5-bestand aan (F11).<br>4. Gebruiker kiest externe opslag (bijv. laptop of USB).<br>4. Systeem bevestigt succesvolle export. |
+| Postconditie   | De meetdata is beschikbaar op extern apparaat voor langdurige opslag of analyse.                                                                                                                                                                                                                    |
+| Uitzonderingen | Verbinding mislukt → melding “Export niet voltooid”.                                                                                                                                                                                                                                                |
+
+| Naam           | `UC04 - Metingen vergelijken`                                                                                                                                                                                            |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Actor          | `gebruiker`                                                                                                                                                                                                              |
+| Samenvatting   | De gebruiker vergelijkt meerdere metingen om verschillen te analyseren.                                                                                                                                                  |
+| Preconditie    | Minimaal twee metingen zijn opgeslagen of geëxporteerd.                                                                                                                                                                  |
+| Scenario       | 1. Gebruiker selecteert metingen.<br>2. Systeem toont metingen naast elkaar (F12).<br>3. Gebruiker ziet verschillen visueel in grafiek of kleurverloop.<br>4. Eventueel kan ook data uit CSV/HDF5 worden geladen (UC10). |
+| Postconditie   | De gebruiker heeft inzicht in verschillen tussen metingen.                                                                                                                                                               |
+| Uitzonderingen | Te weinig data → melding “Minimaal twee metingen nodig”.                                                                                                                                                                 |
+
+| Naam           | `UC05 - Apparaat aan- en uitzetten`                                                                                                                                        |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Actor          | `gebruiker`                                                                                                                                                                |
+| Samenvatting   | De gebruiker zet het apparaat veilig aan of uit met een fysieke knop.                                                                                                      |
+| Preconditie    | Apparaat is aangesloten op voeding.                                                                                                                                        |
+| Scenario       | 1. Gebruiker drukt op de aan/uit-knop (F16).<br>2. Het systeem voert een veilige opstart- of afsluitprocedure uit.<br>3. Bij afsluiten worden actieve processen beëindigd. |
+| Postconditie   | Apparaat is veilig aan of uit.                                                                                                                                             |
+| Uitzonderingen | Geen reactie → melding “Voeding controleren”.                                                                                                                              |
+
+| Naam           | `UC06 - Externe weergave gebruiken`                                                                                                                                 |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Actor          | `gebruiker`                                                                                                                                                         |
+| Samenvatting   | De gebruiker sluit de spectrometer aan op een extern scherm om het spectrum te tonen.                                                                               |
+| Preconditie    | De spectrometer is ingeschakeld en meetdata is beschikbaar.                                                                                                         |
+| Scenario       | 1. Gebruiker verbindt het apparaat met een extern scherm (NF10).<br>2. Systeem herkent automatisch de verbinding.<br>3. Spectrum wordt op groot scherm weergegeven. |
+| Postconditie   | Spectrum is zichtbaar op extern display.                                                                                                                            |
+| Uitzonderingen | Geen signaal → melding “Externe weergave niet gedetecteerd”.                                                                                                        |

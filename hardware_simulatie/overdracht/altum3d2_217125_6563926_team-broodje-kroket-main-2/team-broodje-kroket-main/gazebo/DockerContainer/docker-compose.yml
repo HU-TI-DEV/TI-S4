@@ -1,0 +1,8 @@
+services:
+  team-project:
+    image: s4_2026:latest
+    container_name: team-broodje-kroket-dev
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../:/workspace

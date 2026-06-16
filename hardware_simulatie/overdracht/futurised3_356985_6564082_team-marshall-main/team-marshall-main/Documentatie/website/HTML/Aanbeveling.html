@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanbevelingen - Futurised</title>
+    
+    <link rel="stylesheet" href="CSS_/main.css"> 
+    <link rel="stylesheet" href="Ham_menu/Ham.css">
+    
+    <!-- Het menu script -->
+    <script defer src="Ham_menu/Ham.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Aanbevelingen</h1>
+    </header>
+
+    <!-- Boxen voor de tekst -->
+    <main>
+        
+        <!-- De eerste box met de rode rand -->
+        <section id="introductie">
+            <h2>Verbeteringen & Ideeën</h2>
+            <p>Dit is de aanbevelingspagina. Hieronder vind je verschillende ideeën voor verbeteringen.</p>
+        </section>
+
+        <!-- Een extra box voor een specifieke aanbeveling -->
+        <section>
+            <h2>Aanbeveling 1: Projectbeheer</h2>
+            <p>Hoewel de Scrum-structuur en het Planboard ons effectief door de sprints hebben geholpen, liepen we in de beginfase aan tegen architectuur diagrammen. We hebben geprobeerd usecases op te stellen, echter is dat niet gelukt.</p>
+            <p><strong>Aanbeveling:</strong> Voor toekomstige sprints wordt aanbevolen om wel nogsteeds diagrammen op te stellen, met name de activity diagram, voor een duidelijker overzicht naar het team, de docenten en de opdrachtgever.</p>
+            <p>- Geschreven door Aimée</p>
+        </section>
+
+        <section>
+            <h2>Aanbeveling 2: AStar Algortime</h2>
+            <p>Het huidige AStar algoritme navigeert puur op basis van de kortste route van A naar B waarbij statische obstakels worden ontweken. In een dynamische brandsituatie is de kortste route echter niet altijd de veiligste route. Factoren zoals extreme hittehaarden, instortingsgevaar of de snelheid van rookontwikkeling veranderen continu en worden nu niet meegewogen in het pad.</p>
+            <p><strong>Aanbeveling:</strong> Breid het A*-algoritme uit met een dynamische kosten-matrix. In plaats van cellen puur als 'begaanbaar' of 'onbegaanbaar' te identificeren, moeten sensoren real-time parameters (zoals temperatuur of rookdichtheid per cel) doorgeven. Cellen dichtbij het vuur krijgen dan een hogere 'kostprijs'. Het algoritme zal hierdoor automatisch een iets langere, maar veiligere route voor de robot berekenen.</p>
+            <p>- Geschreven door Aimée</p>
+        </section>
+
+        <section>
+            <h2>Aanbeveling 3: Machine Learning &mdash; leren van fouten</h2>
+            <p>De huidige navigatie (het A*-algoritme samen met de botsingdetectie) is volledig <em>regelgebaseerd</em>: de robot reageert op de situatie van dat moment, maar onthoudt niets. Daardoor maakt hij telkens dezelfde fouten &mdash; hij loopt bijvoorbeeld op dezelfde lastige plekken vast of rijdt herhaaldelijk net te dicht langs een hoek. Daarnaast zijn instellingen zoals de veiligheidsmarge rond muren en de rijsnelheid nu handmatig afgesteld, wat veel uitproberen kost.</p>
+            <p><strong>Aanbeveling:</strong> Voeg een lerende component toe met <strong>machine learning</strong>, bijvoorbeeld reinforcement learning, zodat de robot van zijn eigen fouten leert. Door een botsing of vastlopen als een &ldquo;straf&rdquo; te zien en het vlot en veilig bereiken van een kamer als een &ldquo;beloning&rdquo;, kan de robot over tijd zelf betere keuzes maken in route en snelheid, zonder dat alles handmatig wordt ingesteld. Dit kan veilig in de Gazebo-simulatie worden getraind, waar je zonder risico duizenden situaties kunt doorlopen. Een eerste verkenning hiervan staat al in het onderzoek van Jochem naar Machine Learning in Gazebo; dit is een logische vervolgstap om de autonomie van de robot verder te vergroten.</p>
+            <p>- Geschreven door Axl</p>
+        </section>
+
+        <section>
+            <h2>Aanbeveling 4: Ontwikkeling Testomgeving &amp; Wereld-SDF</h2>
+            <p>De handgemaakte wereld <em>Huis_met_meubels</em> heeft gezorgd voor een perfecte, symmetrische testomgeving met strakke doorgangen van exact 2 meter. Hoewel dit prima was voor de de requirements die waren opgesteld, is een perfect symmetrische wereld met uitsluitend muren in rechte hoeken geen realistische weerspiegeling van een echte rampplek.</p>
+            <p><strong>Aanbeveling:</strong> Breid de testomgeving uit met asymmetrische ruimtes, schuine wanden en dynamische, bewegende obstakels (zoals instortend puin of weglopende mensen). Dit dwingt de navigatie- en vision-software om zich te bewijzen in onvoorspelbare scenario's in plaats van een perfect voorspelbare lay-out.</p>
+            <p>- Geschreven door Nick</p>
+        </section>
+
+        <section>
+            <h2>Aanbeveling 5: Gazebo Sim-Infrastructuur (Configuratiewereld)</h2>
+            <p>De huidige simulatielaag draait stabiel op een vlak groundPlane met constante zon-belichting via Ogre2. Dit was cruciaal om de computer vision-pijplijn (Sobel-filters) storingsvrij te testen. In een echt inzetsitutatie heeft de robot echter te maken met flikkerend vuur, dichte rookontwikkeling en totale duisternis, wat deze ideale visuele simulatie niet nabootst.</p>
+            <p><strong>Aanbeveling:</strong> Voeg de Gazebo-plugins voor deeltjessystemen (particle systems) toe om rook- en vuureffecten visueel te simuleren. Dit is essentieel om te testen in hoeverre de camera-pijplijn blind wordt en vanaf welk punt het systeem volledig moet terugvallen op de LiDAR-data.</p>
+            <p>- Geschreven door Nick</p>
+        </section>
+
+        <section>
+            <h2>Aanbeveling 6: Geometrische Deurendetector (OpenCV)</h2>
+            <p>De <code>DoorDetectorNode</code> herkent deuropeningen puur op basis van verticale geometrie via Sobel-X en histogrampieken, wat valsspelen op kleur voorkomt. De huidige validatie is echter sterk afhankelijk van harde drempelwaarden (zoals de minimale piekintensiteit van 20 pixels). Als de robot de deur onder een schuine hoek nadert, veranderen de pixelverhoudingen en kan het algoritme de posten missen.</p>
+            <p><strong>Aanbeveling:</strong> Maak de geometrische detector adaptief door de drempelwaarden (thresholds) dynamisch te schalen op basis van de actuele afstand tot de muur (die uit de LiDAR-data kan worden gehaald). Door deze sensoren te fuseren, blijft de deurendetectie ook betrouwbaar wanneer de robot niet perfect gecentreerd of schuin voor een doorgang staat.</p>
+            <p>- Geschreven door Nick</p>
+        </section>
+        
+        <section>
+            <h2>Aanbeveling 7: Gewichtverdeling voor PID van de Robot</h2>
+            <p> De PID werkt helemaal, echter gebeurd er vaak dat als hij noodstopt, dat de robot niet goed reageert op de verandering in belasting of obstakels in de omgeving.
+                Soms vliegt de robot nog een stukje door, of reageert hij juist te snel en stopt hij weer. 
+                Het heeft waarschijnlijk te maken met de gewichtsverdeling van de robot, en dat deze niet goed is afgestemd op de PID controller.
+                Het is daarom aan te raden om de gewichtsverdeling van de robot te herzien en aan te passen, zodat de PID beter kan reageren op veranderingen in de omgeving en de belasting van de robot. 
+            </p>
+            <p>- Geschreven door Jochem</p>
+        </section>
+    </main>
+
+</body>
+</html>

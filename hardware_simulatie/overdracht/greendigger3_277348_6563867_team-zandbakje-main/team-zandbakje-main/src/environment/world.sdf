@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+<!-- 
+    Author: GrijzePanda
+	Contributors: Ocarian
+-->
+	<world name="starting_environment">
+		<physics name="1ms" type="ignored">
+			<max_step_size>0.001</max_step_size>
+			<real_time_factor>1.0</real_time_factor>
+		</physics>
+		<plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics" />
+		<plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands" />
+		<plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster" />
+		<!-- Sensor Systems -->
+		<plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors" />
+		<plugin filename="gz-sim-imu-system" name="gz::sim::systems::Imu" />
+		<plugin filename="gz-sim-contact-system" name="gz::sim::systems::Contact">
+			<contact>
+				<collision>.*</collision>
+			</contact>
+		</plugin>
+		<!-- Skybox -->
+		<scene>
+			<ambient>0.9 0.8 0.6 1</ambient>
+			<background>0.8 0.7 0.5 1</background>
+			<sky>
+				<time>14</time>
+				<sunrise>6</sunrise>
+				<sunset>20</sunset>
+			</sky>
+		</scene>
+		<!-- The sun -->
+		<light type="directional" name="sun">
+			<cast_shadows>true</cast_shadows>
+			<pose>0 0 50 0 0 0</pose>
+			<diffuse>1.0 0.9 0.7 1</diffuse>
+			<specular>0.3 0.25 0.2 1</specular>
+			<attenuation>
+				<range>2000</range>
+				<constant>0.9</constant>
+				<linear>0.001</linear>
+				<quadratic>0.0001</quadratic>
+			</attenuation>
+			<direction>-0.3 0.2 -0.8</direction>
+		</light>
+		<!-- Models-->
+		<include>
+			<uri>file://terrain.sdf</uri>
+			<name>terrain</name>
+		</include>
+		<include>
+			<uri>file://terrain.sdf</uri>
+			<name>support_plane</name>
+		</include>
+		<model name="digger">
+			<static>false</static>
+			<!--spawn in the air to avoid collision issues. Press play to ground. -->
+			<pose>40 40 10 0 0 0</pose>
+			<include>
+				<uri>file://digger.sdf</uri>
+			</include>
+		</model>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker1</name>
+			<pose>20 20 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker2</name>
+			<pose>0 20 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker3</name>
+			<pose>-20 20 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker4</name>
+			<pose>20 0 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker5</name>
+			<pose>0 0 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker6</name>
+			<pose>-20 0 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker7</name>
+			<pose>20 -20 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker8</name>
+			<pose>0 -20 10 0 0 0</pose>
+		</include>
+		<include>
+			<uri>model://marker.sdf</uri>
+			<name>marker9</name>
+			<pose>-20 -20 10 0 0 0</pose>
+		</include>
+		<model name="north_wall">
+			<static>true</static>
+			<pose>0 62 7.5 0 0 0</pose>
+			<link name="link">
+				<collision name="collision">
+					<geometry>
+						<box>
+							<size>130 1 7.5</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="visual">
+					<geometry>
+						<box>
+							<size>130 1 7.5</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.7 0.2 0.2 1</ambient>
+						<diffuse>0.7 0.2 0.2 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+		<model name="south_wall">
+			<static>true</static>
+			<pose>0 -62 7.5 0 0 0</pose>
+			<link name="link">
+				<collision name="collision">
+					<geometry>
+						<box>
+							<size>130 1 7.5</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="visual">
+					<geometry>
+						<box>
+							<size>130 1 7.5</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.7 0.2 0.2 1</ambient>
+						<diffuse>0.7 0.2 0.2 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+		<model name="east_wall">
+			<static>true</static>
+			<pose>62 0 7.5 0 0 0</pose>
+			<link name="link">
+				<collision name="collision">
+					<geometry>
+						<box>
+							<size>1 130 7.5</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="visual">
+					<geometry>
+						<box>
+							<size>1 130 7.5</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.7 0.2 0.2 1</ambient>
+						<diffuse>0.7 0.2 0.2 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+		<model name="west_wall">
+			<static>true</static>
+			<pose>-62 0 7.5 0 0 0</pose>
+			<link name="link">
+				<collision name="collision">
+					<geometry>
+						<box>
+							<size>1 130 7.5</size>
+						</box>
+					</geometry>
+				</collision>
+				<visual name="visual">
+					<geometry>
+						<box>
+							<size>1 130 7.5</size>
+						</box>
+					</geometry>
+					<material>
+						<ambient>0.7 0.2 0.2 1</ambient>
+						<diffuse>0.7 0.2 0.2 1</diffuse>
+					</material>
+				</visual>
+			</link>
+		</model>
+	</world>
+</sdf>

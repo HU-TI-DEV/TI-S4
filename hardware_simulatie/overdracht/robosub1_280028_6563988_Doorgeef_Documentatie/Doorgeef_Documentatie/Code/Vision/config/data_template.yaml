@@ -1,0 +1,38 @@
+# YOLO dataset configuration template
+#
+# Copy this file to dataset/data.yaml and update values.
+# Works for Ultralytics YOLOv5/YOLOv8 style training commands.
+
+# Root folder of your dataset (absolute path recommended).
+# Linux/container example: /workspace/gazebo/dataset
+# Windows local example: E:/Git_shenenigans/team-narwal/workspace/gazebo/dataset
+path: /workspace/gazebo/dataset
+
+# Image locations, relative to "path" (or absolute paths).
+# Standard structure is:
+# dataset/images/train, dataset/images/val, dataset/images/test
+train: images/train
+val: images/val
+test: images/test
+
+# Class definition
+# Keep nc equal to the number of entries in names.
+nc: 1
+names:
+  0: valve
+
+# Optional metadata fields (safe to leave as-is)
+download: ""
+roboflow:
+  workspace: ""
+  project: ""
+  version: 0
+  license: ""
+  url: ""
+
+# Multi-class example:
+# nc: 3
+# names:
+#   0: valve
+#   1: handle
+#   2: flange

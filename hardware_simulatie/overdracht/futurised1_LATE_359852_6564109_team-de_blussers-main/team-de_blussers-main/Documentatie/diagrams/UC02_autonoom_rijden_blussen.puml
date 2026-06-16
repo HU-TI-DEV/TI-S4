@@ -1,0 +1,81 @@
+@startuml UC02_Autonoom_Rijden_Blussen
+
+title UC02 – Autonoom rijden en blussen
+
+left to right direction
+skinparam actorStyle awesome
+skinparam usecase {
+  BackgroundColor #F0F8FF
+  BorderColor #0055AA
+  ArrowColor #003388
+  FontName Arial
+}
+skinparam actor {
+  BackgroundColor #CCE0FF
+  BorderColor #0055AA
+}
+skinparam rectangle {
+  BackgroundColor #EBF3FF
+  BorderColor #0055AA
+}
+skinparam note {
+  BackgroundColor #FFFBE6
+  BorderColor #CCAA00
+}
+
+actor "Systeem (autonoom)" as Sys
+
+rectangle "UC02 – Autonoom rijden en blussen" {
+
+  usecase "Optimale route\nberekenen naar vuur" as UC1
+  usecase "Rijden naar vuur\n(obstakels verwerken)" as UC2
+  usecase "Afstand tot vuur\ncontinu meten" as UC3
+  usecase "Stoppen op maximale\neffectieve blusafstand" as UC4
+  usecase "Waterkanon positioneren\nrichting vuur" as UC5
+  usecase "Waterkanon openen\nen blussen starten" as UC6
+  usecase "Blusvoortgang controleren\nvia warmtesensor" as UC7
+  usecase "Waterkanon sluiten en\nterugkeren naar startpositie" as UC8
+  usecase "Terugrijden, blusafstand\nherberekenen en herpositioneren" as UC9
+  usecase "Blussen stoppen en\nwaarschuwing geven" as UC10
+  usecase "Systeem stoppen en\nfoutmelding geven" as UC11
+
+}
+
+Sys --> UC1
+UC1 --> UC2
+UC2 --> UC3
+UC3 --> UC4
+UC4 --> UC5
+UC5 --> UC6
+UC6 --> UC7
+UC7 --> UC8 : vuur gedoofd
+UC7 --> UC9 : vuur breidt uit\nnaar robot
+UC9 --> UC4
+
+UC6 ..> UC10 : <<extend>>\nwater op
+UC2 ..> UC11 : <<extend>>\nroute geblokkeerd
+
+note right of UC8
+  Postconditie:
+  Vuur gedoofd, robot terug
+  op startpositie in standby
+end note
+
+note bottom of UC10
+  Uitzondering:
+  Water raakt op tijdens blussen
+end note
+
+note bottom of UC11
+  Uitzondering:
+  Route volledig geblokkeerd
+end note
+
+note top of UC1
+  Preconditie:
+  UC01 succesvol afgerond,
+  vuurlocatie bekend,
+  voldoende water en stroom
+end note
+
+@enduml

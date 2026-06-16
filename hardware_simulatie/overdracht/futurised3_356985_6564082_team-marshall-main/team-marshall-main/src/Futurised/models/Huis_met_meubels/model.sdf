@@ -1,0 +1,177 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="Huis_met_meubels">
+    <static>true</static>
+
+    <model name="wall_north">
+      <pose>0 12 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>30 0.2 2</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>30 0.2 2</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_south">
+      <pose>0 -12 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>30 0.2 2</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>30 0.2 2</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_east">
+      <pose>15 0 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 24 2</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 24 2</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="wall_west">
+      <pose>-15 0 1 0 0 0</pose>
+      <link name="link">
+        <collision name="collision"><geometry><box><size>0.2 24 2</size></box></geometry></collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 24 2</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="mid_wall_left_outer">
+      <pose>-11 0 1 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8 0.2 2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8 0.2 2</size></box></geometry>
+        <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material></visual>
+      </link>
+    </model>
+
+    <model name="mid_wall_left_inner">
+      <pose>-2.1 0 1 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>4 0.2 2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>4 0.2 2</size></box></geometry>
+        <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material></visual>
+      </link>
+    </model>
+
+    <model name="mid_wall_right_inner">
+      <pose>2.1 0 1 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>4 0.2 2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>4 0.2 2</size></box></geometry>
+        <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material></visual>
+      </link>
+    </model>
+
+    <model name="mid_wall_right_outer">
+      <pose>11 0 1 0 0 0</pose>
+      <link name="link">
+        <collision name="c"><geometry><box><size>8 0.2 2</size></box></geometry></collision>
+        <visual name="v"><geometry><box><size>8 0.2 2</size></box></geometry>
+        <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material></visual>
+      </link>
+    </model>
+
+    <model name="mid_vertical_top"><pose>0 10 1 0 0 0</pose>
+      <link name="link"><collision name="collision"><geometry><box><size>0.2 4 2</size></box></geometry></collision>
+      <visual name="visual"><geometry><box><size>0.2 4 2</size></box></geometry>
+      <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material></visual></link>
+    </model>
+
+   <model name="mid_vertical_upper">
+      <pose>0 3 1 0 0 0</pose> <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 6 2</size></box></geometry> </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 6 2</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="mid_vertical_lower">
+      <pose>0 -3 1 0 0 0</pose> <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 6 2</size></box></geometry> </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 6 2</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="mid_vertical_bottom"><pose>0 -10 1 0 0 0</pose>
+      <link name="link"><collision name="collision"><geometry><box><size>0.2 4 2</size></box></geometry></collision>
+      <visual name="visual"><geometry><box><size>0.2 4 2</size></box></geometry>
+      <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material></visual></link>
+    </model>
+
+    <model name="nw_1"><pose>-12 9 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="nw_2"><pose>-4 10 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="nw_3"><pose>-11 3 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="nw_4"><pose>-7.5 6 0.75 0 0 0</pose> <link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+
+    <model name="ne_1"><pose>12 9 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="ne_2"><pose>4 10 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="ne_3"><pose>11 3 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="ne_4"><pose>7.5 6 0.75 0 0 0</pose> <link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+
+    <model name="sw_1"><pose>-12 -9 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="sw_2"><pose>-4 -10 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="sw_3"><pose>-11 -3 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="sw_4"><pose>-7.5 -6 0.75 0 0 0</pose> <link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+
+    <model name="se_1"><pose>12 -9 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="se_2"><pose>4 -10 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="se_3"><pose>11 -3 0.75 0 0 0</pose><link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+    <model name="se_4"><pose>7.5 -6 0.75 0 0 0</pose> <link name="link"><collision name="c"><geometry><box><size>1 1 1.5</size></box></geometry></collision><visual name="v"><geometry><box><size>1 1 1.5</size></box></geometry><material><ambient>0.5 0.5 0.5 1</ambient><diffuse>0.5 0.5 0.5 1</diffuse></material></visual></link></model>
+
+  </model>
+</sdf>

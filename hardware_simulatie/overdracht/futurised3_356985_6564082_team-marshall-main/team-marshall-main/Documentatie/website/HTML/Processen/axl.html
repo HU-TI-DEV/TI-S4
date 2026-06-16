@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Process Axl - Futurised</title>
+
+<link rel="stylesheet" href="../CSS_/main.css">
+    <link rel="stylesheet" href="../Ham_menu/Ham.css">
+
+    <script defer src="../Ham_menu/Ham.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Process Axl</h1>
+    </header>
+
+    <!-- Boxen voor de tekst -->
+    <main>
+
+        <!-- De eerste box met de rode rand -->
+        <section id="introductie">
+            <h2>Introductie</h2>
+            <p>
+                Binnen het Futurised project heb ik mij vooral beziggehouden met de navigatie van de robot.
+                In het begin heb ik een testomgeving gebouwd waarin we de robot konden uitproberen, en heb ik onderzoek
+                gedaan naar zowel het <strong>Dijkstra</strong>- als het <strong>A*-algoritme</strong>. Daarna heb ik de
+                pathfinding gebouwd op basis van het A*-algoritme, zodat de robot zelfstandig een gebouw kan verkennen en
+                een zichtbare route uitstippelt. Tot slot heb ik de <strong>botsingdetectie</strong> van Nick samengevoegd met de
+                pathfinding, zodat de robot afremt voordat hij ergens tegenaan rijdt, maar verder gewoon zijn route blijft volgen.
+                In deze documentatie loop ik per onderdeel langs wat ik heb gedaan, welke keuzes ik heb gemaakt en tegen
+                welke problemen ik ben aangelopen.
+            </p>
+        </section>
+
+        <!-- Onderzoek -->
+        <section id="onderzoek-pathfinding">
+            <h2>Onderzoek: Dijkstra vs. A*</h2>
+            <p>
+                Voordat ik begon met bouwen, heb ik eerst onderzoek gedaan naar welk pathfinding-algoritme het beste paste
+                bij onze situatie: een robot die zelfstandig de snelste route door een gebouw moet vinden en daarbij rekening
+                houdt met obstakels. Ik heb gekeken naar het <strong>Dijkstra-algoritme</strong> en het <strong>A*-algoritme</strong>.
+                Dijkstra zoekt het kortste pad door in alle richtingen tegelijk te zoeken, wat betrouwbaar is maar ook traag,
+                omdat hij veel onnodige vakjes onderzoekt. A* doet in de kern hetzelfde, maar gebruikt daarnaast een
+                <em>heuristiek</em>: een schatting van de afstand die nog tot het doel afgelegd moet worden. Daardoor zoekt
+                A* veel gerichter en vindt hij meestal sneller een pad.
+            </p>
+
+            <div class="tabel-container">
+                <table class="raster-tabel">
+                    <thead>
+                        <tr>
+                            <th>Eigenschap</th>
+                            <th>Dijkstra</th>
+                            <th>A*</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><strong>Zoekwijze</strong></td><td>In alle richtingen tegelijk</td><td>Gericht richting het doel</td></tr>
+                        <tr><td><strong>Formule</strong></td><td>f(n) = g(n)</td><td>f(n) = g(n) + h(n)</td></tr>
+                        <tr><td><strong>Heuristiek</strong></td><td>Nee</td><td>Ja (schatting tot doel)</td></tr>
+                        <tr><td><strong>Snelheid</strong></td><td>Trager, onderzoekt veel vakjes</td><td>Sneller, onderzoekt minder vakjes</td></tr>
+                        <tr><td><strong>Resultaat</strong></td><td>Kortste pad</td><td>Kortste pad (bij goede heuristiek)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p>
+                Op basis van dit onderzoek heb ik gekozen voor <strong>A*</strong>: hij geeft hetzelfde kortste pad als
+                Dijkstra, maar is een stuk efficiënter doordat hij dankzij de heuristiek niet "blind" overal hoeft te zoeken.
+                Voor een robot die zijn route soms opnieuw moet berekenen terwijl hij rijdt, is die snelheid belangrijk.
+            </p>
+        </section>
+
+        <!-- Testomgeving -->
+        <section id="testomgeving">
+            <h2>Testomgeving in Gazebo</h2>
+            <p>
+                Om de navigatie te kunnen testen had ik een omgeving nodig waarin de robot kon rondrijden. Daarom heb ik in
+                <strong>Gazebo</strong> een testwereld opgezet met muren, kamers en doorgangen, zodat we de pathfinding en de
+                obstakeldetectie onder realistische omstandigheden konden uitproberen. Een belangrijk punt daarbij was de
+                verhouding tussen de robot en de doorgangen: de robot is relatief groot (ongeveer 0,75 m breed en 1,55 m lang),
+                dus de deuren en gangen moesten breed genoeg zijn om er doorheen te kunnen rijden zonder vast te lopen.
+            </p>
+            <p>
+                Deze testomgeving was vooral bedoeld om snel te kunnen controleren of een aanpassing in de code het gedrag
+                van de robot verbeterde of juist niet. Door steeds in dezelfde wereld te testen, kon ik goed vergelijken of
+                de robot bijvoorbeeld minder vaak tegen muren reed of sneller de weg naar de volgende kamer vond.
+            </p>
+        </section>
+
+        <!-- Pathfinding -->
+        <section id="pathfinding">
+            <h2>Pathfinding met A*</h2>
+            <p>
+                Het grootste deel van mijn werk zat in het bouwen van de pathfinding met A*. De robot bouwt tijdens het rijden
+                met behulp van SLAM een kaart van zijn omgeving op. Die kaart zet ik om naar een zogeheten
+                <strong>costmap</strong>: een raster waarin per vakje staat of de robot er mag komen en hoe "duur" het is om er
+                langs te rijden. Omdat de robot vrij groot is, blaas ik de muren in die costmap iets op (een
+                <em>inflatielaag</em>). Zo plant A* automatisch een route die genoeg afstand houdt van de muren, in plaats van
+                er vlak langs te schuren en vast te lopen.
+            </p>
+            <p>
+                De robot kiest zelf een doel door te zoeken naar de rand tussen bekend en onbekend gebied — meestal een
+                deuropening naar een nog niet verkende kamer. Vervolgens berekent A* het goedkoopste pad daarheen. Dat geplande
+                pad <strong>teken ik als een groene lijn in RViz</strong>, zodat je in één oogopslag ziet welke route de robot
+                wil gaan rijden. Daarna volgt de robot dat pad en stuurt hij bij op basis van zijn positie.
+            </p>
+
+            <h3>Belangrijkste onderdelen</h3>
+            <p>
+                De pathfinding bestaat uit een paar samenwerkende onderdelen:
+            </p>
+            <div class="requirements-accordion">
+                <details>
+                    <summary>Bekijk de onderdelen</summary>
+                    <div class="uitklap-content">
+                        <table class="raster-tabel">
+                            <thead>
+                                <tr>
+                                    <th>Onderdeel</th>
+                                    <th>Wat het doet</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Costmap</strong></td><td>Zet de SLAM-kaart om naar berijdbare vakjes met een veilige marge rond muren.</td></tr>
+                                <tr><td><strong>A*-zoeker</strong></td><td>Berekent het goedkoopste pad van de robot naar het doel.</td></tr>
+                                <tr><td><strong>Frontier-keuze</strong></td><td>Zoekt automatisch een opening naar onontdekt gebied (meestal een deur) als nieuw doel.</td></tr>
+                                <tr><td><strong>Padvolger</strong></td><td>Laat de robot het geplande pad volgen en stuurt onderweg bij.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+            </div>
+
+            <h3>Problemen &amp; oplossingen</h3>
+            <p>
+                Het werkend krijgen van de pathfinding ging met vallen en opstaan. De belangrijkste problemen die ik heb opgelost:
+            </p>
+
+            <div class="trouble-item">
+                <h4>De robot bleef rondjes draaien</h4>
+                <p>
+                    In het begin reed de robot vooral rondjes en vond hij nooit een pad. Dit kwam door een paar fouten tegelijk
+                    in de code. Na het opnieuw opbouwen van het algoritme — met een nette prioriteitswachtrij voor A* — reed hij
+                    voor het eerst echt naar een doel toe.
+                </p>
+            </div>
+
+            <div class="trouble-item">
+                <h4>Geen pad naar de rand van de kaart</h4>
+                <p>
+                    De robot kon alleen navigeren binnen gebied dat al verkend was, omdat onbekende vakjes als muur werden gezien.
+                    Door onbekend gebied wél berijdbaar te maken (met een lichte strafkost) kan de robot nu juist díe kant op
+                    rijden om nieuwe ruimtes te ontdekken.
+                </p>
+            </div>
+
+            <div class="trouble-item">
+                <h4>De robot reed tegen muren en obstakels aan</h4>
+                <p>
+                    De marge rond de muren stond verkeerd afgesteld op de grootte van de robot: te weinig en hij botste, te veel
+                    en de doorgangen sloten dicht. Door de inflatielaag goed af te stemmen op de afmetingen van de robot, vond hij
+                    een goede balans tussen veilig en toch door de deuren passen.
+                </p>
+            </div>
+
+            <div class="trouble-item">
+                <h4>De positie op de kaart klopte niet met Gazebo</h4>
+                <p>
+                    De robot dacht soms dat hij ergens anders stond dan hij in werkelijkheid was, waardoor hij obstakels op de
+                    verkeerde plek ontweek. Dit kwam doordat SLAM de positie corrigeert. Door de positie eerst om te rekenen naar
+                    de juiste referentie (de kaart-frame) klopte de robot weer met de werkelijkheid.
+                </p>
+            </div>
+        </section>
+
+        <!-- Botsingdetectie -->
+        <section id="botsingdetectie">
+            <h2>Botsingdetectie samenvoegen met de pathfinding</h2>
+            <p>
+                Naast de pathfinding hadden we ook een aparte <strong>botsingdetectie</strong> die met de lidar in de gaten houdt
+                of er een obstakel vóór of achter de robot zit. Mijn taak was om deze samen te laten werken met de pathfinding:
+                de robot moet gewoon zijn route blijven rijden, maar <em>afremmen</em> zodra hij ergens tegenaan dreigt te rijden.
+            </p>
+            <p>
+                Ik heb de botsingdetectie als een soort <strong>veiligheidsfilter</strong> tussen de pathfinding en de robot
+                geplaatst. De pathfinding bepaalt nog steeds de route en de snelheid, maar dat commando gaat eerst langs de
+                botsingdetectie. Ziet die een obstakel in de richting waarin de robot wil rijden, dan zet hij de snelheid op nul
+                (remmen). Het <strong>draaien</strong> laat hij wél altijd door, zodat de robot ter plekke kan wegdraaien van het
+                obstakel en daarna weer verder kan. De botsingdetectie verzint dus zelf geen route — hij grijpt alleen in als het
+                onveilig wordt.
+            </p>
+
+            <h3>Hoe het in elkaar zit</h3>
+            <p>
+                De keten ziet er zo uit: de pathfinding stuurt zijn rijcommando niet direct naar de robot, maar eerst naar de
+                botsingdetectie, die het (eventueel afgeremde) commando doorstuurt naar de robot:
+            </p>
+            <pre><code>Pathfinding  ->  Botsingdetectie (remt bij obstakel)  ->  Robot
+                       ^
+                  Lidar (obstakels)</code></pre>
+
+            <h3>Problemen &amp; oplossingen</h3>
+
+            <div class="trouble-item">
+                <h4>De robot kreeg tegenstrijdige commando's</h4>
+                <p>
+                    In het begin stuurden zowel de pathfinding als de botsingdetectie rechtstreeks naar de robot, waardoor ze om
+                    de besturing vochten. Door de botsingdetectie als enige naar de robot te laten sturen — met de pathfinding
+                    erachter — was dat conflict opgelost.
+                </p>
+            </div>
+
+            <div class="trouble-item">
+                <h4>Ik zag niet of de detectie werkte</h4>
+                <p>
+                    Omdat de robot zelden ergens tegenaan reed, kon ik niet zien of de rem ooit afging. Ik heb daarom
+                    debug-meldingen toegevoegd die laten zien wat de lidar meet en wanneer er geremd wordt. Toen die meldingen
+                    uitbleven, bleek dat ik nog een oude versie van het programma draaide; na het opnieuw bouwen verschenen de
+                    meldingen wél en kon ik bevestigen dat de botsingdetectie en de pathfinding samen werkten zoals bedoeld.
+                </p>
+            </div>
+        </section>
+
+        <!-- Documenten & bronnen -->
+        <section id="documenten">
+            <h2>Documenten &amp; bronnen</h2>
+            <p>
+                Hierboven heb ik mijn proces op hoofdlijnen beschreven. Wil je de details, dan staat alles uitgebreider in de
+                onderstaande documenten op GitHub: mijn onderzoek naar de algoritmes, de volledige technische documentatie van
+                de navigatie en botsingdetectie, en de code zelf.
+            </p>
+
+            <div class="documenten-links">
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/tree/main" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Bekijk de repository op GitHub
+                </a>
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/blob/main/Onderzoek/Astar_Axl.pdf" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Onderzoek A*-algoritme
+                </a>
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/blob/main/Onderzoek/Dijkstra.pdf" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Onderzoek Dijkstra-algoritme
+                </a>
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/blob/main/Documentatie/PathFinding/Explorer_Navigatie_Documentatie.md" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Documentatie pathfinding (A*)
+                </a>
+                <a href="https://github.com/2025-TICT-TV2SE4-24-3-V/team-marshall/blob/main/Documentatie/PathFinding/Botsingdetectie_Documentatie.md" target="_blank" class="doc-btn">
+                    <span class="icon">&rarr;</span> Documentatie botsingdetectie
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>

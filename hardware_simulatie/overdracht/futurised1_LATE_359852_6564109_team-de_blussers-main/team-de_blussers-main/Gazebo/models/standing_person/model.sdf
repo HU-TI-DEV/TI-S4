@@ -1,0 +1,297 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <model name="standing_person">
+    <static>true</static>
+    <link name="body">
+
+      <!-- HEAD: sphere, top at z=1.77m -->
+      <visual name="head">
+        <pose>0 0 1.655 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.115</radius></sphere>
+        </geometry>
+        <material>
+          <ambient>0.85 0.65 0.45 1</ambient>
+          <diffuse>0.85 0.65 0.45 1</diffuse>
+        </material>
+      </visual>
+      <collision name="head_col">
+        <pose>0 0 1.655 0 0 0</pose>
+        <geometry>
+          <sphere><radius>0.115</radius></sphere>
+        </geometry>
+      </collision>
+
+      <!-- NECK -->
+      <visual name="neck">
+        <pose>0 0 1.48 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.10</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.65 0.45 1</ambient>
+          <diffuse>0.85 0.65 0.45 1</diffuse>
+        </material>
+      </visual>
+      <collision name="neck_col">
+        <pose>0 0 1.48 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.10</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- TORSO -->
+      <visual name="torso">
+        <pose>0 0 1.19 0 0 0</pose>
+        <geometry>
+          <box><size>0.38 0.20 0.48</size></box>
+        </geometry>
+        <material>
+          <ambient>0.20 0.30 0.70 1</ambient>
+          <diffuse>0.20 0.30 0.70 1</diffuse>
+        </material>
+      </visual>
+      <collision name="torso_col">
+        <pose>0 0 1.19 0 0 0</pose>
+        <geometry>
+          <box><size>0.38 0.20 0.48</size></box>
+        </geometry>
+      </collision>
+
+      <!-- PELVIS -->
+      <visual name="pelvis">
+        <pose>0 0 0.90 0 0 0</pose>
+        <geometry>
+          <box><size>0.32 0.18 0.16</size></box>
+        </geometry>
+        <material>
+          <ambient>0.15 0.25 0.60 1</ambient>
+          <diffuse>0.15 0.25 0.60 1</diffuse>
+        </material>
+      </visual>
+      <collision name="pelvis_col">
+        <pose>0 0 0.90 0 0 0</pose>
+        <geometry>
+          <box><size>0.32 0.18 0.16</size></box>
+        </geometry>
+      </collision>
+
+      <!-- RIGHT UPPER ARM -->
+      <visual name="right_upper_arm">
+        <pose>0.26 0 1.18 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.28</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.20 0.30 0.70 1</ambient>
+          <diffuse>0.20 0.30 0.70 1</diffuse>
+        </material>
+      </visual>
+      <collision name="right_upper_arm_col">
+        <pose>0.26 0 1.18 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.28</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- LEFT UPPER ARM -->
+      <visual name="left_upper_arm">
+        <pose>-0.26 0 1.18 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.28</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.20 0.30 0.70 1</ambient>
+          <diffuse>0.20 0.30 0.70 1</diffuse>
+        </material>
+      </visual>
+      <collision name="left_upper_arm_col">
+        <pose>-0.26 0 1.18 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.055</radius><length>0.28</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- RIGHT FOREARM -->
+      <visual name="right_forearm">
+        <pose>0.27 0 0.89 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.045</radius><length>0.26</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.65 0.45 1</ambient>
+          <diffuse>0.85 0.65 0.45 1</diffuse>
+        </material>
+      </visual>
+      <collision name="right_forearm_col">
+        <pose>0.27 0 0.89 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.045</radius><length>0.26</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- LEFT FOREARM -->
+      <visual name="left_forearm">
+        <pose>-0.27 0 0.89 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.045</radius><length>0.26</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.85 0.65 0.45 1</ambient>
+          <diffuse>0.85 0.65 0.45 1</diffuse>
+        </material>
+      </visual>
+      <collision name="left_forearm_col">
+        <pose>-0.27 0 0.89 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.045</radius><length>0.26</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- RIGHT HAND -->
+      <visual name="right_hand">
+        <pose>0.27 0 0.71 0 0 0</pose>
+        <geometry>
+          <box><size>0.08 0.04 0.10</size></box>
+        </geometry>
+        <material>
+          <ambient>0.85 0.65 0.45 1</ambient>
+          <diffuse>0.85 0.65 0.45 1</diffuse>
+        </material>
+      </visual>
+      <collision name="right_hand_col">
+        <pose>0.27 0 0.71 0 0 0</pose>
+        <geometry>
+          <box><size>0.08 0.04 0.10</size></box>
+        </geometry>
+      </collision>
+
+      <!-- LEFT HAND -->
+      <visual name="left_hand">
+        <pose>-0.27 0 0.71 0 0 0</pose>
+        <geometry>
+          <box><size>0.08 0.04 0.10</size></box>
+        </geometry>
+        <material>
+          <ambient>0.85 0.65 0.45 1</ambient>
+          <diffuse>0.85 0.65 0.45 1</diffuse>
+        </material>
+      </visual>
+      <collision name="left_hand_col">
+        <pose>-0.27 0 0.71 0 0 0</pose>
+        <geometry>
+          <box><size>0.08 0.04 0.10</size></box>
+        </geometry>
+      </collision>
+
+      <!-- RIGHT THIGH -->
+      <visual name="right_thigh">
+        <pose>0.10 0 0.645 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.07</radius><length>0.40</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.15 0.25 0.60 1</ambient>
+          <diffuse>0.15 0.25 0.60 1</diffuse>
+        </material>
+      </visual>
+      <collision name="right_thigh_col">
+        <pose>0.10 0 0.645 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.07</radius><length>0.40</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- LEFT THIGH -->
+      <visual name="left_thigh">
+        <pose>-0.10 0 0.645 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.07</radius><length>0.40</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.15 0.25 0.60 1</ambient>
+          <diffuse>0.15 0.25 0.60 1</diffuse>
+        </material>
+      </visual>
+      <collision name="left_thigh_col">
+        <pose>-0.10 0 0.645 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.07</radius><length>0.40</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- RIGHT SHIN -->
+      <visual name="right_shin">
+        <pose>0.10 0 0.24 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.38</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.15 0.25 0.60 1</ambient>
+          <diffuse>0.15 0.25 0.60 1</diffuse>
+        </material>
+      </visual>
+      <collision name="right_shin_col">
+        <pose>0.10 0 0.24 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.38</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- LEFT SHIN -->
+      <visual name="left_shin">
+        <pose>-0.10 0 0.24 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.38</length></cylinder>
+        </geometry>
+        <material>
+          <ambient>0.15 0.25 0.60 1</ambient>
+          <diffuse>0.15 0.25 0.60 1</diffuse>
+        </material>
+      </visual>
+      <collision name="left_shin_col">
+        <pose>-0.10 0 0.24 0 0 0</pose>
+        <geometry>
+          <cylinder><radius>0.05</radius><length>0.38</length></cylinder>
+        </geometry>
+      </collision>
+
+      <!-- RIGHT FOOT -->
+      <visual name="right_foot">
+        <pose>0.10 0.03 0.025 0 0 0</pose>
+        <geometry>
+          <box><size>0.10 0.22 0.05</size></box>
+        </geometry>
+        <material>
+          <ambient>0.15 0.15 0.15 1</ambient>
+          <diffuse>0.15 0.15 0.15 1</diffuse>
+        </material>
+      </visual>
+      <collision name="right_foot_col">
+        <pose>0.10 0.03 0.025 0 0 0</pose>
+        <geometry>
+          <box><size>0.10 0.22 0.05</size></box>
+        </geometry>
+      </collision>
+
+      <!-- LEFT FOOT -->
+      <visual name="left_foot">
+        <pose>-0.10 0.03 0.025 0 0 0</pose>
+        <geometry>
+          <box><size>0.10 0.22 0.05</size></box>
+        </geometry>
+        <material>
+          <ambient>0.15 0.15 0.15 1</ambient>
+          <diffuse>0.15 0.15 0.15 1</diffuse>
+        </material>
+      </visual>
+      <collision name="left_foot_col">
+        <pose>-0.10 0.03 0.025 0 0 0</pose>
+        <geometry>
+          <box><size>0.10 0.22 0.05</size></box>
+        </geometry>
+      </collision>
+
+    </link>
+  </model>
+</sdf>

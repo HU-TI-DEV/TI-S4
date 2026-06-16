@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overdracht website Futurised</title>
+    <link rel="stylesheet" href="CSS_/main.css">
+    <link rel="stylesheet" href="Ham_menu/Ham.css">
+    <script defer src="Ham_menu/Ham.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Futurised</h1>
+        
+    </header>
+
+    <main>
+
+        <section id="introductie">
+            <h2>Introductie</h2>
+            <p>Welkom op de overdrachtswebsite van ons groepsproject. De afgelopen maanden hebben wij samengewerkt in opdracht van Futurised. Het resultaat van deze samenwerking is te vinden op dit platform: van onze individuele processen en software-architectuur tot het uiteindelijke eindproduct. Via het burgermenu rechtsboven navigeert u eenvoudig door de verschillende pagina's en documentatie. Hieronder staat een kort overzicht van de paginas waar welke informatie te vinden is, veel leesplezier!</p>
+            <ul>
+                <p><strong>Installatie:</strong> Hier staat de installatie en configuratie van ROS 2 Jazzy en Gazebo Harmonic.</p>
+                <p><strong>Processen:</strong> Hier staat alle documentatie, uitleg en werkprocess van alle code en software-architectuur. Deze onderdelen zijn opgedeeld per persoon.</p>
+                <p><strong>Aanbevelingen:</strong> Hier staan eventuele aanbevelingen voor als ons project overgedragen wordt.</p>
+            </ul>
+        </section>
+
+        <hr> <section id="about-us">
+            <h2>Over ons</h2>
+            <p>Wij zijn een gedreven team van vijf technische informatica studenten en de afgelopen maanden hebben wij onze verschillende vaardigheden gebruikt om voor Futurised een sterk product neer te zetten. Binnen ons team heeft iedereen zijn eigen specialisme, van Techlead tot Scrummaster, maar we zijn allemaal betrokken bij het schrijven van software. Hierdoor vulden wij elkaar perfect aan tijdens de sprints, hebben we uitdagingen snel kunnen tackelen en een compleet eindproduct kunnen leveren.</p>
+            <p>Voor een tabel over de volledige taakverdeling zie 'processen.'</p>
+        </section>
+
+        <hr>
+
+        <section id="project-doel">
+            <h2>Projectdoel: Een Autonome Blusrobot Simuleren</h2>
+            <p>Het hoofddoel van dit project is het simuleren van een betrouwbaar, veilig en volledig autonoom navigatiesysteem voor onze brandweerrobot, genaamd Flip. Tijdens een brand telt elke seconde en is er zoveel mogelijk mankracht nodig voor het redden van levens. Apparatuur die in deze situaties wordt ingezet, moet blindelings kunnen functioneren zonder constant menselijke aansturing te vereisen.</p>
+            <p>Flip is een blusrobot die al ingezet wordt bij de brandweer, maar wij hebben dit in Gazebo (simulatieomgeving) gezet om Flip uit te bereiden en testen te kunnen uitvoeren. Wij hebben de volgende functies toegevoegd aan Flip:</p>
+            <ul>
+                <p><strong>Zelfstandig navigeren:</strong> De snelste en meest efficiente route berekenen van punt A naar punt B met behulp van een pathfinding-algorimte.</p>
+                <p><strong>Omgeving analyseren:</strong> Functies die wereld-coördinaten (meters) vertalen naar raster-coördinaten (pixels/cellen) en vice versa, zodat de robot begrijpt waar hij staat.</p>
+                <p><strong>Voorspelbaar en veilig reageren:</strong> De logica die controleert welke cellen bereikbaar zijn en welke aangrenzende cellen (buren) de robot kan bezoeken.</p>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section id="eindproduct">
+            <h2>Eindproduct</h2>
+            <h3>Mappenstructuur:</h3>
+            <p>De volgende mappenstructuur wordt gebruikt in de omgeving. </p>
+            <pre><code>Futurised/
+├── models/               # Bevat de 3D-SDF modellen van de robot en objecten
+├── worlds/               # De virtuele Gazebo-werelden (brandscenario's)
+├── bridge.yaml           # Configuratiefile voor de ROS 2 <> Gazebo bridge
+├── camera.py             # Verwerkt de camerabeelden van Flip
+├── door_detector.py      # Detecteert deuropeningen en checkt de breedte (NF11)
+├── explorer.py           # De core logica: bevat het A*-pathfinding algoritme
+├── launch.py             # Start alle nodes en de simulatie in één keer op
+├── mapper.py             # Verwerkt de LiDAR-data tot een bruikbare kaart (SLAM)
+├── room_detector.py      # Identificeert afzonderlijke kamers in het gebouw
+└── run_flip.sh           # Het hoofdscript waarmee je de hele robot opstart</code></pre>
+            
+            <h3>Features:</h3>
+            <p>Er zijn heel wat features bij gekomen voor Flip. Dit zit allemaal in een virtuele omgeving en dus niet op 'real-life' Flip.</p>
+        <table class="raster-tabel">
+    <thead>
+        <tr>
+            <th>Functionaliteit</th>
+            <th>Wat doet het?</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><strong>Autonoom Rondrijden</strong></td>
+            <td>De robot kan zelfstandig stuursignalen verwerken en vloeiend door de simulatie bewegen.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+        <tr>
+            <td><strong>Omgeving Scannen (LiDAR)</strong></td>
+            <td>Met een 360-graden sensor kijkt de robot continu om zich heen om de wereld te begrijpen.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+        <tr>
+            <td><strong>Botsing Detectie & Ontwijken</strong></td>
+            <td>Flip herkent muren en objecten direct en stopt of stuurt bij om botsingen te voorkomen.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+        <tr>
+            <td><strong>Slimme Routebepaling (Pathfinding)</strong></td>
+            <td>De robot berekent zelf de allersnelste en meest efficiënte route van A naar B.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+        <tr>
+            <td><strong>Deur & Doorgang Herkenning</strong></td>
+            <td>De software scant of openingen wel breed genoeg zijn zodat de robot niet klem komt te zitten.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+        <tr>
+            <td><strong>Kamer Detectie</strong></td>
+            <td>De robot herkent overgangen in de structuur en deelt het pand logisch op in aparte kamers.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+        <tr>
+            <td><strong>Live Mapping (SLAM)</strong></td>
+            <td>Terwijl de robot rondrijdt, bouwt hij live een nauwkeurige digitale platplattegrond op van de brandhaard.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+        <tr>
+            <td><strong>Camera-interactie</strong></td>
+            <td>De ingebouwde camera checkt nog extra voor deur herkenning om meer zekerheid te bieden voor de LiDAR.</td>
+            <td><span class="status-tag status-done">Werkend</span></td>
+        </tr>
+    </tbody>
+</table>
+
+        <div class="robot-foto-container">
+            <img src="afbeeldingen/eindproduct.jpg" alt="De brandweerrobot Flip in de simulatie" class="robot-foto">
+            <span class="foto-caption">Figuur 1: De brandweerrobot Flip in de Gazebo simulatie omgeving.</span>
+            <a href="https://youtu.be/GNcWoBfd0g0" target="_blank" rel="noopener noreferrer">Bekijk filpmje eindproduct</a>
+        </div>
+
+        </section>
+
+            
+
+    </main>
+</body>
+</html>

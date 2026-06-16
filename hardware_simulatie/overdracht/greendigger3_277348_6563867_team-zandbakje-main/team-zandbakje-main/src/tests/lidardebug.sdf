@@ -1,0 +1,259 @@
+<?xml version="1.0"?>
+<sdf version="1.9">
+
+<world name="lidar_test_world">
+
+  <plugin filename="gz-sim-sensors-system"
+          name="gz::sim::systems::Sensors"/>
+
+  <plugin filename="gz-sim-physics-system"
+          name="gz::sim::systems::Physics"/>
+
+  <light name="sun" type="directional">
+    <pose>0 0 10 0 0 0</pose>
+    <diffuse>1 1 1 1</diffuse>
+    <specular>0.2 0.2 0.2 1</specular>
+    <direction>-0.5 0.1 -1</direction>
+  </light>
+
+  <!-- WHITE GROUND -->
+  <model name="plateau">
+    <static>true</static>
+
+    <link name="ground_link">
+
+      <pose>0 0 -0.5 0 0 0</pose>
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>50 50 1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>50 50 1</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>1 1 1 1</ambient>
+          <diffuse>1 1 1 1</diffuse>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+
+  <!-- LIDAR ROBOT -->
+  <model name="lidar_bot">
+
+    <static>false</static>
+
+    <pose>0 0 1 0 0 0</pose>
+
+    <link name="base">
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.5</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.5</size>
+          </box>
+        </geometry>
+      </visual>
+
+      <sensor name="lidar_sensor" type="gpu_lidar">
+
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+
+        <pose>0 0 0.5 0 0 0</pose>
+
+        <topic>/digger/lidar/points</topic>
+
+        <gz_frame_id>lidar</gz_frame_id>
+
+        <visualize>true</visualize>
+
+        <lidar>
+
+          <scan>
+
+            <horizontal>
+              <samples>1024</samples>
+              <min_angle>-3.1415926535</min_angle>
+              <max_angle>3.1415926535</max_angle>
+            </horizontal>
+
+            <vertical>
+              <samples>64</samples>
+              <min_angle>-0.5</min_angle>
+              <max_angle>0.5</max_angle>
+            </vertical>
+
+          </scan>
+
+          <range>
+            <min>0.1</min>
+            <max>30</max>
+          </range>
+
+          <point_cloud>true</point_cloud>
+
+        </lidar>
+
+      </sensor>
+
+    </link>
+
+  </model>
+
+  <!-- ROUGH TERRAIN BLOCK 1 -->
+  <model name="bump_1">
+
+    <static>true</static>
+
+    <pose>2 -1 0.05 0 0 0</pose>
+
+    <link name="link">
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+
+  <!-- ROUGH TERRAIN BLOCK 2 -->
+  <model name="bump_2">
+
+    <static>true</static>
+
+    <pose>3.5 0.8 0.075 0 0 0</pose>
+
+    <link name="link">
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1.2 1.2 0.15</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1.2 1.2 0.15</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+
+  <!-- ROUGH TERRAIN BLOCK 3 -->
+  <model name="bump_3">
+
+    <static>true</static>
+
+    <pose>5 -0.6 0.05 0 0 0</pose>
+
+    <link name="link">
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 0.1</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>0.8 0.8 0.8 1</ambient>
+        </material>
+      </visual>
+
+    </link>
+
+  </model>
+
+  <!-- TARGET OBJECT -->
+  <model name="target_cube">
+
+    <static>true</static>
+
+    <pose>8 0 0.5 0 0 0</pose>
+
+    <link name="link">
+
+      <collision name="collision">
+        <geometry>
+          <box>
+            <size>1 1 1</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <box>
+            <size>1 1 1</size>
+          </box>
+        </geometry>
+
+        <material>
+          <ambient>1 0 0 1</ambient>
+          <diffuse>1 0 0 1</diffuse>
+        </material>
+
+      </visual>
+
+    </link>
+
+  </model>
+
+</world>
+
+</sdf>

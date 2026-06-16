@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aanbevelingen - Futurised</title>
+    
+<link rel="stylesheet" href="../CSS_/main.css"> 
+    <link rel="stylesheet" href="../Ham_menu/Ham.css">
+    
+    <script defer src="../Ham_menu/Ham.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Process Jochem</h1>
+    </header>
+
+    <!-- Boxen voor de tekst -->
+    <main>
+        
+        <section id="introductie">
+            <h2>Introductie</h2>
+            <p>
+                Binnen het Futurised project heb ik mij bezig gehouden met verschillende aspecten, voornamelijk op het vlak van onderzoek doen, world building en autonoom rijden.
+                Daarnaast heb ik ook een bijdrage geleverd aan de software architectuur en coderen, maar in deze documentatie zal ik mij vooral richten op mijn technische bijdragen.
+                Terugkijkend had ik graag meer willen doen gezien mijn implementaties niet allemaal zijn afgerond, maar ik ben tevreden.
+            </p>
+        </section>
+
+        <section id="pathfinding-algoritme">
+            <h2>Pathfinding Algoritme</h2>
+            <p>
+                In het begin hebben Axl en ik onderzoek gedaan naar verschillende pathfinding-algoritmes die geschikt zouden zijn voor het navigeren van een robot in een complexe omgeving zoals een gebouw tijdens een brand.
+                Verder keken we naar wat het beste algoritme zou zijn voor het vinden van de snelste route, terwijl we ook rekening hielden met obstakels en mogelijke gevaren in de omgeving.
+                Toen kwamen we uiteindelijk op het dijkstra algoritme, omdat deze een goede balans bood tussen efficiëntie en betrouwbaarheid voor onze specifieke toepassing.
+                Echter later wilde Aimee graag het AStar algoritme implementeren, omdat deze een heuristische benadering gebruikt die vaak sneller is dan Dijkstra's algoritme, vooral in grotere en complexere omgevingen.
+                Na wat onderzoek en testen hebben we besloten om het AStar algoritme te implementeren.
+
+            </p>
+
+        </section>
+
+        <section id="world-building">
+            <h2>World Building</h2>
+            <p>
+                Voor het world building aspect van het project heb ik zelf een wereld gebouwd in Gazebo, waarin de robot kon rondrijden en navigeren.
+                Deze wereld was gebaseerd op een standaard huis, met verschillende kamers, gangen en obstakels die de robot moest ontwijken. Uiteindelijk liep ik tegen een aantal uitdagingen aan, zoals het correct plaatsen van de obstakels en het zorgen dat de wereld realistisch genoeg was voor de robot om in te navigeren.
+                Daarnaast had ik diverse problemen met het importeren van modellen en het aanpassen van de wereld aan de specifieke eisen van het project, zoals het toevoegen van deuren en smalle doorgangen.
+                Daarom zijn we uiteindelijk overgestapt naar een kant-en-klare wereld die al was ontworpen voor robotnavigatie, en deze aangepast aan onze behoeften. Deze wereld bood een goede basis voor het testen van de robot en het implementeren van de pathfinding-algoritme, terwijl het ook voldoende complexiteit bood om de uitdagingen van het navigeren te simuleren.
+            </p>
+        </section>
+
+        <section id="PID implementatie">
+            <h2>PID Implementatie</h2>
+            <p>
+                Voor het besturen van de robot heb ik een PID-controller geïmplementeerd, die verantwoordelijk is voor het regelen van de snelheid en richting van de robot tijdens het navigeren.
+                De PID-controller maakt gebruik van drie componenten: Proportioneel, Integrerend en Differentiërend, om de fout tussen de gewenste positie en de werkelijke positie van de robot te minimaliseren.
+                Door deze componenten te combineren, kan de robot soepel en nauwkeurig navigeren, terwijl het ook in staat is om snel te reageren op veranderingen in de omgeving, zoals het detecteren van obstakels of het aanpassen van de route.
+                De implementatie van de PID-controller was een belangrijk onderdeel van het project, omdat het ervoor zorgde dat de robot effectief kon navigeren en obstakels kon ontwijken, wat essentieel was voor het succes van het project.
+                Uiteindelijk vonden sommige het niet belangrijk om een PID-controller te implementeren, omdat de robot al in staat was om te navigeren en obstakels te ontwijken met behulp van het pathfinding-algoritme. Daarnaast duurde ontwikkeling langer omdat mijn workflow niet optimaal was omdat ik op een Mac werkte, terwijl de rest van het team op Windows werkte, waardoor er compatibiliteitsproblemen waren met bepaalde tools en software die we gebruikten voor de ontwikkeling van de robot.
+                Desondanks zijn de bestanden om het alsnog te implementeren wel gemaakt, zodat dit in de toekomst nog kan worden toegevoegd als een extra functionaliteit of verbetering van de navigatieprestaties van de robot.
+            </p>
+        </section>  
+
+        <section id="Implementatie ML in Gazebo">
+            <h2>Implementatie van Machine Learning in Gazebo</h2>
+            <p>
+               Onder het mom van autonomie en de vraag vanuit het project om een robot te ontwikkelen die zelfstandig kan navigeren, heb ik mij gericht op het implementeren van machine learning technieken binnen de Gazebo simulatieomgeving.
+               Deze is echter niet verder uitgewerkt, omdat deze implemmentatie veel tijd en onderzoek zou kosten, terwijl er ook andere belangrijke aspecten van het project waren die aandacht nodig hadden.
+               Bovendien was er al een werkende oplossing voor het autonoom rijden met behulp van een pathfinding-algoritme, waardoor de implementatie van machine learning niet als een prioriteit werd gezien binnen de scope van het project.
+               Voor Machine Learning is uiteindelijk alleen een onderzoek gedaan naar de mogelijkheden en beperkingen van het gebruik van machine learning in een simulatieomgeving zoals Gazebo, en hoe dit zou kunnen bijdragen aan de autonomie van de robot.
+               Waarbij verschillende machine learning technieken zijn onderzocht, zoals reinforcement learning en supervised learning, en hoe deze technieken kunnen worden toegepast in de context van robotnavigatie en obstakelvermijding.
+            </p>
+        </section>
+
+        <section id="architectuur-documentatie">
+            <h2>Software Architectuur</h2>
+            <h3>Inleiding</h3>
+            <p> Voor dit project heb ik samen met Aimee de software architectuur ontworpen. Ons doel was om een duidelijke opstellingen te maken op basis van de eisen van het project.
+                We hebben ervoor gekozen om de software architectuur op te delen in verschillende lagen, waarbij elke laag een specifieke rol heeft. 
+                De belangrijkste lagen zijn de Sensorlaag, de Verwerkingslaag en de Actuatorlaag. 
+                De Sensorlaag is verantwoordelijk voor het verzamelen van gegevens uit de omgeving, zoals het scannen van de omgeving met behulp van een Lidar-sensor. 
+                De Verwerkingslaag verwerkt deze gegevens en maakt beslissingen op basis van de informatie die is verzameld. 
+                De Actuatorlaag voert vervolgens de acties uit die zijn bepaald door de Verwerkingslaag, zoals het besturen van de robot om te navigeren en obstakels te ontwijken.
+            </p>
+            
+            <div class="requirements-accordion">
+
+                <details>
+                    <summary>Bekijk Keydrivers</summary>
+                    <div class="uitklap-content">
+                        <table class="raster-tabel">
+                            <thead>
+                                <tr>
+                                    <th>Keydrivers</th>
+                                    <th>Omschrijving</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Betrouwbaarheid</strong></td><td>De techniek dat Futurised gebruikt moet betrouwbaar zijn. Machines moeten voorspelbaar reageren, zodat zij hier altijd op kunnen vertrouwen.</td></tr>
+                                <tr><td><strong>Veiligheid</strong></td><td>De technologie moet een bijdrage leveren aan het redden en helpen van mensen tijdens een brand. Apparatuur moet gevaren minimaliseren en mag nooit zelf een extra obstakel vormen.</td></tr>
+                                <tr><td><strong>Autonomie</strong></td><td>Tijdens een brand is er zoveel mogenlijk mankracht nodig en moet apparatuur zelfstandig kunnen rijden, obstakels ontwijken en de snelste route kunnen uitrekenen.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Bekijk Functionele Requirements (FR)</summary>
+                    <div class="uitklap-content">
+                        <table class="raster-tabel">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Requirement</th>
+                                    <th>Prioriteit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>F01 Rondrijden</strong></td><td>Omschrijving: De robot moet zich in de simulatie kunnen bewegen (Vooruit, achteruit em draaien.)</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F02 Omgeving scannen</strong></td><td>De robot moet in de simulatie de omgeving kunnen scannen met behulp van een sensor.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F03 Obstakels herkennen</strong></td><td>De robot moet objecten en muren in de simulatie herkennen om botsingen te voorkomen.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F04 Zelfstandig Navigeren</strong></td><td>De robot moet zelfstandig van de ene naar de andere plek rijden in de simulatie.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F05 Doorgangen vinden</strong></td><td>De robot moet bepalen of een opening (zoals een deur) breed genoeg is om doorheen te rijden.</td><td><span class="status-tag status-progress">Should have</span></td></tr>
+                                <tr><td><strong>F06 Gebruikers interactie</strong></td><td>De gebruiker geeft commandos en de robot moet deze zelfstandig uitvoeren.</td><td><span class="status-tag status-done">Should have</span></td></tr>
+                                <tr><td><strong>F07 Virtuele omgeving</strong></td><td>Er is een virtuele omgeving waar de robot kan rondrijden.</td><td><span class="status-tag status-done">Must have</span></td></tr>
+                                <tr><td><strong>F08 Veilig werken</strong></td><td>De Robot moet stoppen wanneer een obstakel te dicht in de buurt komt van de robot. De robot moet bij voorkeur iets terug.</td><td><span class="status-tag status-progress">Must have</span></td></tr>
+                                <tr><td><strong>F09 Andere route bepalen</strong></td><td>De robot moet wanneer het ingesloten wordt door obstakels een andere route kiezen zonder verder in de buurt te komen van de obstakels.</td><td><span class="status-tag status-done">Should have</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>Bekijk Niet-Functionele Requirements (NFR) & Constraints (C)</summary>
+                    <div class="uitklap-content">
+                        <table class="raster-tabel">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Specificatie</th>
+                                    <th>Waarde</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>NF01</strong></td><td>Simulatie omgeving</td><td>De simulatie draait binnen Gazebo.</td></tr>
+                                <tr><td><strong>NF02</strong></td><td>Rondrijden</td><td>De robot kan rijden met een snelheid van 0,5 m/s.</td></tr>
+                                <tr><td><strong>NF03</strong></td><td>Navigatie sensor</td><td>Voor het navigeren en scannen van de omgeving wordt er gebruik gemaakt van een Lidar-sensor met een bereik van 360 graden.</td></tr>
+                                <tr><td><strong>NF04</strong></td><td>Obstakels ontwijken</td><td>De robot navigeert via een Pathfinding algortime.</td></tr>
+                                <tr><td><strong>NF05</strong></td><td>Voorspelbaar reageren</td><td>In drie identieke testsituaties heeft de route een maximale afwijking van 10% in tijd en afstand.</td></tr>
+                                <tr><td><strong>NF06</strong></td><td>Reactie tijd</td><td>De robot reageert op een obstakel binnen twee seconden na het detecteren ervan.</td></tr>
+                                <tr><td><strong>NF07</strong></td><td>Sensorwaarden vastleggen</td><td>De sensorwaarden van de LiDAR sensor worden vastgelegd met een frequentie van 10hz , zodat dit meegenomen kan worden voor verder onderzoek.</td></tr>
+                                <tr><td><strong>NF08</strong></td><td>Route herberekenen</td><td>Zorda een obstakel gedetecteerd wordt op de route, vindt de robot binnen vijf senconden een alternatieve route.</td></tr>
+                                <tr><td><strong>NF09</strong></td><td>Nauwkeurige Sensoren</td><td>De sensoren in de simulatie hebben ten minste 85% van de test gevallen de obstakels correct gedetecteerd.</td></tr>
+                                <tr><td><strong>NF10</strong></td><td>Afstand tot obstakel</td><td>De robot houdt minstens 30cm afstand van een obstakel.</td></tr>
+                                <tr><td><strong>NF11</strong></td><td>Doorgangen</td><td>Een opening wordt pas gezien als doorgang zodra dit minimaal 20 centimeter breder is dan de breedte van de robot zelf.</td></tr>
+                                <tr><td><strong>NF12</strong></td><td>Beperkt zicht</td><td>De LiDAR kijkt door rook met een nauwkeurigheid van 85%</td></tr>
+                                <tr><td><strong>C01</strong></td><td>Wetgeving</td><td>De robot moet voldoen aan de Europese richtlijnen voor machines en specifieke veiligheidseisen voor brandweer uitrusting.</td></tr>
+                                <tr><td><strong>C02</strong></td><td>Omgeving</td><td>De robot gaat te werk in een omgeving waar de temperatuur kan oplopen tot 500 graden en waar veel rook kan plaatsvinden.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+            </div>
+            </section>
+
+    </main>
+
+</body>
+</html>

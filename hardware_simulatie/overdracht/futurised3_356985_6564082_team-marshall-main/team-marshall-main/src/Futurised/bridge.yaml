@@ -1,0 +1,38 @@
+- ros_topic_name: "/scan"
+  gz_topic_name: "/lidar"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: "GZ_TO_ROS"
+  lazy: false
+
+- ros_topic_name: "/clock"
+  gz_topic_name: "/world/robotWorld/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: "GZ_TO_ROS"
+  lazy: false
+
+- ros_topic_name: "/odom"
+  gz_topic_name: "/model/Flip/odometry"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: "GZ_TO_ROS"
+  lazy: false
+
+# De pathfinding publiceert ROS /cmd_vel; die gaat naar gz /cmd_vel_nav.
+# De C++ botsing_detectie leest /cmd_vel_nav, remt indien nodig, en stuurt
+# het veilige commando door naar gz /cmd_vel (de robot). Zo zit de
+# botsingdetectie altijd als veiligheidsfilter tussen de pathfinding en de robot.
+- ros_topic_name: "/cmd_vel"
+  gz_topic_name: "/cmd_vel_nav"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: "ROS_TO_GZ"
+  lazy: false
+
+- ros_topic_name: "/camera"
+  gz_topic_name: "/camera"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: "GZ_TO_ROS"
+  lazy: false

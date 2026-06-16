@@ -1,0 +1,175 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+    <!-- TONK -->
+    <model name="tonk" canonical_link="base">
+      <!-- Spawn height so wheels touch ground -->
+      <pose>0 0 0.35 0 0 0</pose>
+
+      <plugin filename="gz-sim-diff-drive-system"
+              name="gz::sim::systems::DiffDrive">
+        <left_joint>left_front_joint</left_joint>
+        <left_joint>left_rear_joint</left_joint>
+
+        <right_joint>right_front_joint</right_joint>
+        <right_joint>right_rear_joint</right_joint>
+
+        <wheel_separation>1.6</wheel_separation>
+        <wheel_radius>0.25</wheel_radius>
+        <topic>/cmd_vel</topic>
+      </plugin>
+
+      <!-- Base Link -->
+      <link name="base">
+        <inertial>
+          <mass>40</mass>
+          <inertia><ixx>2</ixx><iyy>2</iyy><izz>2</izz></inertia>
+        </inertial>
+        <visual name="visual">
+          <geometry><box><size>1.8 1.4 0.6</size></box></geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>
+            <diffuse>1 0 0 1</diffuse>
+          </material>
+        </visual>
+        <collision name="collision">
+          <geometry><box><size>1.8 1.4 0.6</size></box></geometry>
+        </collision>
+      </link>
+
+      <!-- Wheels -->
+      <!-- Left Front -->
+      <link name="left_front">
+        <pose>0.6 0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Right Front -->
+      <link name="right_front">
+        <pose>0.6 -0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Left Rear -->
+      <link name="left_rear">
+        <pose>-0.6 0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Right Rear -->
+      <link name="right_rear">
+        <pose>-0.6 -0.8 -0.15 -1.57 0 0</pose>
+        <inertial><mass>2</mass></inertial>
+        <visual name="visual"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></visual>
+        <collision name="collision"><geometry><cylinder><radius>0.25</radius><length>0.2</length></cylinder></geometry></collision>
+      </link>
+
+      <!-- Features -->
+      <link name="lidar">
+        <pose>0 0 0.5 0 0 0</pose>
+
+        <sensor name="lidar_sensor" type="gpu_lidar">
+          <pose>0 0 0 0 0 0</pose>
+          <always_on>true</always_on>
+          <update_rate>10</update_rate>
+          <visualize>true</visualize>
+          <topic>/lidar</topic>
+
+          <lidar>
+            <scan>
+              <horizontal>
+                <samples>360</samples>
+                <resolution>1</resolution>
+                <min_angle>-3.14159</min_angle>
+                <max_angle>3.14159</max_angle>
+              </horizontal>
+            </scan>
+            <range>
+              <min>0.1</min>
+              <max>10.0</max>
+              <resolution>0.01</resolution>
+            </range>
+          </lidar>
+        </sensor>
+      </link>
+
+
+      <!-- Feature Thermal Camera -->
+      <link name="thermal_camera">
+    <pose>0.05 0.05 0.05 0 0 0</pose>
+    <collision name="collision">
+      <geometry>
+        <box>
+          <size>0.1 0.1 0.1</size>
+        </box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <box>
+          <size>0.1 0.1 0.1</size>
+        </box>
+      </geometry>
+    </visual>
+    <sensor name="thermal_camera_8bit" type="thermal">
+      <camera>
+        <horizontal_fov>1.047</horizontal_fov>
+        <image>
+          <width>320</width>
+          <height>240</height>
+          <format>L8</format>
+        </image>
+        <clip>
+          <near>0.1</near>
+          <far>100</far>
+        </clip>
+      </camera>
+      <always_on>1</always_on>
+      <update_rate>30</update_rate>
+      <visualize>true</visualize>
+      <topic>thermal_camera_8bit/image</topic>
+      <plugin
+        filename="ignition-gazebo-thermal-sensor-system"
+        name="gz::sim::systems::ThermalSensor">
+        <min_temp>253.15</min_temp>
+        <max_temp>673.15</max_temp>
+        <resolution>3.0</resolution>
+      </plugin>
+    </sensor>
+  </link>
+
+      <!-- Thermal camera joint -->
+      <joint name="thermal_joint" type="fixed">
+        <parent>base</parent>
+        <child>thermal_camera</child>
+      </joint>
+
+
+      <!-- Joints -->
+      <joint name="left_front_joint" type="revolute">
+        <parent>base</parent><child>left_front</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="right_front_joint" type="revolute">
+        <parent>base</parent><child>right_front</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="left_rear_joint" type="revolute">
+        <parent>base</parent><child>left_rear</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="right_rear_joint" type="revolute">
+        <parent>base</parent><child>right_rear</child>
+        <axis><xyz>0 0 1</xyz></axis>
+      </joint>
+      <joint name="lidar_joint" type="fixed">
+        <parent>base</parent>
+        <child>lidar</child>
+      </joint>
+    </model>
+</sdf>

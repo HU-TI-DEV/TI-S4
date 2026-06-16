@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+	<!--
+  model from :
+  https://github.com/ros-industrial/universal_robot/tree/noetic-devel/ur5e_moveit_config
+ 
+	Author: Replitard
+	Contributors: Ocarian, GrijzePanda
+  -->
+	<model name="arm" canonical_link="base_link">
+		<pose>0 0 0 0 0 0</pose>
+		<static>false</static>
+		<self_collide>false</self_collide>
+		<!-- Dynamics are intentionally lighter than the 6x visual scale to keep the arm controllable in Gazebo. -->
+		<link name="base_link">
+			<pose>0 0 0 0 0 0</pose>
+			<inertial>
+				<pose>0.000060 -0.000090 0.297294 0 0 0</pose>
+				<mass>5.0</mass>
+				<inertia>
+					<ixx>0.845484</ixx>
+					<iyy>0.845407</iyy>
+					<izz>1.181719</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="base_visual">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-visual/base.dae</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="base_collision">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-collision/base.stl</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="shoulder_link">
+			<pose relative_to="base_link">0 0 0.975 0 0 0</pose>
+			<inertial>
+				<pose>0.000030 0.042894 0.022938 0 0 0</pose>
+				<mass>3.0</mass>
+				<inertia>
+					<ixx>0.873634</ixx>
+					<iyy>0.786231</iyy>
+					<izz>0.780088</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="shoulder_visual">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-visual/shoulder.dae</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="shoulder_collision">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-collision/shoulder.stl</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="upper_arm_link">
+			<pose relative_to="shoulder_link">0 0.828 0 0 1.57079632679 0</pose>
+			<inertial>
+				<pose>-0.000012 -0.017802 1.271970 0 0 0</pose>
+				<mass>6.40528</mass>
+				<inertia>
+					<ixx>16.690095</ixx>
+					<iyy>16.274624</iyy>
+					<izz>1.923938</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="upper_arm_visual">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-visual/upperarm.dae</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="upper_arm_collision">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-collision/upperarm.stl</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="forearm_link">
+			<pose relative_to="upper_arm_link">0 -0.786 2.55 0 0 0</pose>
+			<inertial>
+				<pose>0.000726 -0.009024 1.118148 0 0 0</pose>
+				<mass>6.14736</mass>
+				<inertia>
+					<ixx>4.640328</ixx>
+					<iyy>4.664978</iyy>
+					<izz>0.470215</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="forearm_visual">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-visual/forearm.dae</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="forearm_collision">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-collision/forearm.stl</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="wrist_1_link">
+			<pose relative_to="forearm_link">0 0 2.352 0 1.57079632679 0</pose>
+			<inertial>
+				<pose>0.000042 0.657204 -0.008124 0 0 0</pose>
+				<mass>2.63304</mass>
+				<inertia>
+					<ixx>0.199066</ixx>
+					<iyy>0.199066</iyy>
+					<izz>0.170605</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="wrist_1_visual">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-visual/wrist1.dae</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="wrist_1_collision">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-collision/wrist1.stl</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="wrist_2_link">
+			<pose relative_to="wrist_1_link">0 0.762 0 0 0 0</pose>
+			<inertial>
+				<pose>0.000012 -0.010770 0.577170 0 0 0</pose>
+				<mass>2.63304</mass>
+				<inertia>
+					<ixx>0.199066</ixx>
+					<iyy>0.199066</iyy>
+					<izz>0.170605</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="wrist_2_visual">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-visual/wrist2.dae</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="wrist_2_collision">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-collision/wrist2.stl</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<link name="wrist_3_link">
+			<pose relative_to="wrist_2_link">0 0 0.6 0 0 0</pose>
+			<inertial>
+				<pose>0.000444 0.456312 0.016440 1.57079632679 0 0</pose>
+				<mass>0.405864</mass>
+				<inertia>
+					<ixx>0.007698</ixx>
+					<iyy>0.007698</iyy>
+					<izz>0.010264</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="wrist_3_visual">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-visual/wrist3.dae</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</visual>
+			<collision name="wrist_3_collision">
+				<geometry>
+					<mesh>
+						<uri>file://models/arm-collision/wrist3.stl</uri>
+						<scale>6 6 6</scale>
+					</mesh>
+				</geometry>
+			</collision>
+		</link>
+		<!-- colision detection rod -->
+		<link name="ee_link">
+			<pose relative_to="wrist_3_link">0 0.6 0 0 0 1.57079632679</pose>
+			<inertial>
+				<mass>0.216</mass>
+				<inertia>
+					<ixx>0.007776</ixx>
+					<iyy>0.007776</iyy>
+					<izz>0.007776</izz>
+					<ixy>0</ixy>
+					<ixz>0</ixz>
+					<iyz>0</iyz>
+				</inertia>
+			</inertial>
+			<visual name="ee_visual">
+				<pose>0 0 0.2 0 0 0</pose>
+				<geometry>
+					<box>
+						<size>0.06 0.06 0.75</size>
+					</box>
+				</geometry>
+				<material>
+					<ambient>0.2 0.2 0.2 1</ambient>
+					<diffuse>0.2 0.2 0.2 1</diffuse>
+				</material>
+			</visual>
+			<collision name="ee_collision">
+				<pose>0 0 0.2 0 0 0</pose>
+				<geometry>
+					<box>
+						<size>0.06 0.06 0.75</size>
+					</box>
+				</geometry>
+				<surface>
+					<friction>
+						<ode>
+							<mu>0.0</mu>
+							<mu2>0.0</mu2>
+						</ode>
+					</friction>
+					<contact>
+						<ode>
+							<kp>0.1</kp>
+							<!-- makes the contact sensor not block the arm from moving -->
+							<kd>0.0</kd>
+						</ode>
+					</contact>
+				</surface>
+			</collision>
+			<sensor name="rod_contact" type="contact">
+				<contact>
+					<collision>ee_collision</collision>
+				</contact>
+				<always_on>true</always_on>
+				<update_rate>20</update_rate>
+				<topic>/rod_contact</topic>
+			</sensor>
+		</link>
+		<!-- Joints -->
+		<joint name="shoulder_pan_joint" type="revolute">
+			<pose relative_to="shoulder_link" />
+			<parent>base_link</parent>
+			<child>shoulder_link</child>
+			<axis>
+				<xyz expressed_in="shoulder_link">0 0 1</xyz>
+				<limit>
+					<lower>-6.28318530718</lower>
+					<upper>6.28318530718</upper>
+					<effort>750.0</effort>
+					<velocity>0.70</velocity>
+				</limit>
+				<dynamics>
+					<damping>24.0</damping>
+				</dynamics>
+			</axis>
+		</joint>
+		<joint name="shoulder_lift_joint" type="revolute">
+			<pose relative_to="upper_arm_link" />
+			<parent>shoulder_link</parent>
+			<child>upper_arm_link</child>
+			<axis>
+				<xyz expressed_in="upper_arm_link">0 1 0</xyz>
+				<limit>
+					<lower>-6.28318530718</lower>
+					<upper>6.28318530718</upper>
+					<effort>2200.0</effort>
+					<velocity>1.25</velocity>
+				</limit>
+				<dynamics>
+					<damping>18.0</damping>
+				</dynamics>
+			</axis>
+		</joint>
+		<joint name="elbow_joint" type="revolute">
+			<pose relative_to="forearm_link" />
+			<parent>upper_arm_link</parent>
+			<child>forearm_link</child>
+			<axis>
+				<xyz expressed_in="forearm_link">0 1 0</xyz>
+				<limit>
+					<lower>-3.14159265359</lower>
+					<upper>3.14159265359</upper>
+					<effort>1200.0</effort>
+					<velocity>1.25</velocity>
+				</limit>
+				<dynamics>
+					<damping>15.0</damping>
+				</dynamics>
+			</axis>
+		</joint>
+		<joint name="wrist_1_joint" type="revolute">
+			<pose relative_to="wrist_1_link" />
+			<parent>forearm_link</parent>
+			<child>wrist_1_link</child>
+			<axis>
+				<xyz expressed_in="wrist_1_link">0 1 0</xyz>
+				<limit>
+					<lower>-6.28318530718</lower>
+					<upper>6.28318530718</upper>
+					<effort>700.0</effort>
+					<velocity>1.75</velocity>
+				</limit>
+				<dynamics>
+					<damping>4.0</damping>
+				</dynamics>
+			</axis>
+		</joint>
+		<joint name="wrist_2_joint" type="revolute">
+			<pose relative_to="wrist_2_link" />
+			<parent>wrist_1_link</parent>
+			<child>wrist_2_link</child>
+			<axis>
+				<xyz expressed_in="wrist_2_link">0 0 1</xyz>
+				<limit>
+					<lower>-6.28318530718</lower>
+					<upper>6.28318530718</upper>
+					<effort>700.0</effort>
+					<velocity>1.75</velocity>
+				</limit>
+				<dynamics>
+					<damping>4.0</damping>
+				</dynamics>
+			</axis>
+		</joint>
+		<joint name="wrist_3_joint" type="revolute">
+			<pose relative_to="wrist_3_link" />
+			<parent>wrist_2_link</parent>
+			<child>wrist_3_link</child>
+			<axis>
+				<xyz expressed_in="wrist_3_link">0 1 0</xyz>
+				<limit>
+					<lower>-6.28318530718</lower>
+					<upper>6.28318530718</upper>
+					<effort>700.0</effort>
+					<velocity>1.75</velocity>
+				</limit>
+				<dynamics>
+					<damping>3.0</damping>
+				</dynamics>
+			</axis>
+		</joint>
+		<joint name="ee_fixed_joint" type="fixed">
+			<pose relative_to="ee_link" />
+			<parent>wrist_3_link</parent>
+			<child>ee_link</child>
+		</joint>
+		<plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+			<joint_name>shoulder_pan_joint</joint_name>
+			<topic>/arm/joint/shoulder_pan_joint/cmd_pos</topic>
+			<initial_position>0.0</initial_position>
+			<p_gain>140.0</p_gain>
+			<i_gain>0.0</i_gain>
+			<d_gain>140.0</d_gain>
+			<i_max>0.0</i_max>
+			<i_min>0.0</i_min>
+			<cmd_max>7000.0</cmd_max>
+			<cmd_min>-7000.0</cmd_min>
+		</plugin>
+		<plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+			<joint_name>shoulder_lift_joint</joint_name>
+			<topic>/arm/joint/shoulder_lift_joint/cmd_pos</topic>
+			<initial_position>0.0</initial_position>
+			<p_gain>700.0</p_gain>
+			<i_gain>0.03</i_gain>
+			<d_gain>220.0</d_gain>
+			<i_max>1.0</i_max>
+			<i_min>-1.0</i_min>
+			<cmd_max>16000.0</cmd_max>
+			<cmd_min>-16000.0</cmd_min>
+		</plugin>
+		<plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+			<joint_name>elbow_joint</joint_name>
+			<topic>/arm/joint/elbow_joint/cmd_pos</topic>
+			<initial_position>0.0</initial_position>
+			<p_gain>500.0</p_gain>
+			<i_gain>0.02</i_gain>
+			<d_gain>180.0</d_gain>
+			<i_max>0.8</i_max>
+			<i_min>-0.8</i_min>
+			<cmd_max>12000.0</cmd_max>
+			<cmd_min>-12000.0</cmd_min>
+		</plugin>
+		<plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+			<joint_name>wrist_1_joint</joint_name>
+			<topic>/arm/joint/wrist_1_joint/cmd_pos</topic>
+			<initial_position>0.0</initial_position>
+			<p_gain>70.0</p_gain>
+			<i_gain>0.0</i_gain>
+			<d_gain>20.0</d_gain>
+			<i_max>0.0</i_max>
+			<i_min>0.0</i_min>
+			<cmd_max>1800.0</cmd_max>
+			<cmd_min>-1800.0</cmd_min>
+		</plugin>
+		<plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+			<joint_name>wrist_2_joint</joint_name>
+			<topic>/arm/joint/wrist_2_joint/cmd_pos</topic>
+			<initial_position>0.0</initial_position>
+			<p_gain>65.0</p_gain>
+			<i_gain>0.0</i_gain>
+			<d_gain>20.0</d_gain>
+			<i_max>0.0</i_max>
+			<i_min>0.0</i_min>
+			<cmd_max>1800.0</cmd_max>
+			<cmd_min>-1800.0</cmd_min>
+		</plugin>
+		<plugin filename="gz-sim-joint-position-controller-system" name="gz::sim::systems::JointPositionController">
+			<joint_name>wrist_3_joint</joint_name>
+			<topic>/arm/joint/wrist_3_joint/cmd_pos</topic>
+			<initial_position>0.0</initial_position>
+			<p_gain>55.0</p_gain>
+			<i_gain>0.0</i_gain>
+			<d_gain>18.0</d_gain>
+			<i_max>0.0</i_max>
+			<i_min>0.0</i_min>
+			<cmd_max>1400.0</cmd_max>
+			<cmd_min>-1400.0</cmd_min>
+		</plugin>
+		<plugin filename="gz-sim-joint-state-publisher-system" name="gz::sim::systems::JointStatePublisher">
+			<topic>/arm/joint_state</topic>
+			<joint_name>shoulder_pan_joint</joint_name>
+			<joint_name>shoulder_lift_joint</joint_name>
+			<joint_name>elbow_joint</joint_name>
+			<joint_name>wrist_1_joint</joint_name>
+			<joint_name>wrist_2_joint</joint_name>
+			<joint_name>wrist_3_joint</joint_name>
+		</plugin>
+	</model>
+</sdf>

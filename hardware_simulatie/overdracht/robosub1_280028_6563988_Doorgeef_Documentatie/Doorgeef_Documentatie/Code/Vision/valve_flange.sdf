@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<sdf version="1.6">
+  <model name="stl_visual">
+    <static>false</static>
+    <link name="link">
+      <inertial>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.001</ixx>
+          <iyy>0.001</iyy>
+          <izz>0.001</izz>
+        </inertia>
+      </inertial>
+      <visual name="mesh_visual">
+        <geometry>
+          <mesh>
+            <uri>file:///workspace/gazebo/SubseaValve.stl</uri>
+            <scale>0.01 0.01 0.01</scale>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient>0.8863 0.3255 0.0118 1</ambient>
+          <diffuse>0.8863 0.3255 0.0118 1</diffuse>
+          <emissive>0 0 0 1</emissive>
+          <specular>0.05 0.05 0.05 1</specular>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

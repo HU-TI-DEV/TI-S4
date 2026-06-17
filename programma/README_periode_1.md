@@ -89,15 +89,15 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | (non) functional requirements (**TM**) Voorbereiding loopbaankeuzes (**LB**)   |
 | di  |[Git branches](../infrastructuur/testing_en_tooling/Git_branches.md) (**NG**)|
-| wo  | [Intro deepdive](../vermogens/onderzoek/README.md)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)  |
+| wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**)  |
 | do  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |
 
 ### Onderwijsweek A5 (28-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |**Einde sprint 1**<br> Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**TM**) <br> **Start sprint 2**  |
-| di  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**)  |
-| wo  | Vision met C++ (**JH**) |
+| di  | Vision met C++ (**JH**) |
+| wo  | [Intro deepdive](../vermogens/onderzoek/README.md)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)  |
 | do  | Review individual deliverables (**NG**)<br>**1e Peilmoment**   |
 
 ### Onderwijsweek A6 (05-10-2026)

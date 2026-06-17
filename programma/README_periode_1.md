@@ -134,14 +134,14 @@ Herfstvakantie
 | ma  | **Einde sprint 3**<br> Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) <br> **Start sprint 4** |
 | di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**JH**) |
 | wo  | Debat vorm <br>Twee of meer code voorbeelden uitdelen. Studenten in groepjes indelen op aspecten (bv performance, overdraagbaarheid, etc) en laat ze argumenten geven pro of contra.  (**JH**) |
-| do  | **2e Peilmoment**<br> Feedbacksessie onderzoek  (**BB**)   |
+| do  | **2e Peilmoment**<br>  [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**NG**) |
 
 ### Onderwijsweek B1 (09-11-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |Teamcoach sessie (**TM**)    |
 | di  | Microcontroller les (**JH**) |
-| wo  | [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**NG**) |
+| wo  |  Feedbacksessie onderzoek  (**BB**) |
 | do  |  Quantum computing (**BB**)  |
 
 

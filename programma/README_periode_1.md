@@ -71,8 +71,8 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  | Kwaliteitenspel & Teamcontract (**TM**)|
 | di  | [Recap C++ Deel I](../software/cpp/recap_cpp_1.md)  (**JH**)  |
-| wo  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) <br>[Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)|
-| do  | [Recap C++ Deel II](../software/cpp/recap_cpp_2.md)  (**NG**)  |
+| wo  | [Recap C++ Deel II](../software/cpp/recap_cpp_2.md)  (**NG**)  |
+| do  |[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md) <br>[Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)|
 
 ### Onderwijsweek A3 (14-09-2026)
 | Dag | Project & Kennissessie |

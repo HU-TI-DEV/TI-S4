@@ -18,7 +18,7 @@
 # What's in this folder
 Inside this folder you will find a test version of the Dijkstra code that can be run directly via the terminal. This test script was made to experiment with the pathfinding logic before fully embedding the finalized code into the main robot system.
 
-This code was later implemented into the main robot system which you can find [here](https://github.com/2025-TICT-TV2SE4-24-3-V/waterbenders-futurised-2-project/blob/main/workspace/models/ros/packages/path_planning/path_planning/main.py)
+This code was later implemented into the main robot system which you can find [here](../../models/ros/packages/path_planning/path_planning/main.py)
 
 # Reasoning
 At the start of the project, the Breath First Search Algorithm was implemented. Eventually, this was upgraded to the Dijkstra Algorithm so the robot could drive more smoothly and efficiently.
@@ -112,10 +112,10 @@ With **path.append(start)** and **path.reverse()** add the starting point as the
 Finally, return the route with **return path**.
 
 # Setup
-For the full setup of the code you can navigate to the [Path-finding README](https://github.com/2025-TICT-TV2SE4-24-3-V/waterbenders-futurised-2-project/blob/main/workspace/prototypes/path-finding-demo/README.md) for more details.
+For the full setup of the code you can navigate to the [Path-finding README](../path-finding-demo/README.md) for more details.
 
 # Advice
-For the advice of the code navigate to the [Path-finding README](https://github.com/2025-TICT-TV2SE4-24-3-V/waterbenders-futurised-2-project/blob/main/workspace/prototypes/path-finding-demo/README.md) for more details. This also includes the advice for Dijkstra
+For the advice of the code navigate to the [Path-finding README](../path-finding-demo/README.md) for more details. This also includes the advice for Dijkstra
 # Source
 D, W. (2018, juli 24th). How do you program diagonal movement? Game Development Stack Exchange. https://gamedev.stackexchange.com/questions/162045/how-do-you-program-diagonal-movement
 

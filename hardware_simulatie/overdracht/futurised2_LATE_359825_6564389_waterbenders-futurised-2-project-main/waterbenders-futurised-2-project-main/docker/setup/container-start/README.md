@@ -12,4 +12,4 @@ Run the file inside the repository:
 ./<file-name>.ps1
 ```
 
-If you want to run the .ps1 file with a container using GPU instead if CPU, [see here](../using-cuda/ReadME.md). There are some examples in this folder saved as `.txt` file, because `.ps1` files are in the `.gitignore`.
+If you want to run the .ps1 file with a container using GPU instead if CPU, [see here](../using-cuda/README.md). There are some examples in this folder saved as `.txt` file, because `.ps1` files are in the `.gitignore`.

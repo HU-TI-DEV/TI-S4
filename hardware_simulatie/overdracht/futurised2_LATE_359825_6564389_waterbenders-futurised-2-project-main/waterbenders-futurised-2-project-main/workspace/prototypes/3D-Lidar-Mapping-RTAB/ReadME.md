@@ -22,7 +22,7 @@
 
 
 # Context
-This folder was created for prototyping 3D LiDAR mapping using RTAB-Map inside a ROS2 + Gazebo environment. It builds upon the sensor and environment setup from [lidarSensorOmgeving](../lidarSensorOmgeving/). The goal was to find a mapping algorithm that works with only a 3D LiDAR — no IMU and no RGB-D camera — to keep the simulation representative of the real FLIP hardware. After evaluating several options (see [Reasoning](#reasoning)) and consulting Bart Bozon who suggested ICP (iterative Closest Point), RTAB-Map with ICP odometry was selected as the approach that best matched these constraints. The first version which can be seen [here](./liveUpdatingRTABmap.mp4) could only show a live mapped environment as the robot moved and could not retain data points so a map could be generated. After trying [3d-cartographer](../3d-cartographer/) and [3D-Octomap](../3D-Octomap/) and booking no success the choice was made to continue with the live updating RTAB map and find a solution to build upon the scanned and mapped datapoints and save it so that Futurised could load this map in to interact with it for further analysis if necessary. That was relatively easily achieved by using ICP as a solution for providing odometry without using an IMU or RGB-D camera. Check this [video](./rtab3D.mp4) to see it yourself!
+This folder was created for prototyping 3D LiDAR mapping using RTAB-Map inside a ROS2 + Gazebo environment. It builds upon the sensor and environment setup from [lidarSensorOmgeving](../LiDAR-sensor-environment/). The goal was to find a mapping algorithm that works with only a 3D LiDAR — no IMU and no RGB-D camera — to keep the simulation representative of the real FLIP hardware. After evaluating several options (see [Reasoning](#reasoning)) and consulting Bart Bozon who suggested ICP (iterative Closest Point), RTAB-Map with ICP odometry was selected as the approach that best matched these constraints. The first version which can be seen [here](./liveUpdatingRTABmap.mp4) could only show a live mapped environment as the robot moved and could not retain data points so a map could be generated. After trying [3d-cartographer](../3d-cartographer/) and [3D-Octomap](../3D-Octomap/) and booking no success the choice was made to continue with the live updating RTAB map and find a solution to build upon the scanned and mapped datapoints and save it so that Futurised could load this map in to interact with it for further analysis if necessary. That was relatively easily achieved by using ICP as a solution for providing odometry without using an IMU or RGB-D camera. Check this [video](./rtab3D.mp4) to see it yourself!
 
 # Structure
 ```md
@@ -66,7 +66,7 @@ This folder was created for prototyping 3D LiDAR mapping using RTAB-Map inside a
 - **rosBridge.yaml:** bridges Gazebo topics to ROS2 topics (including PointCloud2)
 - **rtab3D.mp4:** recording of the successful 3D mapping output in RViz
 - **rtabmap_gazebo.launch.py:** main launch file for the bridge, ICP odometry, RTAB-Map, and RViz
-- **rtabmap_mapping.rviz:** RViz configuration for visualizing the 3D map which is automatically launched by rtabmap_gazebo.launch.py or viewMap.launch.py
+- **rtabmap_mapping.rviz:** RViz configuration for visualizing the 3D map which is automatically launched by rtabmap_gazebo.launch.py or viewMap.launch.py. This was aquired by exporting the rviz config after launching and setting up rviz.
 - **viewMap.launch.py:** copy of the launch file for viewing a saved `.db` without overwriting it
 
 

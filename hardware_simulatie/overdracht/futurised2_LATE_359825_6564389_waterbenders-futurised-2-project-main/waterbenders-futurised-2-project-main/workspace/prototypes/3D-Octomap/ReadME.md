@@ -21,7 +21,7 @@
 
 
 # Context
-This folder contains the first prototype for 3D mapping of the simulated environment, built on top of the existing LiDAR sensor setup from [lidarSensorOmgeving](../lidarSensorOmgeving/). After establishing a working LiDAR integration in Gazebo, the next step was to produce a 3D occupancy map. OctoMap was chosen as the starting point for this.
+This folder contains the first prototype for 3D mapping of the simulated environment, built on top of the existing LiDAR sensor setup from [lidarSensorOmgeving](../LiDAR-sensor-environment/). After establishing a working LiDAR integration in Gazebo, the next step was to produce a 3D occupancy map. OctoMap was chosen as the starting point for this.
 
 # Structure
 ```md

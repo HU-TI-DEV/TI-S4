@@ -10,6 +10,10 @@ Futurised
 - [Table of Contents](#table-of-contents)
 - [Project authors](#project-authors)
 - [Connections](#connections)
+- [Repository Structure](#repository-structure)
+- [Important Folders](#important-folders)
+  - [models folder](#models-folder)
+  - [prototypes folder](#prototypes-folder)
 - [Introduction](#introduction)
 - [Assignment](#assignment)
   - [Main implementations](#main-implementations)
@@ -18,7 +22,7 @@ Futurised
 - [Futurised](#futurised)
 - [Instructions](#instructions)
   - [Step-by-step](#step-by-step)
-  - [Other useful links](#other-useful-links)
+- [Conclusion and Recommendations](#conclusion-and-recommendations)
 
 # Project authors
 - **Django Manders:** Software Developer <br>
@@ -39,6 +43,94 @@ All of the authors have worked on the structure and documentation of this Reposi
 - Juliette Kraal
 - Bart Bozon
 - Hasan Kurt
+
+
+
+---
+
+# Repository Structure
+
+Below is an overview of the folder structure of this repository.
+
+> Each prototype in [`/workspace/prototypes/`](/workspace/prototypes/) has its own detailed README with implementation details, usage instructions, advice for future developers, and notes on who contributed to it.
+
+```
+waterbenders-futurised-2-project/
+│
+├── docker/                                        # Everything needed to set up the Docker environment
+│   └── setup/
+│       ├── container-creation/                    # Instructions for creating the Docker container (Windows & Ubuntu)
+│       ├── container-start/                       # Instructions for starting the container
+│       ├── container-venv/                        # Instructions for setting up the Python virtual environment
+│       └── using-cuda/                            # Optional: instructions for enabling CUDA GPU support
+│
+├── docs/                                          # Project documentation
+│   ├── flip/                                      # Specifications and technical details of the FLIP robot
+│   ├── images/                                    # Some images used throughout the documentation
+│   ├── onderzoek/                                 # Research documents made and referred to in some README's
+│   │   ├── 3D-mapping/                            # Research on 3D mapping techniques
+│   │   ├── object-herkenning/                     # Research on object recognition
+│   │   └── ROS2/                                  # Research on ROS2
+│   ├── uml/                                       # UML diagrams
+│   │   ├── activity-diagrammen/                   # Activity diagrams
+│   │   └── use-case-diagram/                      # Use-case diagrams
+│   └── Ontwikkeldocument-futurised-2.md           # Development document
+│
+├── img/                                           # Image used in the root README
+│
+├── setup/                                         # Setup guides for the simulation environment
+│   ├── ROS2/                                      # Installing ROS2
+│   ├── colcon/                                    # Building Colcon packages
+│   ├── running-scripts/                           # Running individual Python scripts
+│   └── RViz-visualisation/                        # Visualizing the simulation in RViz
+│
+└── workspace/                                     # Main working directory for the simulation
+    ├── models/                                    # Gazebo/ROS simulation models and (launch)scripts
+    │   ├── gazebo/                                # Gazebo world and model files
+    │   ├── ros/                                   # ROS2 packages, nodes, bridges, etc.
+    │   └── scripts/                               # Python (launch) scripts used in the simulation
+    │
+    └── prototypes/                                # All prototypes built during the project. Each folder has its own README with details, advice, implementation notes, and contributors.
+        │
+        ├── 2d-cartographer-demo/                  # 2D mapping prototype using Cartographer, used as a basis for implementing 3d-cartographer mapping
+        ├── 3d-cartographer/                       # 3D mapping using Cartographer, explored as an alternative approach
+        .
+        .
+        .
+```
+---
+
+
+# Important Folders
+The most important folders besides the [setup folder](/setup/) and the [docker folder](/docker/) are the folders where our main implementation and prototypes reside. These are:
+
+## [models folder](/workspace/models/) 
+This is the folder containing the final, integrated simulation environment for the FLIP robot. It combines the Gazebo world (environment layout, obstacles, the FLIP robot model), custom ROS2 packages (sensor communication and robot behavior), Python scripts (AI-based processing such as object, human, and fire detection), Gazebo plugins (bridging simulated sensors to ROS2 topics), and saved mapping databases. The full simulation is launched via [simulation.launch.py](./workspace/models/simulation.launch.py).
+
+## [prototypes folder](/workspace/prototypes/)
+This is where individual features were built and tested in isolation before integration into the main simulation. Each subfolder is a standalone prototype with its own README documenting the reasoning behind it, implementation details, usage instructions, advice for future developers, and contributor information. Prototypes that proved successful were later integrated into the models folder.
+
+Below is a table for a clear overview of who helped with which prototype, if that prototype was implemented and short notes on what that prototype does.
+| Prototype | Contributor | Implemented | Notes|
+| --------- | ----------- | ----------- | ---- |
+| [2d-cartographer-demo](./workspace/prototypes/2d-cartographer-demo/) | Django Manders | No | 2D mapping using Cartographer, used as a basis for implementing 3d-cartographer mapping |
+| [3d-cartographer](./workspace/prototypes/3d-cartographer/) | Radeiaan Nandoe | No | 3D mapping using Cartographer, explored as an alternative mapping approach|
+| [3D-Lidar-Mapping-RTAB](./workspace/prototypes/3D-Lidar-Mapping-RTAB/) | Radeiaan Nandoe | **Yes** | 3D mapping using RTAB-Map — the main LiDAR 3D-mapping implementation |
+| [3D-Octomap](./workspace/prototypes/3D-Octomap/) | Radeiaan Nandoe | No | 3D occupancy mapping using OctoMap, explored as an alternative mapping approach |
+| [airpressure-sensor](./workspace/prototypes/airpressure-sensor/) | Freya van den Berg | **Yes** | Air pressure sensor integration for detecting different air pressures in the environment |
+| [altimeter](./workspace/prototypes/altimeter/) | Sarah Gbagi | No | Altimeter sensor integration for altitude measurement |
+| [camera](./workspace/prototypes/camera/) | Django Manders | **Yes** | Ultra-wide camera implementation for a live-feed of the environment |
+| [dijkstra-algorithm](./workspace/prototypes/dijkstra-algorithm/) | Sarah Gbagi | **Yes** | Dijkstra pathfinding algorithm as a back-up algorithm for autonomous navigation |
+| [environment-with-obstacles](./workspace/prototypes/environment-with-obstacles/) | Radeiaan Nandoe, Django Manders | **Yes** | Test simulation environment with obstacles, used for testing other prototypes |
+| [frontier-clusters-demo](./workspace/prototypes/frontier-clusters-demo/) | Django Manders | No | Frontier-based exploration clustering for autonomous pathfinding and environment exploration |
+| [LiDAR-sensor-environment](./workspace/prototypes/LiDAR-sensor-environment/) | Radeiaan Nandoe | **Yes** | LiDAR sensor environment setup used for testing and developing LiDAR integration |
+| [logical-audio-sensor](./workspace/prototypes/logical-audio-sensor/) | Sarah Gbagi | **Yes** | Logical audio sensor integration for receiving and sending audio data |
+| [object-detection-opencv](./workspace/prototypes/object-detection-opencv/) | Maud Waasdorp, Radeiaan Nandoe | **Yes** | Object detection using OpenCV |
+| [object-human-detection](./workspace/prototypes/object-human-detection/) | Maud Waasdorp, Radeiaan Nandoe | **Yes** | Combined object & human detection implementation |
+| [path-finding-demo](./workspace/prototypes/path-finding-demo/) | Django Manders | **Yes** | Autonomous pathfinding demo, used as a basis for the final pathfinding implementation |
+| [thermal-camera](./workspace/prototypes/thermal-camera/) | Maud Waasdorp | **Yes** | Thermal camera implementation for visualizing temperatures inside an environment |
+| [fire-detection](./workspace/prototypes/fire-detection/) | Maud Waasdorp | Yes | Fire detection implementation using RGB and thermal camera to detect fires. |
+| [YOLO-human-detection](./workspace/prototypes/YOLO-human-detection/) | Maud Waasdorp, Radeiaan Nandoe | **Yes** | Human detection using the YOLO model |
 
 # Introduction
 Welcome to the Hogeschool Utrecht project for the TI-students, Team Waterbenders. During this project the team developed, researched, tested, implemented and created a Digital Twin for the client, Futurised. The Digital Twin is based on their real-life robot FLIP, FLIP is a robot that can navigate and scan an environment and even extinguish fires. 
@@ -94,26 +186,24 @@ Since the project is quite large and the setup isn't always straighforward, belo
 
 ## Step-by-step
 
-- **1.** [Docker setup](/docker): Setup the Docker container, which the environment relies on to work.
-  - **1.1.** [Container creation](/docker/setup/container-creation/README.md)
-    - [Windows](/docker/setup/container-creation/Windows/)
-    - [Ubuntu](/docker/setup/container-creation/Ubuntu/)
+- **1.** [Docker setup](/docker/README.md): Setup the Docker container, which the environment relies on to work.
+  - **1.1.** Container creation
+    - Windows:
+      - [Using CMD](/docker/setup/container-creation/Windows/usingCMD.md)
+      - [Using PowerShell](/docker/setup/container-creation/Windows/usingPowershell.md)
+    - Ubuntu:
+      - [Using dedicated graphics](/docker/setup/container-creation/Ubuntu/forDedicatedGraphics.md)
+      - [Using integrated graphics](/docker/setup/container-creation/Ubuntu/forIntegratedGraphics.md)
   - **1.2.** [Starting the container](/docker/setup/container-start/README.md)
   - **1.3.** [Setting up Python venv](/docker/setup/container-venv/README.md)
   - **1.4. (optional)** [Using CUDA](/docker/setup/using-cuda/README.md)
-- **2.** [Simulation setup](/setup): Install different software like ROS2, Colcon, RViz.
+- **2.** [Simulation setup](/setup/README.md): Install different software like ROS2, Colcon, RViz.
   - **2.1.** [Install required software](/setup/ROS2/README.md)
   - **2.2.** [Build Colcon packages](/setup/colcon/README.md)
-- **3.** [Running the simulation](/workspace): Guide on how to run the full simulation.
+- **3.** [Running the simulation](/workspace/README.md): Guide on how to run the full simulation.
   - **3.1.** [Visualization with RViz](/setup/RViz-visualisation/README.md)
   - **3.2.** [Running Python scripts](/setup/running-scripts/README.md)
   - **3.3.** [Running the full simulation](/workspace/models/README.md#to-run-the-complete-simulation)
-
-
-## Other useful links
-
-- [Documentation](/docs): Files like the specifications of FLIP, research documents, development documents and proptypes. 
-- [Protopytes](/workspace/prototypes/): A collection of prototypes that were used in the development of the **Digital Twin** (very useful for future students that might build on this projects code)
 
 # Conclusion and Recommendations
 

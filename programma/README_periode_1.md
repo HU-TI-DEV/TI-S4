@@ -126,7 +126,7 @@ Herfstvakantie
 | ma  |  Team coach sessies met elk team (**TM**) |
 | di  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**JH**)|
 | wo  | [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**) |
-| do  | Feedbacksessie onderzoek  (**BB**)   |
+| do  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**) |
 
 ### Onderwijsweek A10 (02-11-2026)
 | Dag | Project & Kennissessie |
@@ -134,7 +134,7 @@ Herfstvakantie
 | ma  | **Einde sprint 3**<br> Product demo per teamcoach (10 min) aan klas van teamcoach (**TM**) <br> **Start sprint 4** |
 | di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**JH**) |
 | wo  | Debat vorm <br>Twee of meer code voorbeelden uitdelen. Studenten in groepjes indelen op aspecten (bv performance, overdraagbaarheid, etc) en laat ze argumenten geven pro of contra.  (**JH**) |
-| do  | **2e Peilmoment**<br>[ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**) |
+| do  | **2e Peilmoment**<br> Feedbacksessie onderzoek  (**BB**)   |
 
 ### Onderwijsweek B1 (09-11-2026)
 | Dag | Project & Kennissessie |

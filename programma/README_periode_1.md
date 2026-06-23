@@ -103,7 +103,7 @@ De SLB'ers zijn:
 ### Onderwijsweek A6 (05-10-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Gesprek met teamcoach **TM**|
+| ma  | Project werk dag zonder begeleiding|
 | di  |[Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)|
 | wo | Eigen review process per project groep opstellen. <br>- deels geautmatiseerde review pipelines op stellen. <br> - deels menselijke (pull requests).  (**JH**) |
 | do  |  [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
@@ -174,7 +174,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | Teamcoach (**TM**) |
-| di  | Deepdive (**JH**) & aftekenen opdrachten|
+| di  | projectwerkdag zonder begeleiding|
 | wo  | Deepdive (**JH**) & aftekenen opdrachten |
 | do  | Aftekenen opdrachten (**NG**)|
 

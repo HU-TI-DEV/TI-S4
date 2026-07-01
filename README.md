@@ -48,12 +48,6 @@ In dit semester van Technische Informatica is het project situatie gericht.
 ## Leeruitkomsten
 Zie canvas voor de leeruitkomsten. 
 
-## Werkwijze
-
-[Werkwijze](./organisatorisch/README.md)
-
-  <!-- - [Leerdoelenkaart S4](./leerdoelen/interactieve-leerdoelen-kaart/LeerdoelenKaart_S4.svg)-->
-
 ## Programma
 
 [Programma](./programma/README.md)

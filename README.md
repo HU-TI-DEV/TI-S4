@@ -46,28 +46,12 @@ De student realiseert en test het systeem volgens een zelf op te stellen plannin
 In dit semester van Technische Informatica is het project situatie gericht.
 
 ## Leeruitkomsten
-
-In semester 4 van de richting Technische Informatica zijn de volgende leeruitkomsten gedefineerd:
-
-| Nummer | Leeruitkomst | Competentie |
-| ------ | ------------ | ----------- |
-| S4.1   | De student brengt een gegeven praktijkvraagstuk in kaart en verzamelt vanuit een nieuwsgierige en kritische houding op gestructureerde en grondige wijze met behulp van een passende (hbo-ict) methode relevante informatie die nodig is om onderbouwde keuzes te maken voor de oplossing van een afgebakend praktijkvraagstuk, analyseert de verkregen informatie en trekt op basis daarvan conclusies met betrekking tot het vraagstuk, rekening houdend met maatschappelijke standaarden. | Onderzoekend vermogen                           |
-| S4.2   | De student stelt zelfstandig een planning op voor de uitvoering van meerdere gegeven taken voor zichzelf in relatie tot een team, indien van toepassing met het oog op een toekomstgerichte inbedding van de oplossing voor een praktijkprobleem. De student houdt hierbij rekening met volgordelijkheid, de planning van teamgenoten, middelen, tijd, ethische kwesties, duurzaamheid en potentiële risico’s en past de planning indien nodig zelfstandig en onderbouwd aan naar aanleiding van zowel kleine als grote veranderingen binnen de context van de opdracht en verantwoordt deze wijzigingen naar de opdrachtgever en zo nodig naar andere betrokkenen. | Organiserend vermogen|
-| S4.3   | De student werkt onder minimale begeleiding passend binnen de context samen in een team, pakt in het team proactief en doelgericht de eigen rol op en deelt eigen activiteiten mondeling en/of schriftelijk met betrokkenen. Daarbij  neemt de student initiatief voor gesprekken met betrokkenen en spreekt en schrijft begrijpelijk, correct en passend bij de context met de doelgroep. | Interactief vermogen |
-| S4.4   | Student signaleert vroegtijdig persoonlijke kansen en/of problemen die zich op korte termijn zullen voordoen en speelt hier adequaat op in. Student reflecteert periodiek en systematisch op eigen handelen en eigen waarden en normen in relatie tot andermans handelen, waarden en normen en past dit gedrag zo nodig aan. | Zelflerend vermogen |
-| S4.5   | Student analyseert de vereisten en doelstellingen van de opdrachtgever betreffende een 'Digital Twin' van een bestaand embedded systeem. Op basis hiervan en rekening houdend met de mogelijke gebruikers deduceert de student requirements volgens een voorgeschreven methode. Deze requirements dienen na validatie door de opdrachtgever als basis voor het ontwerp. | Analyseren |
-| S4.6   | Student ontwerpt gebaseerd op de requirements en volgens voorgeschreven methoden een 'Digital Twin', inclusief grafische representatie, van een bestaand embedded systeem. Dit ontwerp omvat ook een ontwerp voor teststrategieën. | Ontwerpen 
-| S4.7   | Student adviseert de opdrachtgever, na analyse van de vereisten en doelstellingen, over de inzet van een digital twin. Het advies is helder onderbouwd en gepresenteerd, zodat het begrijpelijk is voor alle stakeholders/betrokkenen. Het voorgestelde ontwerp is goed gedocumenteerd en het advies volgt een voorgeschreven methode, zodat de implementatie efficiënt kan worden voortgezet. | Adviseren
-| S4.8   | Student realiseert vanuit het ontwerp een 'Digital Twin' van een bestaand embedded systeem, inclusief grafische representatie. Het zwaartepunt ligt hierbij op het toevoegen van "intelligentie" aan het systeem. Dit kan zijn het implementeren van algoritmes zoals "shortest path", beeldherkenning, etc.  Hierbij wordt gewerkt volgens een voorgeschreven methode waarin testen centraal staat, ten behoeve van het uitvoeren van tests op verschillende ontwikkelniveaus. Testresultaten, omstandigheden en afhankelijkheden worden helder gedocumenteerd, omwille van het reproduceren van de testresultaten.| Realiseren |
-| S4.9   | Student zet een professionele ontwikkelomgeving op voor desktop development. Daarbij houdt hij rekening met de samenwerking tussen verschillende programmeertalen. De desktop debugging wordt op een gestructureerde manier uitgevoerd. De tests worden uitgevoerd volgens een vooraf beschreven testplan en moeten desgewenst op een later moment reproduceerbaar zijn. De student werkt volgens een voorgeschreven methodiek en maakt gebruik van geschikte tooling software debugging. | Beheren |
-
+Zie canvas voor de leeruitkomsten. 
 
 ## Werkwijze
 
 [Werkwijze](./organisatorisch/README.md)
 
-Shortcuts naar onderliggende links:
-- [Portfolio Items en Feedback maken](./organisatorisch/portfolio_items_en_feedback.md)
   <!-- - [Leerdoelenkaart S4](./leerdoelen/interactieve-leerdoelen-kaart/LeerdoelenKaart_S4.svg)-->
 
 ## Programma

@@ -140,7 +140,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |Teamcoach sessie (**TM**)    |
-| di  | Microcontroller les (**JH**) |
+| di  | <!-Microcontroller les (**JH**)-> |
 | wo  |  Feedbacksessie onderzoek  (**BB**) |
 | do  |  Quantum computing (**BB**)  |
 

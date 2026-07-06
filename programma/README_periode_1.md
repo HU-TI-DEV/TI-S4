@@ -39,10 +39,10 @@ De contacturen zijn (subject to change):
 
 |dag|van|tot| lokaal |
 |---|---|---| --- |
-|ma|09:00|12:00| Zie rooster |
+|ma|??:??|??:??| Zie rooster |
 |di|13:00|17:00| Zie rooster | 
 |wo|13:00|17:00| Zie rooster |
-|do|13:00|17:00| Zie rooster |
+|do|09:00|12:00| Zie rooster |
 
 De docenten zijn:
 - (**BB**) Bart Bozon

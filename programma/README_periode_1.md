@@ -113,8 +113,8 @@ De SLB'ers zijn:
 | --- |  --- |
 | ma  |**Einde sprint 2**<br> Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**TM**)<br> **Start sprint 3**|
 | di  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md) (**NG**) |
-| wo  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
-| do  |  [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md) (**NG**) |
+| wo  |  [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md) (**NG**) |
+| do  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
 
 ### Onderwijsweek A8 (19-10-2026)
 Herfstvakantie

@@ -149,8 +149,8 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 4** (**TM**)<br>**Start sprint**|
-| di  | Halfgeleider fabricage (**BB**) |
-| wo  | <br>Deepdive  (**JH**) |
+| di  | <br>Deepdive  (**JH**) |
+| wo  | Halfgeleider fabricage (**BB**) |
 | do  | aftekenen opdrachten (**NG**)|
 
 ### Onderwijsweek B3 (23-11-2026)

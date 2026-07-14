@@ -140,7 +140,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |Teamcoach sessie (**TM**)    |
-| di  | <!-- Microcontroller les  --> (**JH**) |
+| di  | <!-- Microcontroller les  --> Werken aan project (**JH**) |
 | wo  |  Feedbacksessie onderzoek  (**BB**) |
 | do  |  Quantum computing (**BB**)  |
 
@@ -157,7 +157,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  Teamcoach sessie met team (**TM**) | 
-| di  |  <!-- Microcontroller les II --> (**JH**) |
+| di  |  <!-- Microcontroller les II --> Werken aan project  (**JH**) |
 | wo  | Deepdive (**JH**) |
 | do  | aftekenen opdrachten (**NG**) |
 
@@ -166,7 +166,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TM**)<br>**Start sprint**   |
-| di  |  Microcontroller les III (**JH**) |
+| di  | <!-- Microcontroller les III --> Werken aan project  (**JH**) |
 | wo  | Zelfstandig werken aan project (**JH**)  & aftekenen opdrachten                                |
 | do  |  **3e Peilmoment**, Aftekenen opdrachten (**NG**) |
 

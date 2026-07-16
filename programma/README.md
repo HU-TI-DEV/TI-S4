@@ -98,7 +98,7 @@ De SLB'ers zijn:
 | ma  |**Einde sprint 1**<br> Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HS**) <br> **Start sprint 2**  |
 | di  | Vision met C++ (**JH**) |
 | wo  | [Intro deepdive](../vermogens/onderzoek/README.md)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)  |
-| do  | Review individual deliverables (**NG**)<br>**1e Peilmoment**   |
+| do  | Review individual deliverables (**NG**)  |
 
 ### Onderwijsweek A6 (05-10-2026)
 | Dag | Project & Kennissessie |
@@ -106,7 +106,7 @@ De SLB'ers zijn:
 | ma  | Project werk dag zonder begeleiding|
 | di  |[Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**)|
 | wo | Eigen review process per project groep opstellen. <br>- deels geautmatiseerde review pipelines op stellen. <br> - deels menselijke (pull requests).  (**JH**) |
-| do  |  [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
+| do  |  [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) <br>**1e Peilmoment**  |
 
 ### Onderwijsweek A7 (12-10-2026)
 | Dag | Project & Kennissessie |

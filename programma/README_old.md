@@ -1,0 +1,250 @@
+![logo](https://www.hu.nl/-/media/hu/afbeeldingen/algemeen/hu-logo.ashx) [](logo-id)
+
+# Semester 4 van Technische Informatica[](title-id) <!-- omit in toc -->
+
+### Inhoud[](toc-id) <!-- omit in toc -->
+
+- [Een introductie](#een-introductie)
+  - [Organisatie](#organisatie)
+- [Programma](#programma)
+  - [Onderwijsweek C2 (09-02-2026)](#onderwijsweek-c2-09-02-2026)
+  - [Onderwijsweek C3 (16-02-2026)](#onderwijsweek-c3-16-02-2026)
+  - [Onderwijsweek C4 (23-02-2026)](#onderwijsweek-c4-23-02-2026)
+  - [Onderwijsweek C5 (02-03-2026)](#onderwijsweek-c5-02-03-2026)
+  - [Onderwijsweek C6 (09-03-2026)](#onderwijsweek-c6-09-03-2026)
+  - [Onderwijsweek C7 (16-03-2026)](#onderwijsweek-c7-16-03-2026)
+  - [Onderwijsweek C8 (23-03-2026)](#onderwijsweek-c8-23-03-2026)
+  - [Onderwijsweek C9 (30-03-2026)](#onderwijsweek-c9-30-03-2026)
+  - [Onderwijsweek C10 (06-04-2026)](#onderwijsweek-c10-06-04-2026)
+  - [Onderwijsweek D1 (13-04-2026)](#onderwijsweek-d1-13-04-2026)
+  - [Onderwijsweek D2 (20-04-2026)](#onderwijsweek-d2-20-04-2026)
+  - [Onderwijsweek D3 (27-04-2026)](#onderwijsweek-d3-27-04-2026)
+  - [Onderwijsweek D4 (04-05-2026)](#onderwijsweek-d4-04-05-2026)
+  - [Onderwijsweek D5 (11-05-2026)](#onderwijsweek-d5-11-05-2026)
+  - [Onderwijsweek D6 (18-05-2026)](#onderwijsweek-d6-18-05-2026)
+  - [Onderwijsweek D7 (25-05-2026)](#onderwijsweek-d7-25-05-2026)
+  - [Onderwijsweek D8 (01-06-2026)](#onderwijsweek-d8-01-06-2026)
+  - [Onderwijsweek D9 (08-06-2026)](#onderwijsweek-d9-08-06-2026)
+  - [Onderwijsweek D10 (15-06-2026)](#onderwijsweek-d10-15-06-2026)
+  - [Onderwijsweek D11 (22-06-2026)](#onderwijsweek-d11-22-06-2026)
+  - [Onderwijsweek E1/D12 (29-06-2026)](#onderwijsweek-e1d12-29-06-2026)
+  - [Onderwijsweek E2 (06-07-2026)](#onderwijsweek-e2-06-07-2026)
+
+
+## Een introductie
+
+### Organisatie
+
+De contacturen zijn (subject to change):
+
+|dag|van|tot| lokaal |
+|---|---|---| --- |
+|ma|09:00|12:00| Zie rooster |
+|di|13:00|17:00| Zie rooster | 
+|wo|13:00|17:00| Zie rooster |
+|do|13:00|17:00| Zie rooster |
+
+De docenten zijn:
+- (**BB**) Bart Bozon
+- (**HK**) Hasan Kurt
+- (**TM**) Teun Pieter Modderman
+- (**LB**) Len Bunte
+- (**JH**) Jan Halsema
+
+De SLB'ers zijn:
+- (**LB**) Len Bunte
+- (**MW**) Mirella Wijnen
+
+## Programma
+
+### Onderwijsweek C2 (09-02-2026)
+
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | [Introductie Semester en Project](../organisatorisch/Aftrap_S4.pptx) (**HK, BB**)<br>Bewustwording kwaliteiten [DISC profiel](../vermogens/README.md) <br>[Introductie Gazebo](../hardware_simulatie/gazebo/README.md)  (**BB**) <br> |
+| di  | [NSE](https://github.com/HU-TI-DEV/TI-S2/blob/main/programma/lesprogramma/programma-NSE.md)<br>  [Sollicitatietraining door Capgemini, solliciteren naar projecten](../vermogens/solliciteren/README.md) (**LB**)|
+| wo  | Bezoek opdrachtgevers!!!!, mogelijkheid tot stellen vragen aan klant (**HK, BB, LB**) <br> |
+| do  |[Intro & Desktop-Environment (VSCode, CMake, Debugger)](../infrastructuur/desktop_environment/README.md)  (**JH**) |
+
+### Onderwijsweek C3 (16-02-2026)
+
+| Dag |          |
+|-----|----------|
+| ma  | Vakantie |
+| di  | Vakantie |
+| wo  | Vakantie |
+| do  | Vakantie |
+| vr  | Vakantie |
+
+### Onderwijsweek C4 (23-02-2026)
+
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | (**BB**)<br>[Hoe werken modellering/simulatie pakketten?](../hardware_simulatie/hoe-werken-modellering-en-simulatie-paketten/README.md)<br> Kwaliteitenspel|
+| di  | [Recap C++ Deel I](../software/cpp/recap_cpp_1.md)  (**HK**)|
+| wo  | [Gazebo deel II ](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-ii) (**BB**)  |
+| do  | Teamindeling op basis van sollicitatie (**LB, HK, BB**) Teamcontract |
+
+### Onderwijsweek C5 (02-03-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | INFORMATIE STAGE door stagecoördinator **Start sprint** <br>Opzetten team inrichting (github,etc.) (**TM,BB,HK**)  |
+| di  | [Recap C++ Deel II](../software/cpp/recap_cpp_2.md)  (**HK**)|
+| wo  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii) + POP (**BB,HK**)|
+| do  | Voorbereiding loopbaankeuzes (**LB**)  <br> Review individual deliverables  (**HK, BB**) |
+
+
+
+### Onderwijsweek C6 (09-03-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | (non) functional requirements (**TM**) & [Git branches](../infrastructuur/testing_en_tooling/Git_branches.md) (**NG**) |
+| di  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**HK**)
+| wo  | Einde sprint 1. Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HK,HS**)  |
+| do  | **Start sprint** <br>MINORMARKT HU  |
+
+### Onderwijsweek C7 (16-03-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | [Intro deepdive](../vermogens/onderzoek/README.md) (**BB**)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**) |
+| di  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |
+| wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**) |
+| do  | Review individual deliverables (**BB, HK**)<br>**1e Peilmoment**   |
+
+
+<!-- [Computer Vision II (object herkenning & intro neurale netwerken)](../software/vision_en_AI/README.md#programma-vision-deel-ii) (**BB**) -->
+
+### Onderwijsweek C8 (23-03-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | [Machine learning](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**)  |
+| di  | [Algoritmen & Datastructuren I](../software/algoritmen_en_datastructuren/README.md)(**BB**)  |
+| wo  |Einde sprint 2. Product demo per team (20 min) enkel aan PO voor vastleggen FR & NFR & KD etc. (**HK,BB**) |
+| do  |  **Start sprint** <br> Placeholder |
+
+### Onderwijsweek C9 (30-03-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  |   [ALDS II - data structuren](../software/algoritmen_en_datastructuren/README.md)(**BB, NG**) |
+| di  | [Machine learning II](../software/vision_en_AI/README.md#programma-machine-learning) (**BB**) |
+| wo  |  Team coach sessies met elk team (**BB, HK**)|
+| do  |  Review all deliverables. (**BB, HK**) |
+
+### Onderwijsweek C10 (06-04-2026)
+
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | ${\color{red}\mathrm{Pasen}}$ |
+| di  | Carriere dag op HL15 12:00 - 16:00|
+| wo  | Einde sprint 3. Product demo per teamcoach (10 min) aan klas van teamcoach (**HK,BB**) |
+| do  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**HK**) Feedbacksessie onderzoek  (**BB**)  **Start sprint** <br> |
+
+### Onderwijsweek D1 (13-04-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  |  [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) (**BB**) |
+| di  |  [Design Patterns II: Structural patterns](../software/cpp/structural_design_patterns.pptx) (**HK**) |
+| wo  | Teamcoach sessie per team (**BB**, **HK**)|
+| do  | **2e Peilmoment**,  [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**)|
+
+### Onderwijsweek D2 (20-04-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  |  [ALDS IV (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-4) (**BB, NG**)    |
+| di  | C++: Some cool nice stuff  (**HK**)|
+| wo  | Einde sprint 4. Product demo aan de PO  (**HK,BB**)|
+| do  | Semiconductor manufacturing (**BB**)   **Start sprint** <br>Review all deliverables (**BB**, **HK**)  |
+
+
+
+
+### Onderwijsweek D3 (27-04-2026)
+
+| Dag |          |
+|-----|----------|
+| ma  | Vakantie |
+| di  | Vakantie |
+| wo  | Vakantie |
+| do  | Vakantie |
+| vr  | Vakantie |
+
+### Onderwijsweek D4 (04-05-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | Deepdive  (**BB, HK**) & aftekenen opdrachten|
+| di  | ${\color{red}\mathrm{Bevrijdingsdag}}$ |
+| wo  |  Teamcoach sessie met team (**BB**, **HK**)|
+| do  |  Quantum computing (**BB**)|
+
+### Onderwijsweek D5 (11-05-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | Deepdive (**BB,HK**) & aftekenen opdrachten | 
+| di  | Deepdive (**BB, HK**)& aftekenen opdrachten |
+| wo  |  Einde sprint 5. Pitch (demo) 10 min aan hele klas  (**HK,BB**)|
+| do  | ${\color{red}\mathrm{Hemelvaart}}$|
+
+### Onderwijsweek D6 (18-05-2026)
+
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | **Start sprint** <br>Deepdive  (**BB, HK**)  |
+| di  |  Teamcoach sessie (**BB**, **HK**)|
+| wo  | Zelfstandig werken aan project (**HK**)  & aftekenen opdrachten                                |
+| do  |  **3e Peilmoment**, Deepdive (**BB**, **HK**) |
+
+### Onderwijsweek D7 (25-05-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | ${\color{red}\mathrm{Pinksterdag}}$   |
+| di  | Deepdive (**BB ,HK**) & aftekenen opdrachten|
+| wo  | Les over haLfgeleider fabricatie (optioneel voor degene die hem nog niet gehad hebben (**BB**) |
+| do  | **Start sprint** <br>Einde sprint 6. demo aan PO (**BB**, **HK**)|
+
+### Onderwijsweek D8 (01-06-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | Deepdive (**BB && HK**)  & aftekenen opdrachten  |
+| di  | Zelfstandig werken aan project (**BB&HK**)  |
+| wo  |  Teamcoach sessie (**BB**, **HK**)  |
+| do  |  Deepdive (**BB**, **HK**) |
+
+### Onderwijsweek D9 (08-06-2026)
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | Deepdive  (**BB, LB**) & Product overdracht web site review|
+| di  | Deepdive  (**BB, HK**)& aftekenen opdrachten|
+| wo  | aftekenen opdrachten (**BB**) |
+| do  | aftekenen opdrachten(**BB**, **HK**)  |
+
+
+### Onderwijsweek D10 (15-06-2026)
+
+| Dag | Project & Kennissessie |
+| --- |  --- |
+| ma  | Deepdive verbetering (**BB & HK**) |
+| di  | Deepdive verbetering (**HK**)|
+| wo  | Demo dag 13.00 uur – 16.00 uur (**HK & BB**)  |
+| do  | **4e Peilmoment** :end: |
+
+
+### Onderwijsweek D11 (22-06-2026)
+De docenten bekijken deze week al het ingeleverde werk. Aan het eind van de week ontvang je individuele feedback en een eindbeoordeling.
+
+
+### Onderwijsweek E1/D12 (29-06-2026)
+Verbeterweek 1
+
+Week E1 en E2 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of om binnen het semester verder de excelleren. Als niet alle leeruitkomsten Op Niveau of Boven Niveau zijn dan kan in samenspraak met de docent een (realistisch) plan worden gemaakt en voer je deze werkzaamheden in deze periode uit. Verder excelleren kan bijvoorbeeld door een leeruitkomst met verbeteringen van Op Niveau naar Boven Niveau te brengen.
+
+### Onderwijsweek E2 (06-07-2026)
+Verbeterweek 2
+
+Week E1 en E2 zijn er voor (mogelijke) verbeteringen van het ingeleverde werk of om binnen het semester verder de excelleren. Als niet alle leeruitkomsten Op Niveau of Boven Niveau zijn dan kan in samenspraak met de docent een (realistisch) plan worden gemaakt en voer je deze werkzaamheden in deze periode uit. Verder excelleren kan bijvoorbeeld door een leeruitkomst met verbeteringen van Op Niveau naar Boven Niveau te brengen.
+
+
+
+TODO
+<br> [HBO-i Job Event](https://hboictjobevent.nl/)
+| vr  | [IICT Carrièredag](https://husite.nl/hu-tech/nieuws/iictcarrieredag-oktober25/) |
+**Vanaf 15:00 stage/INNO voorlichting** (Inge en Berend) ) 

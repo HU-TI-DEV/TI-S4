@@ -8,7 +8,7 @@ Een POP (persoonlijk ontwikkelplan), heeft de volgende onderdelen:
 
 Toelichting op de vragen:
 
-"Waar ben ik goed in en waarin juist niet?"
+**Waar ben ik goed in en waarin juist niet?**
 Denk breed:
 Wat gaat mij makkelijk af?
 Waar krijg ik energie van?
@@ -17,7 +17,7 @@ Wat vind ik lastig?
 Waar stel ik dingen uit?
 Waar wil ik zekerder in worden?
 
-"Wat wil ik graag bereiken?"
+**Wat wil ik graag bereiken?**
 Maak onderscheid tussen: op korte termijn en lange termijn.
 Korte termijn: wat wil ik dit semester bereiken?
 Lange termijn: wat wil ik tijdens mijn studie of richting mijn toekomstige beroep bereiken?
@@ -26,20 +26,20 @@ Bijvoorbeeld:
 Ik wil beter leren presenteren.
 Ik wil tijdens mijn HBO-opleiding uitgroeien tot iemand die zelfstandig projecten kan aanpakken en professioneel kan communiceren.
 
-"Wat is mijn doel?"
+**Wat is mijn doel?**
 Hier maak je de ambitie concreter.
 Bijvoorbeeld als je ambitie is om zelfverzekerder te worden in presenteren.
 
 Doel: Ik wil aan het einde van dit semester zelfstandig een presentatie kunnen geven waarbij ik duidelijk en rustig mijn verhaal kan vertellen.
 
-"Welke SMART-acties ga ik uitvoeren?"
+**Welke SMART-acties ga ik uitvoeren?**
 SMART is Specifiek, Meetbaar, Acceptabel (of relevant), Realistisch en Tijdgebonden.
 
 Hier wordt het persoonlijk ontwikkelplan echt een plan.
 
 Bijvoorbeeld: Ik ga dit semester minimaal drie keer een presentatieonderdeel verzorgen. Na iedere presentatie vraag ik feedback aan een medestudent of docent en noteer ik één verbeterpunt.
 
-"Hoe meet ik of ik mijn doel heb bereikt?"
+**Hoe meet ik of ik mijn doel heb bereikt?**
 Dit is een belangrijke vraag. En te onderzoeken door te kijken naar:
 
 Bijvoorbeeld:

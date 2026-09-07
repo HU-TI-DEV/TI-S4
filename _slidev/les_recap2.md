@@ -4,7 +4,9 @@ output: ../software/cpp/recap_cpp_2.pdf
 hideInToc: true
 ---
 
-# Recap C++ Part 2
+# Recap C++ part 2
+
+## OOP & Templates
 
 ---
 layout: table-of-contents
@@ -17,218 +19,213 @@ hideInToc: true
 hideInToc: true
 ---
 
-# Waarom een recap?
+# Doel
 
-C++ is een krachtige taal, maar veel onderwerpen bouwen op elkaar voort.
+Na deze les begrijp je (beter, of opnieuw, of alsnog):
 
-Vandaag herhalen we de basis voor de komende lessen:
-
-- templates en specialization
-- classes, inheritance en polymorphism
-- virtual destructors en ownership
-
-<br>
-
-Daarna pas zijn onderwerpen als lambda's, design patterns en geavanceerde templates echt prettig te volgen.
-
----
-layout: center
-hideInToc: true
----
-
-# Eerst: quiz
-
-Bespreek daarna de antwoorden samen.
+- Classes, wat?
+- Inheritance, hoe?
+- Destructors, huh?
+- Templates, hoeveel?
+- Template specializations, wanneer?
 
 ---
 
-# Templates
+# OOP; herhaling
 
-Een template beschrijft een blauwdruk voor code die met meerdere types werkt.
+Object-Oriented Programming draait om het modelleren van je probleem als objecten:
 
-```cpp {monaco-run}
-#include <iostream>
+<v-clicks>
 
-template <typename T>
-T maxValue(T first, T second) {
-	return first > second ? first : second;
-}
+- **Encapsulation:** data en gedrag samen in één class
+- **Abstraction:** interface tonen, implementatie verbergen
+- **Inheritance:** gedrag/structuur hergebruiken via een parent-child relatie
+- **Polymorphism:** dezelfde interface, ander gedrag
 
-int main() {
-	std::cout << maxValue(12, 7) << '\n';
-	std::cout << maxValue(3.5, 4.2) << '\n';
-}
-```
-
-De compiler maakt bij gebruik de passende functie, bijvoorbeeld `maxValue<int>`.
+</v-clicks>
 
 ---
 layout: two-cols
 hideInToc: true
 ---
 
-# Type deduction
+# Classes
 
-Meestal leidt de compiler het type af uit de argumenten.
+Een class beschrijft:
 
-```cpp {monaco-run}
-#include <iostream>
-#include <string>
+- **members**: data (attributes) die bij het object horen
+- **methods**: functies die op die data werken
+- **constructor(s)**: hoe een object geïnitialiseerd wordt
 
-template <typename T>
-T maxValue(T first, T second) {
-	return first > second ? first : second;
-}
+```cpp
+class Vehicle {
+protected:
+    string brand;
 
-int main() {
-	std::cout << maxValue(12, 7) << '\n';
-	std::cout << maxValue(3.5, 4.2) << '\n';
-	std::cout << maxValue(
-		std::string("Ada"), std::string("Bjarne")) << '\n';
-}
+public:
+    Vehicle(const string& brand)
+        : brand(brand) {}
+
+    void print() const {
+        cout << brand << endl;
+    }
+};
 ```
 
 ::right::
 
-# Een voorwaarde
+# Access modifiers
 
-De bewerking in de template moet bestaan voor type `T`.
+- **public:** overal toegankelijk
+- **protected:** class zelf + afgeleide classes
+- **private:** alleen de class zelf
 
-In dit geval moet `T` vergelijkbaar zijn met `>`.
+<br>
+
+Vuistregel:
+- members zo **restrictief mogelijk** houden
+- alleen public maken wat echt naar buiten moet
+
+<br>
 
 <v-click>
 
+Dit is **encapsulation** in de praktijk: interne details verbergen, alleen een
+duidelijke interface tonen.
+
+</v-click>
+
+---
+hideInToc: true
+layout: two-cols
+---
+
+# Quiz: welke constructor compileert?
+
+<br>Gegeven de klasse `Vehicle`:
+
 ```cpp
-struct Point {
-	int x;
-	int y;
+class Vehicle {
+protected:
+    string brand;
+public:
+    Vehicle(const string& brand)
+        : brand(brand) {}
 };
-
-Point a{1, 2};
-Point b{3, 4};
-// maxValue(a, b); // geen operator> voor Point
 ```
 
-</v-click>
+Welke van de twee `Car`-constructors hiernaast compileert?
 
----
+::right::
 
-# Template specialization
+<br>
 
-Soms werkt de algemene template wel, maar doet hij niet wat je bedoelt.
-
-````md magic-move
-```cpp
-template <typename T>
-T maxValue(T first, T second) {
-	return first > second ? first : second;
-}
-
-maxValue("appel", "peer");
-```
+**Optie A**
 
 ```cpp
-// const char* vergelijkt adressen, niet tekstinhoud.
-template <>
-const char* maxValue(const char* first, const char* second) {
-	return std::strcmp(first, second) > 0 ? first : second;
-}
-
-maxValue("appel", "peer"); // "peer"
+class Car : public Vehicle {
+private:
+    int horsepower;
+public:
+    Car(const string& brand, int hp)
+        : brand(brand), horsepower(hp) {}
+};
 ```
-````
 
-<v-click>
+**Optie B**
 
-Voor `const char*` maken we dus bewust een gespecialiseerde versie.
-
-</v-click>
+```cpp
+class Car : public Vehicle {
+private:
+    int horsepower;
+public:
+    Car(const string& brand, int hp)
+        : Vehicle(brand), horsepower(hp) {}
+};
+```
 
 ---
 hideInToc: true
+layout: two-cols
 ---
 
-# `const char*` vergelijken
-
-```cpp {monaco-run}
-#include <cstring>
-#include <iostream>
-
-template <typename T>
-T maxValue(T first, T second) {
-	return first > second ? first : second;
-}
-
-template <>
-const char* maxValue(const char* first, const char* second) {
-	return std::strcmp(first, second) > 0 ? first : second;
-}
-
-int main() {
-	std::cout << maxValue("appel", "peer") << '\n';
-}
-```
-
-`std::strcmp` geeft een positieve waarde als de eerste tekst alfabetisch later komt.
-
----
-hideInToc: true
----
-
-# Check-in: templates
+# Quiz: antwoord
 
 <v-clicks>
 
-1. Wanneer kan type deduction niet slagen?
-2. Waarom is `const char*` een bijzonder geval voor `maxValue`?
-3. Welke operator moet een type ondersteunen in onze algemene template?
-4. Wanneer kies je een specialization in plaats van een tweede functienaam?
+- **Optie B is correct.**
+- `brand` is een member van `Vehicle`, niet van `Car`
+- in de member-initializer-list van `Car` kun je alleen **eigen members** en de
+  **basisklasse-constructor** aanspreken
+- Optie A probeerde `brand` direct te initialiseren alsof het een member van `Car`
+  is -> compiler error
+- Optie B roept expliciet `Vehicle(brand)` aan: zo delegeer je de initialisatie
+  van `brand` aan de basisklasse
+- Dit heet **inheritance**
 
 </v-clicks>
 
-<!--
-1) Als argumenten geen eenduidig type opleveren of de benodigde operatie ontbreekt.
-2) > vergelijkt pointeradressen, niet de karakters.
-3) operator>.
-4) Als het concept hetzelfde blijft maar een type een afwijkende implementatie nodig heeft.
--->
+::right::
 
----
-layout: center
-hideInToc: true
----
+<br><br>
 
-# Daarna: OOP
-
----
-
-# Classes: data en gedrag
-
-Een class combineert state met functies die op die state werken.
-
-```cpp {monaco-run}
-#include <iostream>
-#include <string>
-
-class Circle {
+```cpp
+class Vehicle {
+protected:
+    std::string brand;
 public:
-	explicit Circle(double radius) : radius(radius) {}
-
-	double area() const {
-		return 3.14159 * radius * radius;
-	}
-
-private:
-	double radius;
+    Vehicle(const string& brand)
+        : brand(brand) {}
 };
 
-int main() {
-	Circle circle(2.0);
-	std::cout << circle.area() << '\n';
-}
+// Optie B
+class Car : public Vehicle {
+private:
+    int horsepower;
+public:
+    Car(const string& brand, int hp)
+        : Vehicle(brand), horsepower(hp) {}
+};
 ```
 
-`private` beschermt de interne state; de public interface is het contract met de gebruiker.
+---
+layout: two-cols
+---
+
+# Inheritance
+
+Wat we net zagen heet **inheritance**, waarmee je een **derived** class laat overerven van een **base** class:
+
+```cpp
+class Vehicle {
+protected:
+    string brand;
+public:
+    Vehicle(const string& brand)
+        : brand(brand) {}
+};
+```
+
+::right:: 
+
+<br><br><br><br>
+
+```cpp
+class Car : public Vehicle {
+private:
+    int horsepower;
+
+public:
+    Car(const std::string& brand, int horsepower) 
+		: Vehicle(brand), horsepower(horsepower) {}
+};
+```
+<v-clicks>
+
+- `: public Vehicle` -> `Car` **is-a** `Vehicle`
+- `Vehicle(brand)` roept de constructor van de parent aan
+
+</v-clicks>
 
 ---
 layout: two-cols
@@ -237,282 +234,473 @@ hideInToc: true
 
 # Inheritance
 
-Verschillende objecten kunnen een gedeeld concept hebben.
-
-```cpp
-class Shape {
-public:
-	virtual double area() const = 0;
-	virtual ~Shape() = default;
-};
-
-class Circle : public Shape {
-public:
-	explicit Circle(double radius) : radius(radius) {}
-	double area() const override {
-		return 3.14159 * radius * radius;
-	}
-private:
-	double radius;
-};
-```
-
-::right::
-
-# Abstracte class
-
-`= 0` maakt `area` een pure virtual function.
-
-- `Shape` beschrijft de interface
-- je maakt geen los `Shape` object
-- elke concrete afgeleide class implementeert `area`
-
-<v-click>
-
-```cpp
-// Shape shape; // fout: abstracte class
-Circle circle(2.0); // prima
-```
-
-</v-click>
-
----
-
-# Polymorphism
-
-Via een `Shape*` mag je verschillende afgeleide types gelijk behandelen.
-
-```cpp {monaco-run}
-#include <iostream>
-
-class Shape {
-public:
-	virtual double area() const = 0;
-	virtual ~Shape() = default;
-};
-
-class Rectangle : public Shape {
-public:
-	Rectangle(double width, double height) : width(width), height(height) {}
-	double area() const override { return width * height; }
-private:
-	double width;
-	double height;
-};
-
-int main() {
-	Shape* shape = new Rectangle(3.0, 4.0);
-	std::cout << shape->area() << '\n';
-	delete shape;
-}
-```
-
-Door `virtual` kiest C++ tijdens runtime de `area` van `Rectangle`.
-
----
-hideInToc: true
----
-
-# Waarom een virtual destructor?
-
-```cpp
-class Shape {
-public:
-	virtual double area() const = 0;
-	virtual ~Shape() = default;
-};
-
-Shape* shape = new Circle(2.0);
-delete shape;
-```
-
-<v-click>
-
-`delete` via een base pointer moet ook de destructor van de afgeleide class uitvoeren.
-
-</v-click>
-
-<v-click>
-
-Zonder `virtual ~Shape()` is dit undefined behaviour zodra een derived class resources beheert.
-
-</v-click>
-
----
-layout: two-cols
-hideInToc: true
----
-
-# `override` helpt
-
-```cpp
-class Circle : public Shape {
-public:
-	double area() const override {
-		return 3.14159 * radius * radius;
-	}
-};
-```
-
-`override` vertelt de compiler dat deze functie een virtual functie uit de base class moet overschrijven.
-
-::right::
-
-# Typfouten vangen
-
-```cpp
-class Circle : public Shape {
-public:
-	double Area() const override {
-		return 0.0;
-	}
-};
-```
-
-Dit compileert niet: `Area` is iets anders dan `area`.
-
----
-hideInToc: true
----
-
-# Check-in: OOP
-
-<v-clicks>
-
-1. Wat betekent `= 0` achter een virtual functie?
-2. Waarom gebruiken we `Shape*` voor polymorphism?
-3. Wat gebeurt er zonder virtual destructor bij `delete` via een base pointer?
-4. Welk probleem helpt `override` voorkomen?
-
-</v-clicks>
-
-<!--
-1) Pure virtual function; de class is abstract.
-2) Een pointer naar de base class kan naar ieder derived object wijzen.
-3) De destructor van de derived class wordt mogelijk niet uitgevoerd: UB.
-4) Een typefout of afwijkende signatuur die per ongeluk geen override is.
--->
-
----
-
-# Oefening 1: `maxValue`
-
-1. Schrijf een functietemplate `maxValue` voor twee waarden.
-2. Test met `int`, `double` en `std::string`.
-3. Voeg een specialization toe voor `const char*`.
-
-```cpp
-template <typename T>
-T maxValue(T first, T second);
-
-template <>
-const char* maxValue(const char* first, const char* second);
-```
-
-Gebruik voor de specialization `std::strcmp` uit `<cstring>`.
-
----
-
-# Oefening 2: Shapes
-
-Maak een abstracte `Shape` class met:
-
-```cpp
-virtual double area() const = 0;
-virtual ~Shape() = default;
-```
-
-Maak daarna:
-
-- `Circle` met een radius
-- `Rectangle` met width en height
-- een array van `Shape*` om beide vormen te tonen
-
-<v-click>
-
-Roep voor elk element `area()` aan en verwijder daarna elk object.
-
-</v-click>
-
----
-
-# Oefening 3: Garage
-
-Modelleer een garage met verschillende voertuigen.
+Als we members gaan toevoegen kan dat bijvoorbeeld zo:
 
 ```cpp
 class Vehicle {
 protected:
-	std::string brand;
+    string brand;
 public:
-	explicit Vehicle(std::string brand);
-	virtual double calculateTax() const = 0;
-	virtual void print() const = 0;
-	virtual ~Vehicle() = default;
+    Vehicle(const string& brand)
+        : brand(brand) {}
+
+	void print(){
+		cout <<"This is a " << brand;
+	}
 };
 ```
 
-Maak `Car` en `Truck` als afgeleide classes.
+```
+# Vehicle myCar = Vehicle("Toyota");
+# myCar.print();
+# >>> "This is a Toyota"
+```
+
+::right:: 
+
+<br><br><br><br>
+
+```cpp
+class Car : public Vehicle {
+private:
+    int horsepower;
+
+public:
+    Car(const std::string& brand, int horsepower) 
+		: Vehicle(brand), horsepower(horsepower) {}
+};
+```
+<br>
+```
+# Car myCar = Car("Honda", 120);
+# myCar.print();
+# >>> "This is a Honda"
+```
+
+<v-click>
+Maar we willen die extra informatie natuurlijk ook! Hoe?
+</v-click>
 
 ---
 layout: two-cols
 hideInToc: true
 ---
 
-# Garage: regels
+# Inheritance
 
-**Car**
-
-- extra attribuut: `int horsepower`
-- belasting: `horsepower * 0.5`
-
-**Truck**
-
-- extra attribuut: `double maxLoad`
-- belasting: `maxLoad * 2`
-
-::right::
-
-# Garage: interface
+Nou, zo:
 
 ```cpp
-class Garage {
+class Vehicle {
+protected:
+    string brand;
 public:
-	void addVehicle(Vehicle* vehicle);
-	double totalTax() const;
-	void printAll() const;
-	~Garage();
-private:
-	std::vector<Vehicle*> vehicles;
+    Vehicle(const string& brand)
+        : brand(brand) {}
+
+	virtual void print(){
+		cout <<"This is a " << brand;
+	}
 };
 ```
 
-De destructor verwijdert alle voertuigen die de garage bezit.
+```
+# Vehicle myCar = Vehicle("Toyota");
+# myCar.print();
+# >>> "This is a Toyota"
+```
+
+::right:: 
+
+<br><br>
+
+````md magic-move
+```cpp
+class Car : public Vehicle {
+private:
+    int horsepower;
+
+public:
+    Car(const std::string& brand, int horsepower) 
+		: Vehicle(brand), horsepower(horsepower) {}
+
+	void print() override {
+		cout <<"This is a " << brand;
+		cout << " with " << horsepower << " hp!";
+	}
+};
+```
+
+```cpp
+class Car : public Vehicle {
+private:
+    int horsepower;
+
+public:
+    Car(const std::string& brand, int horsepower) 
+		: Vehicle(brand), horsepower(horsepower) {}
+
+	void print() override {
+		Vehicle::print();
+		cout << " with " << horsepower << " hp!";
+	}
+};
+```
+````
+
+```
+# Car myCar = Car("Honda", 120);
+# myCar.print();
+# >>> "This is a Honda with 120 hp!""
+```
+
+<v-click>
+Maar we mogen wat we eerder hadden geschreven natuurlijk gewoon hergebruiken :)
+</v-click>
 
 ---
 hideInToc: true
 ---
 
-# Garage: test in `main`
+# Inheritance; meerdere afgeleide classes
+
+Zelfde principe voor een tweede voertuigtype:
 
 ```cpp
-int main() {
-	Garage garage;
-	garage.addVehicle(new Car("Volvo", 180));
-	garage.addVehicle(new Car("Toyota", 110));
-	garage.addVehicle(new Truck("DAF", 12.5));
+class Truck : public Vehicle {
+    int horsepower;
+public:
+    Truck(const std::string& brand, int horsepower)
+        : Vehicle(brand), horsepower(horsepower) {}
 
-	garage.printAll();
-	std::cout << "Totale belasting: "
-			  << garage.totalTax() << '\n';
-}
+    void print() override {
+        std::cout << brand << " (Truck), horsepower: " << horsepower;
+    }
+
+	void getHorsePower() override { return horsepower; };
+};
 ```
 
 <v-click>
 
-Wie is eigenaar van de pointers nadat je `addVehicle` hebt aangeroepen?
+`Car` en `Truck` delen dezelfde interface ( `print`, en nu ook `getHorsePower`), maar met eigen
+implementatie. 
+<br>Dat is **polymorphism**: zelfde interface, ander gedrag.
 
 </v-click>
+
+---
+
+# Polymorphism in de praktijk
+
+Met een array/vector van `Vehicle*` kun je alle voertuigen op dezelfde manier
+behandelen, ongeacht hun echte type:
+
+```cpp
+std::vector<Vehicle*> vehicles;
+vehicles.push_back(new Car("Volkswagen", 150));
+vehicles.push_back(new Car("Tesla", 300));
+vehicles.push_back(new Truck("Scania", 8000));
+
+int total = 0;
+for (Vehicle* v : vehicles) {
+    v->print();          // roept Car::print of Truck::print aan
+    total += v->getHorsePower();
+}
+std::cout << "Totaal: " << total << std::endl;
+```
+
+<v-click>
+
+Dit werkt alleen correct doordat `getHorsePower` en `print` **virtual** zijn: de
+aanroep wordt op basis van het **echte type** (runtime) bepaald, niet op basis van
+het pointer-type (`Vehicle*`).
+
+</v-click>
+
+---
+hideInToc: true
+---
+
+# Polymorphism in de praktijk
+
+Even tussendoor: weten we nog hoe het zat met die `operator->()`? 
+
+````md magic-move
+```cpp
+std::vector<Vehicle*> vehicles;
+vehicles.push_back(new Car("Volkswagen", 150));
+vehicles.push_back(new Car("Tesla", 300));
+vehicles.push_back(new Truck("Scania", 8000));
+
+int total = 0;
+for (Vehicle* v : vehicles) {
+    v->print();          // roept Car::print of Truck::print aan
+    total += v->getHorsePower();
+}
+std::cout << "Totaal: " << total << std::endl;
+```
+
+```cpp
+std::vector<Vehicle*> vehicles;
+vehicles.push_back(new Car("Volkswagen", 150));
+vehicles.push_back(new Car("Tesla", 300));
+vehicles.push_back(new Truck("Scania", 8000));
+
+int total = 0;
+for (Vehicle* v : vehicles) {
+    (*v).print();          // roept Car::print of Truck::print aan
+    total += (*v).getHorsePower();
+}
+std::cout << "Totaal: " << total << std::endl;
+```
+````
+
+---
+
+# Destructors
+
+Een destructor ruimt resources op wanneer een object zijn lifetime verliest:
+
+```cpp
+class Garage {
+    std::vector<Vehicle*> vehicles;
+public:
+    void addVehicle(Vehicle* v) { vehicles.push_back(v); }
+
+    ~Garage() {
+        for (Vehicle* v : vehicles)
+            delete v;
+    }
+};
+```
+
+<v-clicks>
+
+- zonder deze destructor: **memory leak**, de `Vehicle`-objects worden nooit vrijgegeven
+- `Garage` bezit de voertuigen (ownership), dus `Garage` is verantwoordelijk voor het opruimen
+
+</v-clicks>
+
+---
+hideInToc: true
+---
+
+# Destructors; het gevaar van niet-virtual
+
+Wat gaat hier mis?
+
+```cpp
+class Vehicle {
+public:
+    ~Vehicle() { std::cout << "Vehicle destroyed" << std::endl; }
+};
+
+class Car : public Vehicle {
+public:
+    ~Car() { std::cout << "Car destroyed" << std::endl; }
+};
+
+Vehicle* v = new Car("Volkswagen", 150);
+delete v; // wat wordt hier aangeroepen?
+```
+
+<v-click>
+
+Alleen `~Vehicle()` wordt aangeroepen: `~Car()` wordt overgeslagen -> resources van
+`Car` lekken mogelijk weg.
+
+</v-click>
+
+<v-click>
+
+**Oplossing:** maak de destructor van de basisklasse `virtual`:
+`virtual ~Vehicle() = default;`
+
+</v-click>
+
+---
+hideInToc: true
+---
+
+# Check-in: OOP, Classes, Inheritance, Destructors
+
+<v-clicks>
+
+1. Wat is het verschil tussen `protected` en `private`?
+2. Waarom moet `Vehicle` een pure virtual method hebben om abstract te zijn?
+3. Waarom werkt polymorphism alleen via pointers/references (`Vehicle*`), niet via directe objecten?
+4. Wat gaat er mis als een basisklasse-destructor niet `virtual` is?
+
+</v-clicks>
+
+<!--
+Kernantwoorden:
+1) protected: toegankelijk voor de class + afgeleide classes. private: alleen de class zelf.
+2) Pure virtual (`= 0`) betekent: geen implementatie, class kan niet geïnstantieerd worden totdat een afgeleide class het invult.
+3) Object slicing: bij directe objecten (by value) wordt alleen het Vehicle-deel gekopieerd, het afgeleide-type gaat verloren.
+4) Alleen de destructor van het statische (pointer-)type wordt aangeroepen; de destructor van het echte (afgeleide) type wordt overgeslagen -> resource leaks.
+-->
+
+---
+layout: center
+hideInToc: true
+---
+
+# \<br>
+
+Daarna:
+
+# Templates
+
+---
+
+# Templates; waarom?
+
+Stel je wil een functie die de grootste van twee waarden teruggeeft, voor
+verschillende types (`int`, `double`, ...).
+
+````md magic-move
+```cpp
+// Zonder templates -> voor elk type een aparte overload
+
+int maxValue(int a, int b){
+	return (a > b)? a : b;
+}
+
+double maxValue(int a, int b){
+	return (a > b)? a : b;
+}
+```
+
+```cpp
+// Maar met templates:
+
+template<typename T>
+T maxValue(T a, T b) {
+    return (a > b) ? a : b;
+}
+
+maxValue(3, 7);        // T = int
+maxValue(3.5, 2.1);     // T = double
+maxValue<std::string>("abc", "abd"); // T = std::string
+```
+````
+
+
+<v-click>
+
+De compiler genereert bij elke aanroep automatisch de juiste versie voor `T`.
+
+</v-click>
+
+---
+hideInToc: true
+---
+
+# Templates; hoe werkt dit?
+
+```text
+maxValue(3, 7)
+```
+
+<v-clicks>
+
+- de compiler ziet: `T = int`
+- op compile time wordt een versie van `maxValue` gegenereerd voor `int`
+- dit heet **template instantiation**
+
+</v-clicks>
+
+<br>
+
+<v-click>
+
+Voordeel: type-veilig én herbruikbaar
+
+</v-click>
+
+---
+
+# Template specialization
+
+Wat gebeurt er met `const char*`?
+
+```cpp
+maxValue("banaan", "appel");   // T = const char*
+```
+
+<v-click>
+
+Standaard vergelijkt `a > b` de **adressen** van de strings, niet de inhoud. Dat is
+vrijwel nooit wat je bedoelt.
+
+</v-click>
+
+<v-click>
+
+**Oplossing:** een **template specialization** voor `const char*`:
+
+```cpp
+template<>
+const char* maxValue<const char*>(const char* a, const char* b) {
+    return (strcmp(a, b) > 0) ? a : b;
+}
+```
+
+</v-click>
+
+<v-click>
+
+Zelfde naam en interface, maar voor dit specifieke type een aangepaste
+implementatie die wél de inhoud vergelijkt.
+
+</v-click>
+
+---
+hideInToc: true
+---
+
+# Template specialization; wanneer?
+
+<v-clicks>
+
+- het generieke template-gedrag is **incorrect** of **onlogisch** voor een specifiek type
+- je wil een **geoptimaliseerde** implementatie voor een specifiek type
+- vuistregel: schrijf eerst de generieke versie, specialiseer pas als een type
+  problemen geeft
+
+</v-clicks>
+
+<br>
+
+<v-click>
+
+Zelfde patroon geldt trouwens ook voor class templates (niet alleen function
+templates)
+
+</v-click>
+
+---
+hideInToc: true
+---
+
+# Check-in: Templates
+
+<v-clicks>
+
+1. Wat genereert de compiler bij een template instantiation?
+2. Waarom werkt de generieke `maxValue` niet correct voor `const char*`?
+3. Wat is het verschil tussen een normale overload en een template specialization?
+
+</v-clicks>
+
+<!--
+Kernantwoorden:
+1) Een concrete versie van de functie/class voor het specifieke type T, op compile time.
+2) Omdat `a > b` op pointers de adressen vergelijkt, niet de string-inhoud; daarvoor heb je strcmp nodig.
+3) Een specialization deelt exact dezelfde template-naam/interface maar levert een aangepaste implementatie voor één specifiek type; een overload is een losse functie met een andere signature.
+-->
 
 ---
 hideInToc: true
@@ -520,12 +708,10 @@ hideInToc: true
 
 # Afsluiting
 
-- templates geven generieke code met typecontrole
-- specialization lost een type-specifiek probleem op
-- abstracte classes beschrijven een gemeenschappelijke interface
-- polymorphism werkt via virtual functies
-- een virtual destructor is nodig bij verwijderen via een base pointer
+- classes bundelen data en gedrag -> encapsulation en abstraction
+- inheritance + virtual methods maken polymorphism mogelijk
+- vergeet de **virtual destructor** niet bij polymorf gebruik van een basisklasse
+- templates geven type-veilige herbruikbaarheid; specialization voor de uitzonderingen
 
-Volgende stap:
-
-- deze bouwstenen gebruiken in modernere C++-patronen
+Volgende stap: hierop bouwen we voort met design patterns, geavanceerdere templates
+en lambda's.

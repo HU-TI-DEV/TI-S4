@@ -377,7 +377,7 @@ public:
         std::cout << brand << " (Truck), horsepower: " << horsepower;
     }
 
-	void getHorsePower() override { return horsepower; };
+    void getHorsePower() override { return horsepower; };
 };
 ```
 
@@ -394,7 +394,7 @@ implementatie.
 # Polymorphism in de praktijk
 
 Met een array/vector van `Vehicle*` kun je alle voertuigen op dezelfde manier
-behandelen, ongeacht hun echte type:
+behandelen, <br>ongeacht hun echte type:
 
 ```cpp
 std::vector<Vehicle*> vehicles;
@@ -555,9 +555,9 @@ Daarna:
 
 ---
 
-# Templates; waarom?
+# Templates
 
-Stel je wil een functie die de grootste van twee waarden teruggeeft, voor
+Stel je wil een functie die de grootste van twee waarden teruggeeft, <br>voor
 verschillende types (`int`, `double`, ...).
 
 ````md magic-move

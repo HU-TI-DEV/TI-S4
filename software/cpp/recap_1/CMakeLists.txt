@@ -31,6 +31,6 @@ endif()
 
 # Elke oefening is een eigen executable. Kies de target in de CMake Tools
 # statusbalk onderaan VSCode, of bouw alles met: cmake --build build
-foreach(oefening 01_functies 02_pointers 03_bughunt 04_name)
+foreach(oefening 01_functies 02_pointers 03_bughunt)
     add_executable(${oefening} src/${oefening}.cc)
 endforeach()

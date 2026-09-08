@@ -5,9 +5,8 @@
             "name": "Debug huidige CMake-target",
             "type": "cppdbg",
             "request": "launch",
+            "preLaunchTask": "Bouwen",
             "program": "${command:cmake.launchTargetPath}",
-            "args": [],
-            "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [
                 {
@@ -19,7 +18,6 @@
                     "value": "print_stacktrace=1"
                 }
             ],
-            "externalConsole": false,
             "MIMode": "gdb",
             "setupCommands": [
                 {

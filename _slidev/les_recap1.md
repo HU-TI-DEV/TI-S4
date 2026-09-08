@@ -331,6 +331,7 @@ De README van het project legt uit hoe je een sanitizer-rapport leest en hoe je 
 
 ---
 layout: center
+hideInToc: true
 ---
 
 # \0

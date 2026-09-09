@@ -87,7 +87,7 @@ De SLB'ers zijn:
 ### Onderwijsweek A4 (21-09-2026)
 | Dag | Project & Kennissessie |
 | --- |  --- |
-| ma  | Voorbereiding loopbaankeuzes (**LB**)  + werken aan project |  <!-- (non) functional requirements (**HS**) -->
+| ma  | Stagevoorlichting door stagecoördinator en voorbereiding loopbaankeuzes (**LB**)  + werken aan project |  <!-- (non) functional requirements (**HS**) -->
 | di  |[Git branches](../infrastructuur/testing_en_tooling/Git_branches.md) (**NG**)|
 | wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**)  |
 | do  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |

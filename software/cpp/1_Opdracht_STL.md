@@ -2,7 +2,7 @@
 
 Voor deze opdracht maak je gebruik van een tekstbestand. Kies hiervoor een groot tekstbestand. Denk bijvoorbeeld aan [het gehele script van de Bee Movie](https://gist.github.com/MattIPv4/045239bc27b16b2bcf7a3a9a4648c08a), [de King James' Bible](https://openbible.com/textfiles/kjv.txt), of het [Communist Manifesto](https://www.gutenberg.org/ebooks/61), maar je mag ook zelf een tekst kiezen.
 
-Schrijf hiervoor code die het volgende doet, gebruikmakend van zoveel mogelijk functionaliteit uit de Standard Library:
+Schrijf hiervoor code die het volgende doet, gebruikmakend van zoveel mogelijk functionaliteit uit de Standard Library en lambdas:
 
 - Lees alle karakters van deze file in, sla op in een geschikte container
 - Tel en print hoeveel karakters de file bevat

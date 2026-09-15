@@ -48,6 +48,7 @@ Bekijk de video's:
 - [PID - stap 3](https://www.youtube.com/watch?v=8hbh8vUTaEk)
 
 Run de volgende code in je favoriete python editor, niet in je container:
+## LET OP : als het niet werkt in je editor kun je ook de google colab versie pakken... ##  
 ```python
 import numpy as np
 import matplotlib.pyplot as plt
@@ -190,7 +191,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-or in google colab:
+## or in google colab: ##
 ``` pyton
 import numpy as np
 import matplotlib.pyplot as plt

@@ -487,7 +487,7 @@ from matplotlib.animation import FuncAnimation
 
 
 # Road
-t=np.linspace(-2*math.pi, 2*math.pi, 500)
+t=np.linspace(-1*math.pi, 1*math.pi, 500)
 x = 5*np.sin(2*t)
 y = -5*np.cos(t)
 
@@ -558,7 +558,7 @@ from IPython.display import HTML
 # Road
 # ============================================================
 
-t = np.linspace(-2 * math.pi, 2 * math.pi, 500)
+t = np.linspace(-1 * math.pi, 1 * math.pi, 500)
 
 x = 5 * np.sin(2 * t)
 y = -5 * np.cos(t)

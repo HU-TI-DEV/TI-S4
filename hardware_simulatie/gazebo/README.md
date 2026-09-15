@@ -191,7 +191,8 @@ plt.tight_layout()
 plt.show()
 ```
 
-## or in google colab: ##
+## of in google colab: ##
+
 ``` pyton
 import numpy as np
 import matplotlib.pyplot as plt
@@ -543,7 +544,8 @@ anim = FuncAnimation(fig, update, frames=300, interval=20, blit=True)
 plt.show()
 ```
 
-Or in google colab: 
+Of in google colab: 
+
 ``` python
 import matplotlib.pyplot as plt
 import math

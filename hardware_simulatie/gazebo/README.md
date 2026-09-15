@@ -205,7 +205,7 @@ m = 5.0          # inertia
 d = 2.0          # damping
 u_max = 10.0     # actuator saturation
 
-dt = 0.02        # simulation timestep
+dt = 0.2        # simulation timestep
 
 
 # ==========================================================
@@ -456,7 +456,7 @@ ani = FuncAnimation(
     fig,
     update,
     interval=dt * 1000,
-    frames=1000,
+    frames=100,
     blit=True
 )
 

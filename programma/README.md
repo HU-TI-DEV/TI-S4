@@ -80,7 +80,7 @@ De SLB'ers zijn:
 | ma  | Teamindeling op basis van sollicitatie <br> **Start sprint 1** <br>Opzetten team inrichting (github,etc.) (**TM**)|
 | di  | [Gazebo deel III - PID control](../hardware_simulatie/gazebo/README.md#programma-gazebo-deel-iii)  (**BB**)|
 | wo  | [\[&\]( )->auto{} en STL](../software/cpp/lambdas_en_stl.md) (**NG**)|
-| do  |  PID WORKSHOP (**BB**)|
+| do  |  [PID WORKSHOP](https://github.com/HU-TI-DEV/TI-S3/blob/main/programma/lesprogramma/programma-PID-workshop.md) (**BB**)|
 
 
 

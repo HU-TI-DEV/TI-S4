@@ -92,11 +92,11 @@ De SLB'ers zijn:
 | wo  | [C++ Templates & Compiletime](../software/cpp/templates_en_compiletime.pdf)  (**JH**)  |
 | do  | [Computer Vision I (classical OpenCV))](../software/vision_en_AI/README.md#programma-vision-deel-i) (**BB**)  |
 
-### Onderwijsweek A5 (28-09-2026)
+### Onderwijsweek A5 (28-09-2026) 
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |**Einde sprint 1**<br> Pitches (3min) per team aan klas, daarna gesprek met teamcoach. (**HS**) <br> **Start sprint 2**  |
-| di  | Vision met C++ (**JH**) |
+| di  | 14.30 - 15.00 uur lezing Cern HL15-0.043_HC1 |
 | wo  | [Intro deepdive](../vermogens/onderzoek/README.md)  & [Troubleshooting](../vermogens/troubleshooting/README.md) (**BB**)  |
 | do  | Review individual deliverables (**NG**)  |
 

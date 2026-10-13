@@ -1,6 +1,6 @@
 ---
 title: Complexiteit en Algoritmes
-output: ../software/algoritmen_en_datastrucuren/1_complexiteit_en_algoritmes.pdf
+output: ../software/algoritmen_en_datastructuren/1_complexiteit_en_algoritmes.pdf
 theme: ./slidev-theme-ti
 ---
 
@@ -11,7 +11,6 @@ theme: ./slidev-theme-ti
 - **Vergelijking C++/Python**
 
 ---
-
 layout: two-cols
 ---
 
@@ -40,7 +39,7 @@ def max2(int_array):
                 break
         if is_max:
             return x
-```
+```f
 
 ---
 

@@ -141,7 +141,7 @@ Herfstvakantie
 | --- |  --- |
 | ma  |Teamcoach sessie (**TM**)    |
 | di  | <!-- Microcontroller les  --> Werken aan project (**JH**) |
-| wo  |  Feedbacksessie onderzoek  (**BB**) |
+| wo  |  Studentpanel met onderwijsmanager TI en Feedbacksessie onderzoek  (**BB**) |
 | do  |  Quantum computing (**BB**)  |
 
 

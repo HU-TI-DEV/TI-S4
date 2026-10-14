@@ -124,8 +124,8 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  Team coach sessies met elk team (**TM**) |
-| di  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**JH**)|
-| wo  | [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) <br> recap machine learning(**BB**) |
+| di  | [Value sensitive design workshop](../vermogens/Value_Sensitive_Design/README.md) <br> recap machine learning(**BB**) |
+| wo  |[Smart Pointers & Design Patterns I](../software/cpp/SmartPointers_DesignPatterns.pdf) (**JH**)|
 | do  | [ALDS III (pathfinding)](../software/algoritmen_en_datastructuren/README.md#programma-alds-deel-3) (**NG**) |
 
 ### Onderwijsweek A10 (02-11-2026)

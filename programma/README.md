@@ -158,7 +158,7 @@ Herfstvakantie
 | --- |  --- |
 | ma  |  Teamcoach sessie met team (**TM**) | 
 | di  |  <!-- Microcontroller les II --> Werken aan project  (**JH**) |
-| wo  | Deepdive (**JH**) |
+| wo  | Deepdive (**JH & NG **) |
 | do  | aftekenen opdrachten (**NG**) |
 
 ### Onderwijsweek B4 (30-11-2026)

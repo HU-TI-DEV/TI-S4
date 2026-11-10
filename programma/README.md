@@ -140,7 +140,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |Teamcoach sessie (**TM**)  & Gastles door Jeroen van Loon. Neem een pen mee!  |
-| di  | <!-- Microcontroller les  --> Werken aan project (**JH**) |
+| di  | <!-- Microcontroller les  --> Werken aan project (**NG**) |
 | wo  |  Studentpanel met onderwijsmanager TI en Feedbacksessie onderzoek  (**BB**) |
 | do  |  Quantum computing (**BB**)  |
 

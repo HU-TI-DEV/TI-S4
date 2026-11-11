@@ -157,16 +157,16 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  |  Teamcoach sessie met team (**TM**) | 
-| di  |  <!-- Microcontroller les II --> Werken aan project  (**JH**) |
+| di  |  aftekenen opdrachten (**NG**)|
 | wo  | Deepdive (**JH & NG **) |
-| do  | aftekenen opdrachten (**NG**) |
+| do  |  <!-- Microcontroller les II --> Werken aan project  (**JH**) |
 
 ### Onderwijsweek B4 (30-11-2026)
 
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 5**<br> Pitch (demo) 10 min aan hele klas  (**TM**)<br>**Start sprint**   |
-| di  | <!-- Microcontroller les III --> Werken aan project  (**JH**) |
+| di  | Zelfwerkzaamheid |
 | wo  | Zelfstandig werken aan project (**JH**)  & aftekenen opdrachten                                |
 | do  |  **3e Peilmoment**, Aftekenen opdrachten (**NG**) |
 

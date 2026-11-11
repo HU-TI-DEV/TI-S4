@@ -149,7 +149,7 @@ Herfstvakantie
 | Dag | Project & Kennissessie |
 | --- |  --- |
 | ma  | **Einde sprint 4** (**TM**)<br>**Start sprint**|
-| di  | <br>Deepdive  (**JH**) |
+| di  | Zelfwerkzaamheid & mogelijkheid tot aftekenen (**NG**) |
 | wo  | aftekenen opdrachten (**BB**) |
 | do  | Halfgeleider fabricage (**BB**)|
 

@@ -10,6 +10,7 @@ https://micropython.org/download/RPI_PICO_W/
   
 ### Step 3 
 Install the MicroPico extension in VSCode:  
+
 ![alt text](images/image.png)
 
   

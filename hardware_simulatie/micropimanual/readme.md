@@ -1,24 +1,24 @@
 # Getting started with MicroPython
 
-### 1) 
+### Step 1
 Connect your raspberry pico W to your computer.   
 
-### 2) 
+### Step 2
 Follow the steps in the following link:
 https://micropython.org/download/RPI_PICO_W/
 
   
-### 3) 
+### Step 3 
 Install the MicroPico extension in VSCode 
-![alt text](image.png)
+![alt text](images/image.png)
 
   
-### 4) 
+### Step 4
 Make a folder in your preffered location called micropi
   
-### 5) 
+### Step 5 
 Open the folder in VSCode and use ctrl-shift-p to select MicroPico > Initialize MicroPico Project in the command pallette of VS code. 
-![alt text](image-1.png)
+![alt text](images/image-1.png)
   
 Your folder should look like this:
 ![alt text](image-2.png)
@@ -39,14 +39,15 @@ for i in range(20):
 led.off()
 print("Done.")
 ```
-  
-The result: 
+    
+The result:   
 ![alt text](image-3.png)
   
 ### 7) 
 Open the folder in VSCode and use ctrl-shift-p to select MicroPico > Run Current File on Board 
-
+  
 ![alt text](image-4.png)
-
-### 8) Look at your pi. The led should blink 10 times...
+  
+### 8) 
+Look at your pi. The led should blink 10 times...
 

@@ -238,9 +238,9 @@ Show the learning curve and the confusion matrix.
 
 For the fourth assignment you can make a choice:
 ## Assignment 4a
-Make a class which can implement a NN. The NN should be able to execute forward propagation. 
+Make a class which can implement a NN. The NN should be able to execute forward propagation (so basically you are making yourself a "torchlike" class). 
 For each layer the amount of neurons and the activition function should be setable.
-How each layer is connected to the next layer should be setable. Each layer is always fullconnected with the previous layer. 
+Which layer is connected to which layer should be setable. Each layer is always fullconnected with the previous layer. 
 
 The code should you be made by yourself without using AI/Vibe coding. 
 

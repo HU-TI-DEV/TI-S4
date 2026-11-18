@@ -241,6 +241,7 @@ For the fourth assignment you can make a choice:
 Make a class which can implement a NN. The NN should be able to execute forward propagation (so basically you are making yourself a "torchlike" class). 
 For each layer the amount of neurons and the activition function should be setable.
 Which layer is connected to which layer should be setable. Each layer is always fullconnected with the previous layer. 
+The weights can be set with a random value. You do NOT have to implement backpropagation, only forward propagation, so the learning/changing of the weights is not part of the assignment.
 
 The code should you be made by yourself without using AI/Vibe coding. 
 

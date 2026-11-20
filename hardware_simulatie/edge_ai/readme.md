@@ -53,8 +53,7 @@ PLAATJE VAN PROCESS
 9) The phone should now sample a 10 second clip of your acceleration data. During this time you should "wave" your telehone:   
 ![alt text](images/IMG_5705.PNG)
 
-10) The website should have sampled your data:   
-![alt text](images/IMG_5705-1.PNG)
+10) The website should have sampled your data.   
 
 11) Repeat this for jumping with your phone (give the label a different name), If you scroll down a bit you can see the data:
 ![alt text](<images/Screenshot 2026-11-20 095503.png>)

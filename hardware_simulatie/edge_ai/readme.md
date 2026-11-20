@@ -8,7 +8,7 @@ The potential benefits of edge AI  would entail:
 * Increased privacy/security
 
 The market for Edge AI is projected to grow exponentially [(Grand View Research, 2026)](https://www.grandviewresearch.com/industry-analysis/edge-ai-market-report): 
-![alt text](images\image.png)
+![alt text](images/image.png)
 
 If this projection will become reality is still uncertain. 
 
@@ -29,64 +29,64 @@ PLAATJE VAN PROCESS
 1) Open the https://www.edgeimpulse.com/ website. 
 
 2) Set up an free acount:   
-![alt text](<images\Screenshot 2026-11-20 093549.png>)  
+![alt text](<images/Screenshot 2026-11-20 093549.png>)  
 
 3) Create a new project "PHONE1:  
-![alt text](<images\Screenshot 2026-11-20 094109.png>)
+![alt text](<images/Screenshot 2026-11-20 094109.png>)
 
 4) In the devices tab create a new device:    
-![alt text](<images\Screenshot 2026-11-20 094306.png>)
+![alt text](<images/Screenshot 2026-11-20 094306.png>)
 
 5) Use the QR code to connect your phone:
-![alt text](<images\Screenshot 2026-11-20 094330.png>)
+![alt text](<images/Screenshot 2026-11-20 094330.png>)
 
 6) In the dashboard select "collect new data":  
-![alt text](<images\Screenshot 2026-11-20 094448.png>)
+![alt text](<images/Screenshot 2026-11-20 094448.png>)
 
 7) Fill in the name of the label/activity you want to do and leave the rest of the settings for "collect data" as is. Press "start sampling":  
-![alt text](<images\Screenshot 2026-11-20 095308.png>)
+![alt text](<images/Screenshot 2026-11-20 095308.png>)
 
 
 8) It could be that you have to give permission in the website on your phone to sample the accelerometer (scroll down a bit and press the blue bar):  
- ![alt text](images\IMG_5702.PNG)
+ ![alt text](images/IMG_5702.PNG)
 
 9) The phone should now sample a 10 second clip of your acceleration data. During this time you should "wave" your telehone:   
-![alt text](images\IMG_5705.PNG)
+![alt text](images/IMG_5705.PNG)
 
 10) The website should have sampled your data:   
-![alt text](images\IMG_5705-1.PNG)
+![alt text](images/IMG_5705-1.PNG)
 
 11) Repeat this for jumping with your phone (give the label a different name), If you scroll down a bit you can see the data:
-![alt text](<images\Screenshot 2026-11-20 095503.png>)
+![alt text](<images/Screenshot 2026-11-20 095503.png>)
 
 12) We now have our training data (a very small set, but a usable one nonetheless).
 
 13) Select the "Create Impulse" tab:
-![alt text](<images\Screenshot 2026-11-20 095705.png>)  
-![alt text](<images\Screenshot 2026-11-20 095726.png>)
+![alt text](<images/Screenshot 2026-11-20 095705.png>)  
+![alt text](<images/Screenshot 2026-11-20 095726.png>)
 
 14) Add a processing block (Spectral Analysis):   
-![alt text](<images\Screenshot 2026-11-20 095805.png>)
+![alt text](<images/Screenshot 2026-11-20 095805.png>)
 
 15) Add a learning block (Classification):
 ![alt text](image-1.png)
 
 16) Save the model:   
-![alt text](<images\Screenshot 2026-11-20 124034.png>)
+![alt text](<images/Screenshot 2026-11-20 124034.png>)
 
 17) Select the Spectral features tab and save the settings as is:  
-![alt text](<images\Screenshot 2026-11-20 124519.png>)
+![alt text](<images/Screenshot 2026-11-20 124519.png>)
 
-18) Generate the features:  ![alt text](<images\Screenshot 2026-11-20 100018.png>) 
+18) Generate the features:  ![alt text](<images/Screenshot 2026-11-20 100018.png>) 
 
 19) Select the classifier tab and save & train your model:
-![alt text](<images\Screenshot 2026-11-20 100117.png>)  
+![alt text](<images/Screenshot 2026-11-20 100117.png>)  
 
 20) Select the deployment tab and deploy your model on your phone: 
-![alt text](<images\Screenshot 2026-11-20 100521.png>)
+![alt text](<images/Screenshot 2026-11-20 100521.png>)
 
 21) Your phone will sample 10 seconds chunks and determin if you are waving or jumping your phone: 
-![alt text](images\IMG_5705-2.PNG)
+![alt text](images/IMG_5705-2.PNG)
 
 How cool is that!
 

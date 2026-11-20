@@ -62,7 +62,7 @@ PLAATJE VAN PROCESS
 
 13) Select the "Create Impulse" tab:
 ![alt text](<images/Screenshot 2026-11-20 095705.png>)  
-![alt text](<images/Screenshot 2026-11-20 095726.png>)
+![alt text](<images/Screenshot 2026-11-20 145143.png>)
 
 14) Add a processing block (Spectral Analysis):   
 ![alt text](<images/Screenshot 2026-11-20 095805.png>)

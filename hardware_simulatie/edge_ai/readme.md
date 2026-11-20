@@ -81,10 +81,11 @@ PLAATJE VAN PROCESS
 19) Select the classifier tab and save & train your model:
 ![alt text](<images/Screenshot 2026-11-20 100117.png>)  
 
-20) Select the deployment tab and deploy your model on your phone: 
+20) Select the deployment tab and deploy your model on your phone (this may take a long time): 
 ![alt text](<images/Screenshot 2026-11-20 100521.png>)
 
-21) Your phone will sample 10 seconds chunks and determin if you are waving or jumping your phone: 
+
+21) Your phone will sample 10 seconds chunks and determine if you are waving or jumping your phone: 
 ![alt text](images/IMG_5705-2.PNG)
 
 How cool is that!

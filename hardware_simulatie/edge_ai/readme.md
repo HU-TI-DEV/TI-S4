@@ -68,7 +68,7 @@ PLAATJE VAN PROCESS
 ![alt text](<images/Screenshot 2026-11-20 095805.png>)
 
 15) Add a learning block (Classification):
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 16) Save the model:   
 ![alt text](<images/Screenshot 2026-11-20 124034.png>)

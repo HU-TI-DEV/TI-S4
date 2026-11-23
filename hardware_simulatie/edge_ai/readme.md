@@ -11,7 +11,7 @@ Kies 1 of meer van de volgende video's:
 ## Tijdens en na de les
 
 De ppt van de les:
--  [Edge AI](./files/Edge AI.pptx)
+-  [Edge AI](./files/EdgeAI.pptx)
 
 Voor de opdrachten uit van :
 -  [edge_impulse.md](./edge_impulse.md)

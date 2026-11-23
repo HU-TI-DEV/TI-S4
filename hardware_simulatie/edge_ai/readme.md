@@ -4,7 +4,8 @@
 Bekijk de volgende video's:
 - [Edge AI](https://youtu.be/z5lIrWTebOY?si=-RRngBC_sjImC3nJ)
 - [Edge Impulse](https://www.youtube.com/watch?v=i-wcqCcz8Zk)
-- 
+
+
 Bekijk 1 of meer van de volgende video's:
 - [https://www.edgeimpulse.com/demos](https://www.edgeimpulse.com/demos)
 

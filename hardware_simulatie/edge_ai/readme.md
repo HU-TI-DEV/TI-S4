@@ -1,9 +1,12 @@
-# Edge AI
+# Edge AI - deel I
 
 ## Voorbereiding
 Bekijk de volgende video's:
+- [Edge AI](https://youtu.be/z5lIrWTebOY?si=-RRngBC_sjImC3nJ)
 - [Edge Impulse]([https://www.youtube.com/watch?v=dvh1tvb3WGU](https://www.youtube.com/watch?v=i-wcqCcz8Zk)).  
 
+Kies 1 of meer van de volgende video's:
+- [https://www.edgeimpulse.com/demos](https://www.edgeimpulse.com/demos)
 
 ## Tijdens en na de les
 
@@ -15,27 +18,5 @@ Voor de opdrachten uit van :
 
 
 ## Inleveren op Canvas
+- Screenshot van de deployment op je telefoon (met 2 of meer acties). 
 
-
-
-# Programma Vision deel II
-
-## Voorbereiding
-Bekijk de volgende video's:  
-- [Neural Network In 5 Minutes](https://youtu.be/bfmFfD2RIcg?si=_PIV4FIMy-iNXb0s)
-- [online CNN](https://www.youtube.com/watch?v=ae0futmdkOI)
-
-Speel met de volgende : [site](https://adamharley.com/nn_vis/cnn/3d.html)
-
-
-## Tijdens en na de les
-
-- De powerpoint: [Introductie Neural networks](./files/Neural_Networks_introduction.pptx)
-- De tweede powerpoint: [Introductie vision met AI](./files/Introduction_vision_part_II.pptx)
-
-- werk aan de opdracht: [Vision with AI](./Vision_with_ai.md)
-
-## Inleveren op Canvas
-Zie [Vision with AI](./Vision_with_ai.md)
-
-Canvas naam : Computer Vision II

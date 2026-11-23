@@ -14,9 +14,11 @@ Bekijk 1 of meer van de volgende video's:
 De ppt van de les:
 -  [Edge AI](./files/EdgeAI.pptx)
 
-Voor de opdrachten uit van :
+Voer de opdrachten uit van :
 -  [edge_impulse.md](./edge_impulse.md)
 
+Bekijk het filmpje: 
+- [wat hebben we gedaan? Een beschouwing...](https://www.youtube.com/watch?v=pxcPi1EtUaI)
 
 ## Inleveren op Canvas
 - Screenshot van de deployment op je telefoon (met 2 of meer acties). 
